@@ -20,7 +20,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => ['role:admin|editor']], function () {
-    Route::resource('users', UserCrudController::class);
-});
-
