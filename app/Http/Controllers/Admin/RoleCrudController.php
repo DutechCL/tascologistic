@@ -29,7 +29,8 @@ class RoleCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Role::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/role');
-        CRUD::setEntityNameStrings('role', 'roles');
+        CRUD::setEntityNameStrings(__('role.role'), __('role.roles'));
+
     }
 
     /**
@@ -40,10 +41,29 @@ class RoleCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('created_at');
-        CRUD::column('guard_name');
-        CRUD::column('name');
-        CRUD::column('updated_at');
+        CRUD::addColumn([
+            'name' => 'created_at',
+            'label' => __('role.crud.created_at'),
+            'type' => 'text',
+        ]);
+        
+        CRUD::addColumn([
+            'name' => 'guard_name',
+            'label' => __('role.crud.guard_name'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'name',
+            'label' => __('role.crud.name'),
+            'type' => 'text',
+        ]);
+        
+        CRUD::addColumn([
+            'name' => 'updated_at',
+            'label' => __('role.crud.updated_at'),
+            'type' => 'text',
+        ]);
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:

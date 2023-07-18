@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::table('permissions', function (Blueprint $table) {
             $table->string('description')->nullable()->after('name'); 
             $table->string('url')->nullable()->after('description'); 
+            $table->string('slug')->nullable()->after('url'); 
+
         });
     }
 
@@ -25,6 +27,9 @@ return new class extends Migration
         Schema::table('permissions', function (Blueprint $table) {
             $table->dropColumn('description');
             $table->dropColumn('url');
+            $table->dropColumn('slug');
+
+            
         });
     }
 };

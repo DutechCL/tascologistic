@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Permissions;
+use App\Models\Permission;
 use App\Http\Requests\PermissionsRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class PermissionsCrudController
@@ -15,11 +16,15 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 class PermissionsCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation {
+        store as traitStore;
+    }
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation {
+        update as traitUpdate;
+    }
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
-    
+    // use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
+
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
@@ -28,21 +33,41 @@ class PermissionsCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\Permissions::class);
+        CRUD::setModel(\App\Models\Permission::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/permissions');
-        CRUD::setEntityNameStrings('permissions', 'permissions');
-
-
+        CRUD::setEntityNameStrings(__('permission.permissions'), __('permission.permissions'));
     }
 
-
-
     public function store(){
-        $actions = $this->crud->getRequest()->input('actions', []);
-        $name = $this->crud->getRequest()->input('name', '');
+        try {
+            DB::beginTransaction();
 
-        foreach ($actions as $key => $action) {
+            $actions = $this->crud->getRequest()->input('actions', []);
+            $name = $this->crud->getRequest()->input('name', '');
 
+            if (!empty($actions)) {
+                $permissions = []; 
+            
+                foreach ($actions as $action) {
+                    $permission = [
+                        'name' => $name . '.' . $action['action'],
+                        'description' => $action['description'],
+                        'url' => $action['url'],
+                        'guard_name' => $action['guard_name'],
+                        'slug' => $name
+                    ];
+                    DB::table('permissions')->insert($permission);
+                }
+            }
+
+            DB::commit();
+            return redirect()->route('permissions.index')->with('success', 'Los permisos se han creado correctamente.');
+        } catch (ValidationException $e) {
+            DB::rollback();
+            throw $e;
+        } catch (\Throwable $th) {
+            DB::rollback();
+            throw $th;
         }
     }
 
@@ -54,17 +79,29 @@ class PermissionsCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('name');
-        CRUD::column('description');
-        CRUD::column('guard_name');
-        CRUD::column('created_at');
-        CRUD::column('updated_at');
+        CRUD::addColumn([
+            'name' => 'name',
+            'label' => __('permission.crud.name'),
+            'type' => 'text',
+        ]);
+        
+        CRUD::addColumn([
+            'name' => 'description',
+            'label' => __('permission.crud.description'),
+            'type' => 'text',
+        ]);
 
-        /**
-         * Columns can be defined using the fluent syntax or array syntax:
-         * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']); 
-         */
+        CRUD::addColumn([
+            'name' => 'url',
+            'label' => __('permission.crud.url'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'slug',
+            'label' => __('permission.crud.slug'),
+            'type' => 'text',
+        ]);
     }
 
     /**
@@ -79,46 +116,70 @@ class PermissionsCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'name',
-            'label' => 'Nombre',
+            'label' => __('permission.crud.name'),
             'type' => 'text',
             'wrapper' => ['class' => 'form-group col-md-12'],
-        ]);
-
-        CRUD::addField([
-            'name' => 'guard_name',
-            'type' => 'hidden',
-            'value' => 'web',
-            'wrapper' => ['class' => 'form-group col-md-6'],
-            
         ]);
 
         CRUD::field([
             'name' => 'actions',
             'type' => 'repeatable',
-            'label' => 'Acciones', // Agregar la clave 'label' con su respectivo valor
+            'label' => __('permission.crud.actions'), 
             'subfields' => [
                 [
-                    'name' => 'accion',
-                    'label' => 'Accion',
+                    'name' => 'action',
+                    'label' => __('permission.crud.action'),
                     'type' => 'text',
                     'wrapper' => ['class' => 'form-group col-md-4'],
                 ],
                 [
                     'name' => 'description',
-                    'label' => 'Descripcion',
+                    'label' => __('permission.crud.description'),
                     'type' => 'text',
                     'wrapper' => ['class' => 'form-group col-md-4'],
                 ],
                 [
                     'name' => 'url',
-                    'label' => 'Enlace',
+                    'label' => __('permission.crud.url'),
                     'type' => 'text',
                     'wrapper' => ['class' => 'form-group col-md-4'],
                 ],
+                [
+                    'name' => 'guard_name',
+                    'type' => 'hidden',
+                    'value' => 'web',
+                    'wrapper' => ['class' => 'form-group col-md-6'],
+                ]
             ],
-            'new_item_label' => 'New Item',
+            'new_item_label' => __('permission.crud.new_item'),
             'reorder' => false,
         ]);
+    }
+
+    public function update()
+    {
+        try {
+            DB::beginTransaction();
+            $request = $this->crud->getRequest();
+
+            $id = $request->input('id', '');
+    
+            $permission = Permission::findOrFail($id);
+    
+            $permission->fill($request->only(['slug', 'name', 'description', 'url']));
+            $permission->name = $permission->slug . '.' . $permission->name;
+    
+            $permission->save();
+
+            DB::commit();
+            return redirect()->route('permissions.index')->with('success', 'El permiso se ha actualizado correctamente.');
+        } catch (ValidationException $e) {
+            DB::rollback();
+            throw $e;
+        } catch (\Throwable $th) {
+            DB::rollback();
+            throw $th;
+        }
     }
 
     /**
@@ -129,6 +190,39 @@ class PermissionsCrudController extends CrudController
      */
     protected function setupUpdateOperation()
     {
-        $this->setupCreateOperation();
+        CRUD::setValidation(PermissionsRequest::class);
+
+        CRUD::addField([
+            'name' => 'slug',
+            'label' => __('permission.crud.slug'),
+            'type' => 'text',
+            'wrapper' => ['class' => 'form-group col-md-12'],
+        ]);
+
+        $slugValue = $this->crud->getCurrentEntry()->slug;
+        $nameValue = $this->crud->getCurrentEntry()->name;
+        $nameValue = str_replace($slugValue.'.', '', $nameValue);
+
+        CRUD::addField( [
+            'name' => 'name',
+            'label' => __('permission.crud.name'),
+            'type' => 'text',
+            'value' => $nameValue,
+            'wrapper' => ['class' => 'form-group col-md-4'],
+        ]);
+
+        CRUD::addField( [
+            'name' => 'description',
+            'label' => __('permission.crud.description'),
+            'type' => 'text',
+            'wrapper' => ['class' => 'form-group col-md-4'],
+        ]);
+
+        CRUD::addField( [
+            'name' => 'url',
+            'label' => __('permission.crud.url'),
+            'type' => 'text',
+            'wrapper' => ['class' => 'form-group col-md-4'],
+        ]);
     }
 }

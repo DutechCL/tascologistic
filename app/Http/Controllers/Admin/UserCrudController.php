@@ -28,7 +28,7 @@ class UserCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\User::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/user');
-        CRUD::setEntityNameStrings('user', 'users');
+        CRUD::setEntityNameStrings(__('user.user'), __('user.users'));
     }
 
     /**
@@ -39,9 +39,23 @@ class UserCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('name');
-        CRUD::column('email');
-        CRUD::column('password');
+        CRUD::addColumn([
+            'name' => 'name',
+            'label' => __('user.crud.name'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'email',
+            'label' => __('user.crud.email'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'password',
+            'label' => __('user.crud.password'),
+            'type' => 'text',
+        ]);
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -59,11 +73,21 @@ class UserCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(UserRequest::class);
-
-        CRUD::field('name');
-        CRUD::field('email');
-        CRUD::field('password');
-
+        CRUD::addField([
+            'name' => 'name',
+            'label' => __('user.crud.name'),
+            'type' => 'text',
+        ]);
+        CRUD::addField([
+            'name' => 'email',
+            'label' => __('user.crud.email'),
+            'type' => 'text',
+        ]);
+        CRUD::addField([
+            'name' => 'password',
+            'label' =>__('user.crud.password'),
+            'type' => 'text',
+        ]);
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');
