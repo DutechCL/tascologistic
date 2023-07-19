@@ -6,6 +6,9 @@ use App\Http\Requests\RoleRequest;
 use Spatie\Permission\Models\Permission;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Illuminate\Support\Facades\DB;
+use App\Models\Role;
+
 
 /**
  * Class RoleCrudController
@@ -15,8 +18,13 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 class RoleCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation {
+        store as traitStore;
+    }
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation {
+        update as traitUpdate;
+        edit as traitedit;
+    }
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
@@ -72,6 +80,78 @@ class RoleCrudController extends CrudController
          */
     }
 
+    public function store(){
+        try {
+            DB::beginTransaction();
+
+            $request = $this->crud->getRequest();
+
+            $rol = [
+                'name' => $request->input('name', ''),
+                'guard_name'=> $request->input('guard_name', '')
+            ];
+
+            $roleId = DB::table('roles')->insertGetId($rol);
+
+            $permissions = $request->input('permissionIds', []);
+
+            foreach ($permissions as $permission) {
+                $permissionRol = [
+                    'permission_id' => $permission,
+                    'role_id' => $roleId
+                ];
+                DB::table('role_has_permissions')->insert($permissionRol);
+            }
+
+            DB::commit();
+            return redirect()->route('role.index')->with('success', 'Los permisos se han creado correctamente.');
+        } catch (ValidationException $e) {
+            DB::rollback();
+            throw $e;
+        } catch (\Throwable $th) {
+            DB::rollback();
+            throw $th;
+        }
+    }
+
+    public function update()
+    {
+        try {
+            DB::beginTransaction();
+
+            $request = $this->crud->getRequest();
+            $roleId = $request->input('id', '');
+    
+            $permission = Role::findOrFail($roleId);
+            $permission->fill($request->only(['name', 'guard_name']));
+            $permission->save();
+
+            DB::table('role_has_permissions')
+            ->where('role_id', $roleId)
+            ->delete();
+
+            $permissions = $request->input('permissionIds', []);
+
+            foreach ($permissions as $permission) {
+                $permissionRol = [
+                    'permission_id' => $permission,
+                    'role_id' => $roleId
+                ];
+                DB::table('role_has_permissions')->insert($permissionRol);
+            }
+
+
+            DB::commit();
+            return redirect()->route('role.index')->with('success', 'Los permisos se han actualizado correctamente.');
+        } catch (ValidationException $e) {
+            DB::rollback();
+            throw $e;
+        } catch (\Throwable $th) {
+            DB::rollback();
+            throw $th;
+        }
+    }
+
     /**
      * Define what happens when the Create operation is loaded.
      * 
@@ -82,15 +162,23 @@ class RoleCrudController extends CrudController
     {
         
         CRUD::setValidation(RoleRequest::class);
+        CRUD::addField([
+            'name' => 'guard_name',
+            'label' => __('role.crud.guard_name'),
+            'type' => 'text',
+            'wrapper' => ['class' => 'form-group col-md-12'],
+        ]);
 
-        CRUD::field('guard_name');
-        CRUD::field('name');
+        CRUD::addField([
+            'name' => 'name',
+            'label' => __('role.crud.name'),
+            'type' => 'text',
+            'wrapper' => ['class' => 'form-group col-md-12'],
+        ]);
+
         CRUD::addField([
             'name' => 'permissions',
-            'label' => 'Permisos',
-            'type' => 'checklist',
-            'entity' => 'permissions',
-            'attribute' => 'name',
+            'type' => 'permissions',
         ]);
         /**
          * Fields can be defined using the fluent syntax or array syntax:

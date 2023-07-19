@@ -15,5 +15,9 @@ return [
         'action'  => 'Acción',
         'url'  => 'Enlace',
         'new_item'  => 'Nuevo registro',
+        'view'  => 'Vistas',
+        'permissions'  => 'Permisos',
+
+
     ],
 ];
