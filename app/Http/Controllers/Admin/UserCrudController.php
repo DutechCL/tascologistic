@@ -88,6 +88,21 @@ class UserCrudController extends CrudController
             'label' =>__('user.crud.password'),
             'type' => 'text',
         ]);
+
+        CRUD::addField([
+            'name' => 'userRoles',
+            'label' => 'roles',
+            'type' => 'checklist',
+            'model' => 'App\Models\Role',
+            'entity' => 'userRoles',
+            'attribute' => 'name',
+            'multiple' => true,
+            'wrapper' => [
+                'class' => 'form-group col-md-6 required',
+                'style' => 'display: flex; flex-direction: column;',
+            ],
+        ]);
+        
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');

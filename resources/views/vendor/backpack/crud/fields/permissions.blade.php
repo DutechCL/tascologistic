@@ -38,7 +38,7 @@
                     @foreach(DB::table('permissions')->where('slug', $permission->slug)->get() as $item)
                         @php
                             $isChecked = DB::table('role_has_permissions')
-                                ->where('role_id', $roleId) // Reemplaza $roleId con el ID del rol actualmente editado
+                                ->where('role_id', $roleId)
                                 ->where('permission_id', $item->id)
                                 ->exists();
                         @endphp

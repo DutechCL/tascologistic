@@ -44,4 +44,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function userRoles()
+    {
+        return $this->belongsToMany(Role::class, 'user_has_roles', 'user_id', 'role_id');
+    }
 }
