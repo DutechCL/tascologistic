@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\UserRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Illuminate\Support\Facades\DB;
+use App\Models\User;
+use App\Models\Role;
+
 
 /**
  * Class UserCrudController
@@ -14,8 +18,12 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 class UserCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation {
+        store as traitStore;
+    }
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation {
+        update as traitUpdate;
+    }
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
@@ -90,16 +98,14 @@ class UserCrudController extends CrudController
         ]);
 
         CRUD::addField([
-            'name' => 'userRoles',
+            'name' => 'userRoles[]',
             'label' => 'roles',
-            'type' => 'checklist',
+            'type' => 'select2',
             'model' => 'App\Models\Role',
-            'entity' => 'userRoles',
             'attribute' => 'name',
             'multiple' => true,
             'wrapper' => [
-                'class' => 'form-group col-md-6 required',
-                'style' => 'display: flex; flex-direction: column;',
+                'class' => 'form-group col-md-12 required',
             ],
         ]);
         
@@ -108,6 +114,88 @@ class UserCrudController extends CrudController
          * - CRUD::field('price')->type('number');
          * - CRUD::addField(['name' => 'price', 'type' => 'number'])); 
          */
+    }
+
+    public function store(){
+        try {
+            DB::beginTransaction();
+
+            $request = $this->crud->getRequest();
+            $userRoles = $request->input('userRoles', []);
+
+            $messages = [
+                'email.required' => 'El campo Correo electrónico es obligatorio.',
+                'email.unique' => 'El Correo electrónico del usuario ya existe en la base de datos.'
+            ];
+    
+            $this->validate($request, [
+                'email' => 'required|unique:users,email,'
+            ], $messages);
+    
+
+            $user = User::create([
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
+                'password' => bcrypt($request->input('password')),
+                'email_verified_at' => true
+            ]);
+
+            foreach ($userRoles as $roleId) {
+                $role = Role::findOrFail($roleId);
+                $user->roles()->attach($role, ['model_type' => 'App\Models\User']);
+            }
+
+            DB::commit();
+            return redirect()->route('user.index')->with('success', 'El usuario se ha creado correctamente.');
+        } catch (ValidationException $e) {
+            DB::rollback();
+            throw $e;
+        } catch (\Throwable $th) {
+            DB::rollback();
+            throw $th;
+        }
+    }
+
+    public function update()
+    {
+        try {
+            DB::beginTransaction();
+            $request = $this->crud->getRequest();
+            $id = $request->input('id', '');
+            $user = User::findOrFail($id);
+            $userRoles = $request->input('userRoles', []);
+
+            $messages = [
+                'email.required' => 'El campo Correo electrónico es obligatorio.',
+                'email.unique' => 'El Correo electrónico del usuario ya existe en la base de datos.'
+            ];
+    
+            $this->validate($request, [
+                'email' => 'required|unique:users,email,'. $id
+            ], $messages);
+    
+            $user->update([
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
+                'password' => bcrypt($request->input('password')),
+            ]);
+    
+            $user->roles()->detach();
+    
+            foreach ($userRoles as $roleId) {
+                $role = Role::findOrFail($roleId);
+                $user->roles()->attach($role, ['model_type' => 'App\Models\User']);
+            }
+
+            DB::commit();
+            return redirect()->route('user.index')->with('success', 'Los permisos se han actualizado correctamente.');
+        } catch (ValidationException $e) {
+            DB::rollback();
+            throw $e;
+        } catch (\Throwable $th) {
+            DB::rollback();
+            throw $th;
+        }
     }
 
     /**

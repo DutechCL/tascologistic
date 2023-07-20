@@ -43,9 +43,9 @@ class Role extends Model
         return $this->belongsToMany(\Spatie\Permission\Models\Permission::class, 'role_has_permissions');
     }
 
-    public function userRoles()
+    public function users()
     {
-        return $this->belongsToMany(User::class, 'user_has_roles', 'role_id', 'user_id');
+        return $this->belongsToMany(User::class, 'model_has_roles', 'role_id', 'model_id');
     }
     /*
     |--------------------------------------------------------------------------

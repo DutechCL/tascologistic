@@ -86,6 +86,15 @@ class RoleCrudController extends CrudController
 
             $request = $this->crud->getRequest();
 
+            $messages = [
+                'name.required' => 'El campo nombre es obligatorio.',
+                'name.unique' => 'El nombre del rol ya existe en la base de datos.'
+            ];
+    
+            $this->validate($request, [
+                'name' => 'required|unique:roles,name'
+            ], $messages);
+
             $rol = [
                 'name' => $request->input('name', ''),
                 'guard_name'=> $request->input('guard_name', '')
@@ -121,6 +130,15 @@ class RoleCrudController extends CrudController
 
             $request = $this->crud->getRequest();
             $roleId = $request->input('id', '');
+
+            $messages = [
+                'name.required' => 'El campo nombre es obligatorio.',
+                'name.unique' => 'El nombre del rol ya existe en la base de datos.'
+            ];
+    
+            $this->validate($request, [
+                'name' => 'required|unique:roles,name,' . $roleId 
+            ], $messages);
     
             $permission = Role::findOrFail($roleId);
             $permission->fill($request->only(['name', 'guard_name']));
