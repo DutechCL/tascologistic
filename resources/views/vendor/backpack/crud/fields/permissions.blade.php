@@ -46,6 +46,12 @@
                     </div>
                 </th>
             @endforeach
+            <th>
+                <div class="custom-control custom-switch d-flex justify-content-center">
+                    <input type="checkbox" class="custom-control-input" id="checkAll" onclick="checkboxesAll(this.checked)"/>
+                    <label class="custom-control-label" for="checkAll"></label>
+                </div>
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -61,17 +67,48 @@
                                     ->where('role_id', $roleId)
                                     ->where('permission_id', $item->id)
                                     ->exists();
+                                $isChekedAllLine = true;
+                                if(!$isChecked)
+                                {
+                                    $isChekedAllLine = false;
+                                }
                             @endphp
                             @if ($permissionName === $columnName)
                                 <div class="custom-control custom-switch d-flex justify-content-center">
-                                    <input type="checkbox" class="custom-control-input" id="{{ $item->name }}" name="permissionIds[]" value="{{ $item->id }}" {{ $isChecked ? 'checked' : '' }}/>
-                                    <label class="custom-control-label" for="{{ $item->name }}"></label>
+                                    <input type="checkbox" class="custom-control-input {{ $permission->slug }} checkall" id="{{ $item->name }}" name="permissionIds[]" value="{{ $item->id }}" {{ $isChecked ? 'checked' : '' }}/>
+                                    <label class="custom-control-label {{ $permission->slug }}" for="{{ $item->name }}"></label>
                                 </div>
                             @endif
                         @endforeach
                     </td>
                 @endforeach
+                <td>
+                    <div class="custom-control custom-switch d-flex justify-content-center">
+                        <input type="checkbox" class="custom-control-input checkall" onchange="checkboxesLine('{{ $permission->slug }}', this.checked)" {{ $isChekedAllLine ? 'checked' : '' }} id="checkall{{ $permission->slug }}"/>
+                        <label class="custom-control-label" for="checkall{{ $permission->slug }}"></label>
+                    </div>
+                </td>
             </tr>
         @endforeach
     </tbody>
 </table>
+
+<script>
+    function checkboxesLine(slug, check) {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            if (checkbox.classList.contains(slug)) {
+                checkbox.checked = check;
+            }
+        });
+    }
+
+    function checkboxesAll(check) {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            if (checkbox.classList.contains('checkall')) {
+                checkbox.checked = check;
+            }
+        });
+    }
+</script>

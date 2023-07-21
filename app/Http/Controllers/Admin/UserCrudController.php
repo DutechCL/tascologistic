@@ -98,12 +98,11 @@ class UserCrudController extends CrudController
         ]);
 
         CRUD::addField([
-            'name' => 'userRoles[]',
+            'name' => 'userRoles',
             'label' => 'roles',
-            'type' => 'select2',
+            'type' => 'select2_multiple',
             'model' => 'App\Models\Role',
             'attribute' => 'name',
-            'multiple' => true,
             'wrapper' => [
                 'class' => 'form-group col-md-12 required',
             ],
@@ -142,7 +141,7 @@ class UserCrudController extends CrudController
 
             foreach ($userRoles as $roleId) {
                 $role = Role::findOrFail($roleId);
-                $user->roles()->attach($role, ['model_type' => 'App\Models\User']);
+                $user->userRoles()->attach($role, ['model_type' => 'App\Models\User']);
             }
 
             DB::commit();
@@ -180,11 +179,11 @@ class UserCrudController extends CrudController
                 'password' => bcrypt($request->input('password')),
             ]);
     
-            $user->roles()->detach();
+            $user->userRoles()->detach();
     
             foreach ($userRoles as $roleId) {
                 $role = Role::findOrFail($roleId);
-                $user->roles()->attach($role, ['model_type' => 'App\Models\User']);
+                $user->userRoles()->attach($role, ['model_type' => 'App\Models\User']);
             }
 
             DB::commit();
@@ -206,6 +205,36 @@ class UserCrudController extends CrudController
      */
     protected function setupUpdateOperation()
     {
-        $this->setupCreateOperation();
+        CRUD::setValidation(UserRequest::class);
+        CRUD::addField([
+            'name' => 'name',
+            'label' => __('user.crud.name'),
+            'type' => 'text',
+        ]);
+        CRUD::addField([
+            'name' => 'email',
+            'label' => __('user.crud.email'),
+            'type' => 'text',
+        ]);
+        CRUD::addField([
+            'name' => 'password',
+            'label' =>__('user.crud.password'),
+            'type' => 'text',
+        ]);
+
+        $id = request()->route('id');
+
+        CRUD::addField([
+            'name' => 'userRoles',
+            'label' => 'roles',
+            'type' => 'select2_multiple',
+            'model' => 'App\Models\Role',
+            'attribute' => 'name',
+            'wrapper' => [
+                'class' => 'form-group col-md-12 required',
+            ],
+        ]);
+        
+
     }
 }
