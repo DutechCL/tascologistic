@@ -17,6 +17,11 @@ return new class extends Migration
             $table->string('slug')->nullable()->after('url'); 
 
         });
+
+        Schema::table('menu_items', function (Blueprint $table) {
+            $table->unsignedBigInteger('permission_id');
+            $table->foreign('permission_id')->references('id')->on('permissions');
+        });
     }
 
     /**
@@ -30,6 +35,10 @@ return new class extends Migration
             $table->dropColumn('slug');
 
             
+        });
+
+        Schema::table('menu_items', function (Blueprint $table) {
+            $table->dropColumn('permission_id');
         });
     }
 };

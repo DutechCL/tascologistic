@@ -172,12 +172,15 @@ class UserCrudController extends CrudController
             $this->validate($request, [
                 'email' => 'required|unique:users,email,'. $id
             ], $messages);
-    
-            $user->update([
-                'name' => $request->input('name'),
-                'email' => $request->input('email'),
-                'password' => bcrypt($request->input('password')),
-            ]);
+
+
+            $user->name = $request->input('name');
+            $user->email = $request->input('email');
+            if ($request->input('password') !== null) {
+                $user->password = bcrypt($request->input('password'));
+            }
+            
+            $user->save();
     
             $user->userRoles()->detach();
     
@@ -220,6 +223,7 @@ class UserCrudController extends CrudController
             'name' => 'password',
             'label' =>__('user.crud.password'),
             'type' => 'text',
+            'value' => '',
         ]);
 
         $id = request()->route('id');
