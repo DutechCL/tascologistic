@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\UserRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Illuminate\Support\Facades\DB;
+use App\Models\User;
+use App\Models\Role;
+
 
 /**
  * Class UserCrudController
@@ -14,8 +18,12 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 class UserCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation {
+        store as traitStore;
+    }
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation {
+        update as traitUpdate;
+    }
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
@@ -28,7 +36,7 @@ class UserCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\User::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/user');
-        CRUD::setEntityNameStrings('user', 'users');
+        CRUD::setEntityNameStrings(__('user.user'), __('user.users'));
     }
 
     /**
@@ -39,9 +47,23 @@ class UserCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('name');
-        CRUD::column('email');
-        CRUD::column('password');
+        CRUD::addColumn([
+            'name' => 'name',
+            'label' => __('user.crud.name'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'email',
+            'label' => __('user.crud.email'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'password',
+            'label' => __('user.crud.password'),
+            'type' => 'text',
+        ]);
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -59,16 +81,123 @@ class UserCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(UserRequest::class);
+        CRUD::addField([
+            'name' => 'name',
+            'label' => __('user.crud.name'),
+            'type' => 'text',
+        ]);
+        CRUD::addField([
+            'name' => 'email',
+            'label' => __('user.crud.email'),
+            'type' => 'text',
+        ]);
+        CRUD::addField([
+            'name' => 'password',
+            'label' =>__('user.crud.password'),
+            'type' => 'text',
+        ]);
 
-        CRUD::field('name');
-        CRUD::field('email');
-        CRUD::field('password');
-
+        CRUD::addField([
+            'name' => 'userRoles',
+            'label' => 'roles',
+            'type' => 'select2_multiple',
+            'model' => 'App\Models\Role',
+            'attribute' => 'name',
+            'wrapper' => [
+                'class' => 'form-group col-md-12 required',
+            ],
+        ]);
+        
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');
          * - CRUD::addField(['name' => 'price', 'type' => 'number'])); 
          */
+    }
+
+    public function store(){
+        try {
+            DB::beginTransaction();
+
+            $request = $this->crud->getRequest();
+            $userRoles = $request->input('userRoles', []);
+
+            $messages = [
+                'email.required' => 'El campo Correo electrónico es obligatorio.',
+                'email.unique' => 'El Correo electrónico del usuario ya existe en la base de datos.'
+            ];
+    
+            $this->validate($request, [
+                'email' => 'required|unique:users,email,'
+            ], $messages);
+    
+
+            $user = User::create([
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
+                'password' => bcrypt($request->input('password')),
+                'email_verified_at' => true
+            ]);
+
+            foreach ($userRoles as $roleId) {
+                $role = Role::findOrFail($roleId);
+                $user->userRoles()->attach($role, ['model_type' => 'App\Models\User']);
+            }
+
+            DB::commit();
+            return redirect()->route('user.index')->with('success', 'El usuario se ha creado correctamente.');
+        } catch (ValidationException $e) {
+            DB::rollback();
+            throw $e;
+        } catch (\Throwable $th) {
+            DB::rollback();
+            throw $th;
+        }
+    }
+
+    public function update()
+    {
+        try {
+            DB::beginTransaction();
+            $request = $this->crud->getRequest();
+            $id = $request->input('id', '');
+            $user = User::findOrFail($id);
+            $userRoles = $request->input('userRoles', []);
+
+            $messages = [
+                'email.required' => 'El campo Correo electrónico es obligatorio.',
+                'email.unique' => 'El Correo electrónico del usuario ya existe en la base de datos.'
+            ];
+    
+            $this->validate($request, [
+                'email' => 'required|unique:users,email,'. $id
+            ], $messages);
+
+
+            $user->name = $request->input('name');
+            $user->email = $request->input('email');
+            if ($request->input('password') !== null) {
+                $user->password = bcrypt($request->input('password'));
+            }
+            
+            $user->save();
+    
+            $user->userRoles()->detach();
+    
+            foreach ($userRoles as $roleId) {
+                $role = Role::findOrFail($roleId);
+                $user->userRoles()->attach($role, ['model_type' => 'App\Models\User']);
+            }
+
+            DB::commit();
+            return redirect()->route('user.index')->with('success', 'Los permisos se han actualizado correctamente.');
+        } catch (ValidationException $e) {
+            DB::rollback();
+            throw $e;
+        } catch (\Throwable $th) {
+            DB::rollback();
+            throw $th;
+        }
     }
 
     /**
@@ -79,6 +208,37 @@ class UserCrudController extends CrudController
      */
     protected function setupUpdateOperation()
     {
-        $this->setupCreateOperation();
+        CRUD::setValidation(UserRequest::class);
+        CRUD::addField([
+            'name' => 'name',
+            'label' => __('user.crud.name'),
+            'type' => 'text',
+        ]);
+        CRUD::addField([
+            'name' => 'email',
+            'label' => __('user.crud.email'),
+            'type' => 'text',
+        ]);
+        CRUD::addField([
+            'name' => 'password',
+            'label' =>__('user.crud.password'),
+            'type' => 'text',
+            'value' => '',
+        ]);
+
+        $id = request()->route('id');
+
+        CRUD::addField([
+            'name' => 'userRoles',
+            'label' => 'roles',
+            'type' => 'select2_multiple',
+            'model' => 'App\Models\Role',
+            'attribute' => 'name',
+            'wrapper' => [
+                'class' => 'form-group col-md-12 required',
+            ],
+        ]);
+        
+
     }
 }

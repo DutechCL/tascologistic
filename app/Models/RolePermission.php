@@ -5,11 +5,9 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Permission\Traits\HasPermissions;
 
-class Role extends Model
+class RolePermission extends Model
 {
-    use HasPermissions;
     use CrudTrait;
     use HasFactory;
 
@@ -19,7 +17,7 @@ class Role extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'roles';
+    protected $table = 'role_has_permissions';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
@@ -38,20 +36,11 @@ class Role extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function permissions()
-    {
-        return $this->belongsToMany(\Spatie\Permission\Models\Permission::class, 'role_has_permissions');
-    }
-
-    public function userRoles()
-    {
-        return $this->belongsToMany(Role::class, 'model_has_roles',  'role_id', 'model_id');
-    }
 
     /*
     |--------------------------------------------------------------------------
     | SCOPES
-    |------------------------------------------------------------a--------------
+    |--------------------------------------------------------------------------
     */
 
     /*
@@ -66,3 +55,4 @@ class Role extends Model
     |--------------------------------------------------------------------------
     */
 }
+

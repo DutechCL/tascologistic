@@ -6,6 +6,9 @@ use App\Http\Requests\RoleRequest;
 use Spatie\Permission\Models\Permission;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Illuminate\Support\Facades\DB;
+use App\Models\Role;
+
 
 /**
  * Class RoleCrudController
@@ -15,8 +18,13 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 class RoleCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation {
+        store as traitStore;
+    }
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation {
+        update as traitUpdate;
+        edit as traitedit;
+    }
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
@@ -29,7 +37,8 @@ class RoleCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Role::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/role');
-        CRUD::setEntityNameStrings('role', 'roles');
+        CRUD::setEntityNameStrings(__('role.role'), __('role.roles'));
+
     }
 
     /**
@@ -40,16 +49,125 @@ class RoleCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('created_at');
-        CRUD::column('guard_name');
-        CRUD::column('name');
-        CRUD::column('updated_at');
+        CRUD::addColumn([
+            'name' => 'created_at',
+            'label' => __('role.crud.created_at'),
+            'type' => 'text',
+        ]);
+        
+        CRUD::addColumn([
+            'name' => 'guard_name',
+            'label' => __('role.crud.guard_name'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'name',
+            'label' => __('role.crud.name'),
+            'type' => 'text',
+        ]);
+        
+        CRUD::addColumn([
+            'name' => 'updated_at',
+            'label' => __('role.crud.updated_at'),
+            'type' => 'text',
+        ]);
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
          * - CRUD::addColumn(['name' => 'price', 'type' => 'number']); 
          */
+    }
+
+    public function store(){
+        try {
+            DB::beginTransaction();
+
+            $request = $this->crud->getRequest();
+
+            $messages = [
+                'name.required' => 'El campo nombre es obligatorio.',
+                'name.unique' => 'El nombre del rol ya existe en la base de datos.'
+            ];
+    
+            $this->validate($request, [
+                'name' => 'required|unique:roles,name'
+            ], $messages);
+
+            $rol = [
+                'name' => $request->input('name', ''),
+                'guard_name'=> $request->input('guard_name', '')
+            ];
+
+            $roleId = DB::table('roles')->insertGetId($rol);
+
+            $permissions = $request->input('permissionIds', []);
+
+            foreach ($permissions as $permission) {
+                $permissionRol = [
+                    'permission_id' => $permission,
+                    'role_id' => $roleId
+                ];
+                DB::table('role_has_permissions')->insert($permissionRol);
+            }
+
+            DB::commit();
+            return redirect()->route('role.index')->with('success', 'Los permisos se han creado correctamente.');
+        } catch (ValidationException $e) {
+            DB::rollback();
+            throw $e;
+        } catch (\Throwable $th) {
+            DB::rollback();
+            throw $th;
+        }
+    }
+
+    public function update()
+    {
+        try {
+            DB::beginTransaction();
+
+            $request = $this->crud->getRequest();
+            $roleId = $request->input('id', '');
+
+            $messages = [
+                'name.required' => 'El campo nombre es obligatorio.',
+                'name.unique' => 'El nombre del rol ya existe en la base de datos.'
+            ];
+    
+            $this->validate($request, [
+                'name' => 'required|unique:roles,name,' . $roleId 
+            ], $messages);
+    
+            $permission = Role::findOrFail($roleId);
+            $permission->fill($request->only(['name', 'guard_name']));
+            $permission->save();
+
+            DB::table('role_has_permissions')
+            ->where('role_id', $roleId)
+            ->delete();
+
+            $permissions = $request->input('permissionIds', []);
+
+            foreach ($permissions as $permission) {
+                $permissionRol = [
+                    'permission_id' => $permission,
+                    'role_id' => $roleId
+                ];
+                DB::table('role_has_permissions')->insert($permissionRol);
+            }
+
+
+            DB::commit();
+            return redirect()->route('role.index')->with('success', 'Los permisos se han actualizado correctamente.');
+        } catch (ValidationException $e) {
+            DB::rollback();
+            throw $e;
+        } catch (\Throwable $th) {
+            DB::rollback();
+            throw $th;
+        }
     }
 
     /**
@@ -62,15 +180,23 @@ class RoleCrudController extends CrudController
     {
         
         CRUD::setValidation(RoleRequest::class);
+        CRUD::addField([
+            'name' => 'guard_name',
+            'label' => __('role.crud.guard_name'),
+            'type' => 'text',
+            'wrapper' => ['class' => 'form-group col-md-12'],
+        ]);
 
-        CRUD::field('guard_name');
-        CRUD::field('name');
+        CRUD::addField([
+            'name' => 'name',
+            'label' => __('role.crud.name'),
+            'type' => 'text',
+            'wrapper' => ['class' => 'form-group col-md-12'],
+        ]);
+
         CRUD::addField([
             'name' => 'permissions',
-            'label' => 'Permisos',
-            'type' => 'checklist',
-            'entity' => 'permissions',
-            'attribute' => 'name',
+            'type' => 'permissions',
         ]);
         /**
          * Fields can be defined using the fluent syntax or array syntax:

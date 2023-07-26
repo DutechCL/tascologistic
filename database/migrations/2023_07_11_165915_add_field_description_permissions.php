@@ -14,6 +14,13 @@ return new class extends Migration
         Schema::table('permissions', function (Blueprint $table) {
             $table->string('description')->nullable()->after('name'); 
             $table->string('url')->nullable()->after('description'); 
+            $table->string('slug')->nullable()->after('url'); 
+
+        });
+
+        Schema::table('menu_items', function (Blueprint $table) {
+            $table->unsignedBigInteger('permission_id');
+            $table->foreign('permission_id')->references('id')->on('permissions');
         });
     }
 
@@ -25,6 +32,13 @@ return new class extends Migration
         Schema::table('permissions', function (Blueprint $table) {
             $table->dropColumn('description');
             $table->dropColumn('url');
+            $table->dropColumn('slug');
+
+            
+        });
+
+        Schema::table('menu_items', function (Blueprint $table) {
+            $table->dropColumn('permission_id');
         });
     }
 };

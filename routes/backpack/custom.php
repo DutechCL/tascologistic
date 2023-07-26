@@ -19,5 +19,5 @@ Route::group([
     Route::crud('user', 'UserCrudController');
     Route::crud('role', 'RoleCrudController');
     Route::crud('permissions', 'PermissionsCrudController');
-    Route::crud('permission-group', 'PermissionGroupCrudController');
+    Route::crud('menu-item', 'MenuItemCrudController');
 }); // this should be the absolute last line of this file
