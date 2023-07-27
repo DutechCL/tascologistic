@@ -75,32 +75,7 @@ class MenuItemCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'view',
-            'label' => 'Etiqueta del Campo',
-            'type' => 'select_from_array',
-            'attribute' => 'slug',
-            'options' => $options
-        ]);
-
-        CRUD::addField([
-            'label'                   => "permissions", // Table column heading
-            'type'                    => 'select2_from_ajax',
-            'name'                    => 'permission', // the column that contains the ID of that connected entity;
-            'model'                   => '\App\Models\Permission',
-            // 'entity'                  => 'permissions', // the method that defines the relationship in your Model
-            // 'attribute'               => 'title', // foreign key attribute that is shown to user
-            'data_source'             => url('api/v1/permission'), // url to controller search function (with /{id} should return model)
-            'placeholder'             => 'Select an article', // placeholder for the select
-            'include_all_form_fields' => true, //sends the other form fields along with the request so it can be filtered.
-            'minimum_input_length'    => 0, // minimum characters to type before querying results
-            'dependencies'            => ['view'], // when a dependency changes, this select2 is reset to null
-            'method'               => 'POST', // optional - HTTP method to use for the AJAX call (GET, POST)
-            'attribute' => 'name',
-        ]);
-
-        CRUD::addField([
-            'name' => 'link',
-            'label' => 'link',
-            'type' => 'text',
+            'type' => 'view',
         ]);
 
         CRUD::addField([
@@ -114,7 +89,7 @@ class MenuItemCrudController extends CrudController
             'type'    => 'icon_picker',
             'label'   => 'Icon Picker',
             'iconset' => 'nav-icon',
-            'value'   => 'nav-icon-home',
+
         ]);
 
     }
@@ -123,13 +98,12 @@ class MenuItemCrudController extends CrudController
         try {
             DB::beginTransaction();
             $request = $this->crud->getRequest();
-            dd($request->input('icon'));
 
             $user = MenuItem::create([
                 'name' => $request->input('name'),
                 'parent_id' => $request->input('parent_id'),
-                'permission_id' => $request->input('permission'),
-                'link' => $request->input('link'),
+                'permission_id' => $request->input('permisions'),
+                'link' => $request->input('url'),
                 'order' => $request->input('order'),
                 'icon' => $request->input('icon'),
             ]);
@@ -168,32 +142,7 @@ class MenuItemCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'view',
-            'label' => 'Etiqueta del Campo',
-            'type' => 'select_from_array',
-            'attribute' => 'slug',
-            'options' => $options
-        ]);
-
-        CRUD::addField([
-            'label'                   => "permissions", // Table column heading
-            'type'                    => 'select2_from_ajax',
-            'name'                    => 'permission', // the column that contains the ID of that connected entity;
-            'model'                   => '\App\Models\Permission',
-            // 'entity'                  => 'permissions', // the method that defines the relationship in your Model
-            // 'attribute'               => 'title', // foreign key attribute that is shown to user
-            'data_source'             => url('api/v1/permission'), // url to controller search function (with /{id} should return model)
-            'placeholder'             => 'Select an article', // placeholder for the select
-            'include_all_form_fields' => true, //sends the other form fields along with the request so it can be filtered.
-            'minimum_input_length'    => 0, // minimum characters to type before querying results
-            'dependencies'            => ['view'], // when a dependency changes, this select2 is reset to null
-            'method'               => 'POST', // optional - HTTP method to use for the AJAX call (GET, POST)
-            'attribute' => 'name',
-        ]);
-
-        CRUD::addField([
-            'name' => 'link',
-            'label' => 'link',
-            'type' => 'text',
+            'type' => 'view',
         ]);
 
         CRUD::addField([
@@ -206,7 +155,36 @@ class MenuItemCrudController extends CrudController
             'name'    => 'icon',
             'type'    => 'icon_picker',
             'label'   => 'Icon Picker',
-            'iconset' => 'fontawesome' // options: fontawesome, lineawesome, glyphicon, ionicon, weathericon, mapicon, octicon, typicon, elusiveicon, materialdesign
+            'iconset' => 'nav-icon',
+
         ]);
+    }
+
+    public function update($id)
+    {
+        try {
+            DB::beginTransaction();
+            $request = $this->crud->getRequest();
+    
+            $menuItem = MenuItem::findOrFail($id);
+    
+            $menuItem->update([
+                'name' => $request->input('name'),
+                'parent_id' => $request->input('parent_id'),
+                'permission_id' => $request->input('permisions'),
+                'link' => $request->input('url'),
+                'order' => $request->input('order'),
+                'icon' => $request->input('icon'),
+            ]);
+    
+            DB::commit();
+            return redirect()->route('menu-item.index')->with('success', 'Los permisos se han actualizado correctamente.');
+        } catch (ValidationException $e) {
+            DB::rollback();
+            throw $e;
+        } catch (\Throwable $th) {
+            DB::rollback();
+            throw $th;
+        }
     }
 }

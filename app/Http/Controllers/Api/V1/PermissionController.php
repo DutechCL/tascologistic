@@ -14,10 +14,18 @@ class PermissionController extends Controller
 {
     public function permission(Request $request): JsonResponse
     {
-        $permissions = Permission::all();
-        $form = backpack_form_input();
+        $slug = $request->route('slug');
         $permission = DB::table('permissions')
-                                ->where('slug', $form['view'])
+                                ->where('slug',  $slug )
+                                ->get();
+        return response()->json($permission);
+    }
+
+    public function getUrl(Request $request): JsonResponse
+    {
+        $id = $request->route('id');
+        $permission = DB::table('permissions')
+                                ->where('id',  $id )
                                 ->get();
         return response()->json($permission);
     }
