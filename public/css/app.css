@@ -1,0 +1,463 @@
+/*Versión final*/
+
+/* Tipografias */
+@font-face {
+    font-family: 'Red Hat Display', sans-serif !important;
+    src: url('https://fonts.googleapis.com/css2?family=Red%20Hat%20Display:wght@400;500;600;700&display=swap') !important;
+}
+
+/* Colores */
+:root {
+    --bs-primary: #00D6D6 !important;
+    --bs-dark-primary: #007EB9 !important;
+    --bs-light: #F5F5F5 !important;
+    --bs-white: #ffffff !important;
+    --bs-success: #00BF13 !important;
+    --bs-danger: #FF0000 !important;
+    --bs-dark: #515151 !important;
+    --bs-gray-dark: #CDCFD0 !important;
+    --bs-light-primary: #00D6D6 !important;
+    --bs-secondary: #FAA82C !important;
+    --bs-info: #0dcaf0 !important;
+    --bs-warning: #ffc107 !important;
+    --bs-gray: #efefef !important;
+    --bs-dark-blue: #051c32 !important;
+    --bs-black: #000000 !important;
+    --bs-gradient: linear-gradient(269.99deg, #FAA82C 3.39%, #efb763 33.46%, #f4d29f 99.3%) !important;
+    --bs-blue: #3CC6EE !important;
+}
+
+.content_input_password {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: baseline;
+    background-color: #fff !important;
+}
+
+.eyes_password {
+    width: 20px;
+    margin-right: 10px;
+    margin-left: 11px;
+}
+
+.content_input_password input {
+    width: 90%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #506690;
+    background-color: #fff !important;
+    background-clip: padding-box;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    border: none !important;
+    border-radius: inherit;
+}
+
+body.flex-row {
+    background-image: url('../images/login_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body.flex-register-row {
+    flex-direction: row !important;
+}
+
+/* Titulos */
+h1 {
+    font-family: 'Red Hat Display', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    color: var(--bs-primary) !important;
+}
+
+h2 {
+    font-family: 'Red Hat Display', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    color: var(--bs-dark-primary) !important;
+}
+
+h3 {
+    font-family: 'Red Hat Display', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 20pt !important;
+    color: var(--bs-dark-primary) !important;
+}
+
+p {
+    font-family: 'Red Hat Display', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    color: var(--bs-dark) !important;
+}
+
+a {
+    font-family: 'Red Hat Display', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    color: var(--bs-primary) !important;
+}
+
+/* Tabla */
+table {
+    border: solid var(--bs-gray) 0px !important;
+    color: #575b64 !important;
+    border-radius: 10px !important;
+}
+
+.rounded {
+    border-radius: 10px !important;
+}
+
+thead {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-white);
+    border-collapse: collapse !important;
+}
+
+tfoot {
+    background-color: var(--bs-light) !important;
+    color: var(--bs-gray-dark);
+}
+
+th {
+    font-weight: bold !important;
+}
+
+/* titulo tabla */
+
+tr.odd {
+    background-color: #EDECFC !important;
+    --bs-bg-opacity: .2 !important;
+}
+
+/* columna impar */
+tr.even {
+    background-color: #F6FAFD !important;
+    --bs-bg-opacity: .2 !important;
+}
+
+/* columna par */
+
+.pt-2,
+.py-2 {
+    padding-top: .5rem !important;
+    background-color: var(--bs-light) !important;
+}
+
+/* Filtros Tabla */
+/*   
+.navbar-filters{color: var(--bs-dark-primary)!important;}
+.navbar .navbar-expand-lg .navbar-filters .mb-0 .pb-0 .pt-0{
+    color: var(--bs-dark-primary)!important;}
+*/
+
+/* texto realizado por */
+.text-muted {
+    color: var(--bs-gray) !important;
+}
+
+/* botones */
+/* default hover active*/
+btn {
+    padding: 4px 8px !important;
+    text-align: center !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+.btn-default {
+    background-color: var(--bs-secondary) !important;
+    border-color: var(--bs-info) !important;
+    color: var(--bs-white) !important;
+}
+
+/* defecto gris */
+
+.btn-primary {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-info) !important;
+    color: var(--bs-white) !important;
+}
+
+/* primario azul */
+
+.btn-blue {
+    background-color: var(--bs-blue) !important;
+    border-color: var(--bs-info) !important;
+    color: var(--bs-white) !important;
+}
+
+/* primario azul */
+
+.btn-success {
+    background-color: var(--bs-success) !important;
+    color: var(--bs-white) !important;
+    border-color: var(--bs-success) !important;
+}
+
+/* exito verde */
+
+.btn-info {
+    background-color: var(--bs-info) !important;
+    border-color: var(--bs-info) !important;
+    color: var(--bs-white)
+}
+
+
+/* informacion celeste */
+.btn-warning {
+    background-color: var(--bs-warning) !important;
+    border-color: var(--bs-info) !important;
+    color: var(--bs-white) !important;
+}
+
+/* alerta amarillo */
+.btn-danger {
+    background-color: var(--bs-danger) !important;
+    border-color: var(--bs-info) !important;
+    color: var(--bs-white) !important;
+}
+
+/* peligro rojo */
+
+.btn-link {
+    color: var(--bs-primary) !important;
+    border-color: var(--bs-info) !important;
+    padding: 4px 8px !important;
+}
+
+/* padding de boton texto subrayado */
+
+/* Formulario */
+input:submit {
+    color: var(--bs-white) !important;
+    background-color: var(--bs-primary) !important;
+    border-radius: 10px !important;
+}
+
+/* enviar */
+
+.select2-container--bootstrap .select2-results__option--highlighted[aria-selected] {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+}
+
+.dataTables_info {
+    color: #afb6bc !important;
+}
+
+/* Info tabla */
+#crudTable_reset_button {
+    color: var(--bs-primary) !important;
+}
+
+/* Reiniciar */
+
+
+a.btn-primary[data-style="zoom-in"] {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+}
+
+/* login y usuario */
+.card-body {
+    background-color: var(--bs-white) !important;
+    border-radius: 20px !important;
+}
+
+/* tarjeta */
+
+.card-header {
+    font-family: 'Red Hat Display', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 16pt !important;
+    color: var(--bs-dark) !important;
+}
+
+/* titulo tarjeta*/
+
+.control-lavel {
+    font-family: 'Red Hat Display', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    color: var(--bs-primary) !important;
+}
+
+/* titulo input */
+
+.form-control {
+    background-color: var(--bs-white) !important;
+    border: solid #d5d5d5 1px !important;
+    border-radius: 10px !important;
+}
+
+/* campo de texto */
+
+/* Menú navegacion */
+.app-header .navbar-brand {
+    align-items: center !important;
+    background-image: url(/images/logo_sin_frase.png) !important;
+    background-size: 75% !important;
+    color: transparent !important;
+    display: inline-flex !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    opacity: 1 !important;
+}
+
+.navbar-toggler {
+    color: var(--bs-white) !important;
+    background-color: var(--bs-light-primary) !important;
+    border: none !important;
+    font-size: 16px !important;
+}
+
+/* menu hamburguesa */
+
+
+.bg-blue {
+    background: var(--bs-gradient) !important;
+}
+
+.navbar-color {
+    border: none !important;
+}
+
+.dropdown-item {
+    background-color: var(--bs-white) !important;
+    color: var(--bs-primary) !important;
+}
+
+
+/* menu lateral */
+.sidebar {
+    background-color: var(--bs-gray) !important;
+}
+
+/* contenedor */
+
+a.nav-link {
+    background-color: transparent !important;
+    color: var(--bs-dark-primary) !important;
+    border-radius: 10px !important;
+}
+
+/* titulos cerrados */
+
+a.nav-link.active {
+    background-color: var(--bs-light-primary) !important;
+    color: var(--bs-dark-blue) !important;
+    border-radius: 10px !important;
+}
+
+/* titulo abierto */
+
+a.nav-link:hover {
+    background-color: var(--bs-light-primary) !important;
+    color: var(--bs-white) !important;
+    border-radius: 10px !important;
+}
+
+/* titulo abierto */
+
+i.nav-icon {
+    color: var(--bs-dark-primary) !important;
+}
+
+/* icono titulos */
+
+
+/* orden de estados -> link,visited,focus,hover,active */
+a.nav-link.link>i.nav-icon {
+    color: var(--bs-white) !important;
+}
+
+a.nav-link.active>i.nav-icon {
+    color: var(--bs-white) !important;
+}
+
+.sidebar-pills .nav-link.active,
+.sidebar-pills .nav-link:hover,
+.sidebar-pills .nav-link:hover .nav-icon {
+    color: var(--bs-white) !important;
+}
+
+.badge-success {
+    background-color: var(--bs-primary) !important;
+}
+
+.sidebar.sidebar-pills .nav-dropdown.open {
+    background: rgb(161 202 255 / 20%) !important;
+    border-radius: 10px !important;
+}
+
+.sidebar.sidebar-pills .nav-link.active,
+.sidebar.sidebar-pills .nav-link:hover {
+    background-color: rgba(0, 0, 0, .02);
+    color: white !important;
+}
+
+.sidebar-pills a:not(.active),
+.sidebar-pills a:not(.open),
+.sidebar-pills a:not(:active),
+.sidebar-pills a:not(:focus),
+.sidebar-pills a:not(:hover),
+.sidebar-pills li {
+    color: var(--bs-dark-primary) !important;
+}
+
+.nav-link.nav-dropdown-toggle {
+    background-color: transparent !important;
+}
+
+
+a.dropdown-item.hover {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+}
+
+/* Paginacion */
+.page-item.active .page-link {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+}
+
+.pagination>li>a {
+    border: solid var(--bs-secondary) 0px !important;
+    border-radius: 50px !important;
+}
+
+/* breadcrumb */
+.breadcrumb-item.text-capitalize {
+    font-family: 'Red Hat Display', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    color: var(--bs-dark-primary) !important;
+}
+
+.jumbotron {
+    background-color: transparent !important;
+}
+
+*:disabled {
+    background-color: #dddddd !important;
+    color: #404040 !important;
+    opacity: 1 !important;
+}
+
+.justify-content-right {
+    justify-content: right !important;
+}
+
+.mt-9 {
+    margin-top: 2.25rem !important;
+}
