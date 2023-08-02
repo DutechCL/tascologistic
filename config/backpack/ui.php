@@ -18,7 +18,7 @@ return [
     // and choosing that view_namespace instead of the default one. Backpack will load a file from there
     // if it exists, otherwise it will load it from the fallback namespace.
 
-    'view_namespace' => 'backpack.theme-coreuiv2::',
+    'view_namespace' => 'backpack_custom.',
     'view_namespace_fallback' => 'backpack.theme-coreuiv2::',
 
     /*
@@ -46,7 +46,7 @@ return [
     // ----
 
     // Project name - shown in the window title
-    'project_name' => 'Backpack Admin Panel',
+    'project_name' => 'Tasco',
 
     // Content of the HTML meta robots tag to prevent indexing and link following
     'meta_robots_content' => 'noindex, nofollow',
@@ -94,8 +94,7 @@ return [
 
     // CSS files that are loaded in all pages, using Laravel's asset() helper
     'styles' => [
-        // 'styles/example.css',
-        // 'https://some-cdn.com/example.css',
+        'css/app.css',
     ],
 
     // CSS files that are loaded in all pages, using Laravel's mix() helper

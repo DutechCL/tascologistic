@@ -17,7 +17,8 @@ use App\Http\Controllers\Api\V1\PermissionController;
 
 Route::prefix('v1')->group(
     function () {
-        Route::post('permission', [PermissionController::class, 'permission']);
+        Route::get('permission/{slug}', [PermissionController::class, 'permission']);
+        Route::get('permission/url/{id}', [PermissionController::class, 'getUrl']);
     }
 );
 
