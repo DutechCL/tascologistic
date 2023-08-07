@@ -8,15 +8,15 @@
 
 /* Colores */
 :root {
-    --bs-primary: #00D6D6 !important;
-    --bs-dark-primary: #007EB9 !important;
+    --bs-primary: #259BD7 !important;
+    --bs-dark-primary: #D5EBF8 !important;
     --bs-light: #F5F5F5 !important;
     --bs-white: #ffffff !important;
     --bs-success: #00BF13 !important;
     --bs-danger: #FF0000 !important;
     --bs-dark: #515151 !important;
     --bs-gray-dark: #CDCFD0 !important;
-    --bs-light-primary: #00D6D6 !important;
+    --bs-light-primary: #259BD7 !important;
     --bs-secondary: #FAA82C !important;
     --bs-info: #0dcaf0 !important;
     --bs-warning: #ffc107 !important;
@@ -339,7 +339,7 @@ a.btn-primary[data-style="zoom-in"] {
 
 /* menu lateral */
 .sidebar {
-    background-color: var(--bs-gray) !important;
+    background-color: #259BD7 !important;
 }
 
 /* contenedor */
