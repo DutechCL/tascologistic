@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\PermissionController;
+use App\Http\Controllers\Api\V1\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,10 @@ Route::prefix('v1')->group(
     function () {
         Route::get('permission/{slug}', [PermissionController::class, 'permission']);
         Route::get('permission/url/{id}', [PermissionController::class, 'getUrl']);
+        Route::post('user/import', [UserController::class, 'import'])->name('admin.user.import');
+        Route::get('user/export', [UserController::class, 'export'])->name('admin.user.export');
+
+
     }
 );
 

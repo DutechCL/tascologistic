@@ -23,6 +23,12 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'internal_key',
+        'user_code'  ,
+        'mobile_phone_number'  ,
+        'defaults'  ,
+        'branch'  ,
+        'department',
     ];
 
     /**

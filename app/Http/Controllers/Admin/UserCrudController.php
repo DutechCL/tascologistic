@@ -47,6 +47,9 @@ class UserCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        $this->crud->addButtonFromView('top', 'import_button', 'import_button', 'end');
+        $this->crud->addButtonFromView('top', 'export_button', 'export_button', 'end');
+
         CRUD::addColumn([
             'name' => 'name',
             'label' => __('user.crud.name'),
@@ -238,7 +241,6 @@ class UserCrudController extends CrudController
                 'class' => 'form-group col-md-12 required',
             ],
         ]);
-        
-
     }
+
 }
