@@ -2,8 +2,8 @@
 
 /* Tipografias */
 @font-face {
-    font-family: 'Red Hat Display', sans-serif !important;
-    src: url('https://fonts.googleapis.com/css2?family=Red%20Hat%20Display:wght@400;500;600;700&display=swap') !important;
+    font-family: 'Inter', sans-serif !important;
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap') !important;
 }
 
 /* Colores */
@@ -11,19 +11,19 @@
     --bs-primary: #259BD7 !important;
     --bs-dark-primary: #D5EBF8 !important;
     --bs-light: #F5F5F5 !important;
-    --bs-white: #ffffff !important;
-    --bs-success: #00BF13 !important;
+    --bs-white: #F0F5F8 !important;
+    --bs-success: #27C100 !important;
     --bs-danger: #FF0000 !important;
     --bs-dark: #515151 !important;
     --bs-gray-dark: #CDCFD0 !important;
-    --bs-light-primary: #259BD7 !important;
-    --bs-secondary: #FAA82C !important;
+    --bs-light-primary: #D5EBF8 !important;
+    --bs-secondary: #F5F5F5 !important;
     --bs-info: #0dcaf0 !important;
-    --bs-warning: #ffc107 !important;
+    --bs-warning: #FF9900 !important;
     --bs-gray: #efefef !important;
     --bs-dark-blue: #051c32 !important;
-    --bs-black: #000000 !important;
-    --bs-gradient: linear-gradient(269.99deg, #FAA82C 3.39%, #efb763 33.46%, #f4d29f 99.3%) !important;
+    --bs-black: #474747 !important;
+    --bs-gradient: linear-gradient(269.99deg, #F5F5F5 3.39%, #efb763 33.46%, #f4d29f 99.3%) !important;
     --bs-blue: #3CC6EE !important;
 }
 
@@ -63,41 +63,45 @@ body.flex-row {
     background-position: center;
 }
 
+.custom-a{
+    padding: 10px 0px 70px 0px !important;
+}
+
 body.flex-register-row {
     flex-direction: row !important;
 }
 
 /* Titulos */
 h1 {
-    font-family: 'Red Hat Display', sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
     font-weight: 700 !important;
     font-size: 24px !important;
     color: var(--bs-primary) !important;
 }
 
 h2 {
-    font-family: 'Red Hat Display', sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
     font-weight: 600 !important;
     font-size: 18px !important;
     color: var(--bs-dark-primary) !important;
 }
 
 h3 {
-    font-family: 'Red Hat Display', sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
     font-weight: bold !important;
     font-size: 20pt !important;
-    color: var(--bs-dark-primary) !important;
+    color: var(--bs-primary) !important;
 }
 
 p {
-    font-family: 'Red Hat Display', sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
     font-weight: 400 !important;
     font-size: 12px !important;
     color: var(--bs-dark) !important;
 }
 
 a {
-    font-family: 'Red Hat Display', sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
     font-weight: 400 !important;
     font-size: 15px !important;
     color: var(--bs-primary) !important;
@@ -276,7 +280,7 @@ a.btn-primary[data-style="zoom-in"] {
 /* tarjeta */
 
 .card-header {
-    font-family: 'Red Hat Display', sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
     font-weight: 500 !important;
     font-size: 16pt !important;
     color: var(--bs-dark) !important;
@@ -285,7 +289,7 @@ a.btn-primary[data-style="zoom-in"] {
 /* titulo tarjeta*/
 
 .control-lavel {
-    font-family: 'Red Hat Display', sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
     font-weight: bold !important;
     font-size: 16px !important;
     color: var(--bs-primary) !important;
@@ -353,16 +357,16 @@ a.nav-link {
 /* titulos cerrados */
 
 a.nav-link.active {
-    background-color: var(--bs-light-primary) !important;
     color: var(--bs-dark-blue) !important;
     border-radius: 10px !important;
+    border-left: 10px solid var(--bs-light-primary) !important;
 }
 
 /* titulo abierto */
 
 a.nav-link:hover {
     background-color: var(--bs-light-primary) !important;
-    color: var(--bs-white) !important;
+    color: var(--bs-primary) !important;
     border-radius: 10px !important;
 }
 
@@ -387,7 +391,7 @@ a.nav-link.active>i.nav-icon {
 .sidebar-pills .nav-link.active,
 .sidebar-pills .nav-link:hover,
 .sidebar-pills .nav-link:hover .nav-icon {
-    color: var(--bs-white) !important;
+    color: var(--bs-primary) !important;
 }
 
 .badge-success {
@@ -399,10 +403,14 @@ a.nav-link.active>i.nav-icon {
     border-radius: 10px !important;
 }
 
-.sidebar.sidebar-pills .nav-link.active,
-.sidebar.sidebar-pills .nav-link:hover {
+.sidebar.sidebar-pills .nav-link.active {
     background-color: rgba(0, 0, 0, .02);
     color: white !important;
+}
+
+.sidebar.sidebar-pills .nav-link:hover {
+    background-color: rgba(0, 0, 0, .02);
+    color: var(--bs-primary) !important;
 }
 
 .sidebar-pills a:not(.active),
@@ -438,7 +446,7 @@ a.dropdown-item.hover {
 
 /* breadcrumb */
 .breadcrumb-item.text-capitalize {
-    font-family: 'Red Hat Display', sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
     font-weight: 400 !important;
     font-size: 14px !important;
     color: var(--bs-dark-primary) !important;
