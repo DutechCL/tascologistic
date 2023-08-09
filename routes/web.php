@@ -17,6 +17,5 @@ use App\Http\Controllers\Admin\UserCrudController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('backpack.dashboard');
 });
-
