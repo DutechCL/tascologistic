@@ -2,8 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\V1\PermissionController;
+use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\UserController;
+use App\Http\Controllers\Api\V1\PermissionController;
 
 
 /*
@@ -23,6 +24,7 @@ Route::prefix('v1')->group(
         Route::get('permission/url/{id}', [PermissionController::class, 'getUrl']);
         Route::post('user/import', [UserController::class, 'import'])->name('admin.user.import');
         Route::get('user/export', [UserController::class, 'export'])->name('admin.user.export');
+        Route::get('/csrf-cookie', [AuthController::class, 'getTokenFromWeb']);
 
 
     }
