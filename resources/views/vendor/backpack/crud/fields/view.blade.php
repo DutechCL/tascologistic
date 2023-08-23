@@ -9,7 +9,7 @@
 @endphp
 
 
-<div class="col-md-12 mb-3">
+<div class="col-md-4 mb-3">
     <label for="slugs">Vista</label>
     <select id="slugs" name="slugs" class="form-control">
     <option value=""> </option>
@@ -26,13 +26,13 @@
 </div>
 
 
-<div class="col-md-12 mb-3">
+<div class="col-md-4 mb-3">
     <label for="permisions">Permiso</label>
     <select id="permisions" name="permisions" class="form-control">
     </select>
 </div>
 
-<div class="col-md-12 mb-3">
+<div class="col-md-4 mb-3">
     <label for="url">Enlace</label>
     <input id="url" name="url" class="form-control" />
 </div>
@@ -40,7 +40,7 @@
 <script>
     function getPermissions(slug) {
         var xhr = new XMLHttpRequest();
-        var url = 'http://tascologistic.test/api/v1/permission/' + encodeURIComponent(slug);
+        var url = '{{ url("/api/v1/permission/") }}/' + encodeURIComponent(slug);
 
         xhr.open('GET', url, true);
 
@@ -67,7 +67,7 @@
 
     function getUrl(permission) {
         var xhr = new XMLHttpRequest();
-        var url = 'http://tascologistic.test/api/v1/permission/url/' + encodeURIComponent(permission);
+        var url = '{{ url("/api/v1/permission/url/") }}/' + encodeURIComponent(permission);
 
         xhr.open('GET', url, true);
 

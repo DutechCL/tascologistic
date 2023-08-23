@@ -1,3 +1,7 @@
+<div class="p-3">
+    <img class="mb-4 mt-4 w-100" src="{{url('/images/logo_tasco_white.png')}}" alt="logo_tasco" title="logo blanco tasco">
+</div>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css?f8e5313a2311" rel="stylesheet" type="text/css">
 @foreach (\App\Models\MenuItem::getTree(); as $item)
     <li class="nav-item {{ count($item['children']) > 0 ? 'nav-dropdown' : '' }}">
 

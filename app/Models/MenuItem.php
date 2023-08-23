@@ -19,7 +19,8 @@ class MenuItem extends Model
         'link', 
         'permission_id', 
         'parent_id',
-        'icon'
+        'icon',
+        'is_external'
     ];
 
     public function parent()

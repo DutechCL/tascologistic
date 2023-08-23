@@ -21,6 +21,7 @@ return [
     'password'             => 'Contraseña',
     'forgot_your_password' => 'Olvidé mi contraseña',
     'remember_me'          => 'Recordar contraseña',
+    'user'              => 'Usuario',
 
 
 

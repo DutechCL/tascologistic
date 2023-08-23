@@ -88,11 +88,17 @@ class UserCrudController extends CrudController
             'name' => 'name',
             'label' => __('user.crud.name'),
             'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ]
         ]);
         CRUD::addField([
             'name' => 'email',
             'label' => __('user.crud.email'),
             'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ]
         ]);
         CRUD::addField([
             'name' => 'password',
@@ -103,7 +109,7 @@ class UserCrudController extends CrudController
         CRUD::addField([
             'name' => 'userRoles',
             'label' => 'roles',
-            'type' => 'select2_multiple',
+            'type' => 'checkbox',
             'model' => 'App\Models\Role',
             'attribute' => 'name',
             'wrapper' => [

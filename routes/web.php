@@ -19,3 +19,7 @@ use App\Http\Controllers\Admin\UserCrudController;
 Route::get('/', function () {
     return redirect()->route('backpack.dashboard');
 });
+
+Route::get('/app-vue', function () {
+    return view('vue'); // Ajusta el nombre de la vista según tu estructura
+});

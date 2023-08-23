@@ -10,8 +10,8 @@
 :root {
     --bs-primary: #259BD7 !important;
     --bs-dark-primary: #D5EBF8 !important;
-    --bs-light: #F5F5F5 !important;
-    --bs-white: #F0F5F8 !important;
+    --bs-light: #FFFFFF !important;
+    --bs-white: #FFFFFF !important;
     --bs-success: #27C100 !important;
     --bs-danger: #FF0000 !important;
     --bs-dark: #515151 !important;
@@ -29,7 +29,7 @@
 
 .content_input_password {
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 3px;
     display: flex;
     align-items: baseline;
     background-color: #fff !important;
@@ -166,6 +166,10 @@ tr.even {
     color: var(--bs-gray) !important;
 }
 
+.text-primary{
+    color: var(--bs-primary) !important;
+}
+
 /* botones */
 /* default hover active*/
 btn {
@@ -201,11 +205,20 @@ btn {
 /* primario azul */
 
 .btn-success {
-    background-color: var(--bs-success) !important;
+    background-color: var(--bs-primary) !important;
     color: var(--bs-white) !important;
-    border-color: var(--bs-success) !important;
+    border-color: var(--bs-primary) !important;
 }
 
+.btn-outline-primary {
+    color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+.switch-primary .switch-input:checked + .switch-slider {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
 /* exito verde */
 
 .btn-info {
@@ -299,8 +312,9 @@ a.btn-primary[data-style="zoom-in"] {
 
 .form-control {
     background-color: var(--bs-white) !important;
+    background: var(--bs-white) !important;
     border: solid #d5d5d5 1px !important;
-    border-radius: 10px !important;
+    border-radius: 3px !important;
 }
 
 /* campo de texto */
@@ -308,7 +322,7 @@ a.btn-primary[data-style="zoom-in"] {
 /* Menú navegacion */
 .app-header .navbar-brand {
     align-items: center !important;
-    background-image: url(/images/logo_tasco.png) !important;
+    background-image: url(/images/logo_tasco_white.png) !important;
     background-size: 75% !important;
     color: transparent !important;
     display: inline-flex !important;
@@ -468,4 +482,29 @@ a.dropdown-item.hover {
 
 .mt-9 {
     margin-top: 2.25rem !important;
+}
+
+.app-footer.sticky-footer,
+.app-foote.d-print-none,
+footer{
+    display: none !important;
+}
+
+tfoot{
+    display: none !important;
+}
+
+a.nav-link.active::before{
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 21px;
+    height: 41px;
+    border-radius: 7px;
+    top: -1px;
+    left: -12px;
+}
+a.nav-link.active{
+    border-left: none !important;
+    padding-left: 20px !important;
 }

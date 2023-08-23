@@ -23,7 +23,7 @@ return [
     // ----
 
     // Project name. Shown in the window title.
-    'project_name' => 'Endolab',
+    'project_name' => 'Tascologistics',
 
     // When clicking on the admin panel's top-left logo/name,
     // where should the user be redirected?
@@ -59,6 +59,7 @@ return [
         // Load the fonts separately (so that you can replace them at will):
         'packages/source-sans-pro/source-sans-pro.css',
         'packages/line-awesome/css/line-awesome.min.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css?f8e5313a2311',
 
         // Example (the fonts above, loaded from CDN instead)
         // 'https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css',
@@ -304,7 +305,7 @@ return [
     // and choosing that view_namespace instead of the default one. Backpack will load a file from there
     // if it exists, otherwise it will load it from the default namespace ("backpack::").
 
-    'view_namespace' => 'backpack::',
+    'view_namespace' => 'vendor.backpack',
 
     // EXAMPLE: if you create a new folder in resources/views/vendor/myname/mypackage,
     // your namespace would be the one below. IMPORTANT: in this case the namespace ends with a dot.

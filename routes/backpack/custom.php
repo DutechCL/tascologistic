@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ManagementController;
+use App\Http\Controllers\Api\V1\AuthController;
 
 // --------------------------
 // Custom Backpack Routes
@@ -16,8 +18,12 @@ Route::group([
     ),
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
+    //optener el token de sesion en la aplicacion vue
+    Route::get('auth/get-token', [AuthController::class, 'getTokenFromWeb'])->name('auth.get-token-from-web');
+
     Route::crud('user', 'UserCrudController');
     Route::crud('role', 'RoleCrudController');
     Route::crud('permissions', 'PermissionsCrudController');
     Route::crud('menu-item', 'MenuItemCrudController');
+    Route::get('/management', [ManagementController::class, 'index'])->name('management.index');
 }); // this should be the absolute last line of this file

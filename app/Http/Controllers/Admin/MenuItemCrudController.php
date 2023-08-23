@@ -59,6 +59,9 @@ class MenuItemCrudController extends CrudController
         CRUD::addField([
             'name' => 'name',
             'label' => 'Etiqueta',
+            'wrapper' => [
+                'class' => 'form-group col-sm-4 mb-3'
+            ]
         ]);
 
         CRUD::addField([
@@ -68,6 +71,20 @@ class MenuItemCrudController extends CrudController
             'entity' => 'parent',
             'attribute' => 'name',
             'model' => '\App\Models\MenuItem',
+            'wrapper' => [
+                'class' => 'form-group col-sm-4 mb-3'
+            ]
+        ]);
+
+        CRUD::field([
+            'name'  => 'is_external',
+            'label' => 'Enlace externo',
+            'type'  => 'switch',
+            'onLabel' => '✓',
+            'offLabel' => '✕',
+            'wrapper' => [
+                'class' => 'form-group col-sm-4 mb-3 mt-4'
+            ]
         ]);
 
         $permissions = DB::table('permissions')->distinct('slug')->pluck('slug')->toArray();
@@ -76,12 +93,18 @@ class MenuItemCrudController extends CrudController
         CRUD::addField([
             'name' => 'view',
             'type' => 'view',
+            'wrapper' => [
+                'class' => 'form-group col-sm-4 mb-3'
+            ]
         ]);
 
         CRUD::addField([
             'name' => 'order',
             'label' => 'order',
             'type' => 'number',
+            'wrapper' => [
+                'class' => 'form-group col-sm-4 mb-3'
+            ]
         ]);
 
         CRUD::addField([
@@ -89,6 +112,9 @@ class MenuItemCrudController extends CrudController
             'type'    => 'icon_picker',
             'label'   => 'Icon Picker',
             'iconset' => 'nav-icon',
+            'wrapper' => [
+                'class' => 'form-group col-sm-4 mb-3'
+            ]
 
         ]);
 
@@ -101,11 +127,12 @@ class MenuItemCrudController extends CrudController
 
             $user = MenuItem::create([
                 'name' => $request->input('name'),
-                'parent_id' => $request->input('parent_id'),
-                'permission_id' => $request->input('permisions'),
-                'link' => $request->input('url'),
-                'order' => $request->input('order'),
-                'icon' => $request->input('icon'),
+                'parent_id' => $request->input('parent_id') ?? null,
+                'permission_id' => $request->input('permisions') ?? null,
+                'link' => $request->input('url') ?? null,
+                'order' => $request->input('order') ?? null,
+                'icon' => $request->input('icon') ?? null,
+                'is_external' => $request->input('is_external'),
             ]);
            
             DB::commit();
@@ -137,6 +164,16 @@ class MenuItemCrudController extends CrudController
             'model' => '\App\Models\MenuItem',
         ]);
 
+        CRUD::field([
+            'name'  => 'is_external',
+            'label' => 'Enlace externo',
+            'type'  => 'switch',
+            'onLabel' => '✓',
+            'offLabel' => '✕',
+            'wrapper' => [
+                'class' => 'form-group col-sm-4 mb-3 mt-4'
+            ]
+        ]);
         $permissions = DB::table('permissions')->distinct('slug')->pluck('slug')->toArray();
         $options = array_combine($permissions, $permissions);
 
@@ -175,6 +212,7 @@ class MenuItemCrudController extends CrudController
                 'link' => $request->input('url'),
                 'order' => $request->input('order'),
                 'icon' => $request->input('icon'),
+                'is_external' => $request->input('is_external'),
             ]);
     
             DB::commit();

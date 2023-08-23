@@ -7,24 +7,24 @@
     </div>
     <div class="col-md-6 d-flex justify-content-right">
 
-        <div class="col-12 col-md-8">
+        <div class="bg-white col-12 col-md-10 p-4" style="border-radius: 10px;">
             {{-- <h3 class="text-center mb-4">{{ trans('backpack::base.login') }}</h3> --}}
             {{-- <img src='{{ asset('images/logo_tasco.png') }}' alt='{{ trans('backpack::crud.processing') }}' style="margin-left: 33px; height: 50px;"> --}}
 
            <div> {{--  class="card" --}}
                 <div>
-                    <h3 class="mt-4">@lang('login.welcome')</h3>
-                    <p style="margin-top: -8px!important;">@lang('login.enter_data')</p>
+                    <h3 class="mt-4 mb-5 text-center">@lang('login.welcome')</h3>
+                    {{-- <p style="margin-top: -8px!important;">@lang('login.enter_data')</p> --}}
                 </div>
                 {{-- <div class="card-body"> --}}
                     <form class="col-md-12 p-t-10" role="form" method="POST" action="{{ route('backpack.auth.login') }}" style="padding-left: 0px; padding-right: 0px;">
                         {!! csrf_field() !!}
 
                         <div class="form-group">
-                            <label class="control-label" for="{{ $username }}">@lang('login.email')</label>
+                            <label class="control-label" for="{{ $username }}">@lang('login.user')</label>
 
                             <div>
-                                <input type="text" class="form-control{{ $errors->has($username) ? ' is-invalid' : '' }}" name="{{ $username }}" value="{{ old($username) }}" id="{{ $username }}" placeholder="correo@correo.com">
+                                <input type="text" class="mb-4 form-control{{ $errors->has($username) ? ' is-invalid' : '' }}" name="{{ $username }}" value="{{ old($username) }}" id="{{ $username }}" placeholder="correo@correo.com">
 
                                 @if ($errors->has($username))
                                     <span class="invalid-feedback">
@@ -38,11 +38,11 @@
                             <label class="control-label label_color" for="password">@lang('login.password')</label>
                             <div class="input-group content_input_password">
                                 <input class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" name="password" id="password" value="" placeholder="*****">
-                                <div class="input-group-append clickme" onclick="showPassword('password')">
+                                {{-- <div class="input-group-append clickme" onclick="showPassword('password')">
                                     <span>
                                         <img src="{{ asset('images/eyes.png') }}" alt="Ver" class="img-flui eyes_password">
                                     </span>
-                                </div>
+                                </div> --}}
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('password') }}</strong>
@@ -70,10 +70,10 @@
                             </div>
                         </div> --}}
 
-                        <div class="form-group form-inline">
+                        <div class="form-group form-inline justify-content-between mb-4">
                             <div class="checkbox">
                               <label>
-                                <input type="checkbox" name="remember"> @lang('login.remember_me')
+                                <input class="mr-2" type="checkbox" name="remember"> @lang('login.remember_me')
                               </label>
                             </div>
                             <div class="text-center" display="inline-block">
@@ -83,7 +83,7 @@
 
                         <div class="form-group">
                             <div>
-                                <button type="submit" class="btn btn-block btn-info">
+                                <button type="submit" class="btn btn-block btn-primary">
                                     {{ trans('backpack::base.login') }}
                                 </button>
                             </div>
@@ -95,7 +95,7 @@
                 <div class="text-center"><a href="{{ route('backpack.auth.password.reset') }}">@lang('login.forgot_your_password')</a></div>
             @endif --}}
             @if (config('backpack.base.registration_open'))
-                <div class="text-center">@lang('login.not_account') <a href="{{ route('backpack.auth.register') }}">@lang('login.register')</a></div>
+                <div class="text-center">@lang('login.not_account') <a class="ml-5" href="{{ route('backpack.auth.register') }}">@lang('login.register')</a></div>
             @endif
         </div>
     </div>
