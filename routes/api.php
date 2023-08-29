@@ -4,7 +4,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\UserController;
+use App\Http\Controllers\Api\V1\OrderController;
+use App\Http\Controllers\Api\V1\ProductController;
+use App\Http\Controllers\Api\V1\CustomerController;
+use App\Http\Controllers\Api\V1\OrderItemsController;
 use App\Http\Controllers\Api\V1\PermissionController;
+use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
 
 
 /*
@@ -24,12 +29,19 @@ Route::prefix('v1')->group(
         Route::get('permission/url/{id}', [PermissionController::class, 'getUrl']);
         Route::post('user/import', [UserController::class, 'import'])->name('admin.user.import');
         Route::get('user/export', [UserController::class, 'export'])->name('admin.user.export');
-        Route::get('/csrf-cookie', [AuthController::class, 'getTokenFromWeb']);
+        Route::get('/get-token', [AuthController::class, 'getTokenFromWeb']);
+        Route::post('/login', [AuthController::class, 'login']);
 
 
+        Route::apiResource('customers', CustomerController::class);
+        Route::apiResource('orders', OrderController::class);
+        Route::apiResource('products', ProductController::class);
+        Route::apiResource('order-items', OrderItemsController::class);
     }
 );
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::middleware('web')->get('/sanctum/csrf-cookie', CsrfCookieController::class . '@show');

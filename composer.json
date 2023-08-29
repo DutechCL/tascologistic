@@ -56,8 +56,7 @@
             "@php artisan key:generate --ansi"
         ],
         "post-install-cmd": [
-            "php artisan storage:link",
-            "cp -R resources/app/* public/app"
+            "php artisan storage:link"
         ]
     },
     "extra": {

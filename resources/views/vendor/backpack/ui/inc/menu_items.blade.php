@@ -45,3 +45,5 @@
         @endif
     </li>
 @endforeach
+
+<x-backpack::menu-item title="Order statuses" icon="la la-question" :link="backpack_url('order-status')" />
