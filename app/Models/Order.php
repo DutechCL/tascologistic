@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Customer;
 use App\Models\OrderItem;
 use App\Models\OrderStatus;
+use App\Models\RoleAssignments;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -35,6 +36,16 @@ class Order extends Model
     public function orderItems()
     {
         return $this->hasMany(OrderItem::class);
+    }
+
+    public function methodShipping()
+    {
+        return $this->belongsTo(MethodShipping::class, 'method_shipping_id');
+    }
+
+    public function responsibles()
+    {
+        return $this->hasMany(RoleAssignments::class, 'order_id')->with('user', 'role');
     }
     
 }

@@ -47,3 +47,4 @@
 @endforeach
 
 <x-backpack::menu-item title="Order statuses" icon="la la-question" :link="backpack_url('order-status')" />
+<x-backpack::menu-item title="Problems" icon="la la-question" :link="backpack_url('problem')" />

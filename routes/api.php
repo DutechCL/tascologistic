@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\V1\UserController;
 use App\Http\Controllers\Api\V1\OrderController;
 use App\Http\Controllers\Api\V1\ProductController;
 use App\Http\Controllers\Api\V1\CustomerController;
+use App\Http\Controllers\Api\V1\ProblemsController;
 use App\Http\Controllers\Api\V1\OrderItemsController;
 use App\Http\Controllers\Api\V1\PermissionController;
 use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
@@ -24,6 +25,8 @@ use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
 */
 
 Route::prefix('v1')->group(
+
+    //mejorar seguridad de los endpoint
     function () {
         Route::get('permission/{slug}', [PermissionController::class, 'permission']);
         Route::get('permission/url/{id}', [PermissionController::class, 'getUrl']);
@@ -37,6 +40,14 @@ Route::prefix('v1')->group(
         Route::apiResource('orders', OrderController::class);
         Route::apiResource('products', ProductController::class);
         Route::apiResource('order-items', OrderItemsController::class);
+
+        //ordenes
+        Route::post('orders', [OrderController::class, 'index']);
+        Route::post('orders/authorizer/action', [OrderController::class, 'authorizerAction']);
+        Route::get('orders/authorizer/list', [OrderController::class, 'authorizerList']);
+
+        //problems
+        Route::get('problems', [ProblemsController::class, 'index']);
     }
 );
 

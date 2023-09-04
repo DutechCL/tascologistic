@@ -27,4 +27,5 @@ Route::group([
     Route::crud('menu-item', 'MenuItemCrudController');
     Route::get('/management', [ManagementController::class, 'index'])->name('management.index');
     Route::crud('order-status', 'OrderStatusCrudController');
+    Route::crud('problem', 'ProblemCrudController');
 }); // this should be the absolute last line of this file
