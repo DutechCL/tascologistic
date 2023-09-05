@@ -40,11 +40,11 @@ Route::prefix('v1')->group(
         Route::apiResource('orders', OrderController::class);
         Route::apiResource('products', ProductController::class);
         Route::apiResource('order-items', OrderItemsController::class);
-
-        //ordenes
-        Route::post('orders', [OrderController::class, 'index']);
+        Route::post('orders/by-method-shipping', [OrderController::class, 'getOrdersByMethodShipping']);
         Route::post('orders/authorizer/action', [OrderController::class, 'authorizerAction']);
         Route::get('orders/authorizer/list', [OrderController::class, 'authorizerList']);
+        Route::post('order/report-problem', [OrderController::class, 'reportProblem']);
+        
 
         //problems
         Route::get('problems', [ProblemsController::class, 'index']);

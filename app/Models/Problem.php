@@ -17,4 +17,10 @@ class Problem extends Model
         'type',
         'active',
     ];
+
+    public function orderItemProblems()
+    {
+        return $this->hasMany(OrderItemProblem::class, 'problem_id');
+    }
+
 }
