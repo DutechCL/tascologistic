@@ -21,6 +21,7 @@ class Order extends Model
         'Comments',
         'SalesPersonCode',
         'U_SBO_FormaEntrega',
+        'is_approved'
     ]; // Campos permitidos para llenado masivo
 
     public function customer()
@@ -45,7 +46,7 @@ class Order extends Model
 
     public function responsibles()
     {
-        return $this->hasMany(RoleAssignments::class, 'order_id')->with('user', 'role');
+        return $this->hasMany(RoleAssignments::class, 'order_id')->with('user', 'responsibleRole');
     }
     
 }

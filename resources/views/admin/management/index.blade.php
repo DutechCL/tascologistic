@@ -101,9 +101,17 @@
         <ul class="d-flex list-inline">
             <li class="mt-4 mr-4">
                 <a href="http://tasco.test:5174/tracking/ordenes" target="_blank" >
-                    <div class="px-5 pt-4 pb-3 boder-card mr-4">
-                        <img src="{{ asset('images/bodega.png') }}" alt="">
-                        <p class=" font-xl pt-4 text-center">Sala de venta</p>
+                    <div class="boder-card d-flex flex-column justify-content-center align-items-center mr-4 pb-3 pt-4 px-5">
+                        <img src="{{ asset('images/bodega.png') }}" alt="" style="width: 100px">
+                        <p class=" font-xl pt-4 text-center">Sala de venta  <br>  aqui</p>
+                    </div>
+                </a>
+            </li>
+            <li class="mt-4 mr-4">
+                <a href="http://tasco.test:5174/tracking/retiro-despacho" target="_blank" >
+                    <div class="boder-card d-flex flex-column justify-content-center align-items-center mr-4 pb-3 pt-4 px-5">
+                        <img src="{{ asset('images/bodega.png') }}" alt="" style="width: 100px">
+                        <p class=" font-xl pt-4 text-center">Sala de venta <br> retito - despacho</p>
                     </div>
                 </a>
             </li>

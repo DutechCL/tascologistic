@@ -43,7 +43,8 @@ Route::prefix('v1')->group(
         Route::post('orders/by-method-shipping', [OrderController::class, 'getOrdersByMethodShipping']);
         Route::post('orders/authorizer/action', [OrderController::class, 'authorizerAction']);
         Route::get('orders/authorizer/list', [OrderController::class, 'authorizerList']);
-        Route::post('order/report-problem', [OrderController::class, 'reportProblem']);
+        Route::post('order/proccess', [OrderController::class, 'processOrderPickerAndReviewer']);
+        Route::post('orders/by-params', [OrderController::class, 'getOrdersByParams']);
         
 
         //problems

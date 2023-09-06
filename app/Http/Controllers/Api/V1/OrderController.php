@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Models\User;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\OrderItemProblem;
+use App\Models\ResponsibleRoles;
 use App\Http\Controllers\Controller;
+use App\Collections\OrdersCollection;
 
 class OrderController extends Controller
 {
@@ -15,6 +18,8 @@ class OrderController extends Controller
     const METHOD_SHIPPING_DELIVERY = 3;
     const ORDER_STATUS_ON_HOLD = 1;
     const ORDER_STATUS_PICKED = 2;
+    const ORDER_STATUS_REVIEWER = 3;
+    const ORDER_STATUS_REVIEWED = 5;
 
     public function index()
     {
@@ -45,7 +50,7 @@ class OrderController extends Controller
         ->get();
 
         // Devolver los datos como respuesta JSON
-        return response()->json($orders);
+        return (new OrdersCollection($orders))->toJson();
     }
 
     public function getOrdersByMethodShipping(Request $request)
@@ -61,6 +66,34 @@ class OrderController extends Controller
 
         // Devolver los datos como respuesta JSON
         return response()->json($orders);
+    }
+
+    public function getOrdersByParams(Request $request)
+    {
+        $ordersQuery = Order::with([
+            'customer', 
+            'orderStatus', 
+            'methodShipping', 
+            'orderItems'=> function ($query) {
+                // Utilizar una subconsulta para cargar los campos necesarios de la relación 'product'
+                $query->select(['order_items.*', 'products.ItemDescription as ItemDescription'])
+                ->join('products', 'products.id', '=', 'order_items.product_id');
+            }
+        ]);
+        
+        if ($request->methodShippingId) {
+            $ordersQuery->whereIn('method_shipping_id', $request->methodShippingId);
+        }
+        
+        if ($request->ordersStatusId) {
+            $ordersQuery->whereIn('order_status_id', $request->ordersStatusId);
+        }
+
+        
+        $orders = $ordersQuery->get();
+
+        // Devolver los datos como respuesta JSON
+        return (new OrdersCollection($orders))->toJson();
     }
 
     public function show($id)
@@ -89,6 +122,26 @@ class OrderController extends Controller
 
     public function update(Request $request, $id)
     {
+        $order_status_id = $request->responsible == 'picker' ? self::ORDER_STATUS_PICKED : self::ORDER_STATUS_REVIEWER;
+        $order = Order::find($id);
+        $order->order_status_id = $order_status_id;
+        $order->save();
+
+        $responsibles = ResponsibleRoles::where('slug', $request->responsible)->first();
+        $user = User::find(1); // Supongamos que quieres obtener el usuario con ID 1.
+
+        $order->responsibles()->create([
+            'order_id' => $id,
+            'responsible_role_id' => $responsibles->id,
+            'user_id' => $user->id,
+            // otros campos si los tienes
+        ]);
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Orden actualizado con éxito'
+        ]
+        );
 
     }
 
@@ -101,14 +154,15 @@ class OrderController extends Controller
     {
 
         $order = Order::find($request->order_id);
-        if($request->action == 2){
+        if($request->action == 1){
+            $order->order_status_id = self::ORDER_STATUS_ON_HOLD;
+            $order->is_approved = true;
         }
-        $order->is_approved = true;
         $order->save();
 
         return response()->json([
             'status' => 'success',
-            'message' => 'Orden actualizado con éxito'
+            'message' => 'Orden autorizada'
         ]
         );
     }
@@ -117,31 +171,44 @@ class OrderController extends Controller
         $orders = Order::with([
             'customer', 
             'orderStatus', 
-            'responsibles',
             'methodShipping', 
+            'responsibles',
             'orderItems'=> function ($query) {
                 // Utilizar una subconsulta para cargar los campos necesarios de la relación 'product'
                 $query->select(['order_items.*', 'products.ItemDescription as ItemDescription'])
                 ->join('products', 'products.id', '=', 'order_items.product_id');
             }
             ])
+            ->where(function ($query) {
+                $query->whereIn('method_shipping_id', [self::METHOD_SHIPPING_HERE]) // method_shipping_id igual a 1
+                      ->whereNot('order_status_id', 4); // order_status_id igual a 4
+            })
             ->orWhere(function ($query) {
-                $query->whereIn('method_shipping_id', [self::METHOD_SHIPPING_PICKUP, self::METHOD_SHIPPING_DELIVERY, self::METHOD_SHIPPING_HERE]) // method_shipping_id igual a 2 o 3
-                      ->whereIn('order_status_id', [1,]); // order_status_id igual a 1 o 4
+                $query->whereIn('method_shipping_id', [self::METHOD_SHIPPING_PICKUP, self::METHOD_SHIPPING_DELIVERY]) // method_shipping_id igual a 2 o 3
+                      ->whereNot('order_status_id', 4)
+                      ->where('is_approved', true); // order_status_id igual a 1 o 4
             })
             ->get(); 
 
-        // Devolver los datos como respuesta JSON
-        return response()->json($orders);
+            // Devolver los datos como respuesta JSON
+            return (new OrdersCollection($orders))->toJson();
     }
 
-    public function reportProblem(Request $request){
-        if($request->has_problems){
-            $order = Order::find($request->order_id);
-            $order->order_status_id = 4;
+    public function processOrderPickerAndReviewer(Request $request){
+
+        $order = Order::find($request->orderId);
+
+        if($request->isSuccessOrder){
+            
+            $order->order_status_id = $request->responsible == 'picker' ? self::ORDER_STATUS_REVIEWER : self::ORDER_STATUS_REVIEWED;
             $order->save();
 
-            $orderItems = $request->order_items;
+        }else{
+            $order->order_status_id = 4;
+            $order->is_approved = false;
+            $order->save();
+
+            $orderItems = $request->orderItems;
 
             foreach ($orderItems as $key => $orderItem) {
                 $orderItem = OrderItemProblem::UpdateOrCreate([

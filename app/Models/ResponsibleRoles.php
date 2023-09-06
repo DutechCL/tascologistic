@@ -11,6 +11,7 @@ class ResponsibleRoles extends Model
 
     protected $fillable = [
         'name',
+        'slug',
         'description',
     ]; // Campos permitidos para llenado masivo
 }
