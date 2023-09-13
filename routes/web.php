@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanel;
 use App\Http\Controllers\Admin\UserCrudController;
-
+use Illuminate\Support\Facades\File;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +20,6 @@ Route::get('/', function () {
     return redirect()->route('backpack.dashboard');
 });
 
-Route::get('/app', function () {
-    return view('vue'); // Ajusta el nombre de la vista según tu estructura
-});
+Route::get('/app/{any}', function () {
+    return File::get(public_path('app/index.html'));
+})->where('any', '.*');
