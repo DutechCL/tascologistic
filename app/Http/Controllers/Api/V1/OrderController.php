@@ -45,8 +45,10 @@ class OrderController extends Controller
         })
         ->orWhere(function ($query) {
             $query->whereIn('method_shipping_id', [self::METHOD_SHIPPING_PICKUP, self::METHOD_SHIPPING_DELIVERY]) // method_shipping_id igual a 2 o 3
-                  ->whereIn('order_status_id', [1, 4]); // order_status_id igual a 1 o 4
+                  ->whereIn('order_status_id', [1, 4]) // order_status_id igual a 1 o 4
+                  ->where('is_approved', false);
         })
+        ->orderByRaw('order_status_id = 4 DESC') 
         ->get();
 
         // Devolver los datos como respuesta JSON
@@ -157,8 +159,18 @@ class OrderController extends Controller
         if($request->action == 1){
             $order->order_status_id = self::ORDER_STATUS_ON_HOLD;
             $order->is_approved = true;
+            $order->save();
+
+            $responsibles = ResponsibleRoles::where('slug', $request->responsible)->first();
+            $user = User::find(1); 
+    
+            $order->responsibles()->create([
+                'order_id' => $order->id,
+                'responsible_role_id' => $responsibles->id,
+                'user_id' => $user->id,
+                // otros campos si los tienes
+            ]);
         }
-        $order->save();
 
         return response()->json([
             'status' => 'success',
@@ -181,11 +193,11 @@ class OrderController extends Controller
             ])
             ->where(function ($query) {
                 $query->whereIn('method_shipping_id', [self::METHOD_SHIPPING_HERE]) // method_shipping_id igual a 1
-                      ->whereNot('order_status_id', 4); // order_status_id igual a 4
+                      ->whereNotIn('order_status_id', [4,5]); // order_status_id igual a 4
             })
             ->orWhere(function ($query) {
                 $query->whereIn('method_shipping_id', [self::METHOD_SHIPPING_PICKUP, self::METHOD_SHIPPING_DELIVERY]) // method_shipping_id igual a 2 o 3
-                      ->whereNot('order_status_id', 4)
+                      ->whereNotIn('order_status_id', [4,5])
                       ->where('is_approved', true); // order_status_id igual a 1 o 4
             })
             ->get(); 
@@ -208,7 +220,7 @@ class OrderController extends Controller
             $order->is_approved = false;
             $order->save();
 
-            $orderItems = $request->orderItems;
+            $orderItems = $request->orderItemsProblem;
 
             foreach ($orderItems as $key => $orderItem) {
                 $orderItem = OrderItemProblem::UpdateOrCreate([
