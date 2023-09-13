@@ -60,9 +60,7 @@ yarn-error.log
 #vue
 
 /app-vue/.vscode
-/app-vue/public
 /app-vue/node_modules
-/app-vue/src
 
 # Others #
 ######################
