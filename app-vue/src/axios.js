@@ -1,4 +1,4 @@
 import axios from "axios";
 
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = 'http://tasco.test';
+axios.defaults.baseURL = import.meta.env.URL_ENDPOINT;;
