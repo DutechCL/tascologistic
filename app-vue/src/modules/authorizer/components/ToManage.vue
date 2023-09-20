@@ -4,13 +4,13 @@
       <h1 class="mb-2 text-primary-900 font-inter font-semibold text-2xl">
         Notas de venta
       </h1>
-      <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
-        Aquí
-      </h2>
     </div>
     <Search/>
   </div>
   <div v-if="ordersHere.length > 0">
+    <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
+      Aquí
+    </h2>
   <div class="flex">
     <div class="card flex justify-content-center ">
         <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Nota de venta" class="md:w-20rem w-full " />
