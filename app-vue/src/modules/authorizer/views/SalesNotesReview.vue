@@ -195,7 +195,7 @@ const processOrderPickerAndReviewer = async () => {
         if(response.status == 'success') {
           toast.add({ severity: response.status, summary: '', detail: response.message, life: 3000 });
           setTimeout(() => {
-            window.location.href = '/autorizador/pickeo-revision'
+            window.location.href = '/app/autorizador/pickeo-revision'
           }, 1000);
         }
       },

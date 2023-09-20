@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use App\Models\Order;
 use App\Models\Customer;
 use Illuminate\Support\Str;
+use App\Models\MethodShipping;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
@@ -32,30 +33,39 @@ class OrderSeeder extends Seeder
        foreach ($csvData as $row) {
             $rowData = [];
             foreach ($headers as $index => $header) {
-                if($header != 'customer_id'){
+                if($header != 'customer_id' && $header != 'U_SBO_FormaEntrega'){
                     $rowData[$header] = $row[$index];
-                }else{
+                }else if($header == 'customer_id'){
                     $customer = Customer::where('CardCode', $row[$index])->first();
                     $rowData[$header] = $customer->id;
+                }else if($header == 'U_SBO_FormaEntrega'){
+                    $methodShipping = MethodShipping::where('name', $row[$index])->first();
+                    $rowData['method_shipping_id'] = $methodShipping->id ?? 1;
+                    
+                    $rowData[$header] = $row[$index];
                 }
+
+
             }
-            $columnNames = Schema::getColumnListing('orders'); // Obtiene los nombres de columna de la tabla
-
-            $dataToInsert = array_intersect_key($rowData, array_flip($columnNames));
-
-            Order::updateOrCreate(
-                ['DocNum' => $rowData['DocNum']],
-                [
-                    "DocEntry" => intval($rowData['DocEntry']),
-                    "DocNum" => intval($rowData['DocNum']),
-                    "DocDate" => Carbon::parse($rowData['DocDate'])->format('Y-m-d'),
-                    "customer_id" => intval($rowData['customer_id']),
-                    "DocTotal" => floatval($rowData['DocTotal']),
-                    "Comments" => $rowData['Comments'],
-                    "SalesPersonCode" => $rowData['SalesPersonCode'],
-                    "U_SBO_FormaEntrega" => $rowData['U_SBO_FormaEntrega']
-                ]
-            );
+            if($rowData['DocNum']){
+                Order::updateOrCreate(
+                    ['DocNum' => $rowData['DocNum']],
+                    [
+                        "DocEntry" => intval($rowData['DocEntry']),
+                        "DocNum" => intval($rowData['DocNum']),
+                        "DocDate" => Carbon::parse($rowData['DocDate'])->format('Y-m-d'),
+                        "DocTime" => Carbon::now()->format('h:i'),
+                        "method_shipping_id" => intval($rowData['method_shipping_id']),
+                        "order_status_id" => 1,
+                        "customer_id" => intval($rowData['customer_id']),
+                        "DocTotal" => floatval($rowData['DocTotal']),
+                        "Comments" => $rowData['Comments'],
+                        "SalesPersonCode" => $rowData['SalesPersonCode'],
+                        "U_SBO_FormaEntrega" => $rowData['U_SBO_FormaEntrega'],
+                        "is_approved" => false,
+                    ]
+                );
+            }
         }
     }
 }

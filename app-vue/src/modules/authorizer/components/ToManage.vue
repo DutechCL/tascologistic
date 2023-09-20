@@ -10,6 +10,7 @@
     </div>
     <Search/>
   </div>
+  <div v-if="ordersHere.length > 0">
   <div class="flex">
     <div class="card flex justify-content-center ">
         <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Nota de venta" class="md:w-20rem w-full " />
@@ -27,7 +28,7 @@
         <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Total" class="md:w-20rem w-full" />
     </div>
   </div>
-  <DataTable class="mb-20" :value="ordersHere" tableStyle="min-width: 50rem">
+  <DataTable  class="mb-20" :value="ordersHere" tableStyle="min-width: 50rem">
       <Column headerClass="!bg-primary-900"  field="DocNum" header="Nota de venta">
         <template #body="slotProps">
           N° {{ slotProps.data.DocNum  }}
@@ -56,6 +57,7 @@
         </template>
       </Column>
   </DataTable>
+</div>
   <!--   Table two dispath       -->
   <div>
     <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
