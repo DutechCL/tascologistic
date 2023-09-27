@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Carbon\Carbon;
 use App\Models\Order;
 use App\Models\Customer;
+use App\Models\SalesPerson;
 use Illuminate\Support\Str;
 use App\Models\MethodShipping;
 use Illuminate\Database\Seeder;
@@ -33,7 +34,7 @@ class OrderSeeder extends Seeder
        foreach ($csvData as $row) {
             $rowData = [];
             foreach ($headers as $index => $header) {
-                if($header != 'customer_id' && $header != 'U_SBO_FormaEntrega'){
+                if($header != 'customer_id' && $header != 'U_SBO_FormaEntrega' && $header != 'SalesPersonCode'){
                     $rowData[$header] = $row[$index];
                 }else if($header == 'customer_id'){
                     $customer = Customer::where('CardCode', $row[$index])->first();
@@ -41,6 +42,10 @@ class OrderSeeder extends Seeder
                 }else if($header == 'U_SBO_FormaEntrega'){
                     $methodShipping = MethodShipping::where('name', $row[$index])->first();
                     $rowData['method_shipping_id'] = $methodShipping->id ?? 1;
+                    $rowData[$header] = $row[$index];
+                }else if($header == 'SalesPersonCode'){
+                    $SalesEmployee = SalesPerson::where('SalesEmployeeCode', $row[$index])->first();
+                    $rowData['SalesEmployeeName'] = $SalesEmployee->SalesEmployeeName;
                     
                     $rowData[$header] = $row[$index];
                 }
@@ -63,6 +68,7 @@ class OrderSeeder extends Seeder
                         "SalesPersonCode" => $rowData['SalesPersonCode'],
                         "U_SBO_FormaEntrega" => $rowData['U_SBO_FormaEntrega'],
                         "is_approved" => false,
+                        "SalesEmployeeName" => $rowData['SalesEmployeeName'],
                     ]
                 );
             }

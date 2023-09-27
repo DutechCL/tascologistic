@@ -37,6 +37,11 @@
       <Column headerClass="!bg-primary-900"  field="DocDate" header="Fecha"></Column>
       <Column headerClass="!bg-primary-900"  field="DocTime" header="Hora"></Column>
       <Column headerClass="!bg-primary-900"  field="Customer.CardName" header="Cliente"></Column>
+      <Column headerClass="!bg-primary-900"  field="DocTotal" header="Monto total">
+        <template #body="slotProps">
+          <InputNumber v-model="slotProps.data.DocTotal" class="remove-format-input" inputId="currency-us" mode="currency" currency="USD" locale="en-US" readonly :minFractionDigits="0"  />
+         </template>
+      </Column>
       <!-- <Column headerClass="!bg-primary-900"  field="totalAmount" header="Monto total"></Column> -->
       <Column headerClass="!bg-primary-900"  field="MethodShippingName" header="Método entrega">
         <template #body="slotProps">
@@ -94,6 +99,11 @@
       <Column headerClass="!bg-primary-900"  field="DocDate" header="Fecha"></Column>
       <Column headerClass="!bg-primary-900"  field="DocTime" header="Hora"></Column>
       <Column headerClass="!bg-primary-900"  field="Customer.CardName" header="Cliente"></Column>
+      <Column headerClass="!bg-primary-900"  field="DocTotal" header="Monto total">
+        <template #body="slotProps">
+          <InputNumber v-model="slotProps.data.DocTotal" class="remove-format-input" inputId="currency-us" mode="currency" currency="USD" locale="en-US" readonly :minFractionDigits="0"  />
+         </template>
+      </Column>
       <Column headerClass="!bg-primary-900"  field="MethodShippingName" header="Método entrega">
         <template #body="slotProps">
           <Tag Tag :icon="'pi pi-shopping-cart'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
@@ -154,7 +164,7 @@ import { useOrders } from '../../../services/OrdersApiService.js';
 import ConfirmDialog from 'primevue/confirmdialog';
 import { useConfirm } from "primevue/useconfirm";
 import { useToast } from 'primevue/usetoast';
-
+import InputNumber from 'primevue/inputnumber';
 
 
 const confirm = useConfirm();

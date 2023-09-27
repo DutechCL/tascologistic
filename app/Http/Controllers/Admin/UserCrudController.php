@@ -109,7 +109,7 @@ class UserCrudController extends CrudController
         CRUD::addField([
             'name' => 'userRoles',
             'label' => 'roles',
-            'type' => 'checkbox',
+            'type' => 'select2_multiple',
             'model' => 'App\Models\Role',
             'attribute' => 'name',
             'wrapper' => [

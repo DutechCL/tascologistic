@@ -10,7 +10,7 @@ const authStore = useAuthStore();
 
 onMounted( async() => {
   await authStore.getToken();
-  await authStore.login('super@twgroup.cl', 'super1');
+  // await authStore.login('super@dutech.cl', 'super1');
 });
 
 </script>

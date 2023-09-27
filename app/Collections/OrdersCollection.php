@@ -32,6 +32,8 @@ class OrdersCollection extends Collection
                     'OrderItems' => $orderItems->data,
                     'OrderStatusId' => $item->order_status_id,
                     'OrderStatusName' => $item->orderStatus->name,
+                    'SalesPersonCode' => $item->SalesPersonCode,
+                    'SalesEmployeeName' => $item->SalesEmployeeName,
                     'ResponsibleAuthorizerId' => $authorizer ? $authorizer->user->id : null,
                     'ResponsibleAuthorizerName' => $authorizer ? $authorizer->user->name : null,
                     'ResponsiblePickerId' => $picker ? $picker->user->id : null,

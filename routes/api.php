@@ -35,20 +35,21 @@ Route::prefix('v1')->group(
         Route::get('/get-token', [AuthController::class, 'getTokenFromWeb']);
         Route::post('/login', [AuthController::class, 'login']);
 
-
-        Route::apiResource('customers', CustomerController::class);
-        Route::apiResource('orders', OrderController::class);
-        Route::apiResource('products', ProductController::class);
-        Route::apiResource('order-items', OrderItemsController::class);
-        Route::post('orders/by-method-shipping', [OrderController::class, 'getOrdersByMethodShipping']);
-        Route::post('orders/authorizer/action', [OrderController::class, 'authorizerAction']);
-        Route::get('orders/authorizer/list', [OrderController::class, 'authorizerList']);
-        Route::post('order/proccess', [OrderController::class, 'processOrderPickerAndReviewer']);
-        Route::post('orders/by-params', [OrderController::class, 'getOrdersByParams']);
+        Route::middleware(['auth:sanctum'])->group(function () {
+            Route::apiResource('customers', CustomerController::class);
+            Route::apiResource('orders', OrderController::class);
+            Route::apiResource('products', ProductController::class);
+            Route::apiResource('order-items', OrderItemsController::class);
+            Route::post('orders/by-method-shipping', [OrderController::class, 'getOrdersByMethodShipping']);
+            Route::post('orders/authorizer/action', [OrderController::class, 'authorizerAction']);
+            Route::get('orders/authorizer/list', [OrderController::class, 'authorizerList']);
+            Route::post('order/proccess', [OrderController::class, 'processOrderPickerAndReviewer']);
+            Route::post('orders/by-params', [OrderController::class, 'getOrdersByParams']);
+            Route::get('problems', [ProblemsController::class, 'index']);
+        });
         
 
         //problems
-        Route::get('problems', [ProblemsController::class, 'index']);
     }
 );
 

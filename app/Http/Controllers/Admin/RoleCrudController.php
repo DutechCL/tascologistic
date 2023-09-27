@@ -56,16 +56,17 @@ class RoleCrudController extends CrudController
         ]);
         
         CRUD::addColumn([
+            'name' => 'name',
+            'label' => __('role.crud.name'),
+            'type' => 'text',
+        ]);
+        
+        CRUD::addColumn([
             'name' => 'guard_name',
             'label' => __('role.crud.guard_name'),
             'type' => 'text',
         ]);
 
-        CRUD::addColumn([
-            'name' => 'name',
-            'label' => __('role.crud.name'),
-            'type' => 'text',
-        ]);
         
         CRUD::addColumn([
             'name' => 'updated_at',

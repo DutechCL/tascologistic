@@ -130,7 +130,7 @@ class OrderController extends Controller
         $order->save();
 
         $responsibles = ResponsibleRoles::where('slug', $request->responsible)->first();
-        $user = User::find(1); // Supongamos que quieres obtener el usuario con ID 1.
+        $user = auth()->user();
 
         $order->responsibles()->create([
             'order_id' => $id,
@@ -139,9 +139,11 @@ class OrderController extends Controller
             // otros campos si los tienes
         ]);
 
+        dd(auth()->user());
         return response()->json([
             'status' => 'success',
-            'message' => 'Orden actualizado con éxito'
+            'message' => 'Orden actualizado con éxito',
+            'test' => auth()->user()
         ]
         );
 
@@ -162,7 +164,7 @@ class OrderController extends Controller
             $order->save();
 
             $responsibles = ResponsibleRoles::where('slug', $request->responsible)->first();
-            $user = User::find(1); 
+            $user = auth()->user();
     
             $order->responsibles()->create([
                 'order_id' => $order->id,
@@ -174,7 +176,8 @@ class OrderController extends Controller
 
         return response()->json([
             'status' => 'success',
-            'message' => 'Orden autorizada'
+            'message' => 'Orden autorizada',
+            'test' => $request
         ]
         );
     }

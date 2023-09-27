@@ -45,7 +45,9 @@ class OrderItemSeeder extends Seeder
                 }else if($key == 'order_docnum')
                 {
                     $order = Order::where('DocNum', intval($row[$index]))->first();
-                    $rowData['order_id'] = $order->id;
+                    if($order){
+                        $rowData['order_id'] = $order->id;
+                    }
                 }
             }
             $columnNames = Schema::getColumnListing('order_items'); // Obtiene los nombres de columna de la tabla

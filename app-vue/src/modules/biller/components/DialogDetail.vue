@@ -21,9 +21,9 @@
     </DataTable>
 
     <DataTable class="pt-5" tableStyle="min-width: 50rem" :value="[order]">
-        <Column headerClass="!bg-primary-900"  field="ResponsibleAuthorizerName" header="Vendedor">
+        <Column headerClass="!bg-primary-900"  field="SalesEmployeeName" header="Vendedor">
             <template #body="slotProps">
-                <Tag v-if="slotProps.data?.ResponsibleAuthorizerName" :icon="'pi pi-user'" :value="slotProps.data?.ResponsibleAuthorizerName" class="p-tag-1 tag-font-method tag-radius"></Tag>
+                <Tag v-if="slotProps.data?.SalesEmployeeName" :icon="'pi pi-user'" :value="slotProps.data?.SalesEmployeeName" class="p-tag-1 tag-font-method tag-radius"></Tag>
             </template>
         </Column>
         <Column headerClass="!bg-primary-900"  field="ResponsibleAuthorizerName" header="Autorizado por">
