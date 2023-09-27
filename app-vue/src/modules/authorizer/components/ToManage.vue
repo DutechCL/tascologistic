@@ -13,22 +13,22 @@
     </h2>
   <div class="flex">
     <div class="card flex justify-content-center ">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Nota de venta" class="md:w-20rem w-full " />
+      <MultiSelect v-model="selectedCities" :options="ordersPickupAndDelivery" filter optionLabel="DocNum" placeholder="Nota de venta" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
     </div>
     <div class="card flex justify-content-center ">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Fecha" class="md:w-20rem w-full" />
+      <MultiSelect v-model="selectedCities" :options="ordersPickupAndDelivery" filter optionLabel="DocDate" placeholder="Fecha" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
     </div>
     <div class="card flex justify-content-center">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Hora" class="md:w-20rem w-full" />
+      <MultiSelect v-model="selectedCities" :options="ordersPickupAndDelivery" filter optionLabel="DocTime" placeholder="Hora" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
     </div>
-    <div class="card flex justify-content-center mr-20">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Cliente" class="md:w-20rem w-full" />
+    <div class="card flex justify-content-center mr-5">
+      <MultiSelect v-model="selectedCities" :options="ordersPickupAndDelivery" filter optionLabel="Customer.CardName" placeholder="Clientes" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
     </div>
     <div class="card flex justify-content-center">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Total" class="md:w-20rem w-full" />
+      <MultiSelect v-model="selectedCities" :options="ordersPickupAndDelivery" filter optionLabel="DocTotal" placeholder="Total" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
     </div>
   </div>
-  <DataTable  class="mb-20" :value="ordersHere" tableStyle="min-width: 50rem">
+  <DataTable  class="mb-20" :value="ordersHere" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
       <Column headerClass="!bg-primary-900"  field="DocNum" header="Nota de venta">
         <template #body="slotProps">
           N° {{ slotProps.data.DocNum  }}
@@ -71,22 +71,22 @@
   </div>
   <div class="flex">
     <div class="card flex justify-content-center ">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Nota de venta" class="md:w-20rem w-full " />
+      <MultiSelect v-model="selectedCities" :options="ordersPickupAndDelivery" filter optionLabel="DocNum" placeholder="Nota de venta" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
     </div>
     <div class="card flex justify-content-center ">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Fecha" class="md:w-20rem w-full" />
+      <MultiSelect v-model="selectedCities" :options="ordersPickupAndDelivery" filter optionLabel="DocDate" placeholder="Fecha" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
     </div>
     <div class="card flex justify-content-center">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Hora" class="md:w-20rem w-full" />
+      <MultiSelect v-model="selectedCities" :options="ordersPickupAndDelivery" filter optionLabel="DocTime" placeholder="Hora" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
     </div>
     <div class="card flex justify-content-center mr-5">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Cliente" class="md:w-20rem w-full" />
+      <MultiSelect v-model="selectedCities" :options="ordersPickupAndDelivery" filter optionLabel="Customer.CardName" placeholder="Clientes" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
     </div>
     <div class="card flex justify-content-center">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Total" class="md:w-20rem w-full" />
+      <MultiSelect v-model="selectedCities" :options="ordersPickupAndDelivery" filter optionLabel="DocTotal" placeholder="Total" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
     </div>
   </div>
-  <DataTable :value="ordersPickupAndDelivery" tableStyle="min-width: 50rem">
+  <DataTable :value="ordersPickupAndDelivery" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
       <Column 
         headerClass="!bg-primary-900"  
         field="DocNum" 
@@ -156,7 +156,6 @@ import Button from 'primevue/button'
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
 import Tag from 'primevue/tag'
-import TreeSelect from 'primevue/treeselect'
 import Search from './Search.vue'
 import DialogDetail from './DialogDetail.vue'
 import DialogDetailObservation from './DialogDetailObservation.vue'
@@ -165,6 +164,7 @@ import ConfirmDialog from 'primevue/confirmdialog';
 import { useConfirm } from "primevue/useconfirm";
 import { useToast } from 'primevue/usetoast';
 import InputNumber from 'primevue/inputnumber';
+import MultiSelect from 'primevue/multiselect';
 
 
 const confirm = useConfirm();
@@ -179,10 +179,11 @@ const props = defineProps({
   ListOrders: Array
 })
 
-const visible = ref(false);
-const visibleObservation = ref(false);
-const thisOrder = ref({});
-const isDataLoaded = ref(false); 
+const visible = ref(false)
+const visibleObservation = ref(false)
+const thisOrder = ref({})
+const isDataLoaded = ref(false)
+const filterDocNum = ref([])
 
 // console.log(props.ListOrders)
 
@@ -194,8 +195,11 @@ const ordersPickupAndDelivery = ref([
   props.ListOrders.filter( order => order.MethodShippingId !== METHOD_SHIPPING_HERE)
 ]);
 
+
 ordersHere.value = ordersHere.value[0]
 ordersPickupAndDelivery.value = ordersPickupAndDelivery.value[0]
+
+// filterDocNum.value = ordersPickupAndDelivery.value.map(item => ({'key': item.DocNum, 'label': item.DocNum, 'data': item.DocNum }));
 
 const showDetailsOrders = (data) => {
   thisOrder.value = { ...data };
@@ -240,5 +244,7 @@ const actionOrder = async (order) => {
 </script>
 
 <style>
-
+.p-multiselect-label.p-placeholder, .p-multiselect-trigger{
+  color: #259bd7 !important;
+}
 </style>
