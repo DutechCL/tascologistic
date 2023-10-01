@@ -47,7 +47,7 @@ class UserCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        $this->crud->addButtonFromView('top', 'import_button', 'import_button', 'end');
+        // $this->crud->addButtonFromView('top', 'import_button', 'import_button', 'end');
         $this->crud->addButtonFromView('top', 'export_button', 'export_button', 'end');
 
         CRUD::addColumn([
@@ -63,9 +63,11 @@ class UserCrudController extends CrudController
         ]);
 
         CRUD::addColumn([
-            'name' => 'password',
-            'label' => __('user.crud.password'),
-            'type' => 'text',
+            'name' => 'roles', 
+            'label' => 'Roles',
+            'type' => 'select_multiple', 
+            'entity' => 'roles', 
+            'attribute' => 'name', 
         ]);
 
         /**
@@ -222,11 +224,17 @@ class UserCrudController extends CrudController
             'name' => 'name',
             'label' => __('user.crud.name'),
             'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ],
         ]);
         CRUD::addField([
             'name' => 'email',
             'label' => __('user.crud.email'),
             'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ],
         ]);
         CRUD::addField([
             'name' => 'password',

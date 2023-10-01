@@ -28,7 +28,7 @@ class ProblemCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Problem::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/problem');
-        CRUD::setEntityNameStrings('problem', 'problems');
+        CRUD::setEntityNameStrings(__('problem.problem'), __('problem.problems'));
     }
 
     /**
@@ -39,8 +39,30 @@ class ProblemCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::setFromDb(); // set columns from db columns.
+        // CRUD::setFromDb(); // set columns from db columns.
+        CRUD::addColumn([
+            'name' => 'title',
+            'label' => __('problem.crud.name'),
+            'type' => 'text',
+        ]);
 
+        CRUD::addColumn([
+            'name' => 'description',
+            'label' => __('problem.crud.description'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'type',
+            'label' => __('problem.crud.type'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'active',
+            'label' => __('problem.crud.active'),
+            'type' => 'text',
+        ]);
         /**
          * Columns can be defined using the fluent syntax:
          * - CRUD::column('price')->type('number');

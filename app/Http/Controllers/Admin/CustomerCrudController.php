@@ -2,22 +2,21 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\OrderStatus;
-use App\Http\Requests\OrderStatusRequest;
+use App\Http\Requests\CustomerRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class OrderStatusCrudController
+ * Class CustomerCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class OrderStatusCrudController extends CrudController
+class CustomerCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+    // use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+    // use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    // use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
     /**
@@ -27,9 +26,9 @@ class OrderStatusCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(OrderStatus::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/order-status');
-        CRUD::setEntityNameStrings(__('order_status.order_status'), __('order_status.order_statuses'),);
+        CRUD::setModel(\App\Models\Customer::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/customer');
+        CRUD::setEntityNameStrings('customer', 'customers');
     }
 
     /**
@@ -42,22 +41,31 @@ class OrderStatusCrudController extends CrudController
     {
         // CRUD::setFromDb(); // set columns from db columns.
         CRUD::addColumn([
-            'name' => 'name',
-            'label' => __('order_status.crud.name'),
+            'name' => 'CardName',
+            'label' => 'Nombre',
             'type' => 'text',
         ]);
 
         CRUD::addColumn([
-            'name' => 'description',
-            'label' => __('order_status.crud.description'),
+            'name' => 'CardCode',
+            'label' => 'Codigo',
             'type' => 'text',
         ]);
 
         CRUD::addColumn([
-            'name' => 'color',
-            'label' => __('order_status.crud.color'),
-            'type' => 'color', 
+            'name' => 'Address',
+            'label' => 'Dirección',
+            'type' => 'text',
         ]);
+
+        CRUD::addColumn([
+            'name' => 'FederalTaxID',
+            'label' => 'Federal Tax ID',
+            'type' => 'text',
+        ]);
+
+
+
         /**
          * Columns can be defined using the fluent syntax:
          * - CRUD::column('price')->type('number');
@@ -72,30 +80,9 @@ class OrderStatusCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(OrderStatusRequest::class);
-        // CRUD::setFromDb(); // set fields from db columns.
-        CRUD::addField([
-            'name' => 'name',
-            'label' => __('order_status.crud.name'),
-            'type' => 'text',
-            'wrapper' => [
-                'class' => 'form-group col-sm-6 mb-3'
-            ],
-        ]);
-        CRUD::addField([
-            'name' => 'description',
-            'label' => __('order_status.crud.description'),
-            'type' => 'text',
-            'wrapper' => [
-                'class' => 'form-group col-sm-6 mb-3'
-            ],
-        ]);
-        CRUD::addField([
-            'name' => 'color',
-            'label' => __('order_status.crud.color'),
-            'type' => 'color',
-            'value' => '',
-        ]);
+        CRUD::setValidation(CustomerRequest::class);
+        CRUD::setFromDb(); // set fields from db columns.
+
         /**
          * Fields can be defined using the fluent syntax:
          * - CRUD::field('price')->type('number');

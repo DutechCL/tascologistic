@@ -22,7 +22,7 @@ class MenuItemCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\MenuItem::class);
         CRUD::setRoute(config('backpack.base.route_prefix').'/menu-item');
-        CRUD::setEntityNameStrings('menu item', 'menu items');
+        CRUD::setEntityNameStrings(__('menu_items.item'), __('menu_items.items'));
     }
 
     protected function setupReorderOperation()
@@ -38,11 +38,11 @@ class MenuItemCrudController extends CrudController
 
         CRUD::addColumn([
             'name' => 'name',
-            'label' => 'Label',
+            'label' => __('menu_items.crud.name'),
         ]);
 
         CRUD::addColumn([
-            'label' => 'Parent',
+            'label' => __('menu_items.crud.parent'),
             'type' => 'select',
             'name' => 'parent_id',
             'entity' => 'parent',
@@ -58,14 +58,14 @@ class MenuItemCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'name',
-            'label' => 'Etiqueta',
+            'label' => __('menu_items.crud.tag'),
             'wrapper' => [
                 'class' => 'form-group col-sm-4 mb-3'
             ]
         ]);
 
         CRUD::addField([
-            'label' => 'Padre',
+            'label' =>  __('menu_items.crud.parent'),
             'type' => 'select',
             'name' => 'parent_id',
             'entity' => 'parent',
@@ -78,7 +78,7 @@ class MenuItemCrudController extends CrudController
 
         CRUD::field([
             'name'  => 'is_external',
-            'label' => 'Enlace externo',
+            'label' =>  __('menu_items.crud.external'),
             'type'  => 'switch',
             'onLabel' => '✓',
             'offLabel' => '✕',
@@ -92,6 +92,7 @@ class MenuItemCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'view',
+            'label' => __('menu_items.crud.view'),
             'type' => 'view',
             'wrapper' => [
                 'class' => 'form-group col-sm-4 mb-3'
@@ -100,7 +101,7 @@ class MenuItemCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'order',
-            'label' => 'order',
+            'label' => __('menu_items.crud.order'),
             'type' => 'number',
             'wrapper' => [
                 'class' => 'form-group col-sm-4 mb-3'
@@ -110,7 +111,7 @@ class MenuItemCrudController extends CrudController
         CRUD::addField([
             'name'    => 'icon',
             'type'    => 'icon_picker',
-            'label'   => 'Icon Picker',
+            'label'   => __('menu_items.crud.icon'),
             'iconset' => 'nav-icon',
             'wrapper' => [
                 'class' => 'form-group col-sm-4 mb-3'
@@ -152,21 +153,27 @@ class MenuItemCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'name',
-            'label' => 'Etiqueta',
+            'label' => __('menu_items.crud.tag'),
+            'wrapper' => [
+                'class' => 'form-group col-sm-4 mb-3'
+            ]
         ]);
 
         CRUD::addField([
-            'label' => 'Padre',
+            'label' =>  __('menu_items.crud.parent'),
             'type' => 'select',
             'name' => 'parent_id',
             'entity' => 'parent',
             'attribute' => 'name',
             'model' => '\App\Models\MenuItem',
+            'wrapper' => [
+                'class' => 'form-group col-sm-4 mb-3'
+            ]
         ]);
 
         CRUD::field([
             'name'  => 'is_external',
-            'label' => 'Enlace externo',
+            'label' =>  __('menu_items.crud.external'),
             'type'  => 'switch',
             'onLabel' => '✓',
             'offLabel' => '✕',
@@ -177,24 +184,36 @@ class MenuItemCrudController extends CrudController
         $permissions = DB::table('permissions')->distinct('slug')->pluck('slug')->toArray();
         $options = array_combine($permissions, $permissions);
 
+        
         CRUD::addField([
             'name' => 'view',
+            'label' => __('menu_items.crud.view'),
             'type' => 'view',
+            'wrapper' => [
+                'class' => 'form-group col-sm-4 mb-3'
+            ]
         ]);
 
         CRUD::addField([
             'name' => 'order',
-            'label' => 'order',
+            'label' => __('menu_items.crud.order'),
             'type' => 'number',
+            'wrapper' => [
+                'class' => 'form-group col-sm-4 mb-3'
+            ]
         ]);
 
         CRUD::addField([
             'name'    => 'icon',
             'type'    => 'icon_picker',
-            'label'   => 'Icon Picker',
+            'label'   => __('menu_items.crud.icon'),
             'iconset' => 'nav-icon',
+            'wrapper' => [
+                'class' => 'form-group col-sm-4 mb-3'
+            ]
 
         ]);
+
     }
 
     public function update($id)

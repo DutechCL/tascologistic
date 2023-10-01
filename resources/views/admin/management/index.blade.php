@@ -88,9 +88,6 @@
                 </a>
             </li>
         </ul>
-        <div>
-            <a class="btn btn-primary mt-4 font-xl" href="">Monitorear</a>
-        </div>
     </div>
   </div>
   <div class="tab-content" id="sala-de-ventas">
@@ -116,9 +113,6 @@
                 </a>
             </li>
         </ul>
-        <div>
-            <a class="btn btn-primary mt-4 font-xl" href="">Monitorear</a>
-        </div>
     </div>
   </div>
 @endsection
