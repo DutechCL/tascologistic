@@ -39,7 +39,6 @@ const problems = ref([])
 
 onBeforeMount( async() => {
   problems.value =  await problemsStore.getProblems();
-  console.log(problems);
 })
 
 const selectedProduct = ref([]);

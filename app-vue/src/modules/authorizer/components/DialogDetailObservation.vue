@@ -34,12 +34,12 @@
    
    
     
-    <Button label="Cerrar"  @click="visibleObservation = false" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
+    <Button label="Cerrar"  @click="visibleObservation" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
 </Dialog>
 </template>
 
 <script setup>
-import { ref, defineProps, onBeforeMount } from 'vue'
+import { ref, defineProps, onBeforeMount, defineEmits } from 'vue'
 import Dialog from 'primevue/dialog'
 import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
@@ -49,12 +49,18 @@ import Button from 'primevue/button'
 const props = defineProps({
   order: String
 })
+const emit = defineEmits();
 
 const order = ref([]);
 
 onBeforeMount(() => {
   order.value = props.order;
 })
+
+
+const visibleObservation = () => {
+  emit('visible', {'visibleObservation': false});
+}
 
 const parseComments = (comments) => {
     // Reemplazar saltos de línea y tabulaciones con sus equivalentes HTML

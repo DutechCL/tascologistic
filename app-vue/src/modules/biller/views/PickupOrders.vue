@@ -37,7 +37,12 @@
         </Column>
       </DataTable>
 
-      <DialogDetail v-if="visible" v-model:visible="visible" :orderDetails="order"/>
+      <DialogDetail 
+      v-if="visible" 
+      v-model:visible="visible" 
+      :orderDetails="order"
+      @visible="visibleDetailsMethod"
+      />
     </div>
   </template>
   
@@ -58,7 +63,9 @@
 
   const orders = ref([]);
   const order = ref([]);
-
+  const visibleDetailsMethod = (value) => {
+    visible.value = value.visibleDetails;
+  };
   onBeforeMount( async() => {
     let body = {
       ordersStatusId: [5],

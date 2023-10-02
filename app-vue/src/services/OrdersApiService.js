@@ -13,6 +13,7 @@ export const useOrders = defineStore('orders', {
         async getOrders () 
         {
             let response = await getWithToken('api/v1/orders')
+            // statelistOrders.value  = response.data;
             return response.data
         },
 

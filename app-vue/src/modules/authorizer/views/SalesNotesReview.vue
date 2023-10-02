@@ -180,6 +180,10 @@ const processOrderPickerAndReviewer = async () => {
       message: '¿Estas seguro que deseas continuar?',
       header: 'Confirmación',
       icon: 'pi pi-exclamation-triangle',
+      acceptIcon: 'pi pi-check',
+      rejectIcon: 'pi pi-times',
+      acceptLabel: 'Si',
+      rejectLabel: 'No',
       accept: async() => {
         let isSuccessOrder = productsComplete.value.length == products.value.length
 
@@ -205,3 +209,18 @@ const processOrderPickerAndReviewer = async () => {
 }
 
 </script>
+
+<style>
+.p-confirm-dialog .p-dialog-content {
+  padding: 45px !important;
+}
+
+.p-button.p-component.p-confirm-dialog-accept{
+  background: #259bd7!important;
+}
+
+.p-dialog.p-component.p-ripple-disabled.p-confirm-dialog{
+  padding: 15px !important;
+  background: #ffffff !important;
+}
+</style>

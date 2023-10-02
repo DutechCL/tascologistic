@@ -42,12 +42,12 @@
             </template>
         </Column>
     </DataTable>
-    <Button label="Cerrar"  @click="visible = false" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
+    <Button label="Cerrar"  @click="visibleDetails" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
 </Dialog>
 </template>
 
 <script setup>
-import { ref, defineProps, onBeforeMount} from 'vue'
+import { ref, defineProps, onBeforeMount, defineEmits} from 'vue'
 import Dialog from 'primevue/dialog'
 import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
@@ -60,11 +60,15 @@ const props = defineProps({
   orderDetails: Array
 })
 
+const emit = defineEmits();
+const visibleDetails = () => {
+  emit('visible', {'visibleDetails': false});
+}
+
 onBeforeMount(() => {
   
   order.value = props.orderDetails
   products.value = props.orderDetails?.OrderItems
 
-  console.log(order.value)
 })
 </script>

@@ -5,47 +5,47 @@
         Notas de venta
       </h1>
       <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
-        Aquí
+        Retiro / Despacho
       </h2>
     </div>
     <Search/>
   </div>
   <div class="flex">
     <div class="card flex justify-content-center ">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Nota de venta" class="md:w-20rem w-full " />
+      <MultiSelect v-model="selectedDocNum" :options="selectOrdersPickupAndDelivery" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
     </div>
     <div class="card flex justify-content-center ">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Fecha" class="md:w-20rem w-full" />
+      <MultiSelect v-model="selectedDocDate" :options="selectOrdersPickupAndDelivery" filter optionLabel="DocDate" placeholder="Fecha" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocDate" />
     </div>
     <div class="card flex justify-content-center">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Hora" class="md:w-20rem w-full" />
+      <MultiSelect v-model="selectedDocTime" :options="selectOrdersPickupAndDelivery" filter optionLabel="DocTime" placeholder="Hora" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTime"/>
     </div>
-    <div class="card flex justify-content-center mr-20">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Cliente" class="md:w-20rem w-full" />
+    <div class="card flex justify-content-center mr-5">
+      <MultiSelect v-model="selectedCustomer" :options="selectOrdersPickupAndDelivery" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
     </div>
     <div class="card flex justify-content-center">
-        <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Total" class="md:w-20rem w-full" />
+      <MultiSelect v-model="selectedDocTotal" :options="selectOrdersPickupAndDelivery" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
     </div>
   </div>
-  <DataTable class="mb-20" :value="products" tableStyle="min-width: 50rem">
-      <Column headerClass="!bg-primary-900"  field="note" header="Nota de venta">
+  <DataTable class="mb-20" :value="ordersPickupAndDelivery" tableStyle="min-width: 50rem">
+      <Column headerClass="!bg-primary-900"  field="DocNum" header="Nota de venta">
         <template #body="slotProps">
-          N° {{ slotProps.data.note  }}
+          N° {{ slotProps.data.DocNum  }}
         </template>
       </Column>
-      <Column headerClass="!bg-primary-900"  field="date" header="Fecha"></Column>
-      <Column headerClass="!bg-primary-900"  field="hour" header="Hora"></Column>
-      <Column headerClass="!bg-primary-900"  field="client" header="Cliente"></Column>
-      <Column headerClass="!bg-primary-900"  field="totalAmount" header="Monto total"></Column>
-      <Column headerClass="!bg-primary-900"  field="totalAmount" header="Método entrega">
+      <Column headerClass="!bg-primary-900"  field="DocDate" header="Fecha"></Column>
+      <Column headerClass="!bg-primary-900"  field="DocTime" header="Hora"></Column>
+      <Column headerClass="!bg-primary-900"  field="Customer.CardName" header="Cliente"></Column>
+      <Column headerClass="!bg-primary-900"  field="DocTotal" header="Monto total"></Column>
+      <Column headerClass="!bg-primary-900"  field="MethodShippingName" header="Método entrega">
         <template #body="slotProps">
-          <Tag Tag :icon="'pi pi-shopping-cart'"  :value="'Aquí'" rounded class=" !font-normal !text-md !px-3 !bg-primary-100 !text-primary-900"></Tag>
+          <Tag Tag :icon="'pi pi-shopping-cart'"  :value="slotProps.data.MethodShippingName" rounded class=" !font-normal !text-md !px-3 !bg-primary-100 !text-primary-900"></Tag>
         </template>
       </Column>
-      <Column headerClass="!bg-primary-900"  field="note" header=" Observación">
+      <Column headerClass="!bg-primary-900"  field="note" header="Observaciones">
         <template #body="slotProps">
-          <Button :icon="'pi pi-eye'" class="!font-normal !text-primary-900
-          " label="Ver observación" link></Button>
+          <Button :icon="'pi pi-eye'"  @click="showDocuments(slotProps.data)" class="!font-normal !text-primary-900
+          " label="Ver Observaciones" link></Button>
         </template>
       </Column>
       
@@ -56,37 +56,75 @@
         </template>
       </Column>
   </DataTable>
+  <DialogDetail 
+  v-if="isDataLoaded" 
+  v-model:visible="visible"
+  :order="thisOrder"
+  :key="thisOrder.timestamp"
+  @update:visible="handleDialogVisibilityChange"
+  />
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, defineProps } from 'vue'
 import Button from 'primevue/button'
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
 import Tag from 'primevue/tag'
-import TreeSelect from 'primevue/treeselect'
 import Search from './Search.vue'
-const products = ref([
-  {
-    statusId: 1,
-    note: '4567892',
-    date: '19/04/2023',
-    hour: '10:26',
-    client: 'Daniel Ramirez Palma',
-    status: 'En espera',
-    totalAmount: '$200',
-    btnInfo: 'Informado',
-  },
-  {
-    statusId: 2,
-    note: '0998764',
-    date: '19/04/2023',
-    hour: '10:58',
-    client: 'Lucas Sandoval',
-    status: 'En preparación',
-    totalAmount: '$300'
-  },
- 
-  
-])
+import MultiSelect from 'primevue/multiselect';
+import { useOrders } from '../../../services/OrdersApiService.js';
+import DialogDetail from './DialogDetail.vue'
+
+const ordersStore = useOrders()
+
+// console.log(ordersStore.orders);
+
+const METHOD_SHIPPING_HERE = 1;
+
+const props = defineProps({
+  ListordersManager: Array
+})
+
+
+const visible = ref(false)
+const thisOrder = ref({})
+const isDataLoaded = ref(false)
+
+const selectOrdersPickupAndDelivery = ref([])
+const selectedDocNum = ref([])
+const selectedDocDate = ref([])
+const selectedDocTime = ref([])
+const selectedCustomer = ref([])
+const selectedDocTotal = ref([])
+
+const ordersPickupAndDelivery = ref(
+  props.ListordersManager.filter( order => order.MethodShippingId !== METHOD_SHIPPING_HERE)
+);
+
+selectOrdersPickupAndDelivery.value = ordersPickupAndDelivery.value
+
+const showDocuments = (data) => {
+  visible.value = true;
+  thisOrder.value = { ...data };
+  isDataLoaded.value = true;
+}
+
+const handleDialogVisibilityChange = (newValue) => {
+  if (!newValue) {
+    thisOrder.value = {}; // Reiniciar los datos al cerrar el diálogo
+    isDataLoaded.value = false;
+  }
+}
 </script>
+
+<style>
+.p-multiselect-label.p-placeholder, .p-multiselect-trigger{
+  color: #259bd7 !important;
+}
+.p-multiselect.p-multiselect-chip .p-multiselect-token {
+  background: #259bd7!important;
+  font-weight: 600;
+  color: #ffffff !important;
+}
+</style>

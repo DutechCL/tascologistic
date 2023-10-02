@@ -5,7 +5,7 @@
         <ToManage v-if="isDataLoaded" :ListOrders="orders"/>
       </TabPanel>
       <TabPanel header="Gestionadas">
-        <Managed/>
+        <Managed v-if="isDataLoaded" :ListordersManager="ordersManager" />
       </TabPanel>
   </TabView>
   </div>
@@ -26,14 +26,15 @@ const ORDER_STATUS_DELIVERY = 3;
 
 const ordersStore = useOrders()
 const orders = ref([]);
+const ordersManager = ref([]);
+const ordersManagerPickupAndDelivery = ref([]);
 const isDataLoaded = ref(false); 
 
 
 onBeforeMount( async() => {
   orders.value = await ordersStore.getOrders();
-
+  ordersManager.value =  await ordersStore.getProcessedOrders();
   isDataLoaded.value = true; // Marcar los datos como cargados
-
 })
 
 </script>

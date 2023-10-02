@@ -36,12 +36,12 @@
    
    
     
-    <Button label="Cerrar"  @click="visible = false" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
+    <Button label="Cerrar"  @click="visibleDetails" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
 </Dialog>
 </template>
 
 <script setup>
-import { ref, onBeforeMount, defineProps } from 'vue'
+import { ref, onBeforeMount, defineProps, defineEmits } from 'vue'
 import Dialog from 'primevue/dialog'
 import Tag from 'primevue/tag'
 import Button from 'primevue/button'
@@ -49,6 +49,10 @@ import Button from 'primevue/button'
 const props = defineProps({
   order: String
 })
+const emit = defineEmits();
+const visibleDetails = () => {
+  emit('visible', {'visibleDetails': false});
+}
 
 const order = ref([]);
 
