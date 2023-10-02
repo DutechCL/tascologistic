@@ -23,7 +23,7 @@
         <MultiSelect v-model="selectedCities" :options="ordersHere" filter optionLabel="DocTime" placeholder="Hora" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
       </div>
       <div class="card flex justify-content-center mr-20">
-        <MultiSelect v-model="selectedCities" :options="ordersHere" filter optionLabel="Customer.Customer" placeholder="Cliente" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
+        <MultiSelect v-model="selectedCities" :options="ordersHere" filter optionLabel="Customer.CardName" placeholder="Cliente" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
       </div>
     </div>
     <DataTable class="mb-20" :value="ordersHere" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
@@ -82,7 +82,7 @@
           <MultiSelect v-model="selectedCities" :options="ordersPickupAndDelivery" filter optionLabel="DocTime" placeholder="Hora" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
         </div>
         <div class="card flex justify-content-center mr-20">
-          <MultiSelect v-model="selectedCities" :options="ordersPickupAndDelivery" filter optionLabel="Customer.Customer" placeholder="Cliente" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
+          <MultiSelect v-model="selectedCities" :options="ordersPickupAndDelivery" filter optionLabel="Customer.CardName" placeholder="Cliente" :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none;" />
         </div>
       
       </div>

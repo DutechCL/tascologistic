@@ -139,7 +139,6 @@ class OrderController extends Controller
             // otros campos si los tienes
         ]);
 
-        dd(auth()->user());
         return response()->json([
             'status' => 'success',
             'message' => 'Orden actualizado con éxito',

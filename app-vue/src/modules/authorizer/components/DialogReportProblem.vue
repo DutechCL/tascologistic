@@ -47,14 +47,14 @@ const showEditor = ref(false);
 
 const emit = defineEmits();
 const visibleReport = () => {
-
-  emit('visible-report', {'visibleReport': false});
+  const tempSelection = [...selectedProduct.value];
+  selectedProduct.value = [];
+  emit('visible-report', {'visibleReport': false, tempSelection});
 }
 watch(selectedProduct, (newSelection) => {
   showEditor.value = newSelection.some((product) => product.problemDetected === 'Otros');
   let product = props.product;
   product.problems = newSelection;
-  console.log(product)
   emit('selection-change', { product });
 });
   

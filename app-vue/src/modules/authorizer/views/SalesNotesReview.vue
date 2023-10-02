@@ -13,28 +13,21 @@
 
       <div class="flex">
         <div class="card flex justify-content-center ">
-            <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Cantidad" class="md:w-20rem w-full " />
+          <MultiSelect v-model="selectedQuantity" :options="products" filter optionLabel="Quantity" placeholder="Cantidad" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
         </div>
         <div class="card flex justify-content-center ">
-            <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="SKU" class="md:w-20rem w-full" />
+          <MultiSelect v-model="selectedItemCode" :options="products" filter optionLabel="ItemCode" placeholder="SKU" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocDate" />
         </div>
-      
       </div>
       <DataTable tableStyle="min-width: 50rem" filters="filters" :value="products">
-        <Column headerClass="!bg-primary-900"  field="date" header="Cantidad">
+        <Column headerClass="!bg-primary-900"  field="Quantity" header="Cantidad">
             <template #body="slotProps">
                 <p>{{slotProps.data.qty}} {{slotProps.data.Quantity}}</p>
             </template>
         </Column>
-
         <Column headerClass="!bg-primary-900"  field="ItemCode" header="SKU"></Column>
-
         <Column headerClass="!bg-primary-900"  field="ItemDescription" header="Producto"></Column>
-
-        <Column headerClass="!bg-primary-900"  field="ubication" header="Ubicación">
-        </Column>
-      
-
+        <Column headerClass="!bg-primary-900"  field="ubication" header="Ubicación"></Column>
         <Column headerClass="!bg-primary-900"  field="id" header="" >
           <template #body="slotProps">
             <Button
@@ -59,14 +52,13 @@
               :outlined="!isProblemMap[slotProps.data.id]"
             >
             </Button>
-            
           </template>
         </Column>
         
     </DataTable>
 
     <div class="mini-table mt-8">
-      <DataTable v-if="productsProblem.length > 0" tableStyle="min-width: 50rem" filters="filters" :value="productsProblem">
+      <DataTable v-if="productsProblem.length > 0" tableStyle="min-width: 50rem" filters="filters" :value="productsProblem" class="teble-probelm">
     
           <Column headerClass="!bg-secundary-300"  field="ItemCode" header="SKU"></Column>
           <Column headerClass="!bg-secundary-300"  field="ItemDescription" header="Producto"></Column>
@@ -80,7 +72,7 @@
 
     <div class="mt-8 flex float-right">
       <router-link :to="{ name: 'pickup-review' }" class="mr-3 p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900">Cancelar</router-link>
-      <Button @click="processOrderPickerAndReviewer" label="Finalizar pedido" class="!py-1.5 !border-none !px-10 !bg-primary-900 float-right "/>
+      <Button @click="processOrderPickerAndReviewer" label="Finalizar pedido" class="!py-1.5 !border-none !px-10 !bg-primary-900 float-right " :disabled="disableButton"/>
     </div>
   </div>
   <div class="space"></div>
@@ -101,17 +93,13 @@ import { useRoute } from 'vue-router';
 import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
 import Tag from 'primevue/tag'
-import TreeSelect from 'primevue/treeselect'
 import Button from 'primevue/button'
 import ConfirmDialog from 'primevue/confirmdialog';
 import { useConfirm } from "primevue/useconfirm";
-
 import DialogReportProblem from '../components/DialogReportProblem.vue'
-
 import { useOrders } from '../../../services/OrdersApiService.js';
-
 import { useToast } from 'primevue/usetoast';
-
+import MultiSelect from 'primevue/multiselect';
 
 
 const confirm = useConfirm();
@@ -124,17 +112,24 @@ const route = useRoute();
 const orderId = computed(() => route.params.id);
 const responsible = computed(() => route.params.responsible);
 
-const order = ref([]);
+const order = ref([])
 const product = ref([])
 const products = ref([])
-const isCompleteMap = ref({});
-const isProblemMap = ref({});
-const visibleReport = ref(false);
-const productsProblem = ref([]);
-const productsComplete = ref([]);
+const isCompleteMap = ref([])
+const isProblemMap = ref([])
+const visibleReport = ref(false)
+const disableButton = ref(true)
+const productsProblem = ref([])
+const productsComplete = ref([])
+const productsCheck = ref([])
+const selectedQuantity = ref([])
+const selectedItemCode = ref([])
+
+
 
 const setCompleteProducts = new Set();
 const setOfProducts = new Set();
+const setProductsCheck = new Set();
 
 onBeforeMount( async() => {
 
@@ -149,28 +144,41 @@ onBeforeMount( async() => {
 })
 
 const checkProduct = (rowData, action) => {
-  if(rowData.id){
-    let productComplete;
-    if(action == 'complete' ) {
-      productComplete = setCompleteProducts.add(rowData)
-      isCompleteMap.value[rowData.id] = !isCompleteMap.value[rowData.id]
-      isProblemMap.value[rowData.id] = false
-    } else {
-      productComplete = setCompleteProducts.delete(rowData)
-      isProblemMap.value[rowData.id] = !isProblemMap.value[rowData.id]
-      isCompleteMap.value[rowData.id] = false
-      visibleReport.value = true
-      product.value = rowData
-    }
-    productsComplete.value = Array.from(productComplete)
+  const productCheck = setProductsCheck.add(rowData);
+  
+  if (rowData.id) {
+    const productComplete = (action === 'complete')
+      ? setCompleteProducts.add(rowData)
+      : setCompleteProducts.delete(rowData);
+
+      if(action === 'complete')
+      {
+      // Elimina el producto de setOfProducts
+      setOfProducts.delete(rowData);
+
+      // Asigna los productos restantes a productsProblem
+      productsProblem.value = Array.from(setOfProducts);
+      }    
+    isCompleteMap.value[rowData.id] = (action === 'complete');
+    isProblemMap.value[rowData.id] = (action !== 'complete');
+    visibleReport.value = (action !== 'complete');
+    product.value = (action !== 'complete') ? rowData : null;
+
+    productsCheck.value = Array.from(productCheck);
+    disableButton.value = (productsCheck.value.length !== products.value.length);
+    productsComplete.value = Array.from(productComplete);
   }
 };
 
-const visibleReportMethod = (value) => {
-  visibleReport.value = value.visibleReport;
+const visibleReportMethod = ({ value, tempSelection }) => {
+  if (!value) {
+    visibleReport.value = visibleReport.visibleReport;
+    productsProblem.value = tempSelection;
+  }
 };
 
 const handleSelectionChange = (selection) => {
+  selection.product.problems = productsProblem.value
   let products = setOfProducts.add(selection.product)
   productsProblem.value = Array.from(products)
 };
@@ -222,5 +230,20 @@ const processOrderPickerAndReviewer = async () => {
 .p-dialog.p-component.p-ripple-disabled.p-confirm-dialog{
   padding: 15px !important;
   background: #ffffff !important;
+}
+.teble-probelm tr{
+  height: 60px !important;
+}
+
+.teble-probelm td{
+  padding: 10px !important;
+}
+.p-multiselect-label.p-placeholder, .p-multiselect-trigger{
+  color: #259bd7 !important;
+}
+.p-multiselect.p-multiselect-chip .p-multiselect-token {
+  background: #259bd7!important;
+  font-weight: 600;
+  color: #ffffff !important;
 }
 </style>
