@@ -52,7 +52,7 @@
         </Column>
         <Column headerClass="!bg-primary-900"  field="OrderStatusName" header="Estado" >
           <template #body="slotProps">
-           <Tag :icon="'pi pi-circle-fill'"  :value="slotProps.data.OrderStatusName" class="p-tag-2 tag-font-method tag-radius"></Tag>
+           <Tag :icon="'pi pi-circle-fill'"  :value="slotProps.data.OrderStatusName" :style="{ backgroundColor: slotProps.data.OrderStatusColor, color: getTextColor(slotProps.data.OrderStatusColor) }" class=" tag-font-method tag-radius"></Tag>
           </template>
         </Column>
         
@@ -112,7 +112,7 @@
           </Column>
           <Column headerClass="!bg-primary-900"  field="OrderStatusName" header="Estado" >
             <template #body="slotProps">
-            <Tag :icon="'pi pi-circle-fill'"  :value="slotProps.data.OrderStatusName" class="p-tag-3 tag-font-method tag-radius"></Tag>
+            <Tag :icon="'pi pi-circle-fill'"  :value="slotProps.data.OrderStatusName" :style="{ backgroundColor: slotProps.data.OrderStatusColor, color: getTextColor(slotProps.data.OrderStatusColor) }" class=" tag-font-method tag-radius"></Tag>
             </template>
           </Column>
           
@@ -148,6 +148,25 @@ onBeforeMount( async() => {
   ordersHere.value = orders.value.filter( order => order.MethodShippingId === METHOD_SHIPPING_HERE)
   ordersPickupAndDelivery.value = orders.value.filter( order => order.MethodShippingId !== METHOD_SHIPPING_HERE)
 })
+
+function getTextColor(bgColor) {
+  const rgb = hexToRgb(bgColor);
+  const luminance = (0.299 * rgb.r + 0.587 * rgb.g + 0.114 * rgb.b) / 255;
+
+  // Ajusta la luminosidad según tus necesidades
+  const threshold = 0.5; // Valor entre 0 y 1, ajusta según sea necesario
+
+  return luminance > threshold ? '#000000' : '#FFFFFF';
+}
+
+// Función para convertir el color hexadecimal a RGB
+function hexToRgb(hex) {
+  const bigint = parseInt(hex.substring(1), 16);
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+  return { r, g, b };
+}
 
 </script>
 

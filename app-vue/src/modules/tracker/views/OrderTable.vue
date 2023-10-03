@@ -14,7 +14,7 @@
         <Column headerClass="!bg-primary-900"  field="customer.CardName" header="Cliente"></Column>
         <Column headerClass="!bg-primary-900"  field="order_status" header="Estado" >
           <template #body="slotProps">
-           <Tag :icon="'pi pi-circle-fill'"  :value="slotProps.data.order_status.name" :class="getSeverity(slotProps.data.order_status.id)" class="tag-font-status tag-radius"></Tag>
+           <Tag :icon="'pi pi-circle-fill'"  :value="slotProps.data.order_status.name" :style="{ backgroundColor: slotProps.data.order_status.color, color: getTextColor(slotProps.data.order_status.color) }" class="tag-font-status tag-radius"></Tag>
           </template>
         </Column> 
     </DataTable>
@@ -38,7 +38,22 @@ onMounted( async() => {
   orders.value = await ordersStore.getOrdersByMethodShipping([ORDERS_STATUS_AQUI]);
 })
 
-const getSeverity = (data) =>{
-  return `p-tag-${data}`
+function getTextColor(bgColor) {
+  const rgb = hexToRgb(bgColor);
+  const luminance = (0.299 * rgb.r + 0.587 * rgb.g + 0.114 * rgb.b) / 255;
+
+  // Ajusta la luminosidad según tus necesidades
+  const threshold = 0.5; // Valor entre 0 y 1, ajusta según sea necesario
+
+  return luminance > threshold ? '#000000' : '#FFFFFF';
+}
+
+// Función para convertir el color hexadecimal a RGB
+function hexToRgb(hex) {
+  const bigint = parseInt(hex.substring(1), 16);
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+  return { r, g, b };
 }
 </script>

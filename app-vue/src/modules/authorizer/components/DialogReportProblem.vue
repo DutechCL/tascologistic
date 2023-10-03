@@ -31,7 +31,8 @@ import Editor from 'primevue/editor';
 import { useProblems } from '../../../services/ProblemsApiService.js';
 
 const props = defineProps({
-  product: Object
+  product: Object,
+  problemsProduct: Object
 })
 
 const problemsStore = useProblems()
@@ -40,6 +41,12 @@ const problems = ref([])
 onBeforeMount( async() => {
   problems.value =  await problemsStore.getProblems();
 })
+
+watch(() => props.problemsProduct, (newProblemsProduct) => {
+  if(newProblemsProduct != undefined){
+    selectedProduct.value = [...newProblemsProduct];
+  }
+});
 
 const selectedProduct = ref([]);
 const showEditor = ref(false);

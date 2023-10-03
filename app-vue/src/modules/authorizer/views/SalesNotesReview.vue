@@ -80,6 +80,7 @@
   <DialogReportProblem 
     v-model:visible="visibleReport" 
     :product="product"
+    :problemsProduct="problemsSelected"
     @selection-change="handleSelectionChange" 
     @visible-report="visibleReportMethod"
     />
@@ -90,22 +91,19 @@
 <script setup>
 import { ref, computed, onBeforeMount} from 'vue'
 import { useRoute } from 'vue-router';
+import { useConfirm } from "primevue/useconfirm";
+import { useOrders } from '../../../services/OrdersApiService.js';
+import { useToast } from 'primevue/usetoast';
 import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
 import Tag from 'primevue/tag'
 import Button from 'primevue/button'
 import ConfirmDialog from 'primevue/confirmdialog';
-import { useConfirm } from "primevue/useconfirm";
 import DialogReportProblem from '../components/DialogReportProblem.vue'
-import { useOrders } from '../../../services/OrdersApiService.js';
-import { useToast } from 'primevue/usetoast';
 import MultiSelect from 'primevue/multiselect';
 
-
 const confirm = useConfirm();
-
 const toast = useToast();
-
 const ordersStore = useOrders()
 const route = useRoute();
 
@@ -124,15 +122,13 @@ const productsComplete = ref([])
 const productsCheck = ref([])
 const selectedQuantity = ref([])
 const selectedItemCode = ref([])
-
-
+const problemsSelected = ref([])
 
 const setCompleteProducts = new Set();
 const setOfProducts = new Set();
 const setProductsCheck = new Set();
 
 onBeforeMount( async() => {
-
   order.value =  await ordersStore.showOrder(orderId.value);
   products.value = order.value.order_items
   
@@ -144,21 +140,22 @@ onBeforeMount( async() => {
 })
 
 const checkProduct = (rowData, action) => {
+  
   const productCheck = setProductsCheck.add(rowData);
   
   if (rowData.id) {
     const productComplete = (action === 'complete')
-      ? setCompleteProducts.add(rowData)
-      : setCompleteProducts.delete(rowData);
-
-      if(action === 'complete')
-      {
-      // Elimina el producto de setOfProducts
+    ? setCompleteProducts.add(rowData)
+    : setCompleteProducts.delete(rowData);
+    
+    if(action === 'complete')
+    {
       setOfProducts.delete(rowData);
-
-      // Asigna los productos restantes a productsProblem
       productsProblem.value = Array.from(setOfProducts);
-      }    
+    }else{
+      problemsSelected.value = rowData.problems
+    }    
+
     isCompleteMap.value[rowData.id] = (action === 'complete');
     isProblemMap.value[rowData.id] = (action !== 'complete');
     visibleReport.value = (action !== 'complete');

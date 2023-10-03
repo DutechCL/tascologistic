@@ -32,6 +32,7 @@ class OrdersCollection extends Collection
                     'OrderItems' => $orderItems->data,
                     'OrderStatusId' => $item->order_status_id,
                     'OrderStatusName' => $item->orderStatus->name,
+                    'OrderStatusColor' => $item->orderStatus->color,
                     'SalesPersonCode' => $item->SalesPersonCode,
                     'SalesEmployeeName' => $item->SalesEmployeeName,
                     'ResponsibleAuthorizerId' => $authorizer ? $authorizer->user->id : null,
