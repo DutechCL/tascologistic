@@ -16,7 +16,7 @@
       </div>
     </div>
    
-    <Button label="Cerrar"  @click="visibleReport" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
+    <Button label="Reportar"  @click="visibleReport" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
 </Dialog>
 </template>
 
@@ -27,20 +27,47 @@ import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
 import Button from 'primevue/button'
 import Editor from 'primevue/editor';
-
 import { useProblems } from '../../../services/ProblemsApiService.js';
+import { useOrders } from '../../../services/OrdersApiService.js';
+import { useToast } from 'primevue/usetoast';
+
 
 const props = defineProps({
+  order: Object,
   product: Object,
+  typeProblems: String,
   problemsProduct: Object
 })
 
+const toast = useToast();
 const problemsStore = useProblems()
+const ordersStore = useOrders();
+const emit = defineEmits();
+
 const problems = ref([])
+const selectedProduct = ref([]);
+const showEditor = ref(false);
 
 onBeforeMount( async() => {
-  problems.value =  await problemsStore.getProblems();
+  problems.value =  await problemsStore.getProblems(props.typeProblems);
 })
+
+const visibleReport = () => {
+  if (props.typeProblems == 'picker-revisor') {
+    const tempSelection = [...selectedProduct.value];
+    selectedProduct.value = [];
+    emit('visible-report', { 'visibleReport': false, tempSelection });
+  } else {
+    reportOrderProblem();
+    selectedProduct.value = [];
+    emit('visible-report', { 'visibleReport': false});
+  }
+}
+
+const reportOrderProblem = async () => {
+  let data = await ordersStore.postActionOrder(props.order.id, 2, selectedProduct.value);
+  toast.add({ severity: data.status, summary: '', detail: data.message, life: 3000 });
+}
 
 watch(() => props.problemsProduct, (newProblemsProduct) => {
   if(newProblemsProduct != undefined){
@@ -48,21 +75,15 @@ watch(() => props.problemsProduct, (newProblemsProduct) => {
   }
 });
 
-const selectedProduct = ref([]);
-const showEditor = ref(false);
-
-
-const emit = defineEmits();
-const visibleReport = () => {
-  const tempSelection = [...selectedProduct.value];
-  selectedProduct.value = [];
-  emit('visible-report', {'visibleReport': false, tempSelection});
-}
 watch(selectedProduct, (newSelection) => {
-  showEditor.value = newSelection.some((product) => product.problemDetected === 'Otros');
-  let product = props.product;
-  product.problems = newSelection;
-  emit('selection-change', { product });
+  
+  showEditor.value = newSelection.some((product) => product.title === 'Otro');
+
+  if (props.typeProblems == 'picker-revisor') {
+    let product = props.product;
+    product.problems = newSelection;
+    emit('selection-change', { product });
+  }
 });
   
 </script>

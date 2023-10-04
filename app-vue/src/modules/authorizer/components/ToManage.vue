@@ -13,19 +13,19 @@
     </h2>
   <div class="flex">
     <div class="card flex justify-content-center ">
-      <MultiSelect v-model="selectedDocNum" :options="selectFilterOrdersHere" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
+      <MultiSelect v-model="selectedDocNumHere" :options="selectFilterOrdersHere" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
     </div>
     <div class="card flex justify-content-center ">
-      <MultiSelect v-model="selectedDocDate" :options="selectFilterOrdersHere" filter optionLabel="DocDate" placeholder="Fecha" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocDate" />
+      <MultiSelect v-model="selectedDocDateHere" :options="selectFilterOrdersHere" filter optionLabel="DocDate" placeholder="Fecha" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocDate" />
     </div>
     <div class="card flex justify-content-center">
-      <MultiSelect v-model="selectedDocTime" :options="selectFilterOrdersHere" filter optionLabel="DocTime" placeholder="Hora" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTime"/>
+      <MultiSelect v-model="selectedDocTimeHere" :options="selectFilterOrdersHere" filter optionLabel="DocTime" placeholder="Hora" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTime"/>
     </div>
     <div class="card flex justify-content-center mr-5">
-      <MultiSelect v-model="selectedCustomer" :options="selectFilterOrdersHere" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
+      <MultiSelect v-model="selectedCustomerHere" :options="selectFilterOrdersHere" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
     </div>
     <div class="card flex justify-content-center">
-      <MultiSelect v-model="selectedDocTotal" :options="selectFilterOrdersHere" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
+      <MultiSelect v-model="selectedDocTotalHere" :options="selectFilterOrdersHere" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
     </div>
   </div>
   <DataTable @onPage="loadMoreData"  class="mb-20" :value="ordersHere" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
@@ -124,7 +124,7 @@
       
       <Column headerClass="!bg-primary-900"  field="note" header="" >
         <template #body="slotProps">
-          <Button label="Rechazar" @click="visibleReport = true"  class="!py-1.5 mr-3 !border-primary-900 !text-primary-900" outlined >
+          <Button label="Rechazar" @click="visibleReportProbelms(slotProps.data)"  class="!py-1.5 mr-3 !border-primary-900 !text-primary-900" outlined >
           </Button>
           <Button label="Autorizar" @click="actionOrder(slotProps.data)" class="!py-1.5 !border-primary-900 !text-primary-900" outlined >
           </Button>
@@ -148,6 +148,13 @@
     @update:visible="handleDialogVisibilityChange"
     @visible="visibleObservationMethod"
     />
+    <DialogReportProblem 
+    v-model:visible="visibleReport" 
+    :typeProblems="'cda'"
+    :order="orderProblem"
+    @selection-change="handleSelectionChange" 
+    @visible-report="visibleReportMethod"
+    />
     <Toast />
     <ConfirmDialog></ConfirmDialog>
 </template>
@@ -161,6 +168,7 @@ import Tag from 'primevue/tag'
 import Search from './Search.vue'
 import DialogDetail from './DialogDetail.vue'
 import DialogDetailObservation from './DialogDetailObservation.vue'
+import DialogReportProblem from './DialogReportProblem.vue'
 import { useOrders } from '../../../services/OrdersApiService.js';
 import ConfirmDialog from 'primevue/confirmdialog';
 import { useConfirm } from "primevue/useconfirm";
@@ -181,26 +189,22 @@ const props = defineProps({
   ListOrders: Array
 })
 
-
 const visible = ref(false)
 const visibleObservation = ref(false)
 const thisOrder = ref({})
 const isDataLoaded = ref(false)
+const selectedDocNumHere = ref([])
+const selectedDocDateHere = ref([])
+const selectedDocTimeHere = ref([])
+const selectedCustomerHere = ref([])
+const selectedDocTotalHere = ref([])
 const selectedDocNum = ref([])
 const selectedDocDate = ref([])
 const selectedDocTime = ref([])
 const selectedCustomer = ref([])
 const selectedDocTotal = ref([])
-
-// console.log(props.ListOrders)
-
-const visibleObservationMethod = (value) => {
-  visibleObservation.value = value.visibleObservation;
-};
-
-const visibleDetailsMethod = (value) => {
-  visible.value = value.visibleDetails;
-};
+const visibleReport = ref()
+const orderProblem = ref([])
 
 const ordersHere = ref(
   props.ListOrders.filter( order => order.MethodShippingId === METHOD_SHIPPING_HERE)
@@ -211,23 +215,54 @@ const ordersPickupAndDelivery = ref(
 );
 
 const selectFilterOrdersHere = ref(
-  ordersHere.value
+ordersHere.value
 );
 
 const selectFilterordersPickupAndDelivery = ref(
   ordersPickupAndDelivery.value
 );
+  
+const visibleReportProbelms = (value) => {
+  visibleReport.value = true
+  orderProblem.value = value
+}
 
-
-watch(selectedDocNum, (data) => {
-  if (data.length === 0) {
-    ordersPickupAndDelivery.value =  props.ListOrders.filter( order => order.MethodShippingId !== METHOD_SHIPPING_HERE);
-    ordersHere.value =  props.ListOrders.filter( order => order.MethodShippingId === METHOD_SHIPPING_HERE);
-  } else {
-    ordersPickupAndDelivery.value = data.filter(order => order.MethodShippingId !== METHOD_SHIPPING_HERE);
-    ordersHere.value = data.filter(order => order.MethodShippingId === METHOD_SHIPPING_HERE);
+const visibleReportMethod = ({ value, tempSelection }) => {
+  if (!value) {
+    visibleReport.value = visibleReport.visibleReport;
   }
-});
+};
+
+const visibleObservationMethod = (value) => {
+  visibleObservation.value = value.visibleObservation;
+};
+
+const visibleDetailsMethod = (value) => {
+  visible.value = value.visibleDetails;
+};
+  
+const watchFilters = (filters, typeOrders) => {
+  filters.forEach((filter) => {
+    watch(filter, (data) => {
+      filterData(data, typeOrders);
+    });
+  });
+};
+
+const filterData = (data, typeOrders) => {
+  const targetOrders = typeOrders === 1 ? ordersHere : ordersPickupAndDelivery;
+  
+  const filterCondition = (typeOrders === 1)
+    ? (order) => order.MethodShippingId === METHOD_SHIPPING_HERE
+    : (order) => order.MethodShippingId !== METHOD_SHIPPING_HERE;
+
+  targetOrders.value = (data.length === 0)
+    ? props.ListOrders.filter(filterCondition)
+    : data.filter(filterCondition);
+};
+
+watchFilters([selectedDocNumHere, selectedDocDateHere, selectedDocTimeHere, selectedCustomerHere, selectedDocTotalHere], 1);
+watchFilters([selectedDocNum, selectedDocDate, selectedDocTime, selectedCustomer, selectedDocTotal], 2);
 
 const showDetailsOrders = (data) => {
   thisOrder.value = { ...data };
@@ -250,21 +285,6 @@ const handleDialogVisibilityChange = (newValue) => {
 
 const loading = ref(false);
 
-const loadMoreData = async (event) => {
-  loading.value = true;
-
-  try {
-    const { first, rows } = event; // first es el índice del primer registro en la página, y rows es la cantidad de registros por página
-    const newData = await ordersStore.getOrders({ offset: first, limit: rows });
-    ordersHere.value = [...ordersHere.value, ...newData];
-  } catch (error) {
-    console.error('Error al cargar más datos', error);
-  } finally {
-    loading.value = false;
-  }
-};
-
-
 const actionOrder = async (order) => {
   confirm.require({
       message: '¿Estas seguro que deseas continuar?',
@@ -276,7 +296,6 @@ const actionOrder = async (order) => {
       rejectLabel: 'No',
       accept: async() => {
         let data = await ordersStore.postActionOrder(order.id, 1);
-        console.log(data)
         toast.add({ severity: data.status, summary: '', detail: data.message, life: 3000 });
         if (data.status === 'success') {
           const indexOfRowToRemove = ordersPickupAndDelivery.value.findIndex(order1 => order1 === order);

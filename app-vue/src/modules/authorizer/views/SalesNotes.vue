@@ -2,12 +2,15 @@
   <div class="px-3">
     <TabView>
       <TabPanel header="Por gestionar">
+        <div v-if="!isDataLoaded" class="text-center" style="color:#259bd7">
+          <i class="pi pi-spin pi-spinner" style="font-size: 2rem;"></i>
+        </div>
         <ToManage v-if="isDataLoaded" :ListOrders="orders"/>
       </TabPanel>
       <TabPanel header="Gestionadas">
         <Managed v-if="isDataLoaded" :ListordersManager="ordersManager" />
       </TabPanel>
-  </TabView>
+    </TabView>
   </div>
 </template>
 
@@ -19,22 +22,16 @@ import ToManage from '../components/ToManage.vue'
 import Managed from '../components/Managed.vue';
 import { useOrders } from '../../../services/OrdersApiService.js';
 
-const METHOD_SHIPPING_HERE = 1;
-const ORDER_STATUS_PICKUP = 2;
-const ORDER_STATUS_DELIVERY = 3;
-
-
 const ordersStore = useOrders()
 const orders = ref([]);
 const ordersManager = ref([]);
-const ordersManagerPickupAndDelivery = ref([]);
 const isDataLoaded = ref(false); 
 
 
 onBeforeMount( async() => {
   orders.value = await ordersStore.getOrders();
   ordersManager.value =  await ordersStore.getProcessedOrders();
-  isDataLoaded.value = true; // Marcar los datos como cargados
+  isDataLoaded.value = true;
 })
 
 </script>

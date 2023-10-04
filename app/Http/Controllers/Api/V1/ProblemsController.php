@@ -10,8 +10,10 @@ class ProblemsController extends Controller
 {
     public function index(Request $request)
     {
-        $problems = Problem::all();
-
+        $problems = Problem::where('type', $request->type)
+            ->where('active', 1)
+            ->orderBy('created_at', 'ASC')
+            ->get();
         // Devolver los datos como respuesta JSON
         return response()->json($problems);
     }

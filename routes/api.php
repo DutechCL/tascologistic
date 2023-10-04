@@ -45,7 +45,7 @@ Route::prefix('v1')->group(
             Route::get('orders/authorizer/list', [OrderController::class, 'authorizerList']);
             Route::post('order/proccess', [OrderController::class, 'processOrderPickerAndReviewer']);
             Route::post('orders/by-params', [OrderController::class, 'getOrdersByParams']);
-            Route::get('problems', [ProblemsController::class, 'index']);
+            Route::post('problems', [ProblemsController::class, 'index']);
         });
         
 

@@ -42,12 +42,13 @@ export const useOrders = defineStore('orders', {
             return await getWithToken(`api/v1/orders/${order_id}`)
         },
 
-        async postActionOrder (order_id, action) 
+        async postActionOrder (order_id, action, problems = null) 
         {
             const body = {
                 order_id: order_id,
                 action: action,
-                responsible: 'autorizador'
+                responsible: 'autorizador',
+                problems: problems
             }
             return await postWithToken('api/v1/orders/authorizer/action', body)
         },

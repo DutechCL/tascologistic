@@ -81,6 +81,7 @@
     v-model:visible="visibleReport" 
     :product="product"
     :problemsProduct="problemsSelected"
+    :typeProblems="'picker-revisor'"
     @selection-change="handleSelectionChange" 
     @visible-report="visibleReportMethod"
     />

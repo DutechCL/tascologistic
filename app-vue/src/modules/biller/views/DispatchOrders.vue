@@ -6,6 +6,7 @@
         </h1>
         <Search/>
       </div>
+      <div v-if="orders.length > 0">
       <div class="flex">
         <div class="card flex justify-content-center ">
             <TreeSelect v-model="selectedValue" :options="nodes" selectionMode="checkbox" placeholder="Nota de venta" class="md:w-20rem w-full " />
@@ -28,9 +29,9 @@
           <Column headerClass="!bg-primary-900"  field="DocDate" header="Fecha"></Column>
           <Column headerClass="!bg-primary-900"  field="Customer.CardName" header="Cliente"></Column>
           <Column headerClass="!bg-primary-900"  field="DocTotal" header="Monto total">
-                <template #body="slotProps">
-                    $ {{ slotProps.data.DocTotal  }}
-                </template>
+            <template #body="slotProps">
+              <InputNumber v-model="slotProps.data.DocTotal" class="remove-format-input" inputId="currency-us" mode="currency" currency="USD" locale="en-US" readonly :minFractionDigits="0"  />
+             </template>
           </Column>
           <Column headerClass="!bg-primary-900"  field="MethodShippingName" header="Método entrega" >
                 <template #body="slotProps">
@@ -59,6 +60,13 @@
         :orderDetails="order"
         @visible="visibleDetailsMethod"
          />
+        </div>
+        <div v-if="orders.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <h1 class="align-center font-inter font-semibold mb-4 text-2xl text-center text-primary-900">
+            No hay ordenes actualmente en este proceso
+          </h1>
+          <Button label="Regresar"  severity="primary" outlined @click="goBack" class="ml-3 !py-1.5" ></Button>
+        </div>
     </div>
   </template>
   
@@ -72,18 +80,23 @@
   import Search from '../components/Search.vue'
   import DialogDetail from '../components/DialogDetail.vue';
   import { useOrders } from '../../../services/OrdersApiService.js';
+  import InputNumber from 'primevue/inputnumber';
 
   const ordersStore = useOrders()
 
   const visible = ref(false);
-
   const orders = ref([]);
   const order = ref([]);
-  
+
+ const goBack = () => {
+    if (orders.value.length === 0) {
+        window.location.href = '/admin/dashboard/'
+      }
+  }
+
   const visibleDetailsMethod = (value) => {
     visible.value = value.visibleDetails;
   };
-
 
   onBeforeMount( async() => {
     let body = {

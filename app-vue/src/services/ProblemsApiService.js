@@ -1,6 +1,6 @@
 
 import { defineStore } from 'pinia';
-import { getWithToken } from "./ApiService.js";
+import { getWithToken, postWithToken } from "./ApiService.js";
 
 export const useProblems = defineStore('problems', {
     state: () => ({ 
@@ -10,9 +10,12 @@ export const useProblems = defineStore('problems', {
       problems: (state) => state.listProblems,
     },
     actions: {
-        async getProblems () 
+        async getProblems (type) 
         {
-            const response = await getWithToken('api/v1/problems')
+          const body = {
+            type: type
+          }
+            const response = await postWithToken('api/v1/problems', body)
 
             this.listProblems = response
 

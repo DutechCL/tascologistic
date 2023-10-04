@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\V1;
 use App\Models\User;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\OrderProblem;
 use Illuminate\Http\Request;
 use App\Models\OrderItemProblem;
 use App\Models\ResponsibleRoles;
@@ -19,6 +20,7 @@ class OrderController extends Controller
     const ORDER_STATUS_ON_HOLD = 1;
     const ORDER_STATUS_PICKED = 2;
     const ORDER_STATUS_REVIEWER = 3;
+    const ORDER_STATUS_REJECTED = 4;
     const ORDER_STATUS_REVIEWED = 5;
 
     public function index()
@@ -117,11 +119,6 @@ class OrderController extends Controller
         return response()->json($order);
     }
 
-    public function store(Request $request)
-    {
-
-    }
-
     public function update(Request $request, $id)
     {
         $order_status_id = $request->responsible == 'picker' ? self::ORDER_STATUS_PICKED : self::ORDER_STATUS_REVIEWER;
@@ -148,34 +145,48 @@ class OrderController extends Controller
 
     }
 
-    public function destroy($id)
-    {
-
-    }
-
     public function authorizerAction(Request $request)
     {
-
         $order = Order::find($request->order_id);
-        if($request->action == 1){
+
+        if($request->action == 1)
+        {
             $order->order_status_id = self::ORDER_STATUS_ON_HOLD;
             $order->is_approved = true;
             $order->save();
-
-            $responsibles = ResponsibleRoles::where('slug', $request->responsible)->first();
-            $user = auth()->user();
-    
-            $order->responsibles()->create([
-                'order_id' => $order->id,
-                'responsible_role_id' => $responsibles->id,
-                'user_id' => $user->id,
-                // otros campos si los tienes
-            ]);
         }
+        else if($request->action == 2)
+        {
+            $order->order_status_id = self::ORDER_STATUS_REJECTED;
+            $order->save();
+
+            foreach ($request->problems as $orderItem) {
+                $orderProblem = OrderProblem::updateOrCreate(
+                    [
+                        'order_id' => $request->order_id,
+                        'problem_id' => $orderItem['id'],
+                    ],
+                    [
+                        'order_id' => $request->order_id,
+                        'problem_id' => $orderItem['id'],
+                    ]
+                );
+            }
+        }
+        
+        $responsibles = ResponsibleRoles::where('slug', $request->responsible)->first();
+        $user = auth()->user();
+
+        $order->responsibles()->create([
+            'order_id' => $order->id,
+            'responsible_role_id' => $responsibles->id,
+            'user_id' => $user->id,
+            // otros campos si los tienes
+        ]);
 
         return response()->json([
             'status' => 'success',
-            'message' => 'Orden autorizada',
+            'message' => 'Orden actualizada',
             'test' => $request
         ]
         );

@@ -1,5 +1,8 @@
 <template>
   <div class="px-8">
+    <div v-if="!isDataLoaded" class="text-center" style="color:#259bd7">
+      <i class="pi pi-spin pi-spinner" style="font-size: 2rem;"></i>
+    </div>
     <div v-if="ordersHere.length > 0">
     <div class="flex justify-between ">
       <div>
@@ -142,24 +145,24 @@ const ordersStore = useOrders()
 const orders = ref([]);
 const ordersHere = ref([]);
 const ordersPickupAndDelivery = ref([]);
+const isDataLoaded = ref(false)
 
 onBeforeMount( async() => {
   orders.value =  await ordersStore.getProcessedOrders();
   ordersHere.value = orders.value.filter( order => order.MethodShippingId === METHOD_SHIPPING_HERE)
   ordersPickupAndDelivery.value = orders.value.filter( order => order.MethodShippingId !== METHOD_SHIPPING_HERE)
+  isDataLoaded.value = true
 })
 
 function getTextColor(bgColor) {
   const rgb = hexToRgb(bgColor);
   const luminance = (0.299 * rgb.r + 0.587 * rgb.g + 0.114 * rgb.b) / 255;
 
-  // Ajusta la luminosidad según tus necesidades
-  const threshold = 0.5; // Valor entre 0 y 1, ajusta según sea necesario
+  const threshold = 0.5;
 
   return luminance > threshold ? '#000000' : '#FFFFFF';
 }
 
-// Función para convertir el color hexadecimal a RGB
 function hexToRgb(hex) {
   const bigint = parseInt(hex.substring(1), 16);
   const r = (bigint >> 16) & 255;

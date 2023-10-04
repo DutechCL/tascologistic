@@ -6,6 +6,7 @@
         </h1>
         <Search/>
       </div>
+      <div v-if="orders.length > 0">
       <DataTable tableStyle="min-width: 50rem" filters="filters" :value="orders" paginator :rows="10" dataKey="id" filterDisplay="row" :loading="loading">
 
           <Column headerClass="!bg-primary-900"  field="DocNum" header="Nota de venta">
@@ -16,9 +17,9 @@
           <Column headerClass="!bg-primary-900"  field="DocDate" header="Fecha"></Column>
           <Column headerClass="!bg-primary-900"  field="Customer.CardName" header="Cliente"></Column>
           <Column headerClass="!bg-primary-900"  field="DocTotal" header="Monto total">
-                <template #body="slotProps">
-                    $ {{ slotProps.data.DocTotal  }}
-                </template>
+            <template #body="slotProps">
+              <InputNumber v-model="slotProps.data.DocTotal" class="remove-format-input" inputId="currency-us" mode="currency" currency="USD" locale="en-US" readonly :minFractionDigits="0"  />
+             </template>
           </Column>
           <Column headerClass="!bg-primary-900"  field="MethodShippingName" header="Método entrega" >
                 <template #body="slotProps">
@@ -43,17 +44,25 @@
       :orderDetails="order"
       @visible="visibleDetailsMethod"
       />
+      </div>
+      <div v-if="orders.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1 class="align-center font-inter font-semibold mb-4 text-2xl text-center text-primary-900">
+          No hay ordenes actualmente en este proceso
+        </h1>
+        <Button label="Regresar"  severity="primary" outlined @click="goBack" class="ml-3 !py-1.5" ></Button>
+      </div>
     </div>
   </template>
   
   <script setup>
-  import { ref, onBeforeMount } from 'vue';
+  import { ref, onBeforeMount} from 'vue';
   import DataTable from 'primevue/datatable';
   import Column from 'primevue/column';
   import Tag from 'primevue/tag';
   import Button from 'primevue/button';
   import Search from '../components/Search.vue';
   import DialogDetail from '../components/DialogDetail.vue';
+  import InputNumber from 'primevue/inputnumber';
 
   import { useOrders } from '../../../services/OrdersApiService.js';
 
@@ -63,6 +72,7 @@
 
   const orders = ref([]);
   const order = ref([]);
+
   const visibleDetailsMethod = (value) => {
     visible.value = value.visibleDetails;
   };
@@ -77,6 +87,13 @@
     // actualmente solo se filtra por estado y método de envío
     orders.value =  await ordersStore.getOrdersByParams(body);
   })
+
+  const goBack = () => {
+    if (orders.value.length === 0) {
+        window.location.href = '/admin/dashboard/'
+      }
+  }
+
 
   const showDetailOrder = (orders) => {
     order.value = orders;
