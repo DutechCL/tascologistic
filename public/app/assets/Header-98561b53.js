@@ -1,1 +1,0 @@
-import{_ as e}from"./logo_v1-9ce10b8c.js";import{_ as r,o as t,c,g as s}from"./index-edd37450.js";const o={},a={class:"bg-primary-100 py-4 mb-10 px-7"},_=s("div",{class:"wrapper flex justify-start"},[s("img",{class:"w-188 h-60",src:e})],-1),n=[_];function i(p,d){return t(),c("header",a,n)}const l=r(o,[["render",i]]);export{l as default};

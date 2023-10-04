@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import Tag from 'primevue/tag';
@@ -39,9 +39,19 @@ const ORDERS_STATUS_DESPACHO = 3;
 const ordersStore = useOrders();
 const orders = ref([]);
 
-onMounted( async() => {
+const loadData = async () => {
   orders.value = await ordersStore.getOrdersByMethodShipping([ORDERS_STATUS_RETIRA, ORDERS_STATUS_DESPACHO]);
-})
+};
+
+onMounted(() => {
+  loadData();
+
+  const refreshInterval = setInterval(loadData, 15000);
+
+  onBeforeUnmount(() => {
+    clearInterval(refreshInterval);
+  });
+});
 
 const getSeverity = (data) =>{
   return `p-tag-${data}`

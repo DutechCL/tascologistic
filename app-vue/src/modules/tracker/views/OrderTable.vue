@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import Tag from 'primevue/tag';
@@ -34,9 +34,22 @@ const ORDERS_STATUS_AQUI = 1;
 const ordersStore = useOrders();
 const orders = ref([]);
 
-onMounted( async() => {
+const loadData = async () => {
   orders.value = await ordersStore.getOrdersByMethodShipping([ORDERS_STATUS_AQUI]);
-})
+};
+
+onMounted(() => {
+  // Cargar datos inicialmente
+  loadData();
+
+  // Configurar intervalo para recargar cada 15 segundos
+  const refreshInterval = setInterval(loadData, 15000);
+
+  // Limpiar intervalo al desmontar el componente
+  onBeforeUnmount(() => {
+    clearInterval(refreshInterval);
+  });
+});
 
 function getTextColor(bgColor) {
   const rgb = hexToRgb(bgColor);

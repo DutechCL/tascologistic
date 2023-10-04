@@ -4,12 +4,13 @@
       <h1 class="mb-2 text-primary-900 font-inter font-semibold text-2xl">
         Notas de venta
       </h1>
-      <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
-        Retiro / Despacho
-      </h2>
     </div>
     <Search/>
   </div>
+  <div v-if="selectOrdersPickupAndDelivery.length > 0">
+  <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
+    Retiro / Despacho
+  </h2>
   <div class="flex">
     <div class="card flex justify-content-center ">
       <MultiSelect v-model="selectedDocNum" :options="selectOrdersPickupAndDelivery" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
@@ -67,6 +68,12 @@
   :key="thisOrder.timestamp"
   @update:visible="handleDialogVisibilityChange"
   />
+</div>
+  <div v-if="ordersPickupAndDelivery.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h1 class="align-center font-inter font-semibold mb-4 text-2xl text-center text-primary-900">
+      No hay ordenes actualmente en este proceso
+    </h1>
+  </div>
 </template>
 
 <script setup>
