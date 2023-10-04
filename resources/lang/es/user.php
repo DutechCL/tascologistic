@@ -7,6 +7,7 @@ return [
     'crud' => [
         'name'      => 'Nombre',
         'email'     => 'Correo electrónico',
+        'phone' => 'Teléfono',
         'password'  => 'Contraseña',
     ],
 ];

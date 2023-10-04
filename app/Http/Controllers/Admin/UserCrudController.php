@@ -103,9 +103,20 @@ class UserCrudController extends CrudController
             ]
         ]);
         CRUD::addField([
+            'name' => 'mobile_phone_number',
+            'label' => __('user.crud.phone'),
+            'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ]
+        ]);
+        CRUD::addField([
             'name' => 'password',
             'label' =>__('user.crud.password'),
             'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ]
         ]);
 
         CRUD::addField([
@@ -146,6 +157,7 @@ class UserCrudController extends CrudController
             $user = User::create([
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
+                'mobile_phone_number' => $request->input('mobile_phone_number'),
                 'password' => bcrypt($request->input('password')),
                 'email_verified_at' => true
             ]);
@@ -187,6 +199,7 @@ class UserCrudController extends CrudController
 
             $user->name = $request->input('name');
             $user->email = $request->input('email');
+            $user->mobile_phone_number = $request->input('mobile_phone_number');
             if ($request->input('password') !== null) {
                 $user->password = bcrypt($request->input('password'));
             }
@@ -237,10 +250,21 @@ class UserCrudController extends CrudController
             ],
         ]);
         CRUD::addField([
+            'name' => 'mobile_phone_number',
+            'label' => __('user.crud.phone'),
+            'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ]
+        ]);
+        CRUD::addField([
             'name' => 'password',
             'label' =>__('user.crud.password'),
             'type' => 'text',
             'value' => '',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ]
         ]);
 
         $id = request()->route('id');
