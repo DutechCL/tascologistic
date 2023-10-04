@@ -7,7 +7,7 @@
         </div>
         <ToManage v-if="isDataLoaded" :ListOrders="orders"/>
       </TabPanel>
-      <TabPanel header="Gestionadas">
+      <TabPanel v-if="ordersManager.length > 0" header="Gestionadas">
         <Managed v-if="isDataLoaded" :ListordersManager="ordersManager" />
       </TabPanel>
     </TabView>
