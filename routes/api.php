@@ -47,8 +47,6 @@ Route::prefix('v1')->group(
             Route::post('orders/by-params', [OrderController::class, 'getOrdersByParams']);
             Route::post('problems', [ProblemsController::class, 'index']);
         });
-        
-
         //problems
     }
 );
