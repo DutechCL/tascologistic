@@ -7,25 +7,26 @@
     </div>
     <Search/>
   </div>
-  <div v-if="ordersHere.length > 0">
+  <div >
     <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
       Aquí
     </h2>
   <div class="flex">
     <div class="card flex justify-content-center ">
-      <MultiSelect v-model="selectedDocNumHere" :options="selectFilterOrdersHere" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
+      <MultiSelect v-model="selectedDocNumHere" :options="ordersPickupAndDelivery" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
     </div>
-    <div class="card flex justify-content-center ">
-      <MultiSelect v-model="selectedDocDateHere" :options="selectFilterOrdersHere" filter optionLabel="DocDate" placeholder="Fecha" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocDate" />
-    </div>
-    <div class="card flex justify-content-center">
-      <MultiSelect v-model="selectedDocTimeHere" :options="selectFilterOrdersHere" filter optionLabel="DocTime" placeholder="Hora" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTime"/>
+    <div style="position: relative; ">
+      <Calendar inputId="rangeDate" v-model="datesHere" selectionMode="range" :manualInput="false" style="border: none !important;"/>
+      <label v-if="dateLabelHere" style="position: absolute;
+                    left: 40%;
+                    color: #259bd7;
+                    top: 26%;" for="rangeDate">Fecha</label>
     </div>
     <div class="card flex justify-content-center mr-5">
-      <MultiSelect v-model="selectedCustomerHere" :options="selectFilterOrdersHere" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
+      <MultiSelect v-model="selectedCustomerHere" :options="ordersPickupAndDelivery" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
     </div>
     <div class="card flex justify-content-center">
-      <MultiSelect v-model="selectedDocTotalHere" :options="selectFilterOrdersHere" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
+      <MultiSelect v-model="selectedDocTotalHere" :options="ordersPickupAndDelivery" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
     </div>
   </div>
   <DataTable @onPage="loadMoreData"  class="mb-20" :value="ordersHere" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
@@ -71,19 +72,20 @@
   </div>
   <div class="flex">
     <div class="card flex justify-content-center ">
-      <MultiSelect v-model="selectedDocNum" :options="selectFilterordersPickupAndDelivery" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
+      <MultiSelect v-model="selectedDocNum" :options="ordersPickupAndDelivery" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
     </div>
-    <div class="card flex justify-content-center ">
-      <MultiSelect v-model="selectedDocDate" :options="selectFilterordersPickupAndDelivery" filter optionLabel="DocDate" placeholder="Fecha" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocDate" />
-    </div>
-    <div class="card flex justify-content-center">
-      <MultiSelect v-model="selectedDocTime" :options="selectFilterordersPickupAndDelivery" filter optionLabel="DocTime" placeholder="Hora" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTime"/>
+    <div style="position: relative; ">
+      <Calendar inputId="rangeDatePickup" v-model="datesPickup" selectionMode="range" :manualInput="false" style="border: none !important;"/>
+      <label v-if="dateLabelPickup" style="position: absolute;
+                    left: 40%;
+                    color: #259bd7;
+                    top: 26%;" for="rangeDatePickup">Fecha</label>
     </div>
     <div class="card flex justify-content-center mr-5">
-      <MultiSelect v-model="selectedCustomer" :options="selectFilterordersPickupAndDelivery" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
+      <MultiSelect v-model="selectedCustomer" :options="ordersPickupAndDelivery" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
     </div>
     <div class="card flex justify-content-center">
-      <MultiSelect v-model="selectedDocTotal" :options="selectFilterordersPickupAndDelivery" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
+      <MultiSelect v-model="selectedDocTotal" :options="ordersPickupAndDelivery" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
     </div>
   </div>
   <DataTable @onPage="loadMoreData"  :value="ordersPickupAndDelivery" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
@@ -169,22 +171,20 @@ import Search from './Search.vue'
 import DialogDetail from './DialogDetail.vue'
 import DialogDetailObservation from './DialogDetailObservation.vue'
 import DialogReportProblem from './DialogReportProblem.vue'
-import { useOrders } from '../../../services/OrdersApiService.js';
-import ConfirmDialog from 'primevue/confirmdialog';
-import { useConfirm } from "primevue/useconfirm";
-import { useToast } from 'primevue/usetoast';
-import InputNumber from 'primevue/inputnumber';
-import MultiSelect from 'primevue/multiselect';
+import ConfirmDialog from 'primevue/confirmdialog'
+import InputNumber from 'primevue/inputnumber'
+import MultiSelect from 'primevue/multiselect'
+import Calendar from 'primevue/calendar'
+import { useOrders } from '../../../services/OrdersApiService.js'
+import { useConfirm } from "primevue/useconfirm"
+import { useToast } from 'primevue/usetoast'
+import { isWithinInterval } from 'date-fns'
 
+const METHOD_SHIPPING_HERE = 1
 
-const confirm = useConfirm();
-
+const confirm = useConfirm()
 const toast = useToast();
-
-const METHOD_SHIPPING_HERE = 1;
-
 const ordersStore = useOrders()
-
 const props = defineProps({
   ListOrders: Array
 })
@@ -193,41 +193,77 @@ const visible = ref(false)
 const visibleObservation = ref(false)
 const thisOrder = ref({})
 const isDataLoaded = ref(false)
+const dateLabelHere = ref(true)
+const dateLabelPickup = ref(true)
 const selectedDocNumHere = ref([])
-const selectedDocDateHere = ref([])
-const selectedDocTimeHere = ref([])
 const selectedCustomerHere = ref([])
 const selectedDocTotalHere = ref([])
 const selectedDocNum = ref([])
-const selectedDocDate = ref([])
-const selectedDocTime = ref([])
 const selectedCustomer = ref([])
 const selectedDocTotal = ref([])
 const visibleReport = ref()
 const orderProblem = ref([])
-
+const allOrdersPickupAndDelivery = ref([])
+const allOrdersHere = ref([])
+const datesHere = ref(null)
+const datesPickup = ref(null)
 const ordersHere = ref(
   props.ListOrders.filter( order => order.MethodShippingId === METHOD_SHIPPING_HERE)
 );
-
 const ordersPickupAndDelivery = ref(
   props.ListOrders.filter( order => order.MethodShippingId !== METHOD_SHIPPING_HERE)
 );
 
-const selectFilterOrdersHere = ref(
-ordersHere.value
-);
+allOrdersPickupAndDelivery.value =  ordersPickupAndDelivery.value 
+allOrdersHere.value = ordersHere.value
 
-const selectFilterordersPickupAndDelivery = ref(
-  ordersPickupAndDelivery.value
-);
-  
+watch([datesHere, datesPickup], (data) => {
+    if(datesHere.value != null && datesHere.value.length == 2)
+    {
+      filterOrders('Here', datesHere.value)
+      dateLabelHere.value = false
+    }
+    else if(datesPickup.value != null && datesPickup.value.length == 2)
+    {
+      filterOrders('Pickup',datesPickup.value)
+      dateLabelPickup.value = false
+    }
+});
+
+function filterOrders(type, dates) {
+  if (type === 'Here') {
+    ordersHere.value = filterOrdersByDateRange(
+        dates,
+        allOrdersHere.value
+    );
+  } else {
+    ordersPickupAndDelivery.value = filterOrdersByDateRange(
+        dates,  
+        allOrdersPickupAndDelivery.value
+    );
+  }
+}
+
+function filterOrdersByDateRange(dates, allOrders) {
+  return allOrders.filter(order => {
+    const orderDate = new Date(order.DocDate);
+    const start = new Date(dates[0]);
+    const end = new Date(dates[1]);
+
+    orderDate.setUTCHours(0, 0, 0, 0);
+    start.setUTCHours(0, 0, 0, 0);
+    end.setUTCHours(0, 0, 0, 0);
+    
+    return isWithinInterval(orderDate, { start, end });
+  });
+}
+
 const visibleReportProbelms = (value) => {
   visibleReport.value = true
   orderProblem.value = value
 }
 
-const visibleReportMethod = ({ value, tempSelection }) => {
+const visibleReportMethod = ({ value }) => {
   if (!value) {
     visibleReport.value = visibleReport.visibleReport;
   }
@@ -240,7 +276,7 @@ const visibleObservationMethod = (value) => {
 const visibleDetailsMethod = (value) => {
   visible.value = value.visibleDetails;
 };
-  
+
 const watchFilters = (filters, typeOrders) => {
   filters.forEach((filter) => {
     watch(filter, (data) => {
@@ -251,7 +287,6 @@ const watchFilters = (filters, typeOrders) => {
 
 const filterData = (data, typeOrders) => {
   const targetOrders = typeOrders === 1 ? ordersHere : ordersPickupAndDelivery;
-  
   const filterCondition = (typeOrders === 1)
     ? (order) => order.MethodShippingId === METHOD_SHIPPING_HERE
     : (order) => order.MethodShippingId !== METHOD_SHIPPING_HERE;
@@ -261,8 +296,8 @@ const filterData = (data, typeOrders) => {
     : data.filter(filterCondition);
 };
 
-watchFilters([selectedDocNumHere, selectedDocDateHere, selectedDocTimeHere, selectedCustomerHere, selectedDocTotalHere], 1);
-watchFilters([selectedDocNum, selectedDocDate, selectedDocTime, selectedCustomer, selectedDocTotal], 2);
+watchFilters([selectedDocNumHere, selectedCustomerHere, selectedDocTotalHere], 1);
+watchFilters([selectedDocNum, selectedCustomer, selectedDocTotal], 2);
 
 const showDetailsOrders = (data) => {
   thisOrder.value = { ...data };
@@ -278,7 +313,7 @@ const showDocuments = (data) => {
 
 const handleDialogVisibilityChange = (newValue) => {
   if (!newValue) {
-    thisOrder.value = {}; // Reiniciar los datos al cerrar el diálogo
+    thisOrder.value = {}; 
     isDataLoaded.value = false;
   }
 }
@@ -313,6 +348,10 @@ const actionOrder = async (order) => {
 </script>
 
 <style>
+.p-calendar .p-inputtext{
+  border: none !important;
+}
+
 .p-confirm-dialog .p-dialog-content {
   padding: 45px !important;
 }
