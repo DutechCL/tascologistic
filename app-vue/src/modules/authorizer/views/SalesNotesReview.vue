@@ -176,13 +176,11 @@ const visibleReportMethod = ({ value, tempSelection }) => {
 };
 
 const handleSelectionChange = (selection, value) => {
+  console.log(selection, value)
   let products = setOfProducts.add(selection)
   productsProblem.value = Array.from(products)
-  console.log(productsProblem.value)
-  if (!value) {
-    visibleReport.value = visibleReport.visibleReport;
+  visibleReport.value = value.visibleReport;
     // productsProblem.value = tempSelection;
-  }
 };
 
 const processOrderPickerAndReviewer = async () => {

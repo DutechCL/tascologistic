@@ -15,7 +15,7 @@
         <Editor v-model="otherProblem" editorStyle="height: 80px" />
       </div>
     </div>
-    <Button label="Reportar"  @click="visibleReport" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
+    <Button label="Reportar"  :disabled="disableButton" @click="visibleReport" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
 </Dialog>
 </template>
 
@@ -48,6 +48,7 @@ const selectedProduct = ref([]);
 const showEditor = ref(false);
 const otherProblem = ref(null);
 const product = ref(null);
+const disableButton = ref(false)
 
 
 onBeforeMount( async() => {
@@ -80,11 +81,22 @@ watch(() => props.problemsProduct, (newProblemsProduct) => {
 
 watch(selectedProduct, (newSelection) => {
   showEditor.value = newSelection.some((product) => product.title === 'Otro');
+  if(showEditor.value){
+    disableButton.value = true;
+  }
   if (props.typeProblems == 'picker-revisor') {
     product.value = props.product;
     product.value.problems = newSelection;
     
     console.log(product)
+  }
+});
+
+watch(otherProblem, (data) => {
+  if(showEditor.value){
+    if(otherProblem.value != null){
+      disableButton.value = false;
+    }
   }
 });
 
