@@ -13,7 +13,7 @@ export const useOrders = defineStore('orders', {
         async getOrders () 
         {
             let response = await getWithToken('api/v1/orders')
-            // statelistOrders.value  = response.data;
+            this.listOrders  = response.data;
             return response.data
         },
 
@@ -42,15 +42,21 @@ export const useOrders = defineStore('orders', {
             return await getWithToken(`api/v1/orders/${order_id}`)
         },
 
-        async postActionOrder (order_id, action, problems = null) 
+        async postActionOrder (order_id, action, problems = null, other = null) 
         {
             const body = {
                 order_id: order_id,
                 action: action,
                 responsible: 'autorizador',
-                problems: problems
+                problems: problems,
+                other: other
             }
-            return await postWithToken('api/v1/orders/authorizer/action', body)
+            let response =  await postWithToken('api/v1/orders/authorizer/action', body)
+            if (response.status === 'success') {
+                const updatedOrderIndex = this.listOrders.findIndex(order => order.id === order_id);
+                this.listOrders[updatedOrderIndex] = response.order
+            }
+            return response;
         },
 
         async processOrderPickerAndReviewer (body) 
@@ -58,9 +64,10 @@ export const useOrders = defineStore('orders', {
             return await postWithToken('api/v1/order/proccess', body)
         },
 
-        async updateOrder (order_id, body) 
+        async update (order_id, body) 
         {
-            return await putWithToken(`api/v1/orders/${order_id}`, body)
+            let response = await putWithToken(`api/v1/orders/${order_id}`, body)
+            return response;
         },
 
       }

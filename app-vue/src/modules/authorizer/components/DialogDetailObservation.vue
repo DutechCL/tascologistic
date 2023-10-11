@@ -12,7 +12,7 @@
         <Tag :icon="'pi pi-user'" :value="order.Customer.CardName" class="tag-radius tag-rounded-blue tag-font-method mb-5"></Tag>
 
 
-        <DataTable tableStyle="min-width: 50rem" filters="filters" :value="order.OrderItems">
+        <DataTable v-if="!order.HasProblems" tableStyle="min-width: 50rem" filters="filters" :value="order.OrderItems">
           <Column headerClass="!bg-primary-900"  field="Quantity" header="Cantidad">
               <template #body="slotProps">
                   <p>{{slotProps.data.Quantity}} Unidad</p>
@@ -26,6 +26,22 @@
             </template>
           </Column>
       </DataTable>
+
+      <div>
+        <DataTable v-if="order.HasProblems" tableStyle="min-width: 50rem" filters="filters" :value="order.Problems">
+          <Column headerClass="!bg-primary-900"  field="ProblemName" header="Probelma">
+              <template #body="slotProps">
+                  <p>{{slotProps.data.ProblemName}}</p>
+              </template>
+          </Column>
+          <Column headerClass="!bg-primary-900"  field="Other" header="Descripcion">
+            <template #body="slotProps">
+              <p v-html="slotProps.data.Other"></p>
+          </template>
+          </Column>
+      </DataTable>
+
+      </div>
 
       <div class="mt-5">
         <strong>NOTA:</strong> <span v-html="parseComments(order.Comments)"></span>

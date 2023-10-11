@@ -28,11 +28,7 @@
           </Column>
           <Column headerClass="!bg-primary-900"  field="DocDate" header="Fecha"></Column>
           <Column headerClass="!bg-primary-900"  field="Customer.CardName" header="Cliente"></Column>
-          <Column headerClass="!bg-primary-900"  field="DocTotal" header="Monto total">
-            <template #body="slotProps">
-              <InputNumber v-model="slotProps.data.DocTotal" class="remove-format-input" inputId="currency-us" mode="currency" currency="USD" locale="en-US" readonly :minFractionDigits="0"  />
-             </template>
-          </Column>
+          <Column headerClass="!bg-primary-900"  field="DocTotal" header="Monto total"></Column>
           <Column headerClass="!bg-primary-900"  field="MethodShippingName" header="Método entrega" >
                 <template #body="slotProps">
                 <Tag :icon="slotProps.data.icon" :value="slotProps.data.MethodShippingName" class="p-tag-1 tag-font-method tag-radius" ></Tag>
@@ -80,7 +76,6 @@
   import Search from '../components/Search.vue'
   import DialogDetail from '../components/DialogDetail.vue';
   import { useOrders } from '../../../services/OrdersApiService.js';
-  import InputNumber from 'primevue/inputnumber';
 
   const ordersStore = useOrders()
 

@@ -12,7 +12,7 @@
       </DataTable>
       <div class="mt-4"  v-if="showEditor">
         <p class="mb-3" >Por favor indique el problema detectado</p>
-        <Editor v-model="value" editorStyle="height: 80px" />
+        <Editor v-model="otherProblem" editorStyle="height: 80px" />
       </div>
     </div>
    
@@ -36,7 +36,7 @@ const props = defineProps({
   order: Object,
   product: Object,
   typeProblems: String,
-  problemsProduct: Object
+  problemsProduct: Object,
 })
 
 const toast = useToast();
@@ -47,9 +47,14 @@ const emit = defineEmits();
 const problems = ref([])
 const selectedProduct = ref([]);
 const showEditor = ref(false);
+const otherProblem = ref(null);
+
+
 
 onBeforeMount( async() => {
+
   problems.value =  await problemsStore.getProblems(props.typeProblems);
+
 })
 
 const visibleReport = () => {
@@ -65,7 +70,8 @@ const visibleReport = () => {
 }
 
 const reportOrderProblem = async () => {
-  let data = await ordersStore.postActionOrder(props.order.id, 2, selectedProduct.value);
+  selectedProduct.value.filter((problem) => problem.title === 'Otro');
+  let data = await ordersStore.postActionOrder(props.order.id, 2, selectedProduct.value, otherProblem.value);
   toast.add({ severity: data.status, summary: '', detail: data.message, life: 3000 });
 }
 
@@ -76,15 +82,12 @@ watch(() => props.problemsProduct, (newProblemsProduct) => {
 });
 
 watch(selectedProduct, (newSelection) => {
-  
   showEditor.value = newSelection.some((product) => product.title === 'Otro');
-
   if (props.typeProblems == 'picker-revisor') {
     let product = props.product;
     product.problems = newSelection;
     emit('selection-change', { product });
   }
 });
-  
 </script>
 

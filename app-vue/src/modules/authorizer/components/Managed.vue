@@ -5,30 +5,37 @@
         Notas de venta
       </h1>
     </div>
-    <Search/>
+    <Search @search="search"/>
   </div>
-  <div v-if="selectOrdersPickupAndDelivery.length > 0">
-  <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
-    Retiro / Despacho
-  </h2>
+  <div>
+    <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
+      Aquí
+    </h2>
   <div class="flex">
     <div class="card flex justify-content-center ">
-      <MultiSelect v-model="selectedDocNum" :options="selectOrdersPickupAndDelivery" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
+      <MultiSelect v-model="selectedDocNumHere" :options="ordersHere" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
     </div>
-    <div class="card flex justify-content-center ">
-      <MultiSelect v-model="selectedDocDate" :options="selectOrdersPickupAndDelivery" filter optionLabel="DocDate" placeholder="Fecha" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocDate" />
-    </div>
-    <div class="card flex justify-content-center">
-      <MultiSelect v-model="selectedDocTime" :options="selectOrdersPickupAndDelivery" filter optionLabel="DocTime" placeholder="Hora" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTime"/>
+    <div style="position: relative; " :class="{ 'active-filter-date': !dateLabelHere }">
+      <Calendar inputId="toManageRangeDate" v-model="datesHere" selectionMode="range" :manualInput="false" style="border: none !important; color: #259bd7 !important"/>
+      <label v-if="dateLabelHere" style="position: absolute;
+                    left: 40%;
+                    color: #259bd7;
+                    top: 26%;" for="toManageRangeDate">Fecha</label>
+          <div class="align-center card flex justify-content-center mr-5">
+              <a class="close-filter-date" v-if="!dateLabelHere" @click="removeFilterDate('Here')"> <i class="pi pi-times"></i> </a>
+          </div>
     </div>
     <div class="card flex justify-content-center mr-5">
-      <MultiSelect v-model="selectedCustomer" :options="selectOrdersPickupAndDelivery" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
+      <MultiSelect v-model="selectedDocTimeHere" :options="ordersHere" filter optionLabel="DocTime" placeholder="Hora" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
+    </div>
+    <div class="card flex justify-content-center mr-5">
+      <MultiSelect v-model="selectedCustomerHere" :options="ordersHere" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
     </div>
     <div class="card flex justify-content-center">
-      <MultiSelect v-model="selectedDocTotal" :options="selectOrdersPickupAndDelivery" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
+      <MultiSelect v-model="selectedDocTotalHere" :options="ordersHere" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
     </div>
   </div>
-  <DataTable class="mb-20" :value="ordersPickupAndDelivery" tableStyle="min-width: 50rem">
+  <DataTable @onPage="loadMoreData"  class="mb-20" :value="ordersHere" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
       <Column headerClass="!bg-primary-900"  field="DocNum" header="Nota de venta">
         <template #body="slotProps">
           N° {{ slotProps.data.DocNum  }}
@@ -37,83 +44,187 @@
       <Column headerClass="!bg-primary-900"  field="DocDate" header="Fecha"></Column>
       <Column headerClass="!bg-primary-900"  field="DocTime" header="Hora"></Column>
       <Column headerClass="!bg-primary-900"  field="Customer.CardName" header="Cliente"></Column>
-      <Column headerClass="!bg-primary-900"  field="DocTotal" header="Monto total">
-        <template #body="slotProps">
-          <InputNumber v-model="slotProps.data.DocTotal" class="remove-format-input" inputId="currency-us" mode="currency" currency="USD" locale="en-US" readonly :minFractionDigits="0"  />
-         </template>
-      </Column>
+      <Column headerClass="!bg-primary-900"  field="DocTotal" header="Monto total"></Column>
+      <!-- <Column headerClass="!bg-primary-900"  field="totalAmount" header="Monto total"></Column> -->
       <Column headerClass="!bg-primary-900"  field="MethodShippingName" header="Método entrega">
         <template #body="slotProps">
-          <Tag Tag :icon="'pi pi-shopping-cart'"  :value="slotProps.data.MethodShippingName" rounded class=" !font-normal !text-md !px-3 !bg-primary-100 !text-primary-900"></Tag>
+          <Tag Tag :icon="'pi pi-shopping-cart'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
         </template>
       </Column>
-      <Column headerClass="!bg-primary-900"  field="note" header="Observaciones">
+      <Column headerClass="!bg-primary-900"  field="note" header="Observación">
+        <template #body="slotProps">
+          <Button :icon="'pi pi-eye'" @click="showDetailsOrders(slotProps.data)" class="!font-normal !text-primary-900
+          " label="Ver observación" link></Button>
+        </template>
+      </Column>
+      <template v-if="ordersHere.length === 0" #footer>
+        <tr>
+          <td :colspan="numberOfColumns" class="text-not-info">
+            No hay órdenes disponible.
+          </td>
+        </tr>
+      </template>
+  </DataTable>
+</div>
+  <!--   Table two dispath       -->
+  <div>
+    <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
+      Retiro / Despacho
+    </h2>
+  </div>
+  <div class="flex">
+    <div class="card flex justify-content-center ">
+      <MultiSelect v-model="selectedDocNumPickup" :options="ordersPickupAndDelivery" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
+    </div>
+    <div style="position: relative; " :class="{ 'active-filter-date': !dateLabelPickup }">
+      <Calendar inputId="toManageRangeDatePickup" v-model="datesPickup" selectionMode="range" :manualInput="false" style="border: none !important;"/>
+      <label v-if="dateLabelPickup" style="position: absolute;
+                    left: 40%;
+                    color: #259bd7;
+                    top: 26%;" for="toManageRangeDatePickup">Fecha</label>
+          <div class="align-center card flex justify-content-center mr-5">
+            <a class="close-filter-date"  v-if="!dateLabelPickup" @click="removeFilterDate('Pickup')"><i class="pi pi-times"></i></a>
+        </div>
+    </div>
+    <div class="card flex justify-content-center mr-5">
+      <MultiSelect v-model="selectedDocTimePickup" :options="ordersPickupAndDelivery" filter optionLabel="DocTime" placeholder="Hora" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
+    </div>
+    <div class="card flex justify-content-center mr-5">
+      <MultiSelect v-model="selectedCustomerPickup" :options="ordersPickupAndDelivery" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
+    </div>
+    <div class="card flex justify-content-center">
+      <MultiSelect v-model="selectedDocTotalPickup" :options="ordersPickupAndDelivery" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
+    </div>
+  </div>
+  <DataTable @onPage="loadMoreData"  :value="ordersPickupAndDelivery" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
+      <Column 
+        headerClass="!bg-primary-900"  
+        field="DocNum" 
+        header="Nota de venta"
+        >
+        <template #body="slotProps">
+          N° {{ slotProps.data.DocNum  }}
+        </template>
+      </Column>
+      <Column headerClass="!bg-primary-900"  field="DocDate" header="Fecha"></Column>
+      <Column headerClass="!bg-primary-900"  field="DocTime" header="Hora"></Column>
+      <Column headerClass="!bg-primary-900"  field="Customer.CardName" header="Cliente"></Column>
+      <Column headerClass="!bg-primary-900"  field="DocTotal" header="Monto total"></Column>
+      <Column headerClass="!bg-primary-900"  field="MethodShippingName" header="Método entrega">
+        <template #body="slotProps">
+          <Tag Tag :icon="'pi pi-shopping-cart'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
+        </template>
+      </Column>
+      <Column headerClass="!bg-primary-900"  field="note" header="Documentos">
         <template #body="slotProps">
           <Button :icon="'pi pi-eye'"  @click="showDocuments(slotProps.data)" class="!font-normal !text-primary-900
-          " label="Ver Observaciones" link></Button>
+          " label="Ver documentos" link></Button>
         </template>
       </Column>
-      
-      <Column headerClass="!bg-primary-900"  field="note" header="" >
+      <Column headerClass="!bg-primary-900"  field="note" header=" Observación">
         <template #body="slotProps">
-          <Button label="Informado" class="!py-1.5 !border-primary-900 !text-primary-900" outlined >
-          </Button>
+          <Button v-if="slotProps.data.HasProblems" :icon="'pi pi-eye'" @click="showDetailsOrders(slotProps.data)" class="!font-normal !text-primary-900
+          " label="Ver observación" link></Button>
         </template>
       </Column>
+      <template v-if="ordersPickupAndDelivery.length === 0" #footer>
+        <tr>
+          <td :colspan="numberOfColumns" class="text-not-info">
+            No hay órdenes disponible.
+          </td>
+        </tr>
+      </template>
   </DataTable>
+
   <DialogDetail 
-  v-if="isDataLoaded" 
-  v-model:visible="visible"
-  :order="thisOrder"
-  :key="thisOrder.timestamp"
-  @update:visible="handleDialogVisibilityChange"
-  />
-</div>
-  <div v-if="ordersPickupAndDelivery.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-    <h1 class="align-center font-inter font-semibold mb-4 text-2xl text-center text-primary-900">
-      No hay ordenes actualmente en este proceso
-    </h1>
-  </div>
+    v-if="isDataLoaded" 
+    v-model:visible="visible"
+    :order="thisOrder"
+    :key="thisOrder.timestamp"
+    @update:visible="handleDialogVisibilityChange"
+    @visible="visibleDetailsMethod"
+    />
+  <DialogDetailObservation 
+    v-if="isDataLoaded" 
+    v-model:visible="visibleObservation" 
+    :order="thisOrder" 
+    :key="thisOrder.timestamp"
+    @update:visible="handleDialogVisibilityChange"
+    @visible="visibleObservationMethod"
+    />
 </template>
 
 <script setup>
-import { ref, defineProps } from 'vue'
+import { ref, toRefs, defineProps, watch } from 'vue'
 import Button from 'primevue/button'
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
 import Tag from 'primevue/tag'
 import Search from './Search.vue'
-import MultiSelect from 'primevue/multiselect';
-import { useOrders } from '../../../services/OrdersApiService.js';
 import DialogDetail from './DialogDetail.vue'
+import DialogDetailObservation from './DialogDetailObservation.vue'
+import MultiSelect from 'primevue/multiselect'
+import Calendar from 'primevue/calendar'
+import { useFilters } from '../composables/UseFilters'
 
-const ordersStore = useOrders()
-
-// console.log(ordersStore.orders);
-
-const METHOD_SHIPPING_HERE = 1;
+const METHOD_SHIPPING_HERE = 1
 
 const props = defineProps({
-  ListordersManager: Array
+  ListOrders: Array,
+  search: String
 })
 
-
+const { ListOrders } = toRefs(props);
 const visible = ref(false)
+const visibleObservation = ref(false)
 const thisOrder = ref({})
 const isDataLoaded = ref(false)
+const visibleReport = ref()
+const orderProblem = ref([])
+const {
+    datesHere,
+    datesPickup,
+    dateLabelHere,
+    dateLabelPickup,
+    ordersHere,
+    ordersPickupAndDelivery,
+    selectedDocNumPickup,
+    selectedDocTimePickup,
+    selectedCustomerPickup,
+    selectedDocTotalPickup,
+    selectedDocNumHere,
+    selectedDocTimeHere,
+    selectedCustomerHere,
+    selectedDocTotalHere,
+    removeFilterDate,
+    search
+} = useFilters(ListOrders);
 
-const selectOrdersPickupAndDelivery = ref([])
-const selectedDocNum = ref([])
-const selectedDocDate = ref([])
-const selectedDocTime = ref([])
-const selectedCustomer = ref([])
-const selectedDocTotal = ref([])
+watch(() => props.ListOrders, (newListOrders) => {
+  ordersHere.value = newListOrders.filter( order => order.MethodShippingId === METHOD_SHIPPING_HERE)
+  ordersPickupAndDelivery.value = newListOrders.filter( order => order.MethodShippingId !== METHOD_SHIPPING_HERE)
+});
 
-const ordersPickupAndDelivery = ref(
-  props.ListordersManager.filter( order => order.MethodShippingId !== METHOD_SHIPPING_HERE)
-);
 
-selectOrdersPickupAndDelivery.value = ordersPickupAndDelivery.value
+const visibleReportMethod = ({ value }) => {
+  if (!value) {
+    visibleReport.value = visibleReport.visibleReport;
+  }
+};
+
+const visibleObservationMethod = (value) => {
+  visibleObservation.value = value.visibleObservation;
+};
+
+const visibleDetailsMethod = (value) => {
+  visible.value = value.visibleDetails;
+};
+
+const showDetailsOrders = (data) => {
+  thisOrder.value = { ...data };
+  visibleObservation.value = true;
+  isDataLoaded.value = true;
+}
 
 const showDocuments = (data) => {
   visible.value = true;
@@ -123,19 +234,16 @@ const showDocuments = (data) => {
 
 const handleDialogVisibilityChange = (newValue) => {
   if (!newValue) {
-    thisOrder.value = {}; // Reiniciar los datos al cerrar el diálogo
+    thisOrder.value = {}; 
     isDataLoaded.value = false;
   }
 }
+
+const loading = ref(false);
+
+
 </script>
 
 <style>
-.p-multiselect-label.p-placeholder, .p-multiselect-trigger{
-  color: #259bd7 !important;
-}
-.p-multiselect.p-multiselect-chip .p-multiselect-token {
-  background: #259bd7!important;
-  font-weight: 600;
-  color: #ffffff !important;
-}
+
 </style>

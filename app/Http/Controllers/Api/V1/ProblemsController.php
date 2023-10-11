@@ -10,7 +10,8 @@ class ProblemsController extends Controller
 {
     public function index(Request $request)
     {
-        $problems = Problem::where('type', $request->type)
+        $problems = Problem::select('id', 'title')
+            ->where('type', $request->type)
             ->where('active', 1)
             ->orderBy('created_at', 'ASC')
             ->get();

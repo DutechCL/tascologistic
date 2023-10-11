@@ -137,7 +137,7 @@ onBeforeMount( async() => {
     update_status: true,
     responsible: responsible.value
   }
-  await ordersStore.updateOrder(orderId.value, data);
+  await ordersStore.update(orderId.value, data);
 })
 
 const checkProduct = (rowData, action) => {

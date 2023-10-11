@@ -5,17 +5,17 @@
         <div v-if="!isDataLoaded" class="text-center" style="color:#259bd7">
           <i class="pi pi-spin pi-spinner" style="font-size: 2rem;"></i>
         </div>
-        <ToManage v-if="isDataLoaded" :ListOrders="orders"/>
+        <ToManage v-if="isDataLoaded" :ListOrders="ordersToManager"/>
       </TabPanel>
       <TabPanel header="Gestionadas">
-        <Managed v-if="isDataLoaded" :ListordersManager="ordersManager" />
+        <Managed v-if="isDataLoaded" :ListOrders="ordersManager" />
       </TabPanel>
     </TabView>
   </div>
 </template>
 
 <script setup>
-import { ref, onBeforeMount } from 'vue';
+import { ref, onBeforeMount,watch } from 'vue';
 import TabView from 'primevue/tabview'
 import TabPanel from 'primevue/tabpanel'
 import ToManage from '../components/ToManage.vue'
@@ -23,16 +23,26 @@ import Managed from '../components/Managed.vue';
 import { useOrders } from '../../../services/OrdersApiService.js';
 
 const ordersStore = useOrders()
-const orders = ref([]);
+const ordersToManager = ref([]);
 const ordersManager = ref([]);
 const isDataLoaded = ref(false); 
 
 
-onBeforeMount( async() => {
-  orders.value = await ordersStore.getOrders();
-  ordersManager.value =  await ordersStore.getProcessedOrders();
-  isDataLoaded.value = true;
-})
+const updateOrders = () => {
+    ordersToManager.value = ordersStore.orders.filter((order) => order.is_managed == false || order.MethodShippingId === 1 && order.is_managed == false);
+    ordersManager.value = ordersStore.orders.filter((order) => order.is_managed == true);
+    isDataLoaded.value = true;
+};
+
+onBeforeMount(async () => {
+    await ordersStore.getOrders();
+    updateOrders();
+
+    watch(ordersStore.orders, () => {
+        updateOrders();
+    });
+});
+
 
 </script>
 
@@ -70,6 +80,61 @@ onBeforeMount( async() => {
   .p-tabview .p-tabview-nav li:nth-child(1) .p-tabview-nav-link{
     @apply rounded-l-3xl  border-r-0 ;
   }
+.p-calendar .p-inputtext{
+  border: none !important;
+  padding: 6px;
+  color: #fff;
+  font-weight: 600;
+  background: transparent;
+}
 
+.p-confirm-dialog .p-dialog-content {
+  padding: 45px !important;
+}
+
+.p-multiselect-label.p-placeholder, .p-multiselect-trigger{
+  color: #259bd7 !important;
+}
+.p-button.p-component.p-confirm-dialog-accept{
+  background: #259bd7!important;
+}
+.p-multiselect.p-multiselect-chip .p-multiselect-token {
+  background: #259bd7!important;
+  font-weight: 600;
+  color: #ffffff !important;
+}
+.p-dialog.p-component.p-ripple-disabled.p-confirm-dialog{
+  padding: 15px !important;
+  background: #ffffff !important;
+}
+
+.close-filter-date{
+  padding: 0px;
+  cursor: pointer;
+  background: #259bd7;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 25px;
+  text-align: center;
+  position: absolute;
+  border: 1px solid;
+  right: 6px;
+  top: 6px;
+  height: 25px;
+}
+.active-filter-date{
+  background: #259bd7;
+  border-radius: 27px;
+  height: 40px;
+}
+.active-filter-date i{
+  font-size: 12px;
+}
+
+.text-not-info{
+  font-size: 20px;
+  color: #898989;
+}
 </style>
         

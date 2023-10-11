@@ -10,6 +10,7 @@ class OrderProblem extends Model
     public $fillable = [
         'order_id',
         'problem_id',
+        'other',
     ];
 
     use HasFactory;
