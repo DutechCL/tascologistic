@@ -11,14 +11,14 @@
       </div>
       <Tag :icon="'pi pi-user'" :value="order.customer?.CardName" class="tag-radius tag-rounded-blue tag-font-method mb-5"></Tag>
 
-      <div class="flex">
+      <!-- <div class="flex">
         <div class="card flex justify-content-center ">
           <MultiSelect v-model="selectedQuantity" :options="products" filter optionLabel="Quantity" placeholder="Cantidad" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
         </div>
         <div class="card flex justify-content-center ">
           <MultiSelect v-model="selectedItemCode" :options="products" filter optionLabel="ItemCode" placeholder="SKU" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocDate" />
         </div>
-      </div>
+      </div> -->
       <DataTable tableStyle="min-width: 50rem" filters="filters" :value="products">
         <Column headerClass="!bg-primary-900"  field="Quantity" header="Cantidad">
             <template #body="slotProps">
@@ -175,10 +175,14 @@ const visibleReportMethod = ({ value, tempSelection }) => {
   }
 };
 
-const handleSelectionChange = (selection) => {
-  selection.product.problems = productsProblem.value
-  let products = setOfProducts.add(selection.product)
+const handleSelectionChange = (selection, value) => {
+  let products = setOfProducts.add(selection)
   productsProblem.value = Array.from(products)
+  console.log(productsProblem.value)
+  if (!value) {
+    visibleReport.value = visibleReport.visibleReport;
+    // productsProblem.value = tempSelection;
+  }
 };
 
 const processOrderPickerAndReviewer = async () => {

@@ -119,7 +119,7 @@
       <Column headerClass="!bg-primary-900"  field="DocTotal" header="Monto total"></Column>
       <Column headerClass="!bg-primary-900"  field="MethodShippingName" header="Método entrega">
         <template #body="slotProps">
-          <Tag Tag :icon="'pi pi-shopping-cart'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
+          <Tag Tag :icon="slotProps.data.MethodShippingId === 2 ? 'pi pi-home' : 'pi pi-truck'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
         </template>
       </Column>
       <Column headerClass="!bg-primary-900"  field="note" header="Documentos">

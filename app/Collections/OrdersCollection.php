@@ -30,7 +30,7 @@ class OrdersCollection extends Collection
                     'Customer' => $item->customer,
                     'U_SBO_FormaEntrega' => $item->U_SBO_FormaEntrega,
                     'MethodShippingId' => $item->method_shipping_id,
-                    'MethodShippingName' => $item->methodShipping->name,
+                    'MethodShippingName' => ucfirst(str_replace('Cliente ', '', $item->methodShipping->name)),
                     'OrderItems' => $orderItems->data,
                     'OrderStatusId' => $item->order_status_id,
                     'OrderStatusName' => $item->orderStatus->name,

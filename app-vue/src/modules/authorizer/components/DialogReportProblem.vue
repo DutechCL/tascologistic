@@ -15,7 +15,6 @@
         <Editor v-model="otherProblem" editorStyle="height: 80px" />
       </div>
     </div>
-   
     <Button label="Reportar"  @click="visibleReport" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
 </Dialog>
 </template>
@@ -48,7 +47,7 @@ const problems = ref([])
 const selectedProduct = ref([]);
 const showEditor = ref(false);
 const otherProblem = ref(null);
-
+const product = ref(null);
 
 
 onBeforeMount( async() => {
@@ -59,9 +58,7 @@ onBeforeMount( async() => {
 
 const visibleReport = () => {
   if (props.typeProblems == 'picker-revisor') {
-    const tempSelection = [...selectedProduct.value];
-    selectedProduct.value = [];
-    emit('visible-report', { 'visibleReport': false, tempSelection });
+    sendProblems()
   } else {
     reportOrderProblem();
     selectedProduct.value = [];
@@ -84,10 +81,20 @@ watch(() => props.problemsProduct, (newProblemsProduct) => {
 watch(selectedProduct, (newSelection) => {
   showEditor.value = newSelection.some((product) => product.title === 'Otro');
   if (props.typeProblems == 'picker-revisor') {
-    let product = props.product;
-    product.problems = newSelection;
-    emit('selection-change', { product });
+    product.value = props.product;
+    product.value.problems = newSelection;
+    
+    console.log(product)
   }
 });
+
+const sendProblems = () => {
+  product.value.other = otherProblem.value;
+  emit('selection-change',  product.value, {'visibleReport': false});
+
+  // const tempSelection = [...selectedProduct.value];
+  // selectedProduct.value = [];
+  // emit('visible-report', { 'visibleReport': false, tempSelection });
+}
 </script>
 

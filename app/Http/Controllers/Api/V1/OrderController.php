@@ -61,16 +61,7 @@ class OrderController extends Controller
 
     public function getOrdersByParams(Request $request)
     {
-        $ordersQuery = Order::with([
-            'customer', 
-            'orderStatus', 
-            'methodShipping', 
-            'orderItems'=> function ($query) {
-                // Utilizar una subconsulta para cargar los campos necesarios de la relación 'product'
-                $query->select(['order_items.*', 'products.ItemDescription as ItemDescription'])
-                ->join('products', 'products.id', '=', 'order_items.product_id');
-            }
-        ]);
+        $ordersQuery = Order::withOrderDetails();
         
         if ($request->methodShippingId) {
             $ordersQuery->whereIn('method_shipping_id', $request->methodShippingId);
@@ -89,16 +80,7 @@ class OrderController extends Controller
 
     public function show($id)
     {
-        $order = Order::with([
-            'customer', 
-            'orderStatus', 
-            'methodShipping', 
-            'orderItems'=> function ($query) {
-                // Utilizar una subconsulta para cargar los campos necesarios de la relación 'product'
-                $query->select(['order_items.*', 'products.ItemDescription as ItemDescription'])
-                ->join('products', 'products.id', '=', 'order_items.product_id');
-            }
-        ])
+        $order = Order::withOrderDetails()
         ->where('id', $id)
         ->first();
 
@@ -134,7 +116,7 @@ class OrderController extends Controller
 
     public function postActionOrder(Request $request)
     {
-        $order = Order::withOrderDetails()->where('id', $request->order_id)->first();
+        $order = Order::find($request->order_id);
         $order->is_managed = true;
 
         if($request->action == 1)
@@ -162,16 +144,15 @@ class OrderController extends Controller
         }
 
         $order->save();
-        // $responsibles = ResponsibleRoles::where('slug', $request->responsible)->first();
-        // $user = auth()->user();
+        $responsibles = ResponsibleRoles::where('slug', $request->responsible)->first();
+        $user = auth()->user();
 
-        // $order->responsibles()->create([
-        //     'order_id' => $order->id,
-        //     'responsible_role_id' => $responsibles->id,
-        //     'user_id' => 2,
-        //     // 'user_id' => $user->id,
-        //     // otros campos si los tienes
-        // ]);
+        $order->responsibles()->create([
+            'order_id' => $order->id,
+            'responsible_role_id' => $responsibles->id,
+            'user_id' => $user->id,
+            // otros campos si los tienes
+        ]);
         $orderUpdate = Order::withOrderDetails()->where('id', $order->id)->get();
         $jsonOrder = (new OrdersCollection($orderUpdate))->toJson();
         $jsonOrder = json_decode($jsonOrder, false)->data;
@@ -186,17 +167,7 @@ class OrderController extends Controller
     }
 
     public function getProcessedOrders(){
-        $orders = Order::with([
-            'customer', 
-            'orderStatus', 
-            'methodShipping', 
-            'responsibles',
-            'orderItems'=> function ($query) {
-                // Utilizar una subconsulta para cargar los campos necesarios de la relación 'product'
-                $query->select(['order_items.*', 'products.ItemDescription as ItemDescription'])
-                ->join('products', 'products.id', '=', 'order_items.product_id');
-            }
-            ])
+        $orders = Order::withOrderDetails()
             ->where(function ($query) {
                 $query->whereIn('method_shipping_id', [self::METHOD_SHIPPING_HERE]) // method_shipping_id igual a 1
                       ->whereNotIn('order_status_id', [4,5]); // order_status_id igual a 4
@@ -204,7 +175,7 @@ class OrderController extends Controller
             ->orWhere(function ($query) {
                 $query->whereIn('method_shipping_id', [self::METHOD_SHIPPING_PICKUP, self::METHOD_SHIPPING_DELIVERY]) // method_shipping_id igual a 2 o 3
                       ->whereNotIn('order_status_id', [4,5])
-                      ->where('is_approved', true); // order_status_id igual a 1 o 4
+                      ->where('is_managed', true);
             })
             ->get(); 
 
@@ -217,14 +188,10 @@ class OrderController extends Controller
         $order = Order::find($request->orderId);
 
         if($request->isSuccessOrder){
-            
             $order->order_status_id = $request->responsible == 'picker' ? self::ORDER_STATUS_REVIEWER : self::ORDER_STATUS_REVIEWED;
-            $order->save();
-
         }else{
             $order->order_status_id = 4;
             $order->is_approved = false;
-            $order->save();
 
             $orderItems = $request->orderItemsProblem;
 
@@ -238,12 +205,14 @@ class OrderController extends Controller
                         [
                             'order_item_id' => $orderItem['id'],
                             'problem_id' => $problem['id'],
-                            'other' => $problem['title'] === 'Otro' ? $request->other : null,
+                            'other' => $problem['title'] === 'Otro' ? $orderItem['other'] : null,
                         ]
                     );
                 }
             }
         }
+
+        $order->save();
 
         return response()->json([
             'status' => 'success',

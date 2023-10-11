@@ -35,7 +35,7 @@ Route::prefix('v1')->group(
         Route::get('/get-token', [AuthController::class, 'getTokenFromWeb']);
         Route::post('/login', [AuthController::class, 'login']);
 
-        // Route::middleware(['auth:sanctum'])->group(function () {
+        Route::middleware(['auth:sanctum'])->group(function () {
             Route::apiResource('customers', CustomerController::class);
             Route::apiResource('orders', OrderController::class);
             Route::apiResource('products', ProductController::class);
@@ -46,7 +46,7 @@ Route::prefix('v1')->group(
             Route::post('order/proccess', [OrderController::class, 'processOrderPickerAndReviewer']);
             Route::post('orders/by-params', [OrderController::class, 'getOrdersByParams']);
             Route::post('problems', [ProblemsController::class, 'index']);
-        // });
+        });
         //problems
     }
 );

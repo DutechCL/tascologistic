@@ -22,7 +22,9 @@
           <Column headerClass="!bg-primary-900"  field="ItemDescription" header="Producto"></Column>
           <Column headerClass="!bg-primary-900"  field="Problems" header="Problema">
             <template #body="slotProps">
-              <Tag v-for="(Problem, index) in slotProps.data.Problems" :key="index" :value="Problem.ProblemName" rounded class="mr-3 tag-radius tag-rounded-blue tag-font-method"></Tag>
+              <span v-for="(problem, index) in slotProps.data.Problems" :key="index" >
+                <span class="mr-3 tag-radius tag-rounded-blue tag-font-method"> {{ sanitizeHTML(problem.ProblemName) }}</span>
+              </span>
             </template>
           </Column>
       </DataTable>
@@ -77,6 +79,14 @@ onBeforeMount(() => {
 const visibleObservation = () => {
   emit('visible', {'visibleObservation': false});
 }
+
+const sanitizeHTML = (htmlString) => {
+      // Crea un elemento div para obtener el texto sin formato
+      let doc = new DOMParser().parseFromString(htmlString, 'text/html');
+      let text = doc.body.innerText;
+
+      return text;
+    }
 
 const parseComments = (comments) => {
     // Reemplazar saltos de línea y tabulaciones con sus equivalentes HTML

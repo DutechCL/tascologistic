@@ -24,8 +24,10 @@ export function useFilters(ListordersManager) {
   const allOrdersHere = ref(ordersHere.value);
 
   watch(() => ListordersManager.value, (newListOrders) => {
+    ordersHere.value = newListOrders.filter(order => order.MethodShippingId === METHOD_SHIPPING_HERE);
     ordersPickupAndDelivery.value = newListOrders.filter(order => order.MethodShippingId !== METHOD_SHIPPING_HERE);
     allOrdersPickupAndDelivery.value = ordersPickupAndDelivery.value;
+    allOrdersHere.value = ordersHere.value;
   });
 
   // Métodos para filtrar por fecha
@@ -94,8 +96,6 @@ const filterData = (data, typeOrders) => {
   targetOrders.value = (data.length === 0)
     ? ListordersManager.value.filter(filterCondition)
     : data.filter(filterCondition);
-
-    console.log(data, typeOrders, targetOrders.value)
 };
 
 watchFilters([selectedDocNumPickup, selectedCustomerPickup, selectedDocTimePickup, selectedDocTotalPickup], 'Pickup');

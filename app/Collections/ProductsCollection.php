@@ -23,8 +23,7 @@ class ProductsCollection extends Collection
                         return [
                             'id' => $problem->id,
                             'ProblemId' => $problem->problem_id,
-                            'ProblemName' => Problem::find($problem->problem_id)->title,
-                            'Other' => $problem->other,
+                            'ProblemName' => $problem->other === null ? Problem::find($problem->problem_id)->title : $problem->other,
                         ];
                     }),
                 ];
