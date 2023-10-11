@@ -33,6 +33,7 @@
               </template>
         </Column>
       </DataTable>
+      
 
       <DialogDetail 
       v-if="visible" 
