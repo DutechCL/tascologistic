@@ -6,7 +6,7 @@ return [
     'crud' => [
         'name'        => 'Nombre',
         'description' => 'Descripcion',
-        'type'        => 'Tipo',
+        'type'        => 'Tipo de rechazo',
         'active'      => 'Activo',
     ],
 ];
