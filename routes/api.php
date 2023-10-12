@@ -35,18 +35,19 @@ Route::prefix('v1')->group(
         Route::get('/get-token', [AuthController::class, 'getTokenFromWeb']);
         Route::post('/login', [AuthController::class, 'login']);
 
-        Route::middleware(['auth:sanctum'])->group(function () {
+        // Route::middleware(['auth:sanctum'])->group(function () {
             Route::apiResource('customers', CustomerController::class);
-            Route::apiResource('orders', OrderController::class);
+            // Route::apiResource('orders', OrderController::class);
             Route::apiResource('products', ProductController::class);
             Route::apiResource('order-items', OrderItemsController::class);
+            Route::get('orders/available/cda', [OrderController::class, 'getOrdersCda']);
+            Route::get('orders/available/picker-reviewer', [OrderController::class, 'getOrdersPickerAndReviewer']);
             Route::post('orders/by-method-shipping', [OrderController::class, 'getOrdersByMethodShipping']);
             Route::post('orders/authorizer/action', [OrderController::class, 'postActionOrder']);
-            Route::get('orders/authorizer/list', [OrderController::class, 'getProcessedOrders']);
             Route::post('order/proccess', [OrderController::class, 'processOrderPickerAndReviewer']);
             Route::post('orders/by-params', [OrderController::class, 'getOrdersByParams']);
             Route::post('problems', [ProblemsController::class, 'index']);
-        });
+        // });
         //problems
     }
 );

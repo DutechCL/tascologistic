@@ -15,6 +15,13 @@ class Order extends Model
 {
     use HasFactory;
 
+    const ORDER_STATUS_ON_HOLD = 1;
+    const ORDER_STATUS_PICKED = 2;
+    const ORDER_STATUS_REVIEWER = 3;
+    const ORDER_STATUS_REJECTED = 4;
+    const ORDER_STATUS_REVIEWED = 5;
+    const ORDER_STATUS_AUTHORIZED = 6;
+
     protected $fillable = [
         'DocEntry',
         'DocNum',
@@ -48,7 +55,7 @@ class Order extends Model
 
     public function responsibles()
     {
-        return $this->hasMany(RoleAssignments::class, 'order_id')->with('user', 'responsibleRole');
+        return $this->belongsToMany(User::class, 'orden_responsibles', 'order_id', 'user_id');
     }
 
     public function problems()
@@ -56,15 +63,13 @@ class Order extends Model
         return $this->hasMany(OrderProblem::class, 'order_id');
     }
     
-
-
-
     public function scopeWithOrderDetails($query)
     {
         return $query->with([
             'customer', 
             'orderStatus', 
             'methodShipping', 
+            'responsibles',
             'orderItems' => function ($query) {
                 $query->select(['order_items.*', 'products.ItemDescription as ItemDescription'])
                     ->with(['problems' => function ($query) {
@@ -80,5 +85,9 @@ class Order extends Model
         ]);
     }
 
-
+    public function assignResponsible()
+    {
+        $user = auth()->user();
+        $this->responsibles()->attach($user->id);
+    }
 }

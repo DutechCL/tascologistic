@@ -4,6 +4,7 @@ namespace App\Collections;
 
 use App\Models\Problem;
 use Illuminate\Support\Collection;
+use App\Http\Resources\OrderResource;
 
 class ProductsCollection extends Collection
 {
@@ -11,22 +12,7 @@ class ProductsCollection extends Collection
     {
         return [
             'data' => $this->map(function ($item) {
-                return [
-                    'id' => $item->id,
-                    'ItemDescription' => $item->ItemDescription,
-                    'ItemCode' => $item->ItemCode,
-                    'LineTotal' => $item->LineTotal,
-                    'Price' => $item->Price,
-                    'Quantity' => $item->Quantity,
-                    'product_id' => $item->product_id,
-                    'Problems' => $item->problems->map(function ($problem) {
-                        return [
-                            'id' => $problem->id,
-                            'ProblemId' => $problem->problem_id,
-                            'ProblemName' => $problem->other == null ? Problem::find($problem->problem_id)->title : $problem->other,
-                        ];
-                    }),
-                ];
+                return new OrderResource($item);
             }),
         ];
     }

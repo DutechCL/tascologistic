@@ -33,6 +33,8 @@ class User extends Authenticatable
         'department',
     ];
 
+    protected $appends = ['role_slug'];
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -56,5 +58,15 @@ class User extends Authenticatable
     public function userRoles()
     {
         return $this->belongsToMany(Role::class, 'model_has_roles', 'model_id', 'role_id');
+    }
+
+    public function getRoleSlugAttribute()
+    {
+        return $this->userRoles->first()->guard_name;
+    }
+
+    public function ordenesResponsible()
+    {
+        return $this->belongsToMany(Order::class, 'orden_responsibles');
     }
 }
