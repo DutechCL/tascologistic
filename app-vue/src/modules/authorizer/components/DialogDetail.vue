@@ -41,22 +41,28 @@
 </template>
 
 <script setup>
-import { ref, onBeforeMount, defineProps, defineEmits } from 'vue'
+import { ref, onBeforeMount, defineProps, defineEmits, watch } from 'vue'
 import Dialog from 'primevue/dialog'
 import Tag from 'primevue/tag'
 import Button from 'primevue/button'
 
 const props = defineProps({
-  order: String
+  order: Object
 })
-const emit = defineEmits();
-const visibleDetails = () => {
-  emit('visible', {'visibleDetails': false});
-}
 
 const order = ref([]);
 
 onBeforeMount(() => {
   order.value = props.order;
 })
+
+watch(() => props.order, (value) => {
+  order.value = value;
+})
+
+const emit = defineEmits();
+
+const visibleDetails = () => {
+  emit('visible', { 'visibleReport': false});
+}
 </script>

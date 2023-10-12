@@ -7,7 +7,7 @@
     </div>
     <Search @search="search"/>
   </div>
-  <div>
+  <div v-if="ordersHere.length > 0">
     <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
       Aquí
     </h2>
@@ -53,7 +53,7 @@
       </Column>
       <Column headerClass="!bg-primary-900"  field="note" header="Observación">
         <template #body="slotProps">
-          <Button :icon="'pi pi-eye'" @click="showDetailsOrders(slotProps.data)" class="!font-normal !text-primary-900
+          <Button :icon="'pi pi-eye'" @click="openDialog('observation',slotProps.data)" class="!font-normal !text-primary-900
           " label="Ver observación" link></Button>
         </template>
       </Column>
@@ -67,6 +67,7 @@
   </DataTable>
 </div>
   <!--   Table two dispath       -->
+  <div v-if="ordersPickupAndDelivery.length > 0">
   <div>
     <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
       Retiro / Despacho
@@ -117,13 +118,13 @@
       </Column>
       <Column headerClass="!bg-primary-900"  field="note" header="Documentos">
         <template #body="slotProps">
-          <Button :icon="'pi pi-eye'"  @click="showDocuments(slotProps.data)" class="!font-normal !text-primary-900
+          <Button :icon="'pi pi-eye'"  @click="openDialog('detail',slotProps.data)" class="!font-normal !text-primary-900
           " label="Ver documentos" link></Button>
         </template>
       </Column>
       <Column headerClass="!bg-primary-900"  field="note" header=" Observación">
         <template #body="slotProps">
-          <Button v-if="slotProps.data.HasProblems" :icon="'pi pi-eye'" @click="showDetailsOrders(slotProps.data)" class="!font-normal !text-primary-900
+          <Button v-if="slotProps.data.HasProblems" :icon="'pi pi-eye'" @click="openDialog('observation',slotProps.data)" class="!font-normal !text-primary-900
           " label="Ver observación" link></Button>
         </template>
       </Column>
@@ -135,27 +136,28 @@
         </tr>
       </template>
   </DataTable>
-
-  <DialogDetail 
-    v-if="isDataLoaded" 
-    v-model:visible="visible"
-    :order="thisOrder"
-    :key="thisOrder.timestamp"
-    @update:visible="handleDialogVisibilityChange"
-    @visible="visibleDetailsMethod"
-    />
-  <DialogDetailObservation 
-    v-if="isDataLoaded" 
-    v-model:visible="visibleObservation" 
-    :order="thisOrder" 
-    :key="thisOrder.timestamp"
-    @update:visible="handleDialogVisibilityChange"
-    @visible="visibleObservationMethod"
-    />
+  </div>
+  <DialogDetail
+  v-if="currentDialog === 'detail'"
+  v-model:visible="visible"
+  :order="selectedOrder"
+  @visible="closeDialog"
+/>
+<DialogDetailObservation
+  v-if="currentDialog === 'observation'"
+  v-model:visible="visible"
+  :order="selectedOrder"
+  @visible="closeDialog"
+/>
+    <div v-if="ordersHere.length === 0 && ordersPickupAndDelivery.length  === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h1 class="align-center font-inter font-semibold mb-4 text-2xl text-center text-primary-900">
+        No se han encontrado ordenes
+      </h1>
+    </div>
 </template>
 
 <script setup>
-import { ref, toRefs, defineProps, watch } from 'vue'
+import { ref, toRefs, defineProps} from 'vue'
 import Button from 'primevue/button'
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
@@ -166,21 +168,23 @@ import DialogDetailObservation from './DialogDetailObservation.vue'
 import MultiSelect from 'primevue/multiselect'
 import Calendar from 'primevue/calendar'
 import { useFilters } from '../composables/UseFilters'
-
-const METHOD_SHIPPING_HERE = 1
+import { UseDialogs } from '../composables/UseDialogs'
 
 const props = defineProps({
   ListOrders: Array,
   search: String
 })
 
-const { ListOrders } = toRefs(props);
-const visible = ref(false)
-const visibleObservation = ref(false)
-const thisOrder = ref({})
-const isDataLoaded = ref(false)
-const visibleReport = ref()
-const orderProblem = ref([])
+const { ListOrders } = toRefs(props)
+
+const {
+    visible,
+    selectedOrder,
+    currentDialog,
+    openDialog,
+    closeDialog,
+} = UseDialogs();
+
 const {
     datesHere,
     datesPickup,
@@ -200,50 +204,7 @@ const {
     search
 } = useFilters(ListOrders);
 
-watch(() => props.ListOrders, (newListOrders) => {
-  ordersHere.value = newListOrders.filter( order => order.MethodShippingId === METHOD_SHIPPING_HERE)
-  ordersPickupAndDelivery.value = newListOrders.filter( order => order.MethodShippingId !== METHOD_SHIPPING_HERE)
-});
-
-
-const visibleReportMethod = ({ value }) => {
-  if (!value) {
-    visibleReport.value = visibleReport.visibleReport;
-  }
-};
-
-const visibleObservationMethod = (value) => {
-  visibleObservation.value = value.visibleObservation;
-};
-
-const visibleDetailsMethod = (value) => {
-  visible.value = value.visibleDetails;
-};
-
-const showDetailsOrders = (data) => {
-  thisOrder.value = { ...data };
-  visibleObservation.value = true;
-  isDataLoaded.value = true;
-}
-
-const showDocuments = (data) => {
-  visible.value = true;
-  thisOrder.value = { ...data };
-  isDataLoaded.value = true;
-}
-
-const handleDialogVisibilityChange = (newValue) => {
-  if (!newValue) {
-    thisOrder.value = {}; 
-    isDataLoaded.value = false;
-  }
-}
-
 const loading = ref(false);
 
 
 </script>
-
-<style>
-
-</style>

@@ -1,11 +1,13 @@
 
 import { ref, watch } from 'vue';
 import { isWithinInterval } from 'date-fns';
+import { ToastMixin } from '../../../Utils/ToastMixin';
 
 export function useFilters(ListordersManager) {
 
-  const METHOD_SHIPPING_HERE = 1;
+  const { showToast } = ToastMixin.setup();
 
+  const METHOD_SHIPPING_HERE = 1;
   const datesHere = ref(null);
   const dateLabelHere = ref(true);
   const selectedDocNumHere = ref([])
@@ -48,7 +50,18 @@ export function useFilters(ListordersManager) {
     const targetOrders = (type === 'Here') ? ordersHere : ordersPickupAndDelivery;
     const allOrders = (type === 'Here') ? allOrdersHere.value : allOrdersPickupAndDelivery.value;
 
-    targetOrders.value = filterOrdersByDateRange(dates, allOrders);
+    let result = filterOrdersByDateRange(dates, allOrders)
+    if(result.length > 0){
+      targetOrders.value = result
+    }else{
+      targetOrders.value = allOrders
+      showToast({
+        status: 'info',
+        title: 'Sin resultados',
+        message: 'No hay resultados para el intervalo de tiempo seleccionado',
+        time: 6000,
+      });
+    }
   }
 
   function filterOrdersByDateRange(dates, allOrders) {

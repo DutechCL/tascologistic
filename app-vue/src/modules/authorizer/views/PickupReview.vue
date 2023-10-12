@@ -198,7 +198,7 @@ const {
 } = useFilters(orders);
 
 onBeforeMount( async() => {
-  orders.value =  await ordersStore.getProcessedOrders();
+  orders.value =  await ordersStore.getOrdersPickerAndReviewer();
   isDataLoaded.value = true
 })
 

@@ -10,13 +10,19 @@ export const useOrders = defineStore('orders', {
       orders: (state) => state.listOrders,
     },
     actions: {
-        async getOrders () 
+        async getOrdersCda () 
         {
-            let response = await getWithToken('api/v1/orders')
+            let response = await getWithToken('api/v1/orders/available/cda')
             this.listOrders  = response.data;
             return response.data
         },
 
+        async getOrdersPickerAndReviewer () 
+        {   
+            let response = await getWithToken('api/v1/orders/available/picker-reviewer')
+            return response.data
+        },
+        
         async getOrdersByMethodShipping (method_shipping_ids)
         {
             const body = {
@@ -25,11 +31,6 @@ export const useOrders = defineStore('orders', {
             return await postWithToken('api/v1/orders/by-method-shipping', body)
         },
 
-        async getProcessedOrders () 
-        {   
-            let response = await getWithToken('api/v1/orders/authorizer/list')
-            return response.data
-        },
 
         async getOrdersByParams (body)
         {

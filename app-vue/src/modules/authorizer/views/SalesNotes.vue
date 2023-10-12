@@ -12,6 +12,7 @@
       </TabPanel>
     </TabView>
   </div>
+  <ConfirmDialog></ConfirmDialog>
 </template>
 
 <script setup>
@@ -21,6 +22,7 @@ import TabPanel from 'primevue/tabpanel'
 import ToManage from '../components/ToManage.vue'
 import Managed from '../components/Managed.vue';
 import { useOrders } from '../../../services/OrdersApiService.js';
+import ConfirmDialog from 'primevue/confirmdialog';
 
 const ordersStore = useOrders()
 const ordersToManager = ref([]);
@@ -35,7 +37,7 @@ const updateOrders = () => {
 };
 
 onBeforeMount(async () => {
-    await ordersStore.getOrders();
+    await ordersStore.getOrdersCda();
     updateOrders();
 
     watch(ordersStore.orders, () => {

@@ -12,7 +12,7 @@
       </DataTable>
       <div class="mt-4"  v-if="showEditor">
         <p class="mb-3" >Por favor indique el problema detectado</p>
-        <Editor v-model="otherProblem" editorStyle="height: 80px" />
+        <Editor class="custom-editor" v-model="otherProblem" editorStyle="height: 80px"/>
       </div>
     </div>
     <Button label="Reportar"  :disabled="disableButton" @click="visibleReport" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
@@ -30,47 +30,57 @@ import { useProblems } from '../../../services/ProblemsApiService.js';
 import { useOrders } from '../../../services/OrdersApiService.js';
 import { useToast } from 'primevue/usetoast';
 
-
 const props = defineProps({
   order: Object,
   product: Object,
   typeProblems: String,
   problemsProduct: Object,
 })
-
+const emit = defineEmits();
 const toast = useToast();
 const problemsStore = useProblems()
 const ordersStore = useOrders();
-const emit = defineEmits();
-
 const problems = ref([])
 const selectedProduct = ref([]);
 const showEditor = ref(false);
 const otherProblem = ref(null);
 const product = ref(null);
-const disableButton = ref(false)
+const disableButton = ref(true)
 
+const order = ref([]);
 
 onBeforeMount( async() => {
-
   problems.value =  await problemsStore.getProblems(props.typeProblems);
+})
 
+watch(() => props.order, (value) => {
+  order.value = value;
+  if (props.typeProblems == 'cda') {
+    selectedProduct.value = [];
+  }
 })
 
 const visibleReport = () => {
+  disableButton.value = true;
+  
   if (props.typeProblems == 'picker-revisor') {
     sendProblems()
   } else {
     reportOrderProblem();
     selectedProduct.value = [];
-    emit('visible-report', { 'visibleReport': false});
+    emit('visible', { 'visibleReport': false});
   }
+  otherProblem.value = '';
 }
 
 const reportOrderProblem = async () => {
-  selectedProduct.value.filter((problem) => problem.title === 'Otro');
   let data = await ordersStore.postActionOrder(props.order.id, 2, selectedProduct.value, otherProblem.value);
   toast.add({ severity: data.status, summary: '', detail: data.message, life: 3000 });
+}
+
+const sendProblems = () => {
+  product.value.other = otherProblem.value;
+  emit('selection-change',  product.value, {'visibleReport': false});
 }
 
 watch(() => props.problemsProduct, (newProblemsProduct) => {
@@ -79,34 +89,41 @@ watch(() => props.problemsProduct, (newProblemsProduct) => {
   }
 });
 
+
+// Agrega una variable de estado para rastrear si ya se ingresó texto en otherProblem
+const hasTextInOtherProblem = ref(false);
+
 watch(selectedProduct, (newSelection) => {
   showEditor.value = newSelection.some((product) => product.title === 'Otro');
-  if(showEditor.value){
-    disableButton.value = true;
-  }
-  if (props.typeProblems == 'picker-revisor') {
+  disableButton.value = newSelection.length === 0 || (showEditor.value && !hasTextInOtherProblem.value);
+
+  if (props.typeProblems === 'picker-revisor') {
     product.value = props.product;
     product.value.problems = newSelection;
-    
-    console.log(product)
   }
 });
 
-watch(otherProblem, (data) => {
-  if(showEditor.value){
-    if(otherProblem.value != null){
-      disableButton.value = false;
-    }
+watch(otherProblem, () => {
+  if (showEditor.value) {
+    hasTextInOtherProblem.value = !!sanitizeHTML(otherProblem.value).trim();
+    disableButton.value = !hasTextInOtherProblem.value;
+  } else {
+    disableButton.value = false;
   }
 });
 
-const sendProblems = () => {
-  product.value.other = otherProblem.value;
-  emit('selection-change',  product.value, {'visibleReport': false});
 
-  // const tempSelection = [...selectedProduct.value];
-  // selectedProduct.value = [];
-  // emit('visible-report', { 'visibleReport': false, tempSelection });
+
+const sanitizeHTML = (htmlString) => {
+      let doc = new DOMParser().parseFromString(htmlString, 'text/html');
+      let text = doc.body.innerText;
+      return text;
 }
 </script>
 
+
+<style>
+.custom-editor .ql-image {
+  display: none !important;
+}
+</style>

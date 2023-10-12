@@ -7,7 +7,7 @@
     </div>
     <Search @search="search"/>
   </div>
-  <div>
+  <div v-if="ordersHere.length > 0">
     <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
       Aquí
     </h2>
@@ -53,7 +53,7 @@
       </Column>
       <Column headerClass="!bg-primary-900"  field="note" header=" Observación">
         <template #body="slotProps">
-          <Button :icon="'pi pi-eye'" @click="showDetailsOrders(slotProps.data)" class="!font-normal !text-primary-900
+          <Button :icon="'pi pi-eye'" @click="openDialog('observation',slotProps.data)" class="!font-normal !text-primary-900
           " label="Ver observación" link></Button>
         </template>
       </Column>
@@ -64,16 +64,10 @@
           </Button>
         </template>
       </Column>
-      <template v-if="ordersHere.length === 0" #footer>
-        <tr>
-          <td :colspan="numberOfColumns" class="text-not-info">
-            No hay órdenes disponible.
-          </td>
-        </tr>
-      </template>
   </DataTable>
 </div>
   <!--   Table two dispath       -->
+  <div v-if="ordersPickupAndDelivery.length > 0">
   <div>
     <h2 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
       Retiro / Despacho
@@ -124,7 +118,7 @@
       </Column>
       <Column headerClass="!bg-primary-900"  field="note" header="Documentos">
         <template #body="slotProps">
-          <Button :icon="'pi pi-eye'"  @click="showDocuments(slotProps.data)" class="!font-normal !text-primary-900
+          <Button :icon="'pi pi-eye'"  @click="openDialog('detail',slotProps.data)" class="!font-normal !text-primary-900
           " label="Ver documentos" link></Button>
         </template>
       </Column>
@@ -137,50 +131,43 @@
       
       <Column headerClass="!bg-primary-900"  field="note" header="" >
         <template #body="slotProps">
-          <Button label="Rechazar" @click="visibleReportProbelms(slotProps.data)"  class="!py-1.5 mr-3 !border-primary-900 !text-primary-900" outlined >
+          <Button label="Rechazar" @click="openDialog('reportProblem',slotProps.data)"  class="!py-1.5 mr-3 !border-primary-900 !text-primary-900" outlined >
           </Button>
           <Button label="Autorizar" @click="actionOrder(slotProps.data, 3)" class="!py-1.5 !border-primary-900 !text-primary-900" outlined >
           </Button>
         </template>
       </Column>
-      <template v-if="ordersPickupAndDelivery.length === 0" #footer>
-        <tr>
-          <td :colspan="numberOfColumns" class="text-not-info">
-            No hay órdenes disponible.
-          </td>
-        </tr>
-      </template>
   </DataTable>
-
-  <DialogDetail 
-    v-if="isDataLoaded" 
-    v-model:visible="visible"
-    :order="thisOrder"
-    :key="thisOrder.timestamp"
-    @update:visible="handleDialogVisibilityChange"
-    @visible="visibleDetailsMethod"
+</div>
+    <!-- Componentes de diálogo -->
+    <DialogDetail
+      v-if="currentDialog === 'detail'"
+      v-model:visible="visible"
+      :order="selectedOrder"
+      @visible="closeDialog"
     />
-  <DialogDetailObservation 
-    v-if="isDataLoaded" 
-    v-model:visible="visibleObservation" 
-    :order="thisOrder" 
-    :key="thisOrder.timestamp"
-    @update:visible="handleDialogVisibilityChange"
-    @visible="visibleObservationMethod"
+    <DialogDetailObservation
+      v-if="currentDialog === 'observation'"
+      v-model:visible="visible"
+      :order="selectedOrder"
+      @visible="closeDialog"
     />
-    <DialogReportProblem 
-    v-model:visible="visibleReport" 
-    :typeProblems="'cda'"
-    :order="orderProblem"
-    @selection-change="handleSelectionChange" 
-    @visible-report="visibleReportMethod"
+    <DialogReportProblem
+      v-if="currentDialog === 'reportProblem'"
+      v-model:visible="visible"
+      :typeProblems="'cda'"
+      :order="selectedOrder"
+      @visible="closeDialog"
     />
-    <Toast />
-    <ConfirmDialog></ConfirmDialog>
+    <div v-if="ordersHere.length === 0 && ordersPickupAndDelivery.length  === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h1 class="align-center font-inter font-semibold mb-4 text-2xl text-center text-primary-900">
+        No se han encontrado ordenes
+      </h1>
+    </div>
 </template>
 
 <script setup>
-import { ref, toRefs, defineProps, watch } from 'vue'
+import { ref, toRefs, defineProps} from 'vue'
 import Button from 'primevue/button'
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
@@ -189,18 +176,17 @@ import Search from './Search.vue'
 import DialogDetail from './DialogDetail.vue'
 import DialogDetailObservation from './DialogDetailObservation.vue'
 import DialogReportProblem from './DialogReportProblem.vue'
-import ConfirmDialog from 'primevue/confirmdialog'
 import MultiSelect from 'primevue/multiselect'
 import Calendar from 'primevue/calendar'
 import { useOrders } from '../../../services/OrdersApiService.js'
-import { useConfirm } from "primevue/useconfirm"
-import { useToast } from 'primevue/usetoast'
 import { useFilters } from '../composables/UseFilters'
+import { UseDialogs } from '../composables/UseDialogs'
+import { ToastMixin } from '../../../Utils/ToastMixin';
+import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
 
-const METHOD_SHIPPING_HERE = 1
+const { showToast } = ToastMixin.setup();
+const { showConfirm } = ConfirmMixin.setup();
 
-const confirm = useConfirm()
-const toast = useToast();
 const ordersStore = useOrders()
 const props = defineProps({
   ListOrders: Array,
@@ -208,12 +194,15 @@ const props = defineProps({
 })
 
 const { ListOrders } = toRefs(props);
-const visible = ref(false)
-const visibleObservation = ref(false)
-const thisOrder = ref({})
-const isDataLoaded = ref(false)
-const visibleReport = ref()
-const orderProblem = ref([])
+
+const {
+    visible,
+    selectedOrder,
+    currentDialog,
+    openDialog,
+    closeDialog,
+} = UseDialogs();
+
 const {
     datesHere,
     datesPickup,
@@ -233,72 +222,32 @@ const {
     search
 } = useFilters(ListOrders);
 
-watch(() => props.ListOrders, (newListOrders) => {
-  ordersHere.value = newListOrders.filter( order => order.MethodShippingId === METHOD_SHIPPING_HERE)
-  ordersPickupAndDelivery.value = newListOrders.filter( order => order.MethodShippingId !== METHOD_SHIPPING_HERE)
-});
-
-const visibleReportProbelms = (value) => {
-  visibleReport.value = true
-  orderProblem.value = value
-}
-
-const visibleReportMethod = ({ value }) => {
-  if (!value) {
-    visibleReport.value = visibleReport.visibleReport;
-  }
-};
-
-const visibleObservationMethod = (value) => {
-  visibleObservation.value = value.visibleObservation;
-};
-
-const visibleDetailsMethod = (value) => {
-  visible.value = value.visibleDetails;
-};
-
-const showDetailsOrders = (data) => {
-  thisOrder.value = { ...data };
-  visibleObservation.value = true;
-  isDataLoaded.value = true;
-}
-
-const showDocuments = (data) => {
-  visible.value = true;
-  thisOrder.value = { ...data };
-  isDataLoaded.value = true;
-}
-
-const handleDialogVisibilityChange = (newValue) => {
-  if (!newValue) {
-    thisOrder.value = {}; 
-    isDataLoaded.value = false;
-  }
-}
-
 const loading = ref(false);
 
 const actionOrder = async (order, action = 1) => {
-  confirm.require({
-      message: '¿Estas seguro que deseas continuar?',
-      header: 'Confirmación',
-      icon: 'pi pi-exclamation-triangle',
-      acceptIcon: 'pi pi-check',
-      rejectIcon: 'pi pi-times',
-      acceptLabel: 'Si',
-      rejectLabel: 'No',
-      accept: async() => {
-        let data = await ordersStore.postActionOrder(order.id, action);
-        toast.add({ severity: data.status, summary: '', detail: data.message, life: 3000 });
-      },
-      reject: () => {
+  const result = await showConfirm();
+  if (result) {
+    try {
+      let data = await ordersStore.postActionOrder(order.id, action);
+      showToast({
+        status: data.status,
+        message: data.message,
+      });
+    } catch (error) {
+      if (error.response) {
+        showToast({
+          status: error.response.data.status,
+          message: error.response.data.message,
+        });
       }
+    }
+  } else {
+    showToast({
+      status: 'info',
+      message: 'Proceso cancelado',
     });
+  }
 }
 
 
 </script>
-
-<style>
-
-</style>

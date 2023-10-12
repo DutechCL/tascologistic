@@ -22,9 +22,9 @@
           <Column headerClass="!bg-primary-900"  field="ItemDescription" header="Producto"></Column>
           <Column headerClass="!bg-primary-900"  field="Problems" header="Problema">
             <template #body="slotProps">
-              <span v-for="(problem, index) in slotProps.data.Problems" :key="index" >
+              <p v-for="(problem, index) in slotProps.data.Problems" :key="index" >
                 <span class="mr-3 tag-radius tag-rounded-blue tag-font-method"> {{ sanitizeHTML(problem.ProblemName) }}</span>
-              </span>
+              </p>
             </template>
           </Column>
       </DataTable>
@@ -57,7 +57,7 @@
 </template>
 
 <script setup>
-import { ref, defineProps, onBeforeMount, defineEmits } from 'vue'
+import { ref, defineProps, onBeforeMount, defineEmits, watch } from 'vue'
 import Dialog from 'primevue/dialog'
 import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
@@ -75,9 +75,12 @@ onBeforeMount(() => {
   order.value = props.order;
 })
 
+watch(() => props.order, (value) => {
+  order.value = value;
+})
 
 const visibleObservation = () => {
-  emit('visible', {'visibleObservation': false});
+  emit('visible', { 'visibleReport': false});
 }
 
 const sanitizeHTML = (htmlString) => {
