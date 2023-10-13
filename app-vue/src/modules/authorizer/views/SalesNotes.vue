@@ -31,8 +31,12 @@ const isDataLoaded = ref(false);
 
 
 const updateOrders = () => {
-    ordersToManager.value = ordersStore.orders.filter((order) => order.is_managed == false || order.MethodShippingId === 1 && order.is_managed == false);
-    ordersManager.value = ordersStore.orders.filter((order) => order.is_managed == true);
+    ordersToManager.value = ordersStore.orders
+      .filter((order) => order.is_managed == false || order.MethodShippingId === 1 && order.is_managed == false)
+      .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+    ordersManager.value = ordersStore.orders
+      .filter((order) => order.is_managed == true)
+      .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     isDataLoaded.value = true;
 };
 

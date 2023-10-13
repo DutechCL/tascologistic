@@ -50,6 +50,7 @@ class OrderService
 
     public function processOrderAction(Order $order, Request $request)
     {
+        $order->assignResponsible();
         $order->is_managed = true;
 
         $message = 'Orden autorizada correctamente';
@@ -62,7 +63,6 @@ class OrderService
         }
 
         $order->save();
-        $order->assignResponsible();
 
         return (object) [
             'message' => $message,

@@ -71,22 +71,6 @@
                     </div>
                 </a>
             </li>
-            <li class="mt-4 mr-4">
-                <a href="/app/autorizador/pickeo-revision" target="_blank" >
-                    <div class="px-5 pt-4 pb-3 boder-card mr-4">
-                        <img src="{{ asset('images/bodega.png') }}" alt="">
-                        <p class=" font-xl pt-4 text-center">Bodega 2</p>
-                    </div>
-                </a>
-            </li>
-            <li class="mt-4 mr-4">
-                <a href="/app/autorizador/pickeo-revision" target="_blank" >
-                    <div class="px-5 pt-4 pb-3 boder-card mr-4">
-                        <img src="{{ asset('images/bodega.png') }}" alt="">
-                        <p class=" font-xl pt-4 text-center">Bodega 3</p>
-                    </div>
-                </a>
-            </li>
         </ul>
     </div>
   </div>

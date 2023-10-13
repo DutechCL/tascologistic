@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'problem' => 'Probelma',
-    'problems' => 'Probelmas',
+    'problem' => 'Tipo de rechazo',
+    'problems' => 'Tipo de rechazos',
     'crud' => [
         'name'        => 'Nombre',
         'description' => 'Descripcion',
-        'type'        => 'Tipo de rechazo',
+        'type'        => 'Tipo',
         'active'      => 'Activo',
     ],
 ];

@@ -16,28 +16,7 @@
       <Search @search="search"/>
     </div>
     <div class="flex">
-      <div class="card flex justify-content-center ">
-        <MultiSelect v-model="selectedDocNumHere" :options="ordersHere" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
-      </div>
-      <div style="position: relative; " :class="{ 'active-filter-date': !dateLabelHere }">
-        <Calendar inputId="rangeDate" v-model="datesHere" selectionMode="range" :manualInput="false" style="border: none !important; color: #259bd7 !important"/>
-        <label v-if="dateLabelHere" style="position: absolute;
-                      left: 40%;
-                      color: #259bd7;
-                      top: 26%;" for="rangeDate">Fecha</label>
-            <div class="align-center card flex justify-content-center mr-5">
-                <a class="close-filter-date" v-if="!dateLabelHere" @click="removeFilterDate('Here')"> <i class="pi pi-times"></i> </a>
-            </div>
-      </div>
-      <div class="card flex justify-content-center mr-5">
-        <MultiSelect v-model="selectedDocTimeHere" :options="ordersHere" filter optionLabel="DocTime" placeholder="Hora" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
-      </div>
-      <div class="card flex justify-content-center mr-5">
-        <MultiSelect v-model="selectedCustomerHere" :options="ordersHere" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
-      </div>
-      <div class="card flex justify-content-center">
-        <MultiSelect v-model="selectedDocTotalHere" :options="ordersHere" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
-      </div>
+      <FilterMultiSelect :typeOrders="'Here'" :allOrders="allOrdersHere" @filter="filter"/>
     </div>
     <DataTable class="mb-20" :value="ordersHere" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
         <Column headerClass="!bg-primary-900"  field="DocNum" header="Nota de venta">
@@ -92,28 +71,7 @@
         </h2>
       </div>
       <div class="flex">
-        <div class="card flex justify-content-center ">
-          <MultiSelect v-model="selectedDocNumPickup" :options="ordersPickupAndDelivery" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
-        </div>
-        <div style="position: relative; " :class="{ 'active-filter-date': !dateLabelPickup }">
-          <Calendar inputId="rangeDatePickup" v-model="datesPickup" selectionMode="range" :manualInput="false" style="border: none !important;"/>
-          <label v-if="dateLabelPickup" style="position: absolute;
-                        left: 40%;
-                        color: #259bd7;
-                        top: 26%;" for="rangeDatePickup">Fecha</label>
-              <div class="align-center card flex justify-content-center mr-5">
-                <a class="close-filter-date"  v-if="!dateLabelPickup" @click="removeFilterDate('Pickup')"><i class="pi pi-times"></i></a>
-            </div>
-        </div>
-        <div class="card flex justify-content-center mr-5">
-          <MultiSelect v-model="selectedDocTimePickup" :options="ordersPickupAndDelivery" filter optionLabel="DocTime" placeholder="Hora" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
-        </div>
-        <div class="card flex justify-content-center mr-5">
-          <MultiSelect v-model="selectedCustomerPickup" :options="ordersPickupAndDelivery" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
-        </div>
-        <div class="card flex justify-content-center">
-          <MultiSelect v-model="selectedDocTotalPickup" :options="ordersPickupAndDelivery" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
-        </div>
+        <FilterMultiSelect :typeOrders="'Pickup'" :allOrders="allOrdersPickupAndDelivery" @filter="filter"/>
       </div>
       <DataTable class="mb-20" :value="ordersPickupAndDelivery" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
           <Column headerClass="!bg-primary-900"  field="DocNum" header="Nota de venta">
@@ -170,38 +128,34 @@ import DataTable from 'primevue/datatable'
 import Tag from 'primevue/tag'
 import Search from '../components/Search.vue'
 import { useOrders } from '../../../services/OrdersApiService.js';
-import MultiSelect from 'primevue/multiselect'
-import Calendar from 'primevue/calendar'
-import { useFilters } from '../composables/UseFilters'
+import { UseSearch } from '../composables/UseSearch.js'
+import FilterMultiSelect from '../components/FilterMultiSelect.vue'
 
 const ordersStore = useOrders()
 const orders = ref([]);
 const isDataLoaded = ref(false)
 
-const {
-    datesHere,
-    datesPickup,
-    dateLabelHere,
-    dateLabelPickup,
-    ordersHere,
-    ordersPickupAndDelivery,
-    selectedDocNumPickup,
-    selectedDocTimePickup,
-    selectedCustomerPickup,
-    selectedDocTotalPickup,
-    selectedDocNumHere,
-    selectedDocTimeHere,
-    selectedCustomerHere,
-    selectedDocTotalHere,
-    removeFilterDate,
-    search
-} = useFilters(orders);
 
 onBeforeMount( async() => {
   orders.value =  await ordersStore.getOrdersPickerAndReviewer();
   isDataLoaded.value = true
 })
 
+const {
+    ordersHere,
+    ordersPickupAndDelivery,
+    allOrdersPickupAndDelivery,
+    allOrdersHere,
+    search
+} = UseSearch(orders);
+
+const filter = (data) => {
+  if(data.type === 'Here'){
+    ordersHere.value = data.orders;
+  }else{
+    ordersPickupAndDelivery.value = data.orders;
+  }
+}
 
 function getTextColor(bgColor) {
   const rgb = hexToRgb(bgColor);

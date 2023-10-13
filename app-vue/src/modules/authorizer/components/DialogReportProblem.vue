@@ -28,7 +28,11 @@ import Button from 'primevue/button'
 import Editor from 'primevue/editor';
 import { useProblems } from '../../../services/ProblemsApiService.js';
 import { useOrders } from '../../../services/OrdersApiService.js';
-import { useToast } from 'primevue/usetoast';
+import { ToastMixin } from '../../../Utils/ToastMixin';
+import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
+
+const { showToast } = ToastMixin.setup();
+const { showConfirm } = ConfirmMixin.setup();
 
 const props = defineProps({
   order: Object,
@@ -37,7 +41,6 @@ const props = defineProps({
   problemsProduct: Object,
 })
 const emit = defineEmits();
-const toast = useToast();
 const problemsStore = useProblems()
 const ordersStore = useOrders();
 const problems = ref([])
@@ -53,7 +56,9 @@ onBeforeMount( async() => {
   problems.value =  await problemsStore.getProblems(props.typeProblems);
 })
 
-watch(() => props.order, (value) => {
+watch(
+  () => props.order, 
+  (value) => {
   order.value = value;
   if (props.typeProblems == 'cda') {
     selectedProduct.value = [];
@@ -67,15 +72,35 @@ const visibleReport = () => {
     sendProblems()
   } else {
     reportOrderProblem();
-    selectedProduct.value = [];
-    emit('visible', { 'visibleReport': false});
   }
   otherProblem.value = '';
 }
 
 const reportOrderProblem = async () => {
-  let data = await ordersStore.postActionOrder(props.order.id, 2, selectedProduct.value, otherProblem.value);
-  toast.add({ severity: data.status, summary: '', detail: data.message, life: 3000 });
+  const result = await showConfirm();
+  if (result) {
+    try {
+      let data = await ordersStore.postActionOrder(props.order.id, 2, selectedProduct.value, otherProblem.value);
+      emit('visible', { 'visibleReport': false});
+      selectedProduct.value = [];
+      showToast({
+        status: data.status,
+        message: data.message,
+      });
+    } catch (error) {
+      if (error.response) {
+        showToast({
+          status: error.response.data.status,
+          message: error.response.data.message,
+        });
+      }
+    }
+  } else {
+    showToast({
+      status: 'info',
+      message: 'Proceso cancelado',
+    });
+  }
 }
 
 const sendProblems = () => {
@@ -88,7 +113,6 @@ watch(() => props.problemsProduct, (newProblemsProduct) => {
     selectedProduct.value = [...newProblemsProduct];
   }
 });
-
 
 // Agrega una variable de estado para rastrear si ya se ingresó texto en otherProblem
 const hasTextInOtherProblem = ref(false);

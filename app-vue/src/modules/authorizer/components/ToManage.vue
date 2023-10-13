@@ -12,41 +12,20 @@
       Aquí
     </h2>
   <div class="flex">
-    <div class="card flex justify-content-center ">
-      <MultiSelect v-model="selectedDocNumHere" :options="ordersHere" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
-    </div>
-    <div style="position: relative; " :class="{ 'active-filter-date': !dateLabelHere }">
-      <Calendar inputId="rangeDate" v-model="datesHere" selectionMode="range" :manualInput="false" style="border: none !important; color: #259bd7 !important"/>
-      <label v-if="dateLabelHere" style="position: absolute;
-                    left: 40%;
-                    color: #259bd7;
-                    top: 26%;" for="rangeDate">Fecha</label>
-          <div class="align-center card flex justify-content-center mr-5">
-              <a class="close-filter-date" v-if="!dateLabelHere" @click="removeFilterDate('Here')"> <i class="pi pi-times"></i> </a>
-          </div>
-    </div>
-    <div class="card flex justify-content-center mr-5">
-      <MultiSelect v-model="selectedDocTimeHere" :options="ordersHere" filter optionLabel="DocTime" placeholder="Hora" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
-    </div>
-    <div class="card flex justify-content-center mr-5">
-      <MultiSelect v-model="selectedCustomerHere" :options="ordersHere" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
-    </div>
-    <div class="card flex justify-content-center">
-      <MultiSelect v-model="selectedDocTotalHere" :options="ordersHere" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
-    </div>
+    <FilterMultiSelect :typeOrders="'Here'" :allOrders="allOrdersHere" @filter="filter"/>
   </div>
   <DataTable @onPage="loadMoreData"  class="mb-20" :value="ordersHere" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
-      <Column headerClass="!bg-primary-900"  field="DocNum" header="Nota de venta">
+      <Column headerClass="!bg-primary-900" sortable  field="DocNum" header="Nota de venta">
         <template #body="slotProps">
           N° {{ slotProps.data.DocNum  }}
         </template>
       </Column>
-      <Column headerClass="!bg-primary-900"  field="DocDate" header="Fecha"></Column>
-      <Column headerClass="!bg-primary-900"  field="DocTime" header="Hora"></Column>
-      <Column headerClass="!bg-primary-900"  field="Customer.CardName" header="Cliente"></Column>
-      <Column headerClass="!bg-primary-900"  field="DocTotal" header="Monto total"></Column>
+      <Column headerClass="!bg-primary-900" sortable field="DocDate" header="Fecha"></Column>
+      <Column headerClass="!bg-primary-900" sortable field="DocTime" header="Hora"></Column>
+      <Column headerClass="!bg-primary-900" sortable  field="Customer.CardName" header="Cliente"></Column>
+      <Column headerClass="!bg-primary-900" sortable field="DocTotal" header="Monto total"></Column>
       <!-- <Column headerClass="!bg-primary-900"  field="totalAmount" header="Monto total"></Column> -->
-      <Column headerClass="!bg-primary-900"  field="MethodShippingName" header="Método entrega">
+      <Column headerClass="!bg-primary-900" sortable field="MethodShippingName" header="Método entrega">
         <template #body="slotProps">
           <Tag Tag :icon="'pi pi-shopping-cart'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
         </template>
@@ -74,44 +53,28 @@
     </h2>
   </div>
   <div class="flex">
-    <div class="card flex justify-content-center ">
-      <MultiSelect v-model="selectedDocNumPickup" :options="ordersPickupAndDelivery" filter optionLabel="DocNum" placeholder="Nota de venta" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
-    </div>
-    <div style="position: relative; " :class="{ 'active-filter-date': !dateLabelPickup }">
-      <Calendar inputId="rangeDatePickup" v-model="datesPickup" selectionMode="range" :manualInput="false" style="border: none !important;"/>
-      <label v-if="dateLabelPickup" style="position: absolute;
-                    left: 40%;
-                    color: #259bd7;
-                    top: 26%;" for="rangeDatePickup">Fecha</label>
-          <div class="align-center card flex justify-content-center mr-5">
-            <a class="close-filter-date"  v-if="!dateLabelPickup" @click="removeFilterDate('Pickup')"><i class="pi pi-times"></i></a>
-        </div>
-    </div>
-    <div class="card flex justify-content-center mr-5">
-      <MultiSelect v-model="selectedDocTimePickup" :options="ordersPickupAndDelivery" filter optionLabel="DocTime" placeholder="Hora" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
-    </div>
-    <div class="card flex justify-content-center mr-5">
-      <MultiSelect v-model="selectedCustomerPickup" :options="ordersPickupAndDelivery" filter optionLabel="Customer.CardName" placeholder="Clientes" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" />
-    </div>
-    <div class="card flex justify-content-center">
-      <MultiSelect v-model="selectedDocTotalPickup" :options="ordersPickupAndDelivery" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
-    </div>
+    <FilterMultiSelect 
+      :allOrders="allOrdersPickupAndDelivery" 
+      :typeOrders="'Pickup'" 
+      @filter="filter"
+      />
   </div>
   <DataTable @onPage="loadMoreData"  :value="ordersPickupAndDelivery" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
       <Column 
         headerClass="!bg-primary-900"  
         field="DocNum" 
         header="Nota de venta"
+        sortable
         >
         <template #body="slotProps">
           N° {{ slotProps.data.DocNum  }}
         </template>
       </Column>
-      <Column headerClass="!bg-primary-900"  field="DocDate" header="Fecha"></Column>
-      <Column headerClass="!bg-primary-900"  field="DocTime" header="Hora"></Column>
-      <Column headerClass="!bg-primary-900"  field="Customer.CardName" header="Cliente"></Column>
-      <Column headerClass="!bg-primary-900"  field="DocTotal" header="Monto total"></Column>
-      <Column headerClass="!bg-primary-900"  field="MethodShippingName" header="Método entrega">
+      <Column headerClass="!bg-primary-900" sortable field="DocDate" header="Fecha"></Column>
+      <Column headerClass="!bg-primary-900" sortable field="DocTime" header="Hora"></Column>
+      <Column headerClass="!bg-primary-900" sortable field="Customer.CardName" header="Cliente"></Column>
+      <Column headerClass="!bg-primary-900" sortable field="DocTotal" header="Monto total"></Column>
+      <Column headerClass="!bg-primary-900" sortable field="MethodShippingName" header="Método entrega">
         <template #body="slotProps">
           <Tag Tag :icon="slotProps.data.MethodShippingId === 2 ? 'pi pi-home' : 'pi pi-truck'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
         </template>
@@ -176,10 +139,9 @@ import Search from './Search.vue'
 import DialogDetail from './DialogDetail.vue'
 import DialogDetailObservation from './DialogDetailObservation.vue'
 import DialogReportProblem from './DialogReportProblem.vue'
-import MultiSelect from 'primevue/multiselect'
-import Calendar from 'primevue/calendar'
+import FilterMultiSelect from './FilterMultiSelect.vue'
 import { useOrders } from '../../../services/OrdersApiService.js'
-import { useFilters } from '../composables/UseFilters'
+import { UseSearch } from '../composables/UseSearch'
 import { UseDialogs } from '../composables/UseDialogs'
 import { ToastMixin } from '../../../Utils/ToastMixin';
 import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
@@ -204,23 +166,21 @@ const {
 } = UseDialogs();
 
 const {
-    datesHere,
-    datesPickup,
-    dateLabelHere,
-    dateLabelPickup,
     ordersHere,
     ordersPickupAndDelivery,
-    selectedDocNumPickup,
-    selectedDocTimePickup,
-    selectedCustomerPickup,
-    selectedDocTotalPickup,
-    selectedDocNumHere,
-    selectedDocTimeHere,
-    selectedCustomerHere,
-    selectedDocTotalHere,
-    removeFilterDate,
+    allOrdersPickupAndDelivery,
+    allOrdersHere,
     search
-} = useFilters(ListOrders);
+} = UseSearch(ListOrders);
+
+const filter = (data) => {
+  console.log(data)
+  if(data.type === 'Here'){
+    ordersHere.value = data.orders;
+  }else{
+    ordersPickupAndDelivery.value = data.orders;
+  }
+}
 
 const loading = ref(false);
 
@@ -251,3 +211,10 @@ const actionOrder = async (order, action = 1) => {
 
 
 </script>
+
+<style>
+  [data-pc-section="sort"] svg {
+  color: white !important;
+  width: 12px;
+  }
+</style>

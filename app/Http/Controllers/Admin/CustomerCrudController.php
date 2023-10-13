@@ -28,7 +28,7 @@ class CustomerCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Customer::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/customer');
-        CRUD::setEntityNameStrings('customer', 'customers');
+        CRUD::setEntityNameStrings(__('customer.customer'), __('customer.customers'));
     }
 
     /**
@@ -42,25 +42,25 @@ class CustomerCrudController extends CrudController
         // CRUD::setFromDb(); // set columns from db columns.
         CRUD::addColumn([
             'name' => 'CardName',
-            'label' => 'Nombre',
+            'label' => __('customer.crud.name'),
             'type' => 'text',
         ]);
 
         CRUD::addColumn([
             'name' => 'CardCode',
-            'label' => 'Codigo',
+            'label' => __('customer.crud.code'),
             'type' => 'text',
         ]);
 
         CRUD::addColumn([
             'name' => 'Address',
-            'label' => 'Dirección',
+            'label' => __('customer.crud.address'),
             'type' => 'text',
         ]);
 
         CRUD::addColumn([
             'name' => 'FederalTaxID',
-            'label' => 'Federal Tax ID',
+            'label' => __('customer.crud.federal_tax'),
             'type' => 'text',
         ]);
 

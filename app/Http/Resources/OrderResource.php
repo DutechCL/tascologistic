@@ -35,6 +35,7 @@ class OrderResource extends JsonResource
             'is_managed' => $this->is_managed,
             'HasProblems' => $this->problems->count() > 0,
             'Responsibles' => $this->responsibles,
+            'updated_at' => $this->updated_at,
             'Problems' => $this->problems->map(function ($problem) {
                 return [
                     'id' => $problem->id,

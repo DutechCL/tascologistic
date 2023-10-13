@@ -56,6 +56,7 @@ export const useOrders = defineStore('orders', {
             if (response.status === 'success') {
                 const updatedOrderIndex = this.listOrders.findIndex(order => order.id === order_id);
                 this.listOrders[updatedOrderIndex] = response.order
+                // this.listOrders[updatedOrderIndex].updated_at = ???
             }
             return response;
         },

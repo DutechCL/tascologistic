@@ -15,21 +15,14 @@
             2 archivos adjuntos
           </p>
           <div class="flex">
-            <div class="mt-2 mr-5" width="200" height="180">
-              <embed class=" w-full" src="http://ocw.uv.es/ingenieria-y-arquitectura/programacionmultimedia/t2-1-css.pdf"  type="application/pdf">
-              <div class="bg-gray-100">
-                <i class="pi pi-file-pdf m-2" style="color:  #F40F02;"></i>
-                <a href="#" class="font-normal text-sm">Nombre de pdf</a>
-              </div>
+            <div v-for="document in documents" class="mt-2 mr-5 relative" width="200" height="180">
+              <embed class=" w-full" :src="document.url"  type="application/pdf">
+                <div class="bg-gray-100">
+                  <i class="pi pi-file-pdf m-2" style="color:  #F40F02;"></i>
+                  <span class="font-normal text-sm">{{document.name}}</span>
+                </div>
+                <a class="mask-pdf" @click="openPdfInNewTab(document.url)" ></a>
             </div>
-            <div class="mt-2 mr-5" width="200" height="180">
-              <embed class=" w-full" src="http://ocw.uv.es/ingenieria-y-arquitectura/programacionmultimedia/t2-1-css.pdf"  type="application/pdf">
-              <div class="bg-gray-100">
-                <i class="pi pi-file-pdf m-2" style="color:  #F40F02;"></i>
-                <a href="#" class="font-normal text-sm">Nombre de pdf</a>
-              </div>
-            </div>
-            
           </div>
         </div>
     </div>
@@ -52,6 +45,15 @@ const props = defineProps({
 
 const order = ref([]);
 
+const documents = ref([
+      { name: 'Documento 1', url: 'http://ocw.uv.es/ingenieria-y-arquitectura/programacionmultimedia/t2-1-css.pdf' },
+      { name: 'Documento 2', url: 'http://ocw.uv.es/ingenieria-y-arquitectura/programacionmultimedia/t2-1-css.pdf' },
+      // Puedes agregar más documentos según sea necesario
+]);
+const openPdfInNewTab = (pdfUrl) => {
+  window.open(pdfUrl, '_blank');
+};
+
 onBeforeMount(() => {
   order.value = props.order;
 })
@@ -66,3 +68,14 @@ const visibleDetails = () => {
   emit('visible', { 'visibleReport': false});
 }
 </script>
+
+<style>
+.mask-pdf{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+}
+</style>
