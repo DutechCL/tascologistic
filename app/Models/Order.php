@@ -87,7 +87,7 @@ class Order extends Model
 
     public function assignResponsible()
     {
-        $user = auth()->user();
+        $user = auth()->user() ?? User::find(1);
         $this->responsibles()->attach($user->id);
     }
 }

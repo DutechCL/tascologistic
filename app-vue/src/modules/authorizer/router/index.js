@@ -16,10 +16,5 @@ export default{
       name:'problem-notes',
       component: ()=> import('../views/SalesNotesProblem.vue'),
     },
-    {
-      path: 'notas-revision/:id/:responsible',
-      name:'review-notes',
-      component: ()=> import('../views/SalesNotesReview.vue'),
-    }
   ]
 }

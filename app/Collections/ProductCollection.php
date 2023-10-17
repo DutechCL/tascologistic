@@ -1,12 +1,15 @@
 <?php
-// app/Collections/OrderCollection.php
+
 namespace App\Collections;
 
-use Illuminate\Http\Resources\Json\ResourceCollection;
+use App\Models\Problem;
+use Illuminate\Support\Collection;
+use App\Http\Resources\OrderResource;
+use App\Http\Resources\ProductResource;
 
-class OrderCollection extends ResourceCollection
+class ProductCollection extends Collection
 {
-    public $collects = OrderResourse::class;
+    public $collects = ProductResource::class;
 
     /**
      * Transform the resource collection into an array.
@@ -18,4 +21,5 @@ class OrderCollection extends ResourceCollection
     {
         return parent::toArray($request);
     }
+    
 }

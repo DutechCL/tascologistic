@@ -12,7 +12,11 @@
       Aquí
     </h2>
   <div class="flex">
-    <FilterMultiSelect :typeOrders="'Here'" :allOrders="allOrdersHere" @filter="filter"/>
+    <FilterMultiSelect 
+    v-if="isDataLoaded" 
+    :typeOrders="constants.METHOD_SHIPPING_HERE" 
+    :allOrders="allOrdersHere" 
+    @filter="filter"/>
   </div>
   <DataTable @onPage="loadMoreData"  class="mb-20" :value="ordersHere" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
       <Column headerClass="!bg-primary-900" sortable  field="DocNum" header="Nota de venta">
@@ -54,8 +58,9 @@
   </div>
   <div class="flex">
     <FilterMultiSelect 
+      v-if="isDataLoaded"
       :allOrders="allOrdersPickupAndDelivery" 
-      :typeOrders="'Pickup'" 
+      :typeOrders="constants.METHOD_SHIPPING_PICKUP_AND_DELIVERY" 
       @filter="filter"
       />
   </div>
@@ -76,7 +81,7 @@
       <Column headerClass="!bg-primary-900" sortable field="DocTotal" header="Monto total"></Column>
       <Column headerClass="!bg-primary-900" sortable field="MethodShippingName" header="Método entrega">
         <template #body="slotProps">
-          <Tag Tag :icon="slotProps.data.MethodShippingId === 2 ? 'pi pi-home' : 'pi pi-truck'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
+          <Tag Tag :icon="slotProps.data.MethodShippingId === constants.METHOD_SHIPPING_PICKUP_ID ? 'pi pi-home' : 'pi pi-truck'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
         </template>
       </Column>
       <Column headerClass="!bg-primary-900"  field="note" header="Documentos">
@@ -118,7 +123,7 @@
     <DialogReportProblem
       v-if="currentDialog === 'reportProblem'"
       v-model:visible="visible"
-      :typeProblems="'cda'"
+      :typeProblems="constants.RESPONSIBLE_CDA"
       :order="selectedOrder"
       @visible="closeDialog"
     />
@@ -130,7 +135,8 @@
 </template>
 
 <script setup>
-import { ref, toRefs, defineProps} from 'vue'
+import { ref, toRefs, defineProps, onBeforeMount} from 'vue'
+import constants from '@/constants/constants';
 import Button from 'primevue/button'
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
@@ -156,6 +162,7 @@ const props = defineProps({
 })
 
 const { ListOrders } = toRefs(props);
+const isDataLoaded = ref(false);
 
 const {
     visible,
@@ -173,9 +180,13 @@ const {
     search
 } = UseSearch(ListOrders);
 
+onBeforeMount(() => {
+  isDataLoaded.value = true;
+});
+
 const filter = (data) => {
   console.log(data)
-  if(data.type === 'Here'){
+  if(data.type === constants.METHOD_SHIPPING_HERE){
     ordersHere.value = data.orders;
   }else{
     ordersPickupAndDelivery.value = data.orders;
@@ -188,7 +199,15 @@ const actionOrder = async (order, action = 1) => {
   const result = await showConfirm();
   if (result) {
     try {
-      let data = await ordersStore.postActionOrder(order.id, action);
+      const body = {
+          orderId: order.id,
+          action: action,
+          responsible: constants.RESPONSIBLE_CDA,
+          problems: null,
+          other: null,
+          orderItemsProblem: null
+      }
+      let data = await ordersStore.processOrderAction(body);
       showToast({
         status: data.status,
         message: data.message,

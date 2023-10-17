@@ -6,7 +6,7 @@ use App\Models\Problem;
 use App\Collections\ProductsCollection;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ProductResourse extends JsonResource
+class ProductResource extends JsonResource
 {
     public function toArray($request)
     {

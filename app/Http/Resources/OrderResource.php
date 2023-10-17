@@ -3,14 +3,17 @@
 namespace App\Http\Resources;
 
 use App\Models\Problem;
+use App\Http\Resources\OrderResource;
 use App\Collections\ProductsCollection;
+use App\Http\Resources\ProductResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class OrderResource extends JsonResource
 {
     public function toArray($request)
     {
-        $orderItems = (object) (new ProductsCollection($this->orderItems))->toArray();
+        $orderItems = ProductResource::collection($this->orderItems)->resolve();
+
         // Define la estructura de la respuesta para una sola orden
         
         return [
@@ -27,7 +30,7 @@ class OrderResource extends JsonResource
             'MethodShippingName' => ucfirst(str_replace('Cliente ', '', optional($this->methodShipping)->name)),
             'OrderStatusName' => optional($this->orderStatus)->name,
             'OrderStatusColor' => optional($this->orderStatus)->color,
-            'OrderItems' => $orderItems->data,
+            'OrderItems' => $orderItems,
             'OrderStatusId' => $this->order_status_id,
             'SalesPersonCode' => $this->SalesPersonCode,
             'SalesEmployeeName' => $this->SalesEmployeeName,

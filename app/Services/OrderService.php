@@ -50,57 +50,86 @@ class OrderService
 
     public function processOrderAction(Order $order, Request $request)
     {
-        $order->assignResponsible();
+        switch ($request->responsible):
+            case 'cda':
+                switch ($request->action):
+                    case self::ACTION_APPROVE:
+                        $this->updateOrderStatus($order, Order::ORDER_STATUS_PICKED);
+                        $order->is_approved = true;
+                        break;
+                    case self::ACTION_REJECT:
+                        $this->updateOrderStatus($order, Order::ORDER_STATUS_REJECTED);
+                        $this->assingProbelmsOrder($order, $request);
+                        $order->is_approved = false;
+                        break;  
+                endswitch;    
+                break;
+            case 'picker':
+                $this->updateOrderStatus($order, Order::ORDER_STATUS_REVIEWER);
+                break;
+            case 'reviewer':
+                $this->updateOrderStatus($order, Order::ORDER_STATUS_REVIEWED);
+                $this->assingProbelmsOrderItems($order, $request);
+                $order->is_approved = false;
+                break;
+            default:
+                throw new \Exception('Rol no válido');
+                break;
+        endswitch;
+
         $order->is_managed = true;
-
-        $message = 'Orden autorizada correctamente';
-        
-        if ($request->action == self::ACTION_APPROVE) {
-            $this->approveOrder($order);
-        } elseif ($request->action== self::ACTION_REJECT) {
-            $this->rejectOrder($order, $request);
-            $message = 'Orden rechazada correctamente';
-        }
-
         $order->save();
-
+        
         return (object) [
-            'message' => $message,
+            'message' => 'Orden actualizada correctamente',
             'order' => new OrderResource($order),
         ];
     }
 
-
-    public function approveOrder(Order $order)
+    public function assingProbelmsOrder(Order $order, Request $request)
     {
-        $order->order_status_id = Order::ORDER_STATUS_ON_HOLD;
-        $order->is_approved = true;
-    }
-
-    public function rejectOrder(Order $order, Request $request)
-    {
-        $order->order_status_id = Order::ORDER_STATUS_REJECTED;
-        $order->is_approved = false;
-
         if (count($request->problems) > 0) {
             foreach ($request->problems as $orderItem) {
-                $this->updateOrInsertOrderProblem($order, $orderItem, $request);
+                OrderProblem::updateOrCreate(
+                    [
+                        'order_id' => $order->id,
+                        'problem_id' => $orderItem['id'],
+                    ],
+                    [
+                        'order_id' => $order->id,
+                        'problem_id' => $orderItem['id'],
+                        'other' => $orderItem['title'] === 'Otro' ? $request->other : null,
+                    ]
+                );
             }
         }
     }
 
-    public function updateOrInsertOrderProblem(Order $order, $orderItem, Request $request)
+    public function assingProbelmsOrderItems(Order $order, Request $request)
     {
-        OrderProblem::updateOrCreate(
-            [
-                'order_id' => $order->id,
-                'problem_id' => $orderItem['id'],
-            ],
-            [
-                'order_id' => $order->id,
-                'problem_id' => $orderItem['id'],
-                'other' => $orderItem['title'] === 'Otro' ? $request->other : null,
-            ]
-        );
+        if (count($request->orderItemsProble) > 0) {
+            foreach ($request->orderItemsProble as $key => $orderItem) {
+                foreach ($orderItem['problems'] as $problem) {
+                    $orderItemProblem = OrderItemProblem::updateOrCreate(
+                        [
+                            'order_item_id' => $orderItem['id'],
+                            'problem_id' => $problem['id'],
+                        ],
+                        [
+                            'order_item_id' => $orderItem['id'],
+                            'problem_id' => $problem['id'],
+                            'other' => $problem['title'] === 'Otro' ? $orderItem['other'] : null,
+                        ]
+                    );
+                }
+            }
+        }
+    }
+
+    public function updateOrderStatus(Order $order, $OrderStatus)
+    {
+        $order->order_status_id = $OrderStatus;
+        $order->assignResponsible();
+        $order->save();
     }
 }

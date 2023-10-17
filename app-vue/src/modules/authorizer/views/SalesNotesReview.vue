@@ -105,7 +105,6 @@ import MultiSelect from 'primevue/multiselect';
 
 const confirm = useConfirm();
 const toast = useToast();
-const ordersStore = useOrders()
 const route = useRoute();
 
 const orderId = computed(() => route.params.id);

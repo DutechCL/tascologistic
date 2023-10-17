@@ -64,10 +64,10 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function postActionOrder(Request $request)
+    public function processOrderAction(Request $request)
     {
         try {
-            $order = Order::findOrFail($request->order_id);
+            $order = Order::findOrFail($request->orderId);
             $result = $this->orderService->processOrderAction($order, $request);
 
             return response()->json([
@@ -76,19 +76,44 @@ class OrderController extends Controller
                 'order' => $result->order,
             ]);
 
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function assingResponsible(Request $request, $id)
+    {
+        try {
+            $order = Order::findOrFail($id);
+            
+            switch ($request->responsible) {
+                case 'Picker':
+                    $orderStatusId = Order::ORDER_STATUS_PICKED;
+                    break;
+                case 'Reviewer':
+                    $responsibleRole = Order::ORDER_STATUS_REVIEWER;
+                    break;
+                default:
+                    throw new \Exception('Rol no válido');
+                    break;
+            }
+        
+            $result = $this->orderService->updateOrderStatus($order, $orderStatusId);
+
+            return response()->json([
+                'status' => 'success',
+                'message' => "Orden asignada a $request->responsible correctamente",
+                'order' => new OrderResource($order),
+            ]);
+
         } catch (OrderNotFoundException $exception) {
 
             throw $exception;
 
         } catch (\Exception $exception) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Error interno del servidor. Por favor, inténtalo de nuevo más tarde.'
-            ], 500);
+            return $this->buildResponseErrorFromException($exception);
         }
     }
-
-
 
     public function getOrdersByMethodShipping(Request $request)
     {
@@ -122,85 +147,5 @@ class OrderController extends Controller
 
         // Devolver los datos como respuesta JSON
         return (new OrdersCollection($orders))->toJson();
-    }
-
-    public function show($id)
-    {
-        $order = Order::withOrderDetails()
-        ->where('id', $id)
-        ->first();
-
-        // Devolver los datos como respuesta JSON
-        return response()->json($order);
-    }
-
-    public function update(Request $request, $id)
-    {
-        $order_status_id = $request->responsible == 'picker' ? Order::ORDER_STATUS_PICKED : Order::ORDER_STATUS_REVIEWER;
-        $order = Order::find($id);
-        $order->order_status_id = $order_status_id;
-        $order->save();
-
-        $responsibles = ResponsibleRoles::where('slug', $request->responsible)->first();
-        $user = auth()->user();
-
-        $order->responsibles()->create([
-            'order_id' => $id,
-            'responsible_role_id' => $responsibles->id,
-            'user_id' => $user->id,
-            // otros campos si los tienes
-        ]);
-
-        return response()->json([
-            'status' => 'success',
-            'message' => 'Orden actualizado con éxito',
-            'order' => $order
-        ]
-        );
-
-    }
-
-    public function processOrderPickerAndReviewer(Request $request){
-
-        $order = Order::find($request->orderId);
-
-        if($request->isSuccessOrder){
-            $order->order_status_id = $request->responsible == 'picker' ? Order::ORDER_STATUS_REVIEWER : Order::ORDER_STATUS_REVIEWED;
-        }else{
-            $order->order_status_id = 4;
-            $order->is_approved = false;
-
-            $orderItems = $request->orderItemsProblem;
-
-            foreach ($orderItems as $key => $orderItem) {
-                foreach ($orderItem['problems'] as $problem) {
-                    $orderItemProblem = OrderItemProblem::updateOrCreate(
-                        [
-                            'order_item_id' => $orderItem['id'],
-                            'problem_id' => $problem['id'],
-                        ],
-                        [
-                            'order_item_id' => $orderItem['id'],
-                            'problem_id' => $problem['id'],
-                            'other' => $problem['title'] === 'Otro' ? $orderItem['other'] : null,
-                        ]
-                    );
-                }
-            }
-        }
-
-        $order->save();
-        $order->assignResponsible();
-
-        $orderUpdate = Order::withOrderDetails()->where('id', $order->id)->get();
-        $jsonOrder = (new OrdersCollection($orderUpdate))->toJson();
-        $jsonOrder = json_decode($jsonOrder, false)->data;
-
-        return response()->json([
-            'status' => 'success',
-            'message' => 'Orden actualizada',
-            'order' => reset($jsonOrder)
-        ]
-        );
     }
 }

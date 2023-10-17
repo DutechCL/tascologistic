@@ -14,12 +14,12 @@
       </div>
       <div :class="[{ 'active-filter-date': !dateLabel, }, 'relative']">
         <Calendar 
-            inputId="rangeDate" 
+            :inputId="props.typeOrders" 
             v-model="dates" 
             selectionMode="range" 
             :manualInput="false" 
             style="border: none !important; color: #259bd7 !important"/>
-            <label v-if="dateLabel" style="position: absolute; left: 40%; color: #259bd7; top: 26%;" for="rangeDate">Fecha</label>
+            <label v-if="dateLabel" style="position: absolute; left: 40%; color: #259bd7; top: 26%;" :for="props.typeOrders">Fecha</label>
             <div class="align-center card flex justify-content-center mr-5">
                 <a class="close-filter-date" v-if="!dateLabel" @click="removeFilterDate()"> <i class="pi pi-times"></i> </a>
             </div>

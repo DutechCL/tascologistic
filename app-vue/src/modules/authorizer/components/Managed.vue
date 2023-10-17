@@ -45,7 +45,7 @@
     </h2>
   </div>
   <div class="flex">
-    <FilterMultiSelect :typeOrders="'Pickup'" :allOrders="allOrdersPickupAndDelivery" @filter="filter"/>
+    <FilterMultiSelect :typeOrders="constants.METHOD_SHIPPING_PICKUP_AND_DELIVERY" :allOrders="allOrdersPickupAndDelivery" @filter="filter"/>
   </div>
   <DataTable @onPage="loadMoreData"  :value="ordersPickupAndDelivery" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
       <Column 
@@ -111,6 +111,7 @@ import DialogDetailObservation from './DialogDetailObservation.vue'
 import { UseSearch } from '../composables/UseSearch'
 import { UseDialogs } from '../composables/UseDialogs'
 import FilterMultiSelect from './FilterMultiSelect.vue'
+import constants from '@/constants/constants';
 
 const props = defineProps({
   ListOrders: Array,
@@ -136,7 +137,7 @@ const {
 } = UseSearch(ListOrders);
 
 const filter = (data) => {
-  if(data.type === 'Here'){
+  if(data.type === constants.METHOD_SHIPPING_HERE){
     ordersHere.value = data.orders;
   }else{
     ordersPickupAndDelivery.value = data.orders;

@@ -42,7 +42,7 @@ trait ApiResponser
     protected function error(string $message = null, int $applicationCode = null, int $code = 400, $data = null): JsonResponse
     {
         return response()->json([
-            'status' => 'Error',
+            'status' => 'error',
             'message' => $message,
             'application_code' => $applicationCode,
             'data' => $data
@@ -56,7 +56,7 @@ trait ApiResponser
     protected function buildResponseErrorFromException(\Throwable $exception)
     {
         return response()->json([
-            'status' => 'Error',
+            'status' => 'error',
             'message' => $exception->getMessage(),
             'application_code' => $exception instanceof AsufinBaseException ? $exception->getApplicationCode() : 'unknown',
             'data' => config('app.env') == 'local' ? $this->buildResponseDataFromException($exception) : []

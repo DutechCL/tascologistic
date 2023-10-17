@@ -53,7 +53,11 @@ const disableButton = ref(true)
 const order = ref([]);
 
 onBeforeMount( async() => {
-  problems.value =  await problemsStore.getProblems(props.typeProblems);
+  if(problemsStore.problems.length === 0){
+    problems.value = await problemsStore.getProblems(props.typeProblems);
+  }else{
+    problems.value = problemsStore.problems;
+  }
 })
 
 watch(
@@ -67,7 +71,6 @@ watch(
 
 const visibleReport = () => {
   disableButton.value = true;
-  
   if (props.typeProblems == 'picker-revisor') {
     sendProblems()
   } else {
@@ -80,7 +83,15 @@ const reportOrderProblem = async () => {
   const result = await showConfirm();
   if (result) {
     try {
-      let data = await ordersStore.postActionOrder(props.order.id, 2, selectedProduct.value, otherProblem.value);
+      const body = {
+          orderId: props.order.id,
+          action: 2,
+          responsible: 'cda',
+          problems: selectedProduct.value,
+          other: otherProblem.value,
+          orderItemsProblem: null
+      }
+      let data = await ordersStore.processOrderAction(body);
       emit('visible', { 'visibleReport': false});
       selectedProduct.value = [];
       showToast({

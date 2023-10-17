@@ -81,7 +81,7 @@
     const result = await showConfirm();
     if (result) {
       try {
-        let data = await ordersStore.postActionOrder(order.id, action);
+        let data = await ordersStore.processOrderAction(order.id, action);
         showToast({
           status: data.status,
           message: data.message,
