@@ -16,6 +16,7 @@ class OrderService
     const ORDER_STATUS_REJECTED = 2;
     const ACTION_APPROVE = 1;
     const ACTION_REJECT = 2;
+    const ACTION_INFO = 3;
 
     public function listOrders($available = null)
     {
@@ -81,13 +82,16 @@ class OrderService
             case 'cda':
                 switch ($request->action):
                     case self::ACTION_APPROVE:
-                        $this->updateOrderStatus($order, Order::ORDER_STATUS_PICKED, $request);
+                        $this->updateOrderStatus($order, Order::ORDER_STATUS_ON_HOLD, $request);
                         $order->is_approved = true;
                         break;
                     case self::ACTION_REJECT:
                         $this->updateOrderStatus($order, Order::ORDER_STATUS_REJECTED, $request);
                         $this->assingProbelmsOrder($order, $request);
                         $order->is_approved = false;
+                        break;  
+                    case self::ACTION_INFO:
+                        $order->is_managed = true;
                         break;  
                 endswitch;    
                 break;

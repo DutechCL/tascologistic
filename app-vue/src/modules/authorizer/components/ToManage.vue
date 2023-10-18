@@ -55,7 +55,7 @@
       
       <Column headerClass="!bg-primary-900"  field="note" header="" >
         <template #body="slotProps">
-          <Button @click="actionOrder(slotProps.data)" label="Informado" class="!py-1.5 !border-primary-900 !text-primary-900" outlined >
+          <Button @click="actionOrder(slotProps.data, 3)" label="Informado" class="!py-1.5 !border-primary-900 !text-primary-900" outlined >
           </Button>
         </template>
       </Column>
@@ -125,7 +125,7 @@
         <template #body="slotProps">
           <Button label="Rechazar" @click="openDialog('reportProblem',slotProps.data)"  class="!py-1.5 mr-3 !border-primary-900 !text-primary-900" outlined >
           </Button>
-          <Button label="Autorizar" @click="actionOrder(slotProps.data, 3)" class="!py-1.5 !border-primary-900 !text-primary-900 mr-3" outlined >
+          <Button label="Autorizar" @click="actionOrder(slotProps.data, 1)" class="!py-1.5 !border-primary-900 !text-primary-900 mr-3" outlined >
           </Button>
           <!-- <Button label="Observación" :disabled="slotProps.data.observation != null"  @click="openDialog('addObservation',slotProps.data)" class="!py-1.5 !border-primary-900 !text-primary-900" outlined >
           </Button> -->
