@@ -1,13 +1,13 @@
 <template>
-  <Dialog modal header=" " :style="{ width: '70vw' }">
+  <Dialog modal header=" " :style="{ width: '70vw' }" @update:visible="handleClose">
     <div>
       <h1 class="mb-3 text-primary-900 font-inter font-semibold text-xl">
         <i class="pi pi-info-circle !text-xl rotate-180"></i>
         Reportar problema
       </h1>
       <p class="mb-3" >Por favor indique uno o más problemas detectados</p>
-      <DataTable v-model:selection="selectedProduct" :value="problems" dataKey="id" tableStyle="min-width: 50rem">
-          <Column headerClass="!bg-primary-900"  header="Seleccionar" selectionMode="multiple" headerStyle="width: 3rem" ></Column>
+      <DataTable v-model:selection="selectedProduct" :value="problems" dataKey="id" >
+          <Column headerClass="!bg-primary-900"  header="Seleccionar" selectionMode="multiple" ></Column>
           <Column headerClass="!bg-primary-900" field="title" header="Problema detectado"></Column>
       </DataTable>
       <div class="mt-4"  v-if="showEditor">
@@ -30,6 +30,8 @@ import { useProblems } from '../../../services/ProblemsApiService.js';
 import { useOrders } from '../../../services/OrdersApiService.js';
 import { ToastMixin } from '../../../Utils/ToastMixin';
 import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
+import constants from '@/constants/constants';
+import { is } from 'date-fns/locale'
 
 const { showToast } = ToastMixin.setup();
 const { showConfirm } = ConfirmMixin.setup();
@@ -49,6 +51,10 @@ const showEditor = ref(false);
 const otherProblem = ref(null);
 const product = ref(null);
 const disableButton = ref(true)
+const hasTextInOtherProblem = ref(false);
+const listProblems = ref([]);
+const isSendProblems = ref(false);
+const isProblem = ref(false);
 
 const order = ref([]);
 
@@ -60,24 +66,80 @@ onBeforeMount( async() => {
   }
 })
 
+const handleClose = () => {
+    disableButton.value = true;
+    hasTextInOtherProblem.value = false;
+    selectedProduct.value = [];
+    otherProblem.value = '';
+    
+}
+
 watch(
   () => props.order, 
   (value) => {
   order.value = value;
-  if (props.typeProblems == 'cda') {
+
+  if (props.typeProblems == constants.RESPONSIBLE_CDA) {
     selectedProduct.value = [];
   }
 })
 
 const visibleReport = () => {
   disableButton.value = true;
-  if (props.typeProblems == 'picker-revisor') {
-    sendProblems()
-  } else {
+  if (props.typeProblems == constants.RESPONSIBLE_CDA) {
     reportOrderProblem();
+  } else {
+    sendProblems()
   }
-  otherProblem.value = '';
 }
+
+watch(() => props.problemsProduct, (newProblemsProduct) => {
+  if(newProblemsProduct != undefined){
+    selectedProduct.value = [...newProblemsProduct];
+    isProblem.value = newProblemsProduct.length > 0;
+
+    newProblemsProduct.map((product) => {
+      if(product.title === 'Otro'){
+        otherProblem.value = product.other;
+        hasTextInOtherProblem.value = !!sanitizeHTML(otherProblem.value).trim();
+      }
+    });
+  }
+});
+
+watch(selectedProduct, (newSelection) => {
+  showEditor.value = newSelection.some((product) => product.title === 'Otro');
+  disableButton.value = newSelection.length === 0 || (showEditor.value && !hasTextInOtherProblem.value);
+  
+  if (props.typeProblems === constants.RESPONSIBLE_PICKER_AND_REVIEWER) {
+    product.value = props.product;
+    if(!isSendProblems.value){
+      product.value.problems = newSelection;
+    }
+  }
+});
+
+const sendProblems = () => {
+  isSendProblems.value = true;
+  selectedProduct.value.map((product) => {
+    if(product.title === 'Otro'){
+      product.other = sanitizeHTML(otherProblem.value);
+    }
+  });
+  product.value.other = otherProblem.value;
+  listProblems.value = selectedProduct.value;
+  emit('selection-change',  product.value, {'visibleReport': false, 'listProblems': listProblems.value});
+  handleClose();
+}
+
+watch(otherProblem, () => {
+  if (showEditor.value) {
+    hasTextInOtherProblem.value = !!sanitizeHTML(otherProblem.value).trim();
+    disableButton.value = !hasTextInOtherProblem.value;
+  } else {
+    disableButton.value = false;
+  }
+});
 
 const reportOrderProblem = async () => {
   const result = await showConfirm();
@@ -86,18 +148,23 @@ const reportOrderProblem = async () => {
       const body = {
           orderId: props.order.id,
           action: 2,
-          responsible: 'cda',
+          responsible: constants.RESPONSIBLE_CDA,
           problems: selectedProduct.value,
           other: otherProblem.value,
           orderItemsProblem: null
       }
       let data = await ordersStore.processOrderAction(body);
       emit('visible', { 'visibleReport': false});
-      selectedProduct.value = [];
-      showToast({
-        status: data.status,
-        message: data.message,
-      });
+      if(data.status === 'success'){
+        selectedProduct.value = [];
+        otherProblem.value = '';
+        disableButton.value = true;
+        hasTextInOtherProblem.value = false;
+        showToast({
+          status: data.status,
+          message: data.message,
+        });
+      }
     } catch (error) {
       if (error.response) {
         showToast({
@@ -114,48 +181,12 @@ const reportOrderProblem = async () => {
   }
 }
 
-const sendProblems = () => {
-  product.value.other = otherProblem.value;
-  emit('selection-change',  product.value, {'visibleReport': false});
-}
-
-watch(() => props.problemsProduct, (newProblemsProduct) => {
-  if(newProblemsProduct != undefined){
-    selectedProduct.value = [...newProblemsProduct];
-  }
-});
-
-// Agrega una variable de estado para rastrear si ya se ingresó texto en otherProblem
-const hasTextInOtherProblem = ref(false);
-
-watch(selectedProduct, (newSelection) => {
-  showEditor.value = newSelection.some((product) => product.title === 'Otro');
-  disableButton.value = newSelection.length === 0 || (showEditor.value && !hasTextInOtherProblem.value);
-
-  if (props.typeProblems === 'picker-revisor') {
-    product.value = props.product;
-    product.value.problems = newSelection;
-  }
-});
-
-watch(otherProblem, () => {
-  if (showEditor.value) {
-    hasTextInOtherProblem.value = !!sanitizeHTML(otherProblem.value).trim();
-    disableButton.value = !hasTextInOtherProblem.value;
-  } else {
-    disableButton.value = false;
-  }
-});
-
-
-
 const sanitizeHTML = (htmlString) => {
       let doc = new DOMParser().parseFromString(htmlString, 'text/html');
       let text = doc.body.innerText;
       return text;
 }
 </script>
-
 
 <style>
 .custom-editor .ql-image {

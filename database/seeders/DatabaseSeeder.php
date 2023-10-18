@@ -22,12 +22,13 @@ class DatabaseSeeder extends Seeder
         $this->call(PaymentMethodsTableSeeder::class);
         $this->call(OrderStatusesTableSeeder::class);
         $this->call(ProductSeeder::class);
+        $this->call(WarehousesTableSeeder::class);
         $this->call(OrderSeeder::class);
         $this->call(OrderItemSeeder::class);
-        
         $this->call(PermissionsTableSeeder::class);
         $this->call(UsersTableSeeder::class);
         $this->call(RoleHasPermissionsTableSeeder::class);
         $this->call(MenuItemsTableSeeder::class);
+        $this->call(UserWarehouseTableSeeder::class);
     }
 }

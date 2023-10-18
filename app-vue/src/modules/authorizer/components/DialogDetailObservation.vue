@@ -1,5 +1,5 @@
 <template>
-  <Dialog modal header=" " :style="{ width: '70vw' }">
+  <Dialog modal header=" " :style="{ width: '70vw' }" maximizable>
     <div>
         <h1 class="mb-1 text-primary-900 font-inter font-semibold text-xl">
           <i class="pi pi-eye !text-xl"></i>
@@ -12,18 +12,28 @@
         <Tag :icon="'pi pi-user'" :value="order.Customer.CardName" class="tag-radius tag-rounded-blue tag-font-method mb-5"></Tag>
 
 
-        <DataTable v-if="!order.HasProblems" tableStyle="min-width: 50rem" filters="filters" :value="order.OrderItems">
+        <DataTable 
+          v-if="!order.HasProblems" 
+          tableStyle="min-width: 50rem" 
+          filters="filters" 
+          :value="order.OrderItems"
+          paginator
+          :rows="10"
+          :rowsPerPageOptions="[5, 10, 20, 50]" 
+          paginatorTemplate="RowsPerPageDropdown FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
+          currentPageReportTemplate="{first} a {last} de {totalRecords}"
+          >
           <Column headerClass="!bg-primary-900"  field="Quantity" header="Cantidad">
               <template #body="slotProps">
-                  <p>{{slotProps.data.Quantity}} Unidad</p>
+                  <p>{{slotProps.data.Quantity}} {{ slotProps.data.Quantity > 1 ? 'Unidades' : 'Unidad' }}</p>
               </template>
           </Column>
           <Column headerClass="!bg-primary-900"  field="ItemCode" header="SKU"></Column>
           <Column headerClass="!bg-primary-900"  field="ItemDescription" header="Producto"></Column>
           <Column headerClass="!bg-primary-900"  field="Problems" header="Problema">
             <template #body="slotProps">
-              <p v-for="(problem, index) in slotProps.data.Problems" :key="index" >
-                <span class="mr-3 tag-radius tag-rounded-blue tag-font-method"> {{ sanitizeHTML(problem.ProblemName) }}</span>
+              <p class="mt-2 mr-3 tag-radius tag-rounded-blue tag-font-method" v-for="(problem, index) in slotProps.data.Problems" :key="index" >
+                {{ sanitizeHTML(problem.ProblemName) }}
               </p>
             </template>
           </Column>

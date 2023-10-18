@@ -1,5 +1,5 @@
 <template>
-  <Dialog modal header=" " :style="{ width: '70vw' }">
+  <Dialog modal header=" " :style="{ width: '70vw' }" maximizable>
     <div>
         <h1 class="mb-1 text-primary-900 font-inter font-semibold text-xl">
           <i class="pi pi-eye !text-xl"></i>

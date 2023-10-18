@@ -86,7 +86,7 @@ class ProblemsTableSeeder extends Seeder
                 'description' => 'No existe color',
                 'id' => 9,
                 'title' => 'No existe color',
-                'type' => 'picker-revisor',
+                'type' => 'picker-reviewer',
                 'updated_at' => '2023-10-03 13:17:11',
             ),
             7 => 
@@ -96,7 +96,7 @@ class ProblemsTableSeeder extends Seeder
                 'description' => 'Producto en mal estado',
                 'id' => 10,
                 'title' => 'Producto en mal estado',
-                'type' => 'picker-revisor',
+                'type' => 'picker-reviewer',
                 'updated_at' => '2023-10-03 13:17:31',
             ),
             8 => 
@@ -106,7 +106,7 @@ class ProblemsTableSeeder extends Seeder
                 'description' => 'Sin stock',
                 'id' => 11,
                 'title' => 'Sin stock',
-                'type' => 'picker-revisor',
+                'type' => 'picker-reviewer',
                 'updated_at' => '2023-10-03 13:20:38',
             ),
             9 => 
@@ -116,7 +116,7 @@ class ProblemsTableSeeder extends Seeder
                 'description' => 'Otro problema  Picker / Revisor',
                 'id' => 12,
                 'title' => 'Otro',
-                'type' => 'picker-revisor',
+                'type' => 'picker-reviewer',
                 'updated_at' => '2023-10-03 13:23:38',
             ),
         ));

@@ -64,11 +64,21 @@ class UserCrudController extends CrudController
 
         CRUD::addColumn([
             'name' => 'roles', 
-            'label' => 'Roles',
+            'label' => __('user.crud.role'),
             'type' => 'select_multiple', 
             'entity' => 'roles', 
             'attribute' => 'name', 
         ]);
+
+        CRUD::addColumn([
+            'name' => 'warehouses', 
+            'label' => __('user.crud.warehouse'),
+            'type' => 'select_multiple', 
+            'entity' => 'warehouses',
+            'attribute' => 'WarehouseName',
+        ]);
+
+
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -121,10 +131,23 @@ class UserCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'userRoles',
-            'label' => 'roles',
+            'label' => __('user.crud.roles'),
             'type' => 'select2_multiple',
             'model' => 'App\Models\Role',
             'attribute' => 'name',
+            'wrapper' => [
+                'class' => 'form-group col-md-12 required',
+            ],
+        ]);
+
+        CRUD::addField([
+            'name' => 'userWarehouse',
+            'label' => __('user.crud.warehouse'),
+            'type' => 'select2_multiple',
+            'entity' => 'warehouses',
+            'model' => 'App\Models\Warehouse',
+            'attribute' => 'WarehouseName',
+            'pivot' => true,
             'wrapper' => [
                 'class' => 'form-group col-md-12 required',
             ],
@@ -166,6 +189,8 @@ class UserCrudController extends CrudController
                 $role = Role::findOrFail($roleId);
                 $user->userRoles()->attach($role, ['model_type' => 'App\Models\User']);
             }
+
+            $user->warehouses()->attach($request->input('userWarehouse', []));
 
             DB::commit();
             return redirect()->route('user.index')->with('success', 'El usuario se ha creado correctamente.');
@@ -212,6 +237,8 @@ class UserCrudController extends CrudController
                 $role = Role::findOrFail($roleId);
                 $user->userRoles()->attach($role, ['model_type' => 'App\Models\User']);
             }
+
+            $user->warehouses()->sync($request->input('userWarehouse', []));
 
             DB::commit();
             return redirect()->route('user.index')->with('success', 'Los permisos se han actualizado correctamente.');
@@ -275,6 +302,19 @@ class UserCrudController extends CrudController
             'type' => 'select2_multiple',
             'model' => 'App\Models\Role',
             'attribute' => 'name',
+            'wrapper' => [
+                'class' => 'form-group col-md-12 required',
+            ],
+        ]);
+
+        CRUD::addField([
+            'name' => 'userWarehouse',
+            'label' => 'Bodegas',
+            'type' => 'select2_multiple',
+            'entity' => 'warehouses', // Asegúrate de que coincide con el nombre correcto de tu entidad Warehouse
+            'model' => 'App\Models\Warehouse',
+            'attribute' => 'WarehouseName',
+            'pivot' => true, // Indica que es un campo de relación muchos a muchos
             'wrapper' => [
                 'class' => 'form-group col-md-12 required',
             ],

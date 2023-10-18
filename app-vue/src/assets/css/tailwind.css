@@ -158,3 +158,54 @@
 .p-button-outlined {
   @apply !bg-white
 }
+
+.p-buttons-picker{
+  min-width: 150px !important;
+}
+
+@media (min-width:768px) and (max-width:1200px){
+  .p-button{
+    min-width: 135px;
+    margin-bottom: 8px;
+  }
+  .p-datatable .p-datatable-tbody > tr > td{
+    padding: 0 10px 0px 10px;
+  }
+  .p-datatable thead > tr > th{
+    padding: 10px 10px 10px 10px;
+  }
+  .p-datatable tbody > tr:last-child > td{
+    padding: 0 10px 10px 10px;
+  }
+  .p-datatable tbody > tr:last-child > td,
+  .p-datatable .p-datatable-thead > tr > th{
+    @apply !border-none;
+  }
+  .p-datatable-thead th,
+  .p-datatable-tbody td{
+    width: 160px;
+    min-width: 160px;
+  }
+  .p-dialog .p-datatable-thead th,
+  .p-dialog .p-datatable-tbody td{
+    width: 160px;
+    min-width: 160px;
+  }
+}
+@media (min-width:1201px) and (max-width:1350px){
+  .p-button{
+    min-width: 135px;
+    margin-bottom: 8px;
+  }
+  .p-datatable-thead th,
+  .p-datatable-tbody td{
+    width: 120px;
+    min-width: 120px;
+  }
+}
+@media (min-width:1351px) and (max-width:1500px){
+  .p-button{
+    min-width: 135px;
+    margin-bottom: 8px;
+  }
+}

@@ -18,7 +18,19 @@
     :allOrders="allOrdersHere" 
     @filter="filter"/>
   </div>
-  <DataTable @onPage="loadMoreData"  class="mb-20" :value="ordersHere" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
+  <DataTable class="mb-20" 
+    :value="ordersHere" 
+    tableStyle="min-width: 50rem" 
+    filters="filters" 
+    paginator 
+    :rowsPerPageOptions="[5, 10, 20, 50]" 
+    :rows="5" 
+    dataKey="id" 
+    filterDisplay="row" 
+    :loading="loading"
+    paginatorTemplate="RowsPerPageDropdown FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
+    currentPageReportTemplate="{first} a {last} de {totalRecords}"
+    >
       <Column headerClass="!bg-primary-900" sortable  field="DocNum" header="Nota de venta">
         <template #body="slotProps">
           N° {{ slotProps.data.DocNum  }}
@@ -64,7 +76,19 @@
       @filter="filter"
       />
   </div>
-  <DataTable @onPage="loadMoreData"  :value="ordersPickupAndDelivery" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
+  <DataTable 
+    :value="ordersPickupAndDelivery" 
+    tableStyle="min-width: 50rem" 
+    filters="filters" 
+    paginator 
+    :rowsPerPageOptions="[5, 10, 20, 50]" 
+    :rows="5" 
+    dataKey="id" 
+    filterDisplay="row" 
+    :loading="loading"
+    paginatorTemplate="RowsPerPageDropdown FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
+    currentPageReportTemplate="{first} a {last} de {totalRecords}"
+    >
       <Column 
         headerClass="!bg-primary-900"  
         field="DocNum" 
@@ -101,8 +125,10 @@
         <template #body="slotProps">
           <Button label="Rechazar" @click="openDialog('reportProblem',slotProps.data)"  class="!py-1.5 mr-3 !border-primary-900 !text-primary-900" outlined >
           </Button>
-          <Button label="Autorizar" @click="actionOrder(slotProps.data, 3)" class="!py-1.5 !border-primary-900 !text-primary-900" outlined >
+          <Button label="Autorizar" @click="actionOrder(slotProps.data, 3)" class="!py-1.5 !border-primary-900 !text-primary-900 mr-3" outlined >
           </Button>
+          <!-- <Button label="Observación" :disabled="slotProps.data.observation != null"  @click="openDialog('addObservation',slotProps.data)" class="!py-1.5 !border-primary-900 !text-primary-900" outlined >
+          </Button> -->
         </template>
       </Column>
   </DataTable>
@@ -127,6 +153,14 @@
       :order="selectedOrder"
       @visible="closeDialog"
     />
+    <DialogAddObservation
+    v-if="currentDialog === 'addObservation'"
+    v-model:visible="visible"
+    :typeProblems="constants.RESPONSIBLE_CDA"
+    :order="selectedOrder"
+    :disabled="true"
+    @visible="closeDialog"
+  />
     <div v-if="ordersHere.length === 0 && ordersPickupAndDelivery.length  === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
       <h1 class="align-center font-inter font-semibold mb-4 text-2xl text-center text-primary-900">
         No se han encontrado ordenes
@@ -145,7 +179,8 @@ import Search from './Search.vue'
 import DialogDetail from './DialogDetail.vue'
 import DialogDetailObservation from './DialogDetailObservation.vue'
 import DialogReportProblem from './DialogReportProblem.vue'
-import FilterMultiSelect from './FilterMultiSelect.vue'
+import DialogAddObservation from './DialogAddObservation.vue'
+import FilterMultiSelect from '../../../components/filters/FilterMultiSelect.vue';
 import { useOrders } from '../../../services/OrdersApiService.js'
 import { UseSearch } from '../composables/UseSearch'
 import { UseDialogs } from '../composables/UseDialogs'

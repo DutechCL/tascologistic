@@ -14,7 +14,20 @@
   <div class="flex">
     <FilterMultiSelect :typeOrders="'Here'" :allOrders="allOrdersHere" @filter="filter"/>
   </div>
-  <DataTable @onPage="loadMoreData"  class="mb-20" :value="ordersHere" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
+  <DataTable 
+    class="mb-20" 
+    :value="ordersHere" 
+    tableStyle="min-width: 50rem" 
+    filters="filters" 
+    paginator  
+    :rowsPerPageOptions="[5, 10, 20, 50]" 
+    :rows="5"  
+    dataKey="id"
+    filterDisplay="row" 
+    :loading="loading"
+    paginatorTemplate="RowsPerPageDropdown FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
+    currentPageReportTemplate="{first} a {last} de {totalRecords}"
+    >
       <Column headerClass="!bg-primary-900"  field="DocNum" header="Nota de venta">
         <template #body="slotProps">
           N° {{ slotProps.data.DocNum  }}
@@ -47,11 +60,24 @@
   <div class="flex">
     <FilterMultiSelect :typeOrders="constants.METHOD_SHIPPING_PICKUP_AND_DELIVERY" :allOrders="allOrdersPickupAndDelivery" @filter="filter"/>
   </div>
-  <DataTable @onPage="loadMoreData"  :value="ordersPickupAndDelivery" tableStyle="min-width: 50rem" filters="filters" paginator :rows="5" dataKey="id" filterDisplay="row" :loading="loading">
+  <DataTable
+    :value="ordersPickupAndDelivery" 
+    tableStyle="min-width: 50rem" 
+    filters="filters" 
+    paginator 
+    :rowsPerPageOptions="[5, 10, 20, 50]" 
+    :rows="5" 
+    dataKey="id" 
+    filterDisplay="row" 
+    :loading="loading"
+    paginatorTemplate="RowsPerPageDropdown FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
+    currentPageReportTemplate="{first} a {last} de {totalRecords}"
+    >
       <Column 
         headerClass="!bg-primary-900"  
         field="DocNum" 
         header="Nota de venta"
+        sortable
         >
         <template #body="slotProps">
           N° {{ slotProps.data.DocNum  }}
@@ -110,7 +136,7 @@ import DialogDetail from './DialogDetail.vue'
 import DialogDetailObservation from './DialogDetailObservation.vue'
 import { UseSearch } from '../composables/UseSearch'
 import { UseDialogs } from '../composables/UseDialogs'
-import FilterMultiSelect from './FilterMultiSelect.vue'
+import FilterMultiSelect from '../../../components/filters/FilterMultiSelect.vue';
 import constants from '@/constants/constants';
 
 const props = defineProps({

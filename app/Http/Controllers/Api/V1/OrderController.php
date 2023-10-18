@@ -59,6 +59,34 @@ class OrderController extends Controller
         }
     }
 
+    public function getOrdersBillPickupAndHere()
+    {
+        try {
+
+            $orders = $this->orderService->listOrders('pickup-here');
+
+            return $this->success(
+                OrderResource::collection($orders)->resolve()
+            );
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function getOrdersBillDelivery()
+    {
+        try {
+
+            $orders = $this->orderService->listOrders('delivery');
+
+            return $this->success(
+                OrderResource::collection($orders)->resolve()
+            );
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -81,28 +109,45 @@ class OrderController extends Controller
         }
     }
 
+    public function addObservation(Request $request)
+    {
+        try {
+            $order = Order::findOrFail($request->orderId);
+            $result = $this->orderService->addObservation($order, $request);
+
+            return response()->json([
+                'status' => 'success',
+                'message' => $result->message,
+                'order' => $result->order,
+            ]);
+
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
     public function assingResponsible(Request $request, $id)
     {
         try {
             $order = Order::findOrFail($id);
             
             switch ($request->responsible) {
-                case 'Picker':
+                case 'picker':
                     $orderStatusId = Order::ORDER_STATUS_PICKED;
                     break;
-                case 'Reviewer':
-                    $responsibleRole = Order::ORDER_STATUS_REVIEWER;
+                case 'reviewer':
+                    $orderStatusId = Order::ORDER_STATUS_REVIEWER;
                     break;
                 default:
                     throw new \Exception('Rol no válido');
                     break;
             }
         
-            $result = $this->orderService->updateOrderStatus($order, $orderStatusId);
+            $result = (object) $this->orderService->updateOrderStatus($order, $orderStatusId, $request);
 
             return response()->json([
-                'status' => 'success',
-                'message' => "Orden asignada a $request->responsible correctamente",
+                'status' =>  $result->status,
+                'message' => $result->message,
                 'order' => new OrderResource($order),
             ]);
 

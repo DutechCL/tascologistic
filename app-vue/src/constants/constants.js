@@ -13,6 +13,7 @@ export const METHOD_SHIPPING_PICKUP_AND_DELIVERY = 'pickup-delivery';
 export const RESPONSIBLE_CDA      = 'cda';
 export const RESPONSIBLE_PICKER   = 'picker';
 export const RESPONSIBLE_REVIEWER = 'reviewer';
+export const RESPONSIBLE_PICKER_AND_REVIEWER = 'picker-reviewer';
 
 
 /* Order status */
@@ -36,6 +37,7 @@ const constants = {
     RESPONSIBLE_CDA,
     RESPONSIBLE_PICKER,
     RESPONSIBLE_REVIEWER,
+    RESPONSIBLE_PICKER_AND_REVIEWER,
     ORDER_STATUS_ON_HOLD,
     ORDER_STATUS_PICKED,
     ORDER_STATUS_REVIEWER,

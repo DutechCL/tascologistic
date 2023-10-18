@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const _baseUrl = 'http://tasco.test/';
+const _baseUrl = '/';
 // const _baseUrl = '/';
 
 const config = {

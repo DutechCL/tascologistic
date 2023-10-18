@@ -30,7 +30,8 @@ class Order extends Model
         'Comments',
         'SalesPersonCode',
         'U_SBO_FormaEntrega',
-        'is_approved'
+        'is_approved',
+        'customer_id',
     ]; // Campos permitidos para llenado masivo
 
     public function customer()
@@ -55,7 +56,7 @@ class Order extends Model
 
     public function responsibles()
     {
-        return $this->belongsToMany(User::class, 'orden_responsibles', 'order_id', 'user_id');
+        return $this->belongsToMany(User::class, 'orden_responsibles', 'order_id', 'user_id')->withPivot('task')->withTimestamps();;
     }
 
     public function problems()
@@ -85,9 +86,37 @@ class Order extends Model
         ]);
     }
 
-    public function assignResponsible()
+    public function scopeByWarehouse($query, $allowedWarehouses)
     {
+        return $query->whereHas('orderItems.product', function ($subquery) use ($allowedWarehouses) {
+            $subquery->whereIn('WareHouseCode', $allowedWarehouses);
+        });
+    }
+
+    public function assignResponsible($task)
+    {
+        $tasks = [
+            'cda' => 'CDA',
+            'picker' => 'PICKEO',
+            'reviewer' => 'REVISIÓN',
+        ];
+    
         $user = auth()->user() ?? User::find(1);
-        $this->responsibles()->attach($user->id);
+    
+        $existingAssignment = $this->responsibles()->where('user_id', $user->id)->where('task', $task)->first();
+    
+        if ($existingAssignment) {
+            return ['status' => 'success', 'message' => 'Tarea asignada exitosamente.'];
+        }
+    
+        $existingAssignment = $this->responsibles()->where('task', $task)->first();
+    
+        if ($existingAssignment) {
+            return ['status' => 'warning', 'message' => 'Esta tarea ya está en proceso de ' . $tasks[$task] . ' por otro usuario.'];
+        }
+    
+        $this->responsibles()->attach($user->id, ['task' => $task]);
+    
+        return ['status' => 'success', 'message' => 'Tarea asignada a '. $tasks[$task]. ' exitosamente.'];
     }
 }

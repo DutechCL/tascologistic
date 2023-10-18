@@ -58,7 +58,7 @@ class ProblemCrudController extends CrudController
             'type' => 'select_from_array',
             'options' => [
                 'cda' => 'CDA', 
-                'picker-revisor' => 'Picker / Revisor'
+                'picker-reviewer' => 'Picker / Revisor'
             ],
             'wrapper' => ['class' => 'tag-column'],
             'attributes' => [
@@ -110,7 +110,7 @@ class ProblemCrudController extends CrudController
             'type'        => 'select_from_array',
             'options'     => [
                 'cda' => 'CDA', 
-                'picker-revisor' => 'Picker / Revisor'
+                'picker-reviewer' => 'Picker / Revisor'
             ],
             'allows_null' => false,
             'default'     => 'one',

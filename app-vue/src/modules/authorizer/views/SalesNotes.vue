@@ -29,7 +29,6 @@ const ordersToManager = ref([]);
 const ordersManager = ref([]);
 const isDataLoaded = ref(false); 
 
-
 const updateOrders = () => {
     ordersToManager.value = ordersStore.orders
       .filter((order) => order.is_managed == false || order.MethodShippingId === 1 && order.is_managed == false)

@@ -7,7 +7,7 @@
       <div class="flex justify-between ">
         <div>
           <h1 class="mb-2 text-primary-900 font-inter font-semibold text-2xl">
-            Pickeo / Revisión
+            Pickeo / Revisión <a style="cursor: pointer;" @click="updateOrders"><i class="pi pi-refresh"></i></a> 
           </h1>
         </div>
         <Search @search="search"/>
@@ -55,7 +55,7 @@
             <DataTable tableStyle="min-width: 50rem" filters="filters" :value="products">
               <Column headerClass="!bg-primary-900"  field="Quantity" header="Cantidad">
                   <template #body="slotProps">
-                      <p>{{slotProps.data.qty}} {{slotProps.data.Quantity}}</p>
+                      <p>{{slotProps.data.Quantity}} {{ slotProps.data.Quantity > 1 ? 'Unidades' : 'Unidad' }}</p>
                   </template>
               </Column>
               <Column headerClass="!bg-primary-900"  field="ItemCode" header="SKU"></Column>
@@ -68,8 +68,8 @@
                     @click="checkProduct(slotProps.data, 'complete')"
                     label="Completado"
                     :class="{
-                      '!py-2.5 !bg-green-300 !border-green-300 !text-white !mr-5': isCompleteMap[slotProps.data.id],
-                      '!py-2.5 !border-primary-900 !text-primary-900 mr-5': !isCompleteMap[slotProps.data.id]
+                      '!py-2.5 !bg-green-300 !border-green-300 !text-white !mr-5 p-buttons-picker': isCompleteMap[slotProps.data.id],
+                      '!py-2.5 !border-primary-900 !text-primary-900 mr-5 p-buttons-picker': !isCompleteMap[slotProps.data.id]
                     }"
                     :outlined="!isCompleteMap[slotProps.data.id]"
                   >
@@ -79,8 +79,8 @@
                     @click="checkProduct(slotProps.data, 'problem')"
                     label="Problema" 
                     :class="{
-                      '!py-2.5 !bg-red-300 !border-red-300 !text-white !mr-5': isProblemMap[slotProps.data.id],
-                      '!py-2.5 !border-primary-900 !text-primary-900 mr-5': !isProblemMap[slotProps.data.id]
+                      '!py-2.5 !bg-red-300 !border-red-300 !text-white !mr-5 p-buttons-picker': isProblemMap[slotProps.data.id],
+                      '!py-2.5 !border-primary-900 !text-primary-900 mr-5 p-buttons-picker': !isProblemMap[slotProps.data.id]
                     }"
                     :outlined="!isProblemMap[slotProps.data.id]"
                   >
@@ -97,7 +97,7 @@
                 <Column headerClass="!bg-secundary-300"  field="ItemDescription" header="Producto"></Column>
                 <Column headerClass="!bg-secundary-300"  field="problems" header="Problema">
                   <template #body="slotProps">
-                    <Tag v-for="(problem, index) in slotProps.data.problems" :key="index" :value="problem.title" rounded class="mr-3 tag-radius tag-rounded-blue tag-font-method"></Tag>
+                    <Tag v-for="(problem, index) in slotProps.data.problems" :key="index" :value="problem?.other || problem.title" rounded class="my-2 mr-3 tag-radius tag-rounded-blue tag-font-method"></Tag>
                   </template>
                 </Column>
             </DataTable>
@@ -106,33 +106,39 @@
           <div class="mt-8 flex float-right">
             <!-- <router-link :to="{ name: 'pickup-review' }" class="mr-3 p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900">Cancelar</router-link> -->
             <Button @click="hiddenDetailOrder" label="Cancelar" class="mr-4 !py-1.5 !px-10 p-button-outlined float-right !border-primary-900 !text-primary-900"/>
-            <Button @click="actionOrder" label="Finalizar pedido" class="!py-1.5 !border-none !px-10 !bg-primary-900 float-right " :disabled="disableButton"/>
+            <Button @click="actionOrder()" label="Finalizar pedido" class="!py-1.5 !border-none !px-10 !bg-primary-900 float-right " :disabled="disableButton"/>
           </div>
         </div>
         <div class="space"></div>
       
         <DialogReportProblem 
+          v-if="isDataLoaded && ordersPickup.length > 0 || ordersDelivery.length > 0 || ordersHere.length > 0"
           v-model:visible="visibleReport" 
           :product="product"
           :problemsProduct="problemsSelected"
-          :typeProblems="'picker-revisor'"
+          :typeProblems="constants.RESPONSIBLE_PICKER_AND_REVIEWER"
           @selection-change="handleSelectionChange" 
-          @visible-report="visibleReportMethod"
+          @visible="visibleReportMethod"
           />
-          <Toast />
-          <ConfirmDialog></ConfirmDialog>  
-    </div>
-  </div>
+          
+        </div>
+      </div>
+      <div v-if="ordersHere.length === 0 && ordersPickup.length  === 0 && ordersDelivery" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1 class="align-center font-inter font-semibold mb-4 text-2xl text-center text-primary-900">
+          No se han encontrado ordenes
+        </h1>
+      </div>
+      <Toast />
+      <ConfirmDialog></ConfirmDialog>  
 </template>
 
 <script setup>
-import { ref, onBeforeMount, toRefs } from 'vue'
+import { ref, onBeforeMount, toRefs, watch } from 'vue'
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
 import Tag from 'primevue/tag'
 import Search from '../components/Search.vue'
 import { useOrders } from '../../../services/OrdersApiService.js';
-import { UseSearch } from '../composables/UseSearch.js'
 import Button from 'primevue/button'
 import ConfirmDialog from 'primevue/confirmdialog';
 import DialogReportProblem from '../components/DialogReportProblem.vue'
@@ -140,6 +146,7 @@ import { ToastMixin } from '../../../Utils/ToastMixin';
 import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
 import DataTableOrdersPickerReview from '../components/tables/DataTableOrdersPickerReview.vue'
 import constants from '@/constants/constants';
+import { set } from 'date-fns'
 
 const { showToast } = ToastMixin.setup();
 const { showConfirm } = ConfirmMixin.setup();
@@ -161,6 +168,7 @@ const setOfProducts = new Set();
 const setProductsCheck = new Set();
 const isDataLoaded = ref(false)
 const activeDetails = ref(false)
+const responsibles = ref('')
 
 const { listOrdersHere, listOrdersPickup, listOrdersDelivery } = toRefs(ordersStore.$state);
 
@@ -168,13 +176,29 @@ const ordersHere = ref([])
 const ordersPickup = ref([])
 const ordersDelivery = ref([])
 
+const updateOrders = async () => {
+  await ordersStore.getOrdersPickerAndReviewer();
+  showToast({
+    status: 'success',
+    message: 'Ordenes actualizadas',
+    time: 3000
+  });
+}
+
+watch(() => ordersStore.orders, (value) => {
+    ordersHere.value = listOrdersHere.value;
+    ordersPickup.value = listOrdersPickup.value;
+    ordersDelivery.value = listOrdersDelivery.value;
+});
+
 onBeforeMount(async () => {
   try {
     await ordersStore.getOrdersPickerAndReviewer();
 
-    ordersHere.value = listOrdersHere.value
-    ordersPickup.value = listOrdersPickup.value
-    ordersDelivery.value = listOrdersDelivery.value
+    // Guardar las listas originales sin cambios
+    ordersHere.value = listOrdersHere.value;
+    ordersPickup.value = listOrdersPickup.value;
+    ordersDelivery.value = listOrdersDelivery.value;
 
     isDataLoaded.value = true;
   } catch (error) {
@@ -182,12 +206,10 @@ onBeforeMount(async () => {
   }
 });
 
-
 const search = (value) => {
   ordersHere.value = filterOrdersByNumberAndName(listOrdersHere.value, value)
   ordersPickup.value = filterOrdersByNumberAndName(listOrdersPickup.value, value)
   ordersDelivery.value = filterOrdersByNumberAndName(ordersDelivery.value, value)
-  console.log(ordersHere.value)
 }
   
 function filterOrdersByNumberAndName(orders, data) {
@@ -201,20 +223,34 @@ const showDetailOrder = (data) => {
   activeDetails.value = true
   order.value = data.order
   products.value = data.order.OrderItems
-  assingResponsible(data.type)
-}
-
-const assingResponsible = async (type) => {
-  await ordersStore.assingResponsible({responsible: type}, order.value.id);
+  responsibles.value = data.type
+  if(!data.responsible){
+    assingResponsible(data.type)
+  }
 }
 
 const hiddenDetailOrder = () => {
   activeDetails.value = false
+  clearDetailsOrder()
+}
+
+const clearDetailsOrder = () => {
+  setProductsCheck.clear();
+  setCompleteProducts.clear();
+  setOfProducts.clear();
+  disableButton.value = true;
+  productsProblem.value = [];
+  problemsSelected.value = [];
+  products.value.forEach(element => {
+    isProblemMap.value[element.id] = false;
+    isCompleteMap.value[element.id] = false;
+  });
 }
 
 const checkProduct = (rowData, action) => {
-  
-  const productCheck = setProductsCheck.add(rowData);
+  const productCheck = (action === 'complete')
+    ? setProductsCheck.add(rowData)
+    : setProductsCheck.delete(rowData);
   
   if (rowData.id) {
     const productComplete = (action === 'complete')
@@ -223,6 +259,7 @@ const checkProduct = (rowData, action) => {
     
     if(action === 'complete')
     {
+      isProblemMap.value[rowData.id] = false;
       setOfProducts.delete(rowData);
       productsProblem.value = Array.from(setOfProducts);
     }else{
@@ -230,12 +267,13 @@ const checkProduct = (rowData, action) => {
     }    
 
     isCompleteMap.value[rowData.id] = (action === 'complete');
-    isProblemMap.value[rowData.id] = (action !== 'complete');
     visibleReport.value = (action !== 'complete');
     product.value = (action !== 'complete') ? rowData : null;
     productsCheck.value = Array.from(productCheck);
     disableButton.value = (productsCheck.value.length !== products.value.length);
+
     productsComplete.value = Array.from(productComplete);
+
   }
 };
 
@@ -247,15 +285,58 @@ const visibleReportMethod = ({ value, tempSelection }) => {
 };
 
 const handleSelectionChange = (selection, value) => {
-  console.log(selection, value)
-  let products = setOfProducts.add(selection)
-  productsProblem.value = Array.from(products)
+  selection.problems = value.listProblems;
+  let Check = setProductsCheck.add(selection)
+  productsCheck.value = Array.from(Check)
+  let ofProducts = setOfProducts.add(selection)
+  productsProblem.value = Array.from(ofProducts)
+
+  disableButton.value = (productsCheck.value.length !== products.value.length);
+
+
+  if(productsProblem.value.length > 0){
+    productsProblem.value.forEach(element => {
+      isProblemMap.value[element.id] = true;
+    });
+  }
   visibleReport.value = value.visibleReport;
     // productsProblem.value = tempSelection;
 };
 
-const actionOrder = async () => {
+const assingResponsible = async (type) => {
+  try {
+      let response = await ordersStore.assingResponsible({responsible: type}, order.value.id);
+        if(response.status == 'success'){
+          showToast({
+            status: response.status,
+            message: response.message,
+            time: 3000
+          });
+        }else{
+          showToast({
+            status: 'info',
+            message: response.message,
+            time: 3000
+          });
+          setTimeout(() => {
+            hiddenDetailOrder()
+          }, 3000);
+        }
+    } catch (error) {
+      if (error.response) {
+        showToast({
+          status: error.response.response.status,
+          message: error.response.response.message,
+          time: 5000
+        });
+      }
+    }
+  } 
 
+
+const actionOrder = async () => {
+  disableButton.value = true;
+  
   const result = await showConfirm();
   if (result) {
     try {
@@ -264,7 +345,7 @@ const actionOrder = async () => {
       let body = {
         orderId: order.value.id,
         action: action,
-        responsible: 'picker',
+        responsible: responsibles.value,
         orderItemsProblem: productsProblem.value ?? [],
       }
 
@@ -273,24 +354,32 @@ const actionOrder = async () => {
       if(response.status == 'success'){
         hiddenDetailOrder()
       }
+      console.log(response)
       showToast({
-        status: data.status,
-        message: data.message,
+        status: response.status,
+        message: response.message,
       });
     } catch (error) {
       if (error.response) {
         showToast({
-          status: error.response.data.status,
-          message: error.response.data.message,
+          status: error.response.response.status,
+          message: error.response.response.message,
         });
       }
     }
   } else {
+    disableButton.value = false;
     showToast({
       status: 'info',
       message: 'Proceso cancelado',
     });
   }
+}
+
+const sanitizeHTML = (htmlString) => {
+      let doc = new DOMParser().parseFromString(htmlString, 'text/html');
+      let text = doc.body.innerText;
+      return text;
 }
 
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <Dialog modal header=" " :style="{ width: '70vw' }">
+  <Dialog modal header=" " maximizable :style="{ width: '70vw' }">
     <div>
         <h1 class="mb-4 text-primary-900 font-inter font-semibold text-xl">
             <i class="pi pi-eye !text-xl"></i>
@@ -26,19 +26,9 @@
                 <Tag v-if="slotProps.data?.SalesEmployeeName" :icon="'pi pi-user'" :value="slotProps.data?.SalesEmployeeName" class="p-tag-1 tag-font-method tag-radius"></Tag>
             </template>
         </Column>
-        <Column headerClass="!bg-primary-900"  field="ResponsibleAuthorizerName" header="Autorizado por">
+        <Column v-for="responsible in  order.Responsibles" headerClass="!bg-primary-900"  field="responsible" :header="getLabel(responsible)">
             <template #body="slotProps">
-                <Tag v-if="slotProps.data?.ResponsibleAuthorizerName" :icon="'pi pi-user'" :value="slotProps.data?.ResponsibleAuthorizerName" class="p-tag-1 tag-font-method tag-radius"></Tag>
-            </template>
-        </Column>
-        <Column headerClass="!bg-primary-900"  field="ResponsiblePickerName" header="Preparado por:">
-            <template #body="slotProps">
-                <Tag v-if="slotProps.data?.ResponsiblePickerName" :icon="'pi pi-user'" :value="slotProps.data?.ResponsiblePickerName" class="p-tag-1 tag-font-method tag-radius"></Tag>
-            </template>
-        </Column>
-        <Column headerClass="!bg-primary-900"  field="ResponsibleReviewerName" header="Revisado por:">
-            <template #body="slotProps">
-                <Tag v-if="slotProps.data?.ResponsibleReviewerName" :icon="'pi pi-user'" :value="slotProps.data?.ResponsibleReviewerName" class="p-tag-1 tag-font-method tag-radius"></Tag>
+                <Tag v-if="responsible.name" :icon="'pi pi-user'" :value="responsible.name" class="p-tag-1 tag-font-method tag-radius"></Tag>
             </template>
         </Column>
     </DataTable>
@@ -63,6 +53,19 @@ const props = defineProps({
 const emit = defineEmits();
 const visibleDetails = () => {
   emit('visible', {'visibleDetails': false});
+}
+
+const getLabel = (data) => {
+    switch (data.pivot.task) {
+        case 'reviewer':
+            return 'Revisado por:'
+        case 'picker':
+            return 'Preparado por'
+        case 'cda':
+            return 'Autorizado por'
+        default:
+            break;
+    }
 }
 
 onBeforeMount(() => {

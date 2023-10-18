@@ -69,4 +69,15 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Order::class, 'orden_responsibles');
     }
+
+    public function warehouses()
+    {
+        return $this->belongsToMany(Warehouse::class, 'user_warehouse')->withTimestamps();
+    }
+
+    public function allowedWarehouses()
+    {
+        return $this->warehouses()->select('warehouses.WareHouseCode')->pluck('warehouses.WareHouseCode');;
+    }
+
 }

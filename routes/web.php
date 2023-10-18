@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Order;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
@@ -25,4 +26,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/app/{any}', function () {
         return File::get(public_path('app/index.html'));
     })->where('any', '.*');
+});
+
+Route::get('/bodega', function () {
+    $allowedWarehouses = auth()->user()->allowedWarehouses();
+    dd(Order::byWarehouse($allowedWarehouses)->get());
+    return Order::byWarehouse()->get();
 });

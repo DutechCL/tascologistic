@@ -47,6 +47,9 @@
         box-shadow: 0px 5px 6px 1px rgb(161 159 159 / 33%);
         border-radius: 10px;
     }
+    a:hover{
+        text-decoration: none !important;
+    }
 </style>
 
 @section('content')
@@ -63,14 +66,17 @@
     </p>
     <div>
         <ul class="d-flex list-inline">
+            @foreach ($user->warehouses as $warehouse)
             <li class="mt-4 mr-4">
-                <a href="/app/autorizador/pickeo-revision" target="_blank" >
-                    <div class="px-5 pt-4 pb-3 boder-card mr-4">
+                <a href="{{ url('/app/autorizador/pickeo-revision/') }}" target="_blank">
+                    <div class="align-items-center boder-card d-flex flex-column justify-content-center mr-4 pb-3 pt-4 px-5" style="width: 245px;     height: 240px;">
+                        <!-- Aquí puedes usar la información de cada bodega -->
                         <img src="{{ asset('images/bodega.png') }}" alt="">
-                        <p class=" font-xl pt-4 text-center">Bodega 1</p>
+                        <p class="font-xl pt-4 text-center w-100">{{ $warehouse->WarehouseName }}</p>
                     </div>
                 </a>
             </li>
+        @endforeach
         </ul>
     </div>
   </div>
@@ -82,17 +88,17 @@
         <ul class="d-flex list-inline">
             <li class="mt-4 mr-4">
                 <a href="/app/tracking/ordenes" target="_blank" >
-                    <div class="boder-card d-flex flex-column justify-content-center align-items-center mr-4 pb-3 pt-4 px-5">
+                    <div class="align-items-center boder-card d-flex flex-column justify-content-center mr-4 pb-3 pt-4 px-5" style="width: 245px; height: 240px;">
                         <img src="{{ asset('images/bodega.png') }}" alt="" style="width: 100px">
-                        <p class=" font-xl pt-4 text-center">Sala de venta  <br>  aqui</p>
+                        <p class=" font-xl pt-4 text-center">Pantalla salas <br> de venta</p>
                     </div>
                 </a>
             </li>
             <li class="mt-4 mr-4">
                 <a href="/app/tracking/retiro-despacho" target="_blank" >
-                    <div class="boder-card d-flex flex-column justify-content-center align-items-center mr-4 pb-3 pt-4 px-5">
+                    <div class="align-items-center boder-card d-flex flex-column justify-content-center mr-4 pb-3 pt-4 px-5" style="width: 245px; height: 240px;">
                         <img src="{{ asset('images/bodega.png') }}" alt="" style="width: 100px">
-                        <p class=" font-xl pt-4 text-center">Sala de venta <br> retito - despacho</p>
+                        <p class=" font-xl pt-4 text-center">Pantalla bodega</p>
                     </div>
                 </a>
             </li>
