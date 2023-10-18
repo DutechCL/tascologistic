@@ -23,8 +23,7 @@ class OrderService
 
         $allowedWarehouses = $user->allowedWarehouses();
 
-        $ordersQuery = Order::byWarehouse($allowedWarehouses)
-            ->withOrderDetails()
+        $ordersQuery = Order::withOrderDetails()
             ->orderByRaw('order_status_id = 4 DESC')
             ->orderBy('created_at', 'ASC');
 
