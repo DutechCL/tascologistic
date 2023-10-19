@@ -13,11 +13,11 @@
         "backpack/theme-coreuiv2": "^1.1",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
-        "laravel/sanctum": "^3.2",
+        "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "maatwebsite/excel": "^3.1",
         "orangehill/iseed": "^3.0",
-        "spatie/laravel-permission": "^5.10"
+        "spatie/laravel-permission": "^5.11"
     },
     "require-dev": {
         "backpack/generators": "^4.0",

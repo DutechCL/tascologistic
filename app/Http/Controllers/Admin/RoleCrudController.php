@@ -49,9 +49,10 @@ class RoleCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        
         CRUD::addColumn([
-            'name' => 'created_at',
-            'label' => __('role.crud.created_at'),
+            'name' => 'name',
+            'label' => __('role.crud.name'),
             'type' => 'text',
         ]);
         
@@ -60,19 +61,13 @@ class RoleCrudController extends CrudController
             'label' => __('role.crud.guard_name'),
             'type' => 'text',
         ]);
-
+        
         CRUD::addColumn([
-            'name' => 'name',
-            'label' => __('role.crud.name'),
+            'name' => 'created_at',
+            'label' => __('role.crud.created_at'),
             'type' => 'text',
         ]);
         
-        CRUD::addColumn([
-            'name' => 'updated_at',
-            'label' => __('role.crud.updated_at'),
-            'type' => 'text',
-        ]);
-
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
@@ -181,18 +176,19 @@ class RoleCrudController extends CrudController
         
         CRUD::setValidation(RoleRequest::class);
         CRUD::addField([
+            'name' => 'name',
+            'label' => __('role.crud.name'),
+            'type' => 'text',
+            'wrapper' => ['class' => 'form-group col-md-12'],
+        ]);
+        
+        CRUD::addField([
             'name' => 'guard_name',
             'label' => __('role.crud.guard_name'),
             'type' => 'text',
             'wrapper' => ['class' => 'form-group col-md-12'],
         ]);
 
-        CRUD::addField([
-            'name' => 'name',
-            'label' => __('role.crud.name'),
-            'type' => 'text',
-            'wrapper' => ['class' => 'form-group col-md-12'],
-        ]);
 
         CRUD::addField([
             'name' => 'permissions',

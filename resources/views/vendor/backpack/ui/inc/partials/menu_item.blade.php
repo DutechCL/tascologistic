@@ -24,9 +24,15 @@
             @endphp
 
             @if ($display)
-                <a class="nav-link" href="{{ $childItem->url() }}">
-                    <i class="{{ $childItem->icon }}"></i> {{ $childItem->name }}
-                </a>
+                @if($childItem->is_external)
+                    <a class="nav-link" target="_blank" href="{{ $childItem->url() }}">
+                        <i class="{{ $childItem->icon }}"></i> {{ $childItem->name }}
+                    </a>
+                @else
+                    <a class="nav-link" href="{{ $childItem->url() }}">
+                        <i class="{{ $childItem->icon }}"></i> {{ $childItem->name }}
+                    </a>
+                @endif
             @endif
         @endif
 

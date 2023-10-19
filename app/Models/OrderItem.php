@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class OrderItem extends Model
 {
     use HasFactory;
+    
+    protected $table = 'order_items';
 
     protected $fillable = [
         'ItemCode', // Precio del producto en el momento de la orden

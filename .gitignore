@@ -37,7 +37,6 @@ Thumbs.db
 
 # Laravel #
 ######################
-
 /.phpunit.cache
 /node_modules
 /public/build
@@ -57,6 +56,11 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+#vue
+
+/app-vue/.vscode
+/app-vue/node_modules
 
 # Others #
 ######################

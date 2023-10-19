@@ -47,7 +47,7 @@ class UserCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        $this->crud->addButtonFromView('top', 'import_button', 'import_button', 'end');
+        // $this->crud->addButtonFromView('top', 'import_button', 'import_button', 'end');
         $this->crud->addButtonFromView('top', 'export_button', 'export_button', 'end');
 
         CRUD::addColumn([
@@ -63,10 +63,22 @@ class UserCrudController extends CrudController
         ]);
 
         CRUD::addColumn([
-            'name' => 'password',
-            'label' => __('user.crud.password'),
-            'type' => 'text',
+            'name' => 'roles', 
+            'label' => __('user.crud.role'),
+            'type' => 'select_multiple', 
+            'entity' => 'roles', 
+            'attribute' => 'name', 
         ]);
+
+        CRUD::addColumn([
+            'name' => 'warehouses', 
+            'label' => __('user.crud.warehouse'),
+            'type' => 'select_multiple', 
+            'entity' => 'warehouses',
+            'attribute' => 'WarehouseName',
+        ]);
+
+
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -101,17 +113,41 @@ class UserCrudController extends CrudController
             ]
         ]);
         CRUD::addField([
+            'name' => 'mobile_phone_number',
+            'label' => __('user.crud.phone'),
+            'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ]
+        ]);
+        CRUD::addField([
             'name' => 'password',
             'label' =>__('user.crud.password'),
             'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ]
         ]);
 
         CRUD::addField([
             'name' => 'userRoles',
-            'label' => 'roles',
-            'type' => 'checkbox',
+            'label' => __('user.crud.roles'),
+            'type' => 'select2_multiple',
             'model' => 'App\Models\Role',
             'attribute' => 'name',
+            'wrapper' => [
+                'class' => 'form-group col-md-12 required',
+            ],
+        ]);
+
+        CRUD::addField([
+            'name' => 'userWarehouse',
+            'label' => __('user.crud.warehouse'),
+            'type' => 'select2_multiple',
+            'entity' => 'warehouses',
+            'model' => 'App\Models\Warehouse',
+            'attribute' => 'WarehouseName',
+            'pivot' => true,
             'wrapper' => [
                 'class' => 'form-group col-md-12 required',
             ],
@@ -144,6 +180,7 @@ class UserCrudController extends CrudController
             $user = User::create([
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
+                'mobile_phone_number' => $request->input('mobile_phone_number'),
                 'password' => bcrypt($request->input('password')),
                 'email_verified_at' => true
             ]);
@@ -152,6 +189,8 @@ class UserCrudController extends CrudController
                 $role = Role::findOrFail($roleId);
                 $user->userRoles()->attach($role, ['model_type' => 'App\Models\User']);
             }
+
+            $user->warehouses()->attach($request->input('userWarehouse', []));
 
             DB::commit();
             return redirect()->route('user.index')->with('success', 'El usuario se ha creado correctamente.');
@@ -185,6 +224,7 @@ class UserCrudController extends CrudController
 
             $user->name = $request->input('name');
             $user->email = $request->input('email');
+            $user->mobile_phone_number = $request->input('mobile_phone_number');
             if ($request->input('password') !== null) {
                 $user->password = bcrypt($request->input('password'));
             }
@@ -197,6 +237,8 @@ class UserCrudController extends CrudController
                 $role = Role::findOrFail($roleId);
                 $user->userRoles()->attach($role, ['model_type' => 'App\Models\User']);
             }
+
+            $user->warehouses()->sync($request->input('userWarehouse', []));
 
             DB::commit();
             return redirect()->route('user.index')->with('success', 'Los permisos se han actualizado correctamente.');
@@ -222,17 +264,34 @@ class UserCrudController extends CrudController
             'name' => 'name',
             'label' => __('user.crud.name'),
             'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ],
         ]);
         CRUD::addField([
             'name' => 'email',
             'label' => __('user.crud.email'),
             'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ],
+        ]);
+        CRUD::addField([
+            'name' => 'mobile_phone_number',
+            'label' => __('user.crud.phone'),
+            'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ]
         ]);
         CRUD::addField([
             'name' => 'password',
             'label' =>__('user.crud.password'),
             'type' => 'text',
             'value' => '',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ]
         ]);
 
         $id = request()->route('id');
@@ -243,6 +302,19 @@ class UserCrudController extends CrudController
             'type' => 'select2_multiple',
             'model' => 'App\Models\Role',
             'attribute' => 'name',
+            'wrapper' => [
+                'class' => 'form-group col-md-12 required',
+            ],
+        ]);
+
+        CRUD::addField([
+            'name' => 'userWarehouse',
+            'label' => 'Bodegas',
+            'type' => 'select2_multiple',
+            'entity' => 'warehouses', // Asegúrate de que coincide con el nombre correcto de tu entidad Warehouse
+            'model' => 'App\Models\Warehouse',
+            'attribute' => 'WarehouseName',
+            'pivot' => true, // Indica que es un campo de relación muchos a muchos
             'wrapper' => [
                 'class' => 'form-group col-md-12 required',
             ],

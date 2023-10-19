@@ -7,7 +7,7 @@ return [
     'crud' => [
         'name'        => 'Nombre',
         'description' => 'Descripcion',
-        'guard_name'  => 'guard_name',
+        'guard_name'  => 'Slug',
         'created_at'  => 'Fecha creación',
         'updated_at'  => 'Fecha actualización',
 

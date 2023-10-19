@@ -15,21 +15,23 @@
     table {
         border-collapse: collapse;
         width: 100%;
+        margin: 15px;
     }
 
     th, td {
         border: 1px solid #ddd;
-        padding: 8px;
-    }
-
-    th {
-        background-color: #f2f2f2;
+        padding: 10px;
     }
 
     label {
         display: block;
         margin-bottom: 5px;
     }
+    .custom-control-input:checked ~ .custom-control-label::before {
+    color: #FFFFFF;
+    border-color: #fff !important;
+    background-color: #259bd7 !important;
+}
 </style>
 <table>
     <thead>

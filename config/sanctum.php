@@ -58,6 +58,7 @@ return [
     | request. You may change the middleware listed below as required.
     |
     */
+    'table_name' => 'personal_access_tokens',
 
     'middleware' => [
         'verify_csrf_token' => App\Http\Middleware\VerifyCsrfToken::class,

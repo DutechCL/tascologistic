@@ -28,7 +28,7 @@ class ProblemCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Problem::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/problem');
-        CRUD::setEntityNameStrings('problem', 'problems');
+        CRUD::setEntityNameStrings(__('problem.problem'), __('problem.problems'));
     }
 
     /**
@@ -39,7 +39,43 @@ class ProblemCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::setFromDb(); // set columns from db columns.
+        // CRUD::setFromDb(); // set columns from db columns.
+        CRUD::addColumn([
+            'name' => 'title',
+            'label' => __('problem.crud.name'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'description',
+            'label' => __('problem.crud.description'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'type',
+            'label' => __('problem.crud.type'),
+            'type' => 'select_from_array',
+            'options' => [
+                'cda' => 'CDA', 
+                'picker-reviewer' => 'Picker / Revisor'
+            ],
+            'wrapper' => ['class' => 'tag-column'],
+            'attributes' => [
+                'style' => 'width:90px;', // Ajusta el ancho según tus necesidades
+            ],
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'active',
+            'label' => __('problem.crud.active'),
+            'type' => 'select_from_array',
+            'options' => [0 => 'Inactivo', 1 => 'Activo'],
+            'wrapper' => ['class' => 'tag-column'],
+            'attributes' => [
+                'style' => 'width:90px;', // Ajusta el ancho según tus necesidades
+            ],
+        ]);
 
         /**
          * Columns can be defined using the fluent syntax:
@@ -56,7 +92,35 @@ class ProblemCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(ProblemRequest::class);
-        CRUD::setFromDb(); // set fields from db columns.
+        CRUD::addField([
+            'name' => 'title',
+            'label' => __('problem.crud.name'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addField([
+            'name' => 'description',
+            'label' => __('problem.crud.description'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addField([
+            'name'        => 'type',
+            'label'       => __('problem.crud.type'),
+            'type'        => 'select_from_array',
+            'options'     => [
+                'cda' => 'CDA', 
+                'picker-reviewer' => 'Picker / Revisor'
+            ],
+            'allows_null' => false,
+            'default'     => 'one',
+        ]);
+
+        CRUD::addField([
+            'name' => 'active',
+            'label' => __('problem.crud.active'),
+            'type' => 'switch',
+        ]);
 
         /**
          * Fields can be defined using the fluent syntax:

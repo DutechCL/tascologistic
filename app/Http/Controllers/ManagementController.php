@@ -9,7 +9,9 @@ class ManagementController extends Controller
     //!Listo
     public function index()
     {
-        return view('admin.management.index');
+        $user = auth()->user();
+
+        return view('admin.management.index', compact('user'));
     }
 
 }

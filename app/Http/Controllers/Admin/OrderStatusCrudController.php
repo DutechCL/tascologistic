@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\OrderStatus;
 use App\Http\Requests\OrderStatusRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
@@ -26,9 +27,9 @@ class OrderStatusCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\OrderStatus::class);
+        CRUD::setModel(OrderStatus::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/order-status');
-        CRUD::setEntityNameStrings('order status', 'order statuses');
+        CRUD::setEntityNameStrings(__('order_status.order_status'), __('order_status.order_statuses'),);
     }
 
     /**
@@ -39,8 +40,24 @@ class OrderStatusCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::setFromDb(); // set columns from db columns.
+        // CRUD::setFromDb(); // set columns from db columns.
+        CRUD::addColumn([
+            'name' => 'name',
+            'label' => __('order_status.crud.name'),
+            'type' => 'text',
+        ]);
 
+        CRUD::addColumn([
+            'name' => 'description',
+            'label' => __('order_status.crud.description'),
+            'type' => 'text',
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'color',
+            'label' => __('order_status.crud.color'),
+            'type' => 'color', 
+        ]);
         /**
          * Columns can be defined using the fluent syntax:
          * - CRUD::column('price')->type('number');
@@ -56,8 +73,29 @@ class OrderStatusCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(OrderStatusRequest::class);
-        CRUD::setFromDb(); // set fields from db columns.
-
+        // CRUD::setFromDb(); // set fields from db columns.
+        CRUD::addField([
+            'name' => 'name',
+            'label' => __('order_status.crud.name'),
+            'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ],
+        ]);
+        CRUD::addField([
+            'name' => 'description',
+            'label' => __('order_status.crud.description'),
+            'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group col-sm-6 mb-3'
+            ],
+        ]);
+        CRUD::addField([
+            'name' => 'color',
+            'label' => __('order_status.crud.color'),
+            'type' => 'color',
+            'value' => '',
+        ]);
         /**
          * Fields can be defined using the fluent syntax:
          * - CRUD::field('price')->type('number');

@@ -2,15 +2,17 @@
 
 namespace App\Models;
 
-use Backpack\CRUD\app\Models\Traits\CrudTrait;
+use Laravel\Sanctum\HasApiTokens;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Spatie\Permission\Traits\HasRoles;
+use Illuminate\Notifications\Notifiable;
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
+    use HasRoles;
     use CrudTrait;
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -30,6 +32,8 @@ class User extends Authenticatable
         'branch'  ,
         'department',
     ];
+
+    protected $appends = ['role_slug'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -55,4 +59,25 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class, 'model_has_roles', 'model_id', 'role_id');
     }
+
+    public function getRoleSlugAttribute()
+    {
+        return $this->userRoles->first()->guard_name;
+    }
+
+    public function ordenesResponsible()
+    {
+        return $this->belongsToMany(Order::class, 'orden_responsibles');
+    }
+
+    public function warehouses()
+    {
+        return $this->belongsToMany(Warehouse::class, 'user_warehouse')->withTimestamps();
+    }
+
+    public function allowedWarehouses()
+    {
+        return $this->warehouses()->select('warehouses.WareHouseCode')->pluck('warehouses.WareHouseCode');;
+    }
+
 }

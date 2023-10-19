@@ -7,12 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class OrderItemProblem extends Model
 {
+    use HasFactory;
+    
     public $fillable = [
         'order_item_id',
         'problem_id',
+        'other'
     ];
 
-    use HasFactory;
 
     public function orderItem()
     {

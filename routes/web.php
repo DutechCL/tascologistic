@@ -1,9 +1,11 @@
 <?php
 
+use App\Models\Order;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
-use Backpack\CRUD\app\Library\CrudPanel\CrudPanel;
+use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Admin\UserCrudController;
-
+use Backpack\CRUD\app\Library\CrudPanel\CrudPanel;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +22,14 @@ Route::get('/', function () {
     return redirect()->route('backpack.dashboard');
 });
 
-Route::get('/app', function () {
-    return view('vue'); // Ajusta el nombre de la vista según tu estructura
+Route::middleware(['auth'])->group(function () {
+    Route::get('/app/{any}', function () {
+        return File::get(public_path('app/index.html'));
+    })->where('any', '.*');
+});
+
+Route::get('/bodega', function () {
+    $allowedWarehouses = auth()->user()->allowedWarehouses();
+    dd(Order::byWarehouse($allowedWarehouses)->get());
+    return Order::byWarehouse()->get();
 });
