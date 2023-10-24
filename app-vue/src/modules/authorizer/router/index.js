@@ -7,8 +7,9 @@ export default{
       component: ()=> import('../views/SalesNotes.vue'),
     },
     {
-      path: 'pickeo-revision',
+      path: 'pickeo-revision/:wareHouseCode',
       name:'pickup-review',
+      props: true,
       component: ()=> import('../views/PickupReview.vue'),
     },
     {

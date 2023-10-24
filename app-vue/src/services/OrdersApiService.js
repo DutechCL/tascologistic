@@ -26,7 +26,8 @@ export const useOrders = defineStore('orders', {
         listOrders: [],
         listOrdersHere: [],
         listOrdersPickup: [],   
-        listOrdersDelivery: [],          
+        listOrdersDelivery: [],
+        wareHouseCode: '',          
     }),
     getters: {
         orders: (state) => state.listOrders,
@@ -42,7 +43,7 @@ export const useOrders = defineStore('orders', {
         },
 
         async getOrdersPickerAndReviewer() {
-            let response = await getWithToken('api/v1/orders/available/picker-reviewer');
+            let response = await getWithToken(`api/v1/orders/available/picker-reviewer/${this.wareHouseCode}`);
             this.listOrders = response.data;
             const classify = classifyOrders(this.listOrders);
             this.listOrdersHere = classify.ordersHere;

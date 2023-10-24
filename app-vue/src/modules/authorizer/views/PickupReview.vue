@@ -133,7 +133,7 @@
 </template>
 
 <script setup>
-import { ref, onBeforeMount, toRefs, watch } from 'vue'
+import { ref, onBeforeMount, toRefs, watch, defineProps } from 'vue'
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
 import Tag from 'primevue/tag'
@@ -147,6 +147,8 @@ import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
 import DataTableOrdersPickerReview from '../components/tables/DataTableOrdersPickerReview.vue'
 import constants from '@/constants/constants';
 import { set } from 'date-fns'
+import { de } from 'date-fns/locale'
+
 
 const { showToast } = ToastMixin.setup();
 const { showConfirm } = ConfirmMixin.setup();
@@ -169,20 +171,18 @@ const setProductsCheck = new Set();
 const isDataLoaded = ref(false)
 const activeDetails = ref(false)
 const responsibles = ref('')
-
-const { listOrdersHere, listOrdersPickup, listOrdersDelivery } = toRefs(ordersStore.$state);
-
 const ordersHere = ref([])
 const ordersPickup = ref([])
 const ordersDelivery = ref([])
 
-const updateOrders = async () => {
-  await ordersStore.getOrdersPickerAndReviewer();
-  showToast({
-    status: 'success',
-    message: 'Ordenes actualizadas',
-    time: 3000
-  });
+const props = defineProps({
+  wareHouseCode: String
+});
+
+const { listOrdersHere, listOrdersPickup, listOrdersDelivery } = toRefs(ordersStore.$state);
+
+const updateOrders = () => {
+  getOrdersPickerAndReviewer();
 }
 
 watch(() => ordersStore.orders, (value) => {
@@ -191,9 +191,10 @@ watch(() => ordersStore.orders, (value) => {
     ordersDelivery.value = listOrdersDelivery.value;
 });
 
-onBeforeMount(async () => {
+onBeforeMount(() => {
   try {
-    await ordersStore.getOrdersPickerAndReviewer();
+    ordersStore.wareHouseCode = props.wareHouseCode;
+    getOrdersPickerAndReviewer()
 
     // Guardar las listas originales sin cambios
     ordersHere.value = listOrdersHere.value;
@@ -290,48 +291,56 @@ const handleSelectionChange = (selection, value) => {
   productsCheck.value = Array.from(Check)
   let ofProducts = setOfProducts.add(selection)
   productsProblem.value = Array.from(ofProducts)
-
+  
   disableButton.value = (productsCheck.value.length !== products.value.length);
-
-
+  
+  
   if(productsProblem.value.length > 0){
     productsProblem.value.forEach(element => {
       isProblemMap.value[element.id] = true;
     });
   }
   visibleReport.value = value.visibleReport;
-    // productsProblem.value = tempSelection;
+  // productsProblem.value = tempSelection;
+};
+
+const getOrdersPickerAndReviewer = async () => {
+  await executeRequest('getOrdersPickerAndReviewer', 'getOrdersPickerAndReviewer');
 };
 
 const assingResponsible = async (type) => {
+  await executeRequest('assingResponsible', 'assingResponsible', { responsible: type, id: order.value.id });
+};
+
+const executeRequest = async (endpoint, method, data = null) => {
   try {
-      let response = await ordersStore.assingResponsible({responsible: type}, order.value.id);
-        if(response.status == 'success'){
-          showToast({
-            status: response.status,
-            message: response.message,
-            time: 3000
-          });
-        }else{
-          showToast({
-            status: 'info',
-            message: response.message,
-            time: 3000
-          });
-          setTimeout(() => {
-            hiddenDetailOrder()
-          }, 3000);
-        }
-    } catch (error) {
-      if (error.response) {
-        showToast({
-          status: error.response.response.status,
-          message: error.response.response.message,
-          time: 5000
-        });
-      }
+    let response;
+    if (data) {
+      response = await ordersStore[method](data);
+    } else {
+      response = await ordersStore[endpoint]();
     }
-  } 
+
+    if (response.status === 'success') {
+      showToast({
+        status: 'success',
+        message: 'Operación exitosa',
+        time: 3000
+      });
+    }
+  } catch (error) {
+    if (error.response) {
+      showToast({
+        status: error.response.data.status,
+        message: error.response.data.message,
+        time: 5000
+      });
+    } else {
+      console.log(error);
+    }
+  }
+};
+
 
 
 const actionOrder = async () => {
@@ -362,8 +371,8 @@ const actionOrder = async () => {
     } catch (error) {
       if (error.response) {
         showToast({
-          status: error.response.response.status,
-          message: error.response.response.message,
+          status: error.response.data.status,
+          message: error.response.data.message,
         });
       }
     }
@@ -375,6 +384,7 @@ const actionOrder = async () => {
     });
   }
 }
+
 
 const sanitizeHTML = (htmlString) => {
       let doc = new DOMParser().parseFromString(htmlString, 'text/html');
