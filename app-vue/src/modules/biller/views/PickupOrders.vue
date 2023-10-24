@@ -4,7 +4,7 @@
         <h1 class="mb-4 text-primary-900 font-inter font-semibold text-2xl">
           Retira / Aquí  <a style="cursor: pointer;" @click="updateOrders"><i class="pi pi-refresh"></i></a> 
         </h1>
-        <Search :orders="ordersStore.orders" @search="search"/>
+        <Search :orders="orderStore.listOrders" @search="search"/>
       </div>
 
       <DataTableOrders 
@@ -14,9 +14,9 @@
         />
 
       <DialogDetail 
-      v-if="visible" 
-      v-model:visible="visible" 
-      :orderDetails="order"
+      v-if="orderStore.visibleDialog" 
+      v-model:visible="orderStore.visibleDialog" 
+      :orderDetails="orderStore.order"
       @visible="visibleDetailsMethod"
       />
       <div v-if="orders.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -26,6 +26,7 @@
         <Button label="Regresar"  severity="primary" outlined @click="goBack" class="ml-3 !py-1.5" ></Button>
       </div>
     </div>
+    <ConfirmDialog></ConfirmDialog>
   </template>
   
   <script setup>
@@ -33,26 +34,27 @@
   import Button from 'primevue/button';
   import Search from '../../../components/search/Search.vue';
   import DialogDetail from '../components/DialogDetail.vue';
-
   import DataTableOrders from '../components/tables/DataTableOrders.vue';
+  import ConfirmDialog from 'primevue/confirmdialog';
+  import { useOrdersBills } from '../../../stores/orders/ordersBills.js';
+  import { ToastMixin } from '../../../Utils/ToastMixin';
+  import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
+  
+  const { showToast } = ToastMixin.setup();
+  const { showConfirm } = ConfirmMixin.setup();
 
-
-  import { useOrders } from '../../../services/OrdersApiService.js';
-
-  const ordersStore = useOrders()
-  const visible = ref(false);
+  const orderStore = useOrdersBills()
   const orders = ref([]);
-  const order = ref([]);
   const actions = ref([
       {
-        active: true,
-        action: 'bill',
+        active: 'true',
+        method: 'issueInvoiceOrReceipt',
         label: 'Factura / Boleta',
       }
   ])
 
   const updateOrders = async () => {
-    await ordersStore.getOrdersBillPickupAndHere();
+    await orderStore.getOrdersBillPickupAndHere();
     showToast({
       status: 'success',
       message: 'Ordenes actualizadas',
@@ -60,8 +62,8 @@
     });
   }
 
-  watch(() => ordersStore.orders, (value) => {
-    orders.value = ordersStore.orders;
+  watch(() => orderStore.listOrders, (value) => {
+    orders.value = orderStore.listOrders;
   });
 
   const search = (data) => {
@@ -71,20 +73,35 @@
   const actionMethod = (data) => {
     switch (data.action) {
       case 'showDetailOrder':
-        showDetailOrder(data.order);
+        orderStore.showDetailOrder(data.order);
+        break;
+      case 'issueInvoiceOrReceipt':
+        issueInvoiceOrReceipt(data.order);
         break;
       default:
         break;
     }
   }
 
+  const issueInvoiceOrReceipt = async (value) => {
+    let result = await showConfirm();
+    if(result){
+      orderStore.issueInvoiceOrReceipt(value);
+    }else{
+      showToast({
+      status: 'info',
+      message: 'Proceso cancelado',
+    });
+    }
+  };
+
   const visibleDetailsMethod = (value) => {
-    visible.value = value.visibleDetails;
+    orderStore.visibleDialog = value.visibleDetails;
   };
 
   onBeforeMount( async() => {
-    await ordersStore.getOrdersBillPickupAndHere();
-    orders.value = ordersStore.orders;
+    await orderStore.getOrdersBillPickupAndHere();
+    orders.value = orderStore.listOrders;
   })
 
   const goBack = () => {
@@ -93,10 +110,10 @@
       }
   }
 
-  const showDetailOrder = (orders) => {
-    order.value = orders;
-    visible.value = true;
-  } 
+  // const showDetailOrder = (orders) => {
+  //   order.value = orders;
+  //   visible.value = true;
+  // } 
 
 </script>
   

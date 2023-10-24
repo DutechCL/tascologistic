@@ -36,12 +36,12 @@
           </Column>
           <Column headerClass="!bg-primary-900"  field="note" header="Detalles">
               <template #body="slotProps">
-                  <Button :icon="'pi pi-eye'" @click="action('showDetailOrder', slotProps.data)" class="!text-primary-900" label="Ver detalles" link></Button>
+                  <Button :icon="'pi pi-eye'" @click="actionMethod('showDetailOrder', slotProps.data)" class="!text-primary-900" label="Ver detalles" link></Button>
               </template>
           </Column>
           <Column headerClass="!bg-primary-900"  field="client" header="Emitir">
               <template #body="slotProps">
-                  <Button v-for="action in props.actions" :label="action.label" :disabled="!action.active" class="!py-1.5 !border-primary-900 !text-primary-900"  severity="primary" outlined></Button>
+                  <Button v-for="action in props.actions" :label="action.label" :disabled="!action.active" @click="actionMethod(action.method, slotProps.data)" class="!py-1.5 !border-primary-900 !text-primary-900"  severity="primary" outlined></Button>
               </template>
         </Column>
       </DataTable>
@@ -80,7 +80,7 @@
     }
   }
 
-  const action = (action, order) => {
+  const actionMethod = (action, order) => {
     emit('action', {'action': action, order});
   }
 

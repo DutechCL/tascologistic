@@ -1,13 +1,13 @@
 import axios from 'axios'
-
-const _baseUrl = 'http://tasco.test/';
+import Cookies from 'js-cookie';
+const _baseUrl = '/';
 // const _baseUrl = '/';
 
 const config = {
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
-    'Authorization': `Bearer ${localStorage.getItem('token')}`,
+    'Authorization': `Bearer ${Cookies.get('token')}`,
   }
 };
 

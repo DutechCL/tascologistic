@@ -109,10 +109,10 @@ class MenuItemsTableSeeder extends Seeder
                 'icon' => 'fas fa-list',
                 'order' => 0,
                 'created_at' => '2023-08-22 20:55:12',
-                'updated_at' => '2023-10-17 13:38:17',
+                'updated_at' => '2023-10-24 22:44:19',
                 'deleted_at' => NULL,
                 'permission_id' => 7,
-                'is_external' => 1,
+                'is_external' => 0,
             ),
             5 => 
             array (
@@ -128,10 +128,10 @@ class MenuItemsTableSeeder extends Seeder
                 'icon' => 'fas fa-money-bill-wave-alt',
                 'order' => 0,
                 'created_at' => '2023-08-22 20:57:28',
-                'updated_at' => '2023-10-17 13:38:17',
+                'updated_at' => '2023-10-24 22:44:14',
                 'deleted_at' => NULL,
                 'permission_id' => 9,
-                'is_external' => 1,
+                'is_external' => 0,
             ),
             6 => 
             array (
@@ -166,10 +166,10 @@ class MenuItemsTableSeeder extends Seeder
                 'icon' => 'fas fa-chart-line',
                 'order' => 0,
                 'created_at' => '2023-09-05 20:17:54',
-                'updated_at' => '2023-10-17 13:38:17',
+                'updated_at' => '2023-10-24 22:44:04',
                 'deleted_at' => NULL,
                 'permission_id' => 11,
-                'is_external' => 1,
+                'is_external' => 0,
             ),
             8 => 
             array (
@@ -185,10 +185,10 @@ class MenuItemsTableSeeder extends Seeder
                 'icon' => 'fas fa-chart-line',
                 'order' => 0,
                 'created_at' => '2023-09-05 20:19:15',
-                'updated_at' => '2023-10-17 13:38:17',
+                'updated_at' => '2023-10-24 22:43:57',
                 'deleted_at' => NULL,
                 'permission_id' => 11,
-                'is_external' => 1,
+                'is_external' => 0,
             ),
             9 => 
             array (

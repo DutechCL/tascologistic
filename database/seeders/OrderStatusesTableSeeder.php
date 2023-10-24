@@ -64,6 +64,24 @@ class OrderStatusesTableSeeder extends Seeder
                 'created_at' => '2023-08-29 19:31:20',
                 'updated_at' => '2023-09-27 16:56:30',
             ),
+            5 => 
+            array (
+                'id' => 6,
+                'name' => 'Facturado',
+                'description' => 'Facturadi de forma exitosa',
+                'color' => '#52c5ff',
+                'created_at' => '2023-10-24 22:41:39',
+                'updated_at' => '2023-10-24 22:41:39',
+            ),
+            6 => 
+            array (
+                'id' => 7,
+                'name' => 'Pickeado',
+                'description' => 'Pickeado de forma exitosa',
+                'color' => '#daff94',
+                'created_at' => '2023-10-24 22:42:44',
+                'updated_at' => '2023-10-24 22:42:44',
+            ),
         ));
         
         

@@ -43,16 +43,13 @@ import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
 import Tag from 'primevue/tag'
 import Button from 'primevue/button'
+import { useOrdersBills } from '../../../stores/orders/ordersBills.js';
 
-const order = ref([])
-const products = ref([])
-const props = defineProps({
-  orderDetails: Array
-})
-
-const emit = defineEmits();
+const orderStore = useOrdersBills()
+const order = ref(orderStore.order)
+const products = ref(orderStore.order?.OrderItems)
 const visibleDetails = () => {
-  emit('visible', {'visibleDetails': false});
+    orderStore.visibleDialog = false
 }
 
 const getLabel = (data) => {
@@ -67,11 +64,4 @@ const getLabel = (data) => {
             break;
     }
 }
-
-onBeforeMount(() => {
-  
-  order.value = props.orderDetails
-  products.value = props.orderDetails?.OrderItems
-
-})
 </script>

@@ -60,15 +60,11 @@ export const useOrders = defineStore('orders', {
         },
 
         async getOrdersBillPickupAndHere() {
-            let response = await getWithToken(`api/v1/orders/bill/pickup-here`);
-            this.listOrders = response.data;
-            return response.data;
+            return  await getWithToken(`api/v1/orders/bill/pickup-here`);
         },
 
         async getOrdersBillDelivery() {
-            let response = await getWithToken(`api/v1/orders/bill/delivery`);
-            this.listOrders = response.data;
-            return response.data;
+            return await getWithToken(`api/v1/orders/bill/delivery`);
         },
 
         async processOrderAction(body) {
@@ -87,8 +83,8 @@ export const useOrders = defineStore('orders', {
             return response;
         },
 
-        async assingResponsible(body, orderId) {
-            const response = await putWithToken(`api/v1/order/${orderId}/assign/responsible`, body);
+        async assingResponsible(data) {
+            const response = await putWithToken(`api/v1/order/${data.id}/assign/responsible`, data);
             if (response.status === 'success' || response.status === 'warning') {
                 this.updateOrderListByMethodShipping(response.order);
             }

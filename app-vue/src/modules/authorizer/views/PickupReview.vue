@@ -324,7 +324,7 @@ const executeRequest = async (endpoint, method, data = null) => {
     if (response.status === 'success') {
       showToast({
         status: 'success',
-        message: 'Operación exitosa',
+        message: response.message,
         time: 3000
       });
     }

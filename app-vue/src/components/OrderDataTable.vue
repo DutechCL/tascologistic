@@ -67,7 +67,6 @@
   } = UseSearch(ListOrders);
   
   const filter = (data) => {
-    console.log(data)
     if(data.type === 'Here'){
       ordersHere.value = data.orders;
     }else{
