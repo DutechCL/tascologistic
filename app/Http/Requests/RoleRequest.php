@@ -25,7 +25,8 @@ class RoleRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'name' => 'required|min:5|max:255',
+            'guard_name' => 'required|min:5|max:255',
         ];
     }
 
@@ -37,7 +38,8 @@ class RoleRequest extends FormRequest
     public function attributes()
     {
         return [
-            //
+            'name' => __('role.crud.name'),
+            'guard_name' => __('role.crud.guard_name'), 
         ];
     }
 
@@ -49,7 +51,7 @@ class RoleRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            '*.required' => 'El campo :attribute es requerido.',
         ];
     }
 }

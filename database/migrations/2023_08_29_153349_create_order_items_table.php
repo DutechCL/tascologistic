@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('ItemCode'); // Precio del producto en el momento de la orden
             $table->decimal('Price',12, 4)->nullable(); // Precio del producto en el momento de la orden
             $table->integer('Quantity')->default(0); // Precio del producto en el momento de la orden
+            $table->string('WarehouseCode')->nullable();
             $table->string('VatGroup')->nullable();
             $table->string('TaxLiable')->nullable();
             $table->string('PickStatus')->nullable();

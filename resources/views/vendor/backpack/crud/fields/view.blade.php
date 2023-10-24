@@ -1,11 +1,15 @@
 @php
-        $permissions = DB::table('permissions')->distinct('slug')->pluck('slug')->toArray();
-        $slugs = array_combine($permissions, $permissions);
+    $permissions = DB::table('permissions')->distinct('slug')->pluck('slug')->toArray();
+    $slugs = array_combine($permissions, $permissions);
 
-        $menuItem = \App\Models\MenuItem::find( request()->route('id'));
-        if ($menuItem) {
-            $selectedSlug = $menuItem->permission;
+    $menuItem = \App\Models\MenuItem::find( request()->route('id'));
+    $optionsSelected = '';
+    if ($menuItem) {
+        $selectedSlug = $menuItem->permission;
+        if(isset($menuItem->permission->slug)){
+            $optionsSelected = $menuItem->permission->slug;
         }
+    }
 @endphp
 
 
@@ -13,15 +17,9 @@
     <label for="slugs">Vista</label>
     <select id="slugs" name="slugs" class="form-control">
     <option value=""> </option>
-        <?php
-        if (isset($slugs) && !empty($slugs)) {
-            foreach ($slugs as $slug) {
-                $slug = htmlentities($slug);
-                $selected = ($slug === isset($selectedSlug) ? $selectedSlug->slug : '') ? 'selected' : '';
-                echo "<option value=\"$slug\" $selected>$slug</option>";
-            }
-        }
-        ?>
+    @foreach($slugs as $slug)
+        <option value="{{$slug}}" {{ $optionsSelected === $slug ? 'selected' : '' }}>{{$slug}}</option>
+    @endforeach
     </select>
 </div>
 

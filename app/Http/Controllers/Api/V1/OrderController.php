@@ -35,7 +35,7 @@ class OrderController extends Controller
     {
         try {
 
-            $orders = $this->orderService->listOrders('cda');
+            $orders = $this->orderService->listOrdersCda();
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()
@@ -45,11 +45,10 @@ class OrderController extends Controller
         }
     }
 
-    public function getOrdersPickerAndReviewer()
+    public function getOrdersPickerAndReviewer($wareHouseCode)
     {
         try {
-
-            $orders = $this->orderService->listOrders('picker-revisor');
+            $orders = $this->orderService->listOrdersPickerAndReviewer($wareHouseCode);
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()
@@ -63,7 +62,7 @@ class OrderController extends Controller
     {
         try {
 
-            $orders = $this->orderService->listOrders('pickup-here');
+            $orders = $this->orderService->listOrdersBills('pickup-here');
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()
@@ -77,7 +76,7 @@ class OrderController extends Controller
     {
         try {
 
-            $orders = $this->orderService->listOrders('delivery');
+            $orders = $this->orderService->listOrdersBills('delivery');
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()

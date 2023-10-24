@@ -68,7 +68,7 @@
         <ul class="d-flex list-inline">
             @foreach ($user->warehouses as $warehouse)
             <li class="mt-4 mr-4">
-                <a href="{{ url('/app/autorizador/pickeo-revision/') }}" target="_blank">
+                <a href="{{ url('/app/autorizador/pickeo-revision', $warehouse->WarehouseCode) }}" target="_blank">
                     <div class="align-items-center boder-card d-flex flex-column justify-content-center mr-4 pb-3 pt-4 px-5" style="width: 245px;     height: 240px;">
                         <!-- Aquí puedes usar la información de cada bodega -->
                         <img src="{{ asset('images/bodega.png') }}" alt="">

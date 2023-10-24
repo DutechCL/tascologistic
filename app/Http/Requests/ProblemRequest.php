@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ProblemRequest extends FormRequest
@@ -25,7 +26,9 @@ class ProblemRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'title'       => 'required',
+            'description' => 'nullable',
+            'type'        => ['required', Rule::in(['cda', 'picker-reviewer'])],
         ];
     }
 
@@ -37,7 +40,9 @@ class ProblemRequest extends FormRequest
     public function attributes()
     {
         return [
-            //
+            'title'       => __('problem.crud.name'),
+            'description' => __('problem.crud.description'),
+            'type'        => __('problem.crud.type'),
         ];
     }
 
@@ -49,7 +54,8 @@ class ProblemRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            '*.required' => 'El campo :attribute es requerido.',
+            '*.in'       => 'El campo :attribute debe ser uno de los siguientes valores: :values.',
         ];
     }
 }

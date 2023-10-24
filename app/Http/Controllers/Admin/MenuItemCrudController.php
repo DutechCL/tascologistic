@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\MenuItemRequest;
+use App\Models\User;
+use App\Models\MenuItem;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Requests\MenuItemRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
-use Illuminate\Support\Facades\DB;
-use App\Models\MenuItem;
 
 class MenuItemCrudController extends CrudController
 {
@@ -244,4 +246,48 @@ class MenuItemCrudController extends CrudController
             throw $th;
         }
     }
+
+    public function getMenuItems()
+    {
+        $domain = config('app.url');
+    
+        $usuario = Auth::user() ?? User::find(1);
+    
+        $menuItems = MenuItem::with('children')->whereNull('parent_id')->orderBy('lft')->get();
+    
+        $menuArray = $menuItems->filter(function ($menuItem) use ($usuario, $domain) {
+            if ($menuItem->children->count() > 0) {
+                $menuItem->children = $menuItem->children->filter(function ($menuHijo) use ($usuario) {
+                    return $usuario->can($menuHijo->permission->name);
+                })->map(function ($menuHijo) use ($domain) {
+                    return [
+                        'label' => $menuHijo->name,
+                        'url' => $domain . $menuHijo->link,
+                    ];
+                })->toArray();
+    
+                return count($menuItem->children) > 0;
+            }
+    
+            return $usuario->can($menuItem->permission ? $menuItem->permission->name : null);
+        })->map(function ($menuItem) use ($domain) {
+            $itemArray = [
+                'label' => $menuItem->name,
+            ];
+    
+            if (count($menuItem->children) > 0) {
+                $itemArray['items'] = $menuItem->children;
+            } else {
+                $itemArray['url'] = $domain . $menuItem->link;
+            }
+    
+            return $itemArray;
+        })->toArray();
+    
+        return response()->json([
+            'status' => 'success',
+            'data' => $menuArray,
+        ]);
+    }
+
 }

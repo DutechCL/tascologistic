@@ -38,7 +38,7 @@ class PermissionsCrudController extends CrudController
         CRUD::setEntityNameStrings(__('permission.permissions'), __('permission.permissions'));
     }
 
-    public function store(){
+    public function store(PermissionsRequest $request){
         try {
             DB::beginTransaction();
 
@@ -156,11 +156,10 @@ class PermissionsCrudController extends CrudController
         ]);
     }
 
-    public function update()
+    public function update(PermissionsRequest $request)
     {
         try {
             DB::beginTransaction();
-            $request = $this->crud->getRequest();
 
             $id = $request->input('id', '');
     

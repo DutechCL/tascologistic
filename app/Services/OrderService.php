@@ -18,38 +18,47 @@ class OrderService
     const ACTION_REJECT = 2;
     const ACTION_INFO = 3;
 
-    public function listOrders($available = null)
+    public function listOrdersCda()
     {
-        $user = auth()->user() ?? User::find(1);
-
-        $allowedWarehouses = $user->allowedWarehouses();
-
-        $ordersQuery = Order::withOrderDetails()
-            ->orderByRaw('order_status_id = 4 DESC')
-            ->orderBy('created_at', 'ASC');
-
-        switch ($available) {
-            case 'cda':
-                $ordersQuery->where(function ($query) {
-                    $query->whereIn('method_shipping_id', [MethodShipping::METHOD_SHIPPING_HERE])
+        return Order::withOrderDetails()
+                ->orderByRaw('order_status_id = 4 DESC')
+                ->orderBy('created_at', 'ASC')
+                ->where(function ($query) {
+                        $query->whereIn('method_shipping_id', [MethodShipping::METHOD_SHIPPING_HERE])
                         ->where('order_status_id', Order::ORDER_STATUS_REJECTED);
                 })->orWhere(function ($query) {
                     $query->whereIn('method_shipping_id', [MethodShipping::METHOD_SHIPPING_PICKUP, MethodShipping::METHOD_SHIPPING_DELIVERY])
                         ->whereIn('order_status_id', [Order::ORDER_STATUS_ON_HOLD, Order::ORDER_STATUS_REJECTED]);
-                });
-                break;
+                })->get();
+    }
 
-            case 'picker-revisor':
-                $ordersQuery->where(function ($query) {
+    public function listOrdersPickerAndReviewer($wareHouseCode)
+    {
+        if (!$this->isValidWarehouseForUser($wareHouseCode)) {
+            throw new \Exception('No tiene permisos para acceder a esta bodega');
+        }
+        
+        return Order::byWarehouse([$wareHouseCode])
+                ->withOrderDetails()
+                ->orderByRaw('order_status_id = 4 DESC')
+                ->orderBy('created_at', 'ASC')
+                ->where(function ($query) {
                     $query->whereIn('method_shipping_id', [MethodShipping::METHOD_SHIPPING_HERE])
                         ->whereNotIn('order_status_id', [Order::ORDER_STATUS_REJECTED, Order::ORDER_STATUS_REVIEWED]);
                 })->orWhere(function ($query) {
                     $query->whereIn('method_shipping_id', [MethodShipping::METHOD_SHIPPING_PICKUP, MethodShipping::METHOD_SHIPPING_DELIVERY])
                         ->whereNotIn('order_status_id', [Order::ORDER_STATUS_REJECTED, Order::ORDER_STATUS_REVIEWED])
                         ->where('is_managed', true);
-                });
-                break;
+                })->get();
+    }
 
+
+    public function listOrdersBills($available = null)
+    {
+        $ordersQuery = Order::withOrderDetails()
+            ->orderBy('created_at', 'ASC');
+
+        switch ($available) {
             case 'pickup-here':
                 $this->applyShippingAndStatusFilter($ordersQuery, [
                     MethodShipping::METHOD_SHIPPING_PICKUP, 
@@ -187,4 +196,12 @@ class OrderService
             'order' => new OrderResource($order),
         ];
     }
+
+    public function isValidWarehouseForUser($wareHouseCode)
+    {
+        $user = auth()->user() ?? User::find(1);
+
+        return in_array($wareHouseCode, $user->allowedWarehouses()->toArray(), true);
+    }
+
 }

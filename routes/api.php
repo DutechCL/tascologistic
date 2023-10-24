@@ -10,6 +10,7 @@ use App\Http\Controllers\Api\V1\CustomerController;
 use App\Http\Controllers\Api\V1\ProblemsController;
 use App\Http\Controllers\Api\V1\OrderItemsController;
 use App\Http\Controllers\Api\V1\PermissionController;
+use App\Http\Controllers\Admin\MenuItemCrudController;
 use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
 
 
@@ -35,14 +36,14 @@ Route::prefix('v1')->group(
         Route::get('/get-token', [AuthController::class, 'getTokenFromWeb']);
         Route::post('/login', [AuthController::class, 'login']);
 
-        Route::middleware(['auth:sanctum'])->group(function () {
+        // Route::middleware(['auth:sanctum'])->group(function () {
             Route::apiResource('customers', CustomerController::class);
             // Route::apiResource('orders', OrderController::class);
             Route::apiResource('products', ProductController::class);
             Route::apiResource('order-items', OrderItemsController::class);
             Route::put('order/{id}/assign/responsible', [OrderController::class, 'assingResponsible']);
             Route::get('orders/available/cda', [OrderController::class, 'getOrdersCda']);
-            Route::get('orders/available/picker-reviewer', [OrderController::class, 'getOrdersPickerAndReviewer']);
+            Route::get('orders/available/picker-reviewer/{wareHouseCode}', [OrderController::class, 'getOrdersPickerAndReviewer']);
             Route::get('orders/bill/pickup-here', [OrderController::class, 'getOrdersBillPickupAndHere']);
             Route::get('orders/bill/delivery', [OrderController::class, 'getOrdersBilldelivery']);
             Route::post('orders/by-method-shipping', [OrderController::class, 'getOrdersByMethodShipping']);
@@ -51,7 +52,8 @@ Route::prefix('v1')->group(
             Route::post('order/proccess', [OrderController::class, 'processOrderPickerAndReviewer']);
             Route::post('orders/by-params', [OrderController::class, 'getOrdersByParams']);
             Route::post('problems', [ProblemsController::class, 'index']);
-        });
+            Route::get('menu-items', [MenuItemCrudController::class, 'getMenuItems']);
+        // });
         //problems
     }
 );

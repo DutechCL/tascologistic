@@ -50,8 +50,9 @@ class OrderItemSeeder extends Seeder
                     }
                 }
             }
-            $columnNames = Schema::getColumnListing('order_items'); // Obtiene los nombres de columna de la tabla
+            $columnNames = Schema::getColumnListing('order_items');
             $dataToInsert = array_intersect_key($rowData, array_flip($columnNames));
+
             OrderItem::create(
                 $dataToInsert
             );

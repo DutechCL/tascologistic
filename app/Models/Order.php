@@ -88,7 +88,7 @@ class Order extends Model
 
     public function scopeByWarehouse($query, $allowedWarehouses)
     {
-        return $query->whereHas('orderItems.product', function ($subquery) use ($allowedWarehouses) {
+        return $query->whereHas('orderItems', function ($subquery) use ($allowedWarehouses) {
             $subquery->whereIn('WareHouseCode', $allowedWarehouses);
         });
     }
