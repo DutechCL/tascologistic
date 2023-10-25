@@ -50,7 +50,7 @@
             
             <Column headerClass="!bg-primary-900"  field="note" header="" >
               <template #body="slotProps">
-                <Button v-if="slotProps.data.OrderStatusId != constants.ORDER_STATUS_REVIEWER" :label="'Piekear'" @click="action(slotProps.data, constants.RESPONSIBLE_PICKER)" class="p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900"/>
+                <Button v-if="[constants.ORDER_STATUS_PICKED ,constants.ORDER_STATUS_ON_HOLD].includes(slotProps.data.OrderStatusId) " :label="'Piekear'" @click="action(slotProps.data, constants.RESPONSIBLE_PICKER)" class="p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900"/>
                 <Button v-if="slotProps.data.OrderStatusId == constants.ORDER_STATUS_REVIEWER" :label="'Revisar'" @click="action(slotProps.data, constants.RESPONSIBLE_REVIEWER)" class="p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900"/>
               </template>
             </Column>

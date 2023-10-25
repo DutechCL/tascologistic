@@ -4,7 +4,7 @@
         <h1 class="mb-4 text-primary-900 font-inter font-semibold text-2xl">
           Despacho  <a style="cursor: pointer;" @click="updateOrders"><i class="pi pi-refresh"></i></a> 
         </h1>
-        <Search :orders="ordersStore.orders" @search="search"/>
+        <Search :orders="orderStore.orders" @search="search"/>
       </div>
 
       <DataTableOrders 
@@ -14,9 +14,9 @@
         />
 
       <DialogDetail  
-        v-if="visible" 
-        v-model:visible="visible" 
-        :orderDetails="order"
+        v-if="orderStore.visibleDialog" 
+        v-model:visible="orderStore.visibleDialog" 
+        :orderDetails="orderStore.order"
         @visible="visibleDetailsMethod"
          />
         <div v-if="orders.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -33,14 +33,18 @@
   import Button from 'primevue/button'
   import Search from '../../../components/search/Search.vue'
   import DialogDetail from '../components/DialogDetail.vue';
-  import { useOrders } from '../../../services/OrdersApiService.js';
+
   import DataTableOrders from '../components/tables/DataTableOrders.vue';
+  import { useOrdersBills } from '../../../stores/orders/ordersBills.js';
+  import { ToastMixin } from '../../../Utils/ToastMixin';
+  import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
+  
+  const { showToast } = ToastMixin.setup();
+  const { showConfirm } = ConfirmMixin.setup();
 
-
-  const ordersStore = useOrders()
+  const orderStore = useOrdersBills()
   const visible = ref(false);
   const orders = ref([]);
-  const order = ref([]);
   const actions = ref([
       {
         active: true,
@@ -61,7 +65,7 @@
   const actionMethod = (data) => {
     switch (data.action) {
       case 'showDetailOrder':
-        showDetailOrder(data.order);
+        orderStore.showDetailOrder(data.order);
         break;
       default:
         break;
@@ -69,7 +73,7 @@
   }
 
   const updateOrders = async () => {
-    await ordersStore.getOrdersBillDelivery();
+    await orderStore.getOrdersBillDelivery();
     showToast({
       status: 'success',
       message: 'Ordenes actualizadas',
@@ -77,8 +81,8 @@
     });
   }
 
-  watch(() => ordersStore.orders, (value) => {
-    orders.value = ordersStore.orders;
+  watch(() => orderStore.orders, (value) => {
+    orders.value = orderStore.orders;
   });
 
  const goBack = () => {
@@ -92,14 +96,9 @@
   };
 
   onBeforeMount( async() => {
-    await ordersStore.getOrdersBillDelivery();
-    orders.value = ordersStore.orders;
+    await orderStore.getOrdersBillDelivery();
+    orders.value = orderStore.orders;
   })
-
-  const showDetailOrder = (orders) => {
-    order.value = orders;
-    visible.value = true;
-  } 
 
   </script>
   

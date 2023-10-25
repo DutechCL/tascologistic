@@ -78,6 +78,14 @@ class OrderService
         return $ordersQuery->get();
     }
 
+    public function listOrdersPayment()
+    {
+        return Order::withOrderDetails()
+            ->orderBy('created_at', 'ASC')
+            ->whereIn('order_status_id', [Order::ORDER_STATUS_REVIEWED])
+            ->get();
+    }
+
     private function applyShippingAndStatusFilter($query, $shippingMethods, $orderStatus)
     {
         $query->whereIn('method_shipping_id', $shippingMethods)

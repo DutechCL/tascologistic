@@ -46,6 +46,7 @@ Route::prefix('v1')->group(
             Route::get('orders/available/picker-reviewer/{wareHouseCode}', [OrderController::class, 'getOrdersPickerAndReviewer']);
             Route::get('orders/bill/pickup-here', [OrderController::class, 'getOrdersBillPickupAndHere']);
             Route::get('orders/bill/delivery', [OrderController::class, 'getOrdersBilldelivery']);
+            Route::get('orders/payment', [OrderController::class, 'getOrdersPayment']);
             Route::post('orders/by-method-shipping', [OrderController::class, 'getOrdersByMethodShipping']);
             Route::post('orders/authorizer/action', [OrderController::class, 'processOrderAction']);
             Route::post('orders/authorizer/observation', [OrderController::class, 'addObservation']);

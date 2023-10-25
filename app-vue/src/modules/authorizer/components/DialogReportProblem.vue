@@ -71,7 +71,6 @@ const handleClose = () => {
     hasTextInOtherProblem.value = false;
     selectedProduct.value = [];
     otherProblem.value = '';
-    
 }
 
 watch(

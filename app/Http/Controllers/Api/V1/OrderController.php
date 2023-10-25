@@ -86,6 +86,20 @@ class OrderController extends Controller
         }
     }
 
+    public function getOrdersPayment()
+    {
+        try {
+
+            $orders = $this->orderService->listOrdersPayment();
+
+            return $this->success(
+                OrderResource::collection($orders)->resolve()
+            );
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
     /**
      * Display a listing of the resource.
      *

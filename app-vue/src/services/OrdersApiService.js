@@ -67,6 +67,10 @@ export const useOrders = defineStore('orders', {
             return await getWithToken(`api/v1/orders/bill/delivery`);
         },
 
+        async getOrderspayment() {
+            return await getWithToken(`api/v1/orders/payment`);
+        },
+
         async processOrderAction(body) {
             const response = await postWithToken('api/v1/orders/authorizer/action', body);
             if (response.status === 'success') {

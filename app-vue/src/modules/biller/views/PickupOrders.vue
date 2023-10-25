@@ -110,11 +110,6 @@
       }
   }
 
-  // const showDetailOrder = (orders) => {
-  //   order.value = orders;
-  //   visible.value = true;
-  // } 
-
 </script>
   
 <style>
