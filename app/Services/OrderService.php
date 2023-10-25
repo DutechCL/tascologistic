@@ -38,18 +38,23 @@ class OrderService
             throw new \Exception('No tiene permisos para acceder a esta bodega');
         }
         
-        return Order::byWarehouse([$wareHouseCode])
-                ->withOrderDetails()
-                ->orderByRaw('order_status_id = 4 DESC')
-                ->orderBy('created_at', 'ASC')
-                ->where(function ($query) {
-                    $query->whereIn('method_shipping_id', [MethodShipping::METHOD_SHIPPING_HERE])
-                        ->whereNotIn('order_status_id', [Order::ORDER_STATUS_REJECTED, Order::ORDER_STATUS_REVIEWED]);
-                })->orWhere(function ($query) {
-                    $query->whereIn('method_shipping_id', [MethodShipping::METHOD_SHIPPING_PICKUP, MethodShipping::METHOD_SHIPPING_DELIVERY])
-                        ->whereNotIn('order_status_id', [Order::ORDER_STATUS_REJECTED, Order::ORDER_STATUS_REVIEWED])
-                        ->where('is_managed', true);
-                })->get();
+        return Order::withOrderDetails()
+            ->orderByRaw('order_status_id = 4 DESC')
+            ->orderBy('created_at', 'ASC')
+            ->where(function ($query) use ($wareHouseCode) {
+                $query->whereIn('method_shipping_id', [MethodShipping::METHOD_SHIPPING_HERE])
+                    ->whereNotIn('order_status_id', [Order::ORDER_STATUS_REJECTED, Order::ORDER_STATUS_REVIEWED])
+                    ->whereHas('orderItems', function ($subquery) use ($wareHouseCode) {
+                        $subquery->whereIn('WareHouseCode', [$wareHouseCode]);
+                    });
+            })->orWhere(function ($query) use ($wareHouseCode) {
+                $query->whereIn('method_shipping_id', [MethodShipping::METHOD_SHIPPING_PICKUP, MethodShipping::METHOD_SHIPPING_DELIVERY])
+                    ->whereNotIn('order_status_id', [Order::ORDER_STATUS_REJECTED, Order::ORDER_STATUS_REVIEWED])
+                    ->where('is_managed', true)
+                    ->whereHas('orderItems', function ($subquery) use ($wareHouseCode) {
+                        $subquery->whereIn('WareHouseCode', [$wareHouseCode]);
+                    });
+            })->get();
     }
 
 
