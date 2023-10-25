@@ -27,7 +27,8 @@ export const useOrders = defineStore('orders', {
         listOrdersHere: [],
         listOrdersPickup: [],   
         listOrdersDelivery: [],
-        wareHouseCode: '',          
+        wareHouseCode: '', 
+        visibleReport: false,         
     }),
     getters: {
         orders: (state) => state.listOrders,

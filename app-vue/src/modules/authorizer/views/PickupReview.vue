@@ -110,16 +110,17 @@
           </div>
         </div>
         <div class="space"></div>
-      
+      <div class="content-picker-problem">
         <DialogReportProblem 
           v-if="isDataLoaded && ordersPickup.length > 0 || ordersDelivery.length > 0 || ordersHere.length > 0"
-          v-model:visible="visibleReport" 
+          v-model:visible="ordersStore.visibleReport" 
           :product="product"
           :problemsProduct="problemsSelected"
           :typeProblems="constants.RESPONSIBLE_PICKER_AND_REVIEWER"
           @selection-change="handleSelectionChange" 
           @visible="visibleReportMethod"
           />
+      </div>
           
         </div>
       </div>
@@ -268,7 +269,7 @@ const checkProduct = (rowData, action) => {
     }    
 
     isCompleteMap.value[rowData.id] = (action === 'complete');
-    visibleReport.value = (action !== 'complete');
+    ordersStore.visibleReport = (action !== 'complete');
     product.value = (action !== 'complete') ? rowData : null;
     productsCheck.value = Array.from(productCheck);
     disableButton.value = (productsCheck.value.length !== products.value.length);
@@ -280,7 +281,7 @@ const checkProduct = (rowData, action) => {
 
 const visibleReportMethod = ({ value, tempSelection }) => {
   if (!value) {
-    visibleReport.value = visibleReport.visibleReport;
+    ordersStore.visibleReport = visibleReport.visibleReport;
     productsProblem.value = tempSelection;
   }
 };
@@ -395,6 +396,9 @@ const sanitizeHTML = (htmlString) => {
 </script>
 
 <style>
+.p-dialog-header-close{
+  display: none !important;
+}
 .p-multiselect-label.p-placeholder, .p-multiselect-trigger{
   color: #259bd7 !important;
 }

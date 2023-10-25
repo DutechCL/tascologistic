@@ -66,6 +66,23 @@ body.flex-row {
 .custom-a{
     padding: 10px 0px 70px 0px !important;
 }
+.custom-class-header a.navbar-brand{
+ display: none !important;
+}
+
+.custom-class-header{
+    background: var(--bs-primary) !important;
+   }
+
+.custom-class-header button.navbar-toggler.sidebar-toggler{
+    background-color: #fff !important;
+    height: 49px;
+    margin-left: 20px;
+}
+
+.custom-class-header button.navbar-toggler.sidebar-toggler span{
+    color: #fff !important;
+}
 
 body.flex-register-row {
     flex-direction: row !important;

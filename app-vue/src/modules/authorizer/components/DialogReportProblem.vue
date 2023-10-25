@@ -1,7 +1,7 @@
 <template>
   <Dialog modal header=" " :style="{ width: '70vw' }" @update:visible="handleClose">
     <div>
-      <h1 class="mb-3 text-primary-900 font-inter font-semibold text-xl">
+      <h1 class="mb-3 mt-3  text-primary-900 font-inter font-semibold text-xl">
         <i class="pi pi-info-circle !text-xl rotate-180"></i>
         Reportar problema
       </h1>
@@ -15,7 +15,10 @@
         <Editor class="custom-editor" v-model="otherProblem" editorStyle="height: 80px"/>
       </div>
     </div>
-    <Button label="Reportar"  :disabled="disableButton" @click="visibleReport" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
+    <div>
+      <Button label="Reportar"  :disabled="disableButton" @click="visibleReport" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
+      <Button v-if="props.typeProblems != constants.RESPONSIBLE_CDA" label="Cancelar"  @click="ordersStore.visibleReport = false" class="mr-4 !py-2 !px-10 p-button-outlined float-right !border-primary-900 !text-primary-900 mt-5"/>
+    </div>
 </Dialog>
 </template>
 
@@ -127,6 +130,7 @@ const sendProblems = () => {
   });
   product.value.other = otherProblem.value;
   listProblems.value = selectedProduct.value;
+  ordersStore.visibleReport = false;
   emit('selection-change',  product.value, {'visibleReport': false, 'listProblems': listProblems.value});
   handleClose();
 }
