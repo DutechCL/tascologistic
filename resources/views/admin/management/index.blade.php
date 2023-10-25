@@ -68,7 +68,7 @@
         <ul class="d-flex list-inline">
             @foreach ($user->warehouses as $warehouse)
             <li class="mt-4 mr-4">
-                <a href="{{ url('/app/autorizador/pickeo-revision', $warehouse->WarehouseCode) }}" target="_blank">
+                <a href="{{ url('/app/autorizador/pickeo-revision', $warehouse->WarehouseCode) }}">
                     <div class="align-items-center boder-card d-flex flex-column justify-content-center mr-4 pb-3 pt-4 px-5" style="width: 245px;     height: 240px;">
                         <!-- Aquí puedes usar la información de cada bodega -->
                         <img src="{{ asset('images/bodega.png') }}" alt="">
@@ -87,7 +87,7 @@
     <div>
         <ul class="d-flex list-inline">
             <li class="mt-4 mr-4">
-                <a href="/app/tracking/ordenes" target="_blank" >
+                <a href="/app/tracking/ordenes" >
                     <div class="align-items-center boder-card d-flex flex-column justify-content-center mr-4 pb-3 pt-4 px-5" style="width: 245px; height: 240px;">
                         <img src="{{ asset('images/bodega.png') }}" alt="" style="width: 100px">
                         <p class=" font-xl pt-4 text-center">Pantalla salas <br> de venta</p>
@@ -95,7 +95,7 @@
                 </a>
             </li>
             <li class="mt-4 mr-4">
-                <a href="/app/tracking/retiro-despacho" target="_blank" >
+                <a href="/app/tracking/retiro-despacho" >
                     <div class="align-items-center boder-card d-flex flex-column justify-content-center mr-4 pb-3 pt-4 px-5" style="width: 245px; height: 240px;">
                         <img src="{{ asset('images/bodega.png') }}" alt="" style="width: 100px">
                         <p class=" font-xl pt-4 text-center">Pantalla bodega</p>
