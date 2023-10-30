@@ -31,11 +31,25 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getOrdersCda()
+    public function getOrdersCdaToManager()
     {
         try {
 
-            $orders = $this->orderService->listOrdersCda();
+            $orders = $this->orderService->listOrdersCdaToManage();
+
+            return $this->success(
+                OrderResource::collection($orders)->resolve()
+            );
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function getOrdersCdaManage()
+    {
+        try {
+
+            $orders = $this->orderService->listOrdersCdaManage();
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()
@@ -48,7 +62,7 @@ class OrderController extends Controller
     public function getOrdersPickerAndReviewer($wareHouseCode)
     {
         try {
-            $orders = $this->orderService->listOrdersPickerAndReviewer($wareHouseCode);
+            $orders = $this->orderService->listOrdersPickerReviewer($wareHouseCode);
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()
@@ -105,12 +119,29 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function processOrderAction(Request $request)
+    public function processOrderCda(Request $request)
     {
         try {
-            $order = Order::findOrFail($request->orderId);
-            $result = $this->orderService->processOrderAction($order, $request);
 
+            $result = $this->orderService->processOrderCda($request);
+
+            return response()->json([
+                'status' => 'success',
+                'message' => $result->message,
+                'order' => $result->order,
+            ]);
+
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function processOrderPickerReviewer(Request $request)
+    {
+        try {
+
+            $result = $this->orderService->processOrderPickerReviewer($request);
+            
             return response()->json([
                 'status' => 'success',
                 'message' => $result->message,
@@ -127,6 +158,23 @@ class OrderController extends Controller
         try {
             $order = Order::findOrFail($request->orderId);
             $result = $this->orderService->addObservation($order, $request);
+
+            return response()->json([
+                'status' => 'success',
+                'message' => $result->message,
+                'order' => $result->order,
+            ]);
+
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function issueInvoiceOrReceipt(Request $request)
+    {
+        try {
+            $order = Order::findOrFail($request->id);
+            $result = $this->orderService->issueInvoiceOrReceipt($order, $request);
 
             return response()->json([
                 'status' => 'success',

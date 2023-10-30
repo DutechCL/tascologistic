@@ -75,7 +75,7 @@ const generateUniqueId = () => {
   return `input_${Date.now()}`;
 };
 
-const { allOrders } = toRefs(props);
+const { allOrders }  = toRefs(props);
 const { typeOrders } = toRefs(props);
 const {
     dates,

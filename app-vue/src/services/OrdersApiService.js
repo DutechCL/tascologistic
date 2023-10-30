@@ -37,14 +37,16 @@ export const useOrders = defineStore('orders', {
         ordersDelivery: (state) => state.listOrdersDelivery,
     },
     actions: {
-        async getOrdersCda() {
-            let response = await getWithToken('api/v1/orders/available/cda');
-            this.listOrders = response.data;
-            return response.data;
+        async getOrdersCdaToManager() {
+            return await getWithToken('api/v1/orders/cda');
+        },
+
+        async getOrdersCdaManage() {
+            return await getWithToken('api/v1/orders/cda/manage');
         },
 
         async getOrdersPickerAndReviewer() {
-            let response = await getWithToken(`api/v1/orders/available/picker-reviewer/${this.wareHouseCode}`);
+            let response = await getWithToken(`api/v1/orders/picker-reviewer/${this.wareHouseCode}`);
             this.listOrders = response.data;
             const classify = classifyOrders(this.listOrders);
             this.listOrdersHere = classify.ordersHere;
@@ -61,23 +63,19 @@ export const useOrders = defineStore('orders', {
         },
 
         async getOrdersBillPickupAndHere() {
-            return  await getWithToken(`api/v1/orders/bill/pickup-here`);
+            return  await getWithToken(`api/v1/orders/bills/pickup-here`);
         },
 
         async getOrdersBillDelivery() {
-            return await getWithToken(`api/v1/orders/bill/delivery`);
+            return await getWithToken(`api/v1/orders/bills/delivery`);
         },
 
         async getOrderspayment() {
             return await getWithToken(`api/v1/orders/payment`);
         },
 
-        async processOrderAction(body) {
-            const response = await postWithToken('api/v1/orders/authorizer/action', body);
-            if (response.status === 'success') {
-                this.updateOrderListByMethodShipping(response.order);
-            }
-            return response;
+        async processOrderCda(body) {
+            return await postWithToken('api/v1/orders/cda/process-order', body);
         },
 
         async addObservation(body) {
@@ -89,15 +87,18 @@ export const useOrders = defineStore('orders', {
         },
 
         async assingResponsible(data) {
-            const response = await putWithToken(`api/v1/order/${data.id}/assign/responsible`, data);
+            const response = await putWithToken(`api/v1/orders/picker-reviewer/${data.id}/assign/responsible`, data);
             if (response.status === 'success' || response.status === 'warning') {
                 this.updateOrderListByMethodShipping(response.order);
             }
             return response;
         },
 
+        async issueInvoiceOrReceipt(body){
+            return await postWithToken('api/v1/orders/bill/invoice-or-receipt', body);
+        },
+
         updateOrderListByMethodShipping(order) {
-            // console.log(order)
             let updatedOrderIndex;
             switch (order.MethodShippingId) {
                 case 1:

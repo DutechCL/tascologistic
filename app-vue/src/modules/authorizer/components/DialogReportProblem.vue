@@ -30,7 +30,7 @@ import Column from 'primevue/column'
 import Button from 'primevue/button'
 import Editor from 'primevue/editor';
 import { useProblems } from '../../../services/ProblemsApiService.js';
-import { useOrders } from '../../../services/OrdersApiService.js';
+import { useOrdersCda } from '../../../stores/orders/ordersCda.js';
 import { ToastMixin } from '../../../Utils/ToastMixin';
 import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
 import constants from '@/constants/constants';
@@ -47,7 +47,7 @@ const props = defineProps({
 })
 const emit = defineEmits();
 const problemsStore = useProblems()
-const ordersStore = useOrders();
+const ordersStore = useOrdersCda();
 const problems = ref([])
 const selectedProduct = ref([]);
 const showEditor = ref(false);
@@ -89,7 +89,11 @@ watch(
 const visibleReport = () => {
   disableButton.value = true;
   if (props.typeProblems == constants.RESPONSIBLE_CDA) {
-    reportOrderProblem();
+    ordersStore.currentOrder.action = 'reject';
+    ordersStore.currentOrder.orderId = props.order.id;
+    ordersStore.currentOrder.problems = selectedProduct.value;
+    ordersStore.currentOrder.other = otherProblem.value;
+    emit('processOrder');
   } else {
     sendProblems()
   }
@@ -113,7 +117,7 @@ watch(selectedProduct, (newSelection) => {
   showEditor.value = newSelection.some((product) => product.title === 'Otro');
   disableButton.value = newSelection.length === 0 || (showEditor.value && !hasTextInOtherProblem.value);
   
-  if (props.typeProblems === constants.RESPONSIBLE_PICKER_AND_REVIEWER) {
+  if (props.typeProblems === constants.RESPONSIBLE_PICKER_REVIEWER) {
     product.value = props.product;
     if(!isSendProblems.value){
       product.value.problems = newSelection;
@@ -144,50 +148,10 @@ watch(otherProblem, () => {
   }
 });
 
-const reportOrderProblem = async () => {
-  const result = await showConfirm();
-  if (result) {
-    try {
-      const body = {
-          orderId: props.order.id,
-          action: 2,
-          responsible: constants.RESPONSIBLE_CDA,
-          problems: selectedProduct.value,
-          other: otherProblem.value,
-          orderItemsProblem: null
-      }
-      let data = await ordersStore.processOrderAction(body);
-      emit('visible', { 'visibleReport': false});
-      if(data.status === 'success'){
-        selectedProduct.value = [];
-        otherProblem.value = '';
-        disableButton.value = true;
-        hasTextInOtherProblem.value = false;
-        showToast({
-          status: data.status,
-          message: data.message,
-        });
-      }
-    } catch (error) {
-      if (error.response) {
-        showToast({
-          status: error.response.data.status,
-          message: error.response.data.message,
-        });
-      }
-    }
-  } else {
-    showToast({
-      status: 'info',
-      message: 'Proceso cancelado',
-    });
-  }
-}
-
 const sanitizeHTML = (htmlString) => {
-      let doc = new DOMParser().parseFromString(htmlString, 'text/html');
-      let text = doc.body.innerText;
-      return text;
+  let doc = new DOMParser().parseFromString(htmlString, 'text/html');
+  let text = doc.body.innerText;
+  return text;
 }
 </script>
 

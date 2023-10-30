@@ -23,8 +23,8 @@ export const useOrdersBills = defineStore('ordersBills', {
       this.listOrders = response.data;
     },
 
-    issueInvoiceOrReceipt(body){
-      console.log(body)
+    async issueInvoiceOrReceipt(body){
+      let response = await orderService.issueInvoiceOrReceipt(body);
     },
 
     showDetailOrder(orders){

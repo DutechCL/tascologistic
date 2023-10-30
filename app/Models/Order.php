@@ -8,6 +8,9 @@ use App\Models\OrderStatus;
 use App\Models\OrderProblem;
 use App\Models\RoleAssignments;
 use App\Models\OrderItemProblem;
+use App\Services\ProcessService;
+use App\Events\OrderStatusUpdated;
+use App\Events\OrderClassifiedProcess;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -33,7 +36,7 @@ class Order extends Model
         'U_SBO_FormaEntrega',
         'is_approved',
         'customer_id',
-    ]; // Campos permitidos para llenado masivo
+    ];
 
     public function customer()
     {

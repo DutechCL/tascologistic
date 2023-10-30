@@ -116,7 +116,7 @@
           v-model:visible="ordersStore.visibleReport" 
           :product="product"
           :problemsProduct="problemsSelected"
-          :typeProblems="constants.RESPONSIBLE_PICKER_AND_REVIEWER"
+          :typeProblems="constants.RESPONSIBLE_PICKER_REVIEWER"
           @selection-change="handleSelectionChange" 
           @visible="visibleReportMethod"
           />

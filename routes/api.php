@@ -36,26 +36,37 @@ Route::prefix('v1')->group(
         Route::get('/get-token', [AuthController::class, 'getTokenFromWeb']);
         Route::post('/login', [AuthController::class, 'login']);
 
+        // URL'S GENERALES
         Route::middleware(['auth:sanctum'])->group(function () {
-            Route::apiResource('customers', CustomerController::class);
-            // Route::apiResource('orders', OrderController::class);
-            Route::apiResource('products', ProductController::class);
-            Route::apiResource('order-items', OrderItemsController::class);
-            Route::put('order/{id}/assign/responsible', [OrderController::class, 'assingResponsible']);
-            Route::get('orders/available/cda', [OrderController::class, 'getOrdersCda']);
-            Route::get('orders/available/picker-reviewer/{wareHouseCode}', [OrderController::class, 'getOrdersPickerAndReviewer']);
-            Route::get('orders/bill/pickup-here', [OrderController::class, 'getOrdersBillPickupAndHere']);
-            Route::get('orders/bill/delivery', [OrderController::class, 'getOrdersBilldelivery']);
-            Route::get('orders/payment', [OrderController::class, 'getOrdersPayment']);
-            Route::post('orders/by-method-shipping', [OrderController::class, 'getOrdersByMethodShipping']);
-            Route::post('orders/authorizer/action', [OrderController::class, 'processOrderAction']);
-            Route::post('orders/authorizer/observation', [OrderController::class, 'addObservation']);
-            Route::post('order/proccess', [OrderController::class, 'processOrderPickerAndReviewer']);
-            Route::post('orders/by-params', [OrderController::class, 'getOrdersByParams']);
-            Route::post('problems', [ProblemsController::class, 'index']);
             Route::get('menu-items', [MenuItemCrudController::class, 'getMenuItems']);
+            Route::post('problems', [ProblemsController::class, 'index']);
         });
-        //problems
+        
+        //URL'S ORDENES CDA
+        Route::middleware(['auth:sanctum'])->prefix('orders/cda')->group(function () {
+            Route::get('/', [OrderController::class, 'getOrdersCdaToManager']);
+            Route::get('/manage', [OrderController::class, 'getOrdersCdaManage']);
+            Route::post('process-order', [OrderController::class, 'processOrderCda']);
+            Route::post('observation', [OrderController::class, 'addObservation']);
+        });
+        
+        //URL'S ORDENES PICKER-REVIEWER
+        Route::middleware(['auth:sanctum'])->prefix('orders/picker-reviewer')->group(function () {
+            Route::get('{wareHouseCode}', [OrderController::class, 'getOrdersPickerAndReviewer']);
+            Route::put('{id}/assign/responsible', [OrderController::class, 'assingResponsible']);
+        });
+        
+        //URL'S ORDENES BILLS
+        Route::middleware(['auth:sanctum'])->prefix('orders/bills')->group(function () {
+            Route::get('pickup-here', [OrderController::class, 'getOrdersBillPickupAndHere']);
+            Route::get('delivery', [OrderController::class, 'getOrdersBilldelivery']);
+            Route::get('generate/document', [OrderController::class, 'getOrdersPayment']);
+        });
+
+        // ORDENES TRAKER
+        Route::middleware(['auth:sanctum'])->prefix('orders')->group(function () {
+            Route::post('by-method-shipping', [OrderController::class, 'getOrdersByMethodShipping']);
+        });
     }
 );
 
