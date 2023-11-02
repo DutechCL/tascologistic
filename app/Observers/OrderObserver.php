@@ -31,9 +31,9 @@ class OrderObserver
     {
         switch($order->order_status_id):
             case OrderStatus::STATUS_ON_PICKER:
-            case OrderStatus::STATUS_PICKED:
                 $order->process_id = Process::PROCESS_ID_PICKER;
                 break;
+            case OrderStatus::STATUS_PICKED:
             case OrderStatus::STATUS_ON_REVIEWER:
                 $order->process_id = Process::PROCESS_ID_REVIEWER;
                 break;

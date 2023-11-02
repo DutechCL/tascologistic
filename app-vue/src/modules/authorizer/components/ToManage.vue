@@ -47,7 +47,7 @@
       @processOrder="processOrder"
     />
 
-    <DialogAddObservation
+    <DialogaddObservation
     v-if="ordersStore.typeDialog === 'addObservation'"
     v-model:visible="ordersStore.showDialog"
     :typeProblems="constants.RESPONSIBLE_CDA"
@@ -69,7 +69,7 @@ import Search from '../../../components/search/Search.vue';
 import DialogDetail from './DialogDetail.vue'
 import DialogDetailObservation from './DialogDetailObservation.vue'
 import DialogReportProblem from './DialogReportProblem.vue'
-import DialogAddObservation from './DialogAddObservation.vue'
+// import DialogaddObservation from './DialogaddObservation.vue'
 import { useOrdersCda } from '../../../stores/orders/ordersCda.js'
 import DataTableOrdersCda from './tables/DataTableOrdersCda.vue';
 import { ToastMixin } from '../../../Utils/ToastMixin';

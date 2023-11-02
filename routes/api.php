@@ -53,6 +53,7 @@ Route::prefix('v1')->group(
         //URL'S ORDENES PICKER-REVIEWER
         Route::middleware(['auth:sanctum'])->prefix('orders/picker-reviewer')->group(function () {
             Route::get('{wareHouseCode}', [OrderController::class, 'getOrdersPickerAndReviewer']);
+            Route::post('process-order', [OrderController::class, 'processOrderPickerReviewer']);
             Route::put('{id}/assign/responsible', [OrderController::class, 'assingResponsible']);
         });
         
@@ -60,7 +61,12 @@ Route::prefix('v1')->group(
         Route::middleware(['auth:sanctum'])->prefix('orders/bills')->group(function () {
             Route::get('pickup-here', [OrderController::class, 'getOrdersBillPickupAndHere']);
             Route::get('delivery', [OrderController::class, 'getOrdersBilldelivery']);
-            Route::get('generate/document', [OrderController::class, 'getOrdersPayment']);
+            Route::get('generate/document/{document}/order/{id}', [OrderController::class, 'generateDocument']);
+        });
+
+        //URL'S ORDENES PAGO
+        Route::middleware(['auth:sanctum'])->prefix('orders/payment')->group(function () {
+            Route::get('/', [OrderController::class, 'getOrdersPayment']);
         });
 
         // ORDENES TRAKER

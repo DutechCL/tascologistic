@@ -1,7 +1,7 @@
-function classifyByMethodShipping(orders, methodShippingId) {
+function classifyByMethodShipping(orders, method_shipping_id) {
     return orders
-        .filter(order => order.MethodShippingId === methodShippingId)
-        .sort((a, b) => new Date(b.updateApp) - new Date(a.updateApp));
+        .filter(order => order.method_shipping_id === method_shipping_id)
+        .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
 }
 
 import { defineStore } from 'pinia';
@@ -17,15 +17,16 @@ export const useOrdersPickerReview = defineStore('ordersPickerReview', {
   state: () => ({ 
         listOrders: [],
         listOrdersHere: [],
-        listOrdersPickupReview: [], 
-        order: [],
-        orderItem: [],
+        listOrdersPickupDelivery: [], 
+        isDataLoaded: false,
+        showDetailOrder: false,
+        showDialogProblem: false,
+        orderItem: {},
+        currentOrder: {},
+        setOrderItemsProblems: new Set(),
         orderItemsProblems: [],
-        visibleDialog: false,  
-        showDetailsOrder: false, 
-        showReportProblem: false, 
-        wareHouseCode: '',    
-        responsible: '',
+        order: [],
+        type: '',
   }),
   getters: {
         orders: (state) => state.listOrders,
@@ -34,19 +35,27 @@ export const useOrdersPickerReview = defineStore('ordersPickerReview', {
     async getOrdersPickerAndReviewer() {
         let response = await orderService.getOrdersPickerAndReviewer(this.wareHouseCode);
         this.classifyOrders(response.data);
+        this.isDataLoaded = true;
     },
     async assingResponsible() {
         let data = {
-            id: this.order.id,
-            responsible: this.responsible
+            id: this.currentOrder.id,
+            responsible: this.currentOrder.responsible
         }
         const response = await orderService.assingResponsible(data);
-        this.updateListOrders(response.order);
+        this.updateListOrders(response.data);
+        return response;
+    },
+
+    async processOrderAction(body) {
+        const response = await orderService.processOrderPickerReviewer(body);
+        this.updateListOrders(response.data);
+        return response;
     },
     classifyOrders(orders){  
         this.listOrders = orders;
         this.listOrdersHere = classifyByMethodShipping(orders, METHOD_SHIPPING_HERE);
-        this.listOrdersPickupReview = [
+        this.listOrdersPickupDelivery = [
             ...classifyByMethodShipping(orders, METHOD_SHIPPING_PICKUP), 
             ...classifyByMethodShipping(orders, METHOD_SHIPPING_DELIVERY)
         ];

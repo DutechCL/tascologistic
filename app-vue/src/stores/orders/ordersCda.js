@@ -37,9 +37,8 @@ export const useOrdersCda = defineStore('ordersCda', {
       let response = await orderService.processOrderCda(this.currentOrder);
 
       if (response.status === 'success') {
-
-        this.listOrders = this.listOrders.filter(orden => orden.id !== response.order.id);
-        this.listOrdersManage.push(response.order);
+        this.listOrders = this.listOrders.filter(orden => orden.id !== response.data.id);
+        this.listOrdersManage.push(response.data);
       }
 
       return response;

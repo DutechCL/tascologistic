@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import { useOrders } from '../../services/OrdersApiService.js';
+import constants from '../../constants/constants.js';
 
 const orderService = useOrders();
 
@@ -23,8 +24,21 @@ export const useOrdersBills = defineStore('ordersBills', {
       this.listOrders = response.data;
     },
 
-    async issueInvoiceOrReceipt(body){
-      let response = await orderService.issueInvoiceOrReceipt(body);
+    async generateDocument(body){
+      let response = await orderService.generateDocument(body);
+
+      if(response.data.order_status_id === constants.ORDER_STATUS_BILLED){
+        this.listOrders = this.listOrders.filter(o => o.id !== response.data.id);
+      }else{
+        this.listOrders = this.listOrders.map(o => {
+          if(o.id === response.data.id){
+            return response.data;
+          }
+          return o;
+        });
+      }
+
+      return response;
     },
 
     showDetailOrder(orders){

@@ -26,12 +26,12 @@ class OrderResource extends JsonResource
             'DocTotal' => '$' . number_format($this->DocTotal, 0, '.', ','),
             'Customer' => $this->customer,
             'U_SBO_FormaEntrega' => $this->U_SBO_FormaEntrega,
-            'MethodShippingId' => $this->method_shipping_id,
+            'method_shipping_id' => $this->method_shipping_id,
             'MethodShippingName' => ucfirst(str_replace('Cliente ', '', optional($this->methodShipping)->name)),
             'OrderStatusName' => optional($this->orderStatus)->name,
             'OrderStatusColor' => optional($this->orderStatus)->color,
             'OrderItems' => $orderItems,
-            'OrderStatusId' => $this->order_status_id,
+            'order_status_id' => $this->order_status_id,
             'SalesPersonCode' => $this->SalesPersonCode,
             'SalesEmployeeName' => $this->SalesEmployeeName,
             'other' => $this->other,
@@ -40,6 +40,7 @@ class OrderResource extends JsonResource
             'Responsibles' => $this->responsibles,
             'updated_at' => $this->updated_at,
             'observation' => $this->observation,
+            'process_id' => $this->process_id,
             'Problems' => $this->problems->map(function ($problem) {
                 return [
                     'id' => $problem->id,

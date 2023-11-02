@@ -26,6 +26,7 @@
           <Button label="Regresar"  severity="primary" outlined @click="goBack" class="ml-3 !py-1.5" ></Button>
         </div>
     </div>
+    <ConfirmDialog></ConfirmDialog>
   </template>
   
   <script setup>
@@ -33,12 +34,13 @@
   import Button from 'primevue/button'
   import Search from '../../../components/search/Search.vue'
   import DialogDetail from '../components/DialogDetail.vue';
-
+  import ConfirmDialog from 'primevue/confirmdialog';
   import DataTableOrders from '../components/tables/DataTableOrders.vue';
   import { useOrdersBills } from '../../../stores/orders/ordersBills.js';
   import { ToastMixin } from '../../../Utils/ToastMixin';
   import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
-  
+  import constants from '@/constants/constants';
+
   const { showToast } = ToastMixin.setup();
   const { showConfirm } = ConfirmMixin.setup();
 
@@ -48,12 +50,14 @@
   const actions = ref([
       {
         active: true,
-        action: 'bill',
+        method: 'generateDocument',
+        document: constants.DOCUMENT_TYPE_GUIDE,
         label: 'Guía',
       },
       {
         active: false,
-        action: 'bill',
+        method: 'generateDocument',
+        document: constants.DOCUMENT_TYPE_INVOICE,
         label: 'Factura / Boleta',
       }
   ])
@@ -63,11 +67,13 @@
   }
 
   const actionMethod = (data) => {
-    switch (data.action) {
+    console.log(data);
+    switch (data.method) {
       case 'showDetailOrder':
         orderStore.showDetailOrder(data.order);
         break;
-      default:
+      case 'generateDocument':
+        generateDocument(data);
         break;
     }
   }
@@ -90,6 +96,22 @@
         window.location.href = '/admin/dashboard/'
       }
   }
+
+  const generateDocument = async (value) => {
+    let result = await showConfirm();
+    if(result){
+      let response = await orderStore.generateDocument(value);
+      showToast({
+        status: response.status,
+        message: response.message,
+      });
+    }else{
+      showToast({
+      status: 'info',
+      message: 'Proceso cancelado',
+    });
+    }
+  };
 
   const visibleDetailsMethod = (value) => {
     visible.value = value.visibleDetails;

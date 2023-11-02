@@ -62,8 +62,6 @@ watch(
   }
 );
 
-
-
 const sendObservation = async () => {
   disableButton.value = true;
   const result = await showConfirm();

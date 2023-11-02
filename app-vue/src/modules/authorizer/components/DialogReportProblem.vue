@@ -17,7 +17,6 @@
     </div>
     <div>
       <Button label="Reportar"  :disabled="disableButton" @click="visibleReport" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
-      <Button v-if="props.typeProblems != constants.RESPONSIBLE_CDA" label="Cancelar"  @click="ordersStore.visibleReport = false" class="mr-4 !py-2 !px-10 p-button-outlined float-right !border-primary-900 !text-primary-900 mt-5"/>
     </div>
 </Dialog>
 </template>
@@ -31,13 +30,7 @@ import Button from 'primevue/button'
 import Editor from 'primevue/editor';
 import { useProblems } from '../../../services/ProblemsApiService.js';
 import { useOrdersCda } from '../../../stores/orders/ordersCda.js';
-import { ToastMixin } from '../../../Utils/ToastMixin';
-import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
 import constants from '@/constants/constants';
-import { is } from 'date-fns/locale'
-
-const { showToast } = ToastMixin.setup();
-const { showConfirm } = ConfirmMixin.setup();
 
 const props = defineProps({
   order: Object,
@@ -55,18 +48,15 @@ const otherProblem = ref(null);
 const product = ref(null);
 const disableButton = ref(true)
 const hasTextInOtherProblem = ref(false);
-const listProblems = ref([]);
 const isSendProblems = ref(false);
 const isProblem = ref(false);
 
 const order = ref([]);
 
 onBeforeMount( async() => {
-  if(problemsStore.problems.length === 0){
-    problems.value = await problemsStore.getProblems(props.typeProblems);
-  }else{
-    problems.value = problemsStore.problems;
-  }
+  await problemsStore.getProblems(props.typeProblems);
+  problems.value = problemsStore.problems;
+
 })
 
 const handleClose = () => {
@@ -94,9 +84,7 @@ const visibleReport = () => {
     ordersStore.currentOrder.problems = selectedProduct.value;
     ordersStore.currentOrder.other = otherProblem.value;
     emit('processOrder');
-  } else {
-    sendProblems()
-  }
+  } 
 }
 
 watch(() => props.problemsProduct, (newProblemsProduct) => {
@@ -125,20 +113,6 @@ watch(selectedProduct, (newSelection) => {
   }
 });
 
-const sendProblems = () => {
-  isSendProblems.value = true;
-  selectedProduct.value.map((product) => {
-    if(product.title === 'Otro'){
-      product.other = sanitizeHTML(otherProblem.value);
-    }
-  });
-  product.value.other = otherProblem.value;
-  listProblems.value = selectedProduct.value;
-  ordersStore.visibleReport = false;
-  emit('selection-change',  product.value, {'visibleReport': false, 'listProblems': listProblems.value});
-  handleClose();
-}
-
 watch(otherProblem, () => {
   if (showEditor.value) {
     hasTextInOtherProblem.value = !!sanitizeHTML(otherProblem.value).trim();
@@ -155,8 +129,3 @@ const sanitizeHTML = (htmlString) => {
 }
 </script>
 
-<style>
-.custom-editor .ql-image {
-  display: none !important;
-}
-</style>

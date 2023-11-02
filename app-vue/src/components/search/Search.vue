@@ -15,10 +15,8 @@
   const props = defineProps({
     orders: Object,
   })
-
   const orders = ref(props.orders);
   const allOrders = ref(props.orders);
-
   const inputSearch = ref(null)
   const emit = defineEmits();
 
@@ -41,6 +39,7 @@
   function filterOrdersByNumberAndName(orders, data) {
     return orders.filter(order => 
       order.DocNum.toString().includes(data.toString())  || 
+      order.DocEntry.toString().includes(data.toString())  || 
       order.Customer.CardName.toLowerCase().includes(data.toLowerCase())
     );
   }

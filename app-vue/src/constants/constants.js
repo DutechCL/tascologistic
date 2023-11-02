@@ -30,6 +30,14 @@ export const ACTION_APPROVE = 'approve';
 export const ACTION_REJECT  = 'reject';
 export const ACTION_INFO    = 'info';
 
+/* Document types */
+export const DOCUMENT_TYPE_GUIDE = 'guide';
+export const DOCUMENT_TYPE_INVOICE = 'invoice';
+
+/* Process picker and reviewer */
+export const PROCESS_PICKER_ID = 2;
+export const PROCESS_REVIEWER_ID = 3;
+
 const constants = {
     API_BASE_URL,
     METHOD_SHIPPING_HERE_ID,
@@ -53,7 +61,11 @@ const constants = {
     ORDER_STATUS_REJECTED,
     ACTION_APPROVE,
     ACTION_REJECT,
-    ACTION_INFO
+    ACTION_INFO,
+    DOCUMENT_TYPE_GUIDE,
+    DOCUMENT_TYPE_INVOICE,
+    PROCESS_PICKER_ID,
+    PROCESS_REVIEWER_ID
 };
 
 export default constants;

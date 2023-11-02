@@ -71,7 +71,7 @@ class OrderService
                 $order->order_status_id = OrderStatus::STATUS_ON_PICKER;
                 break;
             case self::ACTION_REJECT:
-                $order->order_status_id = Order::ORDER_STATUS_REJECTED;
+                $order->order_status_id = OrderStatus::STATUS_REJECTED;
                 $this->assingProbelmsOrder($order, $request);
                 break;  
         endswitch;    
@@ -93,21 +93,36 @@ class OrderService
 
         switch ($request->action):
             case self::ACTION_APPROVE:
-                $order->order_status_id = $request->orderStatus;
+                $order->order_status_id = $order->order_status_id === OrderStatus::STATUS_ON_PICKER ? OrderStatus::STATUS_PICKED : OrderStatus::STATUS_REVIEWED;
                 break;
             case self::ACTION_REJECT:
-                $order->order_status_id = $request->orderStatus;
+                $order->order_status_id = OrderStatus::STATUS_REJECTED;
+                $order->is_managed = true;
                 $this->assingProbelmsOrderItems($order, $request);
                 break;  
         endswitch;  
 
-        $order->is_managed = true;
-
-        $order->assignResponsible($request->responsible);
         $order->save();
         
         return (object) [
             'message' => 'Orden actualizada correctamente',
+            'order' => new OrderResource($order),
+        ];
+    }
+
+    public function assingResponsible($request){
+        $order = Order::findOrFail($request->id);
+        $order->order_status_id = $request->responsible === 'picker' ? OrderStatus::STATUS_ON_PICKER : OrderStatus::STATUS_ON_REVIEWER;
+        $order->save();
+
+        $result = $order->assignResponsible($request->responsible);
+
+        if($result->status === 'warning'){
+            throw new \Exception($result->message);
+        }
+
+        return (object) [
+            'message' => $result->message,
             'order' => new OrderResource($order),
         ];
     }
@@ -152,8 +167,9 @@ class OrderService
         }
     }
 
-    public function issueInvoiceOrReceipt(Order $order, Request $request)
+    public function generateDocument($document, $orderId)
     {
+        $order = Order::findOrFail($orderId);
         $order->is_managed = true;
         $order->is_approved = true;
         $order->order_status_id = Order::ORDER_STATUS_BILLED;
@@ -165,8 +181,9 @@ class OrderService
         ];
     }
 
-    public function addObservation(Order $order, Request $request)
+    public function addObservation(Request $request)
     {
+        $order = Order::findOrFail($request->orderId);
         $order->observation = $request->observation;
         $order->save();
 

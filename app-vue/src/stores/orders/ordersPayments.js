@@ -5,17 +5,20 @@ const orderService = useOrders();
 
 export const useOrdersPayment = defineStore('ordersPayment', {
   state: () => ({ 
-      listOrders: [],
+      ordersPaymentsPending: [],
       order: [],
-      visibleDialog: false,        
+      showDialog: false,        
   }),
   getters: {
-    orders: (state) => state.listOrders,
+    getOrdersPaymentsPending(state){
+      console.log(state.ordersPaymentsPending)
+      return state.ordersPaymentsPending
+    },
   },
   actions: {
-    async getOrderspayment() {
-      let response = await orderService.getOrderspayment();
-      this.listOrders = response.data;
+    async getOrdersPayment() {
+      let response = await orderService.getOrdersPayment();
+      this.ordersPaymentsPending = response.data;
     },
   }
 })

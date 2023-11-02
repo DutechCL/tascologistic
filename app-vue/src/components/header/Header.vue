@@ -21,7 +21,7 @@ import { onBeforeMount, ref } from "vue";
 import Sidebar from 'primevue/sidebar';
 import PanelMenu from 'primevue/panelmenu';
 import Button from 'primevue/button';
-import {useMenuItems} from '../../../services/MenuItemsApiService.js';
+import {useMenuItems} from '../../services/MenuItemsApiService.js';
 
 const itemsStore = useMenuItems();
 

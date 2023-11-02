@@ -1,5 +1,20 @@
 <template>
-    <div class="card flex justify-content-center ">
+        <div v-if="props.filters.includes('DocEntry')" class="card flex justify-content-center mr-5">
+          <MultiSelect
+            v-model="DocEntry"
+            :options="orders"
+            :maxSelectedLabels="3"
+            :key="DocEntry"
+            @remove="toggleUnSelect"
+            filter
+            optionLabel="DocEntry"
+            placeholder="Factura"
+            display="chip"
+            class="w-full md:w-20rem"
+            style="border: none; max-width: 300px;"
+          />
+        </div>
+        <div  v-if="props.filters.includes('DocNum')" class="card flex justify-content-center ">
         <MultiSelect 
             v-model="DocNum" 
             :options="orders" 
@@ -14,7 +29,7 @@
             @remove="toggleUnSelect"
             />
       </div>
-      <div :class="[{ 'active-filter-date': !dateLabel, }, 'relative']">
+      <div v-if="props.filters.includes('DocDate')" :class="[{ 'active-filter-date': !dateLabel, }, 'relative']">
         <Calendar 
             :inputId="generateUniqueId()" 
             v-model="dates" 
@@ -26,7 +41,7 @@
                 <a class="close-filter-date" v-if="!dateLabel" @click="removeFilterDate()"> <i class="pi pi-times"></i> </a>
             </div>
       </div>
-      <div class="card flex justify-content-center mr-5">
+      <div v-if="props.filters.includes('DocTime')" class="card flex justify-content-center mr-5">
         <MultiSelect 
             v-model="DocTime" 
             :options="orders" 
@@ -38,7 +53,7 @@
             class="w-full md:w-20rem" 
             style="border: none; max-width: 300px;" />
       </div>
-      <div class="card flex justify-content-center mr-5">
+      <div v-if="props.filters.includes('Customer')" class="card flex justify-content-center mr-5">
         <MultiSelect 
             v-model="Customer" 
             :options="orders" 
@@ -50,8 +65,18 @@
             class="w-full md:w-20rem" 
             style="border: none; max-width: 300px;" />
       </div>
-      <div class="card flex justify-content-center">
-        <MultiSelect v-model="DocTotal" :options="orders" filter optionLabel="DocTotal" placeholder="Total" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocTotal" />
+      <div v-if="props.filters.includes('DocTotal')" class="card flex justify-content-center">
+        <MultiSelect 
+            v-model="DocTotal" 
+            :options="orders" 
+            filter 
+            optionLabel="DocTotal" 
+            placeholder="Total" 
+            display="chip"  
+            :maxSelectedLabels="3" 
+            class="w-full md:w-20rem" 
+            style="border: none; max-width: 300px;" 
+            :key="DocTotal" />
       </div>
 </template>
 
@@ -64,12 +89,9 @@ import { UseFiltersMultiSelect } from './composables/UseFiltersMultiSelect'
 const emit = defineEmits();
 const props = defineProps({
   allOrders: Array,
-  typeOrders: String
+  typeOrders: String,
+  filters: Array,
 })
-
-const toggleUnSelect = (value, id) => {
-  console.log(value, id)
-};
 
 const generateUniqueId = () => {
   return `input_${Date.now()}`;
@@ -81,6 +103,7 @@ const {
     dates,
     dateLabel,
     orders,
+    DocEntry,
     DocNum,
     DocTime,
     Customer,

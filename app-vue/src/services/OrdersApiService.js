@@ -11,9 +11,9 @@ function classifyOrders(orders) {
     };
 }
 
-function classifyByMethodShipping(orders, methodShippingId) {
+function classifyByMethodShipping(orders, method_shipping_id) {
     return orders
-        .filter(order => order.MethodShippingId === methodShippingId)
+        .filter(order => order.method_shipping_id === method_shipping_id)
         .sort((a, b) => new Date(b.updateApp) - new Date(a.updateApp));
 }
 
@@ -45,14 +45,40 @@ export const useOrders = defineStore('orders', {
             return await getWithToken('api/v1/orders/cda/manage');
         },
 
-        async getOrdersPickerAndReviewer() {
-            let response = await getWithToken(`api/v1/orders/picker-reviewer/${this.wareHouseCode}`);
-            this.listOrders = response.data;
-            const classify = classifyOrders(this.listOrders);
-            this.listOrdersHere = classify.ordersHere;
-            this.listOrdersPickup = classify.ordersPickup;
-            this.listOrdersDelivery = classify.ordersDelivery;
-            return response.data;
+        async getOrdersBillPickupAndHere() {
+            return  await getWithToken(`api/v1/orders/bills/pickup-here`);
+        },
+
+        async getOrdersBillDelivery() {
+            return await getWithToken(`api/v1/orders/bills/delivery`);
+        },
+
+        async getOrdersPayment() {
+            return await getWithToken(`api/v1/orders/payment`);
+        },
+
+        async processOrderCda(body) {
+            return await postWithToken('api/v1/orders/cda/process-order', body);
+        },
+
+        async processOrderPickerReviewer(body) {
+            return await postWithToken('api/v1/orders/picker-reviewer/process-order', body);
+        },
+
+        async getOrdersPickerAndReviewer(wareHouseCode) {
+            return await getWithToken(`api/v1/orders/picker-reviewer/${wareHouseCode}`);
+        },
+        async addObservation(body) {
+            return await postWithToken('api/v1/orders/authorizer/observation', body);
+
+        },
+
+        async assingResponsible(data) {
+            return await putWithToken(`api/v1/orders/picker-reviewer/${data.id}/assign/responsible`, data);
+        },
+
+        async generateDocument(body){
+            return await getWithToken(`api/v1/orders/bills/generate/document/${body.document}/order/${body.order.id}`);
         },
 
         async getOrdersByMethodShipping(method_shipping_ids) {
@@ -62,45 +88,9 @@ export const useOrders = defineStore('orders', {
             return await postWithToken('api/v1/orders/by-method-shipping', body);
         },
 
-        async getOrdersBillPickupAndHere() {
-            return  await getWithToken(`api/v1/orders/bills/pickup-here`);
-        },
-
-        async getOrdersBillDelivery() {
-            return await getWithToken(`api/v1/orders/bills/delivery`);
-        },
-
-        async getOrderspayment() {
-            return await getWithToken(`api/v1/orders/payment`);
-        },
-
-        async processOrderCda(body) {
-            return await postWithToken('api/v1/orders/cda/process-order', body);
-        },
-
-        async addObservation(body) {
-            const response = await postWithToken('api/v1/orders/authorizer/observation', body);
-            if (response.status === 'success') {
-                this.updateOrderListByMethodShipping(response.order);
-            }
-            return response;
-        },
-
-        async assingResponsible(data) {
-            const response = await putWithToken(`api/v1/orders/picker-reviewer/${data.id}/assign/responsible`, data);
-            if (response.status === 'success' || response.status === 'warning') {
-                this.updateOrderListByMethodShipping(response.order);
-            }
-            return response;
-        },
-
-        async issueInvoiceOrReceipt(body){
-            return await postWithToken('api/v1/orders/bill/invoice-or-receipt', body);
-        },
-
         updateOrderListByMethodShipping(order) {
             let updatedOrderIndex;
-            switch (order.MethodShippingId) {
+            switch (order.method_shipping_id) {
                 case 1:
                     updatedOrderIndex = this.listOrdersHere.findIndex(o => o.id === order.id);
                     this.listOrdersHere[updatedOrderIndex] = order;

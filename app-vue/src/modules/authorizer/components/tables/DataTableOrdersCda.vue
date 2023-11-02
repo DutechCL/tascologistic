@@ -8,7 +8,7 @@
   </div>
 
   <div class="flex">
-      <FilterMultiSelect :allOrders="props.orders" :typeOrders="props.type" @filter="filter" />
+      <FilterMultiSelect :allOrders="props.orders" :typeOrders="props.type" :filters="filters" @filter="filter" />
   </div>
       
   <DataTable 
@@ -32,7 +32,7 @@
     <Column headerClass="!bg-primary-900" sortable field="MethodShippingName" header="Método entrega">
       <template #body="slotProps">
         <Tag v-if="props.type == constants.METHOD_SHIPPING_HERE" Tag :icon="'pi pi-shopping-cart'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
-        <Tag v-if="props.type == constants.METHOD_SHIPPING_PICKUP_AND_DELIVERY" Tag :icon="slotProps.data.MethodShippingId === constants.METHOD_SHIPPING_PICKUP_ID ? 'pi pi-home' : 'pi pi-truck'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
+        <Tag v-if="props.type == constants.METHOD_SHIPPING_PICKUP_AND_DELIVERY" Tag :icon="slotProps.data.method_shipping_id === constants.METHOD_SHIPPING_PICKUP_ID ? 'pi pi-home' : 'pi pi-truck'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>       
       </template>
     </Column>
     <Column headerClass="!bg-primary-900"  field="note" header="Documentos">
@@ -112,6 +112,13 @@ const actionsBtn = ref({
       }
     ],
 })
+const filters = ref([
+  'DocNum', 
+  'Customer',
+  'DocTotal',
+  'DocTime',
+  'DocDate',
+])
 
 watch(
     () => props.orders,

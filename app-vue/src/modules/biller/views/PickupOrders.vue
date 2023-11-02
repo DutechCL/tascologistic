@@ -39,6 +39,7 @@
   import { useOrdersBills } from '../../../stores/orders/ordersBills.js';
   import { ToastMixin } from '../../../Utils/ToastMixin';
   import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
+  import constants from '@/constants/constants';
   
   const { showToast } = ToastMixin.setup();
   const { showConfirm } = ConfirmMixin.setup();
@@ -48,7 +49,8 @@
   const actions = ref([
       {
         active: 'true',
-        method: 'issueInvoiceOrReceipt',
+        method: 'generateDocument',
+        document: constants.DOCUMENT_TYPE_INVOICE,
         label: 'Factura / Boleta',
       }
   ])
@@ -71,22 +73,24 @@
   }
 
   const actionMethod = (data) => {
-    switch (data.action) {
+    switch (data.method) {
       case 'showDetailOrder':
         orderStore.showDetailOrder(data.order);
         break;
-      case 'issueInvoiceOrReceipt':
-        issueInvoiceOrReceipt(data.order);
-        break;
-      default:
+      case 'generateDocument':
+        generateDocument(data);
         break;
     }
   }
 
-  const issueInvoiceOrReceipt = async (value) => {
+  const generateDocument = async (value) => {
     let result = await showConfirm();
     if(result){
-      orderStore.issueInvoiceOrReceipt(value);
+      let response = await orderStore.generateDocument(value);
+      showToast({
+        status: response.status,
+        message: response.message,
+      });
     }else{
       showToast({
       status: 'info',

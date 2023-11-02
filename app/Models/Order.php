@@ -110,17 +110,17 @@ class Order extends Model
         $existingAssignment = $this->responsibles()->where('user_id', $user->id)->where('task', $task)->first();
     
         if ($existingAssignment) {
-            return ['status' => 'success', 'message' => 'Tarea asignada exitosamente.'];
+            return (object) ['status' => 'success', 'message' => 'Tarea asignada exitosamente.'];
         }
     
         $existingAssignment = $this->responsibles()->where('task', $task)->first();
     
         if ($existingAssignment) {
-            return ['status' => 'warning', 'message' => 'Esta tarea ya está en proceso de ' . $tasks[$task] . ' por otro usuario.'];
+            return (object) ['status' => 'warning', 'message' => 'Esta tarea ya está en proceso de ' . $tasks[$task] . ' por otro usuario.'];
         }
     
         $this->responsibles()->attach($user->id, ['task' => $task]);
     
-        return ['status' => 'success', 'message' => 'Tarea asignada a '. $tasks[$task]. ' exitosamente.'];
+        return (object) ['status' => 'success', 'message' => 'Tarea asignada a '. $tasks[$task]. ' exitosamente.'];
     }
 }
