@@ -87,7 +87,6 @@ const props = defineProps(
 )
 const ordersHere = ref([]);
 const ordersPickup = ref([]);
-const orders = ref(props.orders); 
 
 const updateOrders = async () => {
   emit('updateOrders');
@@ -108,12 +107,13 @@ watch(
 )
 
 const classificateOrders = (orders) => {
-  orders.value = orders;
+
   ordersHere.value = orders
-    .filter(o => o.method_shipping_id === constants.METHOD_SHIPPING_HERE)
+    .filter(o => o.method_shipping_id === constants.METHOD_SHIPPING_HERE_ID)
     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+
   ordersPickup.value = orders
-    .filter(o => o.method_shipping_id !== constants.METHOD_SHIPPING_HERE)
+    .filter(o => o.method_shipping_id !== constants.METHOD_SHIPPING_HERE_ID)
     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
 }
 

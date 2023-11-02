@@ -97,7 +97,6 @@ class OrderService
                 break;
             case self::ACTION_REJECT:
                 $order->order_status_id = OrderStatus::STATUS_REJECTED;
-                $order->is_managed = true;
                 $this->assingProbelmsOrderItems($order, $request);
                 break;  
         endswitch;  

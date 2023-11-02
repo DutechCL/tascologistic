@@ -60,7 +60,7 @@
           <div class="mini-table mt-8">
             <DataTable v-if="ordersStore.currentOrder?.orderItemsProblems" tableStyle="min-width: 50rem" filters="filters" :value="ordersStore.currentOrder?.orderItemsProblems" class="teble-probelm">
           
-                <Column headerClass="!bg-secundary-300"  field="ItemCode" header="SKU" class="p-3" style="padding-top: 15px"></Column>
+                <Column headerClass="!bg-secundary-300"  field="ItemCode" header="SKU" class="p-3" style="padding-top: 15px; max-width: 100px"></Column>
                 <Column headerClass="!bg-secundary-300"  field="ItemDescription" header="Producto" class="p-3" style="padding-top: 15px"></Column>
                 <Column headerClass="!bg-secundary-300"  field="problems" header="Problema" class="p-3" style="padding-top: 15px">
                   <template #body="slotProps">

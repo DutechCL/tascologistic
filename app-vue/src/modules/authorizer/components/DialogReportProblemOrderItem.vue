@@ -134,6 +134,7 @@ watch(selectedProduct, (newSelection) => {
 
 const sendProblems = () => {
   ordersStore.showDialogProblem = false;
+  ordersStore.orderItem.other = otherProblem.value
   ordersStore.setOrderItemsProblems.add(ordersStore.orderItem)
   ordersStore.currentOrder.orderItemsProblems = Array.from(ordersStore.setOrderItemsProblems);
   
