@@ -71,6 +71,20 @@ class OrderService
             ->get();
     }
 
+    public function listOrdersTracker($type){
+        $query = Order::withOrderDetails()
+            ->where('order_status_id', '!=', OrderStatus::STATUS_REJECTED)
+            ->orderBy('updated_at', 'DESC');
+
+        if ($type === 'warehouse') {
+            $query->whereNot('method_shipping_id', MethodShipping::METHOD_SHIPPING_HERE);
+        } elseif ($type === MethodShipping::METHOD_SHIPPING_DELIVERY) {
+            $query->where('method_shipping_id', MethodShipping::METHOD_SHIPPING_HERE);
+        }
+
+        return $query->paginate(10);
+    }
+
     public function processOrderCda(Request $request)
     {
         $order = Order::getOrder($request->orderId);

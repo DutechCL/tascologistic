@@ -62,11 +62,8 @@ export const useOrders = defineStore('orders', {
             return await getWithToken(`api/v1/orders/bills/generate/document/${body.document}/order/${body.order.id}`);
         },
 
-        async getOrdersByMethodShipping(method_shipping_ids) {
-            const body = {
-                method_shipping_ids: method_shipping_ids
-            };
-            return await postWithToken('api/v1/orders/by-method-shipping', body);
+        async getOrdersTracker(type) {
+            return await getWithToken(`api/v1/orders/tracker/${type}`);
         },
     }
 });

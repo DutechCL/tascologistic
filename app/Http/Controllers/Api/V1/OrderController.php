@@ -105,6 +105,21 @@ class OrderController extends Controller
         }
     }
 
+    public function getOrdersTracker($type)
+    {
+        try {
+
+            $orders = $this->orderService->listOrdersTracker($type);
+
+            return $this->success(
+                OrderResource::collection($orders)->resolve()
+            );
+
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
     public function processOrderCda(Request $request)
     {
         try {

@@ -70,8 +70,8 @@ Route::prefix('v1')->group(
         });
 
         // ORDENES TRAKER
-        Route::middleware(['auth:sanctum'])->prefix('orders')->group(function () {
-            Route::post('by-method-shipping', [OrderController::class, 'getOrdersByMethodShipping']);
+        Route::middleware(['auth:sanctum'])->prefix('orders/tracker')->group(function () {
+            Route::get('/{type}', [OrderController::class, 'getOrdersTracker']);
         });
     }
 );

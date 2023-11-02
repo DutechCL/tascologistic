@@ -11,15 +11,15 @@
         </Column>
         <Column headerClass="!bg-primary-900"  field="DocDate" header="Fecha"></Column>
         <Column headerClass="!bg-primary-900"  field="DocTime" header="Hora"></Column>
-        <Column headerClass="!bg-primary-900"  field="customer.CardName" header="Cliente"></Column>
-        <Column headerClass="!bg-primary-900"  field="method_shipping" header="Método entrega" >
+        <Column headerClass="!bg-primary-900"  field="Customer.CardName" header="Cliente"></Column>
+        <Column headerClass="!bg-primary-900"  field="MethodShippingName" header="Método entrega" >
           <template #body="slotProps">
-           <Tag :icon="'pi pi-home'" :value="slotProps.data.method_shipping.name" :class="getSeverity(1)" class="tag-font-method tag-radius"></Tag>
+           <Tag :icon="'pi pi-home'" :value="slotProps.data.MethodShippingName" :class="getSeverity(1)" class="tag-font-method tag-radius"></Tag>
           </template>
-        </Column>
-        <Column headerClass="!bg-primary-900"  field="order_status" header="Estado" >
+        </Column> 
+         <Column headerClass="!bg-primary-900"  field="OrderStatusName" header="Estado" >
           <template #body="slotProps">
-           <Tag  :icon="'pi pi-circle-fill'" :value="slotProps.data.order_status.name" :style="{ backgroundColor: slotProps.data.order_status.color, color: getTextColor(slotProps.data.order_status.color) }" class="tag-font-status tag-radius"></Tag>
+           <Tag  :icon="'pi pi-circle-fill'" :value="slotProps.data.OrderStatusName" :style="{ backgroundColor: slotProps.data.OrderStatusColor, color: getTextColor(slotProps.data.OrderStatusColor) }" class="tag-font-status tag-radius"></Tag>
           </template>
         </Column>
     </DataTable>
@@ -33,14 +33,12 @@ import Column from 'primevue/column';
 import Tag from 'primevue/tag';
 import { useOrders } from '../../../services/OrdersApiService.js';
 
-const ORDERS_STATUS_RETIRA = 2;
-const ORDERS_STATUS_DESPACHO = 3;
-
 const ordersStore = useOrders();
 const orders = ref([]);
 
 const loadData = async () => {
-  orders.value = await ordersStore.getOrdersByMethodShipping([ORDERS_STATUS_RETIRA, ORDERS_STATUS_DESPACHO]);
+  let responses = await ordersStore.getOrdersTracker('warehouse')
+  orders.value = responses.data
 };
 
 onMounted(() => {

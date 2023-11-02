@@ -18,14 +18,6 @@ class Order extends Model
 {
     use HasFactory;
 
-    const ORDER_STATUS_ON_HOLD = 1;
-    const ORDER_STATUS_PICKED = 2;
-    const ORDER_STATUS_REVIEWER = 3;
-    const ORDER_STATUS_REJECTED = 4;
-    const ORDER_STATUS_REVIEWED = 5;
-    // const ORDER_STATUS_AUTHORIZED = 6;
-    const ORDER_STATUS_BILLED = 6;
-
     protected $fillable = [
         'DocEntry',
         'DocNum',

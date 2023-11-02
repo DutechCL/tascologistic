@@ -51,7 +51,6 @@ export const useOrdersPickerReview = defineStore('ordersPickerReview', {
 
     async processOrderAction(body) {
         const response = await orderService.processOrderPickerReviewer(body);
-        console.log(response);
         this.updateListOrders(response.data);
         return response;
     },
