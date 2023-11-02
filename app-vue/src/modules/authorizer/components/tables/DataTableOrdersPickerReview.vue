@@ -66,7 +66,7 @@
 
 
 <script setup>
-import { ref, defineProps, watch, defineEmits, onBeforeMount } from 'vue'
+import { ref, defineProps, watch, defineEmits } from 'vue'
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
 import Tag from 'primevue/tag'
@@ -105,6 +105,7 @@ const filter = (data) => {
 }
 
 const action = (order, responsible) => {
+  console.log(order)
   ordersStore.showDetailOrder = true;
   ordersStore.currentOrder = order;
   ordersStore.currentOrder.responsible = responsible;

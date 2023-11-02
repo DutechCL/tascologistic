@@ -23,6 +23,8 @@ export const useOrdersPickerReview = defineStore('ordersPickerReview', {
         showDialogProblem: false,
         orderItem: {},
         currentOrder: {},
+        isProblemMapped: [],
+        isCompleteMapped: [],
         setOrderItemsProblems: new Set(),
         orderItemsProblems: [],
         order: [],
@@ -39,7 +41,7 @@ export const useOrdersPickerReview = defineStore('ordersPickerReview', {
     },
     async assingResponsible() {
         let data = {
-            id: this.currentOrder.id,
+            orderId: this.currentOrder.id,
             responsible: this.currentOrder.responsible
         }
         const response = await orderService.assingResponsible(data);
@@ -49,6 +51,7 @@ export const useOrdersPickerReview = defineStore('ordersPickerReview', {
 
     async processOrderAction(body) {
         const response = await orderService.processOrderPickerReviewer(body);
+        console.log(response);
         this.updateListOrders(response.data);
         return response;
     },

@@ -8,7 +8,7 @@
     <Search :orders="ordersPayment.ordersPaymentsPending" @search="search"/>
   </div>
 
-  <DataTabletPayments v-if="loading" :orders="orders" :filters="filters" :column="column" @action="action"/>
+  <DataTabletPayments v-if="loading" :orders="[]" :filters="filters" :column="column" @action="action"/>
 
   <DialogMethosPayment v-model:visible="visible"/>
 

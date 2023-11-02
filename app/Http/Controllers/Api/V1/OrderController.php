@@ -69,7 +69,7 @@ class OrderController extends Controller
     public function getOrdersBillPickupAndHere()
     {
         try {
-            $orders = $this->orderService->listOrdersBills('pickup-here');
+            $orders = $this->orderService->listOrdersBills(MethodShipping::METHOD_SHIPPING_HERE);
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()
@@ -82,7 +82,7 @@ class OrderController extends Controller
     public function getOrdersBillDelivery()
     {
         try {
-            $orders = $this->orderService->listOrdersBills('delivery');
+            $orders = $this->orderService->listOrdersBills(MethodShipping::METHOD_SHIPPING_DELIVERY);
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()

@@ -1,22 +1,3 @@
-// Utilidades
-function classifyOrders(orders) {
-    const METHOD_SHIPPING_HERE = 1;
-    const METHOD_SHIPPING_PICKUP = 2;
-    const METHOD_SHIPPING_DELIVERY = 3;
-
-    return {
-        ordersHere: classifyByMethodShipping(orders, METHOD_SHIPPING_HERE),
-        ordersPickup: classifyByMethodShipping(orders, METHOD_SHIPPING_PICKUP),
-        ordersDelivery: classifyByMethodShipping(orders, METHOD_SHIPPING_DELIVERY)
-    };
-}
-
-function classifyByMethodShipping(orders, method_shipping_id) {
-    return orders
-        .filter(order => order.method_shipping_id === method_shipping_id)
-        .sort((a, b) => new Date(b.updateApp) - new Date(a.updateApp));
-}
-
 // Store de Pinia
 import { defineStore } from 'pinia';
 import { postWithToken, getWithToken, putWithToken } from "./ApiService.js";
@@ -86,26 +67,6 @@ export const useOrders = defineStore('orders', {
                 method_shipping_ids: method_shipping_ids
             };
             return await postWithToken('api/v1/orders/by-method-shipping', body);
-        },
-
-        updateOrderListByMethodShipping(order) {
-            let updatedOrderIndex;
-            switch (order.method_shipping_id) {
-                case 1:
-                    updatedOrderIndex = this.listOrdersHere.findIndex(o => o.id === order.id);
-                    this.listOrdersHere[updatedOrderIndex] = order;
-                    break;
-                case 2:
-                    updatedOrderIndex = this.listOrdersPickup.findIndex(o => o.id === order.id);
-                    this.listOrdersPickup[updatedOrderIndex] = order;
-                    break;
-                case 3:
-                    updatedOrderIndex = this.listOrdersDelivery.findIndex(o => o.id === order.id);
-                    this.listOrdersDelivery[updatedOrderIndex] = order;
-                    break;
-            }
-            updatedOrderIndex = this.listOrders.findIndex(o => o.id === order.id)
-            this.listOrders[updatedOrderIndex] = order;
         },
     }
 });

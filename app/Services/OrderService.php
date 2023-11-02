@@ -17,6 +17,7 @@ class OrderService
     const ACTION_APPROVE = 'approve';
     const ACTION_REJECT  = 'reject';
     const ACTION_INFO    = 'info';
+
     public function listOrdersCdaToManage()
     {
         return Order::withOrderDetails()
@@ -46,12 +47,20 @@ class OrderService
             ->get();
     }
 
-    public function listOrdersBills($available = null)
+    public function listOrdersBills($type = null)
     {
-        return Order::withOrderDetails()
-            ->where('process_id', Process::PROCESS_ID_BILLS)
-            ->orderBy('created_at', 'ASC')
-            ->get();
+        $query = Order::withOrderDetails()
+            ->where('process_id', Process::PROCESS_ID_BILLS);
+    
+        if ($type === MethodShipping::METHOD_SHIPPING_HERE) {
+            $query->whereNot('method_shipping_id', MethodShipping::METHOD_SHIPPING_DELIVERY);
+        } elseif ($type === MethodShipping::METHOD_SHIPPING_DELIVERY) {
+            $query->where('method_shipping_id', MethodShipping::METHOD_SHIPPING_DELIVERY);
+        }
+    
+        $query->orderBy('created_at', 'ASC');
+    
+        return $query->get();
     }
 
     public function listOrdersPayment()
@@ -64,7 +73,7 @@ class OrderService
 
     public function processOrderCda(Request $request)
     {
-        $order = Order::findOrFail($request->orderId);
+        $order = Order::getOrder($request->orderId);
 
         switch ($request->action):
             case self::ACTION_APPROVE:
@@ -80,6 +89,7 @@ class OrderService
 
         $order->assignResponsible($request->responsible);
         $order->save();
+        $order->refresh();
         
         return (object) [
             'message' => 'Orden actualizada correctamente',
@@ -89,7 +99,7 @@ class OrderService
 
     public function processOrderPickerReviewer(Request $request)
     {
-        $order = Order::findOrFail($request->orderId);
+        $order = Order::getOrder($request->orderId);
 
         switch ($request->action):
             case self::ACTION_APPROVE:
@@ -102,6 +112,7 @@ class OrderService
         endswitch;  
 
         $order->save();
+        $order->refresh();
         
         return (object) [
             'message' => 'Orden actualizada correctamente',
@@ -110,11 +121,11 @@ class OrderService
     }
 
     public function assingResponsible($request){
-        $order = Order::findOrFail($request->id);
+        $order = Order::getOrder($request->orderId);
         $order->order_status_id = $request->responsible === 'picker' ? OrderStatus::STATUS_ON_PICKER : OrderStatus::STATUS_ON_REVIEWER;
         $order->save();
-
         $result = $order->assignResponsible($request->responsible);
+        $order->refresh();
 
         if($result->status === 'warning'){
             throw new \Exception($result->message);
@@ -168,7 +179,7 @@ class OrderService
 
     public function generateDocument($document, $orderId)
     {
-        $order = Order::findOrFail($orderId);
+        $order = Order::getOrder($orderId);
         $order->is_managed = true;
         $order->is_approved = true;
         $order->order_status_id = Order::ORDER_STATUS_BILLED;
@@ -182,7 +193,7 @@ class OrderService
 
     public function addObservation(Request $request)
     {
-        $order = Order::findOrFail($request->orderId);
+        $order = Order::getOrder($request->orderId);
         $order->observation = $request->observation;
         $order->save();
 

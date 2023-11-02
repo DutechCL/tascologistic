@@ -91,9 +91,6 @@ const search = (value) => {
 </script>
 
 <style>
-.p-dialog-header-close{
-  display: none !important;
-}
 .p-multiselect-label.p-placeholder, .p-multiselect-trigger{
   color: #259bd7 !important;
 }

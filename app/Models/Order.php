@@ -97,6 +97,11 @@ class Order extends Model
         });
     }
 
+    public static function getOrder($id)
+    {
+        return  self::withOrderDetails()->where('id', $id)->first();
+    }
+
     public function assignResponsible($task)
     {
         $tasks = [
