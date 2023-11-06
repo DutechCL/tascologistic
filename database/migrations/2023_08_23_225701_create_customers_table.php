@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('CardCode')->unique();
             $table->string('CardName');
-            $table->string('Address');
-            $table->string('FederalTaxID');
+            $table->string('Address')->nullable();
+            $table->string('FederalTaxID')->nullable();
             $table->string('EmailAddress')->nullable();
             $table->float('CreditLimit', 12, 2)->nullable();
             $table->float('MaxCommitment', 12, 2)->nullable();

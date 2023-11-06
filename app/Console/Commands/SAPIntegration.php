@@ -73,7 +73,7 @@ class SAPIntegration extends Command
                     Customer::updateOrCreate(
                         ['CardCode' => $record['CardCode']],
                         [
-                            'CardCode'     => $record['CardCode'] ?? null,
+                            'CardCode'     => $record['CardCode'],
                             'CardName'     => $record['CardName'] ?? null,
                             'Address'      => $record['Address'] ?? null,
                             'FederalTaxID' => $record['FederalTaxID'] ?? null,
