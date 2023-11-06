@@ -71,7 +71,8 @@ class OrderService
             ->get();
     }
 
-    public function listOrdersTracker($type){
+    public function listOrdersTracker($type)
+    {
         $query = Order::withOrderDetails()
             ->where('order_status_id', '!=', OrderStatus::STATUS_REJECTED)
             ->orderBy('updated_at', 'DESC');
@@ -134,7 +135,7 @@ class OrderService
         ];
     }
 
-    public function assingResponsible($request){
+    public function assingResponsible(Request $request){
         $order = Order::getOrder($request->orderId);
         $order->order_status_id = $request->responsible === 'picker' ? OrderStatus::STATUS_ON_PICKER : OrderStatus::STATUS_ON_REVIEWER;
         $order->save();

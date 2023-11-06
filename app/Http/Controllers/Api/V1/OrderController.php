@@ -195,18 +195,4 @@ class OrderController extends Controller
             return $this->buildResponseErrorFromException($exception);
         }
     }
-
-    public function getOrdersByMethodShipping(Request $request)
-    {
-        $orders = Order::with([
-            'customer', 
-            'orderStatus', 
-            'methodShipping', 
-        ])
-        ->whereIn('method_shipping_id', $request->method_shipping_ids)
-        ->whereNot('order_status_id', 4)
-        ->get();
-
-        return response()->json($orders);
-    }
 }

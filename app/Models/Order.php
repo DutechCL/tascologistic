@@ -68,8 +68,7 @@ class Order extends Model
             'methodShipping', 
             'responsibles',
             'orderItems' => function ($query) {
-                $query->select(['order_items.*', 'products.ItemDescription as ItemDescription'])
-                    ->with(['problems' => function ($query) {
+                $query->with(['problems' => function ($query) {
                         $query->select(['order_item_problems.*', 'problems.title as problem_name'])
                             ->join('problems', 'problems.id', '=', 'order_item_problems.problem_id');
                     }])

@@ -173,6 +173,9 @@ const actionOrder = async () => {
 
       if (response.status === 'success') {
         ordersStore.showDetailOrder = false;
+        ordersStore.setOrderItemsProblems.clear();
+        ordersStore.isProblemMapped = []
+        ordersStore.isCompleteMapped = []
         showToast({
           status: response.status,
           message: response.message,
