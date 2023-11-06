@@ -8,20 +8,15 @@ use App\Models\OrderStatus;
 use App\Models\OrderProblem;
 use App\Models\RoleAssignments;
 use App\Models\OrderItemProblem;
+use App\Services\ProcessService;
+use App\Events\OrderStatusUpdated;
+use App\Events\OrderClassifiedProcess;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Order extends Model
 {
     use HasFactory;
-
-    const ORDER_STATUS_ON_HOLD = 1;
-    const ORDER_STATUS_PICKED = 2;
-    const ORDER_STATUS_REVIEWER = 3;
-    const ORDER_STATUS_REJECTED = 4;
-    const ORDER_STATUS_REVIEWED = 5;
-    // const ORDER_STATUS_AUTHORIZED = 6;
-    const ORDER_STATUS_BILLED = 6;
 
     protected $fillable = [
         'DocEntry',
@@ -33,7 +28,7 @@ class Order extends Model
         'U_SBO_FormaEntrega',
         'is_approved',
         'customer_id',
-    ]; // Campos permitidos para llenado masivo
+    ];
 
     public function customer()
     {
@@ -73,8 +68,7 @@ class Order extends Model
             'methodShipping', 
             'responsibles',
             'orderItems' => function ($query) {
-                $query->select(['order_items.*', 'products.ItemDescription as ItemDescription'])
-                    ->with(['problems' => function ($query) {
+                $query->with(['problems' => function ($query) {
                         $query->select(['order_item_problems.*', 'problems.title as problem_name'])
                             ->join('problems', 'problems.id', '=', 'order_item_problems.problem_id');
                     }])
@@ -94,6 +88,11 @@ class Order extends Model
         });
     }
 
+    public static function getOrder($id)
+    {
+        return  self::withOrderDetails()->where('id', $id)->first();
+    }
+
     public function assignResponsible($task)
     {
         $tasks = [
@@ -107,17 +106,17 @@ class Order extends Model
         $existingAssignment = $this->responsibles()->where('user_id', $user->id)->where('task', $task)->first();
     
         if ($existingAssignment) {
-            return ['status' => 'success', 'message' => 'Tarea asignada exitosamente.'];
+            return (object) ['status' => 'success', 'message' => 'Tarea asignada exitosamente.'];
         }
     
         $existingAssignment = $this->responsibles()->where('task', $task)->first();
     
         if ($existingAssignment) {
-            return ['status' => 'warning', 'message' => 'Esta tarea ya está en proceso de ' . $tasks[$task] . ' por otro usuario.'];
+            return (object) ['status' => 'warning', 'message' => 'Esta tarea ya está en proceso de ' . $tasks[$task] . ' por otro usuario.'];
         }
     
         $this->responsibles()->attach($user->id, ['task' => $task]);
     
-        return ['status' => 'success', 'message' => 'Tarea asignada a '. $tasks[$task]. ' exitosamente.'];
+        return (object) ['status' => 'success', 'message' => 'Tarea asignada a '. $tasks[$task]. ' exitosamente.'];
     }
 }

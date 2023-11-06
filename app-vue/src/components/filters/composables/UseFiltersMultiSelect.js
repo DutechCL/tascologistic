@@ -7,15 +7,15 @@ export function UseFiltersMultiSelect(ListordersManager) {
 
   const { showToast } = ToastMixin.setup();
 
-  const dates = ref(null);
-  const dateLabel = ref(true);
+  const dates = ref(null)
+  const dateLabel = ref(true)
+  const DocEntry = ref([])
   const DocNum = ref([])
   const DocTime = ref([])
   const Customer = ref([])
   const DocTotal = ref([])
   const isFiltersEmpty = ref(true);
   const orders = ref(ListordersManager.value);
-  const oldOrders = ref([]);
 
   watch([dates], (data) => {
     const isDatesValid = dates.value !== null && dates.value.every(date => date !== null);
@@ -71,9 +71,8 @@ const watchFilters = (filters) => {
   });
 };
 
-watch([DocNum, Customer, DocTime, DocTotal], (data) => {
+watch([DocNum, Customer, DocTime, DocTotal, DocEntry], (data) => {
   isFiltersEmpty.value = data.every((filter) => filter.length === 0);
-  console.log(isFiltersEmpty.value);
 });
 
 const filterData = (data) => {
@@ -90,12 +89,13 @@ const filterData = (data) => {
   }
 };
 
-watchFilters([DocNum, Customer, DocTime, DocTotal]);
+watchFilters([DocNum, Customer, DocTime, DocTotal, DocEntry]);
 
   return {
     dates,
     dateLabel,
     orders,
+    DocEntry,
     DocNum,
     DocTime,
     Customer,

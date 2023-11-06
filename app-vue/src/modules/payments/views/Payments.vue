@@ -12,10 +12,13 @@
 </template>
 
 <script setup>
+import { ref, onBeforeMount, watch } from 'vue';
 import TabView from 'primevue/tabview'
 import TabPanel from 'primevue/tabpanel'
 import ToManage from '../components/ToManage.vue'
 import Managed from '../components/Managed.vue';
+import { useOrdersPayment } from '../../../stores/orders/ordersPayments.js';
+
 </script>
 
 <style>

@@ -62,8 +62,6 @@ watch(
   }
 );
 
-
-
 const sendObservation = async () => {
   disableButton.value = true;
   const result = await showConfirm();
@@ -75,7 +73,7 @@ const sendObservation = async () => {
           observation: observation.value,
       }
       let data = await ordersStore.addObservation(body);
-      emit('visible', { 'visibleReport': false});
+      ordersStore.showDialog = false
       
       if(data.status === 'success'){
         observation.value = null;

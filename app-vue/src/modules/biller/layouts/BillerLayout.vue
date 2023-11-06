@@ -7,7 +7,7 @@
 import { defineAsyncComponent } from 'vue'
 export default{
  components:{
-  Header: defineAsyncComponent(()=> import('@/modules/authorizer/components/Header.vue'))
+  Header: defineAsyncComponent(()=> import('../../../components/header/Header.vue'))
  }
 }
 </script>

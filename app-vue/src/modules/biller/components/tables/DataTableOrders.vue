@@ -5,6 +5,7 @@
           <FilterMultiSelect 
           :typeOrders="'here'" 
           :allOrders="allOrders" 
+          :filters="filters"
           @filter="filter"/>
         </div>
       <DataTable 
@@ -27,7 +28,7 @@
             </template>
           </Column>
           <Column headerClass="!bg-primary-900" sortable  field="DocDate" header="Fecha"></Column>
-          <Column headerClass="!bg-primary-900" sortable  field="Customer.CardName" header="Cliente"></Column>
+          <Column headerClass="!bg-primary-900" sortable  field="Customer.CardName" header="Cliente" style="max-width: 300px;"></Column>
           <Column headerClass="!bg-primary-900" sortable  field="DocTotal" header="Monto total"></Column>
           <Column headerClass="!bg-primary-900" sortable  field="MethodShippingName" header="Método entrega" >
               <template #body="slotProps">
@@ -41,7 +42,14 @@
           </Column>
           <Column headerClass="!bg-primary-900"  field="client" header="Emitir">
               <template #body="slotProps">
-                  <Button v-for="action in props.actions" :label="action.label" :disabled="!action.active" @click="actionMethod(action.method, slotProps.data)" class="!py-1.5 !border-primary-900 !text-primary-900"  severity="primary" outlined></Button>
+                  <Button 
+                    v-for="action in props.actions" 
+                    :label="action.label" 
+                    :disabled="!action.active" 
+                    @click="actionMethod(action.method, slotProps.data, action.document)" 
+                    class="!py-1.5 !border-primary-900 !text-primary-900 mr-3"  
+                    severity="primary" 
+                    outlined></Button>
               </template>
         </Column>
       </DataTable>
@@ -66,9 +74,15 @@
   const emit = defineEmits();
   const orders = ref(props.orders);
   const allOrders = ref(props.orders);
-
+  const filters = ref([
+    'DocNum', 
+    'Customer',
+    'DocTotal',
+    'DocTime',
+    'DocDate',
+  ])
   const getIcon = (data) => {
-      switch (data.MethodShippingId) {
+      switch (data.method_shipping_id) {
       case constants.METHOD_SHIPPING_DELIVERY_ID:
         return 'pi pi-truck';
       case constants.METHOD_SHIPPING_PICKUP_ID:
@@ -80,8 +94,8 @@
     }
   }
 
-  const actionMethod = (action, order) => {
-    emit('action', {'action': action, order});
+  const actionMethod = (method, order, document = null,) => {
+    emit('action', {'method': method, 'document': document, order});
   }
 
   const filter = (data) => {
@@ -89,7 +103,6 @@
   }
 
   watch(() => props.orders, (value) => {
-    console.log(value)
     orders.value = value;
     allOrders.value = value;
   })

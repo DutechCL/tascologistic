@@ -4,6 +4,8 @@ namespace App\Services;
 
 use App\Models\User;
 use App\Models\Order;
+use App\Models\Process;
+use App\Models\OrderStatus;
 use App\Models\OrderProblem;
 use Illuminate\Http\Request;
 use App\Models\MethodShipping;
@@ -12,141 +14,140 @@ use App\Http\Resources\OrderResource;
 
 class OrderService
 {
-    const ORDER_STATUS_ON_HOLD = 1;
-    const ORDER_STATUS_REJECTED = 2;
-    const ACTION_APPROVE = 1;
-    const ACTION_REJECT = 2;
-    const ACTION_INFO = 3;
+    const ACTION_APPROVE = 'approve';
+    const ACTION_REJECT  = 'reject';
+    const ACTION_INFO    = 'info';
 
-    public function listOrdersCda()
+    public function listOrdersCdaToManage()
     {
         return Order::withOrderDetails()
-                ->orderByRaw('order_status_id = 4 DESC')
-                ->orderBy('created_at', 'ASC')
-                ->where(function ($query) {
-                        $query->whereIn('method_shipping_id', [MethodShipping::METHOD_SHIPPING_HERE])
-                        ->where('order_status_id', Order::ORDER_STATUS_REJECTED);
-                })->orWhere(function ($query) {
-                    $query->whereIn('method_shipping_id', [MethodShipping::METHOD_SHIPPING_PICKUP, MethodShipping::METHOD_SHIPPING_DELIVERY])
-                        ->whereIn('order_status_id', [Order::ORDER_STATUS_ON_HOLD, Order::ORDER_STATUS_REJECTED]);
-                })->get();
+            ->where('process_id', Process::PROCESS_ID_CDA)
+            ->where('is_managed', false)
+            ->orderBy('created_at', 'ASC')->get();
     }
 
-    public function listOrdersPickerAndReviewer($wareHouseCode)
+    public function listOrdersCdaManage()
+    {
+        return Order::withOrderDetails()
+            ->where('is_managed', true)
+            ->orderBy('updated_at', 'ASC')->get();
+    }
+
+    public function listOrdersPickerReviewer($wareHouseCode)
     {
         if (!$this->isValidWarehouseForUser($wareHouseCode)) {
             throw new \Exception('No tiene permisos para acceder a esta bodega');
         }
         
-        return Order::withOrderDetails()
+        return Order::byWarehouse([$wareHouseCode])
+            ->withOrderDetails()
+            ->whereIn('process_id', [Process::PROCESS_ID_PICKER, Process::PROCESS_ID_REVIEWER])
             ->orderByRaw('order_status_id = 4 DESC')
             ->orderBy('created_at', 'ASC')
-            ->where(function ($query) use ($wareHouseCode) {
-                $query->whereIn('method_shipping_id', [MethodShipping::METHOD_SHIPPING_HERE])
-                    ->whereNotIn('order_status_id', [Order::ORDER_STATUS_REJECTED, Order::ORDER_STATUS_REVIEWED])
-                    ->whereHas('orderItems', function ($subquery) use ($wareHouseCode) {
-                        $subquery->whereIn('WareHouseCode', [$wareHouseCode]);
-                    });
-            })->orWhere(function ($query) use ($wareHouseCode) {
-                $query->whereIn('method_shipping_id', [MethodShipping::METHOD_SHIPPING_PICKUP, MethodShipping::METHOD_SHIPPING_DELIVERY])
-                    ->whereNotIn('order_status_id', [Order::ORDER_STATUS_REJECTED, Order::ORDER_STATUS_REVIEWED])
-                    ->where('is_managed', true)
-                    ->whereHas('orderItems', function ($subquery) use ($wareHouseCode) {
-                        $subquery->whereIn('WareHouseCode', [$wareHouseCode]);
-                    });
-            })->get();
+            ->get();
     }
 
-
-    public function listOrdersBills($available = null)
+    public function listOrdersBills($type = null)
     {
-        $ordersQuery = Order::withOrderDetails()
-            ->orderBy('created_at', 'ASC');
-
-        switch ($available) {
-            case 'pickup-here':
-                $this->applyShippingAndStatusFilter($ordersQuery, [
-                    MethodShipping::METHOD_SHIPPING_PICKUP, 
-                    MethodShipping::METHOD_SHIPPING_HERE
-                    ], 
-                    [Order::ORDER_STATUS_REVIEWED]);
-                break;
-
-            case 'delivery':
-                $this->applyShippingAndStatusFilter($ordersQuery, [
-                    MethodShipping::METHOD_SHIPPING_DELIVERY
-                    ], 
-                    [Order::ORDER_STATUS_REVIEWED]);
-                break;
+        $query = Order::withOrderDetails()
+            ->where('process_id', Process::PROCESS_ID_BILLS);
+    
+        if ($type === MethodShipping::METHOD_SHIPPING_HERE) {
+            $query->whereNot('method_shipping_id', MethodShipping::METHOD_SHIPPING_DELIVERY);
+        } elseif ($type === MethodShipping::METHOD_SHIPPING_DELIVERY) {
+            $query->where('method_shipping_id', MethodShipping::METHOD_SHIPPING_DELIVERY);
         }
-
-        return $ordersQuery->get();
+    
+        $query->orderBy('created_at', 'ASC');
+    
+        return $query->get();
     }
 
     public function listOrdersPayment()
     {
         return Order::withOrderDetails()
+            ->where('process_id', Process::PROCESS_ID_PAYMENT)
             ->orderBy('created_at', 'ASC')
-            ->whereIn('order_status_id', [Order::ORDER_STATUS_REVIEWED])
             ->get();
     }
 
-    private function applyShippingAndStatusFilter($query, $shippingMethods, $orderStatus)
+    public function listOrdersTracker($type)
     {
-        $query->whereIn('method_shipping_id', $shippingMethods)
-            ->whereIn('order_status_id', $orderStatus);
+        $query = Order::withOrderDetails()
+            ->where('order_status_id', '!=', OrderStatus::STATUS_REJECTED)
+            ->orderBy('updated_at', 'DESC');
+
+        if ($type === 'warehouse') {
+            $query->whereNot('method_shipping_id', MethodShipping::METHOD_SHIPPING_HERE);
+        } elseif ($type === MethodShipping::METHOD_SHIPPING_DELIVERY) {
+            $query->where('method_shipping_id', MethodShipping::METHOD_SHIPPING_HERE);
+        }
+
+        return $query->paginate(10);
     }
 
-    public function processOrderAction(Order $order, Request $request)
+    public function processOrderCda(Request $request)
     {
-        $order->is_managed = true;
-        switch ($request->responsible):
-            case 'cda':
-                switch ($request->action):
-                    case self::ACTION_APPROVE:
-                        $this->updateOrderStatus($order, Order::ORDER_STATUS_ON_HOLD, $request);
-                        $order->is_approved = true;
-                        break;
-                    case self::ACTION_REJECT:
-                        $this->updateOrderStatus($order, Order::ORDER_STATUS_REJECTED, $request);
-                        $this->assingProbelmsOrder($order, $request);
-                        $order->is_approved = false;
-                        break;  
-                    case self::ACTION_INFO:
-                        $order->is_managed = true;
-                        break;  
-                endswitch;    
-                break;
-            case 'picker':
-                if($request->action){
-                    $this->updateOrderStatus($order, Order::ORDER_STATUS_REVIEWER, $request);
-                }else{
-                    $this->updateOrderStatus($order, Order::ORDER_STATUS_REJECTED, $request);
-                    $this->assingProbelmsOrderItems($order, $request);
-                    $order->is_approved = false;
-                    $order->is_managed = false;
-                }
-                break;
-            case 'reviewer':
-                if($request->action){
-                    $this->updateOrderStatus($order, Order::ORDER_STATUS_REVIEWED, $request);
-                }else{
-                    $this->updateOrderStatus($order, Order::ORDER_STATUS_REJECTED, $request);
-                    $this->assingProbelmsOrderItems($order, $request);
-                    $order->is_approved = false;
-                    $order->is_managed = false;
-                }
-                break;
-            default:
-                throw new \Exception('Rol no válido');
-                break;
-        endswitch;
+        $order = Order::getOrder($request->orderId);
 
-        
+        switch ($request->action):
+            case self::ACTION_APPROVE:
+                $order->order_status_id = OrderStatus::STATUS_ON_PICKER;
+                break;
+            case self::ACTION_REJECT:
+                $order->order_status_id = OrderStatus::STATUS_REJECTED;
+                $this->assingProbelmsOrder($order, $request);
+                break;  
+        endswitch;    
+
+        $order->is_managed = true;
+
+        $order->assignResponsible($request->responsible);
         $order->save();
+        $order->refresh();
         
         return (object) [
             'message' => 'Orden actualizada correctamente',
+            'order' => new OrderResource($order),
+        ];
+    }
+
+    public function processOrderPickerReviewer(Request $request)
+    {
+        $order = Order::getOrder($request->orderId);
+
+        switch ($request->action):
+            case self::ACTION_APPROVE:
+                $order->order_status_id = $order->order_status_id === OrderStatus::STATUS_ON_PICKER ? OrderStatus::STATUS_PICKED : OrderStatus::STATUS_REVIEWED;
+                break;
+            case self::ACTION_REJECT:
+                $order->order_status_id = OrderStatus::STATUS_REJECTED;
+                $this->assingProbelmsOrderItems($order, $request);
+                break;  
+        endswitch;  
+
+        $order->save();
+        $order->refresh();
+        
+        return (object) [
+            'message' => 'Orden actualizada correctamente',
+            'order' => new OrderResource($order),
+        ];
+    }
+
+    public function assingResponsible(Request $request){
+        $order = Order::getOrder($request->orderId);
+        $order->order_status_id = $request->responsible === 'picker' ? OrderStatus::STATUS_ON_PICKER : OrderStatus::STATUS_ON_REVIEWER;
+        $order->save();
+        $result = $order->assignResponsible($request->responsible);
+        $order->refresh();
+
+        if($result->status === 'warning'){
+            throw new \Exception($result->message);
+        }
+
+        return (object) [
+            'message' => $result->message,
             'order' => new OrderResource($order),
         ];
     }
@@ -191,16 +192,23 @@ class OrderService
         }
     }
 
-    public function updateOrderStatus(Order $order, $OrderStatus, Request $request = null)
+    public function generateDocument($document, $orderId)
     {
-        $order->order_status_id = $OrderStatus;
-        $result = $order->assignResponsible($request->responsible);
+        $order = Order::getOrder($orderId);
+        $order->is_managed = true;
+        $order->is_approved = true;
+        $order->order_status_id = Order::ORDER_STATUS_BILLED;
         $order->save();
-        return $result;
+
+        return (object) [
+            'message' => 'Orden actualizada correctamente',
+            'order' => new OrderResource($order),
+        ];
     }
 
-    public function addObservation(Order $order, Request $request)
+    public function addObservation(Request $request)
     {
+        $order = Order::getOrder($request->orderId);
         $order->observation = $request->observation;
         $order->save();
 
