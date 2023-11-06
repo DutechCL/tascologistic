@@ -29,11 +29,11 @@ class SAPIntegration extends Command
         $this->info('Testing SAP integration to get orders...');
 
         // Llama al método getOrders de SAPService
-        $orders = $sapService->getOrders();
+        $customer = $sapService->getBusinessPartners();
 
         // Imprime o maneja la respuesta según tus necesidades
         $this->info('Orders from SAP:');
-        dd($orders);
+        dd($customer);
         // $this->table(['OrderID', 'CustomerID', 'TotalAmount'], $orders);
 
         $this->info('Test completed.');

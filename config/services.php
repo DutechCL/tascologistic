@@ -49,6 +49,9 @@ return [
             'orders'  => [
                 'get' => 'Orders',
             ],
+            'business_partners' => [
+                'get' => 'BusinessPartners',
+            ],
         ]
     ],
 

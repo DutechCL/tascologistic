@@ -100,4 +100,16 @@ class SAPService
             return ['error' => $e->getMessage()];
         }
     }
+
+    public function getBusinessPartners()
+    {
+        $endpoint = config('services.sap.endpoints.business_partners.get');
+
+        try {
+            $response = $this->makeRequest($endpoint, 'get');
+            return $response;
+        } catch (\Exception $e) {
+            return ['error' => $e->getMessage()];
+        }
+    }
 }
