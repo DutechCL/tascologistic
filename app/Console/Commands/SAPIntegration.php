@@ -46,7 +46,7 @@ class SAPIntegration extends Command
             // Verificar si hay registros en la respuesta
             if (!empty($response['value'])) {
                 // Procesar los registros del lote actual
-                $this->processBatch($response['value'], $field);
+                $this->processBatch($response['value'], $fields);
                 
                 // Actualizar el valor de $skip para la próxima iteración
                 $skip += $batchSize;
