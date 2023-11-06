@@ -3,26 +3,32 @@
 namespace App\Services\SAP;
 
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Cookie;
+use Illuminate\Http\Response;
 
 class SAPService
 {
+    private $apiDomain;
     private $apiUrl;
     private $companyId;
     private $username;
     private $password;
+    private $loginCookies;
 
     /**
      * SAPService constructor.
      */
     public function __construct()
     {
-        $this->apiUrl    = config('services.sap.api_url');
-        $this->companyId = config('services.sap.company_id');
-        $this->username  = config('services.sap.username');
-        $this->password  = config('services.sap.password');
-
-        // dd($this->apiUrl, $this->companyId, $this->username, $this->password);
+        $this->apiUrl    = sprintf(
+            '%s://%s:%s/%s',
+            config('services.sap.url.protocol'),
+            config('services.sap.url.domain'),
+            config('services.sap.url.port'),
+            config('services.sap.url.version')
+        );
+        $this->companyId = config('services.sap.credentials.company_db');
+        $this->username  = config('services.sap.credentials.username');
+        $this->password  = config('services.sap.credentials.password');
     }
 
     /**
@@ -39,12 +45,11 @@ class SAPService
                 "Password" => $this->password,
             ]);
 
-            $sessionId = $response['SessionId'];
+            // Almacenar las cookies en la propiedad $loginCookies
+            $this->loginCookies = $response->cookies();
 
-            // Almacena el SessionId en una cookie llamada 'B1SESSION'
-            Cookie::queue('B1SESSION', $sessionId, 30);
-
-            return $response->json();
+            // Retornar la nueva respuesta
+            return $response;
         } catch (\Exception $e) {
             return ['error' => $e->getMessage()];
         }
@@ -58,22 +63,28 @@ class SAPService
      */
     public function makeRequest($endpoint, $method = 'get', $data = [])
     {
+        $domain = config('services.sap.url.domain');
+        
         try {
-            $sessionId = Cookie::get('B1SESSION');
-    
-            if (!$sessionId) {
+            if (!$this->loginCookies) {
                 $this->login();
-                $sessionId = Cookie::get('B1SESSION');
             }
     
-            $response = Http::timeout(60)->withCookies(['B1SESSION' => $sessionId], $this->apiUrl)->$method("{$this->apiUrl}/$endpoint", $data);
+            // Convertir CookieJar a un array
+            $cookiesArray = [];
+
+            foreach ($this->loginCookies as $cookie) {
+                $cookiesArray[$cookie->getName()] = $cookie->getValue();
+            }
+    
+            // Utilizar el array de cookies en la solicitud
+            $response = Http::timeout(60)->withCookies($cookiesArray, $domain)->$method("{$this->apiUrl}/$endpoint", $data);
     
             return $response->json();
         } catch (\Exception $e) {
             return ['error' => $e->getMessage()];
         }
     }
-    
 
     /**
      * @return array|mixed
@@ -81,15 +92,12 @@ class SAPService
     public function getOrders()
     {
         $endpoint = config('services.sap.endpoints.orders.get');
-    
-        try {
 
+        try {
             $response = $this->makeRequest($endpoint, 'get');
-            
             return $response;
         } catch (\Exception $e) {
             return ['error' => $e->getMessage()];
         }
     }
-
 }
