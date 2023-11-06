@@ -31,7 +31,7 @@ class SAPIntegration extends Command
     {
         $this->info('Testing SAP integration to get business partners...');
 
-        $fields = ['CardCode', 'CardName', 'Address', 'FederalTaxID'];
+        $fields = ['CardCode', 'CardName', 'Address', 'FederalTaxID', 'EmailAddress', 'CreditLimit', 'MaxCommitment'];
 
         // Tamaño del lote
         $batchSize = 20;
@@ -46,7 +46,7 @@ class SAPIntegration extends Command
             // Verificar si hay registros en la respuesta
             if (!empty($response['value'])) {
                 // Procesar los registros del lote actual
-                $this->processBatch($response['value']);
+                $this->processBatch($response['value'], $field);
                 
                 // Actualizar el valor de $skip para la próxima iteración
                 $skip += $batchSize;
@@ -55,29 +55,25 @@ class SAPIntegration extends Command
                 break;
             }
 
-        } while ($skip < 80);
+        } while (isset($response['odata.nextLink']));
 
         $this->info('Test completed.');
     }
 
     // Método para procesar un lote y almacenarlo en la base de datos
-    private function processBatch($batch)
+    private function processBatch($batch, $fields)
     {
         // Puedes almacenar los registros en la base de datos aquí
         // Por ejemplo, puedes utilizar Eloquent para crear modelos y almacenarlos en la base de datos
         foreach ($batch as $record) {
             // Verificar si $record es un array antes de acceder a sus índices
             echo "Procesando registro {$record['CardCode']}...\n";
+            $dataToInsert = array_intersect_key($record, array_flip($fields));
             if (is_array($record)) {
                 if (isset($record['CardCode'])){
                     Customer::updateOrCreate(
                         ['CardCode' => $record['CardCode']],
-                        [
-                            'CardCode'     => $record['CardCode'],
-                            'CardName'     => $record['CardName'] ?? null,
-                            'Address'      => $record['Address'] ?? null,
-                            'FederalTaxID' => $record['FederalTaxID'] ?? null,
-                        ]
+                        $dataToInsert
                     );
                 }
             }
