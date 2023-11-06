@@ -41,7 +41,7 @@ class SAPIntegration extends Command
         // Customer::truncate();
         do {
             // Obtener los registros de la página actual
-            $response = $sapService->getBusinessPartners($fields, $batchSize, $skip);
+            $response = $sapService->getBusinessPartners($fields, $skip);
 
             // Verificar si hay registros en la respuesta
             if (!empty($response['value'])) {
