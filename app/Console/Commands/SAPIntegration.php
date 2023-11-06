@@ -65,7 +65,7 @@ class SAPIntegration extends Command
     {
         // Puedes almacenar los registros en la base de datos aquí
         // Por ejemplo, puedes utilizar Eloquent para crear modelos y almacenarlos en la base de datos
-        foreach ($batch['value'] as $record) {
+        foreach ($batch as $record) {
             // Verificar si $record es un array antes de acceder a sus índices
             echo "Procesando registro {$record['CardCode']}...\n";
             if (is_array($record)) {
