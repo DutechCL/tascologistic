@@ -70,7 +70,7 @@ class SAPIntegration extends Command
             echo "Procesando registro {$record['CardCode']}...\n";
             $dataToInsert = array_intersect_key($record, array_flip($fields));
             if (is_array($record)) {
-                if (isset($record['CardCode']) || isset($record['CardCode'])){
+                if (isset($record['CardCode']) || isset($record['CardName'])){
                     Customer::updateOrCreate(
                         ['CardCode' => $record['CardCode']],
                         $dataToInsert
