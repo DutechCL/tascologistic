@@ -69,13 +69,15 @@ class SAPIntegration extends Command
             // Verificar si $record es un array antes de acceder a sus índices
             echo "Procesando registro {$record['CardCode']}...\n";
             if (is_array($record)) {
-                Customer::create([
-                    'CardCode'     => $record['CardCode'] ?? null,
-                    'CardName'     => $record['CardName'] ?? null,
-                    'Address'      => $record['Address'] ?? null,
-                    'FederalTaxID' => $record['FederalTaxID'] ?? null,
-                    // Otros campos...
-                ]);
+                Customer::updateOrCreate(
+                    ['CardCode' => $record['CardCode']],
+                    [
+                        'CardCode'     => $record['CardCode'] ?? null,
+                        'CardName'     => $record['CardName'] ?? null,
+                        'Address'      => $record['Address'] ?? null,
+                        'FederalTaxID' => $record['FederalTaxID'] ?? null,
+                    ]
+                );
             }
         }
     }
