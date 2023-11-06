@@ -2,8 +2,10 @@
 
 namespace App\Console\Commands;
 
-use App\Services\SAP\SAPService;
+use App\Models\Customer;
 use Illuminate\Console\Command;
+use App\Services\SAP\SAPService;
+use Illuminate\Support\Facades\Schema;
 
 class SAPIntegration extends Command
 {
@@ -24,18 +26,59 @@ class SAPIntegration extends Command
     /**
      * Execute the console command.
      */
+
     public function handle(SAPService $sapService)
     {
-        $this->info('Testing SAP integration to get orders...');
+        $this->info('Testing SAP integration to get business partners...');
 
-        // Llama al método getOrders de SAPService
-        $customer = $sapService->getBusinessPartners();
+        $fields = ['CardCode', 'CardName', 'Address', 'FederalTaxID'];
 
-        // Imprime o maneja la respuesta según tus necesidades
-        $this->info('Orders from SAP:');
-        dd($customer);
-        // $this->table(['OrderID', 'CustomerID', 'TotalAmount'], $orders);
+        // Tamaño del lote
+        $batchSize = 20;
+
+        // Iniciar desde el primer registro
+        $skip = 0;
+        // Customer::truncate();
+        do {
+            // Obtener los registros de la página actual
+            $response = $sapService->getBusinessPartners($fields, $batchSize, $skip);
+
+            // Verificar si hay registros en la respuesta
+            if (!empty($response['value'])) {
+                // Procesar los registros del lote actual
+                $this->processBatch($response['value']);
+                
+                // Actualizar el valor de $skip para la próxima iteración
+                $skip += $batchSize;
+            } else {
+                // Salir del bucle si no hay más registros
+                break;
+            }
+
+        } while ($skip < 80);
 
         $this->info('Test completed.');
     }
+
+    // Método para procesar un lote y almacenarlo en la base de datos
+    private function processBatch($batch)
+    {
+        // Puedes almacenar los registros en la base de datos aquí
+        // Por ejemplo, puedes utilizar Eloquent para crear modelos y almacenarlos en la base de datos
+        foreach ($batch['value'] as $record) {
+            // Verificar si $record es un array antes de acceder a sus índices
+            if (is_array($record)) {
+                Customer::create([
+                    'CardCode'     => $record['CardCode'] ?? null,
+                    'CardName'     => $record['CardName'] ?? null,
+                    'Address'      => $record['Address'] ?? null,
+                    'FederalTaxID' => $record['FederalTaxID'] ?? null,
+                    // Otros campos...
+                ]);
+            }
+        }
+    }
+
+
+
 }

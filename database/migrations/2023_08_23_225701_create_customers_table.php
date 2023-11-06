@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('CardName');
             $table->string('Address');
             $table->string('FederalTaxID');
+            $table->string('EmailAddress')->nullable();
+            $table->float('CreditLimit', 12, 2)->nullable();
+            $table->float('MaxCommitment', 12, 2)->nullable();
             $table->timestamps();
         });
     }

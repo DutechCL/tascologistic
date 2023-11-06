@@ -79,7 +79,7 @@ class SAPService
     
             // Utilizar el array de cookies en la solicitud
             $response = Http::timeout(60)->withCookies($cookiesArray, $domain)->$method("{$this->apiUrl}/$endpoint", $data);
-    
+
             return $response->json();
         } catch (\Exception $e) {
             return ['error' => $e->getMessage()];
@@ -89,27 +89,39 @@ class SAPService
     /**
      * @return array|mixed
      */
-    public function getOrders()
+    public function getOrders($fields = null, $skip = 0)
     {
         $endpoint = config('services.sap.endpoints.orders.get');
 
         try {
-            $response = $this->makeRequest($endpoint, 'get');
-            return $response;
+
+            $response = $this->makeRequest($endpoint, 'get', [
+                '$select' => implode(',', $fields),
+                '$skip'   => $skip,
+            ]);
         } catch (\Exception $e) {
             return ['error' => $e->getMessage()];
         }
     }
 
-    public function getBusinessPartners()
-    {
-        $endpoint = config('services.sap.endpoints.business_partners.get');
+// En SAPService.php
+public function getBusinessPartners($fields = null, $skip = 0)
+{
+    $endpoint = config('services.sap.endpoints.business_partners.get');
 
-        try {
-            $response = $this->makeRequest($endpoint, 'get');
-            return $response;
-        } catch (\Exception $e) {
-            return ['error' => $e->getMessage()];
-        }
+    try {
+        $results = [];
+
+        // Realiza la solicitud con los parámetros de paginación
+        $response = $this->makeRequest($endpoint, 'get', [
+            '$select' => implode(',', $fields),
+            '$skip'   => $skip,
+        ]);
+
+        return ['value' => $response];
+    } catch (\Exception $e) {
+        return ['error' => $e->getMessage()];
     }
+}
+
 }
