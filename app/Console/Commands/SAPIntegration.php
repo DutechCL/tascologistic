@@ -68,7 +68,7 @@ class SAPIntegration extends Command
         foreach ($batch['value'] as $record) {
             // Verificar si $record es un array antes de acceder a sus índices
             echo "Procesando registro {$record['CardCode']}...\n";
-            if (is_array($record)) {
+            if (is_array($record['CardCode']) && !empty($record['CardCode'])) {
                 Customer::updateOrCreate(
                     ['CardCode' => $record['CardCode']],
                     [

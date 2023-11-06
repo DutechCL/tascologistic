@@ -118,7 +118,7 @@ public function getBusinessPartners($fields = null, $skip = 0)
             '$skip'   => $skip,
         ]);
 
-        return ['value' => $response];
+        return $response;
     } catch (\Exception $e) {
         return ['error' => $e->getMessage()];
     }
