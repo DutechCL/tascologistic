@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Customer;
+use App\Models\Warehouse;
 use App\Models\SalesPerson;
 use Illuminate\Console\Command;
 use App\Services\SAP\SAPService;
@@ -27,8 +28,8 @@ class SAPIntegration extends Command
             case 'salesPersons':
                 $this->syncSalesPersons($sapService);
                 break;
-            case 'orders':
-                $this->syncOrders($sapService);
+            case 'warehouses':
+                $this->syncWarehouses($sapService);
                 break;
             // Agrega más casos según sea necesario para otros tipos de datos
             default:
@@ -98,7 +99,7 @@ class SAPIntegration extends Command
             if (!empty($response['value'])) {
 
                 $result =  array_map(function($element) {
-                    $element['active'] = ($element['Active'] == 'tYES') ? 1 : 0;
+                    $element['Active'] = ($element['Active'] == 'tYES') ? 1 : 0;
                     return $element;
                 }, $response['value'] );
 
@@ -120,59 +121,96 @@ class SAPIntegration extends Command
         } while (isset($response['odata.nextLink']));
     }
 
-    private function syncProducts(SAPService $sapService)
+    private function syncWarehouses(SAPService $sapService)
     {
-        $this->info('Syncing products...');
-        // $fields = [
-        //     'ItemCode',
-        //     'ItemName',
-        //     'Quantity',
-        //     'Price',
-        //     'PriceAfterVAT',
-        //     'Currency',
-        //     'WarehouseCode',
-        //     'Height1',
-        //     'Hight1Unit',
-        //     'Height2',
-        //     'Height2Unit',
-        //     'Lengh1',
-        //     'Lengh1Unit',
-        //     'Lengh2',
-        //     'Lengh2Unit',
-        //     'Weight1',
-        //     'Weight1Unit',
-        //     'Weight2',
-        //     'Weight2Unit',
-        //     'Factor1',
-        //     'Factor2',
-        //     'Factor3',
-        //     'Factor4',
-        //     'TaxCode',
-        //     'TaxType',
-        //     ];
-        // $batchSize = 20;
-        // $skip = 0;
+        $this->info('Syncing warehouses...');
+        $fields = [
+            'AllowUseTax',
+            'City',
+            'State',
+            'Street',
+            'StreetNo',
+            'WarehouseCode',
+            'WarehouseCodeEncrey',
+            'WarehouseName',
+        ];
+        $batchSize = 20;
+        $skip = 0;
 
-        // do {
-        //     $response = $sapService->get('products.get', $skip, $fields);
-        //     if (!empty($response['value'])) {
-        //         foreach ($response['value']as $record) {
-        //             $dataToInsert = array_intersect_key($record, array_flip($fields));
-        //             if (is_array($record)) {
-        //                 if (isset($record['ItemCode'])){
-        //                     Product::updateOrCreate(
-        //                         ['ItemCode' => $record['ItemCode']],
-        //                         $dataToInsert
-        //                     );
-        //                 }
-        //             }
-        //         }
-        //         $skip += $batchSize;
-        //     } else {
-        //         break;
-        //     }
-        // } while (isset($response['odata.nextLink']));
+        do {
+            $response = $sapService->get('warehouses.get', $skip, $fields);
+            if (!empty($response['value'])) {
+                foreach ($response['value']as $record) {
+                    $dataToInsert = array_intersect_key($record, array_flip($fields));
+                    if (is_array($record)) {
+                        if (isset($record['WarehouseCode']) && isset($record['CardName'])){
+                            Warehouse::updateOrCreate(
+                                ['WarehouseCode' => $record['WarehouseCode']],
+                                $dataToInsert
+                            );
+                        }
+                    }
+                }
+                $skip += $batchSize;
+            } else {
+                break;
+            }
+        } while (isset($response['odata.nextLink']));
     }
+
+    // private function syncProducts(SAPService $sapService)
+    // {
+    //     $this->info('Syncing products...');
+    //     // $fields = [
+    //     //     'ItemCode',
+    //     //     'ItemName',
+    //     //     'Quantity',
+    //     //     'Price',
+    //     //     'PriceAfterVAT',
+    //     //     'Currency',
+    //     //     'WarehouseCode',
+    //     //     'Height1',
+    //     //     'Hight1Unit',
+    //     //     'Height2',
+    //     //     'Height2Unit',
+    //     //     'Lengh1',
+    //     //     'Lengh1Unit',
+    //     //     'Lengh2',
+    //     //     'Lengh2Unit',
+    //     //     'Weight1',
+    //     //     'Weight1Unit',
+    //     //     'Weight2',
+    //     //     'Weight2Unit',
+    //     //     'Factor1',
+    //     //     'Factor2',
+    //     //     'Factor3',
+    //     //     'Factor4',
+    //     //     'TaxCode',
+    //     //     'TaxType',
+    //     //     ];
+    //     // $batchSize = 20;
+    //     // $skip = 0;
+
+    //     // do {
+    //     //     $response = $sapService->get('products.get', $skip, $fields);
+    //     //     if (!empty($response['value'])) {
+    //     //         foreach ($response['value']as $record) {
+    //     //             $dataToInsert = array_intersect_key($record, array_flip($fields));
+    //     //             if (is_array($record)) {
+    //     //                 if (isset($record['ItemCode'])){
+    //     //                     Product::updateOrCreate(
+    //     //                         ['ItemCode' => $record['ItemCode']],
+    //     //                         $dataToInsert
+    //     //                     );
+    //     //                 }
+    //     //             }
+    //     //         }
+    //     //         $skip += $batchSize;
+    //     //     } else {
+    //     //         break;
+    //     //     }
+    //     // } while (isset($response['odata.nextLink']));
+    // }
 
     private function syncOrders(SAPService $sapService)
     {

@@ -113,10 +113,10 @@ class SAPService
         }
     }
 
-    public function post($endpoint, $data = [])
+    public function post(string $key, $data = [])
     {
         try {
-            $endpoint = config("services.sap.$endpoint.post");
+            $endpoint =  $this->endpoint($key);
 
             return $this->makeRequest($endpoint, 'post', $data);
         } catch (\Exception $e) {
@@ -124,7 +124,7 @@ class SAPService
         }
     }
 
-    public function endpoint($endpoint)
+    public function endpoint(string $endpoint)
     {
         return config("services.sap.endpoints.$endpoint");
     }

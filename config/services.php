@@ -57,6 +57,9 @@ return [
             ],
             'sales_persons' => [
                 'get' => 'SalesPersons'
+            ],
+            'warehouses' => [
+                'get' => 'Warehouses'
             ]
         ]
     ],
