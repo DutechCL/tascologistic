@@ -2,9 +2,10 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Customer;
-use App\Models\Product;
 use App\Models\Order;
+use App\Models\Product;
+use App\Models\Customer;
+use App\Models\SalesPerson;
 use Illuminate\Console\Command;
 use App\Services\SAP\SAPService;
 
