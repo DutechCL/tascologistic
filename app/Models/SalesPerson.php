@@ -34,7 +34,7 @@ class SalesPerson extends Model
 
         // Utiliza el evento creating para convertir el valor de 'Active'
         static::creating(function ($salesPerson) {
-            $this->attributes['Active'] = strtolower($this->attributes['Active']) === 'tYES' ? 1 : 0;
+            $salesPerson->attributes['Active'] = strtolower($salesPerson->attributes['Active']) === 'tyes' ? 1 : 0;
         });
     }
 }
