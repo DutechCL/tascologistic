@@ -10,33 +10,17 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    const FILLABLE = [
         'ItemCode',
-        'ItemDescription',
-        'Quantity',
-        'Price',
-        'PriceAfterVAT',
-        'Currency',
-        'WarehouseCode',
-        'Height1',
-        'Hight1Unit',
-        'Height2',
-        'Height2Unit',
-        'Lengh1',
-        'Lengh1Unit',
-        'Lengh2',
-        'Lengh2Unit',
-        'Weight1',
-        'Weight1Unit',
-        'Weight2',
-        'Weight2Unit',
-        'Factor1',
-        'Factor2',
-        'Factor3',
-        'Factor4',
-        'TaxCode',
-        'TaxType',
-    ]; // Campos permitidos para llenado masivo
+        'ItemName',
+        'ItemsGroupCode',
+        'QuantityOnStock',
+        'DefaultWarehouse',
+    ];
+
+    const IDENTIFIER = 'ItemCode';
+
+    protected $fillable = self::FILLABLE;
 
     public function orderItems()
     {

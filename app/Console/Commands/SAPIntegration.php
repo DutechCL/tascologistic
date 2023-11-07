@@ -38,6 +38,9 @@ class SAPIntegration extends Command
             case 'warehouses':
                 $this->syncData('warehouses.get', Warehouse::class);
                 break;
+            case 'products':
+                $this->syncData('products.get', Product::class);
+                break;
             default:
                 $this->error('Invalid data type specified.');
                 break;
@@ -77,122 +80,4 @@ class SAPIntegration extends Command
         } while (isset($response['odata.nextLink']));
     }
 
-
-    // private function syncCustomers(SAPService $sapService)
-    // {
-    //     $this->info('Syncing customers...');
-    //     $fields = [
-    //         'CardCode', 
-    //         'CardName', 
-    //         'Address', 
-    //         'FederalTaxID', 
-    //         'EmailAddress', 
-    //         'CreditLimit', 
-    //         'MaxCommitment'
-    //     ];
-    //     $batchSize = 20;
-    //     $skip = 0;
-
-    //     do {
-    //         $response = $sapService->get('business_partners.get', $skip, $fields);
-    //         if (!empty($response['value'])) {
-    //             foreach ($response['value']as $record) {
-    //                 $dataToInsert = array_intersect_key($record, array_flip($fields));
-    //                 if (is_array($record)) {
-    //                     if (isset($record['CardCode']) && isset($record['CardName'])){
-    //                         Customer::updateOrCreate(
-    //                             ['CardCode' => $record['CardCode']],
-    //                             $dataToInsert
-    //                         );
-    //                     }
-    //                 }
-    //             }
-    //             $skip += $batchSize;
-    //         } else {
-    //             break;
-    //         }
-    //     } while (isset($response['odata.nextLink']));
-    // }
-
-    // private function syncSalesPersons(SAPService $sapService)
-    // {
-    //     $this->info('Syncing SalesEmploye...');
-    //     $fields = [
-    //         'SalesEmployeeCode', 
-    //         'SalesEmployeeName', 
-    //         'CommissionForSalesEmployee', 
-    //         'CommissionGroup', 
-    //         'Locked', 
-    //         'EmployeeID', 
-    //         'Active',
-    //         'Telephone',
-    //         'Mobile',
-    //         'Email',
-    //     ];
-    //     $batchSize = 20;
-    //     $skip = 0;
-
-    //     do {
-    //         $response = $sapService->get('sales_persons.get', $skip, $fields);
-    //         if (!empty($response['value'])) {
-
-    //             $result =  array_map(function($element) {
-    //                 $element['Active'] = ($element['Active'] == 'tYES') ? 1 : 0;
-    //                 return $element;
-    //             }, $response['value'] );
-
-    //             foreach ($result as $record) {
-    //                 $dataToInsert = array_intersect_key($record, array_flip($fields));
-    //                 if (is_array($record)) {
-    //                     if (isset($record['SalesEmployeeCode'])){
-    //                         SalesPerson::updateOrCreate(
-    //                             ['SalesEmployeeCode' => $record['SalesEmployeeCode']],
-    //                             $dataToInsert
-    //                         );
-    //                     }
-    //                 }
-    //             }
-    //             $skip += $batchSize;
-    //         } else {
-    //             break;
-    //         }
-    //     } while (isset($response['odata.nextLink']));
-    // }
-
-    // private function syncWarehouses(SAPService $sapService)
-    // {
-    //     $this->info('Syncing warehouses...');
-    //     $fields = [
-    //         'AllowUseTax',
-    //         'City',
-    //         'State',
-    //         'Street',
-    //         'StreetNo',
-    //         'WarehouseCode',
-    //         'WarehouseCodeEncrey',
-    //         'WarehouseName',
-    //     ];
-    //     $batchSize = 20;
-    //     $skip = 0;
-
-    //     do {
-    //         $response = $sapService->get('warehouses.get', $skip, $fields);
-    //         if (!empty($response['value'])) {
-    //             foreach ($response['value']as $record) {
-    //                 $dataToInsert = array_intersect_key($record, array_flip($fields));
-    //                 if (is_array($record)) {
-    //                     if (isset($record['WarehouseCode'])){
-    //                         Warehouse::updateOrCreate(
-    //                             ['WarehouseCode' => $record['WarehouseCode']],
-    //                             $dataToInsert
-    //                         );
-    //                     }
-    //                 }
-    //             }
-    //             $skip += $batchSize;
-    //         } else {
-    //             break;
-    //         }
-    //     } while (isset($response['odata.nextLink']));
-    // }
 }
