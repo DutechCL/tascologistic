@@ -12,12 +12,17 @@ use App\Services\SAP\SAPService;
 
 class SAPIntegration extends Command
 {
-    // ...
 
     protected $signature = 'sap:sync {type}';
     protected $description = 'Synchronize SAP data';
-    protected SAPService $sapService ;
+    protected $sapService ;
     private $batchSize = 20;
+
+    public function __construct(SAPService $sapService)
+    {
+        parent::__construct();
+        $this->sapService = $sapService;
+    }
 
     public function handle()
     {
