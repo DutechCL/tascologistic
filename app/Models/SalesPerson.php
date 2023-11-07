@@ -24,9 +24,7 @@ class SalesPerson extends Model
         'Email',
     ];
 
-    const IDENTIFIER = [
-        'SalesEmployeeCode',
-    ];
+    const IDENTIFIER = 'SalesEmployeeCode';
 
     protected $fillable = self::FILLABLE;
 

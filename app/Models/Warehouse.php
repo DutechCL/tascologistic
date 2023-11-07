@@ -21,9 +21,7 @@ class Warehouse extends Model
         'City',
     ];
 
-    const IDENTIFIER = [
-        'WarehouseCode',
-    ];
+    const IDENTIFIER = 'WarehouseCode';
 
     protected $fillable = self::FILLABLE;
 

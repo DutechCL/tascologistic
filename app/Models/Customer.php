@@ -22,9 +22,7 @@ class Customer extends Model
         'MaxCommitment'
     ];
 
-    const IDENTIFIER = [
-        'CardCode',
-    ];
+    const IDENTIFIER = 'CardCode';
 
     protected $fillable = self::FILLABLE;
 
