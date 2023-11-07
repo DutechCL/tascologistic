@@ -87,41 +87,45 @@ class SAPService
     }
 
     /**
+     * @param string $key
+     * @param int $skip
+     * @param array $fields
      * @return array|mixed
      */
-    public function getOrders($fields = null, $skip = 0)
+    public function get(string $key, int $skip = 0, array $fields = [])
     {
-        $endpoint = config('services.sap.endpoints.orders.get');
-
         try {
 
-            $response = $this->makeRequest($endpoint, 'get', [
-                '$select' => implode(',', $fields),
-                '$skip'   => $skip,
-            ]);
+            $endpoint = $this->endpoint($key);
+
+            $requestData = [
+                '$skip' => $skip,
+            ];
+    
+            if (!empty($fields)) {
+                $requestData['$select'] = implode(',', $fields);
+            }
+
+            return $this->makeRequest($endpoint, 'get', $requestData);
+
         } catch (\Exception $e) {
             return ['error' => $e->getMessage()];
         }
     }
 
-// En SAPService.php
-public function getBusinessPartners($fields = null, $skip = 0)
-{
-    $endpoint = config('services.sap.endpoints.business_partners.get');
+    public function post($endpoint, $data = [])
+    {
+        try {
+            $endpoint = config("services.sap.$endpoint.post");
 
-    try {
-        $results = [];
-
-        // Realiza la solicitud con los parámetros de paginación
-        $response = $this->makeRequest($endpoint, 'get', [
-            '$select' => implode(',', $fields),
-            '$skip'   => $skip,
-        ]);
-
-        return $response;
-    } catch (\Exception $e) {
-        return ['error' => $e->getMessage()];
+            return $this->makeRequest($endpoint, 'post', $data);
+        } catch (\Exception $e) {
+            return ['error' => $e->getMessage()];
+        }
     }
-}
 
+    public function endpoint($endpoint)
+    {
+        return config("services.sap.endpoints.$endpoint");
+    }
 }

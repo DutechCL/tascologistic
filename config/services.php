@@ -49,9 +49,15 @@ return [
             'orders'  => [
                 'get' => 'Orders',
             ],
+            'products' => [
+                'get' => 'Items',
+            ],
             'business_partners' => [
                 'get' => 'BusinessPartners',
             ],
+            'sales_persons' => [
+                'get' => 'SalesPersons'
+            ]
         ]
     ],
 
