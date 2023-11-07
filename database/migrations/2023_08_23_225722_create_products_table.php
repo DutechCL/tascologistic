@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('ItemName');
             $table->integer('ItemsGroupCode');
             $table->float('QuantityOnStock', 8, 2)->default(0.0);
-            $table->string('DefaultWarehouse');
+            $table->string('DefaultWarehouse')->nullable();
             $table->timestamps();
         });
     }
