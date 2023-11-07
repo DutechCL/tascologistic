@@ -16,13 +16,8 @@ class SAPIntegration extends Command
 
     protected $signature = 'sap:sync {type}';
     protected $description = 'Synchronize SAP data';
-    protected $sapService;
+    protected SAPService $sapService ;
     private $batchSize = 20;
-
-    public function __construct(SAPService $sapService)
-    {
-        $this->sapService = $sapService;
-    }
 
     public function handle()
     {
