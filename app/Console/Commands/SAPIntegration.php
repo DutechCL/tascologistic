@@ -105,7 +105,7 @@ class SAPIntegration extends Command
                     $dataToInsert = array_intersect_key($record, array_flip($fields));
                     if (is_array($record)) {
                         if (isset($record['SalesEmployeeCode'])){
-                            Customer::updateOrCreate(
+                            SalesPerson::updateOrCreate(
                                 ['SalesEmployeeCode' => $record['SalesEmployeeCode']],
                                 $dataToInsert
                             );
