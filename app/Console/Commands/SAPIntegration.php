@@ -63,11 +63,13 @@ class SAPIntegration extends Command
                 foreach ($response['value'] as $record) {
                     $dataToInsert = array_intersect_key($record, array_flip($fields));
                     
-                    if (is_array($record) && isset($record[$identifier])) {
-                        $modelClass::updateOrCreate(
-                            [ $identifier => $record[$identifier] ],
-                            $dataToInsert
-                        );
+                    if (is_array($record)) {
+                        if(isset($record[$identifier])){
+                            $modelClass::updateOrCreate(
+                                [ $identifier => $record[$identifier] ],
+                                $dataToInsert
+                            );
+                        }
                     }
                 }
                 $skip += $this->batchSize;
