@@ -12,7 +12,6 @@ class Warehouse extends Model
     use HasFactory;
 
     protected $fillable = [
-        'WarehouseCodeEncrey',
         'WarehouseCode',
         'WarehouseName',
         'Street',
@@ -21,4 +20,16 @@ class Warehouse extends Model
         'State',
         'City',
     ];
+
+    public static function getFillable() : array
+    {
+        return $this->fillable;
+    }
+
+    public static function getIdentifier() : string
+    {
+        return 'WarehouseCode';
+    }
+
+
 }

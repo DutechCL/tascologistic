@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('CardCode')->unique();
-            $table->string('CardName');
+            $table->string('CardName')->nullable();
             $table->string('Address')->nullable();
             $table->string('FederalTaxID')->nullable();
             $table->string('EmailAddress')->nullable();

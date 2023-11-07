@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('warehouses', function (Blueprint $table) {
-            $table->string('WarehouseCodeEncrey')->nullable()->uniqid();
-            $table->string('WarehouseCode')->nullable();
+            $table->string('WarehouseCode')->uniqid();
             $table->string('WarehouseName')->nullable();
             $table->string('Street')->nullable();
             $table->integer('StreetNo')->nullable();
@@ -29,7 +28,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('warehouses', function (Blueprint $table) {
-            $table->dropColumn('WarehouseCodeEncrey');
             $table->dropColumn('WarehouseCode');
             $table->dropColumn('WarehouseName');
             $table->dropColumn('Street');

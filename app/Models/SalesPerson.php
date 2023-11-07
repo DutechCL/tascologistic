@@ -23,4 +23,19 @@ class SalesPerson extends Model
         'Mobile',
         'Email',
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        // Utiliza el evento creating para convertir el valor de 'Active'
+        static::creating(function ($salesPerson) {
+            $this->attributes['Active'] = strtolower($this->attributes['Active']) === 'tYES' ? 1 : 0;
+        });
+    }
+
+    public static function getIdentifier() : string
+    {
+        return 'SalesEmployeeCode';
+    }
 }

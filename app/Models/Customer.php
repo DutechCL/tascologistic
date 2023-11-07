@@ -13,14 +13,22 @@ class Customer extends Model
     use HasFactory;
 
     protected $fillable = [
-        "CardCode",
-        "CardName",
-        "Address",
-        "FederalTaxID"
+        'CardCode', 
+        'CardName', 
+        'Address', 
+        'FederalTaxID', 
+        'EmailAddress', 
+        'CreditLimit', 
+        'MaxCommitment'
     ];
 
     public function orders()
     {
         return $this->hasMany(Order::class);
+    }
+
+    public static function getIdentifier() : string
+    {
+        return 'CardCode';
     }
 }
