@@ -11,7 +11,7 @@ class SalesPerson extends Model
 
     protected $table = 'sales_persons';
 
-    protected $fillable = [
+    const FILLABLE = [
         'SalesEmployeeCode',
         'SalesEmployeeName',
         'CommissionForSalesEmployee',
@@ -24,6 +24,12 @@ class SalesPerson extends Model
         'Email',
     ];
 
+    const IDENTIFIER = [
+        'SalesEmployeeCode',
+    ];
+
+    protected $fillable = self::FILLABLE;
+
     protected static function boot()
     {
         parent::boot();
@@ -32,10 +38,5 @@ class SalesPerson extends Model
         static::creating(function ($salesPerson) {
             $this->attributes['Active'] = strtolower($this->attributes['Active']) === 'tYES' ? 1 : 0;
         });
-    }
-
-    public static function getIdentifier() : string
-    {
-        return 'SalesEmployeeCode';
     }
 }

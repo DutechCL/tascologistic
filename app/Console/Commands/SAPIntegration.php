@@ -49,8 +49,8 @@ class SAPIntegration extends Command
         $skip = 0;
 
         do {
-            $fields = $modelClass::getFillable();
-            $identifier = $modelClass::getIdentifier();
+            $fields = $modelClass::FILLABLE;
+            $identifier = $modelClass::IDENTIFIER;
 
             $response = $this->sapService->get($endpoint, $skip, $fields);
             

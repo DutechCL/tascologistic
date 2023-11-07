@@ -12,7 +12,7 @@ class Customer extends Model
     use CrudTrait;
     use HasFactory;
 
-    protected $fillable = [
+    const FILLABLE = [
         'CardCode', 
         'CardName', 
         'Address', 
@@ -22,13 +22,14 @@ class Customer extends Model
         'MaxCommitment'
     ];
 
+    const IDENTIFIER = [
+        'CardCode',
+    ];
+
+    protected $fillable = self::FILLABLE;
+
     public function orders()
     {
         return $this->hasMany(Order::class);
-    }
-
-    public static function getIdentifier() : string
-    {
-        return 'CardCode';
     }
 }

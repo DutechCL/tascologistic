@@ -11,7 +11,7 @@ class Warehouse extends Model
     use CrudTrait;
     use HasFactory;
 
-    protected $fillable = [
+    const FILLABLE = [
         'WarehouseCode',
         'WarehouseName',
         'Street',
@@ -21,15 +21,12 @@ class Warehouse extends Model
         'City',
     ];
 
-    public static function getFillable() : array
-    {
-        return $this->fillable;
-    }
+    const IDENTIFIER = [
+        'WarehouseCode',
+    ];
 
-    public static function getIdentifier() : string
-    {
-        return 'WarehouseCode';
-    }
+    protected $fillable = self::FILLABLE;
+
 
 
 }
