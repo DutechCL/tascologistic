@@ -27,8 +27,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             1 => 
             array (
@@ -38,8 +38,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 362.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             2 => 
             array (
@@ -49,8 +49,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             3 => 
             array (
@@ -60,8 +60,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             4 => 
             array (
@@ -71,8 +71,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             5 => 
             array (
@@ -82,8 +82,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             6 => 
             array (
@@ -93,8 +93,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             7 => 
             array (
@@ -104,8 +104,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             8 => 
             array (
@@ -115,8 +115,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             9 => 
             array (
@@ -126,8 +126,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             10 => 
             array (
@@ -137,8 +137,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             11 => 
             array (
@@ -148,8 +148,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             12 => 
             array (
@@ -159,8 +159,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             13 => 
             array (
@@ -170,8 +170,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             14 => 
             array (
@@ -181,8 +181,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             15 => 
             array (
@@ -192,8 +192,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             16 => 
             array (
@@ -203,8 +203,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             17 => 
             array (
@@ -214,8 +214,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 117,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             18 => 
             array (
@@ -225,8 +225,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             19 => 
             array (
@@ -236,8 +236,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             20 => 
             array (
@@ -247,8 +247,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 117,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             21 => 
             array (
@@ -258,8 +258,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 117,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             22 => 
             array (
@@ -269,8 +269,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             23 => 
             array (
@@ -280,8 +280,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             24 => 
             array (
@@ -291,8 +291,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             25 => 
             array (
@@ -302,8 +302,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             26 => 
             array (
@@ -313,8 +313,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             27 => 
             array (
@@ -324,8 +324,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             28 => 
             array (
@@ -335,8 +335,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             29 => 
             array (
@@ -346,8 +346,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 119,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             30 => 
             array (
@@ -357,8 +357,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             31 => 
             array (
@@ -368,8 +368,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 112,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             32 => 
             array (
@@ -379,8 +379,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             33 => 
             array (
@@ -390,8 +390,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             34 => 
             array (
@@ -401,8 +401,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 124,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             35 => 
             array (
@@ -412,8 +412,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             36 => 
             array (
@@ -423,8 +423,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 658.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             37 => 
             array (
@@ -434,8 +434,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             38 => 
             array (
@@ -445,8 +445,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             39 => 
             array (
@@ -456,8 +456,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             40 => 
             array (
@@ -467,8 +467,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             41 => 
             array (
@@ -478,8 +478,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             42 => 
             array (
@@ -489,8 +489,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             43 => 
             array (
@@ -500,8 +500,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 125,
                 'QuantityOnStock' => 20.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             44 => 
             array (
@@ -511,8 +511,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             45 => 
             array (
@@ -522,8 +522,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             46 => 
             array (
@@ -533,8 +533,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             47 => 
             array (
@@ -544,8 +544,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             48 => 
             array (
@@ -555,8 +555,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 764.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             49 => 
             array (
@@ -566,8 +566,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             50 => 
             array (
@@ -577,8 +577,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 55.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             51 => 
             array (
@@ -588,8 +588,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 314.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             52 => 
             array (
@@ -599,8 +599,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             53 => 
             array (
@@ -610,8 +610,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             54 => 
             array (
@@ -621,8 +621,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             55 => 
             array (
@@ -632,8 +632,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             56 => 
             array (
@@ -643,8 +643,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             57 => 
             array (
@@ -654,8 +654,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             58 => 
             array (
@@ -665,8 +665,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             59 => 
             array (
@@ -676,8 +676,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             60 => 
             array (
@@ -687,8 +687,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             61 => 
             array (
@@ -698,8 +698,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 1486.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             62 => 
             array (
@@ -709,8 +709,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             63 => 
             array (
@@ -720,8 +720,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             64 => 
             array (
@@ -731,8 +731,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             65 => 
             array (
@@ -742,8 +742,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             66 => 
             array (
@@ -753,8 +753,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             67 => 
             array (
@@ -764,8 +764,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             68 => 
             array (
@@ -775,8 +775,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             69 => 
             array (
@@ -786,8 +786,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             70 => 
             array (
@@ -797,8 +797,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             71 => 
             array (
@@ -808,8 +808,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 69.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             72 => 
             array (
@@ -819,8 +819,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             73 => 
             array (
@@ -830,8 +830,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             74 => 
             array (
@@ -841,8 +841,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             75 => 
             array (
@@ -852,8 +852,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             76 => 
             array (
@@ -863,8 +863,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             77 => 
             array (
@@ -874,8 +874,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             78 => 
             array (
@@ -885,8 +885,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             79 => 
             array (
@@ -896,8 +896,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:08',
-                'updated_at' => '2023-11-08 01:48:08',
+                'created_at' => '2023-11-08 16:05:36',
+                'updated_at' => '2023-11-08 16:05:36',
             ),
             80 => 
             array (
@@ -907,8 +907,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             81 => 
             array (
@@ -918,8 +918,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             82 => 
             array (
@@ -929,8 +929,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 123,
                 'QuantityOnStock' => 27.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             83 => 
             array (
@@ -940,8 +940,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             84 => 
             array (
@@ -951,8 +951,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 2987.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             85 => 
             array (
@@ -962,8 +962,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             86 => 
             array (
@@ -973,8 +973,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             87 => 
             array (
@@ -984,8 +984,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             88 => 
             array (
@@ -995,8 +995,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             89 => 
             array (
@@ -1006,8 +1006,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             90 => 
             array (
@@ -1017,8 +1017,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             91 => 
             array (
@@ -1028,8 +1028,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 6.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             92 => 
             array (
@@ -1039,8 +1039,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             93 => 
             array (
@@ -1050,8 +1050,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             94 => 
             array (
@@ -1061,8 +1061,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 16.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             95 => 
             array (
@@ -1072,8 +1072,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             96 => 
             array (
@@ -1083,8 +1083,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             97 => 
             array (
@@ -1094,8 +1094,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             98 => 
             array (
@@ -1105,8 +1105,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             99 => 
             array (
@@ -1116,8 +1116,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 15613.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             100 => 
             array (
@@ -1127,8 +1127,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             101 => 
             array (
@@ -1138,8 +1138,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 112,
                 'QuantityOnStock' => 2327.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             102 => 
             array (
@@ -1149,8 +1149,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             103 => 
             array (
@@ -1160,8 +1160,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 3.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             104 => 
             array (
@@ -1171,8 +1171,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             105 => 
             array (
@@ -1182,8 +1182,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             106 => 
             array (
@@ -1193,8 +1193,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 151.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             107 => 
             array (
@@ -1204,8 +1204,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             108 => 
             array (
@@ -1215,8 +1215,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             109 => 
             array (
@@ -1226,8 +1226,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 246.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             110 => 
             array (
@@ -1237,8 +1237,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             111 => 
             array (
@@ -1248,8 +1248,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 104,
                 'QuantityOnStock' => 1601.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             112 => 
             array (
@@ -1259,8 +1259,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             113 => 
             array (
@@ -1270,8 +1270,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 1994.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             114 => 
             array (
@@ -1281,8 +1281,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 106,
                 'QuantityOnStock' => 538.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             115 => 
             array (
@@ -1292,8 +1292,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 4.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             116 => 
             array (
@@ -1303,8 +1303,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 969.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             117 => 
             array (
@@ -1314,8 +1314,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 22.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             118 => 
             array (
@@ -1325,8 +1325,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 258.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             119 => 
             array (
@@ -1336,8 +1336,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 112,
                 'QuantityOnStock' => 1406.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             120 => 
             array (
@@ -1347,8 +1347,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             121 => 
             array (
@@ -1358,8 +1358,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 6.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             122 => 
             array (
@@ -1369,8 +1369,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 1506.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             123 => 
             array (
@@ -1380,8 +1380,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 55.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             124 => 
             array (
@@ -1391,8 +1391,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 128.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             125 => 
             array (
@@ -1402,8 +1402,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 398.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             126 => 
             array (
@@ -1413,8 +1413,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 35.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             127 => 
             array (
@@ -1424,8 +1424,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 125,
                 'QuantityOnStock' => 21.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             128 => 
             array (
@@ -1435,8 +1435,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 8.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             129 => 
             array (
@@ -1446,8 +1446,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             130 => 
             array (
@@ -1457,8 +1457,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 1305.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             131 => 
             array (
@@ -1468,8 +1468,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 325.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             132 => 
             array (
@@ -1479,8 +1479,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 141.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             133 => 
             array (
@@ -1490,8 +1490,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 182.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             134 => 
             array (
@@ -1501,8 +1501,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 92.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             135 => 
             array (
@@ -1512,8 +1512,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 158.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             136 => 
             array (
@@ -1523,8 +1523,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 22.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             137 => 
             array (
@@ -1534,8 +1534,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 52.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             138 => 
             array (
@@ -1545,8 +1545,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 124.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             139 => 
             array (
@@ -1556,8 +1556,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 20.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             140 => 
             array (
@@ -1567,8 +1567,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 135,
                 'QuantityOnStock' => 99.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             141 => 
             array (
@@ -1578,8 +1578,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 43.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             142 => 
             array (
@@ -1589,8 +1589,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 69.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             143 => 
             array (
@@ -1600,8 +1600,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 883.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             144 => 
             array (
@@ -1611,8 +1611,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 484.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             145 => 
             array (
@@ -1622,8 +1622,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 229.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             146 => 
             array (
@@ -1633,8 +1633,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 223.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             147 => 
             array (
@@ -1644,8 +1644,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 266.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             148 => 
             array (
@@ -1655,8 +1655,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 2238.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             149 => 
             array (
@@ -1666,8 +1666,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 3520.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             150 => 
             array (
@@ -1677,8 +1677,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 53.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             151 => 
             array (
@@ -1688,8 +1688,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 171.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             152 => 
             array (
@@ -1699,8 +1699,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 805.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             153 => 
             array (
@@ -1710,8 +1710,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 104,
                 'QuantityOnStock' => 197.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             154 => 
             array (
@@ -1721,8 +1721,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 38.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             155 => 
             array (
@@ -1732,8 +1732,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 2120.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             156 => 
             array (
@@ -1743,8 +1743,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 34.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             157 => 
             array (
@@ -1754,8 +1754,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             158 => 
             array (
@@ -1765,8 +1765,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 41.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             159 => 
             array (
@@ -1776,8 +1776,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 1.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:37',
+                'updated_at' => '2023-11-08 16:05:37',
             ),
             160 => 
             array (
@@ -1787,8 +1787,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 34.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             161 => 
             array (
@@ -1798,8 +1798,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 33.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             162 => 
             array (
@@ -1809,8 +1809,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 62.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             163 => 
             array (
@@ -1820,8 +1820,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 92.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             164 => 
             array (
@@ -1831,8 +1831,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 9.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             165 => 
             array (
@@ -1842,8 +1842,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 124,
                 'QuantityOnStock' => 319.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             166 => 
             array (
@@ -1853,8 +1853,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 47.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             167 => 
             array (
@@ -1864,8 +1864,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 1259.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             168 => 
             array (
@@ -1875,8 +1875,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 11.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             169 => 
             array (
@@ -1886,8 +1886,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             170 => 
             array (
@@ -1897,8 +1897,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 4220.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             171 => 
             array (
@@ -1908,8 +1908,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             172 => 
             array (
@@ -1919,8 +1919,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 3841.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             173 => 
             array (
@@ -1930,8 +1930,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             174 => 
             array (
@@ -1941,8 +1941,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 50.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             175 => 
             array (
@@ -1952,8 +1952,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             176 => 
             array (
@@ -1963,8 +1963,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 1202.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             177 => 
             array (
@@ -1974,8 +1974,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 28.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             178 => 
             array (
@@ -1985,8 +1985,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             179 => 
             array (
@@ -1996,8 +1996,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:09',
-                'updated_at' => '2023-11-08 01:48:09',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             180 => 
             array (
@@ -2007,8 +2007,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 2682.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             181 => 
             array (
@@ -2018,8 +2018,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 1973.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             182 => 
             array (
@@ -2029,8 +2029,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 135,
                 'QuantityOnStock' => 9.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             183 => 
             array (
@@ -2040,8 +2040,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             184 => 
             array (
@@ -2051,8 +2051,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 117.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             185 => 
             array (
@@ -2062,8 +2062,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             186 => 
             array (
@@ -2073,8 +2073,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 132,
                 'QuantityOnStock' => 1001.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             187 => 
             array (
@@ -2084,8 +2084,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             188 => 
             array (
@@ -2095,8 +2095,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 86.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             189 => 
             array (
@@ -2106,8 +2106,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 1919.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             190 => 
             array (
@@ -2117,8 +2117,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 33.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             191 => 
             array (
@@ -2128,8 +2128,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             192 => 
             array (
@@ -2139,8 +2139,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 49.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             193 => 
             array (
@@ -2150,8 +2150,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             194 => 
             array (
@@ -2161,8 +2161,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             195 => 
             array (
@@ -2172,8 +2172,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 132,
                 'QuantityOnStock' => 17.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             196 => 
             array (
@@ -2183,8 +2183,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             197 => 
             array (
@@ -2194,8 +2194,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 128.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             198 => 
             array (
@@ -2205,8 +2205,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             199 => 
             array (
@@ -2216,8 +2216,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 1557.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             200 => 
             array (
@@ -2227,8 +2227,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             201 => 
             array (
@@ -2238,8 +2238,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 3044.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             202 => 
             array (
@@ -2249,8 +2249,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 1440.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             203 => 
             array (
@@ -2260,8 +2260,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 589.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             204 => 
             array (
@@ -2271,8 +2271,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 8.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             205 => 
             array (
@@ -2282,8 +2282,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 217.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             206 => 
             array (
@@ -2293,8 +2293,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 49.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             207 => 
             array (
@@ -2304,8 +2304,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 2.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             208 => 
             array (
@@ -2315,8 +2315,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 135,
                 'QuantityOnStock' => 17.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             209 => 
             array (
@@ -2326,8 +2326,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 10.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             210 => 
             array (
@@ -2337,8 +2337,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 32.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             211 => 
             array (
@@ -2348,8 +2348,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 14755.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             212 => 
             array (
@@ -2359,8 +2359,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 4643.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             213 => 
             array (
@@ -2370,8 +2370,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 197.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             214 => 
             array (
@@ -2381,8 +2381,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 975.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             215 => 
             array (
@@ -2392,8 +2392,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 50.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             216 => 
             array (
@@ -2403,8 +2403,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 95.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             217 => 
             array (
@@ -2414,8 +2414,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 1999.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             218 => 
             array (
@@ -2425,8 +2425,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 28.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             219 => 
             array (
@@ -2436,8 +2436,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 124,
                 'QuantityOnStock' => 253.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             220 => 
             array (
@@ -2447,8 +2447,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 351.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             221 => 
             array (
@@ -2458,8 +2458,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 29.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             222 => 
             array (
@@ -2469,8 +2469,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 10390.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             223 => 
             array (
@@ -2480,8 +2480,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             224 => 
             array (
@@ -2491,8 +2491,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 138.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             225 => 
             array (
@@ -2502,8 +2502,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             226 => 
             array (
@@ -2513,8 +2513,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             227 => 
             array (
@@ -2524,8 +2524,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             228 => 
             array (
@@ -2535,8 +2535,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 118,
                 'QuantityOnStock' => 2871.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             229 => 
             array (
@@ -2546,8 +2546,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 118,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             230 => 
             array (
@@ -2557,8 +2557,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 12.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             231 => 
             array (
@@ -2568,8 +2568,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 103,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             232 => 
             array (
@@ -2579,8 +2579,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 14395.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             233 => 
             array (
@@ -2590,8 +2590,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             234 => 
             array (
@@ -2601,8 +2601,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 1304.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             235 => 
             array (
@@ -2612,8 +2612,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 12.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             236 => 
             array (
@@ -2623,8 +2623,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             237 => 
             array (
@@ -2634,8 +2634,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             238 => 
             array (
@@ -2645,8 +2645,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 383.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             239 => 
             array (
@@ -2656,8 +2656,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             240 => 
             array (
@@ -2667,8 +2667,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             241 => 
             array (
@@ -2678,8 +2678,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             242 => 
             array (
@@ -2689,8 +2689,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             243 => 
             array (
@@ -2700,8 +2700,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 1457.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             244 => 
             array (
@@ -2711,8 +2711,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             245 => 
             array (
@@ -2722,8 +2722,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 244.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             246 => 
             array (
@@ -2733,8 +2733,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 104,
                 'QuantityOnStock' => 1246.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             247 => 
             array (
@@ -2744,8 +2744,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             248 => 
             array (
@@ -2755,8 +2755,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             249 => 
             array (
@@ -2766,8 +2766,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 18.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             250 => 
             array (
@@ -2777,8 +2777,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             251 => 
             array (
@@ -2788,8 +2788,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 132,
                 'QuantityOnStock' => 100.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             252 => 
             array (
@@ -2799,8 +2799,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 117,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             253 => 
             array (
@@ -2810,8 +2810,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 1090.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             254 => 
             array (
@@ -2821,8 +2821,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             255 => 
             array (
@@ -2832,8 +2832,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 4968.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             256 => 
             array (
@@ -2843,8 +2843,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 135,
                 'QuantityOnStock' => 66.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             257 => 
             array (
@@ -2854,8 +2854,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             258 => 
             array (
@@ -2865,8 +2865,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 105,
                 'QuantityOnStock' => 408.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             259 => 
             array (
@@ -2876,8 +2876,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:10',
-                'updated_at' => '2023-11-08 01:48:10',
+                'created_at' => '2023-11-08 16:05:38',
+                'updated_at' => '2023-11-08 16:05:38',
             ),
             260 => 
             array (
@@ -2887,8 +2887,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 60.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             261 => 
             array (
@@ -2898,8 +2898,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 935.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             262 => 
             array (
@@ -2909,8 +2909,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             263 => 
             array (
@@ -2920,8 +2920,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 3410.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             264 => 
             array (
@@ -2931,8 +2931,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 3360.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             265 => 
             array (
@@ -2942,8 +2942,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             266 => 
             array (
@@ -2953,8 +2953,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 94.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             267 => 
             array (
@@ -2964,8 +2964,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             268 => 
             array (
@@ -2975,8 +2975,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 576.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             269 => 
             array (
@@ -2986,8 +2986,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 105,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             270 => 
             array (
@@ -2997,8 +2997,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 575.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             271 => 
             array (
@@ -3008,8 +3008,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 492.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             272 => 
             array (
@@ -3019,8 +3019,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 358.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             273 => 
             array (
@@ -3030,8 +3030,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 4365.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             274 => 
             array (
@@ -3041,8 +3041,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 11.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             275 => 
             array (
@@ -3052,8 +3052,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 419.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             276 => 
             array (
@@ -3063,8 +3063,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             277 => 
             array (
@@ -3074,8 +3074,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 303.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             278 => 
             array (
@@ -3085,8 +3085,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 25.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             279 => 
             array (
@@ -3096,8 +3096,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             280 => 
             array (
@@ -3107,8 +3107,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             281 => 
             array (
@@ -3118,8 +3118,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             282 => 
             array (
@@ -3129,8 +3129,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 108.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             283 => 
             array (
@@ -3140,8 +3140,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 31765.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             284 => 
             array (
@@ -3151,8 +3151,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             285 => 
             array (
@@ -3162,8 +3162,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 3955.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             286 => 
             array (
@@ -3173,8 +3173,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             287 => 
             array (
@@ -3184,8 +3184,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 269.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             288 => 
             array (
@@ -3195,8 +3195,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             289 => 
             array (
@@ -3206,8 +3206,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             290 => 
             array (
@@ -3217,8 +3217,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             291 => 
             array (
@@ -3228,8 +3228,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 27.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             292 => 
             array (
@@ -3239,8 +3239,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             293 => 
             array (
@@ -3250,8 +3250,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 44.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             294 => 
             array (
@@ -3261,8 +3261,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 103,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             295 => 
             array (
@@ -3272,8 +3272,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             296 => 
             array (
@@ -3283,8 +3283,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 22.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             297 => 
             array (
@@ -3294,8 +3294,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 6.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             298 => 
             array (
@@ -3305,8 +3305,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             299 => 
             array (
@@ -3316,8 +3316,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 22.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             300 => 
             array (
@@ -3327,8 +3327,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             301 => 
             array (
@@ -3338,8 +3338,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 64.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             302 => 
             array (
@@ -3349,8 +3349,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 5400.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             303 => 
             array (
@@ -3360,8 +3360,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 44.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             304 => 
             array (
@@ -3371,8 +3371,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             305 => 
             array (
@@ -3382,8 +3382,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 454.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             306 => 
             array (
@@ -3393,8 +3393,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             307 => 
             array (
@@ -3404,8 +3404,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             308 => 
             array (
@@ -3415,8 +3415,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 50.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             309 => 
             array (
@@ -3426,8 +3426,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 1997.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             310 => 
             array (
@@ -3437,8 +3437,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             311 => 
             array (
@@ -3448,8 +3448,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 1066.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             312 => 
             array (
@@ -3459,8 +3459,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             313 => 
             array (
@@ -3470,8 +3470,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             314 => 
             array (
@@ -3481,8 +3481,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 31.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             315 => 
             array (
@@ -3492,8 +3492,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             316 => 
             array (
@@ -3503,8 +3503,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 307.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             317 => 
             array (
@@ -3514,8 +3514,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             318 => 
             array (
@@ -3525,8 +3525,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             319 => 
             array (
@@ -3536,8 +3536,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 192.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             320 => 
             array (
@@ -3547,8 +3547,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 400.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             321 => 
             array (
@@ -3558,8 +3558,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             322 => 
             array (
@@ -3569,8 +3569,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 463.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             323 => 
             array (
@@ -3580,8 +3580,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 4945.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             324 => 
             array (
@@ -3591,8 +3591,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 15.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             325 => 
             array (
@@ -3602,8 +3602,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             326 => 
             array (
@@ -3613,8 +3613,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 34.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             327 => 
             array (
@@ -3624,8 +3624,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 2480.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             328 => 
             array (
@@ -3635,8 +3635,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 104,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             329 => 
             array (
@@ -3646,8 +3646,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 104,
                 'QuantityOnStock' => 285.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             330 => 
             array (
@@ -3657,8 +3657,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             331 => 
             array (
@@ -3668,8 +3668,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 373.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             332 => 
             array (
@@ -3679,8 +3679,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 104,
                 'QuantityOnStock' => 1.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             333 => 
             array (
@@ -3690,8 +3690,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             334 => 
             array (
@@ -3701,8 +3701,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 552.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             335 => 
             array (
@@ -3712,8 +3712,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             336 => 
             array (
@@ -3723,8 +3723,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 15629.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             337 => 
             array (
@@ -3734,8 +3734,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             338 => 
             array (
@@ -3745,8 +3745,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 104,
                 'QuantityOnStock' => 74.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             339 => 
             array (
@@ -3756,8 +3756,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 1980.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:39',
+                'updated_at' => '2023-11-08 16:05:39',
             ),
             340 => 
             array (
@@ -3767,8 +3767,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 927.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             341 => 
             array (
@@ -3778,8 +3778,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 30.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             342 => 
             array (
@@ -3789,8 +3789,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             343 => 
             array (
@@ -3800,8 +3800,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             344 => 
             array (
@@ -3811,8 +3811,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 7030.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             345 => 
             array (
@@ -3822,8 +3822,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 1515.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             346 => 
             array (
@@ -3833,8 +3833,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 1245.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             347 => 
             array (
@@ -3844,8 +3844,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 468.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             348 => 
             array (
@@ -3855,8 +3855,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 8.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             349 => 
             array (
@@ -3866,8 +3866,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 14.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             350 => 
             array (
@@ -3877,8 +3877,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             351 => 
             array (
@@ -3888,8 +3888,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 9.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             352 => 
             array (
@@ -3899,8 +3899,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 2235.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             353 => 
             array (
@@ -3910,8 +3910,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             354 => 
             array (
@@ -3921,8 +3921,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             355 => 
             array (
@@ -3932,8 +3932,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             356 => 
             array (
@@ -3943,8 +3943,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 2640.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             357 => 
             array (
@@ -3954,8 +3954,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             358 => 
             array (
@@ -3965,8 +3965,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             359 => 
             array (
@@ -3976,8 +3976,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 2275.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:11',
-                'updated_at' => '2023-11-08 01:48:11',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             360 => 
             array (
@@ -3987,8 +3987,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 496.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             361 => 
             array (
@@ -3998,8 +3998,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             362 => 
             array (
@@ -4009,8 +4009,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 117,
                 'QuantityOnStock' => 1.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             363 => 
             array (
@@ -4020,8 +4020,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             364 => 
             array (
@@ -4031,8 +4031,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             365 => 
             array (
@@ -4042,8 +4042,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             366 => 
             array (
@@ -4053,8 +4053,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 1.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             367 => 
             array (
@@ -4064,8 +4064,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 4.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             368 => 
             array (
@@ -4075,8 +4075,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 1.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             369 => 
             array (
@@ -4086,8 +4086,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 132,
                 'QuantityOnStock' => 406.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             370 => 
             array (
@@ -4097,8 +4097,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 117,
                 'QuantityOnStock' => 250.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             371 => 
             array (
@@ -4108,8 +4108,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             372 => 
             array (
@@ -4119,8 +4119,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 125,
                 'QuantityOnStock' => 26.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             373 => 
             array (
@@ -4130,8 +4130,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 1660.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             374 => 
             array (
@@ -4141,8 +4141,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             375 => 
             array (
@@ -4152,8 +4152,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 58.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             376 => 
             array (
@@ -4163,8 +4163,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             377 => 
             array (
@@ -4174,8 +4174,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 125,
                 'QuantityOnStock' => 19.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             378 => 
             array (
@@ -4185,8 +4185,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 125,
                 'QuantityOnStock' => 18.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             379 => 
             array (
@@ -4196,8 +4196,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 40.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             380 => 
             array (
@@ -4207,8 +4207,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             381 => 
             array (
@@ -4218,8 +4218,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             382 => 
             array (
@@ -4229,8 +4229,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 125,
                 'QuantityOnStock' => 19.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             383 => 
             array (
@@ -4240,8 +4240,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             384 => 
             array (
@@ -4251,8 +4251,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 1425.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             385 => 
             array (
@@ -4262,8 +4262,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 102,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             386 => 
             array (
@@ -4273,8 +4273,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 354.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             387 => 
             array (
@@ -4284,8 +4284,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 433.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             388 => 
             array (
@@ -4295,8 +4295,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 771.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             389 => 
             array (
@@ -4306,8 +4306,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 27.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             390 => 
             array (
@@ -4317,8 +4317,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             391 => 
             array (
@@ -4328,8 +4328,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 107.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             392 => 
             array (
@@ -4339,8 +4339,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 12.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             393 => 
             array (
@@ -4350,8 +4350,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 160.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             394 => 
             array (
@@ -4361,8 +4361,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 9.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             395 => 
             array (
@@ -4372,8 +4372,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 4.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             396 => 
             array (
@@ -4383,8 +4383,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             397 => 
             array (
@@ -4394,8 +4394,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 618.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             398 => 
             array (
@@ -4405,8 +4405,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             399 => 
             array (
@@ -4416,8 +4416,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 112,
                 'QuantityOnStock' => 1791.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             400 => 
             array (
@@ -4427,8 +4427,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             401 => 
             array (
@@ -4438,8 +4438,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             402 => 
             array (
@@ -4449,8 +4449,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:12',
-                'updated_at' => '2023-11-08 01:48:12',
+                'created_at' => '2023-11-08 16:05:40',
+                'updated_at' => '2023-11-08 16:05:40',
             ),
             403 => 
             array (
@@ -4460,8 +4460,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 104,
                     'QuantityOnStock' => 838.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 404 => 
                 array (
@@ -4471,8 +4471,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 7.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 405 => 
                 array (
@@ -4482,8 +4482,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 406 => 
                 array (
@@ -4493,8 +4493,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 125,
                     'QuantityOnStock' => 21.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 407 => 
                 array (
@@ -4504,8 +4504,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 408 => 
                 array (
@@ -4515,8 +4515,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 136,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 409 => 
                 array (
@@ -4526,8 +4526,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 104,
                     'QuantityOnStock' => 126.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 410 => 
                 array (
@@ -4537,8 +4537,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 104,
                     'QuantityOnStock' => 1444.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 411 => 
                 array (
@@ -4548,8 +4548,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 41.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 412 => 
                 array (
@@ -4559,8 +4559,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 136,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 413 => 
                 array (
@@ -4570,8 +4570,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 7.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 414 => 
                 array (
@@ -4581,8 +4581,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 16.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 415 => 
                 array (
@@ -4592,8 +4592,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 111,
                     'QuantityOnStock' => 1.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 416 => 
                 array (
@@ -4603,8 +4603,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 116,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 417 => 
                 array (
@@ -4614,8 +4614,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 136,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 418 => 
                 array (
@@ -4625,8 +4625,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 89.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 419 => 
                 array (
@@ -4636,8 +4636,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 314.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 420 => 
                 array (
@@ -4647,8 +4647,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 1.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 421 => 
                 array (
@@ -4658,8 +4658,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 1.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 422 => 
                 array (
@@ -4669,8 +4669,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 423 => 
                 array (
@@ -4680,8 +4680,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 424 => 
                 array (
@@ -4691,8 +4691,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 8.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 425 => 
                 array (
@@ -4702,8 +4702,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 111,
                     'QuantityOnStock' => 43.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 426 => 
                 array (
@@ -4713,8 +4713,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 136,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 427 => 
                 array (
@@ -4724,8 +4724,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 10506.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 428 => 
                 array (
@@ -4735,8 +4735,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 983.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 429 => 
                 array (
@@ -4746,8 +4746,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 102,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 430 => 
                 array (
@@ -4757,8 +4757,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 136,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 431 => 
                 array (
@@ -4768,8 +4768,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 432 => 
                 array (
@@ -4779,8 +4779,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 102,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 433 => 
                 array (
@@ -4790,8 +4790,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 102,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:40',
+                    'updated_at' => '2023-11-08 16:05:40',
                 ),
                 434 => 
                 array (
@@ -4801,8 +4801,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 435 => 
                 array (
@@ -4812,8 +4812,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 98.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 436 => 
                 array (
@@ -4823,8 +4823,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 136,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 437 => 
                 array (
@@ -4834,8 +4834,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 438 => 
                 array (
@@ -4845,8 +4845,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 924.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 439 => 
                 array (
@@ -4856,8 +4856,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 499.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 440 => 
                 array (
@@ -4867,8 +4867,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 137,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 441 => 
                 array (
@@ -4878,8 +4878,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 442 => 
                 array (
@@ -4889,8 +4889,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 136,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 443 => 
                 array (
@@ -4900,8 +4900,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 136,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 444 => 
                 array (
@@ -4911,8 +4911,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 124,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 445 => 
                 array (
@@ -4922,8 +4922,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 1564.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 446 => 
                 array (
@@ -4933,8 +4933,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 822.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 447 => 
                 array (
@@ -4944,8 +4944,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 448 => 
                 array (
@@ -4955,8 +4955,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 449 => 
                 array (
@@ -4966,8 +4966,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 374.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 450 => 
                 array (
@@ -4977,8 +4977,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 451 => 
                 array (
@@ -4988,8 +4988,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 452 => 
                 array (
@@ -4999,8 +4999,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 126,
                     'QuantityOnStock' => 125.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 453 => 
                 array (
@@ -5010,8 +5010,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 454 => 
                 array (
@@ -5021,8 +5021,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 74.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 455 => 
                 array (
@@ -5032,8 +5032,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 456 => 
                 array (
@@ -5043,8 +5043,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 233.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 457 => 
                 array (
@@ -5054,8 +5054,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 458 => 
                 array (
@@ -5065,8 +5065,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 137,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 459 => 
                 array (
@@ -5076,8 +5076,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 3.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:12',
-                    'updated_at' => '2023-11-08 01:48:12',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 460 => 
                 array (
@@ -5087,8 +5087,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 47.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 461 => 
                 array (
@@ -5098,8 +5098,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 144.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 462 => 
                 array (
@@ -5109,8 +5109,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 463 => 
                 array (
@@ -5120,8 +5120,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 115.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 464 => 
                 array (
@@ -5131,8 +5131,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 212.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 465 => 
                 array (
@@ -5142,8 +5142,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 148.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 466 => 
                 array (
@@ -5153,8 +5153,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 102,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 467 => 
                 array (
@@ -5164,8 +5164,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 111,
                     'QuantityOnStock' => 24.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 468 => 
                 array (
@@ -5175,8 +5175,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 469 => 
                 array (
@@ -5186,8 +5186,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 111,
                     'QuantityOnStock' => 122.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 470 => 
                 array (
@@ -5197,8 +5197,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 493.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 471 => 
                 array (
@@ -5208,8 +5208,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 472 => 
                 array (
@@ -5219,8 +5219,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 473 => 
                 array (
@@ -5230,8 +5230,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 135,
                     'QuantityOnStock' => 92.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 474 => 
                 array (
@@ -5241,8 +5241,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 559.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 475 => 
                 array (
@@ -5252,8 +5252,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 136,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 476 => 
                 array (
@@ -5263,8 +5263,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 111,
                     'QuantityOnStock' => 227.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 477 => 
                 array (
@@ -5274,8 +5274,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 98.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 478 => 
                 array (
@@ -5285,8 +5285,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 1200.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 479 => 
                 array (
@@ -5296,8 +5296,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 593.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 480 => 
                 array (
@@ -5307,8 +5307,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 111,
                     'QuantityOnStock' => 146.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 481 => 
                 array (
@@ -5318,8 +5318,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 1.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 482 => 
                 array (
@@ -5329,8 +5329,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 136,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 483 => 
                 array (
@@ -5340,8 +5340,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 162.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 484 => 
                 array (
@@ -5351,8 +5351,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 2522.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 485 => 
                 array (
@@ -5362,8 +5362,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 11.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 486 => 
                 array (
@@ -5373,8 +5373,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 134,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 487 => 
                 array (
@@ -5384,8 +5384,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 40.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 488 => 
                 array (
@@ -5395,8 +5395,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 2278.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 489 => 
                 array (
@@ -5406,8 +5406,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 137,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 490 => 
                 array (
@@ -5417,8 +5417,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 491 => 
                 array (
@@ -5428,8 +5428,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 111,
                     'QuantityOnStock' => 3799.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 492 => 
                 array (
@@ -5439,8 +5439,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 102,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 493 => 
                 array (
@@ -5450,8 +5450,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 102,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 494 => 
                 array (
@@ -5461,8 +5461,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 116,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 495 => 
                 array (
@@ -5472,8 +5472,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 111,
                     'QuantityOnStock' => 349.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 496 => 
                 array (
@@ -5483,8 +5483,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 116,
                     'QuantityOnStock' => 32.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 497 => 
                 array (
@@ -5494,8 +5494,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 498 => 
                 array (
@@ -5505,8 +5505,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 100,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
                 499 => 
                 array (
@@ -5516,8 +5516,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 197.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:13',
-                    'updated_at' => '2023-11-08 01:48:13',
+                    'created_at' => '2023-11-08 16:05:41',
+                    'updated_at' => '2023-11-08 16:05:41',
                 ),
             ));
         \DB::table('products')->insert(array (
@@ -5529,8 +5529,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             1 => 
             array (
@@ -5540,8 +5540,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 141.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             2 => 
             array (
@@ -5551,8 +5551,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 137,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             3 => 
             array (
@@ -5562,8 +5562,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 102.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             4 => 
             array (
@@ -5573,8 +5573,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 102,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             5 => 
             array (
@@ -5584,8 +5584,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 520.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             6 => 
             array (
@@ -5595,8 +5595,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 85.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             7 => 
             array (
@@ -5606,8 +5606,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             8 => 
             array (
@@ -5617,8 +5617,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 106.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             9 => 
             array (
@@ -5628,8 +5628,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             10 => 
             array (
@@ -5639,8 +5639,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 1798.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             11 => 
             array (
@@ -5650,8 +5650,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 376.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             12 => 
             array (
@@ -5661,8 +5661,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 208.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             13 => 
             array (
@@ -5672,8 +5672,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             14 => 
             array (
@@ -5683,8 +5683,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 113.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             15 => 
             array (
@@ -5694,8 +5694,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 102,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             16 => 
             array (
@@ -5705,8 +5705,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             17 => 
             array (
@@ -5716,8 +5716,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             18 => 
             array (
@@ -5727,8 +5727,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             19 => 
             array (
@@ -5738,8 +5738,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:41',
+                'updated_at' => '2023-11-08 16:05:41',
             ),
             20 => 
             array (
@@ -5749,8 +5749,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 6.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             21 => 
             array (
@@ -5760,8 +5760,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 1412.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             22 => 
             array (
@@ -5771,8 +5771,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             23 => 
             array (
@@ -5782,8 +5782,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             24 => 
             array (
@@ -5793,8 +5793,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 2.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             25 => 
             array (
@@ -5804,8 +5804,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 15.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             26 => 
             array (
@@ -5815,8 +5815,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 855.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             27 => 
             array (
@@ -5826,8 +5826,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             28 => 
             array (
@@ -5837,8 +5837,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 117,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             29 => 
             array (
@@ -5848,8 +5848,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 2185.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             30 => 
             array (
@@ -5859,8 +5859,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 117,
                 'QuantityOnStock' => 23.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             31 => 
             array (
@@ -5870,8 +5870,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             32 => 
             array (
@@ -5881,8 +5881,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 13.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             33 => 
             array (
@@ -5892,8 +5892,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 117,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             34 => 
             array (
@@ -5903,8 +5903,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 138.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             35 => 
             array (
@@ -5914,8 +5914,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             36 => 
             array (
@@ -5925,8 +5925,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 136,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             37 => 
             array (
@@ -5936,8 +5936,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 30.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             38 => 
             array (
@@ -5947,8 +5947,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 567.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             39 => 
             array (
@@ -5958,8 +5958,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:13',
-                'updated_at' => '2023-11-08 01:48:13',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             40 => 
             array (
@@ -5969,8 +5969,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             41 => 
             array (
@@ -5980,8 +5980,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 15.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             42 => 
             array (
@@ -5991,8 +5991,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 19.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             43 => 
             array (
@@ -6002,8 +6002,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             44 => 
             array (
@@ -6013,8 +6013,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 533.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             45 => 
             array (
@@ -6024,8 +6024,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 1.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             46 => 
             array (
@@ -6035,8 +6035,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 37.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             47 => 
             array (
@@ -6046,8 +6046,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 106,
                 'QuantityOnStock' => 988.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             48 => 
             array (
@@ -6057,8 +6057,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 1098.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             49 => 
             array (
@@ -6068,8 +6068,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             50 => 
             array (
@@ -6079,8 +6079,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 183.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             51 => 
             array (
@@ -6090,8 +6090,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 119,
                 'QuantityOnStock' => 489.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             52 => 
             array (
@@ -6101,8 +6101,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 119,
                 'QuantityOnStock' => 1299.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             53 => 
             array (
@@ -6112,8 +6112,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 119,
                 'QuantityOnStock' => 1153.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             54 => 
             array (
@@ -6123,8 +6123,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 3540.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             55 => 
             array (
@@ -6134,8 +6134,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 119,
                 'QuantityOnStock' => 60.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             56 => 
             array (
@@ -6145,8 +6145,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 25.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             57 => 
             array (
@@ -6156,8 +6156,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 190.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             58 => 
             array (
@@ -6167,8 +6167,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 137,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             59 => 
             array (
@@ -6178,8 +6178,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 135,
                 'QuantityOnStock' => 4.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             60 => 
             array (
@@ -6189,8 +6189,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             61 => 
             array (
@@ -6200,8 +6200,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             62 => 
             array (
@@ -6211,8 +6211,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 7.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             63 => 
             array (
@@ -6222,8 +6222,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 134,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             64 => 
             array (
@@ -6233,8 +6233,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 3.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             65 => 
             array (
@@ -6244,8 +6244,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 32.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             66 => 
             array (
@@ -6255,8 +6255,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 9.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             67 => 
             array (
@@ -6266,8 +6266,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 30.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             68 => 
             array (
@@ -6277,8 +6277,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 2.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             69 => 
             array (
@@ -6288,8 +6288,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 8.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             70 => 
             array (
@@ -6299,8 +6299,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 16.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             71 => 
             array (
@@ -6310,8 +6310,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 112,
                 'QuantityOnStock' => 288.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             72 => 
             array (
@@ -6321,8 +6321,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             73 => 
             array (
@@ -6332,8 +6332,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 25.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             74 => 
             array (
@@ -6343,8 +6343,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 137,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             75 => 
             array (
@@ -6354,8 +6354,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             76 => 
             array (
@@ -6365,8 +6365,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 137,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             77 => 
             array (
@@ -6376,8 +6376,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 3132.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             78 => 
             array (
@@ -6387,8 +6387,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 1660.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             79 => 
             array (
@@ -6398,8 +6398,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 137,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             80 => 
             array (
@@ -6409,8 +6409,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 137,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             81 => 
             array (
@@ -6420,8 +6420,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 112,
                 'QuantityOnStock' => 516.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             82 => 
             array (
@@ -6431,8 +6431,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 30.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             83 => 
             array (
@@ -6442,8 +6442,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 141.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             84 => 
             array (
@@ -6453,8 +6453,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             85 => 
             array (
@@ -6464,8 +6464,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 5955.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             86 => 
             array (
@@ -6475,8 +6475,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 112,
                 'QuantityOnStock' => 1124.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             87 => 
             array (
@@ -6486,8 +6486,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 112,
                 'QuantityOnStock' => 3.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             88 => 
             array (
@@ -6497,8 +6497,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             89 => 
             array (
@@ -6508,8 +6508,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 112,
                 'QuantityOnStock' => 436.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             90 => 
             array (
@@ -6519,8 +6519,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             91 => 
             array (
@@ -6530,8 +6530,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 112,
                 'QuantityOnStock' => 15.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             92 => 
             array (
@@ -6541,8 +6541,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             93 => 
             array (
@@ -6552,8 +6552,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 792.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             94 => 
             array (
@@ -6563,8 +6563,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             95 => 
             array (
@@ -6574,8 +6574,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 862.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             96 => 
             array (
@@ -6585,8 +6585,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 1071.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             97 => 
             array (
@@ -6596,8 +6596,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             98 => 
             array (
@@ -6607,8 +6607,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 335.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             99 => 
             array (
@@ -6618,8 +6618,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             100 => 
             array (
@@ -6629,8 +6629,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 125,
                 'QuantityOnStock' => 32.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             101 => 
             array (
@@ -6640,8 +6640,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 6.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             102 => 
             array (
@@ -6651,8 +6651,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 3.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             103 => 
             array (
@@ -6662,8 +6662,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 135,
                 'QuantityOnStock' => 20.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             104 => 
             array (
@@ -6673,8 +6673,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 1603.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             105 => 
             array (
@@ -6684,8 +6684,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             106 => 
             array (
@@ -6695,8 +6695,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 11479.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             107 => 
             array (
@@ -6706,8 +6706,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 392.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             108 => 
             array (
@@ -6717,8 +6717,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             109 => 
             array (
@@ -6728,8 +6728,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 857.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             110 => 
             array (
@@ -6739,8 +6739,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 459.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             111 => 
             array (
@@ -6750,8 +6750,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 766.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             112 => 
             array (
@@ -6761,8 +6761,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             113 => 
             array (
@@ -6772,8 +6772,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 52.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             114 => 
             array (
@@ -6783,8 +6783,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 105,
                 'QuantityOnStock' => 734.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             115 => 
             array (
@@ -6794,8 +6794,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             116 => 
             array (
@@ -6805,8 +6805,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             117 => 
             array (
@@ -6816,8 +6816,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             118 => 
             array (
@@ -6827,8 +6827,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 879.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             119 => 
             array (
@@ -6838,8 +6838,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 15.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:42',
+                'updated_at' => '2023-11-08 16:05:42',
             ),
             120 => 
             array (
@@ -6849,8 +6849,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 48.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             121 => 
             array (
@@ -6860,8 +6860,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 29.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             122 => 
             array (
@@ -6871,8 +6871,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 2.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             123 => 
             array (
@@ -6882,8 +6882,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             124 => 
             array (
@@ -6893,8 +6893,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 15.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             125 => 
             array (
@@ -6904,8 +6904,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 36.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             126 => 
             array (
@@ -6915,8 +6915,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             127 => 
             array (
@@ -6926,8 +6926,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 27.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             128 => 
             array (
@@ -6937,8 +6937,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 21.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             129 => 
             array (
@@ -6948,8 +6948,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 737.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             130 => 
             array (
@@ -6959,8 +6959,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 14.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             131 => 
             array (
@@ -6970,8 +6970,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 292.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             132 => 
             array (
@@ -6981,8 +6981,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 586.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             133 => 
             array (
@@ -6992,8 +6992,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             134 => 
             array (
@@ -7003,8 +7003,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             135 => 
             array (
@@ -7014,8 +7014,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             136 => 
             array (
@@ -7025,8 +7025,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             137 => 
             array (
@@ -7036,8 +7036,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 97.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             138 => 
             array (
@@ -7047,8 +7047,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             139 => 
             array (
@@ -7058,8 +7058,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 1.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:14',
-                'updated_at' => '2023-11-08 01:48:14',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             140 => 
             array (
@@ -7069,8 +7069,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 1.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             141 => 
             array (
@@ -7080,8 +7080,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             142 => 
             array (
@@ -7091,8 +7091,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 8.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             143 => 
             array (
@@ -7102,8 +7102,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 10.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             144 => 
             array (
@@ -7113,8 +7113,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 20.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             145 => 
             array (
@@ -7124,8 +7124,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 19.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             146 => 
             array (
@@ -7135,8 +7135,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 19.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             147 => 
             array (
@@ -7146,8 +7146,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 30.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             148 => 
             array (
@@ -7157,8 +7157,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 20.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             149 => 
             array (
@@ -7168,8 +7168,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 20.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             150 => 
             array (
@@ -7179,8 +7179,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 124,
                 'QuantityOnStock' => 4.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             151 => 
             array (
@@ -7190,8 +7190,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             152 => 
             array (
@@ -7201,8 +7201,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             153 => 
             array (
@@ -7212,8 +7212,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 18.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             154 => 
             array (
@@ -7223,8 +7223,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 29.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             155 => 
             array (
@@ -7234,8 +7234,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 825.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             156 => 
             array (
@@ -7245,8 +7245,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 6.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             157 => 
             array (
@@ -7256,8 +7256,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 898.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             158 => 
             array (
@@ -7267,8 +7267,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             159 => 
             array (
@@ -7278,8 +7278,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 1036.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             160 => 
             array (
@@ -7289,8 +7289,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 1915.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             161 => 
             array (
@@ -7300,8 +7300,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             162 => 
             array (
@@ -7311,8 +7311,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 102,
                 'QuantityOnStock' => 326.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             163 => 
             array (
@@ -7322,8 +7322,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             164 => 
             array (
@@ -7333,8 +7333,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 5431.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             165 => 
             array (
@@ -7344,8 +7344,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 68.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             166 => 
             array (
@@ -7355,8 +7355,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 28.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             167 => 
             array (
@@ -7366,8 +7366,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 59.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             168 => 
             array (
@@ -7377,8 +7377,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 124,
                 'QuantityOnStock' => 720.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             169 => 
             array (
@@ -7388,8 +7388,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 494.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             170 => 
             array (
@@ -7399,8 +7399,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 35.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             171 => 
             array (
@@ -7410,8 +7410,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 9.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             172 => 
             array (
@@ -7421,8 +7421,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             173 => 
             array (
@@ -7432,8 +7432,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 124,
                 'QuantityOnStock' => 139.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             174 => 
             array (
@@ -7443,8 +7443,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 124,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             175 => 
             array (
@@ -7454,8 +7454,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 10.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             176 => 
             array (
@@ -7465,8 +7465,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 124,
                 'QuantityOnStock' => 342.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             177 => 
             array (
@@ -7476,8 +7476,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             178 => 
             array (
@@ -7487,8 +7487,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 233.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             179 => 
             array (
@@ -7498,8 +7498,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 853.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             180 => 
             array (
@@ -7509,8 +7509,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             181 => 
             array (
@@ -7520,8 +7520,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             182 => 
             array (
@@ -7531,8 +7531,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 124,
                 'QuantityOnStock' => 164.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             183 => 
             array (
@@ -7542,8 +7542,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 3332.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             184 => 
             array (
@@ -7553,8 +7553,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 14.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             185 => 
             array (
@@ -7564,8 +7564,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 12.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             186 => 
             array (
@@ -7575,8 +7575,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 132,
                 'QuantityOnStock' => 29.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             187 => 
             array (
@@ -7586,8 +7586,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             188 => 
             array (
@@ -7597,8 +7597,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             189 => 
             array (
@@ -7608,8 +7608,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             190 => 
             array (
@@ -7619,8 +7619,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             191 => 
             array (
@@ -7630,8 +7630,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             192 => 
             array (
@@ -7641,8 +7641,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 2832.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             193 => 
             array (
@@ -7652,8 +7652,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             194 => 
             array (
@@ -7663,8 +7663,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 333.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             195 => 
             array (
@@ -7674,8 +7674,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 12.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             196 => 
             array (
@@ -7685,8 +7685,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 133,
                 'QuantityOnStock' => 963.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             197 => 
             array (
@@ -7696,8 +7696,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 15.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             198 => 
             array (
@@ -7707,8 +7707,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 12.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             199 => 
             array (
@@ -7718,8 +7718,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 721.0399999999999636202119290828704833984375,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:43',
+                'updated_at' => '2023-11-08 16:05:43',
             ),
             200 => 
             array (
@@ -7729,8 +7729,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 15.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             201 => 
             array (
@@ -7740,8 +7740,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 11.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             202 => 
             array (
@@ -7751,8 +7751,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 411.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             203 => 
             array (
@@ -7762,8 +7762,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 819.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             204 => 
             array (
@@ -7773,8 +7773,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 13.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             205 => 
             array (
@@ -7784,8 +7784,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             206 => 
             array (
@@ -7795,8 +7795,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 133,
                 'QuantityOnStock' => 1450.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             207 => 
             array (
@@ -7806,8 +7806,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 1.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             208 => 
             array (
@@ -7817,8 +7817,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             209 => 
             array (
@@ -7828,8 +7828,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 105,
                 'QuantityOnStock' => 1680.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             210 => 
             array (
@@ -7839,8 +7839,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 111,
                 'QuantityOnStock' => 4725.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             211 => 
             array (
@@ -7850,8 +7850,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             212 => 
             array (
@@ -7861,8 +7861,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 12.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             213 => 
             array (
@@ -7872,8 +7872,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             214 => 
             array (
@@ -7883,8 +7883,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 119,
                 'QuantityOnStock' => 235.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             215 => 
             array (
@@ -7894,8 +7894,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 11.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             216 => 
             array (
@@ -7905,8 +7905,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 34.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             217 => 
             array (
@@ -7916,8 +7916,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 492.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             218 => 
             array (
@@ -7927,8 +7927,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             219 => 
             array (
@@ -7938,8 +7938,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 427.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             220 => 
             array (
@@ -7949,8 +7949,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 21.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             221 => 
             array (
@@ -7960,8 +7960,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 79.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             222 => 
             array (
@@ -7971,8 +7971,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 102,
                 'QuantityOnStock' => 2902.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             223 => 
             array (
@@ -7982,8 +7982,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 17.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             224 => 
             array (
@@ -7993,8 +7993,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 21.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             225 => 
             array (
@@ -8004,8 +8004,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 13.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             226 => 
             array (
@@ -8015,8 +8015,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             227 => 
             array (
@@ -8026,8 +8026,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             228 => 
             array (
@@ -8037,8 +8037,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 3.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             229 => 
             array (
@@ -8048,8 +8048,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 8.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             230 => 
             array (
@@ -8059,8 +8059,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 4.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             231 => 
             array (
@@ -8070,8 +8070,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 8.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             232 => 
             array (
@@ -8081,8 +8081,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 4.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             233 => 
             array (
@@ -8092,8 +8092,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 3.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             234 => 
             array (
@@ -8103,8 +8103,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 3.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:15',
-                'updated_at' => '2023-11-08 01:48:15',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             235 => 
             array (
@@ -8114,8 +8114,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             236 => 
             array (
@@ -8125,8 +8125,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 7.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             237 => 
             array (
@@ -8136,8 +8136,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 12.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             238 => 
             array (
@@ -8147,8 +8147,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 20.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             239 => 
             array (
@@ -8158,8 +8158,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             240 => 
             array (
@@ -8169,8 +8169,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 19.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             241 => 
             array (
@@ -8180,8 +8180,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 7.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             242 => 
             array (
@@ -8191,8 +8191,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 14.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             243 => 
             array (
@@ -8202,8 +8202,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 2017.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             244 => 
             array (
@@ -8213,8 +8213,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 151.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             245 => 
             array (
@@ -8224,8 +8224,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 107,
                 'QuantityOnStock' => 8.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             246 => 
             array (
@@ -8235,8 +8235,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 763.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             247 => 
             array (
@@ -8246,8 +8246,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             248 => 
             array (
@@ -8257,8 +8257,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 124.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             249 => 
             array (
@@ -8268,8 +8268,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 463.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             250 => 
             array (
@@ -8279,8 +8279,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 1.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             251 => 
             array (
@@ -8290,8 +8290,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 903.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             252 => 
             array (
@@ -8301,8 +8301,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 22.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             253 => 
             array (
@@ -8312,8 +8312,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 105.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             254 => 
             array (
@@ -8323,8 +8323,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 778.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             255 => 
             array (
@@ -8334,8 +8334,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 22.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             256 => 
             array (
@@ -8345,8 +8345,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 62.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             257 => 
             array (
@@ -8356,8 +8356,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 104,
                 'QuantityOnStock' => 285.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             258 => 
             array (
@@ -8367,8 +8367,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 21.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             259 => 
             array (
@@ -8378,8 +8378,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 383.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             260 => 
             array (
@@ -8389,8 +8389,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 481.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             261 => 
             array (
@@ -8400,8 +8400,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 41.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             262 => 
             array (
@@ -8411,8 +8411,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 19.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             263 => 
             array (
@@ -8422,8 +8422,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 23.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             264 => 
             array (
@@ -8433,8 +8433,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 18706.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:16',
-                'updated_at' => '2023-11-08 01:48:16',
+                'created_at' => '2023-11-08 16:05:44',
+                'updated_at' => '2023-11-08 16:05:44',
             ),
             265 => 
             array (
@@ -8444,8 +8444,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 441.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 266 => 
                 array (
@@ -8455,8 +8455,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 104,
                     'QuantityOnStock' => 461.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 267 => 
                 array (
@@ -8466,8 +8466,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 104,
                     'QuantityOnStock' => 172.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 268 => 
                 array (
@@ -8477,8 +8477,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 33.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 269 => 
                 array (
@@ -8488,8 +8488,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 104,
                     'QuantityOnStock' => 183.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 270 => 
                 array (
@@ -8499,8 +8499,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 135,
                     'QuantityOnStock' => 114.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 271 => 
                 array (
@@ -8510,8 +8510,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 1127.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 272 => 
                 array (
@@ -8521,8 +8521,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 7315.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 273 => 
                 array (
@@ -8532,8 +8532,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 8745.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 274 => 
                 array (
@@ -8543,8 +8543,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 3.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 275 => 
                 array (
@@ -8554,8 +8554,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 3.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 276 => 
                 array (
@@ -8565,8 +8565,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 12.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 277 => 
                 array (
@@ -8576,8 +8576,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 3433.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 278 => 
                 array (
@@ -8587,8 +8587,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 104,
                     'QuantityOnStock' => 327.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 279 => 
                 array (
@@ -8598,8 +8598,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 59.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:44',
+                    'updated_at' => '2023-11-08 16:05:44',
                 ),
                 280 => 
                 array (
@@ -8609,8 +8609,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 40.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 281 => 
                 array (
@@ -8620,8 +8620,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 105,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 282 => 
                 array (
@@ -8631,8 +8631,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 44.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 283 => 
                 array (
@@ -8642,8 +8642,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 116,
                     'QuantityOnStock' => 756.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 284 => 
                 array (
@@ -8653,8 +8653,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 5908.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 285 => 
                 array (
@@ -8664,8 +8664,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 9.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 286 => 
                 array (
@@ -8675,8 +8675,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 17.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 287 => 
                 array (
@@ -8686,8 +8686,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 126,
                     'QuantityOnStock' => 18.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 288 => 
                 array (
@@ -8697,8 +8697,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 1730.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 289 => 
                 array (
@@ -8708,8 +8708,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 1968.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 290 => 
                 array (
@@ -8719,8 +8719,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 105,
                     'QuantityOnStock' => 169.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 291 => 
                 array (
@@ -8730,8 +8730,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 26.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 292 => 
                 array (
@@ -8741,8 +8741,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 1300.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 293 => 
                 array (
@@ -8752,8 +8752,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 77.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 294 => 
                 array (
@@ -8763,8 +8763,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 100,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 295 => 
                 array (
@@ -8774,8 +8774,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 296 => 
                 array (
@@ -8785,8 +8785,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 8453.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 297 => 
                 array (
@@ -8796,8 +8796,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 4.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 298 => 
                 array (
@@ -8807,8 +8807,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 116,
                     'QuantityOnStock' => 94.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 299 => 
                 array (
@@ -8818,8 +8818,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 8223.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 300 => 
                 array (
@@ -8829,8 +8829,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 4426.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 301 => 
                 array (
@@ -8840,8 +8840,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 89.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 302 => 
                 array (
@@ -8851,8 +8851,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 116,
                     'QuantityOnStock' => 691.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 303 => 
                 array (
@@ -8862,8 +8862,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 109.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 304 => 
                 array (
@@ -8873,8 +8873,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 135,
                     'QuantityOnStock' => 20.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 305 => 
                 array (
@@ -8884,8 +8884,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 116,
                     'QuantityOnStock' => 30.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 306 => 
                 array (
@@ -8895,8 +8895,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 2220.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 307 => 
                 array (
@@ -8906,8 +8906,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 28.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 308 => 
                 array (
@@ -8917,8 +8917,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 111,
                     'QuantityOnStock' => 497.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 309 => 
                 array (
@@ -8928,8 +8928,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 33.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 310 => 
                 array (
@@ -8939,8 +8939,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 38.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 311 => 
                 array (
@@ -8950,8 +8950,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 1597.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 312 => 
                 array (
@@ -8961,8 +8961,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 558.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 313 => 
                 array (
@@ -8972,8 +8972,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 300.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 314 => 
                 array (
@@ -8983,8 +8983,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 116,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 315 => 
                 array (
@@ -8994,8 +8994,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 3530.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 316 => 
                 array (
@@ -9005,8 +9005,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 5.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 317 => 
                 array (
@@ -9016,8 +9016,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 135,
                     'QuantityOnStock' => 10.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 318 => 
                 array (
@@ -9027,8 +9027,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 5.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 319 => 
                 array (
@@ -9038,8 +9038,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 2.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:16',
-                    'updated_at' => '2023-11-08 01:48:16',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 320 => 
                 array (
@@ -9049,8 +9049,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 2.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 321 => 
                 array (
@@ -9060,8 +9060,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 4.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 322 => 
                 array (
@@ -9071,8 +9071,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 5.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 323 => 
                 array (
@@ -9082,8 +9082,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 7.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 324 => 
                 array (
@@ -9093,8 +9093,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 106,
                     'QuantityOnStock' => 276.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 325 => 
                 array (
@@ -9104,8 +9104,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 107,
                     'QuantityOnStock' => 12.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 326 => 
                 array (
@@ -9115,8 +9115,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 2038.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 327 => 
                 array (
@@ -9126,8 +9126,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 190.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 328 => 
                 array (
@@ -9137,8 +9137,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 1160.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 329 => 
                 array (
@@ -9148,8 +9148,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 354.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 330 => 
                 array (
@@ -9159,8 +9159,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 25.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 331 => 
                 array (
@@ -9170,8 +9170,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 127,
                     'QuantityOnStock' => 133.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 332 => 
                 array (
@@ -9181,8 +9181,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 127,
                     'QuantityOnStock' => 300.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 333 => 
                 array (
@@ -9192,8 +9192,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 918.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 334 => 
                 array (
@@ -9203,8 +9203,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 9.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 335 => 
                 array (
@@ -9214,8 +9214,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 127,
                     'QuantityOnStock' => 226.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 336 => 
                 array (
@@ -9225,8 +9225,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 721.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 337 => 
                 array (
@@ -9236,8 +9236,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 2168.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 338 => 
                 array (
@@ -9247,8 +9247,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 12.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 339 => 
                 array (
@@ -9258,8 +9258,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 14.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 340 => 
                 array (
@@ -9269,8 +9269,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 10354.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 341 => 
                 array (
@@ -9280,8 +9280,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 122,
                     'QuantityOnStock' => 1379.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 342 => 
                 array (
@@ -9291,8 +9291,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 20.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 343 => 
                 array (
@@ -9302,8 +9302,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 128.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 344 => 
                 array (
@@ -9313,8 +9313,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 27.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 345 => 
                 array (
@@ -9324,8 +9324,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 77.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 346 => 
                 array (
@@ -9335,8 +9335,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 9453.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 347 => 
                 array (
@@ -9346,8 +9346,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 9.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 348 => 
                 array (
@@ -9357,8 +9357,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 127,
                     'QuantityOnStock' => 286.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 349 => 
                 array (
@@ -9368,8 +9368,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 350 => 
                 array (
@@ -9379,8 +9379,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 164.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 351 => 
                 array (
@@ -9390,8 +9390,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 489.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 352 => 
                 array (
@@ -9401,8 +9401,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 15.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 353 => 
                 array (
@@ -9412,8 +9412,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 9.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 354 => 
                 array (
@@ -9423,8 +9423,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 7136.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 355 => 
                 array (
@@ -9434,8 +9434,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 2153.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 356 => 
                 array (
@@ -9445,8 +9445,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 75.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 357 => 
                 array (
@@ -9456,8 +9456,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 125,
                     'QuantityOnStock' => 25.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 358 => 
                 array (
@@ -9467,8 +9467,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 102,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 359 => 
                 array (
@@ -9478,8 +9478,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:45',
+                    'updated_at' => '2023-11-08 16:05:45',
                 ),
                 360 => 
                 array (
@@ -9489,8 +9489,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 102,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 361 => 
                 array (
@@ -9500,8 +9500,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 102,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 362 => 
                 array (
@@ -9511,8 +9511,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 102,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 363 => 
                 array (
@@ -9522,8 +9522,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 100,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 364 => 
                 array (
@@ -9533,8 +9533,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 2768.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 365 => 
                 array (
@@ -9544,8 +9544,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 132,
                     'QuantityOnStock' => 28.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 366 => 
                 array (
@@ -9555,8 +9555,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 57.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 367 => 
                 array (
@@ -9566,8 +9566,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 23.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 368 => 
                 array (
@@ -9577,8 +9577,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 102,
                     'QuantityOnStock' => 2.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 369 => 
                 array (
@@ -9588,8 +9588,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 125,
                     'QuantityOnStock' => 27.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 370 => 
                 array (
@@ -9599,8 +9599,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 10.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 371 => 
                 array (
@@ -9610,8 +9610,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 118,
                     'QuantityOnStock' => 1968.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 372 => 
                 array (
@@ -9621,8 +9621,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 102,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 373 => 
                 array (
@@ -9632,8 +9632,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 374 => 
                 array (
@@ -9643,8 +9643,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 125,
                     'QuantityOnStock' => 13.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 375 => 
                 array (
@@ -9654,8 +9654,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 132,
                     'QuantityOnStock' => 97.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 376 => 
                 array (
@@ -9665,8 +9665,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 132,
                     'QuantityOnStock' => 7.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 377 => 
                 array (
@@ -9676,8 +9676,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 124,
                     'QuantityOnStock' => 325.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 378 => 
                 array (
@@ -9687,8 +9687,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 102,
                     'QuantityOnStock' => 865.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 379 => 
                 array (
@@ -9698,8 +9698,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 6.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 380 => 
                 array (
@@ -9709,8 +9709,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 2215.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 381 => 
                 array (
@@ -9720,8 +9720,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 265.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 382 => 
                 array (
@@ -9731,8 +9731,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 110.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 383 => 
                 array (
@@ -9742,8 +9742,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 7.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 384 => 
                 array (
@@ -9753,8 +9753,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 185.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 385 => 
                 array (
@@ -9764,8 +9764,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 104,
                     'QuantityOnStock' => 2617.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 386 => 
                 array (
@@ -9775,8 +9775,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 35.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 387 => 
                 array (
@@ -9786,8 +9786,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 238.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 388 => 
                 array (
@@ -9797,8 +9797,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 42.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 389 => 
                 array (
@@ -9808,8 +9808,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 176.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 390 => 
                 array (
@@ -9819,8 +9819,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 125,
                     'QuantityOnStock' => 21.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 391 => 
                 array (
@@ -9830,8 +9830,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 124,
                     'QuantityOnStock' => 307.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 392 => 
                 array (
@@ -9841,8 +9841,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 132,
                     'QuantityOnStock' => 487.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 393 => 
                 array (
@@ -9852,8 +9852,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 125,
                     'QuantityOnStock' => 25.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 394 => 
                 array (
@@ -9863,8 +9863,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 142.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 395 => 
                 array (
@@ -9874,8 +9874,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 125,
                     'QuantityOnStock' => 26.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 396 => 
                 array (
@@ -9885,8 +9885,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 125,
                     'QuantityOnStock' => 26.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 397 => 
                 array (
@@ -9896,8 +9896,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 135,
                     'QuantityOnStock' => 10.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 398 => 
                 array (
@@ -9907,8 +9907,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 125,
                     'QuantityOnStock' => 19.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 399 => 
                 array (
@@ -9918,8 +9918,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 286.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 400 => 
                 array (
@@ -9929,8 +9929,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 140.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 401 => 
                 array (
@@ -9940,8 +9940,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 127,
                     'QuantityOnStock' => 2.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 402 => 
                 array (
@@ -9951,8 +9951,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 2.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 403 => 
                 array (
@@ -9962,8 +9962,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 1253.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 404 => 
                 array (
@@ -9973,8 +9973,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 2.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 405 => 
                 array (
@@ -9984,8 +9984,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 80.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 406 => 
                 array (
@@ -9995,8 +9995,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 1686.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 407 => 
                 array (
@@ -10006,8 +10006,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 145.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 408 => 
                 array (
@@ -10017,8 +10017,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 125,
                     'QuantityOnStock' => 21.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 409 => 
                 array (
@@ -10028,8 +10028,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 111,
                     'QuantityOnStock' => 804.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 410 => 
                 array (
@@ -10039,8 +10039,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 111,
                     'QuantityOnStock' => 681.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 411 => 
                 array (
@@ -10050,8 +10050,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 3.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 412 => 
                 array (
@@ -10061,8 +10061,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 135,
                     'QuantityOnStock' => 5.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 413 => 
                 array (
@@ -10072,8 +10072,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 111,
                     'QuantityOnStock' => 713.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 414 => 
                 array (
@@ -10083,8 +10083,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 135,
                     'QuantityOnStock' => 9.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 415 => 
                 array (
@@ -10094,8 +10094,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 183.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 416 => 
                 array (
@@ -10105,8 +10105,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 123,
                     'QuantityOnStock' => 6.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 417 => 
                 array (
@@ -10116,8 +10116,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 111,
                     'QuantityOnStock' => 710.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 418 => 
                 array (
@@ -10127,8 +10127,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 2937.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 419 => 
                 array (
@@ -10138,8 +10138,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 23.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:17',
-                    'updated_at' => '2023-11-08 01:48:17',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 420 => 
                 array (
@@ -10149,8 +10149,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 7.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:18',
-                    'updated_at' => '2023-11-08 01:48:18',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 421 => 
                 array (
@@ -10160,8 +10160,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 50.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:18',
-                    'updated_at' => '2023-11-08 01:48:18',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 422 => 
                 array (
@@ -10171,8 +10171,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 19.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:18',
-                    'updated_at' => '2023-11-08 01:48:18',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 423 => 
                 array (
@@ -10182,8 +10182,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 19.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:18',
-                    'updated_at' => '2023-11-08 01:48:18',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 424 => 
                 array (
@@ -10193,8 +10193,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 11.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:18',
-                    'updated_at' => '2023-11-08 01:48:18',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 425 => 
                 array (
@@ -10204,8 +10204,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 24.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:18',
-                    'updated_at' => '2023-11-08 01:48:18',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 426 => 
                 array (
@@ -10215,8 +10215,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 248.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:18',
-                    'updated_at' => '2023-11-08 01:48:18',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 427 => 
                 array (
@@ -10226,8 +10226,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 70.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:18',
-                    'updated_at' => '2023-11-08 01:48:18',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 428 => 
                 array (
@@ -10237,8 +10237,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 103.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:18',
-                    'updated_at' => '2023-11-08 01:48:18',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 429 => 
                 array (
@@ -10248,8 +10248,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 19.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:18',
-                    'updated_at' => '2023-11-08 01:48:18',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 430 => 
                 array (
@@ -10259,8 +10259,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 46.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:18',
-                    'updated_at' => '2023-11-08 01:48:18',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 431 => 
                 array (
@@ -10270,8 +10270,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 230.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:18',
-                    'updated_at' => '2023-11-08 01:48:18',
+                    'created_at' => '2023-11-08 16:05:46',
+                    'updated_at' => '2023-11-08 16:05:46',
                 ),
                 432 => 
                 array (
@@ -10281,8 +10281,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 282.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     433 => 
                     array (
@@ -10292,8 +10292,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 113,
                         'QuantityOnStock' => 2097.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     434 => 
                     array (
@@ -10303,8 +10303,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 125,
                         'QuantityOnStock' => 25.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     435 => 
                     array (
@@ -10314,8 +10314,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 105,
                         'QuantityOnStock' => 530.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     436 => 
                     array (
@@ -10325,8 +10325,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 116,
                         'QuantityOnStock' => 501.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     437 => 
                     array (
@@ -10336,8 +10336,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 230.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     438 => 
                     array (
@@ -10347,8 +10347,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 32.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     439 => 
                     array (
@@ -10358,8 +10358,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 38.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     440 => 
                     array (
@@ -10369,8 +10369,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 4565.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     441 => 
                     array (
@@ -10380,8 +10380,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 3965.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     442 => 
                     array (
@@ -10391,8 +10391,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     443 => 
                     array (
@@ -10402,8 +10402,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 243.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     444 => 
                     array (
@@ -10413,8 +10413,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 232.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     445 => 
                     array (
@@ -10424,8 +10424,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 2.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     446 => 
                     array (
@@ -10435,8 +10435,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 2.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     447 => 
                     array (
@@ -10446,8 +10446,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 131,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     448 => 
                     array (
@@ -10457,8 +10457,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 108,
                         'QuantityOnStock' => 41.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     449 => 
                     array (
@@ -10468,8 +10468,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 2.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     450 => 
                     array (
@@ -10479,8 +10479,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 2.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     451 => 
                     array (
@@ -10490,8 +10490,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 125,
                         'QuantityOnStock' => 25.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     452 => 
                     array (
@@ -10501,8 +10501,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 1.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     453 => 
                     array (
@@ -10512,8 +10512,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 2.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     454 => 
                     array (
@@ -10523,8 +10523,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     455 => 
                     array (
@@ -10534,8 +10534,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 131,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     456 => 
                     array (
@@ -10545,8 +10545,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 463.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     457 => 
                     array (
@@ -10556,8 +10556,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 131,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     458 => 
                     array (
@@ -10567,8 +10567,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 131,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     459 => 
                     array (
@@ -10578,8 +10578,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 121,
                         'QuantityOnStock' => 29.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:46',
+                        'updated_at' => '2023-11-08 16:05:46',
                     ),
                     460 => 
                     array (
@@ -10589,8 +10589,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 6500.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     461 => 
                     array (
@@ -10600,8 +10600,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 3505.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     462 => 
                     array (
@@ -10611,8 +10611,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 4330.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     463 => 
                     array (
@@ -10622,8 +10622,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 125,
                         'QuantityOnStock' => 21.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     464 => 
                     array (
@@ -10633,8 +10633,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 491.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     465 => 
                     array (
@@ -10644,8 +10644,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 131,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     466 => 
                     array (
@@ -10655,8 +10655,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 113,
                         'QuantityOnStock' => 5597.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     467 => 
                     array (
@@ -10666,8 +10666,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 119,
                         'QuantityOnStock' => 3161.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     468 => 
                     array (
@@ -10677,8 +10677,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 1.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     469 => 
                     array (
@@ -10688,8 +10688,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 121,
                         'QuantityOnStock' => 5385.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     470 => 
                     array (
@@ -10699,8 +10699,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 100,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     471 => 
                     array (
@@ -10710,8 +10710,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 555.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     472 => 
                     array (
@@ -10721,8 +10721,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     473 => 
                     array (
@@ -10732,8 +10732,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     474 => 
                     array (
@@ -10743,8 +10743,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 121,
                         'QuantityOnStock' => 16705.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     475 => 
                     array (
@@ -10754,8 +10754,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     476 => 
                     array (
@@ -10765,8 +10765,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 109,
                         'QuantityOnStock' => 9.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     477 => 
                     array (
@@ -10776,8 +10776,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 116,
                         'QuantityOnStock' => 132.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     478 => 
                     array (
@@ -10787,8 +10787,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     479 => 
                     array (
@@ -10798,8 +10798,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 1680.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     480 => 
                     array (
@@ -10809,8 +10809,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 7625.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     481 => 
                     array (
@@ -10820,8 +10820,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 1071.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     482 => 
                     array (
@@ -10831,8 +10831,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 102,
                         'QuantityOnStock' => 1734.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     483 => 
                     array (
@@ -10842,8 +10842,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 108,
                         'QuantityOnStock' => 492.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     484 => 
                     array (
@@ -10853,8 +10853,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 175.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     485 => 
                     array (
@@ -10864,8 +10864,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 108,
                         'QuantityOnStock' => 335.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     486 => 
                     array (
@@ -10875,8 +10875,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 23.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     487 => 
                     array (
@@ -10886,8 +10886,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 692.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     488 => 
                     array (
@@ -10897,8 +10897,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 7.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     489 => 
                     array (
@@ -10908,8 +10908,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 5.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     490 => 
                     array (
@@ -10919,8 +10919,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 10.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     491 => 
                     array (
@@ -10930,8 +10930,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 10.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     492 => 
                     array (
@@ -10941,8 +10941,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 1561.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     493 => 
                     array (
@@ -10952,8 +10952,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 617.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     494 => 
                     array (
@@ -10963,8 +10963,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 124,
                         'QuantityOnStock' => 228.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     495 => 
                     array (
@@ -10974,8 +10974,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 1092.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     496 => 
                     array (
@@ -10985,8 +10985,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 118,
                         'QuantityOnStock' => 1741.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     497 => 
                     array (
@@ -10996,8 +10996,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 147.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     498 => 
                     array (
@@ -11007,8 +11007,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 549.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                     499 => 
                     array (
@@ -11018,8 +11018,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 9.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:18',
-                        'updated_at' => '2023-11-08 01:48:18',
+                        'created_at' => '2023-11-08 16:05:47',
+                        'updated_at' => '2023-11-08 16:05:47',
                     ),
                 ));
         \DB::table('products')->insert(array (
@@ -11031,8 +11031,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 860.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             1 => 
             array (
@@ -11042,8 +11042,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             2 => 
             array (
@@ -11053,8 +11053,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 4.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             3 => 
             array (
@@ -11064,8 +11064,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             4 => 
             array (
@@ -11075,8 +11075,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             5 => 
             array (
@@ -11086,8 +11086,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 482.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             6 => 
             array (
@@ -11097,8 +11097,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             7 => 
             array (
@@ -11108,8 +11108,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             8 => 
             array (
@@ -11119,8 +11119,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 4.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             9 => 
             array (
@@ -11130,8 +11130,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             10 => 
             array (
@@ -11141,8 +11141,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             11 => 
             array (
@@ -11152,8 +11152,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 7.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             12 => 
             array (
@@ -11163,8 +11163,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 2.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             13 => 
             array (
@@ -11174,8 +11174,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             14 => 
             array (
@@ -11185,8 +11185,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             15 => 
             array (
@@ -11196,8 +11196,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             16 => 
             array (
@@ -11207,8 +11207,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 433.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             17 => 
             array (
@@ -11218,8 +11218,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             18 => 
             array (
@@ -11229,8 +11229,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 3.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             19 => 
             array (
@@ -11240,8 +11240,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 2.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:18',
-                'updated_at' => '2023-11-08 01:48:18',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             20 => 
             array (
@@ -11251,8 +11251,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 2.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             21 => 
             array (
@@ -11262,8 +11262,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 2.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             22 => 
             array (
@@ -11273,8 +11273,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 3.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             23 => 
             array (
@@ -11284,8 +11284,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 231.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             24 => 
             array (
@@ -11295,8 +11295,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 2311.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             25 => 
             array (
@@ -11306,8 +11306,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 3995.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             26 => 
             array (
@@ -11317,8 +11317,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 1093.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             27 => 
             array (
@@ -11328,8 +11328,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             28 => 
             array (
@@ -11339,8 +11339,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             29 => 
             array (
@@ -11350,8 +11350,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             30 => 
             array (
@@ -11361,8 +11361,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 1970.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             31 => 
             array (
@@ -11372,8 +11372,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             32 => 
             array (
@@ -11383,8 +11383,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 5265.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             33 => 
             array (
@@ -11394,8 +11394,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 1680.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             34 => 
             array (
@@ -11405,8 +11405,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             35 => 
             array (
@@ -11416,8 +11416,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 1828.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             36 => 
             array (
@@ -11427,8 +11427,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             37 => 
             array (
@@ -11438,8 +11438,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 8.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             38 => 
             array (
@@ -11449,8 +11449,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 1.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             39 => 
             array (
@@ -11460,8 +11460,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:47',
+                'updated_at' => '2023-11-08 16:05:47',
             ),
             40 => 
             array (
@@ -11471,8 +11471,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 11.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             41 => 
             array (
@@ -11482,8 +11482,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 38.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             42 => 
             array (
@@ -11493,8 +11493,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 2605.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             43 => 
             array (
@@ -11504,8 +11504,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 9.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             44 => 
             array (
@@ -11515,8 +11515,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 957.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             45 => 
             array (
@@ -11526,8 +11526,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 1095.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             46 => 
             array (
@@ -11537,8 +11537,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 10.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             47 => 
             array (
@@ -11548,8 +11548,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 353.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             48 => 
             array (
@@ -11559,8 +11559,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 123,
                 'QuantityOnStock' => 3.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             49 => 
             array (
@@ -11570,8 +11570,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 21.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             50 => 
             array (
@@ -11581,8 +11581,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             51 => 
             array (
@@ -11592,8 +11592,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             52 => 
             array (
@@ -11603,8 +11603,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             53 => 
             array (
@@ -11614,8 +11614,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 118,
                 'QuantityOnStock' => 5903.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             54 => 
             array (
@@ -11625,8 +11625,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             55 => 
             array (
@@ -11636,8 +11636,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             56 => 
             array (
@@ -11647,8 +11647,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             57 => 
             array (
@@ -11658,8 +11658,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 15.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             58 => 
             array (
@@ -11669,8 +11669,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 24.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             59 => 
             array (
@@ -11680,8 +11680,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 3493.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             60 => 
             array (
@@ -11691,8 +11691,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 2206.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             61 => 
             array (
@@ -11702,8 +11702,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 62.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             62 => 
             array (
@@ -11713,8 +11713,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 123,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BDEF',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             63 => 
             array (
@@ -11724,8 +11724,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             64 => 
             array (
@@ -11735,8 +11735,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 1639.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             65 => 
             array (
@@ -11746,8 +11746,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 2639.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             66 => 
             array (
@@ -11757,8 +11757,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 14.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             67 => 
             array (
@@ -11768,8 +11768,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             68 => 
             array (
@@ -11779,8 +11779,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 499.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             69 => 
             array (
@@ -11790,8 +11790,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 248.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             70 => 
             array (
@@ -11801,8 +11801,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 104,
                 'QuantityOnStock' => 173.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             71 => 
             array (
@@ -11812,8 +11812,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 16.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             72 => 
             array (
@@ -11823,8 +11823,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             73 => 
             array (
@@ -11834,8 +11834,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 104,
                 'QuantityOnStock' => 219.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             74 => 
             array (
@@ -11845,8 +11845,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 105,
                 'QuantityOnStock' => 910.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             75 => 
             array (
@@ -11856,8 +11856,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 47.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             76 => 
             array (
@@ -11867,8 +11867,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 1543.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             77 => 
             array (
@@ -11878,8 +11878,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 325.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             78 => 
             array (
@@ -11889,8 +11889,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 119,
                 'QuantityOnStock' => 267.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             79 => 
             array (
@@ -11900,8 +11900,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 149.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             80 => 
             array (
@@ -11911,8 +11911,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 10.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             81 => 
             array (
@@ -11922,8 +11922,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 635.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             82 => 
             array (
@@ -11933,8 +11933,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 101.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             83 => 
             array (
@@ -11944,8 +11944,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 6.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             84 => 
             array (
@@ -11955,8 +11955,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             85 => 
             array (
@@ -11966,8 +11966,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             86 => 
             array (
@@ -11977,8 +11977,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 1.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             87 => 
             array (
@@ -11988,8 +11988,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             88 => 
             array (
@@ -11999,8 +11999,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 100,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             89 => 
             array (
@@ -12010,8 +12010,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 15.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             90 => 
             array (
@@ -12021,8 +12021,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 338.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             91 => 
             array (
@@ -12032,8 +12032,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 119,
                 'QuantityOnStock' => 281.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             92 => 
             array (
@@ -12043,8 +12043,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 96.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             93 => 
             array (
@@ -12054,8 +12054,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 161.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             94 => 
             array (
@@ -12065,8 +12065,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 320.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             95 => 
             array (
@@ -12076,8 +12076,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 16.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             96 => 
             array (
@@ -12087,8 +12087,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 47.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             97 => 
             array (
@@ -12098,8 +12098,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 60.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             98 => 
             array (
@@ -12109,8 +12109,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 93.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             99 => 
             array (
@@ -12120,8 +12120,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 102,
                 'QuantityOnStock' => 833.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             100 => 
             array (
@@ -12131,8 +12131,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 306.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             101 => 
             array (
@@ -12142,8 +12142,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             102 => 
             array (
@@ -12153,8 +12153,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 132,
                 'QuantityOnStock' => 241.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             103 => 
             array (
@@ -12164,8 +12164,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 651.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             104 => 
             array (
@@ -12175,8 +12175,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 132,
                 'QuantityOnStock' => 79.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             105 => 
             array (
@@ -12186,8 +12186,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 199.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             106 => 
             array (
@@ -12197,8 +12197,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 264.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:19',
-                'updated_at' => '2023-11-08 01:48:19',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             107 => 
             array (
@@ -12208,8 +12208,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 750.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             108 => 
             array (
@@ -12219,8 +12219,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 54.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             109 => 
             array (
@@ -12230,8 +12230,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 132,
                 'QuantityOnStock' => 28.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             110 => 
             array (
@@ -12241,8 +12241,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 132,
                 'QuantityOnStock' => 31.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             111 => 
             array (
@@ -12252,8 +12252,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 1.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             112 => 
             array (
@@ -12263,8 +12263,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 132,
                 'QuantityOnStock' => 13.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             113 => 
             array (
@@ -12274,8 +12274,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 225.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             114 => 
             array (
@@ -12285,8 +12285,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 5.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             115 => 
             array (
@@ -12296,8 +12296,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 12.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             116 => 
             array (
@@ -12307,8 +12307,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 135,
                 'QuantityOnStock' => 98.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             117 => 
             array (
@@ -12318,8 +12318,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 37.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             118 => 
             array (
@@ -12329,8 +12329,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 295.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             119 => 
             array (
@@ -12340,8 +12340,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 30.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             120 => 
             array (
@@ -12351,8 +12351,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 4.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             121 => 
             array (
@@ -12362,8 +12362,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 135,
                 'QuantityOnStock' => 20.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             122 => 
             array (
@@ -12373,8 +12373,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 135,
                 'QuantityOnStock' => 20.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             123 => 
             array (
@@ -12384,8 +12384,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 135,
                 'QuantityOnStock' => 20.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             124 => 
             array (
@@ -12395,8 +12395,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 116,
                 'QuantityOnStock' => 4.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             125 => 
             array (
@@ -12406,8 +12406,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 135,
                 'QuantityOnStock' => 20.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             126 => 
             array (
@@ -12417,8 +12417,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 180.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             127 => 
             array (
@@ -12428,8 +12428,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 23.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             128 => 
             array (
@@ -12439,8 +12439,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 232.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             129 => 
             array (
@@ -12450,8 +12450,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 172.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             130 => 
             array (
@@ -12461,8 +12461,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 105,
                 'QuantityOnStock' => 777.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             131 => 
             array (
@@ -12472,8 +12472,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 135,
                 'QuantityOnStock' => 10.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             132 => 
             array (
@@ -12483,8 +12483,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 191.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             133 => 
             array (
@@ -12494,8 +12494,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 4.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             134 => 
             array (
@@ -12505,8 +12505,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 135,
                 'QuantityOnStock' => 10.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             135 => 
             array (
@@ -12516,8 +12516,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 11.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             136 => 
             array (
@@ -12527,8 +12527,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 5386.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             137 => 
             array (
@@ -12538,8 +12538,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 123,
                 'QuantityOnStock' => 55.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             138 => 
             array (
@@ -12549,8 +12549,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 109,
                 'QuantityOnStock' => 2392.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             139 => 
             array (
@@ -12560,8 +12560,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 10507.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:48',
+                'updated_at' => '2023-11-08 16:05:48',
             ),
             140 => 
             array (
@@ -12571,8 +12571,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 133,
                 'QuantityOnStock' => 252.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             141 => 
             array (
@@ -12582,8 +12582,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             142 => 
             array (
@@ -12593,8 +12593,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 133,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             143 => 
             array (
@@ -12604,8 +12604,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 282.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             144 => 
             array (
@@ -12615,8 +12615,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 102,
                 'QuantityOnStock' => 574.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             145 => 
             array (
@@ -12626,8 +12626,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 108,
                 'QuantityOnStock' => 2090.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             146 => 
             array (
@@ -12637,8 +12637,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 525.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             147 => 
             array (
@@ -12648,8 +12648,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 286.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             148 => 
             array (
@@ -12659,8 +12659,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             149 => 
             array (
@@ -12670,8 +12670,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 2348.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             150 => 
             array (
@@ -12681,8 +12681,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 1678.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             151 => 
             array (
@@ -12692,8 +12692,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 29.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             152 => 
             array (
@@ -12703,8 +12703,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 1289.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             153 => 
             array (
@@ -12714,8 +12714,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 23.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             154 => 
             array (
@@ -12725,8 +12725,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 258.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             155 => 
             array (
@@ -12736,8 +12736,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 1507.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             156 => 
             array (
@@ -12747,8 +12747,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 138.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             157 => 
             array (
@@ -12758,8 +12758,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             158 => 
             array (
@@ -12769,8 +12769,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 661.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             159 => 
             array (
@@ -12780,8 +12780,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 14.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             160 => 
             array (
@@ -12791,8 +12791,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 131,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => NULL,
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             161 => 
             array (
@@ -12802,8 +12802,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 16.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             162 => 
             array (
@@ -12813,8 +12813,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 121,
                 'QuantityOnStock' => 8130.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             163 => 
             array (
@@ -12824,8 +12824,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 2.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             164 => 
             array (
@@ -12835,8 +12835,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 140.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             165 => 
             array (
@@ -12846,8 +12846,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 15.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             166 => 
             array (
@@ -12857,8 +12857,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 168.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             167 => 
             array (
@@ -12868,8 +12868,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 113,
                 'QuantityOnStock' => 190.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             168 => 
             array (
@@ -12879,8 +12879,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 101,
                 'QuantityOnStock' => 9.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             169 => 
             array (
@@ -12890,8 +12890,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 10.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             170 => 
             array (
@@ -12901,8 +12901,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             171 => 
             array (
@@ -12912,8 +12912,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 110,
                 'QuantityOnStock' => 19.0,
                 'DefaultWarehouse' => 'BV37',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             172 => 
             array (
@@ -12923,8 +12923,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 50.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             173 => 
             array (
@@ -12934,8 +12934,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 114,
                 'QuantityOnStock' => 264.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             174 => 
             array (
@@ -12945,8 +12945,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 120,
                 'QuantityOnStock' => 1245.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             175 => 
             array (
@@ -12956,8 +12956,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 62.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             176 => 
             array (
@@ -12967,8 +12967,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 128,
                 'QuantityOnStock' => 14.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:20',
-                'updated_at' => '2023-11-08 01:48:20',
+                'created_at' => '2023-11-08 16:05:49',
+                'updated_at' => '2023-11-08 16:05:49',
             ),
             177 => 
             array (
@@ -12978,8 +12978,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 2949.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 178 => 
                 array (
@@ -12989,8 +12989,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 1526.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 179 => 
                 array (
@@ -13000,8 +13000,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 168.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 180 => 
                 array (
@@ -13011,8 +13011,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 9.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 181 => 
                 array (
@@ -13022,8 +13022,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 1290.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 182 => 
                 array (
@@ -13033,8 +13033,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 10.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 183 => 
                 array (
@@ -13044,8 +13044,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 9.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 184 => 
                 array (
@@ -13055,8 +13055,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 799.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 185 => 
                 array (
@@ -13066,8 +13066,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 393.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 186 => 
                 array (
@@ -13077,8 +13077,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 463.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 187 => 
                 array (
@@ -13088,8 +13088,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 1.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 188 => 
                 array (
@@ -13099,8 +13099,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 949.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 189 => 
                 array (
@@ -13110,8 +13110,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 3111.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 190 => 
                 array (
@@ -13121,8 +13121,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 135,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 191 => 
                 array (
@@ -13132,8 +13132,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 905.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 192 => 
                 array (
@@ -13143,8 +13143,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 126,
                     'QuantityOnStock' => 82.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 193 => 
                 array (
@@ -13154,8 +13154,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 115.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 194 => 
                 array (
@@ -13165,8 +13165,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 37.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 195 => 
                 array (
@@ -13176,8 +13176,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 196 => 
                 array (
@@ -13187,8 +13187,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 104,
                     'QuantityOnStock' => 4138.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 197 => 
                 array (
@@ -13198,8 +13198,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 774.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 198 => 
                 array (
@@ -13209,8 +13209,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 2865.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 199 => 
                 array (
@@ -13220,8 +13220,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 1.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:20',
-                    'updated_at' => '2023-11-08 01:48:20',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 200 => 
                 array (
@@ -13231,8 +13231,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 808.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 201 => 
                 array (
@@ -13242,8 +13242,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 118,
                     'QuantityOnStock' => 3322.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 202 => 
                 array (
@@ -13253,8 +13253,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 2461.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 203 => 
                 array (
@@ -13264,8 +13264,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 1900.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 204 => 
                 array (
@@ -13275,8 +13275,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 118,
                     'QuantityOnStock' => 12786.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 205 => 
                 array (
@@ -13286,8 +13286,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 121,
                     'QuantityOnStock' => 5822.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 206 => 
                 array (
@@ -13297,8 +13297,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 100,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 207 => 
                 array (
@@ -13308,8 +13308,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 3079.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 208 => 
                 array (
@@ -13319,8 +13319,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 2917.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 209 => 
                 array (
@@ -13330,8 +13330,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 105,
                     'QuantityOnStock' => 936.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 210 => 
                 array (
@@ -13341,8 +13341,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 118,
                     'QuantityOnStock' => 1791.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 211 => 
                 array (
@@ -13352,8 +13352,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 2230.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 212 => 
                 array (
@@ -13363,8 +13363,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 213 => 
                 array (
@@ -13374,8 +13374,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 214 => 
                 array (
@@ -13385,8 +13385,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 215 => 
                 array (
@@ -13396,8 +13396,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 3.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 216 => 
                 array (
@@ -13407,8 +13407,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 242.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 217 => 
                 array (
@@ -13418,8 +13418,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 1525.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 218 => 
                 array (
@@ -13429,8 +13429,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 2164.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 219 => 
                 array (
@@ -13440,8 +13440,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 100,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:49',
+                    'updated_at' => '2023-11-08 16:05:49',
                 ),
                 220 => 
                 array (
@@ -13451,8 +13451,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 1769.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 221 => 
                 array (
@@ -13462,8 +13462,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 673.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 222 => 
                 array (
@@ -13473,8 +13473,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 100,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 223 => 
                 array (
@@ -13484,8 +13484,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 1158.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 224 => 
                 array (
@@ -13495,8 +13495,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 633.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 225 => 
                 array (
@@ -13506,8 +13506,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 116,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 226 => 
                 array (
@@ -13517,8 +13517,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 295.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 227 => 
                 array (
@@ -13528,8 +13528,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 104,
                     'QuantityOnStock' => 1169.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 228 => 
                 array (
@@ -13539,8 +13539,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 1266.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 229 => 
                 array (
@@ -13550,8 +13550,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 530.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 230 => 
                 array (
@@ -13561,8 +13561,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 601.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 231 => 
                 array (
@@ -13572,8 +13572,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 594.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 232 => 
                 array (
@@ -13583,8 +13583,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 555.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 233 => 
                 array (
@@ -13594,8 +13594,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 401.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 234 => 
                 array (
@@ -13605,8 +13605,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 2.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 235 => 
                 array (
@@ -13616,8 +13616,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 3.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 236 => 
                 array (
@@ -13627,8 +13627,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 466.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 237 => 
                 array (
@@ -13638,8 +13638,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 494.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 238 => 
                 array (
@@ -13649,8 +13649,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 587.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 239 => 
                 array (
@@ -13660,8 +13660,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 396.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 240 => 
                 array (
@@ -13671,8 +13671,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 578.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 241 => 
                 array (
@@ -13682,8 +13682,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 107,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 242 => 
                 array (
@@ -13693,8 +13693,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 243 => 
                 array (
@@ -13704,8 +13704,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 244 => 
                 array (
@@ -13715,8 +13715,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 573.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 245 => 
                 array (
@@ -13726,8 +13726,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 120,
                     'QuantityOnStock' => 528.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 246 => 
                 array (
@@ -13737,8 +13737,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 2416.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 247 => 
                 array (
@@ -13748,8 +13748,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 116,
                     'QuantityOnStock' => 136.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 248 => 
                 array (
@@ -13759,8 +13759,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 163.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 249 => 
                 array (
@@ -13770,8 +13770,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 100,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 250 => 
                 array (
@@ -13781,8 +13781,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 105,
                     'QuantityOnStock' => 192.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 251 => 
                 array (
@@ -13792,8 +13792,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 124,
                     'QuantityOnStock' => 8.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 252 => 
                 array (
@@ -13803,8 +13803,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 123,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 253 => 
                 array (
@@ -13814,8 +13814,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 66.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 254 => 
                 array (
@@ -13825,8 +13825,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 179.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 255 => 
                 array (
@@ -13836,8 +13836,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 2870.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 256 => 
                 array (
@@ -13847,8 +13847,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 107,
                     'QuantityOnStock' => 2.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 257 => 
                 array (
@@ -13858,8 +13858,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 116,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 258 => 
                 array (
@@ -13869,8 +13869,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 920.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 259 => 
                 array (
@@ -13880,8 +13880,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 260 => 
                 array (
@@ -13891,8 +13891,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 114,
                     'QuantityOnStock' => 2910.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 261 => 
                 array (
@@ -13902,8 +13902,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 100,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 262 => 
                 array (
@@ -13913,8 +13913,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 609.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 263 => 
                 array (
@@ -13924,8 +13924,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 13595.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 264 => 
                 array (
@@ -13935,8 +13935,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 104,
                     'QuantityOnStock' => 337.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 265 => 
                 array (
@@ -13946,8 +13946,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 348.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 266 => 
                 array (
@@ -13957,8 +13957,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 116,
                     'QuantityOnStock' => 449.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 267 => 
                 array (
@@ -13968,8 +13968,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 214.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 268 => 
                 array (
@@ -13979,8 +13979,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 247.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 269 => 
                 array (
@@ -13990,8 +13990,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 118,
                     'QuantityOnStock' => 12166.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 270 => 
                 array (
@@ -14001,8 +14001,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 208.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 271 => 
                 array (
@@ -14012,8 +14012,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 272 => 
                 array (
@@ -14023,8 +14023,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 15247.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 273 => 
                 array (
@@ -14034,8 +14034,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 1823.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 274 => 
                 array (
@@ -14045,8 +14045,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 249.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 275 => 
                 array (
@@ -14056,8 +14056,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 109,
                     'QuantityOnStock' => 52.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 276 => 
                 array (
@@ -14067,8 +14067,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 110,
                     'QuantityOnStock' => 49.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 277 => 
                 array (
@@ -14078,8 +14078,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 131,
                     'QuantityOnStock' => 0.0,
                     'DefaultWarehouse' => NULL,
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 278 => 
                 array (
@@ -14089,8 +14089,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 10250.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 279 => 
                 array (
@@ -14100,8 +14100,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 931.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 280 => 
                 array (
@@ -14111,8 +14111,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 107,
                     'QuantityOnStock' => 3.0,
                     'DefaultWarehouse' => 'BV37',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 281 => 
                 array (
@@ -14122,8 +14122,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 113,
                     'QuantityOnStock' => 413.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 282 => 
                 array (
@@ -14133,8 +14133,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 101,
                     'QuantityOnStock' => 3210.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 283 => 
                 array (
@@ -14144,8 +14144,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 108,
                     'QuantityOnStock' => 506.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 284 => 
                 array (
@@ -14155,8 +14155,8 @@ class ProductsTableSeeder extends Seeder
                     'ItemsGroupCode' => 128,
                     'QuantityOnStock' => 38.0,
                     'DefaultWarehouse' => 'BVM',
-                    'created_at' => '2023-11-08 01:48:21',
-                    'updated_at' => '2023-11-08 01:48:21',
+                    'created_at' => '2023-11-08 16:05:50',
+                    'updated_at' => '2023-11-08 16:05:50',
                 ),
                 285 => 
                 array (
@@ -14166,8 +14166,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 113,
                         'QuantityOnStock' => 1061.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     286 => 
                     array (
@@ -14177,8 +14177,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 109,
                         'QuantityOnStock' => 701.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     287 => 
                     array (
@@ -14188,8 +14188,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 105,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     288 => 
                     array (
@@ -14199,8 +14199,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 109,
                         'QuantityOnStock' => 231.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     289 => 
                     array (
@@ -14210,8 +14210,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 101,
                         'QuantityOnStock' => 2240.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     290 => 
                     array (
@@ -14221,8 +14221,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 53.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     291 => 
                     array (
@@ -14232,8 +14232,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 125,
                         'QuantityOnStock' => 23.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     292 => 
                     array (
@@ -14243,8 +14243,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 124,
                         'QuantityOnStock' => 207.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     293 => 
                     array (
@@ -14254,8 +14254,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 105,
                         'QuantityOnStock' => 394.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     294 => 
                     array (
@@ -14265,8 +14265,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 109,
                         'QuantityOnStock' => 26.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     295 => 
                     array (
@@ -14276,8 +14276,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 107,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     296 => 
                     array (
@@ -14287,8 +14287,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 77.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     297 => 
                     array (
@@ -14298,8 +14298,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 4750.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     298 => 
                     array (
@@ -14309,8 +14309,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 102,
                         'QuantityOnStock' => 772.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     299 => 
                     array (
@@ -14320,8 +14320,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 117,
                         'QuantityOnStock' => 11.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:21',
-                        'updated_at' => '2023-11-08 01:48:21',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     300 => 
                     array (
@@ -14331,8 +14331,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 102,
                         'QuantityOnStock' => 4388.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     301 => 
                     array (
@@ -14342,8 +14342,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 455.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     302 => 
                     array (
@@ -14353,8 +14353,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 107,
                         'QuantityOnStock' => 167.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     303 => 
                     array (
@@ -14364,8 +14364,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 107,
                         'QuantityOnStock' => 16.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     304 => 
                     array (
@@ -14375,8 +14375,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 113,
                         'QuantityOnStock' => 1184.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     305 => 
                     array (
@@ -14386,8 +14386,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 107,
                         'QuantityOnStock' => 60.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     306 => 
                     array (
@@ -14397,8 +14397,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 102,
                         'QuantityOnStock' => 1869.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     307 => 
                     array (
@@ -14408,8 +14408,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 109,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     308 => 
                     array (
@@ -14419,8 +14419,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 108,
                         'QuantityOnStock' => 4134.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     309 => 
                     array (
@@ -14430,8 +14430,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 116,
                         'QuantityOnStock' => 378.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     310 => 
                     array (
@@ -14441,8 +14441,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 131,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     311 => 
                     array (
@@ -14452,8 +14452,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 131,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     312 => 
                     array (
@@ -14463,8 +14463,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 131,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     313 => 
                     array (
@@ -14474,8 +14474,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 113,
                         'QuantityOnStock' => 78.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     314 => 
                     array (
@@ -14485,8 +14485,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 107,
                         'QuantityOnStock' => 19.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     315 => 
                     array (
@@ -14496,8 +14496,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 6.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     316 => 
                     array (
@@ -14507,8 +14507,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 113,
                         'QuantityOnStock' => 394.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     317 => 
                     array (
@@ -14518,8 +14518,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 131,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     318 => 
                     array (
@@ -14529,8 +14529,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 108,
                         'QuantityOnStock' => 71.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     319 => 
                     array (
@@ -14540,8 +14540,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 131,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:50',
+                        'updated_at' => '2023-11-08 16:05:50',
                     ),
                     320 => 
                     array (
@@ -14551,8 +14551,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 50.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     321 => 
                     array (
@@ -14562,8 +14562,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 208.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     322 => 
                     array (
@@ -14573,8 +14573,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 131,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     323 => 
                     array (
@@ -14584,8 +14584,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 113,
                         'QuantityOnStock' => 902.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     324 => 
                     array (
@@ -14595,8 +14595,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 123,
                         'QuantityOnStock' => 9.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     325 => 
                     array (
@@ -14606,8 +14606,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 123,
                         'QuantityOnStock' => 42.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     326 => 
                     array (
@@ -14617,8 +14617,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 123,
                         'QuantityOnStock' => 156.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     327 => 
                     array (
@@ -14628,8 +14628,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 20.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     328 => 
                     array (
@@ -14639,8 +14639,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 11.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     329 => 
                     array (
@@ -14650,8 +14650,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 416.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     330 => 
                     array (
@@ -14661,8 +14661,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 101,
                         'QuantityOnStock' => 11006.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     331 => 
                     array (
@@ -14672,8 +14672,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     332 => 
                     array (
@@ -14683,8 +14683,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 64.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     333 => 
                     array (
@@ -14694,8 +14694,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 116,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     334 => 
                     array (
@@ -14705,8 +14705,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 113,
                         'QuantityOnStock' => 527.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     335 => 
                     array (
@@ -14716,8 +14716,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 96.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     336 => 
                     array (
@@ -14727,8 +14727,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 112.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     337 => 
                     array (
@@ -14738,8 +14738,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 101,
                         'QuantityOnStock' => 1056.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     338 => 
                     array (
@@ -14749,8 +14749,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 100.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     339 => 
                     array (
@@ -14760,8 +14760,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 79.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     340 => 
                     array (
@@ -14771,8 +14771,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 116,
                         'QuantityOnStock' => 4.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     341 => 
                     array (
@@ -14782,8 +14782,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 135,
                         'QuantityOnStock' => 18.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     342 => 
                     array (
@@ -14793,8 +14793,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 116,
                         'QuantityOnStock' => 24.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     343 => 
                     array (
@@ -14804,8 +14804,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 45.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     344 => 
                     array (
@@ -14815,8 +14815,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 106.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     345 => 
                     array (
@@ -14826,8 +14826,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 2.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     346 => 
                     array (
@@ -14837,8 +14837,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 67.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     347 => 
                     array (
@@ -14848,8 +14848,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 14.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     348 => 
                     array (
@@ -14859,8 +14859,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 101,
                         'QuantityOnStock' => 2656.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     349 => 
                     array (
@@ -14870,8 +14870,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 2760.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     350 => 
                     array (
@@ -14881,8 +14881,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 1291.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     351 => 
                     array (
@@ -14892,8 +14892,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 113,
                         'QuantityOnStock' => 328.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     352 => 
                     array (
@@ -14903,8 +14903,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 2635.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     353 => 
                     array (
@@ -14914,8 +14914,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 11.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     354 => 
                     array (
@@ -14925,8 +14925,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 2285.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     355 => 
                     array (
@@ -14936,8 +14936,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 35.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     356 => 
                     array (
@@ -14947,8 +14947,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 121,
                         'QuantityOnStock' => 1080.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     357 => 
                     array (
@@ -14958,8 +14958,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 68.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     358 => 
                     array (
@@ -14969,8 +14969,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 266.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     359 => 
                     array (
@@ -14980,8 +14980,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 229.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     360 => 
                     array (
@@ -14991,8 +14991,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 3950.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     361 => 
                     array (
@@ -15002,8 +15002,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 113,
                         'QuantityOnStock' => 402.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     362 => 
                     array (
@@ -15013,8 +15013,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 105,
                         'QuantityOnStock' => 8.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     363 => 
                     array (
@@ -15024,8 +15024,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 131,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     364 => 
                     array (
@@ -15035,8 +15035,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 2330.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     365 => 
                     array (
@@ -15046,8 +15046,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 3050.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     366 => 
                     array (
@@ -15057,8 +15057,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 113,
                         'QuantityOnStock' => 1520.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     367 => 
                     array (
@@ -15068,8 +15068,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 113,
                         'QuantityOnStock' => 2650.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     368 => 
                     array (
@@ -15079,8 +15079,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 113,
                         'QuantityOnStock' => 363.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     369 => 
                     array (
@@ -15090,8 +15090,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 75.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     370 => 
                     array (
@@ -15101,8 +15101,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 4870.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     371 => 
                     array (
@@ -15112,8 +15112,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 108,
                         'QuantityOnStock' => 1.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     372 => 
                     array (
@@ -15123,8 +15123,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 3515.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     373 => 
                     array (
@@ -15134,8 +15134,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 109,
                         'QuantityOnStock' => 237.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     374 => 
                     array (
@@ -15145,8 +15145,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 1545.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     375 => 
                     array (
@@ -15156,8 +15156,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 2190.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     376 => 
                     array (
@@ -15167,8 +15167,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 2158.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     377 => 
                     array (
@@ -15178,8 +15178,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 1670.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     378 => 
                     array (
@@ -15189,8 +15189,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 197.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     379 => 
                     array (
@@ -15200,8 +15200,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 108,
                         'QuantityOnStock' => 484.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:22',
-                        'updated_at' => '2023-11-08 01:48:22',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     380 => 
                     array (
@@ -15211,8 +15211,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 116,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     381 => 
                     array (
@@ -15222,8 +15222,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 1695.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     382 => 
                     array (
@@ -15233,8 +15233,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 556.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     383 => 
                     array (
@@ -15244,8 +15244,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 120,
                         'QuantityOnStock' => 1850.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     384 => 
                     array (
@@ -15255,8 +15255,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 128,
                         'QuantityOnStock' => 19.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     385 => 
                     array (
@@ -15266,8 +15266,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 134,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => NULL,
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     386 => 
                     array (
@@ -15277,8 +15277,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 1915.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     387 => 
                     array (
@@ -15288,8 +15288,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 1835.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     388 => 
                     array (
@@ -15299,8 +15299,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 1540.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     389 => 
                     array (
@@ -15310,8 +15310,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 690.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     390 => 
                     array (
@@ -15321,8 +15321,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 665.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     391 => 
                     array (
@@ -15332,8 +15332,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 322.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     392 => 
                     array (
@@ -15343,8 +15343,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 447.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     393 => 
                     array (
@@ -15354,8 +15354,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 1595.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     394 => 
                     array (
@@ -15365,8 +15365,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 114,
                         'QuantityOnStock' => 550.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     395 => 
                     array (
@@ -15376,8 +15376,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 110,
                         'QuantityOnStock' => 886.0,
                         'DefaultWarehouse' => 'BV37',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     396 => 
                     array (
@@ -15387,8 +15387,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     397 => 
                     array (
@@ -15398,8 +15398,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     398 => 
                     array (
@@ -15409,8 +15409,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     399 => 
                     array (
@@ -15420,8 +15420,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:51',
+                        'updated_at' => '2023-11-08 16:05:51',
                     ),
                     400 => 
                     array (
@@ -15431,8 +15431,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     401 => 
                     array (
@@ -15442,8 +15442,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     402 => 
                     array (
@@ -15453,8 +15453,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     403 => 
                     array (
@@ -15464,8 +15464,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     404 => 
                     array (
@@ -15475,8 +15475,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     405 => 
                     array (
@@ -15486,8 +15486,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     406 => 
                     array (
@@ -15497,8 +15497,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     407 => 
                     array (
@@ -15508,8 +15508,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     408 => 
                     array (
@@ -15519,8 +15519,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     409 => 
                     array (
@@ -15530,8 +15530,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     410 => 
                     array (
@@ -15541,8 +15541,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     411 => 
                     array (
@@ -15552,8 +15552,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     412 => 
                     array (
@@ -15563,8 +15563,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     413 => 
                     array (
@@ -15574,8 +15574,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     414 => 
                     array (
@@ -15585,8 +15585,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     415 => 
                     array (
@@ -15596,8 +15596,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     416 => 
                     array (
@@ -15607,8 +15607,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     417 => 
                     array (
@@ -15618,8 +15618,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     418 => 
                     array (
@@ -15629,8 +15629,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     419 => 
                     array (
@@ -15640,8 +15640,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     420 => 
                     array (
@@ -15651,8 +15651,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     421 => 
                     array (
@@ -15662,8 +15662,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     422 => 
                     array (
@@ -15673,8 +15673,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     423 => 
                     array (
@@ -15684,8 +15684,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     424 => 
                     array (
@@ -15695,8 +15695,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     425 => 
                     array (
@@ -15706,8 +15706,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     426 => 
                     array (
@@ -15717,8 +15717,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     427 => 
                     array (
@@ -15728,8 +15728,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     428 => 
                     array (
@@ -15739,8 +15739,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     429 => 
                     array (
@@ -15750,8 +15750,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     430 => 
                     array (
@@ -15761,8 +15761,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     431 => 
                     array (
@@ -15772,8 +15772,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     432 => 
                     array (
@@ -15783,8 +15783,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     433 => 
                     array (
@@ -15794,8 +15794,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     434 => 
                     array (
@@ -15805,8 +15805,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     435 => 
                     array (
@@ -15816,8 +15816,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     436 => 
                     array (
@@ -15827,8 +15827,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     437 => 
                     array (
@@ -15838,8 +15838,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     438 => 
                     array (
@@ -15849,8 +15849,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     439 => 
                     array (
@@ -15860,8 +15860,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     440 => 
                     array (
@@ -15871,8 +15871,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     441 => 
                     array (
@@ -15882,8 +15882,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     442 => 
                     array (
@@ -15893,8 +15893,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     443 => 
                     array (
@@ -15904,8 +15904,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     444 => 
                     array (
@@ -15915,8 +15915,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     445 => 
                     array (
@@ -15926,8 +15926,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     446 => 
                     array (
@@ -15937,8 +15937,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     447 => 
                     array (
@@ -15948,8 +15948,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     448 => 
                     array (
@@ -15959,8 +15959,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     449 => 
                     array (
@@ -15970,8 +15970,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     450 => 
                     array (
@@ -15981,8 +15981,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     451 => 
                     array (
@@ -15992,8 +15992,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     452 => 
                     array (
@@ -16003,8 +16003,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     453 => 
                     array (
@@ -16014,8 +16014,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     454 => 
                     array (
@@ -16025,8 +16025,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     455 => 
                     array (
@@ -16036,8 +16036,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     456 => 
                     array (
@@ -16047,8 +16047,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     457 => 
                     array (
@@ -16058,8 +16058,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     458 => 
                     array (
@@ -16069,8 +16069,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     459 => 
                     array (
@@ -16080,8 +16080,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     460 => 
                     array (
@@ -16091,8 +16091,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     461 => 
                     array (
@@ -16102,8 +16102,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     462 => 
                     array (
@@ -16113,8 +16113,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     463 => 
                     array (
@@ -16124,8 +16124,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     464 => 
                     array (
@@ -16135,8 +16135,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     465 => 
                     array (
@@ -16146,8 +16146,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     466 => 
                     array (
@@ -16157,8 +16157,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     467 => 
                     array (
@@ -16168,8 +16168,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     468 => 
                     array (
@@ -16179,8 +16179,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     469 => 
                     array (
@@ -16190,8 +16190,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     470 => 
                     array (
@@ -16201,8 +16201,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     471 => 
                     array (
@@ -16212,8 +16212,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     472 => 
                     array (
@@ -16223,8 +16223,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     473 => 
                     array (
@@ -16234,8 +16234,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     474 => 
                     array (
@@ -16245,8 +16245,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     475 => 
                     array (
@@ -16256,8 +16256,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     476 => 
                     array (
@@ -16267,8 +16267,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     477 => 
                     array (
@@ -16278,8 +16278,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     478 => 
                     array (
@@ -16289,8 +16289,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     479 => 
                     array (
@@ -16300,8 +16300,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:23',
-                        'updated_at' => '2023-11-08 01:48:23',
+                        'created_at' => '2023-11-08 16:05:52',
+                        'updated_at' => '2023-11-08 16:05:52',
                     ),
                     480 => 
                     array (
@@ -16311,8 +16311,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     481 => 
                     array (
@@ -16322,8 +16322,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     482 => 
                     array (
@@ -16333,8 +16333,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     483 => 
                     array (
@@ -16344,8 +16344,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     484 => 
                     array (
@@ -16355,8 +16355,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     485 => 
                     array (
@@ -16366,8 +16366,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     486 => 
                     array (
@@ -16377,8 +16377,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     487 => 
                     array (
@@ -16388,8 +16388,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     488 => 
                     array (
@@ -16399,8 +16399,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     489 => 
                     array (
@@ -16410,8 +16410,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     490 => 
                     array (
@@ -16421,8 +16421,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     491 => 
                     array (
@@ -16432,8 +16432,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     492 => 
                     array (
@@ -16443,8 +16443,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     493 => 
                     array (
@@ -16454,8 +16454,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     494 => 
                     array (
@@ -16465,8 +16465,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     495 => 
                     array (
@@ -16476,8 +16476,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     496 => 
                     array (
@@ -16487,8 +16487,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     497 => 
                     array (
@@ -16498,8 +16498,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     498 => 
                     array (
@@ -16509,8 +16509,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                     499 => 
                     array (
@@ -16520,8 +16520,8 @@ class ProductsTableSeeder extends Seeder
                         'ItemsGroupCode' => 126,
                         'QuantityOnStock' => 0.0,
                         'DefaultWarehouse' => 'BVM',
-                        'created_at' => '2023-11-08 01:48:24',
-                        'updated_at' => '2023-11-08 01:48:24',
+                        'created_at' => '2023-11-08 16:05:53',
+                        'updated_at' => '2023-11-08 16:05:53',
                     ),
                 ));
         \DB::table('products')->insert(array (
@@ -16533,8 +16533,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             1 => 
             array (
@@ -16544,8 +16544,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             2 => 
             array (
@@ -16555,8 +16555,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             3 => 
             array (
@@ -16566,8 +16566,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             4 => 
             array (
@@ -16577,8 +16577,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             5 => 
             array (
@@ -16588,8 +16588,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             6 => 
             array (
@@ -16599,8 +16599,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             7 => 
             array (
@@ -16610,8 +16610,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             8 => 
             array (
@@ -16621,8 +16621,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             9 => 
             array (
@@ -16632,8 +16632,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             10 => 
             array (
@@ -16643,8 +16643,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             11 => 
             array (
@@ -16654,8 +16654,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             12 => 
             array (
@@ -16665,8 +16665,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             13 => 
             array (
@@ -16676,8 +16676,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             14 => 
             array (
@@ -16687,8 +16687,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             15 => 
             array (
@@ -16698,8 +16698,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             16 => 
             array (
@@ -16709,8 +16709,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             17 => 
             array (
@@ -16720,8 +16720,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             18 => 
             array (
@@ -16731,8 +16731,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             19 => 
             array (
@@ -16742,8 +16742,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             20 => 
             array (
@@ -16753,8 +16753,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             21 => 
             array (
@@ -16764,8 +16764,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             22 => 
             array (
@@ -16775,8 +16775,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             23 => 
             array (
@@ -16786,8 +16786,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             24 => 
             array (
@@ -16797,8 +16797,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             25 => 
             array (
@@ -16808,8 +16808,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             26 => 
             array (
@@ -16819,8 +16819,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             27 => 
             array (
@@ -16830,8 +16830,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             28 => 
             array (
@@ -16841,8 +16841,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             29 => 
             array (
@@ -16852,8 +16852,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             30 => 
             array (
@@ -16863,8 +16863,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             31 => 
             array (
@@ -16874,8 +16874,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             32 => 
             array (
@@ -16885,8 +16885,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             33 => 
             array (
@@ -16896,8 +16896,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             34 => 
             array (
@@ -16907,8 +16907,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             35 => 
             array (
@@ -16918,8 +16918,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             36 => 
             array (
@@ -16929,8 +16929,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             37 => 
             array (
@@ -16940,8 +16940,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             38 => 
             array (
@@ -16951,8 +16951,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             39 => 
             array (
@@ -16962,8 +16962,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             40 => 
             array (
@@ -16973,8 +16973,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             41 => 
             array (
@@ -16984,8 +16984,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             42 => 
             array (
@@ -16995,8 +16995,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             43 => 
             array (
@@ -17006,8 +17006,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             44 => 
             array (
@@ -17017,8 +17017,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             45 => 
             array (
@@ -17028,8 +17028,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             46 => 
             array (
@@ -17039,8 +17039,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             47 => 
             array (
@@ -17050,8 +17050,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             48 => 
             array (
@@ -17061,8 +17061,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             49 => 
             array (
@@ -17072,8 +17072,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             50 => 
             array (
@@ -17083,8 +17083,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             51 => 
             array (
@@ -17094,8 +17094,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             52 => 
             array (
@@ -17105,8 +17105,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             53 => 
             array (
@@ -17116,8 +17116,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             54 => 
             array (
@@ -17127,8 +17127,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             55 => 
             array (
@@ -17138,8 +17138,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             56 => 
             array (
@@ -17149,8 +17149,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             57 => 
             array (
@@ -17160,8 +17160,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             58 => 
             array (
@@ -17171,8 +17171,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             59 => 
             array (
@@ -17182,8 +17182,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             60 => 
             array (
@@ -17193,8 +17193,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             61 => 
             array (
@@ -17204,8 +17204,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             62 => 
             array (
@@ -17215,8 +17215,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:24',
-                'updated_at' => '2023-11-08 01:48:24',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             63 => 
             array (
@@ -17226,8 +17226,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             64 => 
             array (
@@ -17237,8 +17237,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             65 => 
             array (
@@ -17248,8 +17248,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             66 => 
             array (
@@ -17259,8 +17259,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             67 => 
             array (
@@ -17270,8 +17270,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             68 => 
             array (
@@ -17281,8 +17281,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             69 => 
             array (
@@ -17292,8 +17292,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             70 => 
             array (
@@ -17303,8 +17303,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             71 => 
             array (
@@ -17314,8 +17314,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             72 => 
             array (
@@ -17325,8 +17325,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             73 => 
             array (
@@ -17336,8 +17336,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             74 => 
             array (
@@ -17347,8 +17347,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             75 => 
             array (
@@ -17358,8 +17358,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             76 => 
             array (
@@ -17369,8 +17369,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             77 => 
             array (
@@ -17380,8 +17380,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             78 => 
             array (
@@ -17391,8 +17391,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             79 => 
             array (
@@ -17402,8 +17402,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:53',
+                'updated_at' => '2023-11-08 16:05:53',
             ),
             80 => 
             array (
@@ -17413,8 +17413,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             81 => 
             array (
@@ -17424,8 +17424,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             82 => 
             array (
@@ -17435,8 +17435,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             83 => 
             array (
@@ -17446,8 +17446,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             84 => 
             array (
@@ -17457,8 +17457,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             85 => 
             array (
@@ -17468,8 +17468,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             86 => 
             array (
@@ -17479,8 +17479,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             87 => 
             array (
@@ -17490,8 +17490,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             88 => 
             array (
@@ -17501,8 +17501,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             89 => 
             array (
@@ -17512,8 +17512,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             90 => 
             array (
@@ -17523,8 +17523,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             91 => 
             array (
@@ -17534,8 +17534,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 126,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             92 => 
             array (
@@ -17545,8 +17545,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 106,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             93 => 
             array (
@@ -17556,8 +17556,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             94 => 
             array (
@@ -17567,8 +17567,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             95 => 
             array (
@@ -17578,8 +17578,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             96 => 
             array (
@@ -17589,8 +17589,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             97 => 
             array (
@@ -17600,8 +17600,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             98 => 
             array (
@@ -17611,8 +17611,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             99 => 
             array (
@@ -17622,8 +17622,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             100 => 
             array (
@@ -17633,8 +17633,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             101 => 
             array (
@@ -17644,8 +17644,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             102 => 
             array (
@@ -17655,8 +17655,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             103 => 
             array (
@@ -17666,8 +17666,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             104 => 
             array (
@@ -17677,8 +17677,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             105 => 
             array (
@@ -17688,8 +17688,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             106 => 
             array (
@@ -17699,8 +17699,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             107 => 
             array (
@@ -17710,8 +17710,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             108 => 
             array (
@@ -17721,8 +17721,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             109 => 
             array (
@@ -17732,8 +17732,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             110 => 
             array (
@@ -17743,8 +17743,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             111 => 
             array (
@@ -17754,8 +17754,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             112 => 
             array (
@@ -17765,8 +17765,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             113 => 
             array (
@@ -17776,8 +17776,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             114 => 
             array (
@@ -17787,8 +17787,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             115 => 
             array (
@@ -17798,8 +17798,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             116 => 
             array (
@@ -17809,8 +17809,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             117 => 
             array (
@@ -17820,8 +17820,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             118 => 
             array (
@@ -17831,8 +17831,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             119 => 
             array (
@@ -17842,8 +17842,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             120 => 
             array (
@@ -17853,8 +17853,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             121 => 
             array (
@@ -17864,8 +17864,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             122 => 
             array (
@@ -17875,8 +17875,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             123 => 
             array (
@@ -17886,8 +17886,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             124 => 
             array (
@@ -17897,8 +17897,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             125 => 
             array (
@@ -17908,8 +17908,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             126 => 
             array (
@@ -17919,8 +17919,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             127 => 
             array (
@@ -17930,8 +17930,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             128 => 
             array (
@@ -17941,8 +17941,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             129 => 
             array (
@@ -17952,8 +17952,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             130 => 
             array (
@@ -17963,8 +17963,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             131 => 
             array (
@@ -17974,8 +17974,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             132 => 
             array (
@@ -17985,8 +17985,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             133 => 
             array (
@@ -17996,8 +17996,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             134 => 
             array (
@@ -18007,8 +18007,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             135 => 
             array (
@@ -18018,8 +18018,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             136 => 
             array (
@@ -18029,8 +18029,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             137 => 
             array (
@@ -18040,8 +18040,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             138 => 
             array (
@@ -18051,8 +18051,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             139 => 
             array (
@@ -18062,8 +18062,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             140 => 
             array (
@@ -18073,8 +18073,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             141 => 
             array (
@@ -18084,8 +18084,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             142 => 
             array (
@@ -18095,8 +18095,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             143 => 
             array (
@@ -18106,8 +18106,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             144 => 
             array (
@@ -18117,8 +18117,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             145 => 
             array (
@@ -18128,8 +18128,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             146 => 
             array (
@@ -18139,8 +18139,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             147 => 
             array (
@@ -18150,8 +18150,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             148 => 
             array (
@@ -18161,8 +18161,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             149 => 
             array (
@@ -18172,8 +18172,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             150 => 
             array (
@@ -18183,8 +18183,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             151 => 
             array (
@@ -18194,8 +18194,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             152 => 
             array (
@@ -18205,8 +18205,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             153 => 
             array (
@@ -18216,8 +18216,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             154 => 
             array (
@@ -18227,8 +18227,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             155 => 
             array (
@@ -18238,8 +18238,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             156 => 
             array (
@@ -18249,8 +18249,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             157 => 
             array (
@@ -18260,8 +18260,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             158 => 
             array (
@@ -18271,8 +18271,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             159 => 
             array (
@@ -18282,8 +18282,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:25',
-                'updated_at' => '2023-11-08 01:48:25',
+                'created_at' => '2023-11-08 16:05:54',
+                'updated_at' => '2023-11-08 16:05:54',
             ),
             160 => 
             array (
@@ -18293,8 +18293,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             161 => 
             array (
@@ -18304,8 +18304,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             162 => 
             array (
@@ -18315,8 +18315,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             163 => 
             array (
@@ -18326,8 +18326,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             164 => 
             array (
@@ -18337,8 +18337,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             165 => 
             array (
@@ -18348,8 +18348,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             166 => 
             array (
@@ -18359,8 +18359,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             167 => 
             array (
@@ -18370,8 +18370,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             168 => 
             array (
@@ -18381,8 +18381,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             169 => 
             array (
@@ -18392,8 +18392,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             170 => 
             array (
@@ -18403,8 +18403,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             171 => 
             array (
@@ -18414,8 +18414,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             172 => 
             array (
@@ -18425,8 +18425,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             173 => 
             array (
@@ -18436,8 +18436,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             174 => 
             array (
@@ -18447,8 +18447,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             175 => 
             array (
@@ -18458,8 +18458,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             176 => 
             array (
@@ -18469,8 +18469,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             177 => 
             array (
@@ -18480,8 +18480,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             178 => 
             array (
@@ -18491,8 +18491,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             179 => 
             array (
@@ -18502,8 +18502,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             180 => 
             array (
@@ -18513,8 +18513,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             181 => 
             array (
@@ -18524,8 +18524,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             182 => 
             array (
@@ -18535,8 +18535,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             183 => 
             array (
@@ -18546,8 +18546,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             184 => 
             array (
@@ -18557,8 +18557,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             185 => 
             array (
@@ -18568,8 +18568,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             186 => 
             array (
@@ -18579,8 +18579,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             187 => 
             array (
@@ -18590,8 +18590,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             188 => 
             array (
@@ -18601,8 +18601,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             189 => 
             array (
@@ -18612,8 +18612,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             190 => 
             array (
@@ -18623,8 +18623,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             191 => 
             array (
@@ -18634,8 +18634,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             192 => 
             array (
@@ -18645,8 +18645,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             193 => 
             array (
@@ -18656,8 +18656,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             194 => 
             array (
@@ -18667,8 +18667,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             195 => 
             array (
@@ -18678,8 +18678,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             196 => 
             array (
@@ -18689,8 +18689,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             197 => 
             array (
@@ -18700,8 +18700,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             198 => 
             array (
@@ -18711,8 +18711,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             199 => 
             array (
@@ -18722,8 +18722,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             200 => 
             array (
@@ -18733,8 +18733,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             201 => 
             array (
@@ -18744,8 +18744,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             202 => 
             array (
@@ -18755,8 +18755,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             203 => 
             array (
@@ -18766,8 +18766,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             204 => 
             array (
@@ -18777,8 +18777,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             205 => 
             array (
@@ -18788,8 +18788,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             206 => 
             array (
@@ -18799,8 +18799,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             207 => 
             array (
@@ -18810,8 +18810,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             208 => 
             array (
@@ -18821,8 +18821,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             209 => 
             array (
@@ -18832,8 +18832,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             210 => 
             array (
@@ -18843,8 +18843,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             211 => 
             array (
@@ -18854,8 +18854,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             212 => 
             array (
@@ -18865,8 +18865,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             213 => 
             array (
@@ -18876,8 +18876,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             214 => 
             array (
@@ -18887,8 +18887,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             215 => 
             array (
@@ -18898,8 +18898,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             216 => 
             array (
@@ -18909,8 +18909,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             217 => 
             array (
@@ -18920,8 +18920,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             218 => 
             array (
@@ -18931,8 +18931,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             219 => 
             array (
@@ -18942,8 +18942,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             220 => 
             array (
@@ -18953,8 +18953,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             221 => 
             array (
@@ -18964,8 +18964,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             222 => 
             array (
@@ -18975,8 +18975,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             223 => 
             array (
@@ -18986,8 +18986,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             224 => 
             array (
@@ -18997,8 +18997,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             225 => 
             array (
@@ -19008,8 +19008,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             226 => 
             array (
@@ -19019,8 +19019,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             227 => 
             array (
@@ -19030,8 +19030,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             228 => 
             array (
@@ -19041,8 +19041,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             229 => 
             array (
@@ -19052,8 +19052,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             230 => 
             array (
@@ -19063,8 +19063,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             231 => 
             array (
@@ -19074,8 +19074,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             232 => 
             array (
@@ -19085,8 +19085,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             233 => 
             array (
@@ -19096,8 +19096,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             234 => 
             array (
@@ -19107,8 +19107,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             235 => 
             array (
@@ -19118,8 +19118,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             236 => 
             array (
@@ -19129,8 +19129,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             237 => 
             array (
@@ -19140,8 +19140,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             238 => 
             array (
@@ -19151,8 +19151,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             239 => 
             array (
@@ -19162,8 +19162,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:55',
+                'updated_at' => '2023-11-08 16:05:55',
             ),
             240 => 
             array (
@@ -19173,8 +19173,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             241 => 
             array (
@@ -19184,8 +19184,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             242 => 
             array (
@@ -19195,8 +19195,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             243 => 
             array (
@@ -19206,8 +19206,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             244 => 
             array (
@@ -19217,8 +19217,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             245 => 
             array (
@@ -19228,8 +19228,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             246 => 
             array (
@@ -19239,8 +19239,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             247 => 
             array (
@@ -19250,8 +19250,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             248 => 
             array (
@@ -19261,8 +19261,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             249 => 
             array (
@@ -19272,8 +19272,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             250 => 
             array (
@@ -19283,8 +19283,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             251 => 
             array (
@@ -19294,8 +19294,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             252 => 
             array (
@@ -19305,8 +19305,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             253 => 
             array (
@@ -19316,8 +19316,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             254 => 
             array (
@@ -19327,8 +19327,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             255 => 
             array (
@@ -19338,8 +19338,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             256 => 
             array (
@@ -19349,8 +19349,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             257 => 
             array (
@@ -19360,8 +19360,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             258 => 
             array (
@@ -19371,8 +19371,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             259 => 
             array (
@@ -19382,8 +19382,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:26',
-                'updated_at' => '2023-11-08 01:48:26',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             260 => 
             array (
@@ -19393,8 +19393,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:27',
-                'updated_at' => '2023-11-08 01:48:27',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             261 => 
             array (
@@ -19404,8 +19404,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:27',
-                'updated_at' => '2023-11-08 01:48:27',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             262 => 
             array (
@@ -19415,8 +19415,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:27',
-                'updated_at' => '2023-11-08 01:48:27',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             263 => 
             array (
@@ -19426,8 +19426,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 127,
                 'QuantityOnStock' => 0.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:27',
-                'updated_at' => '2023-11-08 01:48:27',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
             264 => 
             array (
@@ -19437,8 +19437,8 @@ class ProductsTableSeeder extends Seeder
                 'ItemsGroupCode' => 106,
                 'QuantityOnStock' => 1737.0,
                 'DefaultWarehouse' => 'BVM',
-                'created_at' => '2023-11-08 01:48:27',
-                'updated_at' => '2023-11-08 01:48:27',
+                'created_at' => '2023-11-08 16:05:56',
+                'updated_at' => '2023-11-08 16:05:56',
             ),
         ));
         

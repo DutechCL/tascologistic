@@ -92,7 +92,7 @@ class SAPService
      * @param array $fields
      * @return array|mixed
      */
-    public function get(string $key, int $skip = 0, array $fields = [])
+    public function get(string $key, int $skip = 0, array $fields = [], $filterParam = null)
     {
         try {
 
@@ -104,6 +104,10 @@ class SAPService
     
             if (!empty($fields)) {
                 $requestData['$select'] = implode(',', $fields);
+            }
+
+            if ($filterParam) {
+                $requestData['$filter'] = $filterParam;
             }
 
             return $this->makeRequest($endpoint, 'get', $requestData);

@@ -32,8 +32,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             1 => 
             array (
@@ -48,8 +48,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             2 => 
             array (
@@ -64,8 +64,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             3 => 
             array (
@@ -80,8 +80,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             4 => 
             array (
@@ -96,8 +96,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             5 => 
             array (
@@ -112,8 +112,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             6 => 
             array (
@@ -128,8 +128,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             7 => 
             array (
@@ -144,8 +144,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             8 => 
             array (
@@ -160,8 +160,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             9 => 
             array (
@@ -176,8 +176,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             10 => 
             array (
@@ -192,8 +192,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             11 => 
             array (
@@ -208,8 +208,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             12 => 
             array (
@@ -224,8 +224,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             13 => 
             array (
@@ -240,8 +240,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             14 => 
             array (
@@ -256,8 +256,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             15 => 
             array (
@@ -272,8 +272,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             16 => 
             array (
@@ -288,8 +288,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             17 => 
             array (
@@ -304,8 +304,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             18 => 
             array (
@@ -320,8 +320,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             19 => 
             array (
@@ -336,8 +336,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             20 => 
             array (
@@ -352,8 +352,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             21 => 
             array (
@@ -368,8 +368,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             22 => 
             array (
@@ -384,8 +384,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             23 => 
             array (
@@ -400,8 +400,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             24 => 
             array (
@@ -416,8 +416,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             25 => 
             array (
@@ -432,8 +432,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             26 => 
             array (
@@ -448,8 +448,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             27 => 
             array (
@@ -464,8 +464,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             28 => 
             array (
@@ -480,8 +480,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             29 => 
             array (
@@ -496,8 +496,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             30 => 
             array (
@@ -512,8 +512,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             31 => 
             array (
@@ -528,8 +528,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             32 => 
             array (
@@ -544,8 +544,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
             33 => 
             array (
@@ -560,8 +560,8 @@ class SalesPersonsTableSeeder extends Seeder
                 'Telephone' => NULL,
                 'Mobile' => NULL,
                 'Email' => NULL,
-                'created_at' => '2023-11-08 01:47:46',
-                'updated_at' => '2023-11-08 01:47:46',
+                'created_at' => '2023-11-08 16:04:01',
+                'updated_at' => '2023-11-08 16:04:01',
             ),
         ));
         

@@ -20,10 +20,12 @@ class OrderService
 
     public function listOrdersCdaToManage()
     {
+
+        dd(Order::latest('DocNum')->first());
         return Order::withOrderDetails()
             ->where('process_id', Process::PROCESS_ID_CDA)
             ->where('is_managed', false)
-            ->orderBy('created_at', 'ASC')->paginate(15);
+            ->orderBy('DocDate', 'DESC')->paginate(15);
     }
 
     public function listOrdersCdaManage()
@@ -43,7 +45,7 @@ class OrderService
             ->withOrderDetails()
             ->whereIn('process_id', [Process::PROCESS_ID_PICKER, Process::PROCESS_ID_REVIEWER])
             ->orderByRaw('order_status_id = 4 DESC')
-            ->orderBy('created_at', 'ASC')
+            ->orderBy('DocDate', 'DESC')
             ->paginate(15);
     }
 
@@ -58,7 +60,7 @@ class OrderService
             $query->where('method_shipping_id', MethodShipping::METHOD_SHIPPING_DELIVERY);
         }
     
-        $query->orderBy('created_at', 'ASC');
+        $query->orderBy('DocDate', 'DESC');
     
         return $query->paginate(15);
     }
@@ -67,7 +69,7 @@ class OrderService
     {
         return Order::withOrderDetails()
             ->where('process_id', Process::PROCESS_ID_PAYMENT)
-            ->orderBy('created_at', 'ASC')
+            ->orderBy('DocDate', 'DESC')
             ->paginate(15);
     }
 

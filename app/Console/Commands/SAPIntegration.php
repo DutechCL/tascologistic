@@ -63,7 +63,12 @@ class SAPIntegration extends Command
             $fields = $modelClass::FILLABLE;
             $identifier = $modelClass::IDENTIFIER;
 
-            $response = $this->sapService->get($endpoint, $skip, $fields);
+            $lastSyncedOrder = $modelClass::latest('docnum')->first();
+
+            $filterParam = $lastSyncedOrder ? "DocNum ge {$lastSyncedOrder->DocNum}" : null;
+    
+
+            $response = $this->sapService->get($endpoint, $skip, $fields, $filterParam);
             
             if (!empty($response['value'])) {
                 foreach ($response['value'] as $record) {
