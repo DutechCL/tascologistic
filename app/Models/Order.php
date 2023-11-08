@@ -86,10 +86,6 @@ class Order extends Model
     
     public static function syncOrderWithItems(array $orderData)
     {
-        if (!isset($orderData['CardCode'], $orderData['U_SBO_FormaEntrega'], $orderData['SalesPersonCode'])) {
-            return null;
-        }
-
         $documentLines = $orderData['DocumentLines'];
         unset($orderData['DocumentLines']);
     
