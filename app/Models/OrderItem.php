@@ -30,6 +30,7 @@ class OrderItem extends Model
         'LineTotal',
         'TaxPercentagePerRow',
         'TaxTotal',
+        'product_id',
     ];
 
     public function order()

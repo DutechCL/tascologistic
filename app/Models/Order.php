@@ -60,8 +60,12 @@ class Order extends Model
         parent::boot();
 
         // Utiliza el evento creating para convertir el valor de 'Active'
-        static::creating(function ($salesPerson) {
-            $salesPerson->attributes['Confirmed'] = strtolower($salesPerson->attributes['Confirmed']) === 'tyes' ? 1 : 0;
+        static::creating(function ($order) {
+            $order->attributes['Confirmed'] = strtolower($order->attributes['Confirmed']) === 'tyes' ? 1 : 0;
+        });
+
+        static::updating(function ($order) {
+            $order->attributes['Confirmed'] = strtolower($order->attributes['Confirmed']) === 'tyes' ? 1 : 0;
         });
     }
 
@@ -128,22 +132,21 @@ class Order extends Model
     private function syncOrderItems(array $orderItemsData)
     {
         foreach ($orderItemsData as $orderItemData) {
-
-            $columnNames = Schema::getColumnListing('order_items');
-            
-            $dataToInsert = array_intersect_key($orderItemData, array_flip($columnNames));
-
-            $product = Product::where('ItemCode', $dataToInsert['ItemCode'])->first();
-
+            $product = Product::where('ItemCode', $orderItemData['ItemCode'])->first();
             if ($product) {
-                $data = array_merge($dataToInsert, ['product_id' => $product->id]);
-                $this->orderItems()->create($data);
-            } else {
-                \Log::error("Producto no encontrado para ItemCode: {$dataToInsert['ItemCode']}");
-            }
+                $columnNames = Schema::getColumnListing('order_items');
+                $dataToInsert = array_intersect_key($orderItemData, array_flip($columnNames));
 
+                $data = array_merge($dataToInsert, ['product_id' => $product->id]);
+
+                $this->orderItems()->create($data);
+
+            } else {
+                \Log::error("Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
+            }
         }
     }
+
 
     public function scopeWithOrderDetails($query)
     {
