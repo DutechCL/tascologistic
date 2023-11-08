@@ -118,14 +118,19 @@ class Order extends Model
             'SalesEmployeeName'  => optional($salesPerson)->SalesEmployeeName,
         ]);
 
-        $order = self::updateOrCreate(
-            ['DocNum' => $orderData['DocNum']],
-            $data
-        );
+        try {
+            $order = self::updateOrCreate(
+                ['DocNum' => $orderData['DocNum']],
+                $data
+            );
     
-        $order->syncOrderItems($documentLines);
+            $order->syncOrderItems($documentLines);
     
-        return $order;
+            return $order;
+        } catch (\Exception $e) {
+            \Log::error("Error al sincronizar orden - DocNum: {$orderData['DocNum']}. Error: {$e->getMessage()}");
+            return null;
+        }
     }
     
 

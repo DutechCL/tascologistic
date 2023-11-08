@@ -20,9 +20,12 @@ class SyncService
         $skip = 0;
 
         try {
+
+            $fields = $modelClass::FILLABLE;
+            $identifier = $modelClass::IDENTIFIER;
+            $filterParam = null;
+
             do {
-                $fields = $modelClass::FILLABLE;
-                $identifier = $modelClass::IDENTIFIER;
                 $response = $this->sapService->get($endpoint, $skip, $fields, $filterParam);
 
                 if (!empty($response['value'])) {
@@ -56,12 +59,13 @@ class SyncService
         $skip = 0;
 
         try {
-            do {
-                $fields = $modelClass::FILLABLE_API;
-                $identifier = $modelClass::IDENTIFIER;
+            
+            $fields = $modelClass::FILLABLE_API;
+            $identifier = $modelClass::IDENTIFIER;
+            $lastSyncedOrder = $modelClass::latest('DocNum')->first();
+            $filterParam = $lastSyncedOrder ? "DocNum ge {$lastSyncedOrder->DocNum}" : null;
 
-                $lastSyncedOrder = $modelClass::latest('DocNum')->first();
-                $filterParam = $lastSyncedOrder ? "DocNum ge {$lastSyncedOrder->DocNum}" : null;
+            do {
 
                 $response = $this->sapService->get($endpoint, $skip, $fields, $filterParam);
 
