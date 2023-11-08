@@ -31,9 +31,7 @@ return new class extends Migration
             $table->boolean('is_managed')->default(false);
             $table->text('observation')->nullable();
             $table->timestamps();
-        
-            // Clave foránea
-            $table->foreign('process_id')->references('id')->on('processes');
+            
             $table->foreign('customer_id')->references('id')->on('customers');
             $table->foreign('order_status_id')->references('id')->on('order_statuses');
         });
