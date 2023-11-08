@@ -55,6 +55,16 @@ class Order extends Model
         ...self::FILLABLE_INTERNAL,
     ];
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        // Utiliza el evento creating para convertir el valor de 'Active'
+        static::creating(function ($salesPerson) {
+            $salesPerson->attributes['Confirmed'] = strtolower($salesPerson->attributes['Confirmed']) === 'tyes' ? 1 : 0;
+        });
+    }
+
     public function customer()
     {
         return $this->belongsTo(Customer::class);
