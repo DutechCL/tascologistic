@@ -130,17 +130,18 @@ class Order extends Model
         foreach ($orderItemsData as $orderItemData) {
 
             $columnNames = Schema::getColumnListing('order_items');
+            
             $dataToInsert = array_intersect_key($orderItemData, array_flip($columnNames));
 
             $product = Product::where('ItemCode', $dataToInsert['ItemCode'])->first();
-            $data = array_merge($dataToInsert, ['product_id' => $product->id]);
-
 
             if ($product) {
+                $data = array_merge($dataToInsert, ['product_id' => $product->id]);
                 $this->orderItems()->create($data);
             } else {
                 \Log::error("Producto no encontrado para ItemCode: {$dataToInsert['ItemCode']}");
             }
+
         }
     }
 
