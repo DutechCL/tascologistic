@@ -41,6 +41,9 @@ class SAPIntegration extends Command
             case 'products':
                 $this->syncData('products.get', Product::class);
                 break;
+            case 'orders':
+                $this->syncOrders();
+                break;
             default:
                 $this->error('Invalid data type specified.');
                 break;
@@ -80,4 +83,31 @@ class SAPIntegration extends Command
         } while (isset($response['odata.nextLink']));
     }
 
+
+    private function syncOrders()
+    {
+        $endpoint = 'orders.get'; // Ajusta el nombre del endpoint según tu estructura
+        $modelClass = Order::class;
+        
+        $this->info("Syncing $endpoint...");
+
+        $skip = 0;
+
+        do {
+            $fields = $modelClass::FILLABLE_API;
+            $identifier = $modelClass::IDENTIFIER;
+
+            $response = $this->sapService->get($endpoint, $skip, $fields);
+
+            if (!empty($response['value'])) {
+                foreach ($response['value'] as $orderData) {
+
+                    $modelClass::syncOrderWithItems($orderData);
+                }
+                $skip += $this->batchSize;
+            } else {
+                break;
+            }
+        } while (isset($response['odata.nextLink']));
+    }
 }

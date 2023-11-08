@@ -2,14 +2,18 @@
 
 namespace App\Models;
 
+use App\Models\Product;
 use App\Models\Customer;
 use App\Models\OrderItem;
 use App\Models\OrderStatus;
+use App\Models\SalesPerson;
 use App\Models\OrderProblem;
+use App\Models\MethodShipping;
 use App\Models\RoleAssignments;
 use App\Models\OrderItemProblem;
 use App\Services\ProcessService;
 use App\Events\OrderStatusUpdated;
+use Illuminate\Support\Facades\Schema;
 use App\Events\OrderClassifiedProcess;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -18,16 +22,36 @@ class Order extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    const FILLABLE_API = [
         'DocEntry',
         'DocNum',
+        'DocType',
         'DocDate',
+        'DocTime',
         'DocTotal',
         'Comments',
         'SalesPersonCode',
         'U_SBO_FormaEntrega',
-        'is_approved',
+        'U_SBO_FormaPago',
+        'DocumentLines',
+        'Confirmed',
+    ];
+
+    const FILLABLE_INTERNAL = [
+        'process_id',
         'customer_id',
+        'order_status_id',
+        'method_shipping_id',
+        'SalesEmployeeName',
+        'observation',
+        'is_managed',
+    ];
+
+    const IDENTIFIER = 'CardCode';
+
+    protected $fillable = [
+        ...self::FILLABLE_API,
+        ...self::FILLABLE_INTERNAL,
     ];
 
     public function customer()
@@ -60,6 +84,55 @@ class Order extends Model
         return $this->hasMany(OrderProblem::class, 'order_id');
     }
     
+    public static function syncOrderWithItems(array $orderData)
+    {
+        if (!isset($orderData['CardCode'], $orderData['U_SBO_FormaEntrega'], $orderData['SalesPersonCode'])) {
+            return null;
+        }
+
+        $documentLines = $orderData['DocumentLines'];
+        unset($orderData['DocumentLines']);
+    
+        $customer = Customer::where('CardCode', $orderData['CardCode'])->first();
+        $methodShipping = MethodShipping::where('name', $orderData['U_SBO_FormaEntrega'])->first();
+        $salesPerson = SalesPerson::where('SalesEmployeeCode', $orderData['SalesPersonCode'])->first();
+    
+        $data = array_merge($orderData, [
+            'customer_id'        => optional($customer)->id,
+            'method_shipping_id' => optional($methodShipping)->id ?? 1,
+            'SalesEmployeeName'  => optional($salesPerson)->SalesEmployeeName,
+        ]);
+
+        $order = self::updateOrCreate(
+            ['DocNum' => $orderData['DocNum']],
+            $data
+        );
+    
+        $order->syncOrderItems($documentLines);
+    
+        return $order;
+    }
+    
+
+    private function syncOrderItems(array $orderItemsData)
+    {
+        foreach ($orderItemsData as $orderItemData) {
+
+            $columnNames = Schema::getColumnListing('order_items');
+            $dataToInsert = array_intersect_key($orderItemData, array_flip($columnNames));
+
+            $product = Product::where('ItemCode', $dataToInsert['ItemCode'])->first();
+            $data = array_merge($dataToInsert, ['product_id' => $product->id]);
+
+
+            if ($product) {
+                $this->orderItems()->create($data);
+            } else {
+                \Log::error("Producto no encontrado para ItemCode: {$dataToInsert['ItemCode']}");
+            }
+        }
+    }
+
     public function scopeWithOrderDetails($query)
     {
         return $query->with([

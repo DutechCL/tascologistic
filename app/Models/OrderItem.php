@@ -14,9 +14,9 @@ class OrderItem extends Model
     protected $table = 'order_items';
 
     protected $fillable = [
-        'ItemCode', // Precio del producto en el momento de la orden
-        'Price',// Precio del producto en el momento de la orden
-        'Quantity', // Precio del producto en el momento de la orden
+        'ItemCode', 
+        'Price',
+        'Quantity', 
         'VatGroup',
         'TaxLiable',
         'PickStatus',
@@ -30,7 +30,7 @@ class OrderItem extends Model
         'LineTotal',
         'TaxPercentagePerRow',
         'TaxTotal',
-    ]; // Campos permitidos para llenado masivo
+    ];
 
     public function order()
     {

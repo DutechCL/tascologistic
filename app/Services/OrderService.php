@@ -196,7 +196,6 @@ class OrderService
     {
         $order = Order::getOrder($orderId);
         $order->is_managed = true;
-        $order->is_approved = true;
         $order->order_status_id = Order::ORDER_STATUS_BILLED;
         $order->save();
 
