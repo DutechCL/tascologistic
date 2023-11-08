@@ -29,7 +29,7 @@ return new class extends Migration
             $table->decimal('NetTaxAmount',12, 4)->nullable();
             $table->decimal('NetTaxAmountFC',12, 4)->nullable();
             $table->decimal('NetTaxAmountSC',12, 4)->nullable();
-            $table->decimal('Price',12, 4)->nullable();
+            $table->decimal('LineTotal',12, 4)->nullable();
             $table->decimal('TaxPercentagePerRow',12, 4)->nullable();
             $table->decimal('TaxTotal',12, 4)->nullable();
             $table->timestamps();
