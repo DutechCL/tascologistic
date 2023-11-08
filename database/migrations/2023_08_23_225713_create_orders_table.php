@@ -21,6 +21,7 @@ return new class extends Migration
             $table->time('DocTime');
             $table->string('DocType')->nullable();
             $table->string('DocTotal');
+            $table->string('CardCode');
             $table->string('Comments')->nullable();
             $table->string('SalesPersonCode');
             $table->string('SalesEmployeeName')->nullable();
