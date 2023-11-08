@@ -23,14 +23,14 @@ class OrderService
         return Order::withOrderDetails()
             ->where('process_id', Process::PROCESS_ID_CDA)
             ->where('is_managed', false)
-            ->orderBy('created_at', 'ASC')->get();
+            ->orderBy('created_at', 'ASC')->paginate(15);
     }
 
     public function listOrdersCdaManage()
     {
         return Order::withOrderDetails()
             ->where('is_managed', true)
-            ->orderBy('updated_at', 'ASC')->get();
+            ->orderBy('updated_at', 'ASC')->paginate(15);
     }
 
     public function listOrdersPickerReviewer($wareHouseCode)
@@ -44,7 +44,7 @@ class OrderService
             ->whereIn('process_id', [Process::PROCESS_ID_PICKER, Process::PROCESS_ID_REVIEWER])
             ->orderByRaw('order_status_id = 4 DESC')
             ->orderBy('created_at', 'ASC')
-            ->get();
+            ->paginate(15);
     }
 
     public function listOrdersBills($type = null)
@@ -60,7 +60,7 @@ class OrderService
     
         $query->orderBy('created_at', 'ASC');
     
-        return $query->get();
+        return $query->paginate(15);
     }
 
     public function listOrdersPayment()
@@ -68,7 +68,7 @@ class OrderService
         return Order::withOrderDetails()
             ->where('process_id', Process::PROCESS_ID_PAYMENT)
             ->orderBy('created_at', 'ASC')
-            ->get();
+            ->paginate(15);
     }
 
     public function listOrdersTracker($type)
