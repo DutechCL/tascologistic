@@ -51,7 +51,7 @@ class SyncService
         }
     }
 
-    public function syncOrders()
+    public function syncOrders($docNum = null)
     {
         $endpoint = 'orders.get';
         $modelClass = Order::class;
@@ -62,8 +62,13 @@ class SyncService
             
             $fields = $modelClass::FILLABLE_API;
             $identifier = $modelClass::IDENTIFIER;
-            $lastSyncedOrder = $modelClass::latest('DocNum')->first();
-            $filterParam = $lastSyncedOrder ? "DocNum ge {$lastSyncedOrder->DocNum}" : null;
+            
+            if ($docNum) {
+                $filterParam = "DocNum eq {$docNum}";
+            } else {
+                $lastSyncedOrder = $modelClass::latest('DocNum')->first();
+                $filterParam = $lastSyncedOrder ? "DocNum ge {$lastSyncedOrder->DocNum}" : null;
+            }
 
             do {
 

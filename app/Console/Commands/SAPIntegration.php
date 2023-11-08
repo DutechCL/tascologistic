@@ -12,7 +12,7 @@ use Illuminate\Console\Command;
 
 class SAPIntegration extends Command
 {
-    protected $signature = 'sap:sync {type}';
+    protected $signature = 'sap:sync {type} {--docNum=}';
     protected $description = 'Synchronize SAP data';
     protected $syncService;
 
@@ -25,6 +25,9 @@ class SAPIntegration extends Command
     public function handle()
     {
         $type = $this->argument('type');
+        $docNum = $this->option('docNum') ?? null;
+
+        $this->info("Syncing $type...");
 
         switch ($type) {
             case 'customers':
@@ -40,7 +43,7 @@ class SAPIntegration extends Command
                 $this->syncService->syncData('products.get', Product::class);
                 break;
             case 'orders':
-                $this->syncService->syncOrders();
+                $this->syncService->syncOrders($docNum);
                 break;
             default:
                 $this->error('Invalid data type specified.');

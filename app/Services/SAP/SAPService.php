@@ -4,6 +4,7 @@ namespace App\Services\SAP;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Log;
 
 class SAPService
 {
@@ -48,9 +49,11 @@ class SAPService
             // Almacenar las cookies en la propiedad $loginCookies
             $this->loginCookies = $response->cookies();
 
-            // Retornar la nueva respuesta
             return $response;
         } catch (\Exception $e) {
+
+            Log::error("Error en la operación de login: {$e->getMessage()}");
+
             return ['error' => $e->getMessage()];
         }
     }
@@ -82,6 +85,7 @@ class SAPService
 
             return $response->json();
         } catch (\Exception $e) {
+
             return ['error' => $e->getMessage()];
         }
     }
@@ -113,6 +117,9 @@ class SAPService
             return $this->makeRequest($endpoint, 'get', $requestData);
 
         } catch (\Exception $e) {
+
+            Log::error("Error en la operación GET para $key: {$e->getMessage()}");
+
             return ['error' => $e->getMessage()];
         }
     }
@@ -124,6 +131,9 @@ class SAPService
 
             return $this->makeRequest($endpoint, 'post', $data);
         } catch (\Exception $e) {
+
+            Log::error("Error en la operación POST para $key: {$e->getMessage()}");
+
             return ['error' => $e->getMessage()];
         }
     }

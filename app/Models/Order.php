@@ -101,10 +101,6 @@ class Order extends Model
     
     public static function syncOrderWithItems(array $orderData)
     {
-        if (!isset($orderData['CardCode'], $orderData['U_SBO_FormaEntrega'], $orderData['SalesPersonCode'])) {
-            return null;
-        }
-
         $documentLines = $orderData['DocumentLines'];
         unset($orderData['DocumentLines']);
     
@@ -123,7 +119,7 @@ class Order extends Model
                 ['DocNum' => $orderData['DocNum']],
                 $data
             );
-    
+
             $order->syncOrderItems($documentLines);
     
             return $order;
@@ -134,11 +130,13 @@ class Order extends Model
     }
     
 
-    private function syncOrderItems(array $orderItemsData)
-    {
-        foreach ($orderItemsData as $orderItemData) {
-            $product = Product::where('ItemCode', $orderItemData['ItemCode'])->first();
-            if ($product) {
+private function syncOrderItems(array $orderItemsData)
+{
+    foreach ($orderItemsData as $orderItemData) {
+        $product = Product::where('ItemCode', $orderItemData['ItemCode'])->first();
+
+        if ($product) {
+            try {
                 $columnNames = Schema::getColumnListing('order_items');
                 $dataToInsert = array_intersect_key($orderItemData, array_flip($columnNames));
 
@@ -146,11 +144,14 @@ class Order extends Model
 
                 $this->orderItems()->create($data);
 
-            } else {
-                \Log::error("Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
+            } catch (\Exception $e) {
+                \Log::error("Error al crear producto  para ItemCode: {$orderItemData['ItemCode']}. Error: {$e->getMessage()}");
             }
+        } else {
+            \Log::error("Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
         }
     }
+}
 
 
     public function scopeWithOrderDetails($query)
