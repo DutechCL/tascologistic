@@ -114,7 +114,7 @@ class Order extends Model
     
         $data = array_merge($orderData, [
             'customer_id'        => optional($customer)->id,
-            'method_shipping_id' => optional($methodShipping)->id ?? 1,
+            'method_shipping_id' => optional($methodShipping)->id,
             'SalesEmployeeName'  => optional($salesPerson)->SalesEmployeeName,
         ]);
 
