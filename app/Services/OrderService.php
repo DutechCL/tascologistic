@@ -20,8 +20,6 @@ class OrderService
 
     public function listOrdersCdaToManage()
     {
-
-        dd(Order::latest('DocNum')->first());
         return Order::withOrderDetails()
             ->where('process_id', Process::PROCESS_ID_CDA)
             ->where('is_managed', false)
@@ -40,29 +38,23 @@ class OrderService
         if (!$this->isValidWarehouseForUser($wareHouseCode)) {
             throw new \Exception('No tiene permisos para acceder a esta bodega');
         }
-        
+        dd($wareHouseCode);
         return Order::byWarehouse([$wareHouseCode])
             ->withOrderDetails()
             ->whereIn('process_id', [Process::PROCESS_ID_PICKER, Process::PROCESS_ID_REVIEWER])
-            ->orderByRaw('order_status_id = 4 DESC')
             ->orderBy('DocDate', 'DESC')
             ->paginate(15);
     }
 
     public function listOrdersBills($type = null)
     {
-        $query = Order::withOrderDetails()
-            ->where('process_id', Process::PROCESS_ID_BILLS);
-    
-        if ($type === MethodShipping::METHOD_SHIPPING_HERE) {
-            $query->whereNot('method_shipping_id', MethodShipping::METHOD_SHIPPING_DELIVERY);
-        } elseif ($type === MethodShipping::METHOD_SHIPPING_DELIVERY) {
-            $query->where('method_shipping_id', MethodShipping::METHOD_SHIPPING_DELIVERY);
-        }
-    
-        $query->orderBy('DocDate', 'DESC');
-    
-        return $query->paginate(15);
+        $condition = $type === MethodShipping::METHOD_SHIPPING_HERE ? '!=' : '=';
+
+        return Order::withOrderDetails()
+            ->where('process_id', Process::PROCESS_ID_BILLS)
+            ->where('method_shipping_id', $condition, MethodShipping::METHOD_SHIPPING_DELIVERY)
+            ->orderBy('DocDate', 'DESC')
+            ->paginate(15);
     }
 
     public function listOrdersPayment()
@@ -75,17 +67,13 @@ class OrderService
 
     public function listOrdersTracker($type)
     {
-        $query = Order::withOrderDetails()
+        $condition = $type === 'warehouse' ? '!=' : '=';
+
+        return Order::withOrderDetails()
             ->where('order_status_id', '!=', OrderStatus::STATUS_REJECTED)
-            ->orderBy('updated_at', 'DESC');
-
-        if ($type === 'warehouse') {
-            $query->whereNot('method_shipping_id', MethodShipping::METHOD_SHIPPING_HERE);
-        } elseif ($type === MethodShipping::METHOD_SHIPPING_DELIVERY) {
-            $query->where('method_shipping_id', MethodShipping::METHOD_SHIPPING_HERE);
-        }
-
-        return $query->paginate(10);
+            ->orderBy('updated_at', 'DESC')
+            ->where('method_shipping_id', $condition, MethodShipping::METHOD_SHIPPING_HERE)
+            ->paginate(10);
     }
 
     public function processOrderCda(Request $request)
