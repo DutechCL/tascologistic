@@ -35,6 +35,7 @@ class OrderController extends Controller
             return $this->success(
                 OrderResource::collection($orders)->resolve()
             );
+
         } catch (\Exception $exception) {
             return $this->buildResponseErrorFromException($exception);
         }
@@ -126,7 +127,7 @@ class OrderController extends Controller
             $result = $this->orderService->processOrderCda($request);
 
             return $this->success(
-                $result->order,
+                OrderResource::collection($result->orders)->resolve(),
                 $result->message
             );
 
@@ -189,6 +190,21 @@ class OrderController extends Controller
             return $this->success(
                 $result->order,
                 $result->message
+            );
+
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function searchOrders(Request $request)
+    {
+        try {
+
+            $orders = $this->orderService->searchOrders($request);
+
+            return $this->success(
+                OrderResource::collection($orders)->resolve()
             );
 
         } catch (\Exception $exception) {

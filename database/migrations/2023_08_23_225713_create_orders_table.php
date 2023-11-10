@@ -21,6 +21,8 @@ return new class extends Migration
             $table->time('DocTime');
             $table->string('DocType')->nullable();
             $table->string('DocTotal');
+            // $table->string('ShipToCode'); //tipo de documento
+            // $table->string('Indicator'); // id tipo de documento
             $table->string('CardCode');
             $table->string('Comments')->nullable();
             $table->string('SalesPersonCode');

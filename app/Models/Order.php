@@ -36,6 +36,8 @@ class Order extends Model
         'U_SBO_FormaPago',
         'DocumentLines',
         'Confirmed',
+        'ShipToCode',
+        'Indicator'
     ];
 
     const FILLABLE_INTERNAL = [

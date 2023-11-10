@@ -1,5 +1,4 @@
 <?php
-// app/Http/Resources/OrderResource.php
 namespace App\Http\Resources;
 
 use App\Models\Problem;

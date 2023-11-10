@@ -18,62 +18,132 @@ class OrderService
     const ACTION_REJECT  = 'reject';
     const ACTION_INFO    = 'info';
 
-    public function listOrdersCdaToManage()
+    public function listOrdersCdaToManage(bool $execute = true)
     {
-        return Order::withOrderDetails()
+        $query = Order::query();
+        $query->withOrderDetails()
             ->where('process_id', Process::PROCESS_ID_CDA)
             ->where('is_managed', false)
-            ->orderBy('DocDate', 'DESC')->paginate(15);
+            ->orderBy('updated_at', 'DESC')
+            ->orderBy('DocDate', 'DESC');
+
+        if ($execute) {
+            return $query->paginate(20);
+        }
+        return $query;
     }
 
-    public function listOrdersCdaManage()
+    public function listOrdersCdaManage(bool $execute = true)
     {
-        return Order::withOrderDetails()
+        $query = Order::query();
+        $query->withOrderDetails()
             ->where('is_managed', true)
-            ->orderBy('updated_at', 'ASC')->paginate(15);
+            ->orderBy('updated_at', 'ASC');
+
+            if ($execute) {
+                return $query->paginate(20);
+            }
+            return $query;
     }
 
-    public function listOrdersPickerReviewer($wareHouseCode)
+    public function listOrdersPickerReviewer($wareHouseCode, bool $execute = true)
     {
         if (!$this->isValidWarehouseForUser($wareHouseCode)) {
             throw new \Exception('No tiene permisos para acceder a esta bodega');
         }
-        dd($wareHouseCode);
-        return Order::byWarehouse([$wareHouseCode])
+        $query = Order::query();
+        $query->byWarehouse([$wareHouseCode])
             ->withOrderDetails()
             ->whereIn('process_id', [Process::PROCESS_ID_PICKER, Process::PROCESS_ID_REVIEWER])
-            ->orderBy('DocDate', 'DESC')
-            ->paginate(15);
+            ->orderBy('updated_at', 'DESC')
+            ->orderBy('DocDate', 'DESC');
+            // ->orderBy('DocDate', 'DESC');
+
+        if ($execute) {
+            return $query->paginate(20);
+        }
+        return $query;
     }
 
-    public function listOrdersBills($type = null)
+    public function listOrdersBills($type = null, bool $execute = true )
     {
         $condition = $type === MethodShipping::METHOD_SHIPPING_HERE ? '!=' : '=';
 
-        return Order::withOrderDetails()
+        $query = Order::query();
+        $query->withOrderDetails()
             ->where('process_id', Process::PROCESS_ID_BILLS)
             ->where('method_shipping_id', $condition, MethodShipping::METHOD_SHIPPING_DELIVERY)
-            ->orderBy('DocDate', 'DESC')
-            ->paginate(15);
+            ->orderBy('DocDate', 'DESC');
+
+        if ($execute) {
+            return $query->paginate(20);
+        }
+        return $query;
     }
 
-    public function listOrdersPayment()
+    public function listOrdersPayment(bool $execute = true)
     {
-        return Order::withOrderDetails()
+        $query = Order::query();
+        $query->withOrderDetails()
             ->where('process_id', Process::PROCESS_ID_PAYMENT)
-            ->orderBy('DocDate', 'DESC')
-            ->paginate(15);
+            ->orderBy('DocDate', 'DESC');
+
+        if ($execute) {
+            return $query->paginate(20);
+        }
+        return $query;
     }
 
-    public function listOrdersTracker($type)
+    public function listOrdersTracker($type, bool $execute = true)
     {
         $condition = $type === 'warehouse' ? '!=' : '=';
 
-        return Order::withOrderDetails()
+        $query = Order::query();
+        $query->withOrderDetails()
             ->where('order_status_id', '!=', OrderStatus::STATUS_REJECTED)
             ->orderBy('updated_at', 'DESC')
-            ->where('method_shipping_id', $condition, MethodShipping::METHOD_SHIPPING_HERE)
-            ->paginate(10);
+            ->where('method_shipping_id', $condition, MethodShipping::METHOD_SHIPPING_HERE);
+
+        if ($execute) {
+            return $query->paginate(10);
+        }
+        return $query;
+    }
+
+    public function searchOrders(Request $request)
+    {
+        $type = $request->type;
+        $search = $request->search;
+        
+        switch ($type):
+            case 'cda:true':
+                $query = $this->listOrdersCdaToManage(false);
+                break;
+            case 'cda:false':
+                $query = $this->listOrdersCdaManage(false);
+                break;
+            case 'picker-reviewer':
+                $query = $this->listOrdersPickerReviewer($request->warehouses, false);
+                break;
+            case 'bills':
+                $query = $this->listOrdersBills($request->methodShipping, false);
+                break;
+            case 'payment':
+                $query = $this->listOrdersPayment(false);
+                break;
+        endswitch;
+
+        $query->where(function($query) use ($search) {
+            $query->where('DocNum', 'LIKE', '%'.$search.'%')
+                ->orWhere(  function($query) use ($search){
+                    $query->whereHas('customer', function ($query) use ($search) {
+                        $query->where('CardName', 'LIKE', '%'.$search.'%');
+                        $query->orWhere('CardCode', 'LIKE', '%'.$search.'%');
+               });
+            });
+        });
+        
+        return $query->paginate(10);
     }
 
     public function processOrderCda(Request $request)
@@ -94,11 +164,13 @@ class OrderService
 
         $order->assignResponsible($request->responsible);
         $order->save();
-        $order->refresh();
+
+        $orders = $this->listOrdersCdaToManage();
+
         
         return (object) [
             'message' => 'Orden actualizada correctamente',
-            'order' => new OrderResource($order),
+            'orders' => $orders,
         ];
     }
 
@@ -125,11 +197,17 @@ class OrderService
         ];
     }
 
-    public function assingResponsible(Request $request){
+    public function assingResponsible(Request $request)
+    {
         $order = Order::getOrder($request->orderId);
+
         $order->order_status_id = $request->responsible === 'picker' ? OrderStatus::STATUS_ON_PICKER : OrderStatus::STATUS_ON_REVIEWER;
+        $order->updated_at = now();
+
         $order->save();
+
         $result = $order->assignResponsible($request->responsible);
+
         $order->refresh();
 
         if($result->status === 'warning'){
@@ -185,8 +263,7 @@ class OrderService
     public function generateDocument($document, $orderId)
     {
         $order = Order::getOrder($orderId);
-        $order->is_managed = true;
-        $order->order_status_id = Order::ORDER_STATUS_BILLED;
+        $order->order_status_id = OrderStatus::STATUS_BILLED;
         $order->save();
 
         return (object) [

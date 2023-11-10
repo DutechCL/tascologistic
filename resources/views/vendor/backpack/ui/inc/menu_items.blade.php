@@ -10,4 +10,4 @@
 @each('partials.menu_item', $menuTree, 'childItem')
 
 <a style="position: absolute; bottom: 15px; left: 15px;" href="{{ route('backpack.auth.logout') }}"> <i class=" fas fa-arrow-circle-right"></i> Salir</a>
-<x-backpack::menu-item title='Logs' icon='la la-terminal' :link="backpack_url('log')" />
+{{-- <x-backpack::menu-item title='Logs' icon='la la-terminal' :link="backpack_url('log')" /> --}}
