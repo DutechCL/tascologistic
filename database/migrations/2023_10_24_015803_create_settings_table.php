@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->string('key');
+            $table->string('key')->uniqid();
             $table->string('label');
             $table->string('value')->nullable();
+            $table->string('type')->nullable();
+            $table->string('class')->nullable();
+            $table->boolean('active')->default(1);
             $table->string('section')->nullable();
-            $table->text('modules_json')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

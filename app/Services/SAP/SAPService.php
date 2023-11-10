@@ -2,9 +2,10 @@
 
 namespace App\Services\SAP;
 
-use Illuminate\Support\Facades\Http;
+use App\Models\Setting;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Http;
 
 class SAPService
 {
@@ -20,16 +21,23 @@ class SAPService
      */
     public function __construct()
     {
-        $this->apiUrl    = sprintf(
-            '%s://%s:%s/%s',
-            config('services.sap.url.protocol'),
-            config('services.sap.url.domain'),
-            config('services.sap.url.port'),
-            config('services.sap.url.version')
-        );
-        $this->companyId = config('services.sap.credentials.company_db');
-        $this->username  = config('services.sap.credentials.username');
-        $this->password  = config('services.sap.credentials.password');
+        $this->apiUrl    = $this->getConfig('_sap_url_api', 'services.sap.url');
+        $this->companyId = $this->getConfig('_sap_company_db', 'services.sap.credentials.company_db');
+        $this->username  = $this->getConfig('_sap_username', 'services.sap.credentials.username');
+        $this->password  = $this->getConfig('_sap_password', 'services.sap.credentials.password');
+
+    }
+    
+    /**
+     * @param string $productionKey
+     * @param string $devKey
+     * @return array|mixed
+     */
+    private function getConfig($productionKey, $devKey)
+    {
+        $modeDev = (bool) Setting::get('_sap_dev_mode');
+
+        return $modeDev ? config($devKey) : Setting::get($productionKey);
     }
 
     /**

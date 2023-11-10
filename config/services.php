@@ -32,12 +32,7 @@ return [
     ],
 
     'sap' => [
-        'url'      => [
-            'protocol'=> env('SAP_API_PROTOCOL'), // 'http' or 'https
-            'domain'  => env('SAP_API_DOMAIN'),
-            'port'    => env('SAP_API_PORT'),
-            'version' => env('SAP_API_VERSION'),
-        ],
+        'url'      => env('SAP_API_URL'),
         'credentials' => [
             'company_db' => env('SAP_COMPANY_DB'),
             'username'   => env('SAP_USERNAME'),

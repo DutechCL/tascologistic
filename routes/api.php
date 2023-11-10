@@ -74,6 +74,7 @@ Route::prefix('v1')->group(
             Route::get('/{type}', [OrderController::class, 'getOrdersTracker']);
         });
 
+        //URL'S ORDENES
         Route::middleware(['auth:sanctum'])->prefix('orders')->group(function () {
             Route::post('/search', [OrderController::class, 'searchOrders']);
         });

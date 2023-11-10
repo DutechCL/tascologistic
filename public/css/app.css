@@ -197,6 +197,19 @@ btn {
     vertical-align: middle !important;
 }
 
+/* tab crud */
+[data-toggle="tab"]{
+    border-radius: 0px !important;
+    padding: 15px;
+    font-size: 18px !important;
+}
+
+[data-toggle="tab"].active{
+    border-radius: 0px !important;
+    background: #259bd7 !important;
+    color: #ffff !important;
+}
+
 .btn-default {
     background-color: var(--bs-secondary) !important;
     border-color: var(--bs-info) !important;
@@ -380,25 +393,25 @@ a.btn-primary[data-style="zoom-in"] {
 /* contenedor */
 
 a.nav-link {
-    background-color: transparent !important;
-    color: var(--bs-dark-primary) !important;
-    border-radius: 10px !important;
+    background-color: transparent ;
+    color: var(--bs-dark-primary) ;
+    border-radius: 10px ;
 }
 
 /* titulos cerrados */
 
 a.nav-link.active {
-    color: var(--bs-dark-blue) !important;
-    border-radius: 10px !important;
-    border-left: 10px solid var(--bs-light-primary) !important;
+    color: var(--bs-dark-blue);
+    border-radius: 10px;
+    border-left: 10px solid var(--bs-light-primary);
 }
 
 /* titulo abierto */
 
 a.nav-link:hover {
-    background-color: var(--bs-light-primary) !important;
-    color: var(--bs-primary) !important;
-    border-radius: 10px !important;
+    background-color: var(--bs-light-primary);
+    color: var(--bs-primary);
+    border-radius: 10px;
 }
 
 /* titulo abierto */
@@ -440,7 +453,7 @@ a.nav-link.active>i.nav-icon {
 }
 
 .sidebar.sidebar-pills .nav-link:hover {
-    background-color: rgba(0, 0, 0, .02);
+    background-color: #fff !important;
     color: var(--bs-primary) !important;
 }
 
@@ -525,3 +538,4 @@ a.nav-link.active{
     border-left: none !important;
     padding-left: 20px !important;
 }
+
