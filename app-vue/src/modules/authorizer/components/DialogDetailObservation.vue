@@ -55,7 +55,7 @@
       </div>
 
       <div class="mt-5">
-        <strong>NOTA:</strong> <span v-html="parseComments(ordersStore.order.Comments)"></span>
+        <strong>NOTA:</strong> <br> <span v-html="parseComments(ordersStore.order.Comments)"></span>
       </div>
     </div>
    

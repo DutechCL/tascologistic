@@ -14,6 +14,7 @@ export const RESPONSIBLE_CDA      = 'cda';
 export const RESPONSIBLE_PICKER   = 'picker';
 export const RESPONSIBLE_REVIEWER = 'reviewer';
 export const RESPONSIBLE_PICKER_REVIEWER = 'picker-reviewer';
+export const RESPONSIBLE_BILLER = 'bills';
 
 /* Order status */
 export const ORDER_STATUS_ON_HOLD         = 1;
@@ -51,6 +52,7 @@ const constants = {
     RESPONSIBLE_PICKER,
     RESPONSIBLE_REVIEWER,
     RESPONSIBLE_PICKER_REVIEWER,
+    RESPONSIBLE_BILLER,
     ORDER_STATUS_ON_HOLD,
     ORDER_STATUS_ON_PICKER,
     ORDER_STATUS_PICKED,

@@ -2,6 +2,7 @@
 import { defineStore } from 'pinia';
 import { postWithToken, getWithToken, putWithToken } from "./ApiService.js";
 
+
 export const useOrders = defineStore('orders', {
     state: () => ({ 
         listOrders: [],
@@ -64,6 +65,10 @@ export const useOrders = defineStore('orders', {
 
         async getOrdersTracker(type) {
             return await getWithToken(`api/v1/orders/tracker/${type}`);
+        },
+
+        async searchOrders(body) {
+            return await postWithToken(`api/v1/orders/search/`, body);
         },
     }
 });

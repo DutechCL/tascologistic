@@ -7,7 +7,7 @@ export default defineConfig({
   base: '/app/',
   server: {
         proxy: {
-            '/api': 'http://tasco.test', // Reemplaza con la URL de tu API Laravel
+            '/api': 'https://tasco.dutech.cl/', // Reemplaza con la URL de tu API Laravel
         },
     },
   build: {

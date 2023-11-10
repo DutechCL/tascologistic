@@ -5,7 +5,7 @@
         Notas de venta <a style="cursor: pointer;" @click="updateOrders"><i class="pi pi-refresh"></i></a> 
       </h1>
     </div>
-    <Search :orders="props.orders" @search="search"/>
+    <Search :type="typeSearch" :orders="props.orders" @search="search"/>
   </div>
 
   <!-- tablas de ordenes segun metodo de envio -->
@@ -14,6 +14,7 @@
   <DataTableOrdersCda 
     :title="'Aquí'"
     :type="constants.METHOD_SHIPPING_HERE"
+    :totalOrders="props.totalOrders"
     :orders="ordersHere"
     :toManage="toManage"
     @processOrder="processOrder"/>
@@ -22,6 +23,7 @@
   <DataTableOrdersCda 
     :title="'Retiro / Despacho'"
     :type="constants.METHOD_SHIPPING_PICKUP_AND_DELIVERY"
+    :totalOrders="props.totalOrders"
     :orders="ordersPickup"
     :toManage="toManage"
     @processOrder="processOrder"/>
@@ -87,6 +89,9 @@ const props = defineProps(
 )
 const ordersHere = ref([]);
 const ordersPickup = ref([]);
+const typeSearch = ref(
+  constants.RESPONSIBLE_CDA + ':' + props.toManage
+);
 
 const updateOrders = async () => {
   emit('updateOrders');
@@ -129,6 +134,7 @@ const processOrder = async () => {
           status: response.status,
           message: response.message,
         });
+        
         ordersStore.getOrdersCdaManage();
       }
     } catch (error) {

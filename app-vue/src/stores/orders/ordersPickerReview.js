@@ -63,12 +63,15 @@ export const useOrdersPickerReview = defineStore('ordersPickerReview', {
         ];
     },
     updateListOrders(order){
-        this.listOrders = this.listOrders.map(item => {
-            if(item.id === order.id){
-                return order
-            }
-            return item
-        })
+        const orderIndex = this.listOrders.findIndex(item => item.id === order.id);
+
+        if (orderIndex !== -1) {
+            // La orden ya está en la lista, actualiza el elemento existente
+            this.listOrders = this.listOrders.map(item => (item.id === order.id ? order : item));
+        } else {
+            // La orden no está en la lista, agrégala al principio
+            this.listOrders = [order, ...this.listOrders];
+        }
         this.classifyOrders(this.listOrders);
     },
   }
