@@ -66,8 +66,8 @@ class SyncService
             if ($docNum) {
                 $filterParam = "docDate ge {$docNum}";
             } else {
-                $lastSyncedOrder = $modelClass::latest('DocNum')->first();
-                $filterParam = $lastSyncedOrder ? "DocNum ge {$lastSyncedOrder->DocNum}" : null;
+                $lastSyncedOrder = $modelClass::latest('DocEntry')->first();
+                $filterParam = $lastSyncedOrder ? "DocEntry ge {$lastSyncedOrder->DocEntry}" : null;
             }
 
             do {
@@ -76,7 +76,7 @@ class SyncService
 
                 if (!empty($response['value'])) {
                     foreach ($response['value'] as $orderData) {
-                        $this->log("Loading orders {$orderData['DocNum']}...");
+                        $this->log("Loading orders {$orderData['DocEntry']}...");
                         $modelClass::syncOrderWithItems($orderData);
                     }
                     $skip += $this->batchSize;

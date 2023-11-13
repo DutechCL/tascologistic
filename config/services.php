@@ -33,6 +33,7 @@ return [
 
     'sap' => [
         'url'      => env('SAP_API_URL'),
+        'domain'   => env('SAP_API_DOMAIN'),
         'credentials' => [
             'company_db' => env('SAP_COMPANY_DB'),
             'username'   => env('SAP_USERNAME'),

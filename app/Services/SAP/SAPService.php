@@ -74,7 +74,7 @@ class SAPService
      */
     public function makeRequest($endpoint, $method = 'get', $data = [])
     {
-        $domain = config('services.sap.url.domain');
+        $domain = config('services.sap.domain');
         
         try {
             if (!$this->loginCookies) {
