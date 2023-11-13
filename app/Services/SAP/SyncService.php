@@ -35,10 +35,14 @@ class SyncService
                         $this->log("Loading {$endpoint} $skip...");
 
                         if (is_array($record) && isset($record[$identifier])) {
-                            $modelClass::updateOrCreate(
-                                [$identifier => $record[$identifier]],
-                                $dataToInsert
-                            );
+                            try {
+                                $modelClass::updateOrCreate(
+                                    [$identifier => $record[$identifier]],
+                                    $dataToInsert
+                                );
+                            } catch (\Exception $e) {
+                                $this->logError($e, $modelClass);
+                            }
                         }
                     }
                     $skip += $this->batchSize;
