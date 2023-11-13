@@ -2,7 +2,6 @@
 namespace App\Services\SAP;
 
 use App\Models\Order;
-use App\Models\LogOrder;
 use App\Services\SAP\SAPService;
 use Illuminate\Support\Facades\Log;
 
@@ -19,7 +18,6 @@ class SyncService
     public function syncData(string $endpoint, $modelClass)
     {
         $skip = 0;
-        $process = 'Sincronizacion masiva';
 
         try {
 
@@ -42,11 +40,8 @@ class SyncService
                                     [$identifier => $record[$identifier]],
                                     $dataToInsert
                                 );
-
-                                LogOrder::success($process, $record[$identifier]);
                             } catch (\Exception $e) {
-
-                                LogOrder::error($process, $record[$identifier], $e->getMessage());
+                                $this->logError($e, $modelClass);
                             }
                         }
                     }

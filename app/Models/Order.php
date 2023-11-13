@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Product;
 use App\Models\Customer;
+use App\Models\LogOrder;
 use App\Models\OrderItem;
 use App\Models\OrderStatus;
 use App\Models\SalesPerson;
@@ -13,8 +14,9 @@ use App\Models\RoleAssignments;
 use App\Models\OrderItemProblem;
 use App\Services\ProcessService;
 use App\Events\OrderStatusUpdated;
-use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 use App\Events\OrderClassifiedProcess;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -103,6 +105,8 @@ class Order extends Model
     
     public static function syncOrderWithItems(array $orderData)
     {
+        $process = 'Sincronizacion masiva';
+
         $documentLines = $orderData['DocumentLines'];
         unset($orderData['DocumentLines']);
     
@@ -123,37 +127,52 @@ class Order extends Model
             );
 
             $order->syncOrderItems($documentLines);
+
+            logOrder::success($process, $orderData['DocNum']);
     
             return $order;
         } catch (\Exception $e) {
-            \Log::error("Error al sincronizar orden - DocNum: {$orderData['DocNum']}. Error: {$e->getMessage()}");
-            return null;
+            LogOrder::error($process, $orderData['DocNum'], $e->getMessage());
         }
     }
     
 
-private function syncOrderItems(array $orderItemsData)
-{
-    foreach ($orderItemsData as $orderItemData) {
-        $product = Product::where('ItemCode', $orderItemData['ItemCode'])->first();
-
-        if ($product) {
-            try {
-                $columnNames = Schema::getColumnListing('order_items');
-                $dataToInsert = array_intersect_key($orderItemData, array_flip($columnNames));
-
-                $data = array_merge($dataToInsert, ['product_id' => $product->id]);
-
-                $this->orderItems()->create($data);
-
-            } catch (\Exception $e) {
-                \Log::error("Error al crear producto  para ItemCode: {$orderItemData['ItemCode']}. Error: {$e->getMessage()}");
+    private function syncOrderItems(array $orderItemsData, $order)
+    {
+        DB::beginTransaction();
+        $process = 'Sincronizacion masiva';
+        try {
+            foreach ($orderItemsData as $orderItemData) {
+                $product = Product::where('ItemCode', $orderItemData['ItemCode'])->first();
+    
+                if ($product) {
+                    try {
+                        $columnNames = Schema::getColumnListing('order_items');
+                        $dataToInsert = array_intersect_key($orderItemData, array_flip($columnNames));
+    
+                        $data = array_merge($dataToInsert, ['product_id' => $product->id]);
+    
+                        $order->orderItems()->create($data);
+    
+                    } catch (\Exception $e) {
+                        DB::rollBack();
+                        LogOrder::error($process, $order->DocNum, "Error al crear producto para ItemCode: {$orderItemData['ItemCode']}. Error: {$e->getMessage()}");
+                        return;
+                    }
+                } else {
+                    DB::rollBack();
+                    LogOrder::error($process, $order->DocNum, "Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
+                    return;
+                }
             }
-        } else {
-            \Log::error("Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
+    
+            DB::commit();
+        } catch (\Exception $e) {
+            DB::rollBack();
+            LogOrder::error($process, $order->DocNum, "Error general al sincronizar order_items. Error: {$e->getMessage()}");
         }
     }
-}
+    
 
 
     public function scopeWithOrderDetails($query)
