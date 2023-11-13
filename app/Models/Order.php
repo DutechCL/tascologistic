@@ -133,6 +133,7 @@ class Order extends Model
             return $order;
         } catch (\Exception $e) {
             LogOrder::error($process, $orderData['DocNum'], $e->getMessage());
+            return;
         }
     }
     
