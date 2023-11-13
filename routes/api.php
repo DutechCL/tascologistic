@@ -40,6 +40,7 @@ Route::prefix('v1')->group(
         Route::middleware(['auth:sanctum'])->group(function () {
             Route::get('menu-items', [MenuItemCrudController::class, 'getMenuItems']);
             Route::post('problems', [ProblemsController::class, 'index']);
+            Route::post('/search-orders', [OrderController::class, 'searchOrders']);
         });
         
         //URL'S ORDENES CDA
@@ -74,10 +75,10 @@ Route::prefix('v1')->group(
             Route::get('/{type}', [OrderController::class, 'getOrdersTracker']);
         });
 
-        //URL'S ORDENES
-        Route::middleware(['auth:sanctum'])->prefix('orders')->group(function () {
-            Route::post('/search', [OrderController::class, 'searchOrders']);
-        });
+        // //URL'S ORDENES
+        // Route::middleware(['auth:sanctum'])->prefix('orders')->group(function () {
+            
+        // });
     }
 );
 
