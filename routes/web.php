@@ -28,8 +28,14 @@ Route::middleware(['auth'])->group(function () {
     })->where('any', '.*');
 });
 
+//URL'S ORDENES
+Route::middleware(['auth:sanctum'])->prefix('orders')->group(function () {
+    Route::post('/search', [OrderController::class, 'searchOrders']);
+});
+
 Route::get('/bodega', function () {
     $allowedWarehouses = auth()->user()->allowedWarehouses();
     dd(Order::byWarehouse($allowedWarehouses)->get());
     return Order::byWarehouse()->get();
 });
+

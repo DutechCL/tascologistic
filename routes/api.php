@@ -35,7 +35,6 @@ Route::prefix('v1')->group(
         Route::get('user/export', [UserController::class, 'export'])->name('admin.user.export');
         Route::get('/get-token', [AuthController::class, 'getTokenFromWeb']);
         Route::post('/login', [AuthController::class, 'login']);
-        Route::post('/search-orders', [OrderController::class, 'searchOrders']);
 
         // URL'S GENERALES
         Route::middleware(['auth:sanctum'])->group(function () {
@@ -74,11 +73,6 @@ Route::prefix('v1')->group(
         Route::middleware(['auth:sanctum'])->prefix('orders/tracker')->group(function () {
             Route::get('/{type}', [OrderController::class, 'getOrdersTracker']);
         });
-
-        // //URL'S ORDENES
-        // Route::middleware(['auth:sanctum'])->prefix('orders')->group(function () {
-            
-        // });
     }
 );
 
