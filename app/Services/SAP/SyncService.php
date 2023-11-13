@@ -97,7 +97,7 @@ class SyncService
 
     private function logError(\Exception $exception, $modelClass, $lastSyncedOrder = null)
     {
-        // Log::error("Error syncing {$modelClass} - DocNum: {$lastSyncedOrder->DocNum}. Error: {$exception->getMessage()}");
+        Log::error("Error syncing {$modelClass} - Error: {$exception->getMessage()}");
     }
 
     private function log($message)
