@@ -32,6 +32,8 @@ class SyncService
                     foreach ($response['value'] as $record) {
                         $dataToInsert = array_intersect_key($record, array_flip($fields));
 
+                        $this->log("Loading {$endpoint} $skip...");
+
                         if (is_array($record) && isset($record[$identifier])) {
                             $modelClass::updateOrCreate(
                                 [$identifier => $record[$identifier]],
@@ -91,7 +93,7 @@ class SyncService
 
     private function logError(\Exception $exception, $modelClass, $lastSyncedOrder = null)
     {
-        Log::error("Error syncing {$modelClass} - DocNum: {$lastSyncedOrder->DocNum}. Error: {$exception->getMessage()}");
+        // Log::error("Error syncing {$modelClass} - DocNum: {$lastSyncedOrder->DocNum}. Error: {$exception->getMessage()}");
     }
 
     private function log($message)
