@@ -138,7 +138,7 @@ class Order extends Model
     }
     
 
-    private function syncOrderItems(array $orderItemsData, $order)
+    private function syncOrderItems(array $orderItemsData)
     {
         DB::beginTransaction();
         $process = 'Sincronizacion masiva';
@@ -153,16 +153,16 @@ class Order extends Model
     
                         $data = array_merge($dataToInsert, ['product_id' => $product->id]);
     
-                        $order->orderItems()->create($data);
+                        $this->orderItems()->create($data);
     
                     } catch (\Exception $e) {
                         DB::rollBack();
-                        LogOrder::error($process, $order->DocNum, "Error al crear producto para ItemCode: {$orderItemData['ItemCode']}. Error: {$e->getMessage()}");
+                        LogOrder::error($process, $this->DocNum, "Error al crear producto para ItemCode: {$orderItemData['ItemCode']}. Error: {$e->getMessage()}");
                         return;
                     }
                 } else {
                     DB::rollBack();
-                    LogOrder::error($process, $order->DocNum, "Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
+                    LogOrder::error($process, $this->DocNum, "Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
                     return;
                 }
             }
@@ -170,7 +170,7 @@ class Order extends Model
             DB::commit();
         } catch (\Exception $e) {
             DB::rollBack();
-            LogOrder::error($process, $order->DocNum, "Error general al sincronizar order_items. Error: {$e->getMessage()}");
+            LogOrder::error($process, $this->DocNum, "Error general al sincronizar order_items. Error: {$e->getMessage()}");
         }
     }
     
