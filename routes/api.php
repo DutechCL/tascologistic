@@ -35,12 +35,12 @@ Route::prefix('v1')->group(
         Route::get('user/export', [UserController::class, 'export'])->name('admin.user.export');
         Route::get('/get-token', [AuthController::class, 'getTokenFromWeb']);
         Route::post('/login', [AuthController::class, 'login']);
+        Route::post('/search-orders', [OrderController::class, 'searchOrders']);
 
         // URL'S GENERALES
         Route::middleware(['auth:sanctum'])->group(function () {
             Route::get('menu-items', [MenuItemCrudController::class, 'getMenuItems']);
             Route::post('problems', [ProblemsController::class, 'index']);
-            Route::post('/search-orders', [OrderController::class, 'searchOrders']);
         });
         
         //URL'S ORDENES CDA
