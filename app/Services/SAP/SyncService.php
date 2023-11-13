@@ -70,7 +70,7 @@ class SyncService
             $identifier = $modelClass::IDENTIFIER;
             
             if ($docDate) {
-                $filterParam = "docDate ge {$docDate}";
+                $filterParam = "DocDate ge {$docDate}";
             } else {
                 $lastSyncedOrder = $modelClass::latest('DocEntry')->first();
                 $filterParam = $lastSyncedOrder ? "DocEntry gt {$lastSyncedOrder->DocEntry}" : null;
