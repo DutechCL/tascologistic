@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('process');
             $table->string('DocNum');
-            $table->string('message');
+            $table->text('message');
             $table->boolean('isSynced');
             $table->timestamps();
         });

@@ -128,11 +128,12 @@ class Order extends Model
 
             $order->syncOrderItems($documentLines);
 
-            logOrder::success($process, $orderData['DocNum']);
-    
+            // logOrder::success($process, $orderData['DocNum']);
+
             return $order;
         } catch (\Exception $e) {
             LogOrder::error($process, $orderData['DocNum'], $e->getMessage());
+            \Log::error($e->getMessage());
             return;
         }
     }
@@ -158,11 +159,13 @@ class Order extends Model
                     } catch (\Exception $e) {
                         DB::rollBack();
                         LogOrder::error($process, $this->DocNum, "Error al crear producto para ItemCode: {$orderItemData['ItemCode']}. Error: {$e->getMessage()}");
+                        \Log::error($e->getMessage());
                         return;
                     }
                 } else {
                     DB::rollBack();
                     LogOrder::error($process, $this->DocNum, "Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
+                    \Log::error("Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
                     return;
                 }
             }
@@ -171,6 +174,7 @@ class Order extends Model
         } catch (\Exception $e) {
             DB::rollBack();
             LogOrder::error($process, $this->DocNum, "Error general al sincronizar order_items. Error: {$e->getMessage()}");
+            \Log::error($e->getMessage());
         }
     }
     
