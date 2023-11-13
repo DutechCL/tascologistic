@@ -19,12 +19,12 @@ class LogOrder extends Model
     ];
 
     
-    public function error($process, $DocNum, $message)
+    public static function error($process, $DocNum, $message)
     {
         $this->log($process, $DocNum, $message, false);
     }
 
-    public function success($process, $DocNum)
+    public static function success($process, $DocNum)
     {
         $this->log($process, $DocNum, 'success');
     }
@@ -39,7 +39,7 @@ class LogOrder extends Model
                 'message' => $message,
                 'isSynced' => $isSynced,
             ]);
-            
+
         } catch (\Exception $e) {
 
             Log::error($e->getMessage());
