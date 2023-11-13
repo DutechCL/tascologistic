@@ -12,7 +12,7 @@ use Illuminate\Console\Command;
 
 class SAPIntegration extends Command
 {
-    protected $signature = 'sap:sync {type} {--docNum=}';
+    protected $signature = 'sap:sync {type} {--docDate=}';
     protected $description = 'Synchronize SAP data';
     protected $syncService;
 
