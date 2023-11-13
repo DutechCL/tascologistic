@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Log;
+use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
 class LogOrder extends Model
 {
@@ -21,15 +22,15 @@ class LogOrder extends Model
     
     public static function error($process, $DocNum, $message)
     {
-        $this->log($process, $DocNum, $message, false);
+        self::log($process, $DocNum, $message, false);
     }
 
     public static function success($process, $DocNum)
     {
-        $this->log($process, $DocNum, 'success');
+        self::log($process, $DocNum, 'success');
     }
 
-    public function log($process, $DocNum, $message, $isSynced = true)
+    public static function log($process, $DocNum, $message, $isSynced = true)
     {
         try {
 
