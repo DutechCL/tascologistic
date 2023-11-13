@@ -18,6 +18,7 @@ class LogOrder extends Model
         'isSynced',
     ];
 
+    
     public function error($process, $DocNum, $message)
     {
         $this->log($process, $DocNum, $message, false);
@@ -30,12 +31,21 @@ class LogOrder extends Model
 
     public function log($process, $DocNum, $message, $isSynced = true)
     {
-        self::create([
-            'process' => $process,
-            'DocNum' => $DocNum,
-            'message' => $message,
-            'isSynced' => $isSynced,
-        ]);
+        try {
+
+            self::create([
+                'process' => $process,
+                'DocNum' => $DocNum,
+                'message' => $message,
+                'isSynced' => $isSynced,
+            ]);
+            
+        } catch (\Exception $e) {
+
+            Log::error($e->getMessage());
+
+        }
+
     }
     
 

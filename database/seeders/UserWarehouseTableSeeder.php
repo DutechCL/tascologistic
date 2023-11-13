@@ -21,51 +21,75 @@ class UserWarehouseTableSeeder extends Seeder
         \DB::table('user_warehouse')->insert(array (
             0 => 
             array (
-                'id' => 2,
+                'id' => 1,
                 'user_id' => 1,
                 'warehouse_id' => 6,
-                'created_at' => '2023-10-17 15:54:29',
-                'updated_at' => '2023-10-17 15:54:29',
+                'created_at' => '2023-11-13 14:52:50',
+                'updated_at' => '2023-11-13 14:52:50',
             ),
             1 => 
             array (
-                'id' => 3,
+                'id' => 2,
                 'user_id' => 1,
                 'warehouse_id' => 7,
-                'created_at' => '2023-10-17 15:54:29',
-                'updated_at' => '2023-10-17 15:54:29',
+                'created_at' => '2023-11-13 14:52:50',
+                'updated_at' => '2023-11-13 14:52:50',
             ),
             2 => 
             array (
-                'id' => 4,
-                'user_id' => 5,
-                'warehouse_id' => 6,
-                'created_at' => '2023-11-10 13:27:53',
-                'updated_at' => '2023-11-10 13:27:53',
+                'id' => 3,
+                'user_id' => 1,
+                'warehouse_id' => 8,
+                'created_at' => '2023-11-13 14:52:50',
+                'updated_at' => '2023-11-13 14:52:50',
             ),
             3 => 
             array (
-                'id' => 5,
+                'id' => 7,
                 'user_id' => 5,
-                'warehouse_id' => 7,
-                'created_at' => '2023-11-10 13:27:53',
-                'updated_at' => '2023-11-10 13:27:53',
+                'warehouse_id' => 6,
+                'created_at' => '2023-11-13 14:53:27',
+                'updated_at' => '2023-11-13 14:53:27',
             ),
             4 => 
             array (
-                'id' => 6,
-                'user_id' => 4,
-                'warehouse_id' => 6,
-                'created_at' => '2023-11-10 13:28:12',
-                'updated_at' => '2023-11-10 13:28:12',
+                'id' => 8,
+                'user_id' => 5,
+                'warehouse_id' => 7,
+                'created_at' => '2023-11-13 14:53:27',
+                'updated_at' => '2023-11-13 14:53:27',
             ),
             5 => 
             array (
-                'id' => 7,
+                'id' => 9,
+                'user_id' => 5,
+                'warehouse_id' => 8,
+                'created_at' => '2023-11-13 14:53:27',
+                'updated_at' => '2023-11-13 14:53:27',
+            ),
+            6 => 
+            array (
+                'id' => 10,
+                'user_id' => 4,
+                'warehouse_id' => 6,
+                'created_at' => '2023-11-13 14:53:50',
+                'updated_at' => '2023-11-13 14:53:50',
+            ),
+            7 => 
+            array (
+                'id' => 11,
                 'user_id' => 4,
                 'warehouse_id' => 7,
-                'created_at' => '2023-11-10 13:28:12',
-                'updated_at' => '2023-11-10 13:28:12',
+                'created_at' => '2023-11-13 14:53:50',
+                'updated_at' => '2023-11-13 14:53:50',
+            ),
+            8 => 
+            array (
+                'id' => 12,
+                'user_id' => 4,
+                'warehouse_id' => 8,
+                'created_at' => '2023-11-13 14:53:50',
+                'updated_at' => '2023-11-13 14:53:50',
             ),
         ));
         

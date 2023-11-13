@@ -2,6 +2,7 @@
 namespace App\Services\SAP;
 
 use App\Models\Order;
+use App\Models\LogOrder;
 use App\Services\SAP\SAPService;
 use Illuminate\Support\Facades\Log;
 
@@ -18,6 +19,7 @@ class SyncService
     public function syncData(string $endpoint, $modelClass)
     {
         $skip = 0;
+        $process = 'Sincronizacion masiva';
 
         try {
 
@@ -40,8 +42,11 @@ class SyncService
                                     [$identifier => $record[$identifier]],
                                     $dataToInsert
                                 );
+
+                                LogOrder::success($process, $record[$identifier]);
                             } catch (\Exception $e) {
-                                $this->logError($e, $modelClass);
+
+                                LogOrder::error($process, $record[$identifier], $e->getMessage());
                             }
                         }
                     }
@@ -57,7 +62,7 @@ class SyncService
         }
     }
 
-    public function syncOrders($docNum = null)
+    public function syncOrders($docDate = null)
     {
         $endpoint = 'orders.get';
         $modelClass = Order::class;
@@ -69,11 +74,11 @@ class SyncService
             $fields = $modelClass::FILLABLE_API;
             $identifier = $modelClass::IDENTIFIER;
             
-            if ($docNum) {
-                $filterParam = "docDate ge {$docNum}";
+            if ($docDate) {
+                $filterParam = "docDate ge {$docDate}";
             } else {
                 $lastSyncedOrder = $modelClass::latest('DocEntry')->first();
-                $filterParam = $lastSyncedOrder ? "DocEntry ge {$lastSyncedOrder->DocEntry}" : null;
+                $filterParam = $lastSyncedOrder ? "DocEntry gt {$lastSyncedOrder->DocEntry}" : null;
             }
 
             do {
