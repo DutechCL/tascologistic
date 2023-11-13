@@ -25,7 +25,7 @@ class SAPIntegration extends Command
     public function handle()
     {
         $type = $this->argument('type');
-        $docNum = $this->option('docNum') ?? null;
+        $dateTo = $this->option('docDate') ?? null;
 
         $this->info("Syncing $type...");
 
@@ -43,7 +43,7 @@ class SAPIntegration extends Command
                 $this->syncService->syncData('products.get', Product::class);
                 break;
             case 'orders':
-                $this->syncService->syncOrders($docNum);
+                $this->syncService->syncOrders($dateTo);
                 break;
             default:
                 $this->error('Invalid data type specified.');
