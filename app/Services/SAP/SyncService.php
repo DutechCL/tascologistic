@@ -17,6 +17,7 @@ class SyncService
 
     public function syncData(string $endpoint, $modelClass)
     {
+        $this->log("Syncing $endpoint...");
         $skip = 0;
         $createdOrUpdatedCount = 0;
     
@@ -67,6 +68,7 @@ class SyncService
     
     public function syncOrders($docDate = null)
     {
+        $this->log("Syncing $endpoint...");
         $endpoint = 'orders.get';
         $modelClass = Order::class;
         $skip = 0;

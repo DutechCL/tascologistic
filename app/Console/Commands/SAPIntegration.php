@@ -45,6 +45,13 @@ class SAPIntegration extends Command
             case 'orders':
                 $this->syncService->syncOrders($dateTo);
                 break;
+            case 'all':
+                $this->syncService->syncData('business_partners.get', Customer::class);
+                $this->syncService->syncData('sales_persons.get', SalesPerson::class);
+                $this->syncService->syncData('warehouses.get', Warehouse::class);
+                $this->syncService->syncData('products.get', Product::class);
+                $this->syncService->syncOrders(); // Asumiendo que no es necesario especificar la fecha para órdenes
+                break;
             default:
                 $this->error('Invalid data type specified.');
                 break;
