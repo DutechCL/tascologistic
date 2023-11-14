@@ -93,7 +93,7 @@ class SettingsTableSeeder extends Seeder
             array (
                 'id' => 6,
                 'key' => '_sap_url_api',
-                'label' => 'Url API de SAP',
+                'label' => 'Url API SAP',
                 'value' => 'https://sbo-tasco.cloudseidor.com:50000/b1s/v1',
                 'type' => 'text',
                 'class' => 'col-md-6 pt-4',
@@ -106,6 +106,20 @@ class SettingsTableSeeder extends Seeder
             6 => 
             array (
                 'id' => 7,
+                'key' => '_sap_interval_sync',
+                'label' => 'Intervalo de sincronización de ordenes con SAP (en minutos)',
+                'value' => 5,
+                'type' => 'number',
+                'class' => 'col-md-6 pt-4',
+                'active' => 1,
+                'section' => 'integrations_sap',
+                'description' => NULL,
+                'created_at' => '2023-11-10 14:57:07',
+                'updated_at' => '2023-11-13 13:26:34',
+            ),
+            7 => 
+            array (
+                'id' => 8,
                 'key' => '_sap_dev_mode',
                 'label' => 'Modo desarrollo SAP',
                 'value' => '0',
@@ -117,6 +131,7 @@ class SettingsTableSeeder extends Seeder
                 'created_at' => '2023-11-10 14:57:07',
                 'updated_at' => '2023-11-13 13:26:34',
             ),
+
         ));
         
         

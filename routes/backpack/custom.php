@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManagementController;
 use App\Http\Controllers\Api\V1\AuthController;
+use App\Http\Controllers\SAP\SapSyncController;
+use App\Http\Controllers\Admin\CustomerCrudController;
 
 // --------------------------
 // Custom Backpack Routes
@@ -32,4 +34,6 @@ Route::group([
     Route::crud('warehouse', 'WarehouseCrudController');
     Route::crud('setting', 'SettingCrudController');
     Route::crud('log-order', 'LogOrderCrudController');
+    Route::crud('product', 'ProductCrudController');
+    Route::crud('sales-person', 'SalesPersonCrudController');
 }); // this should be the absolute last line of this file

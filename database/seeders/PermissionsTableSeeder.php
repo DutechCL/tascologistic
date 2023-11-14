@@ -184,6 +184,39 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2023-11-10 18:07:53',
             ),
+            15 => 
+            array (
+                'id' => 20,
+                'name' => 'Log Ordenes.read',
+                'description' => 'ver estado de sincronizacion de ordenes',
+                'url' => '/admin/log-order',
+                'slug' => 'Log Ordenes',
+                'guard_name' => 'web',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            16 => 
+            array (
+                'id' => 21,
+                'name' => 'Productos.read',
+                'description' => 'ver lista de productos y sincronizar con SAP',
+                'url' => '/admin/product',
+                'slug' => 'Productos',
+                'guard_name' => 'web',
+                'created_at' => NULL,
+                'updated_at' => '2023-11-14 15:24:34',
+            ),
+            17 => 
+            array (
+                'id' => 22,
+                'name' => 'Vendedores.read',
+                'description' => 'ver lista de vendedores  y sincronizar con SAP',
+                'url' => '/admin/sales-person',
+                'slug' => 'Vendedores',
+                'guard_name' => 'web',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
         ));
         
         

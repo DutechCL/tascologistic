@@ -18,51 +18,53 @@ class SyncService
     public function syncData(string $endpoint, $modelClass)
     {
         $skip = 0;
-
+        $createdOrUpdatedCount = 0;
+    
         try {
-
             $fields = $modelClass::FILLABLE;
             $identifier = $modelClass::IDENTIFIER;
-
+    
             do {
                 $response = $this->sapService->get($endpoint, $skip, $fields);
-
+    
                 if (!empty($response['value'])) {
-
                     foreach ($response['value'] as $record) {
-
                         $dataToInsert = array_intersect_key($record, array_flip($fields));
-
+    
                         if (is_array($record) && isset($record[$identifier])) {
                             try {
-
                                 $modelClass::updateOrCreate(
                                     [$identifier => $record[$identifier]],
                                     $dataToInsert
                                 );
-
+    
+                                // Aumenta el contador al crear o actualizar un elemento
+                                $createdOrUpdatedCount++;
+    
                             } catch (\Exception $e) {
-
                                 $this->logError($e, $modelClass);
                             }
                         }
                     }
-
+    
                     $skip += $this->batchSize;
-
+    
                 } else {
-
                     break;
-
                 }
             } while (isset($response['odata.nextLink']));
+    
+            // Devuelve la cantidad de elementos creados o actualizados
+            return $createdOrUpdatedCount;
+    
         } catch (\Exception $e) {
-
             $this->logError($e, $modelClass);
-
+    
+            // En caso de error, puedes devolver -1 u otra señal de error según tu necesidad
+            return -1;
         }
     }
-
+    
     public function syncOrders($docDate = null)
     {
         $endpoint = 'orders.get';

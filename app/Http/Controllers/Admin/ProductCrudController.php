@@ -2,17 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Customer;
-use App\Services\SAP\SyncService;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class CustomerCrudController
+ * Class ProductCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class CustomerCrudController extends CrudController
+class ProductCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
@@ -24,9 +22,9 @@ class CustomerCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\Customer::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/customer');
-        CRUD::setEntityNameStrings(__('customer.customer'), __('customer.customers'));
+        CRUD::setModel(\App\Models\Product::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/product');
+        CRUD::setEntityNameStrings(__('product.product'), __('product.products'));
     }
 
     /**
@@ -37,30 +35,42 @@ class CustomerCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::addButtonFromView('top', 'sync.customers.index', 'sync.customers.index', 'end');
+        CRUD::addButtonFromView('top', 'sync.products.index', 'sync.products.index', 'end');
 
         CRUD::addColumn([
-            'name' => 'CardName',
-            'label' => __('customer.crud.name'),
+            'name' => 'ItemCode',
+            'label' => __('product.crud.item_code'),
             'type' => 'text',
         ]);
 
         CRUD::addColumn([
-            'name' => 'CardCode',
-            'label' => __('customer.crud.code'),
+            'name' => 'ItemName',
+            'label' => __('product.crud.item_name'),
             'type' => 'text',
         ]);
 
         CRUD::addColumn([
-            'name' => 'Address',
-            'label' => __('customer.crud.address'),
+            'name' => 'QuantityOnStock',
+            'label' => __('product.crud.quantity_on_stock'),
+            'type' => 'number',
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'ItemsGroupCode',
+            'label' => __('product.crud.item_group_code'),
             'type' => 'text',
         ]);
 
         CRUD::addColumn([
-            'name' => 'FederalTaxID',
-            'label' => __('customer.crud.federal_tax'),
+            'name' => 'DefaultWarehouse',
+            'label' => __('product.crud.defoult_warehouse'),
             'type' => 'text',
         ]);
+
+
+        /**
+         * Columns can be defined using the fluent syntax:
+         * - CRUD::column('price')->type('number');
+         */
     }
 }

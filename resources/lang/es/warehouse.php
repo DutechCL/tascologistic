@@ -11,5 +11,9 @@ return [
         'street_no'  => 'Número',
         'state'  => 'Estado',
         'city'  => 'Ciudad',
+
+        'button' => [
+            'sync' => 'Sincronizar bodegas',
+        ],
     ],
 ];

@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\UserController;
+use App\Http\Controllers\SAP\SapSyncController;
 use App\Http\Controllers\Api\V1\OrderController;
 use App\Http\Controllers\Api\V1\ProductController;
 use App\Http\Controllers\Api\V1\CustomerController;
@@ -40,6 +41,8 @@ Route::prefix('v1')->group(
         Route::middleware(['auth:sanctum'])->group(function () {
             Route::get('menu-items', [MenuItemCrudController::class, 'getMenuItems']);
             Route::post('problems', [ProblemsController::class, 'index']);
+            
+            Route::post('sap/sync', [SapSyncController::class, 'sync'])->name('admin.sap.sync');
         });
         
         //URL'S ORDENES CDA

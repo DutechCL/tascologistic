@@ -539,3 +539,9 @@ a.nav-link.active{
     padding-left: 20px !important;
 }
 
+.btn-sync-disabled{
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+

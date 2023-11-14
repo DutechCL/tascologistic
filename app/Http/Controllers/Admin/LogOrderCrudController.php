@@ -16,7 +16,7 @@ class LogOrderCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     // use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
     // use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+    // use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
     /**
@@ -28,7 +28,9 @@ class LogOrderCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\LogOrder::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/log-order');
-        CRUD::setEntityNameStrings('log order', 'log orders');
+        CRUD::setEntityNameStrings(__('log_order.log_order'), __('log_order.log_orders'));
+
+        $this->crud->enableExportButtons();
     }
 
     /**
@@ -37,41 +39,57 @@ class LogOrderCrudController extends CrudController
      * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
      * @return void
      */
+    private function setupFilters()
+    {
+        CRUD::addFilter([
+            'name' => 'isSynced',
+            'type' => 'select2',
+            'label' => __('log_order.crud.status'),
+        ], function () {
+            return [
+                0 => __('log_order.crud.filters.is_synced_no'),
+                1 => __('log_order.crud.filters.is_synced_yes'),
+            ];
+        }, function ($value) { // if the filter is active
+            CRUD::addClause('where', 'isSynced', $value);
+        });
+    }
+
     protected function setupListOperation()
     {
-        CRUD::setFromDb(); // set columns from db columns.
+        CRUD::addColumn([
+            'name' => 'DocNum',
+            'label' => __('log_order.crud.doc_num'),
+            'prefix' => 'N° ',
+        ]);
 
-        /**
-         * Columns can be defined using the fluent syntax:
-         * - CRUD::column('price')->type('number');
-         */
-    }
+        CRUD::addColumn([
+            'name' => 'process',
+            'label' => __('log_order.crud.process'),
+        ]);
 
-    /**
-     * Define what happens when the Create operation is loaded.
-     * 
-     * @see https://backpackforlaravel.com/docs/crud-operation-create
-     * @return void
-     */
-    protected function setupCreateOperation()
-    {
-        CRUD::setValidation(LogOrderRequest::class);
-        CRUD::setFromDb(); // set fields from db columns.
+        CRUD::addColumn([
+            'name' => 'message',
+            'label' => __('log_order.crud.message'),
+        ]);
 
-        /**
-         * Fields can be defined using the fluent syntax:
-         * - CRUD::field('price')->type('number');
-         */
-    }
+        CRUD::addColumn([
+            'name' => 'isSynced',
+            'label' => __('log_order.crud.status'),
+            'type' => 'boolean',
+            'options' => [
+                0 => __('log_order.crud.filters.is_synced_no'),
+                1 => __('log_order.crud.filters.is_synced_yes'),
+            ],
+            'wrapper' => [
+                'element' => 'span', // Puedes cambiar esto según la etiqueta HTML que desees utilizar
+                'class' => function ($crud, $column, $entry, $related_key) {
+                    return $column['value'] == 1 ? 'badge badge-success p-1' : 'badge badge-error p-1';
+                },
+            ],
 
-    /**
-     * Define what happens when the Update operation is loaded.
-     * 
-     * @see https://backpackforlaravel.com/docs/crud-operation-update
-     * @return void
-     */
-    protected function setupUpdateOperation()
-    {
-        $this->setupCreateOperation();
+        ]);
+
+        $this->setupFilters();
     }
 }
