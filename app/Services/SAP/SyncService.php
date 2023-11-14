@@ -29,7 +29,6 @@ class SyncService
             $lastSyncedRecord = $modelClass::latest('id')->first();
 
             if($lastSyncedRecord){
-                $this->log("CreateDate $lastSyncedRecord->UpdateDate...");
                 $filterParam = $lastSyncedRecord->UpdateDate ? "UpdateDate ge $lastSyncedRecord->UpdateDate and UpdateTime gt $lastSyncedRecord->UpdateTime" : null;
             }
 
@@ -46,8 +45,7 @@ class SyncService
                                     [$identifier => $record[$identifier]],
                                     $dataToInsert
                                 );
-    
-                                // Aumenta el contador al crear o actualizar un elemento
+
                                 $createdOrUpdatedCount++;
     
                             } catch (\Exception $e) {
@@ -63,13 +61,11 @@ class SyncService
                 }
             } while (isset($response['odata.nextLink']));
     
-            // Devuelve la cantidad de elementos creados o actualizados
             return $createdOrUpdatedCount;
     
         } catch (\Exception $e) {
             $this->logError($e, $modelClass);
-    
-            // En caso de error, puedes devolver -1 u otra señal de error según tu necesidad
+
             return -1;
         }
     }
