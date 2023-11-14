@@ -20,6 +20,10 @@ return new class extends Migration
             $table->string('EmailAddress')->nullable();
             $table->float('CreditLimit', 12, 2)->nullable();
             $table->float('MaxCommitment', 12, 2)->nullable();
+            $table->date('CreateDate')->nullable();
+            $table->time('CreateTime')->nullable();
+            $table->date('UpdateDate')->nullable();
+            $table->time('UpdateTime')->nullable();
             $table->timestamps();
         });
     }

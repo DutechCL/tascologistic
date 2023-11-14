@@ -19,7 +19,11 @@ class Customer extends Model
         'FederalTaxID', 
         'EmailAddress', 
         'CreditLimit', 
-        'MaxCommitment'
+        'MaxCommitment',
+        'CreateDate',
+        'CreateTime',
+        'UpdateDate',
+        'UpdateTime',
     ];
 
     const IDENTIFIER = 'CardCode';

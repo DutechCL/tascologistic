@@ -32,6 +32,6 @@ class DatabaseSeeder extends Seeder
         $this->call(MenuItemsTableSeeder::class);
         // $this->call(UserWarehouseTableSeeder::class);
         $this->call(SettingsTableSeeder::class);
-        $this->call(LogOrdersTableSeeder::class);
+        // $this->call(LogOrdersTableSeeder::class);
     }
 }

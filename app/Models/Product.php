@@ -18,6 +18,10 @@ class Product extends Model
         'ItemsGroupCode',
         'QuantityOnStock',
         'DefaultWarehouse',
+        'CreateDate',
+        'CreateTime',
+        'UpdateDate',
+        'UpdateTime',
     ];
 
     const IDENTIFIER = 'ItemCode';

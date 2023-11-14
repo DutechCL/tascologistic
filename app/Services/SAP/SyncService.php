@@ -24,9 +24,16 @@ class SyncService
         try {
             $fields = $modelClass::FILLABLE;
             $identifier = $modelClass::IDENTIFIER;
+
+
+            $lastSyncedRecord = $modelClass::latest('id')->first();
+
+            $filterParam = $lastSyncedRecord->CreateDate ? "CreateDate ge $lastSyncedRecord->CreateDate and CreateTime gt $lastSyncedRecord->CreateTime" : null;
+        }
+
     
             do {
-                $response = $this->sapService->get($endpoint, $skip, $fields);
+                $response = $this->sapService->get($endpoint, $skip, $fields, $filterParam);
     
                 if (!empty($response['value'])) {
                     foreach ($response['value'] as $record) {
@@ -66,7 +73,7 @@ class SyncService
         }
     }
     
-    public function syncOrders($docDate = null)
+    public function syncOrders($docDate = '2023-11-10')
     {
         $endpoint = 'orders.get';
         $this->log("Syncing $endpoint...");
