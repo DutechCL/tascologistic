@@ -68,8 +68,8 @@ class SyncService
     
     public function syncOrders($docDate = null)
     {
-        $this->log("Syncing $endpoint...");
         $endpoint = 'orders.get';
+        $this->log("Syncing $endpoint...");
         $modelClass = Order::class;
         $skip = 0;
 
