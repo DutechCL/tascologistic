@@ -30,7 +30,7 @@ class SyncService
 
             if($lastSyncedRecord){
 
-                $filterParam = $lastSyncedRecord ? "CreateDate ge $lastSyncedRecord->CreateDate and CreateTime gt $lastSyncedRecord->CreateTime" : null;
+                $filterParam = $lastSyncedRecord->CreateDate ? "CreateDate ge $lastSyncedRecord->CreateDate and CreateTime gt $lastSyncedRecord->CreateTime" : null;
 
             }
 
