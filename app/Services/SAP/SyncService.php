@@ -29,8 +29,8 @@ class SyncService
             $lastSyncedRecord = $modelClass::latest('id')->first();
 
             if($lastSyncedRecord){
-                $this->log("CreateDate $lastSyncedRecord->CreateDate...");
-                $filterParam = $lastSyncedRecord->CreateDate ? "CreateDate ge $lastSyncedRecord->CreateDate and CreateTime gt $lastSyncedRecord->CreateTime" : null;
+                $this->log("CreateDate $lastSyncedRecord->UpdateDate...");
+                $filterParam = $lastSyncedRecord->UpdateDate ? "UpdateDate ge $lastSyncedRecord->UpdateDate and UpdateTime gt $lastSyncedRecord->UpdateTime" : null;
             }
 
             do {
