@@ -128,7 +128,7 @@ class Order extends Model
 
             $order->syncOrderItems($documentLines);
 
-            // logOrder::success($process, $orderData['DocNum']);
+            logOrder::success($process, $orderData['DocNum']);
 
             return $order;
         } catch (\Exception $e) {

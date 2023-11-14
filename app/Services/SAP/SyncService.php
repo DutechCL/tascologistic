@@ -23,31 +23,37 @@ class SyncService
 
             $fields = $modelClass::FILLABLE;
             $identifier = $modelClass::IDENTIFIER;
-            $filterParam = null;
 
             do {
-                $response = $this->sapService->get($endpoint, $skip, $fields, $filterParam);
+                $response = $this->sapService->get($endpoint, $skip, $fields);
 
                 if (!empty($response['value'])) {
-                    foreach ($response['value'] as $record) {
-                        $dataToInsert = array_intersect_key($record, array_flip($fields));
 
-                        $this->log("Loading {$endpoint} $skip...");
+                    foreach ($response['value'] as $record) {
+
+                        $dataToInsert = array_intersect_key($record, array_flip($fields));
 
                         if (is_array($record) && isset($record[$identifier])) {
                             try {
+
                                 $modelClass::updateOrCreate(
                                     [$identifier => $record[$identifier]],
                                     $dataToInsert
                                 );
+
                             } catch (\Exception $e) {
+
                                 $this->logError($e, $modelClass);
                             }
                         }
                     }
+
                     $skip += $this->batchSize;
+
                 } else {
+
                     break;
+
                 }
             } while (isset($response['odata.nextLink']));
         } catch (\Exception $e) {
@@ -61,7 +67,6 @@ class SyncService
     {
         $endpoint = 'orders.get';
         $modelClass = Order::class;
-
         $skip = 0;
 
         try {
@@ -70,10 +75,18 @@ class SyncService
             $identifier = $modelClass::IDENTIFIER;
             
             if ($docDate) {
-                $filterParam = "DocDate ge {$docDate} and DocTime gt 12:00:00";
+
+                $filterParam = "DocDate ge {$docDate}";
+
             } else {
-                $lastSyncedOrder = $modelClass::latest('DocEntry')->first();
-                $filterParam = $lastSyncedOrder ? "DocEntry gt {$lastSyncedOrder->DocEntry}" : null;
+
+                $lastSyncedOrder = $modelClass::latest('DocNum')->first();
+
+                if($lastSyncedOrder){
+
+                    $filterParam = $lastSyncedOrder ? "DocDate ge $lastSyncedOrder->DocDate and DocTime gt $lastSyncedOrder->DocTime" : null;
+
+                }
             }
 
             do {
@@ -81,17 +94,23 @@ class SyncService
                 $response = $this->sapService->get($endpoint, $skip, $fields, $filterParam);
 
                 if (!empty($response['value'])) {
+
                     foreach ($response['value'] as $orderData) {
-                        $this->log("Loading orders {$orderData['DocEntry']}...");
+
                         $modelClass::syncOrderWithItems($orderData);
                     }
+
                     $skip += $this->batchSize;
                 } else {
+
                     break;
                 }
             } while (isset($response['odata.nextLink']));
+
         } catch (\Exception $e) {
+
             $this->logError($e, $modelClass, $lastSyncedOrder->DocNum);
+            
         }
     }
 
