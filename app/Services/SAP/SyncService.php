@@ -29,8 +29,6 @@ class SyncService
             $lastSyncedRecord = $modelClass::latest('id')->first();
 
             $filterParam = $lastSyncedRecord->CreateDate ? "CreateDate ge $lastSyncedRecord->CreateDate and CreateTime gt $lastSyncedRecord->CreateTime" : null;
-        }
-
     
             do {
                 $response = $this->sapService->get($endpoint, $skip, $fields, $filterParam);
