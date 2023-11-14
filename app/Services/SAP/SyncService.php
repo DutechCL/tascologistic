@@ -29,9 +29,8 @@ class SyncService
             $lastSyncedRecord = $modelClass::latest('id')->first();
 
             if($lastSyncedRecord){
-
+                $this->log("CreateDate $lastSyncedRecord->CreateDate...");
                 $filterParam = $lastSyncedRecord->CreateDate ? "CreateDate ge $lastSyncedRecord->CreateDate and CreateTime gt $lastSyncedRecord->CreateTime" : null;
-
             }
 
             do {
@@ -75,7 +74,7 @@ class SyncService
         }
     }
     
-    public function syncOrders($docDate = '2023-11-10')
+    public function syncOrders($docDate = null)
     {
         $endpoint = 'orders.get';
         $this->log("Syncing $endpoint...");
