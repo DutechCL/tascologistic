@@ -20,7 +20,7 @@ class SyncService
         $this->log("Syncing $endpoint...");
         $skip = 0;
         $createdOrUpdatedCount = 0;
-    
+        $filterParam = null;
         try {
             $fields = $modelClass::FILLABLE;
             $identifier = $modelClass::IDENTIFIER;
@@ -28,8 +28,12 @@ class SyncService
 
             $lastSyncedRecord = $modelClass::latest('id')->first();
 
-            $filterParam = $lastSyncedRecord->CreateDate ? "CreateDate ge $lastSyncedRecord->CreateDate and CreateTime gt $lastSyncedRecord->CreateTime" : null;
-    
+            if($lastSyncedRecord){
+
+                $filterParam = $lastSyncedRecord ? "CreateDate ge $lastSyncedRecord->CreateDate and CreateTime gt $lastSyncedRecord->CreateTime" : null;
+
+            }
+
             do {
                 $response = $this->sapService->get($endpoint, $skip, $fields, $filterParam);
     
