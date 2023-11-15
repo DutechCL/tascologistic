@@ -146,7 +146,7 @@ class SAPService
         }
     }
 
-    public function endpoint(string $endpoint)
+    public function endpoint(string $endpoint, string $method = 'get')
     {
         return config("services.sap.endpoints.$endpoint");
     }
