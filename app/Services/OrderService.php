@@ -24,7 +24,6 @@ class OrderService
         $query->withOrderDetails()
             ->where('process_id', Process::PROCESS_ID_CDA)
             ->where('is_managed', false)
-            ->orderBy('updated_at', 'DESC')
             ->orderBy('DocDate', 'DESC');
 
         if ($execute) {
