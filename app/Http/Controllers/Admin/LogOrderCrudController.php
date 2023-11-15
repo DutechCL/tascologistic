@@ -53,6 +53,16 @@ class LogOrderCrudController extends CrudController
         }, function ($value) { // if the filter is active
             CRUD::addClause('where', 'isSynced', $value);
         });
+
+        CRUD::addFilter([
+            'name' => 'date',
+            'type' => 'date_range',
+            'label' => __('log_order.crud.date'),
+        ], false, function ($value) { // if the filter is active
+            $dates = json_decode($value);
+            CRUD::addClause('whereDate', 'created_at', $dates->from);
+            CRUD::addClause('whereDate', 'created_at', $dates->to);
+        });
     }
 
     protected function setupListOperation()
