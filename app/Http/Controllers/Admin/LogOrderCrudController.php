@@ -55,7 +55,7 @@ class LogOrderCrudController extends CrudController
         });
 
         CRUD::addFilter([
-            'name' => 'date',
+            'name' => 'created_at',
             'type' => 'date_range',
             'label' => __('log_order.crud.date'),
         ], false, function ($value) { // if the filter is active
