@@ -15,7 +15,7 @@ class SyncService
         $this->sapService = $sapService;
     }
 
-    public static function sync(array $config)
+    public function sync(array $config)
     {
 
         $skip = 0;
