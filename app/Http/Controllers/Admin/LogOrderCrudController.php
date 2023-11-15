@@ -60,8 +60,8 @@ class LogOrderCrudController extends CrudController
             'label' => __('log_order.crud.date'),
         ], false, function ($value) { // if the filter is active
             $dates = json_decode($value);
-            CRUD::addClause('whereDate', 'created_at', $dates->from);
-            CRUD::addClause('whereDate', 'created_at', $dates->to);
+            CRUD::addClause('where', 'created_at', '>=', $dates->from);
+            CRUD::addClause('where', 'created_at', '<=', $dates->to . ' 23:59:59');
         });
     }
 
