@@ -93,18 +93,7 @@ class LogOrderCrudController extends CrudController
         CRUD::addColumn([
             'name' => 'created_at',
             'label' => __('log_order.crud.date'),
-            'type' => 'boolean',
-            'options' => [
-                0 => __('log_order.crud.filters.is_synced_no'),
-                1 => __('log_order.crud.filters.is_synced_yes'),
-            ],
-            'wrapper' => [
-                'element' => 'span', // Puedes cambiar esto según la etiqueta HTML que desees utilizar
-                'class' => function ($crud, $column, $entry, $related_key) {
-                    return $column['value'] == 1 ? 'badge badge-success p-1' : 'badge badge-error p-1';
-                },
-            ],
-
+            'type' => 'date',
         ]);
 
         $this->setupFilters();
