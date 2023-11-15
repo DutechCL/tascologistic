@@ -17,7 +17,7 @@ function ajaxSapSync(event, endpoint, model) {
         },
         success: function(response) {
             console.log(response)
-            crud.table.ajax.reload()
+            // crud.table.ajax.reload()
             new Noty({
                 text: response.message,
                 type: 'success',
