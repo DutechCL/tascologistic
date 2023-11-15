@@ -46,20 +46,10 @@ class SAPIntegration extends Command
                 $this->syncService->syncOrders($dateTo);
                 break;
             case 'all':
-                $this->info('Synchronizing all data...');
-                $this->info('Synchronizing customers...');
                 $this->syncService->syncData('business_partners.get', Customer::class);
-
-                $this->info('Synchronizing sales persons...');
                 $this->syncService->syncData('sales_persons.get', SalesPerson::class);
-
-                $this->info('Synchronizing warehouses...');
                 $this->syncService->syncData('warehouses.get', Warehouse::class);
-
-                $this->info('Synchronizing products...');
                 $this->syncService->syncData('products.get', Product::class);
-
-                $this->info('Synchronizing orders...');
                 $this->syncService->syncOrders($dateTo); 
                 break;
             default:

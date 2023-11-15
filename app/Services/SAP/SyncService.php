@@ -25,7 +25,7 @@ class SyncService
             $identifier = $modelClass::IDENTIFIER;
 
 
-            $lastSyncedRecord = $modelClass::latest('id')->first();
+            $lastSyncedRecord = $modelClass::latest('CreateDate')->first();
 
             if($lastSyncedRecord){
                 $filterParam = $lastSyncedRecord->CreateDate ? "CreateDate ge $lastSyncedRecord->CreateDate and CreateTime gt $lastSyncedRecord->CreateTime" : null;
