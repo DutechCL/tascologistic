@@ -34,12 +34,19 @@ class LogOrder extends Model
     {
         try {
 
-            self::create([
+            $where = [
+                'process' => $process, 
+                'DocNum' => $DocNum
+            ];
+            $data = [
                 'process' => $process,
                 'DocNum' => $DocNum,
                 'message' => $message,
                 'isSynced' => $isSynced,
-            ]);
+            ];
+
+            self::updateOrCreate($where, $data);
+
 
         } catch (\Exception $e) {
 
