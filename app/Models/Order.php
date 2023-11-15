@@ -24,6 +24,7 @@ class Order extends Model
 {
     use HasFactory;
 
+    const IDENTIFIER = 'CardCode';
     const FILLABLE_API = [
         'DocEntry',
         'DocNum',
@@ -41,7 +42,6 @@ class Order extends Model
         'ShipToCode',
         'Indicator'
     ];
-
     const FILLABLE_INTERNAL = [
         'process_id',
         'customer_id',
@@ -51,8 +51,13 @@ class Order extends Model
         'observation',
         'is_managed',
     ];
-
-    const IDENTIFIER = 'CardCode';
+    const SYNC_INFO = [
+        'endpoint'   => 'orders', // SAP endpoint confifgured in config/service.php
+        'model'      => self::class,
+        'fields'     => self::FILLABLE_API,
+        'identifier' => self::IDENTIFIER,
+        'method'     => 'syncOrderWithItems',
+    ];
 
     protected $fillable = [
         ...self::FILLABLE_API,

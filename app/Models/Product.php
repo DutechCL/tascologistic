@@ -11,7 +11,8 @@ class Product extends Model
 {
     use CrudTrait;
     use HasFactory;
-
+    
+    const IDENTIFIER = 'ItemCode';
     const FILLABLE = [
         'ItemCode',
         'ItemName',
@@ -23,8 +24,13 @@ class Product extends Model
         'UpdateDate',
         'UpdateTime',
     ];
-
-    const IDENTIFIER = 'ItemCode';
+    const SYNC_INFO = [
+        'endpoint'   => 'products', // SAP endpoint confifgured in config/service.php
+        'model'      => self::class,
+        'fields'     => self::FILLABLE_API,
+        'identifier' => self::IDENTIFIER,
+        'method'     => 'updateOrCreate',
+    ];
 
     protected $fillable = self::FILLABLE;
 

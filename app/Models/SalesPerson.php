@@ -13,6 +13,7 @@ class SalesPerson extends Model
 
     protected $table = 'sales_persons';
 
+    const IDENTIFIER = 'SalesEmployeeCode';
     const FILLABLE = [
         'SalesEmployeeCode',
         'SalesEmployeeName',
@@ -25,8 +26,14 @@ class SalesPerson extends Model
         'Mobile',
         'Email',
     ];
+    const SYNC_INFO = [
+        'endpoint'   => 'sales_persons', // SAP endpoint confifgured in config/service.php
+        'model'      => self::class,
+        'fields'     => self::FILLABLE,
+        'identifier' => self::IDENTIFIER,
+        'method'     => 'updateOrCreate',
+    ];
 
-    const IDENTIFIER = 'SalesEmployeeCode';
 
     protected $fillable = self::FILLABLE;
 

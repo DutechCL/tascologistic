@@ -12,6 +12,7 @@ class Customer extends Model
     use CrudTrait;
     use HasFactory;
 
+    const IDENTIFIER = 'CardCode';
     const FILLABLE = [
         'CardCode', 
         'CardName', 
@@ -25,8 +26,13 @@ class Customer extends Model
         'UpdateDate',
         'UpdateTime',
     ];
-
-    const IDENTIFIER = 'CardCode';
+    const SYNC_INFO = [
+        'endpoint'   => 'business_partners', // SAP endpoint confifgured in config/service.php
+        'model'      => self::class,
+        'fields'     => self::FILLABLE,
+        'identifier' => self::IDENTIFIER,
+        'method'     => 'updateOrCreate',
+    ];
 
     protected $fillable = self::FILLABLE;
 
