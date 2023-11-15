@@ -106,6 +106,12 @@ class LogOrderCrudController extends CrudController
             'type' => 'date',
         ]);
 
+        CRUD::addColumn([
+            'name' => 'time',
+            'label' => __('log_order.crud.time'),
+            'type' => 'time',
+        ]);
+
         $this->setupFilters();
     }
 }

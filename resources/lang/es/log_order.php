@@ -11,6 +11,7 @@ return [
         'is_synced' => 'Sincronizado',
         'status'    => 'Estado',
         'date'      => 'Fecha',
+        'time'      => 'Hora',
 
         'filters' => [
             'process'       => 'Procesos',
