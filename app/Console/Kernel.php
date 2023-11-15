@@ -19,7 +19,7 @@ class Kernel extends ConsoleKernel
     {
         $intervalInMinutes = (int) Setting::get('_sap_interval_sync') ?? 5;
 
-        $schedule->command('sap:sync all')
+        $schedule->command('sap:sync all --docDate=2023-10-01')
                  ->everyMinute($intervalInMinutes);
     }
 
