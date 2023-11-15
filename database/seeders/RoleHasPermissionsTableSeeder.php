@@ -111,85 +111,95 @@ class RoleHasPermissionsTableSeeder extends Seeder
             ),
             18 => 
             array (
-                'permission_id' => 7,
-                'role_id' => 2,
+                'permission_id' => 23,
+                'role_id' => 1,
             ),
             19 => 
             array (
-                'permission_id' => 8,
+                'permission_id' => 7,
                 'role_id' => 2,
             ),
             20 => 
             array (
-                'permission_id' => 9,
+                'permission_id' => 8,
                 'role_id' => 2,
             ),
             21 => 
             array (
-                'permission_id' => 10,
+                'permission_id' => 9,
                 'role_id' => 2,
             ),
             22 => 
             array (
-                'permission_id' => 11,
+                'permission_id' => 10,
                 'role_id' => 2,
             ),
             23 => 
             array (
-                'permission_id' => 12,
+                'permission_id' => 11,
                 'role_id' => 2,
             ),
             24 => 
             array (
-                'permission_id' => 17,
+                'permission_id' => 12,
                 'role_id' => 2,
             ),
             25 => 
             array (
-                'permission_id' => 18,
+                'permission_id' => 17,
                 'role_id' => 2,
             ),
             26 => 
             array (
-                'permission_id' => 20,
+                'permission_id' => 18,
                 'role_id' => 2,
             ),
             27 => 
             array (
-                'permission_id' => 21,
+                'permission_id' => 20,
                 'role_id' => 2,
             ),
             28 => 
             array (
-                'permission_id' => 22,
+                'permission_id' => 21,
                 'role_id' => 2,
             ),
             29 => 
             array (
+                'permission_id' => 22,
+                'role_id' => 2,
+            ),
+            30 => 
+            array (
+                'permission_id' => 23,
+                'role_id' => 2,
+            ),
+            31 => 
+            array (
                 'permission_id' => 8,
                 'role_id' => 3,
             ),
-            30 => 
+            32 => 
             array (
                 'permission_id' => 12,
                 'role_id' => 3,
             ),
-            31 => 
+            33 => 
             array (
                 'permission_id' => 9,
                 'role_id' => 4,
             ),
-            32 => 
+            34 => 
             array (
                 'permission_id' => 10,
                 'role_id' => 4,
             ),
-            33 => 
+            35 => 
             array (
                 'permission_id' => 11,
                 'role_id' => 4,
             ),
-            34 => 
+            36 => 
             array (
                 'permission_id' => 12,
                 'role_id' => 4,

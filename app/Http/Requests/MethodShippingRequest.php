@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PermissionsRequest extends FormRequest
+class MethodShippingRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,14 +25,7 @@ class PermissionsRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'actions' => ['required', 'array', function ($attribute, $value, $fail) {
-                    foreach ($value as $group) {
-                        if (!isset($group['action']) || empty($group['action'])) {
-                            $fail("El campo Acción es requerido para cada grupo.");
-                        }
-                    }
-            }],
+            'name' => 'required'
         ];
     }
 
@@ -44,8 +37,7 @@ class PermissionsRequest extends FormRequest
     public function attributes()
     {
         return [
-            'name' => __('permission.crud.name'),
-            '*.action' => __('permission.crud.action'),
+            'name' => __('order_status.crud.name'),
         ];
     }
 

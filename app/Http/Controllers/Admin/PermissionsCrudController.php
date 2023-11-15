@@ -42,8 +42,8 @@ class PermissionsCrudController extends CrudController
         try {
             DB::beginTransaction();
 
-            $actions = $this->crud->getRequest()->input('actions', []);
-            $name = $this->crud->getRequest()->input('name', '');
+            $actions = $request->actions;
+            $name = $request->name;
 
             if (!empty($actions)) {
                 $permissions = []; 

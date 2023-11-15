@@ -43,6 +43,14 @@ class MethodShippingsTableSeeder extends Seeder
                 'name' => 'Despacho',
                 'updated_at' => '2023-08-04 20:19:55',
             ),
+            3 => 
+            array (
+                'created_at' => '2023-11-15 18:57:38',
+                'description' => 'Cliente Retira Samex',
+                'id' => 4,
+                'name' => 'Retira Samex',
+                'updated_at' => '2023-11-15 18:57:38',
+            ),
         ));
         
         

@@ -11,6 +11,7 @@ return [
         'external'  => 'Enlace externo',
         'view'  => 'Vista',
         'order' => 'Orden',
-        'icon' => 'Icono'
+        'icon' => 'Icono',
+        'url' => 'Enlace',
     ],
 ];

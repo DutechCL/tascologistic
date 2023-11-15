@@ -26,8 +26,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36284',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             1 => 
             array (
@@ -36,8 +36,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36285',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             2 => 
             array (
@@ -46,8 +46,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36286',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             3 => 
             array (
@@ -56,8 +56,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36289',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             4 => 
             array (
@@ -66,8 +66,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36290',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             5 => 
             array (
@@ -76,8 +76,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36538',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             6 => 
             array (
@@ -86,8 +86,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36398',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             7 => 
             array (
@@ -96,8 +96,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36291',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             8 => 
             array (
@@ -106,8 +106,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36288',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             9 => 
             array (
@@ -116,8 +116,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36297',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             10 => 
             array (
@@ -126,8 +126,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36293',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             11 => 
             array (
@@ -136,8 +136,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36292',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             12 => 
             array (
@@ -146,8 +146,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36301',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             13 => 
             array (
@@ -156,8 +156,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36287',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             14 => 
             array (
@@ -166,8 +166,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36294',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             15 => 
             array (
@@ -176,8 +176,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36411',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             16 => 
             array (
@@ -186,8 +186,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36299',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             17 => 
             array (
@@ -196,8 +196,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36305',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             18 => 
             array (
@@ -206,8 +206,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36307',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             19 => 
             array (
@@ -216,8 +216,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36306',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:28',
-                'updated_at' => '2023-11-15 13:46:28',
+                'created_at' => '2023-11-15 16:31:23',
+                'updated_at' => '2023-11-15 16:31:23',
             ),
             20 => 
             array (
@@ -226,8 +226,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36295',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             21 => 
             array (
@@ -236,8 +236,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36309',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             22 => 
             array (
@@ -246,8 +246,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36311',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             23 => 
             array (
@@ -256,8 +256,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36308',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             24 => 
             array (
@@ -266,8 +266,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36317',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             25 => 
             array (
@@ -276,8 +276,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36319',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             26 => 
             array (
@@ -286,8 +286,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36419',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             27 => 
             array (
@@ -296,8 +296,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36318',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             28 => 
             array (
@@ -306,8 +306,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36320',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             29 => 
             array (
@@ -316,8 +316,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36322',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             30 => 
             array (
@@ -326,8 +326,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36323',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             31 => 
             array (
@@ -336,8 +336,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36326',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             32 => 
             array (
@@ -346,8 +346,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36327',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             33 => 
             array (
@@ -356,8 +356,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36328',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             34 => 
             array (
@@ -366,8 +366,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36329',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             35 => 
             array (
@@ -376,8 +376,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36314',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             36 => 
             array (
@@ -386,8 +386,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36313',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             37 => 
             array (
@@ -396,8 +396,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36330',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             38 => 
             array (
@@ -406,8 +406,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36331',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             39 => 
             array (
@@ -416,8 +416,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36334',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:29',
-                'updated_at' => '2023-11-15 13:46:29',
+                'created_at' => '2023-11-15 16:31:24',
+                'updated_at' => '2023-11-15 16:31:24',
             ),
             40 => 
             array (
@@ -426,8 +426,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36310',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:25',
+                'updated_at' => '2023-11-15 16:31:25',
             ),
             41 => 
             array (
@@ -436,8 +436,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36339',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:25',
+                'updated_at' => '2023-11-15 16:31:25',
             ),
             42 => 
             array (
@@ -446,8 +446,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36383',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:25',
+                'updated_at' => '2023-11-15 16:31:25',
             ),
             43 => 
             array (
@@ -456,8 +456,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36338',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:25',
+                'updated_at' => '2023-11-15 16:31:25',
             ),
             44 => 
             array (
@@ -466,8 +466,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36336',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:25',
+                'updated_at' => '2023-11-15 16:31:25',
             ),
             45 => 
             array (
@@ -476,8 +476,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36346',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             46 => 
             array (
@@ -486,8 +486,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36341',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             47 => 
             array (
@@ -496,8 +496,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36347',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             48 => 
             array (
@@ -506,8 +506,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36349',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             49 => 
             array (
@@ -516,8 +516,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36340',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             50 => 
             array (
@@ -526,8 +526,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36343',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             51 => 
             array (
@@ -536,8 +536,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36350',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             52 => 
             array (
@@ -546,8 +546,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36422',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             53 => 
             array (
@@ -556,8 +556,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36421',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             54 => 
             array (
@@ -566,8 +566,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36325',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             55 => 
             array (
@@ -576,8 +576,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36348',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             56 => 
             array (
@@ -586,8 +586,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36333',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             57 => 
             array (
@@ -596,8 +596,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36315',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             58 => 
             array (
@@ -606,8 +606,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36324',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             59 => 
             array (
@@ -616,8 +616,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36312',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:30',
-                'updated_at' => '2023-11-15 13:46:30',
+                'created_at' => '2023-11-15 16:31:26',
+                'updated_at' => '2023-11-15 16:31:26',
             ),
             60 => 
             array (
@@ -626,8 +626,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36426',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:31',
-                'updated_at' => '2023-11-15 13:46:31',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             61 => 
             array (
@@ -636,8 +636,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36345',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:31',
-                'updated_at' => '2023-11-15 13:46:31',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             62 => 
             array (
@@ -646,8 +646,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36344',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:31',
-                'updated_at' => '2023-11-15 13:46:31',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             63 => 
             array (
@@ -656,8 +656,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36356',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:31',
-                'updated_at' => '2023-11-15 13:46:31',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             64 => 
             array (
@@ -666,8 +666,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36431',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             65 => 
             array (
@@ -676,8 +676,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36358',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             66 => 
             array (
@@ -686,8 +686,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36332',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             67 => 
             array (
@@ -696,8 +696,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36337',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             68 => 
             array (
@@ -706,8 +706,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36357',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             69 => 
             array (
@@ -716,8 +716,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36296',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             70 => 
             array (
@@ -726,8 +726,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36335',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             71 => 
             array (
@@ -736,8 +736,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36298',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             72 => 
             array (
@@ -746,8 +746,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36321',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             73 => 
             array (
@@ -756,8 +756,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36304',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             74 => 
             array (
@@ -766,8 +766,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36363',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             75 => 
             array (
@@ -776,8 +776,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36362',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             76 => 
             array (
@@ -786,8 +786,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36351',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             77 => 
             array (
@@ -796,8 +796,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36369',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             78 => 
             array (
@@ -806,8 +806,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36367',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             79 => 
             array (
@@ -816,8 +816,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36368',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:32',
-                'updated_at' => '2023-11-15 13:46:32',
+                'created_at' => '2023-11-15 16:31:27',
+                'updated_at' => '2023-11-15 16:31:27',
             ),
             80 => 
             array (
@@ -826,8 +826,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36519',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             81 => 
             array (
@@ -836,8 +836,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36302',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             82 => 
             array (
@@ -846,8 +846,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36370',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             83 => 
             array (
@@ -856,8 +856,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36366',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             84 => 
             array (
@@ -866,8 +866,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36365',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             85 => 
             array (
@@ -876,8 +876,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36429',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             86 => 
             array (
@@ -886,8 +886,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36372',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             87 => 
             array (
@@ -896,8 +896,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36432',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             88 => 
             array (
@@ -906,8 +906,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36374',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             89 => 
             array (
@@ -916,8 +916,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36378',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             90 => 
             array (
@@ -926,8 +926,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36380',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             91 => 
             array (
@@ -936,8 +936,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36355',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             92 => 
             array (
@@ -946,8 +946,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36381',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             93 => 
             array (
@@ -956,8 +956,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36433',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             94 => 
             array (
@@ -966,8 +966,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36382',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             95 => 
             array (
@@ -976,8 +976,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36373',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             96 => 
             array (
@@ -986,8 +986,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36384',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             97 => 
             array (
@@ -996,8 +996,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36376',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             98 => 
             array (
@@ -1006,8 +1006,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36385',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             99 => 
             array (
@@ -1016,8 +1016,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36386',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:33',
-                'updated_at' => '2023-11-15 13:46:33',
+                'created_at' => '2023-11-15 16:31:28',
+                'updated_at' => '2023-11-15 16:31:28',
             ),
             100 => 
             array (
@@ -1026,8 +1026,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36437',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             101 => 
             array (
@@ -1036,8 +1036,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36387',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             102 => 
             array (
@@ -1046,8 +1046,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36389',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             103 => 
             array (
@@ -1056,8 +1056,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36388',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             104 => 
             array (
@@ -1066,8 +1066,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36438',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             105 => 
             array (
@@ -1076,8 +1076,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36375',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             106 => 
             array (
@@ -1086,8 +1086,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36391',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             107 => 
             array (
@@ -1096,8 +1096,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36430',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             108 => 
             array (
@@ -1106,8 +1106,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36436',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             109 => 
             array (
@@ -1116,8 +1116,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36360',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             110 => 
             array (
@@ -1126,8 +1126,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36300',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             111 => 
             array (
@@ -1136,8 +1136,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36545',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             112 => 
             array (
@@ -1146,18 +1146,18 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36354',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             113 => 
             array (
                 'id' => 114,
                 'process' => 'Sincronizacion masiva',
                 'DocNum' => '36352',
-            'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column \'method_shipping_id\' cannot be null (Connection: mysql, SQL: insert into `orders` (`DocNum`, `DocEntry`, `DocType`, `DocDate`, `CardCode`, `DocTotal`, `Comments`, `DocTime`, `SalesPersonCode`, `Confirmed`, `ShipToCode`, `Indicator`, `U_SBO_FormaPago`, `U_SBO_FormaEntrega`, `customer_id`, `method_shipping_id`, `SalesEmployeeName`, `updated_at`, `created_at`) values (36352, 43734, dDocument_Items, 2023-11-10, C77359877-0, 37931, TRANSF. / CLODOMIRO ROZAS 477, ANTOFAGASTA / GÉNESIS BENITEZ TAPIA / +56 9 7532 1605 / administracion@rqmining.cl Basado en Ofertas de ventas 50074., 12:51:00, 8, 1, OFICINA, ?, Factura, Retira Samex, 2056, ?, Administracion, 2023-11-15 13:46:34, 2023-11-15 13:46:34))',
+            'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column \'method_shipping_id\' cannot be null (Connection: mysql, SQL: insert into `orders` (`DocNum`, `DocEntry`, `DocType`, `DocDate`, `CardCode`, `DocTotal`, `Comments`, `DocTime`, `SalesPersonCode`, `Confirmed`, `ShipToCode`, `Indicator`, `U_SBO_FormaPago`, `U_SBO_FormaEntrega`, `customer_id`, `method_shipping_id`, `SalesEmployeeName`, `updated_at`, `created_at`) values (36352, 43734, dDocument_Items, 2023-11-10, C77359877-0, 37931, TRANSF. / CLODOMIRO ROZAS 477, ANTOFAGASTA / GÉNESIS BENITEZ TAPIA / +56 9 7532 1605 / administracion@rqmining.cl Basado en Ofertas de ventas 50074., 12:51:00, 8, 1, OFICINA, ?, Factura, Retira Samex, 2275, ?, ?, 2023-11-15 16:31:29, 2023-11-15 16:31:29))',
                 'isSynced' => 0,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             114 => 
             array (
@@ -1166,8 +1166,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36397',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             115 => 
             array (
@@ -1176,8 +1176,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36420',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             116 => 
             array (
@@ -1186,8 +1186,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36428',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             117 => 
             array (
@@ -1196,8 +1196,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36393',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             118 => 
             array (
@@ -1206,8 +1206,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36364',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             119 => 
             array (
@@ -1216,8 +1216,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36401',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:34',
-                'updated_at' => '2023-11-15 13:46:34',
+                'created_at' => '2023-11-15 16:31:29',
+                'updated_at' => '2023-11-15 16:31:29',
             ),
             120 => 
             array (
@@ -1226,8 +1226,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36400',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             121 => 
             array (
@@ -1236,8 +1236,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36405',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             122 => 
             array (
@@ -1246,8 +1246,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36403',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             123 => 
             array (
@@ -1256,8 +1256,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36408',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             124 => 
             array (
@@ -1266,8 +1266,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36395',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             125 => 
             array (
@@ -1276,8 +1276,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36407',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             126 => 
             array (
@@ -1286,8 +1286,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36441',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             127 => 
             array (
@@ -1296,8 +1296,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36409',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             128 => 
             array (
@@ -1306,8 +1306,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36406',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             129 => 
             array (
@@ -1316,8 +1316,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36443',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             130 => 
             array (
@@ -1326,8 +1326,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36410',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             131 => 
             array (
@@ -1336,8 +1336,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36542',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             132 => 
             array (
@@ -1346,8 +1346,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36546',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             133 => 
             array (
@@ -1356,8 +1356,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36513',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             134 => 
             array (
@@ -1366,8 +1366,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36371',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             135 => 
             array (
@@ -1376,8 +1376,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36390',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             136 => 
             array (
@@ -1386,8 +1386,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36316',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             137 => 
             array (
@@ -1396,8 +1396,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36359',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             138 => 
             array (
@@ -1406,8 +1406,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36303',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             139 => 
             array (
@@ -1416,8 +1416,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36396',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:35',
-                'updated_at' => '2023-11-15 13:46:35',
+                'created_at' => '2023-11-15 16:31:30',
+                'updated_at' => '2023-11-15 16:31:30',
             ),
             140 => 
             array (
@@ -1426,8 +1426,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36442',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:31',
+                'updated_at' => '2023-11-15 16:31:31',
             ),
             141 => 
             array (
@@ -1436,8 +1436,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36548',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:31',
+                'updated_at' => '2023-11-15 16:31:31',
             ),
             142 => 
             array (
@@ -1446,8 +1446,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36444',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:31',
+                'updated_at' => '2023-11-15 16:31:31',
             ),
             143 => 
             array (
@@ -1456,8 +1456,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36446',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:31',
+                'updated_at' => '2023-11-15 16:31:31',
             ),
             144 => 
             array (
@@ -1466,8 +1466,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36445',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:31',
+                'updated_at' => '2023-11-15 16:31:31',
             ),
             145 => 
             array (
@@ -1476,8 +1476,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36448',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:31',
+                'updated_at' => '2023-11-15 16:31:31',
             ),
             146 => 
             array (
@@ -1486,8 +1486,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36547',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:31',
+                'updated_at' => '2023-11-15 16:31:31',
             ),
             147 => 
             array (
@@ -1496,8 +1496,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36453',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:31',
+                'updated_at' => '2023-11-15 16:31:31',
             ),
             148 => 
             array (
@@ -1506,8 +1506,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36451',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:31',
+                'updated_at' => '2023-11-15 16:31:31',
             ),
             149 => 
             array (
@@ -1516,8 +1516,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36449',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:31',
+                'updated_at' => '2023-11-15 16:31:31',
             ),
             150 => 
             array (
@@ -1526,8 +1526,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36450',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:31',
+                'updated_at' => '2023-11-15 16:31:31',
             ),
             151 => 
             array (
@@ -1536,8 +1536,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36454',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:32',
+                'updated_at' => '2023-11-15 16:31:32',
             ),
             152 => 
             array (
@@ -1546,8 +1546,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36551',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:32',
+                'updated_at' => '2023-11-15 16:31:32',
             ),
             153 => 
             array (
@@ -1556,8 +1556,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36456',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:32',
+                'updated_at' => '2023-11-15 16:31:32',
             ),
             154 => 
             array (
@@ -1566,8 +1566,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36554',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:32',
+                'updated_at' => '2023-11-15 16:31:32',
             ),
             155 => 
             array (
@@ -1576,8 +1576,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36460',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:32',
+                'updated_at' => '2023-11-15 16:31:32',
             ),
             156 => 
             array (
@@ -1586,8 +1586,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36417',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:32',
+                'updated_at' => '2023-11-15 16:31:32',
             ),
             157 => 
             array (
@@ -1596,8 +1596,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36459',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:32',
+                'updated_at' => '2023-11-15 16:31:32',
             ),
             158 => 
             array (
@@ -1606,8 +1606,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36463',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:32',
+                'updated_at' => '2023-11-15 16:31:32',
             ),
             159 => 
             array (
@@ -1616,8 +1616,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36462',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:36',
-                'updated_at' => '2023-11-15 13:46:36',
+                'created_at' => '2023-11-15 16:31:32',
+                'updated_at' => '2023-11-15 16:31:32',
             ),
             160 => 
             array (
@@ -1626,8 +1626,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36465',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             161 => 
             array (
@@ -1636,8 +1636,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36452',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             162 => 
             array (
@@ -1646,8 +1646,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36458',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             163 => 
             array (
@@ -1656,8 +1656,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36466',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             164 => 
             array (
@@ -1666,8 +1666,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36467',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             165 => 
             array (
@@ -1676,8 +1676,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36464',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             166 => 
             array (
@@ -1686,8 +1686,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36543',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             167 => 
             array (
@@ -1696,8 +1696,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36471',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             168 => 
             array (
@@ -1706,8 +1706,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36470',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             169 => 
             array (
@@ -1716,8 +1716,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36425',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             170 => 
             array (
@@ -1726,8 +1726,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36473',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             171 => 
             array (
@@ -1736,8 +1736,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36472',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             172 => 
             array (
@@ -1746,8 +1746,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36468',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             173 => 
             array (
@@ -1756,8 +1756,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36394',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             174 => 
             array (
@@ -1766,8 +1766,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36392',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             175 => 
             array (
@@ -1776,8 +1776,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36418',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             176 => 
             array (
@@ -1786,8 +1786,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36412',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             177 => 
             array (
@@ -1796,8 +1796,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36427',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             178 => 
             array (
@@ -1806,8 +1806,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36434',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             179 => 
             array (
@@ -1816,8 +1816,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36404',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:37',
-                'updated_at' => '2023-11-15 13:46:37',
+                'created_at' => '2023-11-15 16:31:33',
+                'updated_at' => '2023-11-15 16:31:33',
             ),
             180 => 
             array (
@@ -1826,8 +1826,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36361',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             181 => 
             array (
@@ -1836,8 +1836,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36353',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             182 => 
             array (
@@ -1846,8 +1846,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36379',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             183 => 
             array (
@@ -1856,8 +1856,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36424',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             184 => 
             array (
@@ -1866,8 +1866,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36435',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             185 => 
             array (
@@ -1876,8 +1876,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36342',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             186 => 
             array (
@@ -1886,8 +1886,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36402',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             187 => 
             array (
@@ -1896,8 +1896,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36478',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             188 => 
             array (
@@ -1906,8 +1906,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36479',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             189 => 
             array (
@@ -1916,8 +1916,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36553',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             190 => 
             array (
@@ -1926,8 +1926,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36544',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             191 => 
             array (
@@ -1936,8 +1936,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36558',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             192 => 
             array (
@@ -1946,8 +1946,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36477',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             193 => 
             array (
@@ -1956,8 +1956,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36476',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             194 => 
             array (
@@ -1966,8 +1966,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36481',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             195 => 
             array (
@@ -1976,8 +1976,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36492',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             196 => 
             array (
@@ -1986,8 +1986,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36491',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             197 => 
             array (
@@ -1996,8 +1996,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36484',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             198 => 
             array (
@@ -2006,8 +2006,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36480',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             199 => 
             array (
@@ -2016,8 +2016,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36496',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:38',
-                'updated_at' => '2023-11-15 13:46:38',
+                'created_at' => '2023-11-15 16:31:34',
+                'updated_at' => '2023-11-15 16:31:34',
             ),
             200 => 
             array (
@@ -2026,8 +2026,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36497',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             201 => 
             array (
@@ -2036,8 +2036,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36498',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             202 => 
             array (
@@ -2046,8 +2046,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36500',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             203 => 
             array (
@@ -2056,8 +2056,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36501',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             204 => 
             array (
@@ -2066,8 +2066,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36502',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             205 => 
             array (
@@ -2076,8 +2076,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36503',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             206 => 
             array (
@@ -2086,8 +2086,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36494',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             207 => 
             array (
@@ -2096,8 +2096,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36495',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             208 => 
             array (
@@ -2106,8 +2106,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36559',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             209 => 
             array (
@@ -2116,8 +2116,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36508',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             210 => 
             array (
@@ -2126,8 +2126,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36564',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             211 => 
             array (
@@ -2136,8 +2136,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36505',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             212 => 
             array (
@@ -2146,8 +2146,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36507',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             213 => 
             array (
@@ -2156,8 +2156,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36512',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             214 => 
             array (
@@ -2166,8 +2166,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36510',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             215 => 
             array (
@@ -2176,8 +2176,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36511',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             216 => 
             array (
@@ -2186,8 +2186,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36509',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             217 => 
             array (
@@ -2196,8 +2196,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36489',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:39',
-                'updated_at' => '2023-11-15 13:46:39',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             218 => 
             array (
@@ -2206,8 +2206,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36487',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:40',
-                'updated_at' => '2023-11-15 13:46:40',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             219 => 
             array (
@@ -2216,8 +2216,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36561',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:40',
-                'updated_at' => '2023-11-15 13:46:40',
+                'created_at' => '2023-11-15 16:31:35',
+                'updated_at' => '2023-11-15 16:31:35',
             ),
             220 => 
             array (
@@ -2226,8 +2226,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36563',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:40',
-                'updated_at' => '2023-11-15 13:46:40',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             221 => 
             array (
@@ -2236,8 +2236,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36516',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:40',
-                'updated_at' => '2023-11-15 13:46:40',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             222 => 
             array (
@@ -2246,8 +2246,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36506',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:40',
-                'updated_at' => '2023-11-15 13:46:40',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             223 => 
             array (
@@ -2256,8 +2256,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36517',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:40',
-                'updated_at' => '2023-11-15 13:46:40',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             224 => 
             array (
@@ -2266,8 +2266,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36518',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:40',
-                'updated_at' => '2023-11-15 13:46:40',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             225 => 
             array (
@@ -2276,8 +2276,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36486',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:40',
-                'updated_at' => '2023-11-15 13:46:40',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             226 => 
             array (
@@ -2286,8 +2286,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36485',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             227 => 
             array (
@@ -2296,8 +2296,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36520',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             228 => 
             array (
@@ -2306,8 +2306,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36521',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             229 => 
             array (
@@ -2316,8 +2316,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36499',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             230 => 
             array (
@@ -2326,8 +2326,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36523',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             231 => 
             array (
@@ -2336,8 +2336,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36524',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             232 => 
             array (
@@ -2346,8 +2346,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36514',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             233 => 
             array (
@@ -2356,8 +2356,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36482',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             234 => 
             array (
@@ -2366,8 +2366,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36526',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             235 => 
             array (
@@ -2376,8 +2376,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36515',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             236 => 
             array (
@@ -2386,8 +2386,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36504',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             237 => 
             array (
@@ -2396,8 +2396,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36529',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             238 => 
             array (
@@ -2406,8 +2406,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36525',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             239 => 
             array (
@@ -2416,8 +2416,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36522',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:41',
-                'updated_at' => '2023-11-15 13:46:41',
+                'created_at' => '2023-11-15 16:31:36',
+                'updated_at' => '2023-11-15 16:31:36',
             ),
             240 => 
             array (
@@ -2426,8 +2426,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36533',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:37',
+                'updated_at' => '2023-11-15 16:31:37',
             ),
             241 => 
             array (
@@ -2436,8 +2436,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36527',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             242 => 
             array (
@@ -2446,8 +2446,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36493',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             243 => 
             array (
@@ -2456,8 +2456,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36532',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             244 => 
             array (
@@ -2466,8 +2466,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36535',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             245 => 
             array (
@@ -2476,8 +2476,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36528',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             246 => 
             array (
@@ -2486,8 +2486,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36534',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             247 => 
             array (
@@ -2496,8 +2496,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36536',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             248 => 
             array (
@@ -2506,8 +2506,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36562',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             249 => 
             array (
@@ -2516,8 +2516,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36475',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             250 => 
             array (
@@ -2526,8 +2526,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36416',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             251 => 
             array (
@@ -2536,8 +2536,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36415',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             252 => 
             array (
@@ -2546,8 +2546,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36531',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             253 => 
             array (
@@ -2556,8 +2556,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36474',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             254 => 
             array (
@@ -2566,8 +2566,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36439',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             255 => 
             array (
@@ -2576,8 +2576,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36423',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             256 => 
             array (
@@ -2586,8 +2586,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36414',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             257 => 
             array (
@@ -2596,8 +2596,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36540',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             258 => 
             array (
@@ -2606,8 +2606,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36541',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             259 => 
             array (
@@ -2616,8 +2616,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36413',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:42',
-                'updated_at' => '2023-11-15 13:46:42',
+                'created_at' => '2023-11-15 16:31:38',
+                'updated_at' => '2023-11-15 16:31:38',
             ),
             260 => 
             array (
@@ -2626,8 +2626,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36490',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             261 => 
             array (
@@ -2636,8 +2636,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36552',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             262 => 
             array (
@@ -2646,8 +2646,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36537',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             263 => 
             array (
@@ -2656,8 +2656,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36469',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             264 => 
             array (
@@ -2666,8 +2666,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36566',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             265 => 
             array (
@@ -2676,8 +2676,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36567',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             266 => 
             array (
@@ -2686,8 +2686,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36568',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             267 => 
             array (
@@ -2696,8 +2696,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36569',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             268 => 
             array (
@@ -2706,8 +2706,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36565',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             269 => 
             array (
@@ -2716,8 +2716,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36571',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             270 => 
             array (
@@ -2726,8 +2726,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36539',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             271 => 
             array (
@@ -2736,8 +2736,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36461',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             272 => 
             array (
@@ -2746,8 +2746,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36457',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             273 => 
             array (
@@ -2756,18 +2756,18 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36399',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             274 => 
             array (
                 'id' => 275,
                 'process' => 'Sincronizacion masiva',
                 'DocNum' => '36530',
-            'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column \'method_shipping_id\' cannot be null (Connection: mysql, SQL: insert into `orders` (`DocNum`, `DocEntry`, `DocType`, `DocDate`, `CardCode`, `DocTotal`, `Comments`, `DocTime`, `SalesPersonCode`, `Confirmed`, `ShipToCode`, `Indicator`, `U_SBO_FormaPago`, `U_SBO_FormaEntrega`, `customer_id`, `method_shipping_id`, `SalesEmployeeName`, `updated_at`, `created_at`) values (36530, 43935, dDocument_Items, 2023-11-13, C76227654-2, 2201500, TRANSF. / HIJUELA SAN SEBASTIAN 100, NANCAGUA / TOMÁS CORREA /  +56 9 9546 8582 / tcorrea@acefrut.com Basado en Ofertas de ventas 49729., 16:52:00, 9, 1, FUNDO SANTA MARIA DE VIEGO S/N, ?, Factura, Retira Samex, 1862, ?, Virtual, 2023-11-15 13:46:43, 2023-11-15 13:46:43))',
+            'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column \'method_shipping_id\' cannot be null (Connection: mysql, SQL: insert into `orders` (`DocNum`, `DocEntry`, `DocType`, `DocDate`, `CardCode`, `DocTotal`, `Comments`, `DocTime`, `SalesPersonCode`, `Confirmed`, `ShipToCode`, `Indicator`, `U_SBO_FormaPago`, `U_SBO_FormaEntrega`, `customer_id`, `method_shipping_id`, `SalesEmployeeName`, `updated_at`, `created_at`) values (36530, 43935, dDocument_Items, 2023-11-13, C76227654-2, 2201500, TRANSF. / HIJUELA SAN SEBASTIAN 100, NANCAGUA / TOMÁS CORREA /  +56 9 9546 8582 / tcorrea@acefrut.com Basado en Ofertas de ventas 49729., 16:52:00, 9, 1, FUNDO SANTA MARIA DE VIEGO S/N, ?, Factura, Retira Samex, 1879, ?, ?, 2023-11-15 16:31:39, 2023-11-15 16:31:39))',
                 'isSynced' => 0,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             275 => 
             array (
@@ -2776,8 +2776,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36575',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             276 => 
             array (
@@ -2786,8 +2786,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36550',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             277 => 
             array (
@@ -2796,8 +2796,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36577',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             278 => 
             array (
@@ -2806,8 +2806,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36578',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             279 => 
             array (
@@ -2816,8 +2816,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36572',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:43',
-                'updated_at' => '2023-11-15 13:46:43',
+                'created_at' => '2023-11-15 16:31:39',
+                'updated_at' => '2023-11-15 16:31:39',
             ),
             280 => 
             array (
@@ -2826,8 +2826,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36557',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             281 => 
             array (
@@ -2836,8 +2836,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36560',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             282 => 
             array (
@@ -2846,8 +2846,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36555',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             283 => 
             array (
@@ -2856,8 +2856,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36573',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             284 => 
             array (
@@ -2866,8 +2866,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36576',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             285 => 
             array (
@@ -2876,8 +2876,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36580',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             286 => 
             array (
@@ -2886,8 +2886,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36581',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             287 => 
             array (
@@ -2896,8 +2896,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36583',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             288 => 
             array (
@@ -2906,8 +2906,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36556',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             289 => 
             array (
@@ -2916,8 +2916,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36585',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             290 => 
             array (
@@ -2926,8 +2926,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36586',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             291 => 
             array (
@@ -2936,8 +2936,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36587',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             292 => 
             array (
@@ -2946,8 +2946,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36582',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             293 => 
             array (
@@ -2956,8 +2956,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36588',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             294 => 
             array (
@@ -2966,8 +2966,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36591',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             295 => 
             array (
@@ -2976,8 +2976,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36377',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             296 => 
             array (
@@ -2986,8 +2986,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36589',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             297 => 
             array (
@@ -2996,8 +2996,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36590',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             298 => 
             array (
@@ -3006,8 +3006,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36593',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             299 => 
             array (
@@ -3016,8 +3016,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36595',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:44',
-                'updated_at' => '2023-11-15 13:46:44',
+                'created_at' => '2023-11-15 16:31:40',
+                'updated_at' => '2023-11-15 16:31:40',
             ),
             300 => 
             array (
@@ -3026,8 +3026,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36596',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             301 => 
             array (
@@ -3036,8 +3036,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36597',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             302 => 
             array (
@@ -3046,8 +3046,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36600',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             303 => 
             array (
@@ -3056,8 +3056,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36599',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             304 => 
             array (
@@ -3066,8 +3066,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36570',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             305 => 
             array (
@@ -3076,8 +3076,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36603',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             306 => 
             array (
@@ -3086,8 +3086,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36602',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             307 => 
             array (
@@ -3096,8 +3096,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36601',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             308 => 
             array (
@@ -3106,8 +3106,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36584',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             309 => 
             array (
@@ -3116,8 +3116,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36549',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             310 => 
             array (
@@ -3126,8 +3126,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36483',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             311 => 
             array (
@@ -3136,8 +3136,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36574',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             312 => 
             array (
@@ -3146,8 +3146,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36440',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             313 => 
             array (
@@ -3156,8 +3156,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36447',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             314 => 
             array (
@@ -3166,8 +3166,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36594',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             315 => 
             array (
@@ -3176,8 +3176,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36579',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             316 => 
             array (
@@ -3186,8 +3186,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36604',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             317 => 
             array (
@@ -3196,8 +3196,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36608',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             318 => 
             array (
@@ -3206,8 +3206,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36606',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             319 => 
             array (
@@ -3216,8 +3216,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36610',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:45',
-                'updated_at' => '2023-11-15 13:46:45',
+                'created_at' => '2023-11-15 16:31:41',
+                'updated_at' => '2023-11-15 16:31:41',
             ),
             320 => 
             array (
@@ -3226,8 +3226,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36607',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             321 => 
             array (
@@ -3236,8 +3236,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36609',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             322 => 
             array (
@@ -3246,8 +3246,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36611',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             323 => 
             array (
@@ -3256,8 +3256,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36598',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             324 => 
             array (
@@ -3266,8 +3266,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36612',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             325 => 
             array (
@@ -3276,8 +3276,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36455',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             326 => 
             array (
@@ -3286,8 +3286,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36614',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             327 => 
             array (
@@ -3296,8 +3296,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36613',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             328 => 
             array (
@@ -3306,8 +3306,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36616',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             329 => 
             array (
@@ -3316,8 +3316,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36617',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             330 => 
             array (
@@ -3326,8 +3326,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36623',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             331 => 
             array (
@@ -3336,8 +3336,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36626',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             332 => 
             array (
@@ -3346,8 +3346,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36622',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             333 => 
             array (
@@ -3356,8 +3356,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36624',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             334 => 
             array (
@@ -3366,8 +3366,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36629',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             335 => 
             array (
@@ -3376,8 +3376,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36625',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             336 => 
             array (
@@ -3386,8 +3386,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36628',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             337 => 
             array (
@@ -3396,8 +3396,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36630',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             338 => 
             array (
@@ -3406,8 +3406,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36633',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             339 => 
             array (
@@ -3416,8 +3416,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36634',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:49',
-                'updated_at' => '2023-11-15 13:46:49',
+                'created_at' => '2023-11-15 16:31:42',
+                'updated_at' => '2023-11-15 16:31:42',
             ),
             340 => 
             array (
@@ -3426,8 +3426,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36621',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             341 => 
             array (
@@ -3436,8 +3436,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36627',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             342 => 
             array (
@@ -3446,8 +3446,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36620',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             343 => 
             array (
@@ -3456,8 +3456,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36635',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             344 => 
             array (
@@ -3466,8 +3466,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36632',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             345 => 
             array (
@@ -3476,8 +3476,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36619',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             346 => 
             array (
@@ -3486,8 +3486,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36615',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             347 => 
             array (
@@ -3496,8 +3496,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36636',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             348 => 
             array (
@@ -3506,8 +3506,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36638',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             349 => 
             array (
@@ -3516,8 +3516,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36618',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             350 => 
             array (
@@ -3526,8 +3526,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36642',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             351 => 
             array (
@@ -3536,8 +3536,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36639',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             352 => 
             array (
@@ -3546,8 +3546,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36640',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             353 => 
             array (
@@ -3556,8 +3556,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36644',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             354 => 
             array (
@@ -3566,8 +3566,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36647',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             355 => 
             array (
@@ -3576,8 +3576,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36651',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             356 => 
             array (
@@ -3586,8 +3586,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36641',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             357 => 
             array (
@@ -3596,8 +3596,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36488',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             358 => 
             array (
@@ -3606,8 +3606,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36605',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             359 => 
             array (
@@ -3616,8 +3616,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36637',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:50',
-                'updated_at' => '2023-11-15 13:46:50',
+                'created_at' => '2023-11-15 16:31:43',
+                'updated_at' => '2023-11-15 16:31:43',
             ),
             360 => 
             array (
@@ -3626,8 +3626,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36592',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             361 => 
             array (
@@ -3636,8 +3636,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36631',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             362 => 
             array (
@@ -3646,8 +3646,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36648',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             363 => 
             array (
@@ -3656,8 +3656,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36645',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             364 => 
             array (
@@ -3666,8 +3666,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36646',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             365 => 
             array (
@@ -3676,8 +3676,8 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36649',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             366 => 
             array (
@@ -3686,938 +3686,1068 @@ class LogOrdersTableSeeder extends Seeder
                 'DocNum' => '36654',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             367 => 
             array (
                 'id' => 368,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36657',
+                'DocNum' => '36658',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             368 => 
             array (
                 'id' => 369,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36658',
+                'DocNum' => '36659',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             369 => 
             array (
                 'id' => 370,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36661',
+                'DocNum' => '36652',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             370 => 
             array (
                 'id' => 371,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36663',
+                'DocNum' => '36650',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             371 => 
             array (
                 'id' => 372,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36664',
+                'DocNum' => '36662',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             372 => 
             array (
                 'id' => 373,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36665',
+                'DocNum' => '36678',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             373 => 
             array (
                 'id' => 374,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36667',
+                'DocNum' => '36679',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             374 => 
             array (
                 'id' => 375,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36669',
+                'DocNum' => '36680',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             375 => 
             array (
                 'id' => 376,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36670',
+                'DocNum' => '36675',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             376 => 
             array (
                 'id' => 377,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36671',
+                'DocNum' => '36656',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             377 => 
             array (
                 'id' => 378,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36672',
+                'DocNum' => '36653',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             378 => 
             array (
                 'id' => 379,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36659',
+                'DocNum' => '36683',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             379 => 
             array (
                 'id' => 380,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36677',
+                'DocNum' => '36682',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:51',
-                'updated_at' => '2023-11-15 13:46:51',
+                'created_at' => '2023-11-15 16:31:44',
+                'updated_at' => '2023-11-15 16:31:44',
             ),
             380 => 
             array (
                 'id' => 381,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36652',
+                'DocNum' => '36666',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             381 => 
             array (
                 'id' => 382,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36650',
+                'DocNum' => '36674',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             382 => 
             array (
                 'id' => 383,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36662',
+                'DocNum' => '36673',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             383 => 
             array (
                 'id' => 384,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36678',
+                'DocNum' => '36684',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             384 => 
             array (
                 'id' => 385,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36679',
+                'DocNum' => '36660',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             385 => 
             array (
                 'id' => 386,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36680',
+                'DocNum' => '36676',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             386 => 
             array (
                 'id' => 387,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36681',
+                'DocNum' => '36685',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             387 => 
             array (
                 'id' => 388,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36675',
+                'DocNum' => '36686',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             388 => 
             array (
                 'id' => 389,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36656',
+                'DocNum' => '36687',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             389 => 
             array (
                 'id' => 390,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36653',
+                'DocNum' => '36643',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             390 => 
             array (
                 'id' => 391,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36683',
+                'DocNum' => '36655',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             391 => 
             array (
                 'id' => 392,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36682',
+                'DocNum' => '36668',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             392 => 
             array (
                 'id' => 393,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36666',
+                'DocNum' => '36688',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             393 => 
             array (
                 'id' => 394,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36674',
+                'DocNum' => '36692',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             394 => 
             array (
                 'id' => 395,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36673',
+                'DocNum' => '36690',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             395 => 
             array (
                 'id' => 396,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36684',
+                'DocNum' => '36691',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             396 => 
             array (
                 'id' => 397,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36660',
+                'DocNum' => '36694',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             397 => 
             array (
                 'id' => 398,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36676',
+                'DocNum' => '36696',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             398 => 
             array (
                 'id' => 399,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36685',
+                'DocNum' => '36697',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             399 => 
             array (
                 'id' => 400,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36686',
+                'DocNum' => '36698',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:52',
-                'updated_at' => '2023-11-15 13:46:52',
+                'created_at' => '2023-11-15 16:31:46',
+                'updated_at' => '2023-11-15 16:31:46',
             ),
             400 => 
             array (
                 'id' => 401,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36689',
+                'DocNum' => '36700',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             401 => 
             array (
                 'id' => 402,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36687',
+                'DocNum' => '36664',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             402 => 
             array (
                 'id' => 403,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36643',
+                'DocNum' => '36657',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             403 => 
             array (
                 'id' => 404,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36655',
+                'DocNum' => '36661',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             404 => 
             array (
                 'id' => 405,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36668',
+                'DocNum' => '36681',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             405 => 
             array (
                 'id' => 406,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36688',
+                'DocNum' => '36667',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             406 => 
             array (
                 'id' => 407,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36692',
+                'DocNum' => '36702',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             407 => 
             array (
                 'id' => 408,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36690',
+                'DocNum' => '36677',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             408 => 
             array (
                 'id' => 409,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36691',
+                'DocNum' => '36665',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             409 => 
             array (
                 'id' => 410,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36693',
+                'DocNum' => '36705',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             410 => 
             array (
                 'id' => 411,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36694',
+                'DocNum' => '36699',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             411 => 
             array (
                 'id' => 412,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36696',
+                'DocNum' => '36663',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             412 => 
             array (
                 'id' => 413,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36695',
+                'DocNum' => '36707',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             413 => 
             array (
                 'id' => 414,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36697',
+                'DocNum' => '36711',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             414 => 
             array (
                 'id' => 415,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36699',
+                'DocNum' => '36712',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             415 => 
             array (
                 'id' => 416,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36700',
+                'DocNum' => '36670',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             416 => 
             array (
                 'id' => 417,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36701',
+                'DocNum' => '36669',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             417 => 
             array (
                 'id' => 418,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36703',
+                'DocNum' => '36672',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             418 => 
             array (
                 'id' => 419,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36702',
+                'DocNum' => '36671',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             419 => 
             array (
                 'id' => 420,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36698',
+                'DocNum' => '36689',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:46:53',
-                'updated_at' => '2023-11-15 13:46:53',
+                'created_at' => '2023-11-15 16:31:47',
+                'updated_at' => '2023-11-15 16:31:47',
             ),
             420 => 
             array (
                 'id' => 421,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36704',
+                'DocNum' => '36706',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:50:08',
-                'updated_at' => '2023-11-15 13:50:08',
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             421 => 
             array (
                 'id' => 422,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36705',
+                'DocNum' => '36714',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:52:09',
-                'updated_at' => '2023-11-15 13:52:09',
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             422 => 
             array (
                 'id' => 423,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36707',
+                'DocNum' => '36713',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:56:54',
-                'updated_at' => '2023-11-15 13:56:54',
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             423 => 
             array (
                 'id' => 424,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36708',
+                'DocNum' => '36715',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 13:59:03',
-                'updated_at' => '2023-11-15 13:59:03',
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             424 => 
             array (
                 'id' => 425,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36709',
-            'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column \'method_shipping_id\' cannot be null (Connection: mysql, SQL: insert into `orders` (`DocNum`, `DocEntry`, `DocType`, `DocDate`, `CardCode`, `DocTotal`, `Comments`, `DocTime`, `SalesPersonCode`, `Confirmed`, `ShipToCode`, `Indicator`, `U_SBO_FormaPago`, `U_SBO_FormaEntrega`, `customer_id`, `method_shipping_id`, `SalesEmployeeName`, `updated_at`, `created_at`) values (36709, 44143, dDocument_Items, 2023-11-15, C76088421-9, 252119, RETIRA SAMEX DESPACHAR A DOMICILIO HIPOLITO SALAS1372 CONCEPCIONCONTACTO nancy scheuermann TLF 9 77283217 CORREOcomercializadorasch@gmail.comTRANSFERENCIA, 10:59:00, 20, 1, PDQ, ?, Factura, Retira Samex, 1786, ?, Maloni Mocco Yohan Moisés, 2023-11-15 14:00:04, 2023-11-15 14:00:04))',
-                'isSynced' => 0,
-                'created_at' => '2023-11-15 14:00:04',
-                'updated_at' => '2023-11-15 14:00:04',
+                'DocNum' => '36708',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             425 => 
             array (
                 'id' => 426,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36709',
-            'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column \'method_shipping_id\' cannot be null (Connection: mysql, SQL: insert into `orders` (`DocNum`, `DocEntry`, `DocType`, `DocDate`, `CardCode`, `DocTotal`, `Comments`, `DocTime`, `SalesPersonCode`, `Confirmed`, `ShipToCode`, `Indicator`, `U_SBO_FormaPago`, `U_SBO_FormaEntrega`, `customer_id`, `method_shipping_id`, `SalesEmployeeName`, `updated_at`, `created_at`) values (36709, 44143, dDocument_Items, 2023-11-15, C76088421-9, 252119, RETIRA SAMEX DESPACHAR A DOMICILIO HIPOLITO SALAS1372 CONCEPCIONCONTACTO nancy scheuermann TLF 9 77283217 CORREOcomercializadorasch@gmail.comTRANSFERENCIA, 10:59:00, 20, 1, PDQ, ?, Factura, Retira Samex, 1786, ?, Maloni Mocco Yohan Moisés, 2023-11-15 14:01:04, 2023-11-15 14:01:04))',
-                'isSynced' => 0,
-                'created_at' => '2023-11-15 14:01:04',
-                'updated_at' => '2023-11-15 14:01:04',
+                'DocNum' => '36704',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             426 => 
             array (
                 'id' => 427,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36709',
-            'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column \'method_shipping_id\' cannot be null (Connection: mysql, SQL: insert into `orders` (`DocNum`, `DocEntry`, `DocType`, `DocDate`, `CardCode`, `DocTotal`, `Comments`, `DocTime`, `SalesPersonCode`, `Confirmed`, `ShipToCode`, `Indicator`, `U_SBO_FormaPago`, `U_SBO_FormaEntrega`, `customer_id`, `method_shipping_id`, `SalesEmployeeName`, `updated_at`, `created_at`) values (36709, 44143, dDocument_Items, 2023-11-15, C76088421-9, 252119, RETIRA SAMEX DESPACHAR A DOMICILIO HIPOLITO SALAS1372 CONCEPCIONCONTACTO nancy scheuermann TLF 9 77283217 CORREOcomercializadorasch@gmail.comTRANSFERENCIA, 10:59:00, 20, 1, PDQ, ?, Factura, Retira Samex, 1786, ?, Maloni Mocco Yohan Moisés, 2023-11-15 14:02:04, 2023-11-15 14:02:04))',
-                'isSynced' => 0,
-                'created_at' => '2023-11-15 14:02:04',
-                'updated_at' => '2023-11-15 14:02:04',
+                'DocNum' => '36703',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             427 => 
             array (
                 'id' => 428,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36709',
-            'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column \'method_shipping_id\' cannot be null (Connection: mysql, SQL: insert into `orders` (`DocNum`, `DocEntry`, `DocType`, `DocDate`, `CardCode`, `DocTotal`, `Comments`, `DocTime`, `SalesPersonCode`, `Confirmed`, `ShipToCode`, `Indicator`, `U_SBO_FormaPago`, `U_SBO_FormaEntrega`, `customer_id`, `method_shipping_id`, `SalesEmployeeName`, `updated_at`, `created_at`) values (36709, 44143, dDocument_Items, 2023-11-15, C76088421-9, 252119, RETIRA SAMEX DESPACHAR A DOMICILIO HIPOLITO SALAS1372 CONCEPCIONCONTACTO nancy scheuermann TLF 9 77283217 CORREOcomercializadorasch@gmail.comTRANSFERENCIA, 10:59:00, 20, 1, PDQ, ?, Factura, Retira Samex, 1786, ?, Maloni Mocco Yohan Moisés, 2023-11-15 14:03:04, 2023-11-15 14:03:04))',
-                'isSynced' => 0,
-                'created_at' => '2023-11-15 14:03:04',
-                'updated_at' => '2023-11-15 14:03:04',
+                'DocNum' => '36716',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             428 => 
             array (
                 'id' => 429,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36709',
-            'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column \'method_shipping_id\' cannot be null (Connection: mysql, SQL: insert into `orders` (`DocNum`, `DocEntry`, `DocType`, `DocDate`, `CardCode`, `DocTotal`, `Comments`, `DocTime`, `SalesPersonCode`, `Confirmed`, `ShipToCode`, `Indicator`, `U_SBO_FormaPago`, `U_SBO_FormaEntrega`, `customer_id`, `method_shipping_id`, `SalesEmployeeName`, `updated_at`, `created_at`) values (36709, 44143, dDocument_Items, 2023-11-15, C76088421-9, 252119, RETIRA SAMEX DESPACHAR A DOMICILIO HIPOLITO SALAS1372 CONCEPCIONCONTACTO nancy scheuermann TLF 9 77283217 CORREOcomercializadorasch@gmail.comTRANSFERENCIA, 10:59:00, 20, 1, PDQ, ?, Factura, Retira Samex, 1786, ?, Maloni Mocco Yohan Moisés, 2023-11-15 14:04:04, 2023-11-15 14:04:04))',
-                'isSynced' => 0,
-                'created_at' => '2023-11-15 14:04:04',
-                'updated_at' => '2023-11-15 14:04:04',
+                'DocNum' => '36720',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             429 => 
             array (
                 'id' => 430,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36709',
-            'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column \'method_shipping_id\' cannot be null (Connection: mysql, SQL: insert into `orders` (`DocNum`, `DocEntry`, `DocType`, `DocDate`, `CardCode`, `DocTotal`, `Comments`, `DocTime`, `SalesPersonCode`, `Confirmed`, `ShipToCode`, `Indicator`, `U_SBO_FormaPago`, `U_SBO_FormaEntrega`, `customer_id`, `method_shipping_id`, `SalesEmployeeName`, `updated_at`, `created_at`) values (36709, 44143, dDocument_Items, 2023-11-15, C76088421-9, 252119, RETIRA SAMEX DESPACHAR A DOMICILIO HIPOLITO SALAS1372 CONCEPCIONCONTACTO nancy scheuermann TLF 9 77283217 CORREOcomercializadorasch@gmail.comTRANSFERENCIA, 10:59:00, 20, 1, PDQ, ?, Factura, Retira Samex, 1786, ?, Maloni Mocco Yohan Moisés, 2023-11-15 14:05:04, 2023-11-15 14:05:04))',
-                'isSynced' => 0,
-                'created_at' => '2023-11-15 14:05:04',
-                'updated_at' => '2023-11-15 14:05:04',
+                'DocNum' => '36701',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             430 => 
             array (
                 'id' => 431,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36709',
-            'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column \'method_shipping_id\' cannot be null (Connection: mysql, SQL: insert into `orders` (`DocNum`, `DocEntry`, `DocType`, `DocDate`, `CardCode`, `DocTotal`, `Comments`, `DocTime`, `SalesPersonCode`, `Confirmed`, `ShipToCode`, `Indicator`, `U_SBO_FormaPago`, `U_SBO_FormaEntrega`, `customer_id`, `method_shipping_id`, `SalesEmployeeName`, `updated_at`, `created_at`) values (36709, 44143, dDocument_Items, 2023-11-15, C76088421-9, 252119, RETIRA SAMEX DESPACHAR A DOMICILIO HIPOLITO SALAS1372 CONCEPCIONCONTACTO nancy scheuermann TLF 9 77283217 CORREOcomercializadorasch@gmail.comTRANSFERENCIA, 10:59:00, 20, 1, PDQ, ?, Factura, Retira Samex, 1786, ?, Maloni Mocco Yohan Moisés, 2023-11-15 14:06:06, 2023-11-15 14:06:06))',
-                'isSynced' => 0,
-                'created_at' => '2023-11-15 14:06:06',
-                'updated_at' => '2023-11-15 14:06:06',
+                'DocNum' => '36724',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             431 => 
             array (
                 'id' => 432,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36710',
+                'DocNum' => '36723',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:06:06',
-                'updated_at' => '2023-11-15 14:06:06',
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             432 => 
             array (
                 'id' => 433,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36711',
+                'DocNum' => '36721',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:11:03',
-                'updated_at' => '2023-11-15 14:11:03',
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             433 => 
             array (
                 'id' => 434,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36712',
+                'DocNum' => '36729',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:12:04',
-                'updated_at' => '2023-11-15 14:12:04',
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             434 => 
             array (
                 'id' => 435,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36713',
+                'DocNum' => '36734',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:19:04',
-                'updated_at' => '2023-11-15 14:19:04',
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             435 => 
             array (
                 'id' => 436,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36714',
+                'DocNum' => '36695',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:25:03',
-                'updated_at' => '2023-11-15 14:25:03',
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             436 => 
             array (
                 'id' => 437,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36715',
+                'DocNum' => '36717',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:27:03',
-                'updated_at' => '2023-11-15 14:27:03',
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             437 => 
             array (
                 'id' => 438,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36716',
+                'DocNum' => '36693',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:36:04',
-                'updated_at' => '2023-11-15 14:36:04',
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             438 => 
             array (
                 'id' => 439,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36717',
-                'message' => 'success',
-                'isSynced' => 1,
-                'created_at' => '2023-11-15 14:36:04',
-                'updated_at' => '2023-11-15 14:36:04',
+                'DocNum' => '36709',
+            'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column \'method_shipping_id\' cannot be null (Connection: mysql, SQL: insert into `orders` (`DocNum`, `DocEntry`, `DocType`, `DocDate`, `CardCode`, `DocTotal`, `Comments`, `DocTime`, `SalesPersonCode`, `Confirmed`, `ShipToCode`, `Indicator`, `U_SBO_FormaPago`, `U_SBO_FormaEntrega`, `customer_id`, `method_shipping_id`, `SalesEmployeeName`, `updated_at`, `created_at`) values (36709, 44143, dDocument_Items, 2023-11-15, C76088421-9, 252119, RETIRA SAMEX DESPACHAR A DOMICILIO HIPOLITO SALAS1372 CONCEPCIONCONTACTO nancy scheuermann TLF 9 77283217 CORREOcomercializadorasch@gmail.comTRANSFERENCIA, 10:59:00, 20, 1, PDQ, ?, Factura, Retira Samex, 7677, ?, ?, 2023-11-15 16:31:48, 2023-11-15 16:31:48))',
+                'isSynced' => 0,
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             439 => 
             array (
                 'id' => 440,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36718',
+                'DocNum' => '36733',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:42:04',
-                'updated_at' => '2023-11-15 14:42:04',
+                'created_at' => '2023-11-15 16:31:48',
+                'updated_at' => '2023-11-15 16:31:48',
             ),
             440 => 
             array (
                 'id' => 441,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36719',
+                'DocNum' => '36737',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:47:03',
-                'updated_at' => '2023-11-15 14:47:03',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             441 => 
             array (
                 'id' => 442,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36720',
+                'DocNum' => '36738',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:47:03',
-                'updated_at' => '2023-11-15 14:47:03',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             442 => 
             array (
                 'id' => 443,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36721',
+                'DocNum' => '36736',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:48:04',
-                'updated_at' => '2023-11-15 14:48:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             443 => 
             array (
                 'id' => 444,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36723',
+                'DocNum' => '36735',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:50:04',
-                'updated_at' => '2023-11-15 14:50:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             444 => 
             array (
                 'id' => 445,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36724',
+                'DocNum' => '36742',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:50:04',
-                'updated_at' => '2023-11-15 14:50:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             445 => 
             array (
                 'id' => 446,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36722',
+                'DocNum' => '36710',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:50:04',
-                'updated_at' => '2023-11-15 14:50:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             446 => 
             array (
                 'id' => 447,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36725',
+                'DocNum' => '36740',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:52:04',
-                'updated_at' => '2023-11-15 14:52:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             447 => 
             array (
                 'id' => 448,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36726',
+                'DocNum' => '36743',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:53:04',
-                'updated_at' => '2023-11-15 14:53:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             448 => 
             array (
                 'id' => 449,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36727',
+                'DocNum' => '36741',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 14:57:04',
-                'updated_at' => '2023-11-15 14:57:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             449 => 
             array (
                 'id' => 450,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36728',
+                'DocNum' => '36727',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 15:02:04',
-                'updated_at' => '2023-11-15 15:02:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             450 => 
             array (
                 'id' => 451,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36729',
+                'DocNum' => '36745',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 15:02:04',
-                'updated_at' => '2023-11-15 15:02:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             451 => 
             array (
                 'id' => 452,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36730',
+                'DocNum' => '36728',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 15:04:04',
-                'updated_at' => '2023-11-15 15:04:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             452 => 
             array (
                 'id' => 453,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36731',
+                'DocNum' => '36747',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 15:05:04',
-                'updated_at' => '2023-11-15 15:05:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             453 => 
             array (
                 'id' => 454,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36732',
+                'DocNum' => '36726',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 15:06:04',
-                'updated_at' => '2023-11-15 15:06:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             454 => 
             array (
                 'id' => 455,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36733',
+                'DocNum' => '36748',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 15:07:03',
-                'updated_at' => '2023-11-15 15:07:03',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             455 => 
             array (
                 'id' => 456,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36734',
+                'DocNum' => '36749',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 15:07:03',
-                'updated_at' => '2023-11-15 15:07:03',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             456 => 
             array (
                 'id' => 457,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36735',
+                'DocNum' => '36730',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 15:09:04',
-                'updated_at' => '2023-11-15 15:09:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             457 => 
             array (
                 'id' => 458,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36736',
+                'DocNum' => '36732',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 15:13:04',
-                'updated_at' => '2023-11-15 15:13:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             458 => 
             array (
                 'id' => 459,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36737',
+                'DocNum' => '36722',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 15:15:04',
-                'updated_at' => '2023-11-15 15:15:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
             ),
             459 => 
             array (
                 'id' => 460,
                 'process' => 'Sincronizacion masiva',
-                'DocNum' => '36738',
+                'DocNum' => '36731',
                 'message' => 'success',
                 'isSynced' => 1,
-                'created_at' => '2023-11-15 15:16:04',
-                'updated_at' => '2023-11-15 15:16:04',
+                'created_at' => '2023-11-15 16:31:49',
+                'updated_at' => '2023-11-15 16:31:49',
+            ),
+            460 => 
+            array (
+                'id' => 461,
+                'process' => 'Sincronizacion masiva',
+                'DocNum' => '36746',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:50',
+                'updated_at' => '2023-11-15 16:31:50',
+            ),
+            461 => 
+            array (
+                'id' => 462,
+                'process' => 'Sincronizacion masiva',
+                'DocNum' => '36718',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:50',
+                'updated_at' => '2023-11-15 16:31:50',
+            ),
+            462 => 
+            array (
+                'id' => 463,
+                'process' => 'Sincronizacion masiva',
+                'DocNum' => '36719',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:50',
+                'updated_at' => '2023-11-15 16:31:50',
+            ),
+            463 => 
+            array (
+                'id' => 464,
+                'process' => 'Sincronizacion masiva',
+                'DocNum' => '36744',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:50',
+                'updated_at' => '2023-11-15 16:31:50',
+            ),
+            464 => 
+            array (
+                'id' => 465,
+                'process' => 'Sincronizacion masiva',
+                'DocNum' => '36725',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:50',
+                'updated_at' => '2023-11-15 16:31:50',
+            ),
+            465 => 
+            array (
+                'id' => 466,
+                'process' => 'Sincronizacion masiva',
+                'DocNum' => '36751',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:50',
+                'updated_at' => '2023-11-15 16:31:50',
+            ),
+            466 => 
+            array (
+                'id' => 467,
+                'process' => 'Sincronizacion masiva',
+                'DocNum' => '36750',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:50',
+                'updated_at' => '2023-11-15 16:31:50',
+            ),
+            467 => 
+            array (
+                'id' => 468,
+                'process' => 'Sincronizacion masiva',
+                'DocNum' => '36752',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:50',
+                'updated_at' => '2023-11-15 16:31:50',
+            ),
+            468 => 
+            array (
+                'id' => 469,
+                'process' => 'Sincronizacion masiva',
+                'DocNum' => '36754',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:50',
+                'updated_at' => '2023-11-15 16:31:50',
+            ),
+            469 => 
+            array (
+                'id' => 470,
+                'process' => 'Sincronizacion masiva',
+                'DocNum' => '36739',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:50',
+                'updated_at' => '2023-11-15 16:31:50',
+            ),
+            470 => 
+            array (
+                'id' => 471,
+                'process' => 'Sincronizacion masiva',
+                'DocNum' => '36755',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:50',
+                'updated_at' => '2023-11-15 16:31:50',
+            ),
+            471 => 
+            array (
+                'id' => 472,
+                'process' => 'Sincronizacion masiva',
+                'DocNum' => '36753',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:50',
+                'updated_at' => '2023-11-15 16:31:50',
+            ),
+            472 => 
+            array (
+                'id' => 473,
+                'process' => 'Sincronizacion masiva',
+                'DocNum' => '36756',
+                'message' => 'success',
+                'isSynced' => 1,
+                'created_at' => '2023-11-15 16:31:50',
+                'updated_at' => '2023-11-15 16:31:50',
             ),
         ));
         
