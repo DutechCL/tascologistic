@@ -10,6 +10,7 @@ return [
         'message'   => 'Mensaje',
         'is_synced' => 'Sincronizado',
         'status'    => 'Estado',
+        'date'      => 'Fecha',
 
         'filters' => [
             'process'       => 'Procesos',
