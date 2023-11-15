@@ -7,7 +7,7 @@ function ajaxSapSync(event, endpoint, model) {
         model: `\\App\\Models\\${model}`,
         endpoint: endpoint,
     };
-    
+
     $.ajax({
         url: window.appConfig.sapSyncRoute,
         type: 'POST',
@@ -16,6 +16,7 @@ function ajaxSapSync(event, endpoint, model) {
             $(event.target).removeClass('btn-sync-disabled');
         },
         success: function(response) {
+            console.log(response)
             crud.table.ajax.reload()
             new Noty({
                 text: response.message,

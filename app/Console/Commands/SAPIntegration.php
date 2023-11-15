@@ -50,7 +50,7 @@ class SAPIntegration extends Command
                 $this->syncService->syncData('sales_persons.get', SalesPerson::class);
                 $this->syncService->syncData('warehouses.get', Warehouse::class);
                 $this->syncService->syncData('products.get', Product::class);
-                $this->syncService->syncOrders($dateTo); 
+                $this->syncService->syncOrders(); 
                 break;
             default:
                 $this->error('Invalid data type specified.');
