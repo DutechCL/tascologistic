@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class LogOrder extends Model
@@ -18,6 +19,18 @@ class LogOrder extends Model
         'message',
         'isSynced',
     ];
+
+    /**
+     * Get the user's full name.
+     *
+     * @return Attribute
+     */
+    protected function time(): Attribute
+    {
+        return Attribute::make(
+            get: fn($value, $attributes) => $attributes['created_at']->format('H:i:s')
+        );
+    }
 
     
     public static function error($process, $DocNum, $message)
