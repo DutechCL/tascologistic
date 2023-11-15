@@ -60,7 +60,7 @@ class SAPIntegration extends Command
                 $this->syncService->syncData('products.get', Product::class);
 
                 $this->info('Synchronizing orders...');
-                $this->syncService->syncOrders(); 
+                $this->syncService->syncOrders($dateTo); 
                 break;
             default:
                 $this->error('Invalid data type specified.');
