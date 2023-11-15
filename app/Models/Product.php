@@ -27,7 +27,7 @@ class Product extends Model
     const SYNC_INFO = [
         'endpoint'   => 'products', // SAP endpoint confifgured in config/service.php
         'model'      => self::class,
-        'fields'     => self::FILLABLE_API,
+        'fields'     => self::FILLABLE,
         'identifier' => self::IDENTIFIER,
         'method'     => 'updateOrCreate',
     ];

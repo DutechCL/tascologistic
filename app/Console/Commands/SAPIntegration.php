@@ -14,13 +14,6 @@ class SAPIntegration extends Command
 {
     protected $signature = 'sap:sync {type} {--docDate=}';
     protected $description = 'Synchronize SAP data';
-    protected $syncService;
-
-    // public function __construct(SyncService $syncService)
-    // {
-    //     parent::__construct();
-    //     $this->syncService = $syncService;
-    // }
 
     public function handle()
     {
