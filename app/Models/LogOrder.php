@@ -28,7 +28,7 @@ class LogOrder extends Model
     protected function time(): Attribute
     {
         return Attribute::make(
-            get: fn($value, $attributes) => $attributes['created_at']->format('H:i:s')
+            get: fn($value, $attributes) => (new \DateTime($attributes['created_at']))->format('H:i:s')
         );
     }
 
