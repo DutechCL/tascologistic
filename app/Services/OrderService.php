@@ -24,7 +24,8 @@ class OrderService
         $query->withOrderDetails()
             ->where('process_id', Process::PROCESS_ID_CDA)
             ->where('is_managed', false)
-            ->orderBy('DocDate', 'DESC');
+            ->orderBy('DocDate', 'DESC')
+            ->orderBy('DocTime', 'DESC');
 
         if ($execute) {
             return $query->paginate(20);
