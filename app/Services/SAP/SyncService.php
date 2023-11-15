@@ -80,9 +80,11 @@ class SyncService
             $fields = $modelClass::FILLABLE_API;
             $identifier = $modelClass::IDENTIFIER;
             
+            $filterParam = "not (DocNum eq null and U_SBO_FormaEntrega eq null and CardCode eq null )";
+
             if ($docDate) {
 
-                $filterParam = "DocDate ge {$docDate}";
+                $filterParam = "and DocDate ge {$docDate}";
 
             } else {
 
@@ -90,10 +92,11 @@ class SyncService
 
                 if($lastSyncedOrder){
 
-                    $filterParam = $lastSyncedOrder ? "DocDate ge $lastSyncedOrder->DocDate and DocTime gt $lastSyncedOrder->DocTime" : null;
+                    $filterParam .= $lastSyncedOrder ? "and DocDate ge $lastSyncedOrder->DocDate and DocTime gt $lastSyncedOrder->DocTime" : null;
 
                 }
             }
+
 
             do {
 
