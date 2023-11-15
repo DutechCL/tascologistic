@@ -20,8 +20,7 @@ class Kernel extends ConsoleKernel
         $intervalInMinutes = (int) Setting::get('_sap_interval_sync') ?? 5;
 
         $schedule->command('sap:sync all')
-                 ->everyMinute($intervalInMinutes)
-                 ->withoutOverlapping();
+                 ->everyMinute($intervalInMinutes);
     }
 
     /**
