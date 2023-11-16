@@ -35,12 +35,12 @@ class LogOrder extends Model
     
     public static function error($process, $DocNum, $message)
     {
-        self::log($process, $DocNum, $message, false);
+        return self::log($process, $DocNum, $message, false);
     }
 
     public static function success($process, $DocNum)
     {
-        self::log($process, $DocNum, 'success');
+        return self::log($process, $DocNum, 'success');
     }
 
     public static function log($process, $DocNum, $message, $isSynced = true)
@@ -58,7 +58,7 @@ class LogOrder extends Model
                 'isSynced' => $isSynced,
             ];
 
-            self::updateOrCreate($where, $data);
+            return self::updateOrCreate($where, $data);
 
 
         } catch (\Exception $e) {
