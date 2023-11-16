@@ -55,7 +55,7 @@ class SAPIntegration extends Command
         $this->info("Syncing $type...");
 
         if ($type === self::SYNC_ALL) {
-            $this->syncAll();
+            $this->syncAll($params);
         } else {
             $this->syncType($type, $params);
         }
@@ -63,7 +63,7 @@ class SAPIntegration extends Command
         $this->info('Synchronization completed.');
     }
 
-    protected function syncAll()
+    protected function syncAll($params)
     {
         $syncCases = [
             self::SYNC_CUSTOMERS,

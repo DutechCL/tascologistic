@@ -32,7 +32,7 @@ class SyncService
         return $config[$type];
     }
 
-    public function sync(array $type)
+    public function sync(array $config)
     {
         $skip = 0;
         $count = 0;
