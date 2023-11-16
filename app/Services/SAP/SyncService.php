@@ -28,7 +28,7 @@ class SyncService
 
             do {
                 $response = $this->sapService->get($endpoint, $skip, $fields, $params);
-                dd($response);
+
                 if (!empty($response['value'])) {
                     $count += $this->createRecords($model, $method, $identifier, $fields, $response);
                 }
@@ -40,7 +40,7 @@ class SyncService
             return $count;
     
         } catch (\Exception $e) {
-            $this->logError($e, $modelClass);
+            $this->logError($e, $model);
 
             return -1;
         }
@@ -62,7 +62,7 @@ class SyncService
         return $url;
     }
 
-    public function createRecord($modelClass, $method, $identifier, $fields, $response)
+    public function createRecords($model, $method, $identifier, $fields, $response)
     {
         $count = 0;
         
