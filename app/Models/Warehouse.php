@@ -21,10 +21,10 @@ class Warehouse extends Model
         'State',
         'City',
     ];
-    
+
     protected $fillable = self::FILLABLE;
 
-    public static function getSyncInfo()
+    public static function getSyncInfo(array $params = [], string $operator = 'and')
     {
         return [
             'endpoint'   => 'warehouses', // SAP endpoint confifgured in config/service.php
@@ -32,6 +32,10 @@ class Warehouse extends Model
             'identifier' => self::IDENTIFIER,
             'fields'     => self::FILLABLE,
             'method'     => 'updateOrCreate',
+            'filter'     => [
+                'operator' => $operator,
+                'params'   => $params
+            ],
         ];
     }
 

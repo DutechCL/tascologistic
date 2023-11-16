@@ -155,7 +155,7 @@ class Order extends Model
 
             $order = self::updateOrCreate($where, $data);
 
-            $order->syncOrderItems($items);
+            $order->syncOrderItems($items, $data['DocNum']);
 
             logOrder::success($process, $data['DocNum']);
 
@@ -168,7 +168,7 @@ class Order extends Model
     }
     
 
-    private function syncOrderItems(array $orderItemsData)
+    private function syncOrderItems(array $orderItemsData, $docNum)
     {
         DB::beginTransaction();
         $process = 'Sincronizacion masiva';
@@ -187,13 +187,13 @@ class Order extends Model
     
                     } catch (\Exception $e) {
                         DB::rollBack();
-                        LogOrder::error($process, $this->DocNum, "Error al crear producto para ItemCode: {$orderItemData['ItemCode']}. Error: {$e->getMessage()}");
+                        LogOrder::error($process, $docNum, "Error al crear producto para ItemCode: {$orderItemData['ItemCode']}. Error: {$e->getMessage()}");
                         \Log::error($e->getMessage());
                         return;
                     }
                 } else {
                     DB::rollBack();
-                    LogOrder::error($process, $this->DocNum, "Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
+                    LogOrder::error($process, $docNum, "Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
                     \Log::error("Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
                     return;
                 }
@@ -202,7 +202,7 @@ class Order extends Model
             DB::commit();
         } catch (\Exception $e) {
             DB::rollBack();
-            LogOrder::error($process, $this->DocNum, "Error general al sincronizar order_items. Error: {$e->getMessage()}");
+            LogOrder::error($process, $docNum, "Error general al sincronizar order_items. Error: {$e->getMessage()}");
             \Log::error($e->getMessage());
         }
     }

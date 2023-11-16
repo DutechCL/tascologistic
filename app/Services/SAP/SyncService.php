@@ -40,6 +40,7 @@ class SyncService
             return $count;
     
         } catch (\Exception $e) {
+            
             $this->logError($e, $model);
 
             return -1;

@@ -38,8 +38,8 @@ class SalesPerson extends Model
             $salesPerson->attributes['Active'] = strtolower($salesPerson->attributes['Active']) === 'tyes' ? 1 : 0;
         });
     }
-
-    public static function getSyncInfo()
+    
+    public static function getSyncInfo(array $params = [], string $operator = 'and')
     {
         return [
             'endpoint'   => 'sales_persons', // SAP endpoint confifgured in config/service.php
@@ -47,6 +47,10 @@ class SalesPerson extends Model
             'fields'     => self::FILLABLE,
             'identifier' => self::IDENTIFIER,
             'method'     => 'updateOrCreate',
+            'filter'     => [
+                'operator' => $operator,
+                'params'   => $params
+            ],
         ];
     }
 }
