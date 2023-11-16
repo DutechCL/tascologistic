@@ -35,7 +35,7 @@ class SAPIntegration extends Command
                 [
                     'field'    => 'DocDate',
                     'operator' => 'ge', // greater than
-                    'value'    => $order->DocDate,
+                    'value'    => $dateTo,
                 ]
             ];
         }
