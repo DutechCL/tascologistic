@@ -2,16 +2,18 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Order;
-use App\Models\Product;
-use App\Models\Customer;
-use App\Models\Warehouse;
-use App\Models\SalesPerson;
 use App\Services\SAP\SyncService;
 use Illuminate\Console\Command;
 
 class SAPIntegration extends Command
 {
+    const SYNC_ALL = 'all';
+    const SYNC_CUSTOMERS = 'customers';
+    const SYNC_SALES_PERSONS = 'salesPersons';
+    const SYNC_WAREHOUSES = 'warehouses';
+    const SYNC_PRODUCTS = 'products';
+    const SYNC_ORDERS = 'orders';
+
     protected $signature = 'sap:sync {type} {--docDate=} {--docNum=}';
     protected $description = 'Synchronize SAP data';
     protected $sap;
@@ -43,7 +45,6 @@ class SAPIntegration extends Command
         if ($docNum) {
             $params = [
                 [
-            
                     'field'    => 'DocNum',
                     'operator' => 'eq', // equal
                     'value'    => $docNum,
@@ -51,23 +52,38 @@ class SAPIntegration extends Command
             ];
         }
 
-        $syncCases = ['customers', 'salesPersons', 'warehouses', 'products', 'orders'];
-
         $this->info("Syncing $type...");
 
-        if ($type === 'all') {
-            foreach ($syncCases as $case => $info) {
-                $this->info("Start Syncing $case...");
-
-                $config = ($case === 'orders') ? $this->sap->build($case, $params) : $this->sap->build($case);
-                $this->sap->sync($config);
-            }
+        if ($type === self::SYNC_ALL) {
+            $this->syncAll();
         } else {
-            $this->info("Start Syncing $type...");
-            $config = ($type === 'orders') ? $this->sap->build($type, $params) : $this->sap->build($type);
-            $this->sap->sync($config);
+            $this->syncType($type, $params);
         }
 
         $this->info('Synchronization completed.');
+    }
+
+    protected function syncAll()
+    {
+        $syncCases = [
+            self::SYNC_CUSTOMERS,
+            self::SYNC_SALES_PERSONS,
+            self::SYNC_WAREHOUSES,
+            self::SYNC_PRODUCTS,
+            self::SYNC_ORDERS
+        ];
+
+        foreach ($syncCases as $case) {
+            $this->info("Start Syncing $case...");
+            $config = ($case === self::SYNC_ORDERS) ? $this->sap->build($case, $params) : $this->sap->build($case);
+            $this->sap->sync($config);
+        }
+    }
+
+    protected function syncType($type, $params)
+    {
+        $this->info("Start Syncing $type...");
+        $config = ($type === self::SYNC_ORDERS) ? $this->sap->build($type, $params) : $this->sap->build($type);
+        $this->sap->sync($config);
     }
 }
