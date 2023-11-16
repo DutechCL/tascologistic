@@ -51,18 +51,44 @@ class Order extends Model
         'observation',
         'is_managed',
     ];
-    const SYNC_INFO = [
-        'endpoint'   => 'orders', // SAP endpoint confifgured in config/service.php
-        'model'      => self::class,
-        'fields'     => self::FILLABLE_API,
-        'identifier' => self::IDENTIFIER,
-        'method'     => 'syncOrderWithItems',
-    ];
 
     protected $fillable = [
         ...self::FILLABLE_API,
         ...self::FILLABLE_INTERNAL,
     ];
+
+    public static function getSyncInfo(array $params = [], string $operator = 'and')
+    {
+        $order = self::latest('DocNum')->first();
+
+        if ($order && empty($params)) {
+            $params = [
+                [
+                    'field'    => 'DocNum',
+                    'operator' => 'ge', // greater than or equal
+                    'value'    => $order->DocNum,
+                ],
+                [
+                    'field'    => 'DocTime',
+                    'operator' => 'gt', // greater than
+                    'value'    => $order->DocTime,
+                ]
+            ];
+        }
+
+        return [
+            'endpoint'   => 'orders', // SAP endpoint confifgured in config/service.php
+            'model'      => self::class,
+            'fields'     => self::FILLABLE_API,
+            'identifier' => self::IDENTIFIER,
+            'method'     => 'syncOrderWithItems',
+            'notNull'    => [DocNum, U_SBO_FormaEntrega, CardCode],
+            'filter'     => [
+                'operator' => $operator,
+                'params'   => $params
+            ],
+        ];
+    }
 
     protected static function boot()
     {
@@ -108,11 +134,11 @@ class Order extends Model
         return $this->hasMany(OrderProblem::class, 'order_id');
     }
     
-    public static function syncOrderWithItems(array $orderData)
+    public static function syncOrderWithItems(array $where, array $orderData)
     {
         $process = 'Sincronizacion masiva';
 
-        $documentLines = $orderData['DocumentLines'];
+        $items = $orderData['DocumentLines'];
         unset($orderData['DocumentLines']);
     
         $customer = Customer::where('CardCode', $orderData['CardCode'])->first();
@@ -126,18 +152,16 @@ class Order extends Model
         ]);
 
         try {
-            $order = self::updateOrCreate(
-                ['DocNum' => $orderData['DocNum']],
-                $data
-            );
 
-            $order->syncOrderItems($documentLines);
+            $order = self::updateOrCreate($where, $data);
 
-            logOrder::success($process, $orderData['DocNum']);
+            $order->syncOrderItems($items);
+
+            logOrder::success($process, $data['DocNum']);
 
             return $order;
         } catch (\Exception $e) {
-            LogOrder::error($process, $orderData['DocNum'], $e->getMessage());
+            LogOrder::error($process, $data['DocNum'], $e->getMessage());
             \Log::error($e->getMessage());
             return;
         }

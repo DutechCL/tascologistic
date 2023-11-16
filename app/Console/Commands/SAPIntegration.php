@@ -32,7 +32,7 @@ class SAPIntegration extends Command
             'salesPersons' => SalesPerson::SYNC_INFO,
             'warehouses'   => Warehouse::SYNC_INFO,
             'products'     => Product::SYNC_INFO,
-            'orders'       => Order::SYNC_INFO,
+            'orders'       => Order::getSyncInfo(),
         ];
 
         $this->info("Syncing $type...");
