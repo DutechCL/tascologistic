@@ -1,11 +1,10 @@
-function ajaxSapSync(event, endpoint, model) {
+function ajaxSapSync(event, type) {
 
     $(event.target).addClass('btn-sync-disabled');
 
     const data = {
         _token: window.appConfig.csrfToken,
-        model: `\\App\\Models\\${model}`,
-        endpoint: endpoint,
+        case: type,
     };
 
     $.ajax({

@@ -24,7 +24,7 @@ class SAPIntegration extends Command
 
     public function handle()
     {
-        $type = $this->argument('type');
+        $type   = $this->argument('type');
         $dateTo = $this->option('docDate') ?? null;
         $docNum = $this->option('docNum') ?? null;
 
@@ -51,24 +51,21 @@ class SAPIntegration extends Command
             ];
         }
 
-        $syncCases = [
-            'customers'    => Customer::getSyncInfo(),
-            'salesPersons' => SalesPerson::getSyncInfo(),
-            'warehouses'   => Warehouse::getSyncInfo(),
-            'products'     => Product::getSyncInfo(),
-            'orders'       => Order::getSyncInfo($params),
-        ];
+        $syncCases = ['customers', 'salesPersons', 'warehouses', 'products', 'orders'];
 
         $this->info("Syncing $type...");
 
         if ($type === 'all') {
             foreach ($syncCases as $case => $info) {
                 $this->info("Start Syncing $case...");
-                $this->sap->sync($info);
+
+                $config = ($case === 'orders') ? $this->sap->build($case, $params) : $this->sap->build($case);
+                $this->sap->sync($config);
             }
         } else {
             $this->info("Start Syncing $type...");
-            $this->sap->sync($syncCases[$type]);
+            $config = ($type === 'orders') ? $this->sap->build($type, $params) : $this->sap->build($type);
+            $this->sap->sync($config);
         }
 
         $this->info('Synchronization completed.');

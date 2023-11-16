@@ -15,7 +15,20 @@ class SyncService
         $this->sapService = $sapService;
     }
 
-    public function sync(array $config)
+    public function build( string $type, array $params = [], string $operator = 'and' ){
+
+        $config = [
+            'customers'    => Customer::getSyncInfo($params, $operator),
+            'salesPersons' => SalesPerson::getSyncInfo($params, $operator),
+            'warehouses'   => Warehouse::getSyncInfo($params, $operator),
+            'products'     => Product::getSyncInfo($params, $operator),
+            'orders'       => Order::getSyncInfo($params, $operator),
+        ];
+
+        return $config[$type];
+    }
+
+    public function sync(array $type)
     {
         $skip = 0;
         $count = 0;
@@ -40,7 +53,7 @@ class SyncService
             return $count;
     
         } catch (\Exception $e) {
-            
+
             $this->logError($e, $model);
 
             return -1;

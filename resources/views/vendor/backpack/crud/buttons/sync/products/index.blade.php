@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-primary" id="export-button" onclick="ajaxSapSync(event, 'products.get','Product')">
+<button type="button" class="btn btn-primary" id="export-button" onclick="ajaxSapSync(event, 'products')">
     <i class="nav-icon la la-download"></i> @lang('product.crud.button.sync')
 </button>
 

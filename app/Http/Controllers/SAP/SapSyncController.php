@@ -11,10 +11,10 @@ use Illuminate\Support\Facades\Auth;
 
 class SapSyncController extends Controller
 {
-    protected $syncService;
-    public function __construct( SyncService $syncService )
+    protected $sap;
+    public function __construct( SyncService $sap )
     {
-        $this->syncService = $syncService;
+        $this->sap = $sap;
     }
 
     /**
@@ -28,13 +28,12 @@ class SapSyncController extends Controller
         try {
 
             $this->validate($request, [
-                'endpoint' => 'required|string',
-                'model' => 'required|string',
+                'case' => 'required|string',
             ]);
 
-            $response = ($request->endpoint != 'orders.get') 
-                ? $this->syncService->syncData($request->endpoint, $request->model)
-                : $this->syncService->syncOrders();
+            $config = $this->sap->build($request->case);
+
+            $response = $this->sap->sync($config);
 
             return response()->json([
                 'status' => 'success', 
