@@ -65,13 +65,10 @@ class SAPIntegration extends Command
             foreach ($syncCases as $case => $info) {
                 $this->info("Start Syncing $case...");
                 $this->sap->sync($info);
-                $this->info("End Syncing $case...");
-
             }
         } else {
             $this->info("Start Syncing $type...");
             $this->sap->sync($syncCases[$type]);
-            $this->info("End Syncing $type...");
         }
 
         $this->info('Synchronization completed.');

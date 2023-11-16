@@ -37,8 +37,12 @@ class SalesPerson extends Model
         static::creating(function ($salesPerson) {
             $salesPerson->attributes['Active'] = strtolower($salesPerson->attributes['Active']) === 'tyes' ? 1 : 0;
         });
+
+        static::updating(function ($salesPerson) {
+            $salesPerson->attributes['Active'] = strtolower($salesPerson->attributes['Active']) === 'tyes' ? 1 : 0;
+        });
     }
-    
+
     public static function getSyncInfo(array $params = [], string $operator = 'and')
     {
         return [
