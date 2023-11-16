@@ -26,17 +26,15 @@ class Customer extends Model
         'UpdateDate',
         'UpdateTime',
     ];
-    const SYNC_INFO = [
-        'endpoint'   => 'business_partners', // SAP endpoint confifgured in config/service.php
-        'model'      => self::class,
-        'fields'     => self::FILLABLE,
-        'identifier' => self::IDENTIFIER,
-        'method'     => 'updateOrCreate',
-    ];
 
     protected $fillable = self::FILLABLE;
 
-    public static function getSyncInfo(string $operator = 'and')
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public static function getSyncInfo()
     {
         $customer = self::latest('CreateDate')->first();
 
@@ -62,14 +60,9 @@ class Customer extends Model
             'identifier' => self::IDENTIFIER,
             'method'     => 'updateOrCreate',
             'filter'     => [
-                'operator' => $operator,
+                'operator' => 'and',
                 'params'   => $params ?? []
             ],
         ];
-    }
-
-    public function orders()
-    {
-        return $this->hasMany(Order::class);
     }
 }

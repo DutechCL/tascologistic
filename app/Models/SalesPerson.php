@@ -26,14 +26,6 @@ class SalesPerson extends Model
         'Mobile',
         'Email',
     ];
-    const SYNC_INFO = [
-        'endpoint'   => 'sales_persons', // SAP endpoint confifgured in config/service.php
-        'model'      => self::class,
-        'fields'     => self::FILLABLE,
-        'identifier' => self::IDENTIFIER,
-        'method'     => 'updateOrCreate',
-    ];
-
 
     protected $fillable = self::FILLABLE;
 
@@ -45,5 +37,16 @@ class SalesPerson extends Model
         static::creating(function ($salesPerson) {
             $salesPerson->attributes['Active'] = strtolower($salesPerson->attributes['Active']) === 'tyes' ? 1 : 0;
         });
+    }
+
+    public static function getSyncInfo()
+    {
+        return [
+            'endpoint'   => 'sales_persons', // SAP endpoint confifgured in config/service.php
+            'model'      => self::class,
+            'fields'     => self::FILLABLE,
+            'identifier' => self::IDENTIFIER,
+            'method'     => 'updateOrCreate',
+        ];
     }
 }

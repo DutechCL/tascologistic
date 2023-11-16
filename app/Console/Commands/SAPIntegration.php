@@ -53,9 +53,9 @@ class SAPIntegration extends Command
 
         $syncCases = [
             'customers'    => Customer::getSyncInfo(),
-            'salesPersons' => SalesPerson::SYNC_INFO,
-            'warehouses'   => Warehouse::SYNC_INFO,
-            'products'     => Product::SYNC_INFO,
+            'salesPersons' => SalesPerson::getSyncInfo(),
+            'warehouses'   => Warehouse::getSyncInfo(),
+            'products'     => Product::getSyncInfo(),
             'orders'       => Order::getSyncInfo($params),
         ];
 

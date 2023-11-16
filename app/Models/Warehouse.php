@@ -21,16 +21,18 @@ class Warehouse extends Model
         'State',
         'City',
     ];
-    const SYNC_INFO = [
-        'endpoint'   => 'warehouses', // SAP endpoint confifgured in config/service.php
-        'model'      => self::class,
-        'identifier' => self::IDENTIFIER,
-        'fields'     => self::FILLABLE,
-        'method'     => 'updateOrCreate',
-    ];
-
+    
     protected $fillable = self::FILLABLE;
 
-
+    public static function getSyncInfo()
+    {
+        return [
+            'endpoint'   => 'warehouses', // SAP endpoint confifgured in config/service.php
+            'model'      => self::class,
+            'identifier' => self::IDENTIFIER,
+            'fields'     => self::FILLABLE,
+            'method'     => 'updateOrCreate',
+        ];
+    }
 
 }

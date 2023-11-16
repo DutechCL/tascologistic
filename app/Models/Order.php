@@ -101,38 +101,7 @@ class Order extends Model
         return $this->hasMany(OrderProblem::class, 'order_id');
     }
 
-    public static function getSyncInfo(array $params = [], string $operator = 'and')
-    {
-        $order = self::latest('DocNum')->first();
 
-        if ($order && empty($params)) {
-            $params = [
-                [
-                    'field'    => 'DocNum',
-                    'operator' => 'ge', // greater than or equal
-                    'value'    => $order->DocNum,
-                ],
-                [
-                    'field'    => 'DocTime',
-                    'operator' => 'gt', // greater than
-                    'value'    => $order->DocTime,
-                ]
-            ];
-        }
-
-        return [
-            'endpoint'   => 'orders', // SAP endpoint confifgured in config/service.php
-            'model'      => self::class,
-            'fields'     => self::FILLABLE_API,
-            'identifier' => self::IDENTIFIER,
-            'method'     => 'syncOrderWithItems',
-            'notNull'    => ['DocNum', 'U_SBO_FormaEntrega', 'CardCode'],
-            'filter'     => [
-                'operator' => $operator,
-                'params'   => $params
-            ],
-        ];
-    }
     
     public static function syncOrderWithItems(array $where, array $orderData)
     {
