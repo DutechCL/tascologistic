@@ -43,6 +43,7 @@ class SAPIntegration extends Command
         if ($docNum) {
             $params = [
                 [
+            
                     'field'    => 'DocNum',
                     'operator' => 'eq', // equal
                     'value'    => $docNum,
@@ -50,9 +51,8 @@ class SAPIntegration extends Command
             ];
         }
 
-
         $syncCases = [
-            'customers'    => Customer::SYNC_INFO,
+            'customers'    => Customer::getSyncInfo(),
             'salesPersons' => SalesPerson::SYNC_INFO,
             'warehouses'   => Warehouse::SYNC_INFO,
             'products'     => Product::SYNC_INFO,
