@@ -5,11 +5,16 @@ namespace App\Services;
 use App\Models\User;
 use App\Models\Order;
 use App\Models\Process;
+use App\Models\Product;
+use App\Models\Customer;
+use App\Models\LogOrder;
 use App\Models\OrderStatus;
+use App\Models\SalesPerson;
 use App\Models\OrderProblem;
 use Illuminate\Http\Request;
 use App\Models\MethodShipping;
 use App\Models\OrderItemProblem;
+use Illuminate\Support\Facades\DB;
 use App\Http\Resources\OrderResource;
 
 class OrderService
@@ -17,6 +22,8 @@ class OrderService
     const ACTION_APPROVE = 'approve';
     const ACTION_REJECT  = 'reject';
     const ACTION_INFO    = 'info';
+
+    const SYNC_MASSIVE = 'Sincronizacion masiva';
 
     public function listOrdersCdaToManage(bool $execute = true)
     {
@@ -289,6 +296,74 @@ class OrderService
         $user = auth()->user() ?? User::find(1);
 
         return in_array($wareHouseCode, $user->allowedWarehouses()->toArray(), true);
+    }
+
+    public static function syncOrderWithItems(array $where, array $orderData)
+    {
+        $items = $orderData['DocumentLines'];
+        unset($orderData['DocumentLines']);
+
+        $customer = Customer::where('CardCode', $orderData['CardCode'])->first();
+        $methodShipping = MethodShipping::where('name', $orderData['U_SBO_FormaEntrega'])->first();
+        $salesPerson = SalesPerson::where('SalesEmployeeCode', $orderData['SalesPersonCode'])->first();
+
+        $data = array_merge($orderData, [
+            'customer_id'        => optional($customer)->id,
+            'method_shipping_id' => optional($methodShipping)->id,
+            'SalesEmployeeName'  => optional($salesPerson)->SalesEmployeeName,
+        ]);
+
+        try {
+            $order = Order::updateOrCreate($where, $data);
+            $order->syncOrderItems($items, $data['DocNum']);
+            LogOrder::success(self::SYNC_MASSIVE, $data['DocNum']);
+
+            return $order;
+        } catch (\Exception $e) {
+            LogOrder::error(self::SYNC_MASSIVE, $data['DocNum'], $e->getMessage());
+            \Log::error($e->getMessage());
+            return null;
+        }
+    }
+
+    private function syncOrderItems(array $orderItemsData, $docNum)
+    {
+        DB::beginTransaction();
+        try {
+            foreach ($orderItemsData as $orderItemData) {
+                $this->syncSingleOrderItem($orderItemData, $docNum);
+            }
+
+            DB::commit();
+        } catch (\Exception $e) {
+            DB::rollBack();
+            LogOrder::error(self::SYNC_MASSIVE, $docNum, "Error general al sincronizar order_items. Error: {$e->getMessage()}");
+            \Log::error($e->getMessage());
+        }
+    }
+
+    private function syncSingleOrderItem(array $orderItemData, $docNum)
+    {
+        $product = Product::where('ItemCode', $orderItemData['ItemCode'])->first();
+
+        if (!$product) {
+            DB::rollBack();
+            LogOrder::error(self::SYNC_MASSIVE, $docNum, "Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
+            \Log::error("Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
+            return;
+        }
+
+        try {
+            $columnNames = Schema::getColumnListing('order_items');
+            $dataToInsert = array_intersect_key($orderItemData, array_flip($columnNames));
+            $data = array_merge($dataToInsert, ['product_id' => $product->id]);
+            $this->orderItems()->create($data);
+        } catch (\Exception $e) {
+            DB::rollBack();
+            LogOrder::error(self::SYNC_MASSIVE, $docNum, "Error al crear producto para ItemCode: {$orderItemData['ItemCode']}. Error: {$e->getMessage()}");
+            \Log::error($e->getMessage());
+            return;
+        }
     }
 
 }
