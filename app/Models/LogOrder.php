@@ -57,7 +57,10 @@ class LogOrder extends Model
                 'message' => $message,
                 'isSynced' => $isSynced,
             ];
-            dd(self::updateOrCreate($where, $data));
+            if($isSynced == false){
+                dd(self::updateOrCreate($where, $data));
+            }
+                
             return self::updateOrCreate($where, $data);
 
 
