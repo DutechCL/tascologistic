@@ -349,8 +349,8 @@ class OrderService
 
         if (!$product) {
             DB::rollBack();
-            LogOrder::error(self::SYNC_MASSIVE, $docNum, "Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
-            \Log::error("Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
+            LogOrder::error(self::SYNC_MASSIVE, $docNum, "Producto no encontrado para ItemCode: {$orderItemData['ItemCode']} en nota de venta $docNum");
+            \Log::error("Producto no encontrado para ItemCode: {$orderItemData['ItemCode']} en nota de venta $docNum");
             return;
         }
 
