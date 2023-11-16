@@ -298,7 +298,7 @@ class OrderService
         return in_array($wareHouseCode, $user->allowedWarehouses()->toArray(), true);
     }
 
-    public static function syncOrderWithItems(array $where, array $orderData)
+    public function syncOrderWithItems(array $where, array $orderData)
     {
         $items = $orderData['DocumentLines'];
         unset($orderData['DocumentLines']);

@@ -137,7 +137,7 @@ class Order extends Model
 
     public static function syncOrder(array $where, array $orderData)
     {
-       return  OrderService::syncOrderWithItems($where, $orderData);
+       return  (new OrderService)->syncOrderWithItems($where, $orderData);
     }
     
     public function scopeWithOrderDetails($query)
