@@ -126,7 +126,7 @@ class Order extends Model
             'model'      => self::class,
             'fields'     => self::FILLABLE_API,
             'identifier' => self::IDENTIFIER,
-            'method'     => 'syncOrder',
+            'method'     => 'syncOrder', //method static 
             'notNull'    => ['DocNum', 'U_SBO_FormaEntrega', 'CardCode'],
             'filter'     => [
                 'operator' => $operator,

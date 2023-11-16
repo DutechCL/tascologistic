@@ -315,7 +315,7 @@ class OrderService
 
         try {
             $order = Order::updateOrCreate($where, $data);
-            $order->syncOrderItems($items, $data['DocNum']);
+            $this->syncOrderItems($order, $items, $data['DocNum']);
             LogOrder::success(self::SYNC_MASSIVE, $data['DocNum']);
 
             return $order;
@@ -326,12 +326,12 @@ class OrderService
         }
     }
 
-    private function syncOrderItems(array $orderItemsData, $docNum)
+    private function syncOrderItems(Order $order, array $orderItemsData, $docNum)
     {
         DB::beginTransaction();
         try {
             foreach ($orderItemsData as $orderItemData) {
-                $this->syncSingleOrderItem($orderItemData, $docNum);
+                $this->syncSingleOrderItem($order, $orderItemData, $docNum);
             }
 
             DB::commit();
@@ -342,7 +342,7 @@ class OrderService
         }
     }
 
-    private function syncSingleOrderItem(array $orderItemData, $docNum)
+    private function syncSingleOrderItem(Order $order, array $orderItemData, $docNum)
     {
         $product = Product::where('ItemCode', $orderItemData['ItemCode'])->first();
 
@@ -357,7 +357,7 @@ class OrderService
             $columnNames = Schema::getColumnListing('order_items');
             $dataToInsert = array_intersect_key($orderItemData, array_flip($columnNames));
             $data = array_merge($dataToInsert, ['product_id' => $product->id]);
-            $this->orderItems()->create($data);
+            $order->orderItems()->create($data);
         } catch (\Exception $e) {
             DB::rollBack();
             LogOrder::error(self::SYNC_MASSIVE, $docNum, "Error al crear producto para ItemCode: {$orderItemData['ItemCode']}. Error: {$e->getMessage()}");
