@@ -46,7 +46,7 @@ class SyncService
                 $url .= "{$param['field']} {$param['operator']} {$param['value']}";
             }
 
-            dd($url);
+            dd($url, $filter);
 
 
             do {
