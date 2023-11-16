@@ -53,7 +53,7 @@ class SyncService
         foreach ($filter['params'] as $param) {
             // Agregamos el operador lógico entre parámetros
             if (!empty($url)) {
-                $url .= ' ' . $param['operator'] . ' ';
+                $url .= ' ' . $filter['operator'] . ' ';
             }
 
             $url .= "{$param['field']} {$param['operator']} {$param['value']}";
