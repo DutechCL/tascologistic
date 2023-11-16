@@ -16,6 +16,7 @@ use App\Models\MethodShipping;
 use App\Models\OrderItemProblem;
 use Illuminate\Support\Facades\DB;
 use App\Http\Resources\OrderResource;
+use Illuminate\Support\Facades\Schema;
 
 class OrderService
 {
