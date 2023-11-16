@@ -19,7 +19,7 @@ class SyncService
         $this->sapService = $sapService;
     }
 
-    public function build( string $type, array $params = [], string $operator = 'and' ){
+    public function buildConfig( string $type, array $params = [], string $operator = 'and' ){
 
         $config = [
             'customers'    => Customer::getSyncInfo($params, $operator),
@@ -41,7 +41,6 @@ class SyncService
             extract($config); // $endpoint, $model, $fields, $identifier, $method, $filter
 
             $params = $this->buildUrlParams($filter);
-
 
             do {
                 $response = $this->sapService->get($endpoint, $skip, $fields, $params);

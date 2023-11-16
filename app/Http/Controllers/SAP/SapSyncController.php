@@ -31,7 +31,7 @@ class SapSyncController extends Controller
                 'case' => 'required|string',
             ]);
 
-            $config = $this->sap->build($request->case);
+            $config = $this->sap->buildConfig($request->case);
 
             $response = $this->sap->sync($config);
 

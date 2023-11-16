@@ -75,7 +75,7 @@ class SAPIntegration extends Command
 
         foreach ($syncCases as $case) {
             $this->info("Start Syncing $case...");
-            $config = ($case === self::SYNC_ORDERS) ? $this->sap->build($case, $params) : $this->sap->build($case);
+            $config = ($case === self::SYNC_ORDERS) ? $this->sap->buildConfig($case, $params) : $this->sap->buildConfig($case);
             $this->sap->sync($config);
         }
     }
@@ -83,7 +83,7 @@ class SAPIntegration extends Command
     protected function syncType($type, $params)
     {
         $this->info("Start Syncing $type...");
-        $config = ($type === self::SYNC_ORDERS) ? $this->sap->build($type, $params) : $this->sap->build($type);
+        $config = ($type === self::SYNC_ORDERS) ? $this->sap->buildConfig($type, $params) : $this->sap->buildConfig($type);
         $this->sap->sync($config);
     }
 }
