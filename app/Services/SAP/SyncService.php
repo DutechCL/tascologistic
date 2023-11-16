@@ -18,18 +18,36 @@ class SyncService
     public function sync(array $config)
     {
 
-        dd($config);
+        // dd($config);
         $skip = 0;
         $createdOrUpdatedCount = 0;
         try {
             
-            extract($config); // $endpoint, $model, $fields, $identifier, $method
+            extract($config); // $endpoint, $model, $fields, $identifier, $method, $filter
 
             // $lastSyncedRecord = $model::latest('CreateDate')->first();
 
             // if($lastSyncedRecord){
             //     $filterParam = $lastSyncedRecord->CreateDate ? "CreateDate ge $lastSyncedRecord->CreateDate and CreateTime gt $lastSyncedRecord->CreateTime" : null;
             // }
+
+            // Inicializamos la URL con el operador lógico principal
+
+            $url = '';
+
+            // Iteramos sobre los parámetros
+            foreach ($filter['params'] as $param) {
+                // Agregamos el operador lógico entre parámetros
+                if (!empty($url)) {
+                    $url .= ' ' . strtoupper($filter['operator']) . ' ';
+                }
+
+                // Agregamos el campo, operador y valor al URL
+                $url .= "{$param['field']} {$param['operator']} {$param['value']}";
+            }
+
+            dd($url);
+
 
             do {
                 $response = $this->sapService->get($endpoint, $skip, $fields);
