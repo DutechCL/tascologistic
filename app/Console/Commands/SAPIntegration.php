@@ -12,7 +12,7 @@ use Illuminate\Console\Command;
 
 class SAPIntegration extends Command
 {
-    protected $signature = 'sap:sync {type} {--docDate=}';
+    protected $signature = 'sap:sync {type} {--docDate=} {--docNum=}';
     protected $description = 'Synchronize SAP data';
     protected $sap;
 
@@ -26,13 +26,37 @@ class SAPIntegration extends Command
     {
         $type = $this->argument('type');
         $dateTo = $this->option('docDate') ?? null;
+        $docNum = $this->option('docNum') ?? null;
+
+        $params = [];
+
+        if ($dateTo) {
+            $params = [
+                [
+                    'field'    => 'DocDate',
+                    'operator' => 'ge', // greater than
+                    'value'    => $order->DocDate,
+                ]
+            ];
+        }
+
+        if ($docNum) {
+            $params = [
+                [
+                    'field'    => 'DocNum',
+                    'operator' => 'eq', // equal
+                    'value'    => $docNum,
+                ]
+            ];
+        }
+
 
         $syncCases = [
             'customers'    => Customer::SYNC_INFO,
             'salesPersons' => SalesPerson::SYNC_INFO,
             'warehouses'   => Warehouse::SYNC_INFO,
             'products'     => Product::SYNC_INFO,
-            'orders'       => Order::getSyncInfo(),
+            'orders'       => Order::getSyncInfo($params),
         ];
 
         $this->info("Syncing $type...");
