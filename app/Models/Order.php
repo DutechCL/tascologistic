@@ -193,8 +193,8 @@ class Order extends Model
                     }
                 } else {
                     DB::rollBack();
+                    dd($process, $docNum, $orderItemData['ItemCode'] );
                     $result = LogOrder::error($process, $docNum, "Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
-                    dd($result);
                     \Log::error("Producto no encontrado para ItemCode: {$orderItemData['ItemCode']}");
                     return;
                 }
