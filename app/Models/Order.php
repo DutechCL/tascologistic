@@ -82,7 +82,7 @@ class Order extends Model
             'fields'     => self::FILLABLE_API,
             'identifier' => self::IDENTIFIER,
             'method'     => 'syncOrderWithItems',
-            'notNull'    => [DocNum, U_SBO_FormaEntrega, CardCode],
+            'notNull'    => ['DocNum', 'U_SBO_FormaEntrega', 'CardCode'],
             'filter'     => [
                 'operator' => $operator,
                 'params'   => $params
