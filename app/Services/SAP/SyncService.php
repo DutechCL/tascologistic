@@ -59,6 +59,7 @@ class SyncService
                     }
                 }
     
+                
                 $skip += $this->batchSize;
     
             } while (isset($response['odata.nextLink']));
