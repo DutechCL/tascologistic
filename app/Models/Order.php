@@ -135,7 +135,7 @@ class Order extends Model
         ];
     }
 
-    public function syncOrder(array $where, array $orderData)
+    public static function syncOrder(array $where, array $orderData)
     {
        return  OrderService::syncOrderWithItems($where, $orderData);
     }
