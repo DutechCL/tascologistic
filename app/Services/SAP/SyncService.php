@@ -2,6 +2,10 @@
 namespace App\Services\SAP;
 
 use App\Models\Order;
+use App\Models\Product;
+use App\Models\Customer;
+use App\Models\Warehouse;
+use App\Models\SalesPerson;
 use App\Services\SAP\SAPService;
 use Illuminate\Support\Facades\Log;
 
