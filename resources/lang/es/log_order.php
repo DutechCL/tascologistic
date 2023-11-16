@@ -19,8 +19,10 @@ return [
             'is_synced_yes' => 'Sincronizado',
         ],
 
-        'button' => [
-            'sync' => 'Sincronizar Notas de Venta con SAP',
+        'buttons' => [
+            'sync'       => 'Sincronizar Notas de Venta con SAP',
+            'sync_error' => 'Sincronizar ( :count ) Notas de Venta fallidas',
+
         ],
     ],
 ];

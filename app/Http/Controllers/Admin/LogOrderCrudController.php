@@ -68,7 +68,8 @@ class LogOrderCrudController extends CrudController
     protected function setupListOperation()
     {
 
-        // CRUD::addButtonFromView('top', 'sync.customers.index', 'sync.customers.index', 'end');
+        CRUD::addButtonFromView('top', 'sync.orders.sync', 'sync.orders.sync', 'end');
+        CRUD::addButtonFromView('top', 'sync.orders.sync_error', 'sync.orders.sync_error', 'end');
 
         CRUD::addColumn([
             'name' => 'DocNum',

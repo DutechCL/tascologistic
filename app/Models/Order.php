@@ -109,9 +109,9 @@ class Order extends Model
         if ($order && empty($params)) {
             $params = [
                 [
-                    'field'    => 'DocNum',
+                    'field'    => 'DocDate',
                     'operator' => 'ge', // greater than or equal
-                    'value'    => $order->DocNum,
+                    'value'    => $order->DocDate,
                 ],
                 [
                     'field'    => 'DocTime',

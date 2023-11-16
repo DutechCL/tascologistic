@@ -68,6 +68,30 @@ class LogOrder extends Model
         }
 
     }
+
+    public static function countOrdersError()
+    {
+        return self::where('isSynced', false)->count();
+    }
+
+    public static function existOrdersError()
+    {
+        return self::countOrdersError() > 0;
+    } 
+
+    public static function buildParamsOrdersError()
+    {
+        $orderError = self::where('isSynced', false)->get()->pluck('DocNum');
+        $params = [];
+        foreach ($orderError as $key => $value) {
+            $params[] = [
+                'field'    => 'DocNum',
+                'operator' => 'eq', // greater than or equal
+                'value'    => $value,
+            ];
+        }
+        return $params;
+    }
     
 
 }

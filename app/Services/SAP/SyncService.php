@@ -19,8 +19,8 @@ class SyncService
         $this->sapService = $sapService;
     }
 
-    public function buildConfig( string $type, array $params = [], string $operator = 'and' ){
-
+    public function buildConfig( string $type, array $params = [], string $operator = 'and' )
+    {
         $config = [
             'customers'    => Customer::getSyncInfo($params, $operator),
             'salesPersons' => SalesPerson::getSyncInfo($params, $operator),

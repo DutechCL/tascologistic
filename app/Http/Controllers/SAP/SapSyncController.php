@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\SAP;
 
+use App\Models\LogOrder;
 use Illuminate\Http\Request;
 use App\Services\SAP\SyncService;
 use Illuminate\Http\JsonResponse;
@@ -26,13 +27,21 @@ class SapSyncController extends Controller
     public function sync( Request $request ) : JsonResponse
     {
         try {
-
+            
             $this->validate($request, [
                 'case' => 'required|string',
             ]);
+            
+            $params = [];
+            $case = $request->case;
 
-            $config = $this->sap->buildConfig($request->case);
-
+            if( $request->case == 'sync_error'){
+                $params = LogOrder::buildParamsOrdersError();
+                $case = 'orders';
+            }
+            
+            $config = $this->sap->buildConfig($case, $params);
+            
             $response = $this->sap->sync($config);
 
             return response()->json([

@@ -37,7 +37,7 @@ class CustomerCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::addButtonFromView('top', 'sync.customers.index', 'sync.customers.index', 'end');
+        CRUD::addButtonFromView('top', 'sync.customers.sync', 'sync.customers.sync', 'end');
 
         CRUD::addColumn([
             'name' => 'CardName',
