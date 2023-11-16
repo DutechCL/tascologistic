@@ -34,13 +34,15 @@ class SapSyncController extends Controller
             
             $params = [];
             $case = $request->case;
+            $operator = 'and';
 
             if( $request->case == 'sync_error'){
                 $params = LogOrder::buildParamsOrdersError();
                 $case = 'orders';
+                $operator = 'or';
             }
             
-            $config = $this->sap->buildConfig($case, $params);
+            $config = $this->sap->buildConfig($case, $params, $operator);
             
             $response = $this->sap->sync($config);
 
