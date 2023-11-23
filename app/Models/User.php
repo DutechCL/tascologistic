@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Laravel\Sanctum\HasApiTokens;
+use App\Models\Chat\Message;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
@@ -84,5 +85,10 @@ class User extends Authenticatable
     public function getRoleNameAttribute()
     {
         return $this->userRoles->first()->name ?? null;
+    }
+
+    public function messages()
+    {
+        return $this->hasMany(Message::class);
     }
 }

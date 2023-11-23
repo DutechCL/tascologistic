@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Chat\ChatController;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\UserController;
 use App\Http\Controllers\SAP\SapSyncController;
@@ -80,6 +81,14 @@ Route::prefix('v1')->group(
         //URL'S ORDENES
         Route::middleware(['auth:sanctum'])->prefix('orders')->group(function () {
             Route::post('/search', [OrderController::class, 'searchOrders']);
+        });
+
+        //URL'S CHAT 
+        Route::middleware(['auth:sanctum'])->prefix('chat')->group(function () {
+            Route::post('send-message', [ChatController::class, 'sendMessage']);
+            Route::get('get-message', [ChatController::class, 'getMessages']);
+            Route::get('get-user', [ChatController::class, 'getUser']);
+            Route::get('get-order/{id}', [ChatController::class, 'getOrder']);
         });
     }
 );

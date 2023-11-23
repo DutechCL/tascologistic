@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Permission;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\PermissionsRequest;
+use App\Http\Requests\PermissionsUpdateRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
-use Illuminate\Support\Facades\DB;
 
 /**
  * Class PermissionsCrudController
@@ -156,7 +157,7 @@ class PermissionsCrudController extends CrudController
         ]);
     }
 
-    public function update(PermissionsRequest $request)
+    public function update(PermissionsUpdateRequest $request)
     {
         try {
             DB::beginTransaction();
