@@ -23,6 +23,10 @@ export const useChatApi = defineStore('chat', {
             return await getWithToken(`api/v1/chat/get-user/`);
         },
 
+        async getOrders() {
+            return await getWithToken(`api/v1/chat/get-orders/`);
+        },
+
         async getOrder(id) {
             return await getWithToken(`api/v1/chat/get-order/${id}`);
         },

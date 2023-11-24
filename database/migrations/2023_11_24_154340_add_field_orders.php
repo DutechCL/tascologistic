@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('chats', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('order_id')->constrained();
-            $table->string('status');
-            $table->string('subject')->nullable();
-            $table->timestamps();
+        Schema::table('orders', function (Blueprint $table) {
+            $table->boolean('has_problems')->default(false);
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('chats');
+        Schema::table('orders', function (Blueprint $table) {
+            $table->dropColumn('has_problems');
+        });
     }
 };

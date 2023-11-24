@@ -41,6 +41,21 @@ class OrderService
         return $query;
     }
 
+    public function listOrdersProblems(bool $execute = true)
+    {
+        $query = Order::query();
+        $query->withOrderDetails()
+            ->where('order_status_id', OrderStatus::STATUS_REJECTED)
+            ->where('has_problems', true)
+            ->orderBy('DocDate', 'DESC')
+            ->orderBy('DocTime', 'DESC');
+
+        if ($execute) {
+            return $query->paginate(20);
+        }
+        return $query;
+    }
+
     public function listOrdersCdaManage(bool $execute = true)
     {
         $query = Order::query();
@@ -164,6 +179,7 @@ class OrderService
                 break;
             case self::ACTION_REJECT:
                 $order->order_status_id = OrderStatus::STATUS_REJECTED;
+                $order->has_problems = true;
                 $this->assingProbelmsOrder($order, $request);
                 break;  
         endswitch;    
@@ -192,6 +208,7 @@ class OrderService
                 break;
             case self::ACTION_REJECT:
                 $order->order_status_id = OrderStatus::STATUS_REJECTED;
+                $order->has_problems = true;
                 $this->assingProbelmsOrderItems($order, $request);
                 break;  
         endswitch;  

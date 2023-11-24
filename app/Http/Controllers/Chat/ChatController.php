@@ -6,18 +6,27 @@ use App\Models\Order;
 use App\Events\MessageSent;
 use App\Models\Chat\Message;
 use Illuminate\Http\Request;
+use App\Services\OrderService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\OrderResource;
 
 class ChatController extends Controller
 {
+    protected OrderService $orderService;
+
+    public function __construct(OrderService $orderService)
+    {
+        $this->orderService = $orderService;
+    }
+
     public function sendMessage(Request $request)
     {
-        $user = auth()->user(); // Puedes personalizar esto según tus necesidades
+        $user = auth()->user();
         
         $message = $request->input('message');
 
         $objMessage = Message::create([
+            'chat_id' => 1,
             'user_id' => $user->id,
             'message' => $message,
             'is_received' => false
@@ -38,7 +47,7 @@ class ChatController extends Controller
 
     public function getUser()
     {
-        $user = auth()->user(); // Puedes personalizar esto según tus necesidades
+        $user = auth()->user();
 
         return $this->success($user);
     }
@@ -48,6 +57,13 @@ class ChatController extends Controller
         $order = Order::getOrder($id);
 
         return $this->success(new OrderResource($order));
+    }
+
+    public function getOrders()
+    {
+        $orders = $this->orderService->listOrdersProblems();
+
+        return $this->success(OrderResource::collection($orders)->resolve());
     }
 
 

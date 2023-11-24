@@ -51,6 +51,7 @@ class Order extends Model
         'SalesEmployeeName',
         'observation',
         'is_managed',
+        'has_problems',
     ];
 
     protected $fillable = [
@@ -100,6 +101,11 @@ class Order extends Model
     public function problems()
     {
         return $this->hasMany(OrderProblem::class, 'order_id');
+    }
+
+    public function chats()
+    {
+        return $this->hasMany(Chat::class);
     }
 
     public static function getSyncInfo(array $params = [], string $operator = 'and')
@@ -152,7 +158,8 @@ class Order extends Model
                         $query->select(['order_item_problems.*', 'problems.title as problem_name'])
                             ->join('problems', 'problems.id', '=', 'order_item_problems.problem_id');
                     }])
-                    ->join('products', 'products.id', '=', 'order_items.product_id');
+                    ->join('products', 'products.id', '=', 'order_items.product_id')
+                    ->select('order_items.*');
             },
             'problems' => function ($query) {
                 $query->select(['order_problems.*', 'problems.title as problem_name'])
