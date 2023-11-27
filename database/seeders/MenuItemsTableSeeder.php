@@ -437,6 +437,25 @@ class MenuItemsTableSeeder extends Seeder
                 'type' => NULL,
                 'updated_at' => '2023-11-15 18:59:06',
             ),
+            22 => 
+            array (
+                'created_at' => '2023-11-23 13:57:35',
+                'deleted_at' => NULL,
+                'depth' => NULL,
+                'icon' => 'fas fa-comments',
+                'id' => 43,
+                'is_external' => 0,
+                'lft' => NULL,
+                'link' => '/app/chat/list-chats',
+                'name' => 'Chat',
+                'order' => 0,
+                'page_id' => NULL,
+                'parent_id' => 41,
+                'permission_id' => 26,
+                'rgt' => NULL,
+                'type' => NULL,
+                'updated_at' => '2023-11-23 14:24:40',
+            ),
         ));
         
         

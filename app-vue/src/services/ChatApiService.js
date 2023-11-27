@@ -15,8 +15,8 @@ export const useChatApi = defineStore('chat', {
             return await postWithToken(`api/v1/chat/send-message/`, body);
         },
 
-        async getMessages() {
-            return await getWithToken(`api/v1/chat/get-message/`);
+        async getMessages(id) {
+            return await getWithToken(`api/v1/chat/get-message/${id}`);
         },
 
         async getUser() {

@@ -52,6 +52,9 @@ class Order extends Model
         'observation',
         'is_managed',
         'has_problems',
+        'report_user_id',
+        'report_user_responsible',
+        'report_user_name',
     ];
 
     protected $fillable = [

@@ -22,8 +22,8 @@ export const useChat = defineStore('useChat', {
       return await chatService.sendMessage(body);
     },
 
-    async getMessages() {
-        let response = await chatService.getMessages();
+    async getMessages(id) {
+        let response = await chatService.getMessages(id);
         this.listMessages = response.data;
         return response.data;
     },

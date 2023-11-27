@@ -40,6 +40,9 @@ class OrderResource extends JsonResource
             'updated_at' => $this->updated_at,
             'observation' => $this->observation,
             'process_id' => $this->process_id,
+            'report_user_id' => $this->report_user_id,
+            'report_user_responsibles' => $this->report_user_responsible,
+            'report_user_name' => $this->report_user_name,
             'Problems' => $this->problems->map(function ($problem) {
                 return [
                     'id' => $problem->id,

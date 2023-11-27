@@ -1,24 +1,34 @@
 <template>
-    <DataTable tableStyle="min-width: 50rem" :value="orders" dataKey="id" >
-      <Column headerClass="!bg-primary-900"  field="DocNum" header="Nota de venta">
+    <DataTable 
+      tableStyle="min-width: 50rem" 
+      :value="orders" 
+      :rowsPerPageOptions="[5, 10, 20, 50]" 
+      :rows="5" 
+      @page="getData"
+      paginator 
+      dataKey="id" 
+      filterDisplay="row" 
+      paginatorTemplate="RowsPerPageDropdown FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
+      currentPageReportTemplate="{first} a {last} de {totalRecords}">
+      <Column headerClass="!bg-primary-900" sortable  field="DocNum" header="Nota de venta">
         <template #body="slotProps">
           N° {{ slotProps.data.DocNum  }}
         </template>
       </Column>
-      <Column headerClass="!bg-primary-900"  field="Customer.CardName" header="Cliente" style="max-width: 300px;"></Column>
-      <Column headerClass="!bg-primary-900"  field="Customer.CardCode" header="Rut" style="max-width: 300px;"></Column>
-      <Column headerClass="!bg-primary-900" field="MethodShippingName" header="Método entrega">
+      <Column headerClass="!bg-primary-900" sortable  field="Customer.CardName" header="Cliente" style="max-width: 300px;"></Column>
+      <Column headerClass="!bg-primary-900" sortable  field="Customer.CardCode" header="Rut" style="max-width: 300px;"></Column>
+      <Column headerClass="!bg-primary-900" sortable  field="MethodShippingName" header="Método entrega">
         <template #body="slotProps">
           <Tag Tag :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>       
         </template>
       </Column>
-      <Column headerClass="!bg-primary-900"  field="MethodShippingName" header="Desde" >
+      <Column headerClass="!bg-primary-900" sortable  field="MethodShippingName" header="Desde" >
           <template #body="slotProps">
-          <Tag  :value="'Bodega'" class="p-tag-1 tag-font-method tag-radius"></Tag>
+            <Tag :value="slotProps.data.report_user_responsibles === 'cda' ? 'CDA' : 'Bodega'" class="p-tag-1 tag-font-method tag-radius"></Tag>
           </template>
       </Column>
-      <Column headerClass="!bg-primary-900"  field="SalesEmployeeName" header="Vendedor"></Column>
-      <Column headerClass="!bg-primary-900"  field="SalesEmployeeName" header="Informador"></Column>
+      <Column headerClass="!bg-primary-900" sortable  field="SalesEmployeeName" header="Vendedor"></Column>
+      <Column headerClass="!bg-primary-900" sortable field="report_user_name" header="Informador"></Column>
 
       <Column headerClass="!bg-primary-900"  field="note" header="" >
         <template #body="slotProps">
@@ -54,7 +64,7 @@
 
 
 <style>
-[data-pc-section="sort"] svg {
+    [data-pc-section="sort"] svg {
     color: white !important;
     width: 12px;
     }

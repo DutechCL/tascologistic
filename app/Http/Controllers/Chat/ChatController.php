@@ -7,40 +7,31 @@ use App\Events\MessageSent;
 use App\Models\Chat\Message;
 use Illuminate\Http\Request;
 use App\Services\OrderService;
+use App\Services\Chat\ChatService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\OrderResource;
 
 class ChatController extends Controller
 {
     protected OrderService $orderService;
+    protected ChatService $chatService;
 
-    public function __construct(OrderService $orderService)
+    public function __construct(OrderService $orderService, ChatService $chatService)
     {
         $this->orderService = $orderService;
+        $this->chatService = $chatService;
     }
 
     public function sendMessage(Request $request)
     {
-        $user = auth()->user();
-        
-        $message = $request->input('message');
-
-        $objMessage = Message::create([
-            'chat_id' => 1,
-            'user_id' => $user->id,
-            'message' => $message,
-            'is_received' => false
-        ]);
-        $objMessage->load('user');
-
-        event(new MessageSent($objMessage));
+        $objMessage = $this->chatService->sendMessage($request);
 
         return $this->success($objMessage);
     }
 
-    public function getMessages()
+    public function getMessages($orderId)
     {
-        $result = Message::with('user')->get();
+        $result = $this->chatService->listMessage(Order::find($orderId));
 
         return $this->success($result);
     }

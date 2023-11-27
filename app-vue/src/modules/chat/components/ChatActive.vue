@@ -14,18 +14,17 @@
   </div>
 
   
-  <div v-if="!isDataLoaded" class="text-center" style="color:#259bd7">
+  <div v-if="isDataLoaded" class="text-center" style="color:#259bd7">
     <i class="pi pi-spin pi-spinner" style="font-size: 2rem;"></i>
   </div>
 
-  <!-- tablas de ordenes segun metodo de envio -->
-<DataTableListOrders v-if="isDataLoaded" :orders="orders" />
+  <DataTableListOrders v-if="orders.length > 0" :orders="orders" />
 
-  <!-- <div v-if="ordersHere.length === 0 && ordersPickup.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <div v-if="orders.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
     <h1 class="align-center font-inter font-semibold mb-4 text-2xl text-center text-primary-900">
       No se han encontrado ordenes
     </h1>
-  </div> -->
+  </div>
 </template>
 
 
@@ -41,12 +40,12 @@ import { useChat } from "../../../stores/chat/chat";
 
 const chat = useChat();
 const orders = ref([]);
-const isDataLoaded = ref(false);
+const isDataLoaded = ref(true);
 
 onBeforeMount(async () => {
   await chat.getOrders().then((data) => {
     orders.value = data;
-    isDataLoaded.value = true;
+    isDataLoaded.value = false;
 
     console.log(isDataLoaded.value, orders.value)
   });

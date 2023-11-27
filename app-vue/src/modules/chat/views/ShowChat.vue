@@ -20,7 +20,7 @@
                         borderBottomLeftRadius: selfUser(message.user.id) ? '33px' : '0', 
                         borderBottomRightRadius: selfUser(message.user.id) ? '0' : '33px', 
                     }">
-                        <p>{{ message.message }}</p>
+                        <p v-html="message.message"></p>
                     </div>
                     <p class="text-time">{{ formatTime(message.created_at) }}</p>
                 </div>
@@ -48,6 +48,7 @@ const message = ref('');
 const result = ref([]);
 const currentUser = ref({});
 const order = ref({});
+const chatId = ref(null);
 
 const loadingOrder = ref(false);
 
@@ -62,7 +63,7 @@ const formatTime = (dateTime) => {
 const sendMessage = async () => {
     try {
         // Enviar el mensaje al backend utilizando Axios
-        await chat.sendMessage({ message: message.value });
+        await chat.sendMessage({ message: message.value, chat_id: chatId.value });
 
         message.value = '';
 
@@ -103,8 +104,9 @@ onBeforeMount(async () => {
         });
 
         // Obtener los mensajes desde el servidor al cargar la página
-        const response = await chat.getMessages();
-        result.value = response;
+        const response = await chat.getMessages(props.id);
+        chatId.value =response.id;
+        result.value = response.messages;
 
     } catch (error) {
         console.error('Error al obtener los mensajes:', error);
