@@ -1,7 +1,7 @@
 <template>
     <DataTable 
       tableStyle="min-width: 50rem" 
-      :value="orders" 
+      :value="data" 
       :rowsPerPageOptions="[5, 10, 20, 50]" 
       :rows="5" 
       @page="getData"
@@ -12,28 +12,28 @@
       currentPageReportTemplate="{first} a {last} de {totalRecords}">
       <Column headerClass="!bg-primary-900" sortable  field="DocNum" header="Nota de venta">
         <template #body="slotProps">
-          N° {{ slotProps.data.DocNum  }}
+          N° {{ slotProps.data.order.DocNum  }}
         </template>
       </Column>
-      <Column headerClass="!bg-primary-900" sortable  field="Customer.CardName" header="Cliente" style="max-width: 300px;"></Column>
-      <Column headerClass="!bg-primary-900" sortable  field="Customer.CardCode" header="Rut" style="max-width: 300px;"></Column>
-      <Column headerClass="!bg-primary-900" sortable  field="MethodShippingName" header="Método entrega">
+      <Column headerClass="!bg-primary-900" sortable  field="order.Customer.CardName" header="Cliente" style="max-width: 300px;"></Column>
+      <Column headerClass="!bg-primary-900" sortable  field="order.Customer.CardCode" header="Rut" style="max-width: 300px;"></Column>
+      <Column headerClass="!bg-primary-900" sortable  field="order.MethodShippingName" header="Método entrega">
         <template #body="slotProps">
-          <Tag Tag :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>       
+          <Tag Tag :value="slotProps.data.order.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>       
         </template>
       </Column>
-      <Column headerClass="!bg-primary-900" sortable  field="MethodShippingName" header="Desde" >
+      <Column headerClass="!bg-primary-900" sortable  field="order.MethodShippingName" header="Desde" >
           <template #body="slotProps">
-            <Tag :value="slotProps.data.report_user_responsibles === 'cda' ? 'CDA' : 'Bodega'" class="p-tag-1 tag-font-method tag-radius"></Tag>
+            <Tag :value="slotProps.data.order.report_user_responsibles === 'cda' ? 'CDA' : 'Bodega'" class="p-tag-1 tag-font-method tag-radius"></Tag>
           </template>
       </Column>
-      <Column headerClass="!bg-primary-900" sortable  field="SalesEmployeeName" header="Vendedor"></Column>
-      <Column headerClass="!bg-primary-900" sortable field="report_user_name" header="Informador"></Column>
+      <Column headerClass="!bg-primary-900" sortable  field="order.SalesEmployeeName" header="Vendedor"></Column>
+      <Column headerClass="!bg-primary-900" sortable field="order.report_user_name" header="Informador"></Column>
 
       <Column headerClass="!bg-primary-900"  field="note" header="" >
         <template #body="slotProps">
             <div class="flex gap-2">
-                <router-link :to="{name: 'show-chat', params: { id: slotProps.data.id }}" class="!border-primary-900 !text-primary-900 btn-custom-table" >Revisar</router-link>
+                <router-link :to="{name: 'show-chat', params: { id: slotProps.data.chat.id }}" class="!border-primary-900 !text-primary-900 btn-custom-table" >Revisar</router-link>
                <Button class="!p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900 btn-custom-table" label="Resuelto"></Button>
             </div>
         </template>
@@ -50,15 +50,13 @@
     import  Button  from 'primevue/button';
 
     const props = defineProps({
-        orders: Array,
+        data: Array,
     });
 
-    const orders = ref([]);
+    const data = ref([]);
 
     onBeforeMount(() => {
-        orders.value = props.orders;
-
-        console.log(orders.value)
+        data.value = props.data;
     });
 </script>
 

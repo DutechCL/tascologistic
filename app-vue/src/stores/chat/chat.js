@@ -40,8 +40,8 @@ export const useChat = defineStore('useChat', {
       return response.data;
     },
 
-    async getOrder(id){
-      let response = await chatService.getOrder(id);
+    async showChat(id){
+      let response = await chatService.showChat(id);
       this.currentOrder = response.data;
       return response.data;
     },

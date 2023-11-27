@@ -29,9 +29,9 @@ class ChatController extends Controller
         return $this->success($objMessage);
     }
 
-    public function getMessages($orderId)
+    public function getMessages($chatId)
     {
-        $result = $this->chatService->listMessage(Order::find($orderId));
+        $result = $this->chatService->listMessage($chatId);
 
         return $this->success($result);
     }
@@ -43,18 +43,18 @@ class ChatController extends Controller
         return $this->success($user);
     }
 
-    public function getOrder($id)
+    public function showChat($id)
     {
-        $order = Order::getOrder($id);
+        $order = $this->chatService->showChat($id);
 
-        return $this->success(new OrderResource($order));
+        return $this->success($order);
     }
 
     public function getOrders()
     {
-        $orders = $this->orderService->listOrdersProblems();
+        $chat = $this->chatService->listChatsByUser();
 
-        return $this->success(OrderResource::collection($orders)->resolve());
+        return $this->success($chat);
     }
 
 

@@ -10,7 +10,7 @@
         class="ml-5 !p-button p-component !bg-primary-900 !py-1 !border-primary-900 !text-white btn-custom"
         @click="updateOrders"/>
     </div>
-    <Search :type="typeSearch" :orders="orders"/>
+    <Search :type="typeSearch" :data="dataChat"/>
   </div>
 
   
@@ -18,9 +18,9 @@
     <i class="pi pi-spin pi-spinner" style="font-size: 2rem;"></i>
   </div>
 
-  <DataTableListOrders v-if="orders.length > 0" :orders="orders" />
+  <DataTableListOrders v-if="dataChat.length > 0" :data="dataChat" />
 
-  <div v-if="orders.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <div v-if="dataChat.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
     <h1 class="align-center font-inter font-semibold mb-4 text-2xl text-center text-primary-900">
       No se han encontrado ordenes
     </h1>
@@ -39,15 +39,13 @@ import { useChat } from "../../../stores/chat/chat";
 
 
 const chat = useChat();
-const orders = ref([]);
+const dataChat = ref([]);
 const isDataLoaded = ref(true);
 
 onBeforeMount(async () => {
   await chat.getOrders().then((data) => {
-    orders.value = data;
+    dataChat.value = data;
     isDataLoaded.value = false;
-
-    console.log(isDataLoaded.value, orders.value)
   });
 });
 

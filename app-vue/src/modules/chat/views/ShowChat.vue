@@ -79,34 +79,25 @@ const selfUser = (userId) => {
 onBeforeMount(async () => {
     try {
 
-        // Obtener el usuario actual
         currentUser.value = await chat.getUser();
 
-        // Obtener las ordenes
-        await chat.getOrder(props.id).then((response) => {
-            order.value =  response
+        await chat.showChat(props.id).then((response) => {
+            order.value  = response.order;
+            result.value = response.messages;
+            chatId.value = response.id;
             loadingOrder.value = true
         });
 
-        // Inicializar Pusher con tus credenciales
         const pusher = new Pusher('fafc81d9b01571689422', {
             cluster: 'ap2',
             encrypted: true,
         });
 
-        // Suscribirse al canal 'my-channel' y escuchar el evento 'my-event'
         const channel = pusher.subscribe('my-channel');
-        // console.log(channel)
+
         channel.bind('my-event', (data) => {
-            // Agregar el nuevo mensaje a la lista de mensajes
-            console.log(data.message)
             result.value.push(data.message);
         });
-
-        // Obtener los mensajes desde el servidor al cargar la página
-        const response = await chat.getMessages(props.id);
-        chatId.value =response.id;
-        result.value = response.messages;
 
     } catch (error) {
         console.error('Error al obtener los mensajes:', error);

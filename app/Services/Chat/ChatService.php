@@ -6,6 +6,7 @@ use App\Models\Order;
 use App\Models\Chat\Chat;
 use App\Events\MessageSent;
 use App\Models\Chat\Message;
+use App\Http\Resources\OrderResource;
 
 
 
@@ -65,18 +66,71 @@ class ChatService
         return $objMessage;
     }
 
-    public function listMessage(Order $order)
+    public function listChatsByUser($execute = true)
+    {
+        $userId = auth()->user()->id;
+    
+        $query = Chat::query();
+    
+        $query->whereHas('users', function ($query) use ($userId) {
+
+            $query->where('user_id', $userId);
+
+        })->with(['order' => function ($query) {
+
+            $query->withOrderDetails();
+
+        }]);
+    
+        if ($execute) {
+            
+            $chats = $query->get();
+
+            $chats = $chats->map(function ($chat) {
+                return [
+                    'chat' => $chat,   // Puedes ajustar esto según tu necesidad
+                    'order' => new OrderResource($chat->order),
+                ];
+            });
+
+            return $chats;
+        }
+    
+        return $query;
+    }
+
+    public function showChat($id)
+    {
+        $chat = Chat::with([
+            'messages' => function ($query) {
+                $query->with('user');
+            },
+            'order' => function ($query) {
+                $query->withOrderDetails();
+            }
+        ])->where('id', $id)->first();
+    
+        $formattedChat = new \stdClass();
+        $formattedChat->id = $chat->id;
+        $formattedChat->order_id = $chat->order_id;
+        $formattedChat->subject = $chat->subject;
+        $formattedChat->status = $chat->status;
+        $formattedChat->messages = $chat->messages; 
+        $formattedChat->order = new OrderResource($chat->order);
+    
+        return $formattedChat;
+    }
+
+    public function listMessage($chatId)
     {
         $chats = Chat::with([
             'messages' => function ($query) {
                 $query->with('user');
             }]
-        )->where('order_id', $order->id)->first();
+        )->where('id', $chatId)->first();
         
         return $chats;
     }
-
-
 
     public function generateMessage($order)
     {
@@ -107,6 +161,4 @@ class ChatService
 
         return $message;
     }
-
-
 }
