@@ -2,7 +2,7 @@
     <div class="content-head-chat">
         <div>
             <router-link :to="{name: 'list-chats'}">
-                <p class="mb-2 text-primary-900 font-inter font-semibold text-2xl"> <i class="pi pi-arrow-left font-icon"></i> Incidencias en notas de venta</p>
+                <p class="mb-2 text-primary-900 font-inter font-semibold text-xl"> <i class="pi pi-arrow-left font-icon"></i> Incidencias en notas de venta</p>
             </router-link>
         </div>
         <div>
@@ -141,13 +141,13 @@ header{
     margin: auto;
     overflow-y: scroll;
     height: 475px;
-    margin-top: 210px;
+    margin-top: 180px;
     padding: 0 40px;
 }
 .receiving-bubbles{
     padding: 15px;
     padding-left: 30px;
-    width: 500px;
+    width: 600px;
     border-radius: 33px;
     
 }
@@ -182,6 +182,6 @@ header{
 }
 
 .font-icon{
-    font-size: 25px;
+    font-size: 20px;
 }
 </style>

@@ -8,17 +8,17 @@
     <Search :type="typeSearch" :orders="orders"/>
   </div>
 
-  <div v-if="!isDataLoaded" class="text-center" style="color:#259bd7">
+  <div v-if="false" class="text-center" style="color:#259bd7">
     <i class="pi pi-spin pi-spinner" style="font-size: 2rem;"></i>
   </div>
   <!-- tablas de ordenes segun metodo de envio -->
-<DataTableListOrders :orders="orders" />
+<DataTableListOrders v-if="false" :orders="orders" />
 
-  <!-- <div v-if="ordersHere.length === 0 && ordersPickup.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <div v-if="true" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
     <h1 class="align-center font-inter font-semibold mb-4 text-2xl text-center text-primary-900">
       No se han encontrado ordenes
     </h1>
-  </div> -->
+  </div>
 </template>
 
 <script setup>
