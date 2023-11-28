@@ -10,11 +10,13 @@ import { createPinia } from 'pinia';
 import Cookies from 'js-cookie';
 
 
+Cookies.set('token', localStorage.getItem('token'), { sameSite: 'None', secure: true });
+
 // metodo util solo durante la fase de desarrollo
 async function checkViteServer() {
+
   try {
     // Verificar si la URL actual es http://tasco.test/
-    console.log(window.location.hostname)
     if (window.location.hostname === 'tasco.test') {
       const currentPort = window.location.port;
       if (currentPort !== '5174' && !window.location.hostname.includes('127.0.0.1')) {
@@ -36,5 +38,5 @@ checkViteServer();
 
 
 // Configurar cookies al iniciar sesión
-Cookies.set('token', localStorage.getItem('token'), { sameSite: 'None', secure: true });
+
 </script>

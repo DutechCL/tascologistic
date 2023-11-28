@@ -182,6 +182,8 @@ class OrderService
 
     public function processOrderCda(Request $request)
     {
+        $result = null;
+
         $order = Order::getOrder($request->orderId);
         $order->assignResponsible($request->responsible);
 
@@ -190,7 +192,7 @@ class OrderService
                 $order->order_status_id = OrderStatus::STATUS_ON_PICKER;
                 break;
             case self::ACTION_REJECT:
-                $this->rejectOrder($request);
+                $result = $this->rejectOrder($request);
                 break;  
         endswitch;    
 
@@ -200,6 +202,7 @@ class OrderService
         return (object) [
             'message' => 'Orden actualizada correctamente',
             'orders' => $this->listOrdersCdaToManage(),
+            'chat' => $result
         ];
     }
 
@@ -245,9 +248,7 @@ class OrderService
             $this->assingProbelmsOrderItems($order, $request);
         }
 
-        $this->chatService->createChatForOrder($order);
-
-        return;
+        return $this->chatService->createChatForOrder($order);
     }
 
     public function assingResponsible(Request $request)

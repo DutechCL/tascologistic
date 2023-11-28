@@ -2,10 +2,12 @@
 
 namespace App\Services\Chat;
 
+use App\Models\User;
 use App\Models\Order;
 use App\Models\Chat\Chat;
 use App\Events\MessageSent;
 use App\Models\Chat\Message;
+use App\Events\Notifications;
 use App\Http\Resources\OrderResource;
 
 
@@ -25,6 +27,8 @@ class ChatService
 
         foreach ($order->responsibles as $responsible) {
             $chat->users()->attach($responsible->id);
+
+            event(new Notifications(User::find($responsible->id)));
         }
 
         $chat_id = $chat->id;
@@ -36,6 +40,8 @@ class ChatService
         $order->save();
 
         event(new MessageSent($message));
+
+        return $chat;
     }
 
     public function sendMessage($request)

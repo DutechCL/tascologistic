@@ -6,13 +6,13 @@
             </router-link>
         </div>
         <div>
-         <DataTableDetailOrder v-if="loadingOrder" :order="order"/>
+         <DataTableDetailOrder v-if="chat?.loadingOrder" :order="chat.order"/>
         </div>
     </div>
     <div class="content-chat">
 
         <ul>
-            <li v-for="message in result" :key="message.id" style="width: 100% !important; list-style: none;">
+            <li v-for="message in chat.messages" :key="message.id" style="width: 100% !important; list-style: none;">
                 <div class="message-container" :class="{ 'self-message': selfUser(message.user.id) }">
                     <strong v-if="!selfUser(message.user.id)" class="mb-2 text-primary-900 font-inter font-semibold text-sm">{{ message.user.name }}</strong>
                     <div class="receiving-bubbles" :style="{
@@ -35,21 +35,18 @@
 </template>
 
 <script setup>
-import { onBeforeMount, ref } from 'vue';
+import { onBeforeMount, ref, watch } from 'vue';
 import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
 import { useChat } from "../../../stores/chat/chat";
 import DataTableDetailOrder from '../components/DataTableDetailOrder.vue';
 import { format } from 'date-fns';
+// import Echo from 'laravel-echo';
 import Pusher from 'pusher-js'; // Importa la biblioteca Pusher
+import Cookies from 'js-cookie';
 
 const chat = useChat();
 const message = ref('');
-const result = ref([]);
-const currentUser = ref({});
-const order = ref({});
-const chatId = ref(null);
-
 const loadingOrder = ref(false);
 
 const props = defineProps({
@@ -62,8 +59,8 @@ const formatTime = (dateTime) => {
 
 const sendMessage = async () => {
     try {
-        // Enviar el mensaje al backend utilizando Axios
-        await chat.sendMessage({ message: message.value, chat_id: chatId.value });
+
+        await chat.sendMessage({ message: message.value, chat_id: chat.current.id });
 
         message.value = '';
 
@@ -73,32 +70,35 @@ const sendMessage = async () => {
 };
 
 const selfUser = (userId) => {
-    return userId === currentUser?.value.id;
+    return userId === chat.currentUser?.id;
 };
 
 onBeforeMount(async () => {
     try {
+        const protocol = window.location.protocol;
+        const domain = window.location.hostname;
+    
+        await chat.showChat(props.id);
 
-        currentUser.value = await chat.getUser();
-
-        await chat.showChat(props.id).then((response) => {
-            order.value  = response.order;
-            result.value = response.messages;
-            chatId.value = response.id;
-            loadingOrder.value = true
-        });
+        loadingOrder.value = true;
 
         const pusher = new Pusher('fafc81d9b01571689422', {
             cluster: 'ap2',
             encrypted: true,
+            channelAuthorization: {
+                endpoint: `${protocol}//${domain}/broadcasting/auth`,
+                headers: { 
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                },
+            },
         });
 
-        const channel = pusher.subscribe('my-channel');
+        const channel = pusher.subscribe(`private-chat.${chat.current.id}`);
 
-        channel.bind('my-event', (data) => {
-            result.value.push(data.message);
+        channel.bind('message.sent', (data) => {
+            chat.addMessage(data.message);
         });
-
+        
     } catch (error) {
         console.error('Error al obtener los mensajes:', error);
     }

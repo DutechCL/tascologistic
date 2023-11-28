@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia';
 import { useChatApi } from '../../services/ChatApiService.js'; 
-import constants from '../../constants/constants.js';
+import { useNotificationStore } from '../../services/NotificationService.js';
 
+const notificationStore = useNotificationStore();
 const chatService = useChatApi();
 
 export const useChat = defineStore('useChat', {
@@ -10,12 +11,14 @@ export const useChat = defineStore('useChat', {
     listMessages: [],
     currentChat: {},   
     currentUser: {},      
-    currentOrder: {},   
+    currentOrder: {}, 
+    loadingOrder: false,  
   }),
   getters: {
     messages: (state) => state.listMessages, 
     user: (state) => state.currentUser,
-    order: (state) => state.currentOrder
+    order: (state) => state.currentOrder,
+    current: (state) => state.currentChat,
   },
   actions: {
     async sendMessage(body) {
@@ -42,8 +45,26 @@ export const useChat = defineStore('useChat', {
 
     async showChat(id){
       let response = await chatService.showChat(id);
-      this.currentOrder = response.data;
+      this.listMessages = response.data.messages;
+      this.currentOrder = response.data.order;
+      this.currentChat = response.data;
+      this.loadingOrder = true;
       return response.data;
     },
+
+    addMessage(message) {
+      this.listMessages.push(message);
+
+      notificationStore.incrementNotifications()
+
+      if(this.currentUser.id !== message.user.id) {
+        notificationStore.incrementNotifications(); // Incrementa el contador de notificaciones
+      }
+    },
+
+    currentChat(chat) {
+      this.currentChat = chat;
+    }
+
   }
 })
