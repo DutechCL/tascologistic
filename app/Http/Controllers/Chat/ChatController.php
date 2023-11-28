@@ -57,5 +57,18 @@ class ChatController extends Controller
         return $this->success($chat);
     }
 
+    public function getResolve()
+    {
+        $chat = $this->chatService->listChatsHistory();
+
+        return $this->success($chat);
+    }
+
+    public function resolveOrder($id)
+    {
+        $order = $this->chatService->resolveOrder($id);
+
+        return $this->success($order);
+    }
 
 }

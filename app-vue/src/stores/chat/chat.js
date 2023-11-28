@@ -43,6 +43,11 @@ export const useChat = defineStore('useChat', {
       return response.data;
     },
 
+    async getResolve() {
+      let response = await chatService.getResolve();
+      return response.data;
+    },
+
     async showChat(id){
       let response = await chatService.showChat(id);
       this.listMessages = response.data.messages;
@@ -52,14 +57,14 @@ export const useChat = defineStore('useChat', {
       return response.data;
     },
 
+    async resolveOrder(id) {
+      let response = await chatService.resolveOrder(id);
+      console.log(response)
+      return response;
+    },
+
     addMessage(message) {
       this.listMessages.push(message);
-
-      notificationStore.incrementNotifications()
-
-      if(this.currentUser.id !== message.user.id) {
-        notificationStore.incrementNotifications(); // Incrementa el contador de notificaciones
-      }
     },
 
     currentChat(chat) {

@@ -55,6 +55,7 @@ class Order extends Model
         'report_user_id',
         'report_user_responsible',
         'report_user_name',
+        'is_resolved',
     ];
 
     protected $fillable = [

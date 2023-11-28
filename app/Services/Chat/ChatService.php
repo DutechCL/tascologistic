@@ -8,12 +8,19 @@ use App\Models\Chat\Chat;
 use App\Events\MessageSent;
 use App\Models\Chat\Message;
 use App\Events\Notifications;
+use App\Services\SAP\SyncService;
 use App\Http\Resources\OrderResource;
 
 
 
 class ChatService
 {
+    protected $sap;
+    
+    public function __construct( SyncService $sap )
+    {
+        $this->sap = $sap;
+    }
 
     public function createChatForOrder($order)
     {
@@ -90,7 +97,7 @@ class ChatService
     
         if ($execute) {
             
-            $chats = $query->get();
+            $chats = $query->where('status', Chat::STATUS_OPEN)->get();
 
             $chats = $chats->map(function ($chat) {
                 return [
@@ -103,6 +110,22 @@ class ChatService
         }
     
         return $query;
+    }
+
+    public function listChatsHistory()
+    {
+        $query = $this->listChatsByUser(false)->where('status', Chat::STATUS_CLOSE);
+
+        $chats = $query->get();
+
+        $chats = $chats->map(function ($chat) {
+            return [
+                'chat' => $chat,   // Puedes ajustar esto según tu necesidad
+                'order' => new OrderResource($chat->order),
+            ];
+        });
+
+        return $chats;
     }
 
     public function showChat($id)
@@ -166,5 +189,32 @@ class ChatService
         }
 
         return $message;
+    }
+
+    public function resolveOrder($id)
+    {
+        $chat = Chat::find($id);
+        $order = Order::find($chat->order_id);
+
+        $chat->status = Chat::STATUS_CLOSE;
+        $chat->save();
+
+        $params = [
+            [
+                'field'    => 'DocNum',
+                'operator' => 'eq', // greater than or equal
+                'value'    => $order->DocNum,
+            ]
+        ];
+
+        $config = $this->sap->buildConfig('orders', $params);
+        
+        $order->has_problems = false;
+        $order->is_resolved = true;
+        $order->save();
+
+        // $response = $this->sap->sync($config);
+
+        return $order;
     }
 }

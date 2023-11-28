@@ -34,7 +34,7 @@
         <template #body="slotProps">
             <div class="flex gap-2">
                 <router-link :to="{name: 'show-chat', params: { id: slotProps.data.chat.id }}" class="!border-primary-900 !text-primary-900 btn-custom-table" >Revisar</router-link>
-               <Button class="!p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900 btn-custom-table" label="Resuelto"></Button>
+               <Button v-if="slotProps.data.chat.status === 'open'" @click="resolveOrder(slotProps.data.chat.id)" class="!p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900 btn-custom-table" label="Resuelto"></Button>
             </div>
         </template>
       </Column>
@@ -48,7 +48,9 @@
     import  Column  from 'primevue/column';
     import  Tag from 'primevue/tag';
     import  Button  from 'primevue/button';
+    import { useChat } from '../../../stores/chat/chat';
 
+    const chat = useChat();
     const props = defineProps({
         data: Array,
     });
@@ -57,7 +59,12 @@
 
     onBeforeMount(() => {
         data.value = props.data;
+        console.log(data.value);
     });
+
+    const resolveOrder = async (id) => {
+        let response = await chat.resolveOrder(id);
+    }
 </script>
 
 

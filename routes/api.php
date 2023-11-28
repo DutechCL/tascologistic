@@ -89,7 +89,9 @@ Route::prefix('v1')->group(
             Route::get('get-message/{id}', [ChatController::class, 'getMessages']);
             Route::get('get-user', [ChatController::class, 'getUser']);
             Route::get('get-orders', [ChatController::class, 'getOrders']);
+            Route::get('get-resolve', [ChatController::class, 'getResolve']);
             Route::get('show/{id}', [ChatController::class, 'showChat']);
+            Route::get('resolve/{id}', [ChatController::class, 'resolveOrder']);
         });
     }
 );
