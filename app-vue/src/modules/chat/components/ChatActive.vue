@@ -8,7 +8,7 @@
         label="Descargar"
         icon="pi pi-download"
         class="ml-5 !p-button p-component !bg-primary-900 !py-1 !border-primary-900 !text-white btn-custom"
-        @click="updateOrders"/>
+        @click="emit('exportChat', { 'type': 'open' })"/>
     </div>
     <Search :type="typeSearch" :data="dataChat"/>
   </div>
@@ -37,7 +37,7 @@ import Button from 'primevue/button';
 
 import { useChat } from "../../../stores/chat/chat";
 
-
+const emit = defineEmits();
 const chat = useChat();
 const dataChat = ref([]);
 const isDataLoaded = ref(true);
@@ -49,6 +49,9 @@ onBeforeMount(async () => {
   });
 });
 
+const exportChat = (type) => {
+  ;
+}
 </script>
 
 <style>

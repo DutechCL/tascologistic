@@ -8,6 +8,7 @@ const chatService = useChatApi();
 export const useChat = defineStore('useChat', {
   state: () => ({ 
     listChat: [],
+    listChatResolve: [],
     listMessages: [],
     currentChat: {},   
     currentUser: {},      
@@ -20,6 +21,7 @@ export const useChat = defineStore('useChat', {
     user: (state) => state.currentUser,
     order: (state) => state.currentOrder,
     current: (state) => state.currentChat,
+    resolve: (state) => state.listChatResolve,
   },
   actions: {
     async sendMessage(body) {
@@ -47,6 +49,7 @@ export const useChat = defineStore('useChat', {
 
     async getResolve() {
       let response = await chatService.getResolve();
+      this.listChatResolve = response.data;
       return response.data;
     },
 
@@ -61,7 +64,6 @@ export const useChat = defineStore('useChat', {
 
     async resolveOrder(id) {
       let response = await chatService.resolveOrder(id);
-      console.log(response)
       return response;
     },
 

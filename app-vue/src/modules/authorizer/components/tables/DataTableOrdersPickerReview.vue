@@ -105,7 +105,6 @@ const filter = (data) => {
 }
 
 const action = (order, responsible) => {
-  console.log(order)
   ordersStore.showDetailOrder = true;
   ordersStore.currentOrder = order;
   ordersStore.currentOrder.responsible = responsible;

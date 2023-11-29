@@ -2,10 +2,10 @@
   <div class="px-3">
     <TabView  v-model="selectedTab">
       <TabPanel header="Incidencias en notas de venta">
-        <ChatActive/>
+        <ChatActive @exportChat="exportChat"/>
       </TabPanel>
-      <TabPanel header="Históricos">
-        <ChatHistory/>
+      <TabPanel header="Históricos" >
+        <ChatHistory @exportChat="exportChat"/>
       </TabPanel>
     </TabView>
   </div>
@@ -24,6 +24,12 @@ import { ToastMixin } from '../../../Utils/ToastMixin';
 
 const { showToast } = ToastMixin.setup();
 
+const exportChat = (data) => {
+    const link = document.createElement('a');
+    link.href = `/chat/export/${data.type}`;
+    document.body.appendChild(link);
+    link.click();
+}
 
 </script>
 

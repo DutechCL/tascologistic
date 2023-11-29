@@ -50,7 +50,6 @@ onBeforeMount( async () => {
       const protocol = window.location.protocol;
       const domain = window.location.hostname;
 
-      console.log(chat.csrf);
       const pusher = new Pusher('fafc81d9b01571689422', {
             cluster: 'ap2',
             encrypted: true,

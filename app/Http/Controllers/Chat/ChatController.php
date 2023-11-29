@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\Chat;
 
 use App\Models\Order;
+use App\Models\Chat\Chat;
 use App\Events\MessageSent;
 use App\Models\Chat\Message;
 use Illuminate\Http\Request;
 use App\Services\OrderService;
+use App\Http\Exports\ChatExport;
 use App\Services\Chat\ChatService;
 use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Resources\OrderResource;
 
 class ChatController extends Controller
@@ -72,6 +75,15 @@ class ChatController extends Controller
         $order = $this->chatService->resolveOrder($id);
 
         return $this->success($order);
+    }
+
+    public function export($status)
+    {
+        $name = $status == Chat::STATUS_OPEN ? 'Abiertos' : 'Cerrados';
+
+        $chats = $this->chatService->export($status);
+
+        return Excel::download(new ChatExport($chats, $status), "Chat {$name}.xlsx");
     }
 
 }

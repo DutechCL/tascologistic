@@ -1,9 +1,16 @@
 <template>
   <div class="flex justify-between">
     <div>
-      <h1 class="mb-2 text-primary-900 font-inter font-semibold text-2xl">
-        Notas de venta <a style="cursor: pointer;" @click="updateOrders"><i class="pi pi-refresh"></i></a> 
-      </h1>
+        <div class="flex mb-5 mt-10" style="    height: 50px;    ">
+          <h1 class="mb-2 text-primary-900 font-inter font-semibold text-2xl">
+            Histórico
+          </h1>
+          <Button
+            label="Descargar"
+            icon="pi pi-download"
+            class="ml-5 !p-button p-component !bg-primary-900 !py-1 !border-primary-900 !text-white btn-custom"
+            @click="emit('exportChat', { 'type': 'close' })"/>
+        </div>
     </div>
     <Search :type="typeSearch" :orders="orders"/>
   </div>
@@ -27,7 +34,9 @@ import constants from '@/constants/constants';
 import Search from '../../../components/search/Search.vue';
 import DataTableListOrders from './DataTableListOrders.vue';
 import { useChat } from "../../../stores/chat/chat";
+import Button from 'primevue/button';
 
+const emit = defineEmits();
 const chat = useChat();
 const dataChat = ref([]);
 const isDataLoaded = ref(false);
@@ -38,6 +47,13 @@ onBeforeMount(async () => {
     isDataLoaded.value = true;
   });
 });
+
+watch( 
+  () => chat.resolve,
+  () => {
+    dataChat.value = chat.resolve;
+  }
+);
 
 </script>
 

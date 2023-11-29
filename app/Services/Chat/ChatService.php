@@ -2,6 +2,7 @@
 
 namespace App\Services\Chat;
 
+use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Order;
 use App\Models\Chat\Chat;
@@ -213,6 +214,7 @@ class ChatService
         $order = Order::find($chat->order_id);
 
         $chat->status = Chat::STATUS_CLOSE;
+        $chat->resolved_at = Carbon::now();
         $chat->save();
 
         $params = [
@@ -232,5 +234,15 @@ class ChatService
         // $response = $this->sap->sync($config);
 
         return $order;
+    }
+
+    public function export($status)
+    {
+        return Chat::with([
+            'order' => function ($query) {
+                $query->withOrderDetails();
+            },
+            'users'
+        ])->where('status', $status)->get();
     }
 }
