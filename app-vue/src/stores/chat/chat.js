@@ -13,6 +13,7 @@ export const useChat = defineStore('useChat', {
     currentUser: {},      
     currentOrder: {}, 
     loadingOrder: false,  
+    csrf: '',
   }),
   getters: {
     messages: (state) => state.listMessages, 
@@ -33,7 +34,8 @@ export const useChat = defineStore('useChat', {
 
     async getUser() {
       let response = await chatService.getUser();
-      this.currentUser = response.data;
+      this.currentUser = response.data.user;
+      this.csrf = response.data.csrf;
       return response.data;
     },
 

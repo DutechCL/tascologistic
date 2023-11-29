@@ -100,4 +100,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('web')->get('/sanctum/csrf-cookie', CsrfCookieController::class . '@show');
+// Route::middleware('auth:sanctum')->get('/sanctum/csrf-cookie', CsrfCookieontroller::class . '@showe');

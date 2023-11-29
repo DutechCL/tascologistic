@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Order;
 use App\Models\Chat\Chat;
 use App\Events\MessageSent;
+use App\Models\SalesPerson;
 use App\Models\Chat\Message;
 use App\Events\Notifications;
 use App\Services\SAP\SyncService;
@@ -32,21 +33,19 @@ class ChatService
 
         $chat->refresh();
 
-        foreach ($order->responsibles as $responsible) {
-            $chat->users()->attach($responsible->id);
+        $usersChat = $this->assingChatUsers($chat, $order);
 
-            event(new Notifications(User::find($responsible->id)));
+        foreach ($usersChat as $user) {
+            event(new Notifications($user));
         }
-
-        $chat_id = $chat->id;
-        $message = $this->generateMessage($order);
-
-        $message = $this->createMessage($chat_id, $message);
+        
+        $this->createMessage(
+            $chat->id, 
+            $this->generateMessage($order)
+        );
 
         $order->has_problems = true;
         $order->save();
-
-        event(new MessageSent($message));
 
         return $chat;
     }
@@ -159,6 +158,23 @@ class ChatService
         )->where('id', $chatId)->first();
         
         return $chats;
+    }
+
+    public function assingChatUsers($chat, $order)
+    {
+        $salesPerson = SalesPerson::where('SalesEmployeeCode', $order->SalesPersonCode)->first();
+        $user = User::where('sales_person_id', $salesPerson->id)->first();
+        
+        if($user){
+            $chat->users()->attach($user->id);
+        }
+        
+        foreach ($order->responsibles as $responsible) {
+            $chat->users()->attach($responsible->id);
+        }
+
+
+        return $chat->users;
     }
 
     public function generateMessage($order)

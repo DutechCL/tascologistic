@@ -40,7 +40,10 @@ class ChatController extends Controller
     {
         $user = auth()->user();
 
-        return $this->success($user);
+        return $this->success([
+            'user' => $user,
+            'csrf' => csrf_token(),
+        ]);
     }
 
     public function showChat($id)

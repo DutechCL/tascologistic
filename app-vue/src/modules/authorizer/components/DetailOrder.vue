@@ -10,6 +10,10 @@
             <div class="flex align-center mb-2">
             </div>
             <Tag :icon="'pi pi-user'" :value="ordersStore.currentOrder.Customer.CardName" class="tag-radius tag-rounded-blue tag-font-method mb-5"></Tag>
+            <br>
+            <div class="flex">
+              <strong class="mr-3">NOTA: </strong><Tag :value="ordersStore.currentOrder.Comments" class="tag-radius tag-rounded-blue tag-font-method mb-5"></Tag>
+            </div>
       
             <div class="flex">
               <!-- <div class="card flex justify-content-center ">
@@ -28,10 +32,15 @@
               <Column headerClass="!bg-primary-900"  field="ItemCode" header="SKU"></Column>
               <Column headerClass="!bg-primary-900"  field="ItemDescription" header="Producto">
                 <template #body="slotProps">
-                    <p>{{slotProps.data.ItemDescription }}</p>
+                  <p>{{slotProps.data.ItemDescription }}</p>
                 </template>
-            </Column>
-              <Column headerClass="!bg-primary-900"  field="ubication" header="Ubicación"></Column>
+              </Column>
+              <Column headerClass="!bg-primary-900"  field="WarehouseCode" header="Almacén"></Column>
+              <Column headerClass="!bg-primary-900"  field="U_SBO_StockVentas" header="Stock Ventas">
+                <template #body="slotProps">
+                  <p>{{slotProps.data.U_SBO_StockVentas}} {{ slotProps.data.U_SBO_StockVentas > 1 ? 'Unidades' : 'Unidad' }}</p>
+              </template>
+              </Column>
               <Column headerClass="!bg-primary-900"  field="id" header="" >
                 <template #body="slotProps">
                   <Button

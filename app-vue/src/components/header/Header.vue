@@ -25,7 +25,9 @@ import {useMenuItems} from '../../services/MenuItemsApiService.js';
 import { useChat } from "../../stores/chat/chat";
 import Pusher from 'pusher-js'; // Importa la biblioteca Pusher
 import { useNotificationStore } from '../../services/NotificationService.js';
+import { useAuthStore } from '../../stores/auth';
 
+const authStore = useAuthStore();
 const chat = useChat();
 const notificationStore = useNotificationStore();
 
@@ -48,12 +50,14 @@ onBeforeMount( async () => {
       const protocol = window.location.protocol;
       const domain = window.location.hostname;
 
+      console.log(chat.csrf);
       const pusher = new Pusher('fafc81d9b01571689422', {
             cluster: 'ap2',
             encrypted: true,
             channelAuthorization: {
-                endpoint: `${protocol}//${domain}/broadcasting/auth`,
+                endpoint: `${protocol}//${domain}/api/broadcasting/auth`,
                 headers: { 
+                    'X-CSRF-Token': chat.csrf,
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 },
             },

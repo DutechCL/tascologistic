@@ -34,6 +34,7 @@ class OrderItem extends Model
         'LineTotal',
         'TaxPercentagePerRow',
         'TaxTotal',
+        'U_SBO_StockVentas',
         'product_id',
     ];
 

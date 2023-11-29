@@ -22,7 +22,7 @@ Route::get('/', function () {
     return redirect()->route('backpack.dashboard');
 });
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/app/{any}', function () {
         return File::get(public_path('app/index.html'));
     })->where('any', '.*');

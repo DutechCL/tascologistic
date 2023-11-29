@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use App\Models\Chat\Message;
+use App\Models\SalesPerson;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Chat\Message;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
@@ -32,6 +33,7 @@ class User extends Authenticatable
         'defaults'  ,
         'branch'  ,
         'department',
+        'SalesEmployeeCode'
     ];
 
     protected $appends = ['role_slug', 'role_name'];
@@ -75,7 +77,21 @@ class User extends Authenticatable
     {
         return $this->warehouses()->select('warehouses.WareHouseCode')->pluck('warehouses.WareHouseCode');;
     }
+
+    public function salesPersons()
+    {
+        return $this->belongsTo(SalesPerson::class, 'sales_person_id')->addSelect(['sales_persons.*'])->where('Active', 1);
+    }
     
+    public function chats()
+    {
+        return $this->belongsToMany(Chat::class, 'chat_user_mapping', 'user_id', 'chat_id');
+    }
+
+    public function messages()
+    {
+        return $this->hasMany(Message::class);
+    }
 
     public function getRoleSlugAttribute()
     {
@@ -85,15 +101,5 @@ class User extends Authenticatable
     public function getRoleNameAttribute()
     {
         return $this->userRoles->first()->name ?? null;
-    }
-
-    public function chats()
-    {
-        return $this->belongsToMany(Chat::class, 'chat_user_mapping', 'user_id', 'chat_id');
-    }
-
-    public function messages()
-    {
-        return $this->hasMany(Message::class);
     }
 }

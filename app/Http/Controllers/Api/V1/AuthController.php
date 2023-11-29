@@ -28,6 +28,7 @@ class AuthController extends Controller
         return response()->json([
             'status' => true,
             'token' => $token->plainTextToken,
+            'csrfToken' => csrf_token(),
         ]);
     }
 
@@ -39,6 +40,7 @@ class AuthController extends Controller
     
             return response()->json([
                 'token' => $token->plainTextToken,
+                'csrf' => csrf_token(),
             ]);
         }
     
