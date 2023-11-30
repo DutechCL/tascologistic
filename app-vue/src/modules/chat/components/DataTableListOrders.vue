@@ -47,7 +47,7 @@
         <template #body="slotProps">
             <div class="flex gap-2">
                 <router-link v-if="slotProps.data.chat.status === 'open'" :to="{name: 'show-chat', params: { id: slotProps.data.chat.id }}" class="!border-primary-900 !text-primary-900 btn-custom-table" >Revisar</router-link>
-               <Button v-if="slotProps.data.chat.status === 'open'" @click="resolveOrder(slotProps.data.chat.id)" class="!p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900 btn-custom-table" label="Resuelto"></Button>
+               <Button v-if="slotProps.data.chat.status === 'open'" @click="resolveOrder(slotProps.data.chat.id)" class="!text-primary-900 btn-custom-table" label="Resuelto"></Button>
             </div>
         </template>
       </Column>
@@ -135,11 +135,21 @@
     }
 
     .btn-custom-table{
-        border: 1px solid;
-        border-radius: 6px;
-        padding: 9px;
-        background: #fff;
+      border: 1px solid;
+      border-radius: 6px;
+      background: #fff;
+      height: 50px !important;
+      width: 115px;
+      margin: auto;
+      text-align: center;
+      padding-top: 12px;
     }
+
+    .btn-custom-table:hover{
+      border-color: #3B82F6 !important;
+      background: #fff !important;
+    }
+
     .chat-active{
       background: #00bf12;
       width: 15px;

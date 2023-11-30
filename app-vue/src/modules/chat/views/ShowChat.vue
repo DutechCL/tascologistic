@@ -28,9 +28,13 @@
         </ul>
        
     </div>
-    <div class="input-container">
-        <InputText type="text" v-model="message"/>
-        <Button icon="pi pi-arrow-right" @click="sendMessage" />
+    <div class="footer-chat p-3">
+        <div v-if="chat?.currentChat.status === 'open'" class="input-container">
+            <InputText placeholder="Escribe un mensaje..." type="text" v-model="message"/>
+            <Button @click="sendMessage" >
+                <i class="pi pi-send" style="font-size: 25px !important; position: absolute; right: 25px;"></i>
+            </Button>
+        </div>
     </div>
 </template>
 
@@ -79,7 +83,6 @@ onBeforeMount(async () => {
         const domain = window.location.hostname;
     
         await chat.showChat(props.id);
-
         loadingOrder.value = true;
 
         const pusher = new Pusher('fafc81d9b01571689422', {
@@ -154,22 +157,48 @@ header{
     align-items: flex-end; /* Alinea a la derecha para mensajes propios */
 }
 
-.input-container{
+.footer-chat{
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #ffffff;
-    padding: 10px 20px;
+    padding: 30px 50px;
+}
+
+.input-container{
+    width: 100%;
+    background-color: #e1e1e1;
     display: flex;
     align-items: center;
+    border-radius: 6px;
+    height: 60px;
 }
 .input-container input{
-    width: 88%;
+    width: 100%;
     margin-right: 2%;
+    background: transparent !important;
+    border: none;
 }
+
+.input-container input:focus{
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.input-container input:hover{
+    border-color: transparent;
+}
+
 .input-container button{
     width: 10%;
     margin-bottom: 0;
+    background: transparent !important;
+    border: none !important;
+    color: rgb(37, 155, 215) !important;
+}
+
+.input-container button:focus{
+    box-shadow: none;
+    border-color: transparent;
 }
 
 .font-icon{
