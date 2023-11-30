@@ -6,7 +6,7 @@
       </h1>
       <Button
         label="Descargar"
-        icon="pi pi-file-excel"
+        icon="pi pi-file-export"
         class="ml-5 !p-button p-component !bg-primary-900 !py-1 !border-primary-900 !text-white btn-custom"
         @click="emit('exportChat', { 'type': 'open' })"/>
     </div>
