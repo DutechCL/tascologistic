@@ -6,7 +6,7 @@
       </h1>
       <Button
         label="Descargar"
-        icon="pi pi-download"
+        icon="pi pi-file-excel"
         class="ml-5 !p-button p-component !bg-primary-900 !py-1 !border-primary-900 !text-white btn-custom"
         @click="emit('exportChat', { 'type': 'open' })"/>
     </div>
@@ -60,7 +60,7 @@ const exportChat = (type) => {
   width: 12px;
   }
   .btn-custom{
-    padding: 15px 40px;
+    padding: 15px 25px;
     font-size: 20px;
     margin-left: 50px;
     border-radius: 12px;

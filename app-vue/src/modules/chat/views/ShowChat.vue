@@ -31,7 +31,7 @@
     <div class="footer-chat p-3">
         <div v-if="chat?.currentChat.status === 'open'" class="input-container">
             <InputText placeholder="Escribe un mensaje..." type="text" v-model="message"/>
-            <Button @click="sendMessage" >
+            <Button :disabled="!message.trim()" @click="sendMessage" >
                 <i class="pi pi-send" style="font-size: 25px !important; position: absolute; right: 25px;"></i>
             </Button>
         </div>
