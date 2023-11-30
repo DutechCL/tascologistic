@@ -109,18 +109,20 @@ const sendMessage = async () => {
 
     onBeforeMount(async () => {
         try {
-            await chat.getUser();
             await chat.showChat(props.id);
             scrollToBottom();
 
             loadingOrder.value = true;
 
-            const channel = chat.pusher().subscribe(`private-chat.${chat.current.id}`);
+            setTimeout(() => {
+                const channel = chat.pusher().subscribe(`private-chat.${chat.current.id}`);
 
-            channel.bind('message.sent', (data) => {
-                chat.addMessage(data.message);
-                scrollToBottom();
-            });
+                channel.bind('message.sent', (data) => {
+                    chat.addMessage(data.message);
+                    scrollToBottom();
+                });
+            }, 1000);
+            
             
         } catch (error) {
             console.error('Error al obtener los mensajes:', error);
