@@ -58,6 +58,17 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $model->hash = md5(uniqid());
+            // $model->code = User::query()->orderBy('id', 'desc')->first()?->code + 1;
+        });
+    }
+
+
     public function userRoles()
     {
         return $this->belongsToMany(Role::class, 'model_has_roles', 'model_id', 'role_id');

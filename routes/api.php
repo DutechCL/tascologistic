@@ -42,7 +42,6 @@ Route::prefix('v1')->group(
         Route::middleware(['auth:sanctum'])->group(function () {
             Route::get('menu-items', [MenuItemCrudController::class, 'getMenuItems']);
             Route::post('problems', [ProblemsController::class, 'index']);
-            
             Route::post('sap/sync', [SapSyncController::class, 'sync'])->name('admin.sap.sync');
         });
         

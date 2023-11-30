@@ -9,7 +9,7 @@
          <DataTableDetailOrder v-if="chat?.loadingOrder" :order="chat.order"/>
         </div>
     </div>
-    <div class="content-chat">
+    <div class="content-chat" ref="messageList">
 
         <ul>
             <li v-for="message in chat.messages" :key="message.id" style="width: 100% !important; list-style: none;">
@@ -30,29 +30,36 @@
     </div>
     <div class="footer-chat p-3">
         <div v-if="chat?.currentChat.status === 'open'" class="input-container">
-            <InputText placeholder="Escribe un mensaje..." type="text" v-model="message"/>
-            <Button :disabled="!message.trim()" @click="sendMessage" >
-                <i class="pi pi-send" style="font-size: 25px !important; position: absolute; right: 25px;"></i>
-            </Button>
+            <InputText
+            placeholder="Escribe un mensaje..."
+            type="text"
+            v-model="message"
+            @keyup.enter="handleEnterKey"
+          />
+          <Button :disabled="!message.trim() || sending" @click="sendMessage">
+            <i v-if="!sending" class="pi pi-send" style="font-size: 25px !important; position: absolute; right: 25px;"></i>
+            <i  v-else class="pi pi-spin pi-spinner" style="font-size: 25px !important; position: absolute; right: 25px;"></i>
+          </Button>
         </div>
     </div>
 </template>
 
 <script setup>
-import { onBeforeMount, ref, watch } from 'vue';
+import { onBeforeMount, ref, watch, onMounted, nextTick } from 'vue';
 import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
 import { useChat } from "../../../stores/chat/chat";
 import DataTableDetailOrder from '../components/DataTableDetailOrder.vue';
 import { format } from 'date-fns';
-// import Echo from 'laravel-echo';
-import Pusher from 'pusher-js'; // Importa la biblioteca Pusher
-import Cookies from 'js-cookie';
+import Pusher from 'pusher-js';
+
 
 const chat = useChat();
 const message = ref('');
 const loadingOrder = ref(false);
-
+const sending = ref(false);
+const sendButtonDisabled = ref(false);
+const messageList = ref(null);
 const props = defineProps({
     id: Number,
 });
@@ -62,54 +69,94 @@ const formatTime = (dateTime) => {
 };
 
 const sendMessage = async () => {
-    try {
+      try {
+        if (sending.value || sendButtonDisabled.value) {
+          return;
+        }
+
+        sending.value = true;
+        sendButtonDisabled.value = true;
 
         await chat.sendMessage({ message: message.value, chat_id: chat.current.id });
 
         message.value = '';
-
-    } catch (error) {
+      } catch (error) {
         console.error('Error al enviar el mensaje:', error);
-    }
-};
+      } finally {
+        sending.value = false;
+        // Habilitar el botón después de un breve período de tiempo (puedes ajustar el tiempo según tus necesidades)
+        setTimeout(() => {
+          sendButtonDisabled.value = false;
+        }, 2000);
+      }
+    };
 
-const selfUser = (userId) => {
-    return userId === chat.currentUser?.id;
-};
+    const handleEnterKey = () => {
+      if (!sendButtonDisabled.value) {
+        sendMessage();
+      }
+    };
 
-onBeforeMount(async () => {
-    try {
-        const protocol = window.location.protocol;
-        const domain = window.location.hostname;
-    
-        await chat.showChat(props.id);
-        loadingOrder.value = true;
+    const selfUser = (userId) => {
+        return userId === chat.currentUser?.id;
+    };
 
-        const pusher = new Pusher('fafc81d9b01571689422', {
-            cluster: 'ap2',
-            encrypted: true,
-            channelAuthorization: {
-                endpoint: `${protocol}//${domain}/broadcasting/auth`,
-                headers: { 
-                    'Authorization': `Bearer ${localStorage.getItem('token')}`,
-                },
-            },
-        });
+    const scrollToBottom = () => {
+        nextTick(() => {
+            messageList.value.scrollTop = messageList.value.scrollHeight;
+        })
+    };
 
-        const channel = pusher.subscribe(`private-chat.${chat.current.id}`);
+    onBeforeMount(async () => {
+        try {
+            await chat.getUser();
+            await chat.showChat(props.id);
+            scrollToBottom();
 
-        channel.bind('message.sent', (data) => {
-            chat.addMessage(data.message);
-        });
-        
-    } catch (error) {
-        console.error('Error al obtener los mensajes:', error);
-    }
-});
+            loadingOrder.value = true;
+
+            const channel = chat.pusher().subscribe(`private-chat.${chat.current.id}`);
+
+            channel.bind('message.sent', (data) => {
+                chat.addMessage(data.message);
+                scrollToBottom();
+            });
+            
+        } catch (error) {
+            console.error('Error al obtener los mensajes:', error);
+        }
+    });
 
 </script>
 
 <style scoped>
+
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #259bd7;
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  ::-ms-scrollbar {
+    width: 12px; 
+  }
+  
+  ::-ms-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+  }
+  
+  ::-ms-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
 body{
     overflow-y: hidden;
 }

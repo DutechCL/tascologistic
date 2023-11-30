@@ -21,6 +21,8 @@ class UsersTableSeeder extends Seeder
         \DB::table('users')->insert(array (
             0 => 
             array (
+                'hash' => 'd41d8cd98f00b204e9800998ecf8427e',
+                'code' => 1,
                 'branch' => NULL,
                 'created_at' => '2023-07-10 17:29:44',
                 'defaults' => NULL,
@@ -38,6 +40,8 @@ class UsersTableSeeder extends Seeder
             ),
             1 => 
             array (
+                'hash' => 'd41d8cd98f00b20242800998ecf8427e',
+                'code' => 2,
                 'branch' => NULL,
                 'created_at' => '2023-09-26 17:16:18',
                 'defaults' => NULL,
@@ -55,6 +59,8 @@ class UsersTableSeeder extends Seeder
             ),
             2 => 
             array (
+                'hash' => 'dwq18cd98f00b20242800998ecf8427e',
+                'code' => 3,
                 'branch' => NULL,
                 'created_at' => '2023-09-26 17:17:50',
                 'defaults' => NULL,
@@ -72,6 +78,8 @@ class UsersTableSeeder extends Seeder
             ),
             3 => 
             array (
+                'hash' => 'd41d8cddsd00b20242800998ecf8427e',
+                'code' => 4,
                 'branch' => NULL,
                 'created_at' => '2023-09-26 17:18:40',
                 'defaults' => NULL,
@@ -89,6 +97,8 @@ class UsersTableSeeder extends Seeder
             ),
             4 => 
             array (
+                'hash' => 'd41d8cd98f00adw442800998ecf8427e',
+                'code' => 5,
                 'branch' => NULL,
                 'created_at' => '2023-09-26 17:19:18',
                 'defaults' => NULL,

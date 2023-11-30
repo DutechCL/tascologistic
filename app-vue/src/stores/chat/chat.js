@@ -1,6 +1,10 @@
 import { defineStore } from 'pinia';
 import { useChatApi } from '../../services/ChatApiService.js'; 
 import { useNotificationStore } from '../../services/NotificationService.js';
+// import Echo from 'laravel-echo';
+import Pusher from 'pusher-js'; // Importa la biblioteca Pusher
+import Cookies from 'js-cookie';
+
 
 const notificationStore = useNotificationStore();
 const chatService = useChatApi();
@@ -65,6 +69,24 @@ export const useChat = defineStore('useChat', {
     async resolveOrder(id) {
       let response = await chatService.resolveOrder(id);
       return response;
+    },
+
+    pusher() {
+        const protocol = window.location.protocol;
+        const domain = window.location.hostname;
+        
+        return new Pusher('fafc81d9b01571689422', {
+            cluster: 'ap2',
+            encrypted: true,
+            channelAuthorization: {
+                endpoint: `${protocol}//${domain}/api/broadcasting/auth`,
+                headers: { 
+                    'user-hash': this.currentUser.hash,
+                    'user-code': this.currentUser.code,
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                },
+            },
+        });
     },
 
     addMessage(message) {
