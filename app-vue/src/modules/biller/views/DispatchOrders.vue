@@ -4,7 +4,7 @@
         <h1 class="mb-4 text-primary-900 font-inter font-semibold text-2xl">
           Despacho  <a style="cursor: pointer;" @click="updateOrders"><i class="pi pi-refresh"></i></a> 
         </h1>
-        <Search :orders="ordersStore.orders" @search="search"/>
+        <Search :type="constants.RESPONSIBLE_BILLER" :methodShipping="constants.METHOD_SHIPPING_DELIVERY" :orders="orderStore.orders" @search="search"/>
       </div>
 
       <DataTableOrders 
@@ -14,9 +14,9 @@
         />
 
       <DialogDetail  
-        v-if="visible" 
-        v-model:visible="visible" 
-        :orderDetails="order"
+        v-if="orderStore.visibleDialog" 
+        v-model:visible="orderStore.visibleDialog" 
+        :orderDetails="orderStore.order"
         @visible="visibleDetailsMethod"
          />
         <div v-if="orders.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -26,6 +26,7 @@
           <Button label="Regresar"  severity="primary" outlined @click="goBack" class="ml-3 !py-1.5" ></Button>
         </div>
     </div>
+    <ConfirmDialog></ConfirmDialog>
   </template>
   
   <script setup>
@@ -33,23 +34,30 @@
   import Button from 'primevue/button'
   import Search from '../../../components/search/Search.vue'
   import DialogDetail from '../components/DialogDetail.vue';
-  import { useOrders } from '../../../services/OrdersApiService.js';
+  import ConfirmDialog from 'primevue/confirmdialog';
   import DataTableOrders from '../components/tables/DataTableOrders.vue';
+  import { useOrdersBills } from '../../../stores/orders/ordersBills.js';
+  import { ToastMixin } from '../../../Utils/ToastMixin';
+  import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
+  import constants from '@/constants/constants';
 
+  const { showToast } = ToastMixin.setup();
+  const { showConfirm } = ConfirmMixin.setup();
 
-  const ordersStore = useOrders()
+  const orderStore = useOrdersBills()
   const visible = ref(false);
   const orders = ref([]);
-  const order = ref([]);
   const actions = ref([
       {
         active: true,
-        action: 'bill',
+        method: 'generateDocument',
+        document: constants.DOCUMENT_TYPE_GUIDE,
         label: 'Guía',
       },
       {
         active: false,
-        action: 'bill',
+        method: 'generateDocument',
+        document: constants.DOCUMENT_TYPE_INVOICE,
         label: 'Factura / Boleta',
       }
   ])
@@ -59,17 +67,19 @@
   }
 
   const actionMethod = (data) => {
-    switch (data.action) {
+    console.log(data);
+    switch (data.method) {
       case 'showDetailOrder':
-        showDetailOrder(data.order);
+        orderStore.showDetailOrder(data.order);
         break;
-      default:
+      case 'generateDocument':
+        generateDocument(data);
         break;
     }
   }
 
   const updateOrders = async () => {
-    await ordersStore.getOrdersBillDelivery();
+    await orderStore.getOrdersBillDelivery();
     showToast({
       status: 'success',
       message: 'Ordenes actualizadas',
@@ -77,8 +87,8 @@
     });
   }
 
-  watch(() => ordersStore.orders, (value) => {
-    orders.value = ordersStore.orders;
+  watch(() => orderStore.orders, (value) => {
+    orders.value = orderStore.orders;
   });
 
  const goBack = () => {
@@ -87,19 +97,30 @@
       }
   }
 
+  const generateDocument = async (value) => {
+    let result = await showConfirm();
+    if(result){
+      let response = await orderStore.generateDocument(value);
+      showToast({
+        status: response.status,
+        message: response.message,
+      });
+    }else{
+      showToast({
+      status: 'info',
+      message: 'Proceso cancelado',
+    });
+    }
+  };
+
   const visibleDetailsMethod = (value) => {
     visible.value = value.visibleDetails;
   };
 
   onBeforeMount( async() => {
-    await ordersStore.getOrdersBillDelivery();
-    orders.value = ordersStore.orders;
+    await orderStore.getOrdersBillDelivery();
+    orders.value = orderStore.orders;
   })
-
-  const showDetailOrder = (orders) => {
-    order.value = orders;
-    visible.value = true;
-  } 
 
   </script>
   

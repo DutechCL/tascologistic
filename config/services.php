@@ -31,4 +31,33 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'sap' => [
+        'url'      => env('SAP_API_URL'),
+        'domain'   => env('SAP_API_DOMAIN'),
+        'credentials' => [
+            'company_db' => env('SAP_COMPANY_DB'),
+            'username'   => env('SAP_USERNAME'),
+            'password'   => env('SAP_PASSWORD'),
+        ],
+        'endpoints'   => [
+            'login'   => 'Login',
+            'logout'  => 'Logout',
+            'orders'  => [
+                'get' => 'Orders',
+            ],
+            'products' => [
+                'get' => 'Items',
+            ],
+            'business_partners' => [
+                'get' => 'BusinessPartners',
+            ],
+            'sales_persons' => [
+                'get' => 'SalesPersons'
+            ],
+            'warehouses' => [
+                'get' => 'Warehouses'
+            ]
+        ]
+    ],
+
 ];

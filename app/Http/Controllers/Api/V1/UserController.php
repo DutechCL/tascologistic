@@ -33,7 +33,6 @@ class UserController extends Controller
 
     public function export()
     {
-        $fields = ['name', 'email','user_code','mobile_phone_number'];
-        return Excel::download(new UsersExport($fields), 'users.xlsx');
+        return Excel::download(new UsersExport(), 'Usuarios.xlsx');
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\V1;
 use App\Models\User;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\OrderStatus;
 use App\Models\OrderProblem;
 use Illuminate\Http\Request;
 use App\Models\MethodShipping;
@@ -26,16 +27,24 @@ class OrderController extends Controller
         $this->orderService = $orderService;
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function getOrdersCda()
+    public function getOrdersCdaToManager()
     {
         try {
+            $orders = $this->orderService->listOrdersCdaToManage();
 
-            $orders = $this->orderService->listOrders('cda');
+            return $this->success(
+                OrderResource::collection($orders)->resolve()
+            );
+
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function getOrdersCdaManage()
+    {
+        try {
+            $orders = $this->orderService->listOrdersCdaManage();
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()
@@ -45,11 +54,10 @@ class OrderController extends Controller
         }
     }
 
-    public function getOrdersPickerAndReviewer()
+    public function getOrdersPickerAndReviewer($wareHouseCode)
     {
         try {
-
-            $orders = $this->orderService->listOrders('picker-revisor');
+            $orders = $this->orderService->listOrdersPickerReviewer($wareHouseCode);
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()
@@ -62,8 +70,7 @@ class OrderController extends Controller
     public function getOrdersBillPickupAndHere()
     {
         try {
-
-            $orders = $this->orderService->listOrders('pickup-here');
+            $orders = $this->orderService->listOrdersBills(MethodShipping::METHOD_SHIPPING_HERE);
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()
@@ -76,8 +83,7 @@ class OrderController extends Controller
     public function getOrdersBillDelivery()
     {
         try {
-
-            $orders = $this->orderService->listOrders('delivery');
+            $orders = $this->orderService->listOrdersBills(MethodShipping::METHOD_SHIPPING_DELIVERY);
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()
@@ -87,22 +93,58 @@ class OrderController extends Controller
         }
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function processOrderAction(Request $request)
+    public function getOrdersPayment()
     {
         try {
-            $order = Order::findOrFail($request->orderId);
-            $result = $this->orderService->processOrderAction($order, $request);
+            $orders = $this->orderService->listOrdersPayment();
 
-            return response()->json([
-                'status' => 'success',
-                'message' => $result->message,
-                'order' => $result->order,
-            ]);
+            return $this->success(
+                OrderResource::collection($orders)->resolve()
+            );
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function getOrdersTracker($type)
+    {
+        try {
+
+            $orders = $this->orderService->listOrdersTracker($type);
+
+            return $this->success(
+                OrderResource::collection($orders)->resolve()
+            );
+
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function processOrderCda(Request $request)
+    {
+        try {
+            $result = $this->orderService->processOrderCda($request);
+
+            return $this->success(
+                OrderResource::collection($result->orders)->resolve(),
+                $result->message
+            );
+
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function processOrderPickerReviewer(Request $request)
+    {
+        try {
+            $result = $this->orderService->processOrderPickerReviewer($request);
+            
+            return $this->success(
+                $result->order,
+                $result->message
+            );
 
         } catch (\Exception $exception) {
             return $this->buildResponseErrorFromException($exception);
@@ -112,85 +154,61 @@ class OrderController extends Controller
     public function addObservation(Request $request)
     {
         try {
-            $order = Order::findOrFail($request->orderId);
-            $result = $this->orderService->addObservation($order, $request);
+            $result = $this->orderService->addObservation($request);
 
-            return response()->json([
-                'status' => 'success',
-                'message' => $result->message,
-                'order' => $result->order,
-            ]);
+            return $this->success(
+                $result->order,
+                $result->message
+            );
 
         } catch (\Exception $exception) {
             return $this->buildResponseErrorFromException($exception);
         }
     }
 
-    public function assingResponsible(Request $request, $id)
+    public function generateDocument($document, $orderId)
     {
         try {
-            $order = Order::findOrFail($id);
-            
-            switch ($request->responsible) {
-                case 'picker':
-                    $orderStatusId = Order::ORDER_STATUS_PICKED;
-                    break;
-                case 'reviewer':
-                    $orderStatusId = Order::ORDER_STATUS_REVIEWER;
-                    break;
-                default:
-                    throw new \Exception('Rol no válido');
-                    break;
-            }
-        
-            $result = (object) $this->orderService->updateOrderStatus($order, $orderStatusId, $request);
+            $result = $this->orderService->generateDocument($document, $orderId);
 
-            return response()->json([
-                'status' =>  $result->status,
-                'message' => $result->message,
-                'order' => new OrderResource($order),
-            ]);
-
-        } catch (OrderNotFoundException $exception) {
-
-            throw $exception;
+            return $this->success(
+                $result->order,
+                $result->message
+            );
 
         } catch (\Exception $exception) {
             return $this->buildResponseErrorFromException($exception);
         }
     }
 
-    public function getOrdersByMethodShipping(Request $request)
+    public function assingResponsible(Request $request)
     {
-        $orders = Order::with([
-            'customer', 
-            'orderStatus', 
-            'methodShipping', 
-        ])
-        ->whereIn('method_shipping_id', $request->method_shipping_ids) // method_shipping_id igual a 2 o 3
-        ->whereNot('order_status_id', 4)
-        ->get();
+        try {
 
-        // Devolver los datos como respuesta JSON
-        return response()->json($orders);
+            $result = $this->orderService->assingResponsible($request);
+
+            return $this->success(
+                $result->order,
+                $result->message
+            );
+
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
     }
 
-    public function getOrdersByParams(Request $request)
+    public function searchOrders(Request $request)
     {
-        $ordersQuery = Order::withOrderDetails();
-        
-        if ($request->methodShippingId) {
-            $ordersQuery->whereIn('method_shipping_id', $request->methodShippingId);
-        }
-        
-        if ($request->ordersStatusId) {
-            $ordersQuery->whereIn('order_status_id', $request->ordersStatusId);
-        }
+        try {
 
-        
-        $orders = $ordersQuery->get();
+            $orders = $this->orderService->searchOrders($request);
 
-        // Devolver los datos como respuesta JSON
-        return (new OrdersCollection($orders))->toJson();
+            return $this->success(
+                OrderResource::collection($orders)->resolve()
+            );
+
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
     }
 }

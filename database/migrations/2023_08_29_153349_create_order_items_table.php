@@ -18,19 +18,20 @@ return new class extends Migration
             $table->string('ItemCode'); // Precio del producto en el momento de la orden
             $table->decimal('Price',12, 4)->nullable(); // Precio del producto en el momento de la orden
             $table->integer('Quantity')->default(0); // Precio del producto en el momento de la orden
+            $table->string('WarehouseCode')->nullable();
             $table->string('VatGroup')->nullable();
             $table->string('TaxLiable')->nullable();
             $table->string('PickStatus')->nullable();
             $table->string('DeferredTax')->nullable();
             $table->float('EqualizationTaxPercent')->nullable();
-            $table->float('TotalEqualizationTaxFC')->nullable();
-            $table->float('TotalEqualizationTaxSC')->nullable();
-            $table->float('NetTaxAmount')->nullable();
-            $table->float('NetTaxAmountFC')->nullable();
-            $table->float('NetTaxAmountSC')->nullable();
-            $table->float('LineTotal')->nullable();
-            $table->float('TaxPercentagePerRow')->nullable();
-            $table->float('TaxTotal')->nullable();
+            $table->decimal('TotalEqualizationTaxFC',12, 4)->nullable();
+            $table->decimal('TotalEqualizationTaxSC',12, 4)->nullable();
+            $table->decimal('NetTaxAmount',12, 4)->nullable();
+            $table->decimal('NetTaxAmountFC',12, 4)->nullable();
+            $table->decimal('NetTaxAmountSC',12, 4)->nullable();
+            $table->decimal('LineTotal',12, 4)->nullable();
+            $table->decimal('TaxPercentagePerRow',12, 4)->nullable();
+            $table->decimal('TaxTotal',12, 4)->nullable();
             $table->timestamps();
     
             // Definir las claves foráneas

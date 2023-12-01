@@ -25,7 +25,8 @@ class OrderStatusRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+           'name' => 'required',
+           'color' => 'required',
         ];
     }
 
@@ -37,7 +38,8 @@ class OrderStatusRequest extends FormRequest
     public function attributes()
     {
         return [
-            //
+            'color' => __('order_status.crud.color'),
+            'name' => __('order_status.crud.name'),
         ];
     }
 
@@ -49,7 +51,7 @@ class OrderStatusRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'required' => 'El campo :attribute es requerido.',
         ];
     }
 }

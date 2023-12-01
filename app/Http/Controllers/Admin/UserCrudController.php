@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\UserRequest;
+use App\Models\Role;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use App\Http\Requests\UserStoreRequest;
+use App\Http\Requests\UserUpdateRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
-use Illuminate\Support\Facades\DB;
-use App\Models\User;
-use App\Models\Role;
 
 
 /**
@@ -77,14 +78,6 @@ class UserCrudController extends CrudController
             'entity' => 'warehouses',
             'attribute' => 'WarehouseName',
         ]);
-
-
-
-        /**
-         * Columns can be defined using the fluent syntax or array syntax:
-         * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']); 
-         */
     }
 
     /**
@@ -95,7 +88,8 @@ class UserCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(UserRequest::class);
+        CRUD::setValidation(UserStoreRequest::class);
+
         CRUD::addField([
             'name' => 'name',
             'label' => __('user.crud.name'),
@@ -136,12 +130,21 @@ class UserCrudController extends CrudController
             'model' => 'App\Models\Role',
             'attribute' => 'name',
             'wrapper' => [
-                'class' => 'form-group col-md-12 required',
+                'class' => 'form-group col-md-12',
             ],
         ]);
 
         CRUD::addField([
-            'name' => 'userWarehouse',
+            'name' => 'sales_person_id', 
+            'type' => 'select2',
+            'entity' => 'salesPersons',
+            'model' => 'App\Models\SalesPerson',
+            'attribute' => 'formatEmployee',
+            'label' => __('user.crud.salesEmployeeCode'),
+        ]);
+
+        CRUD::addField([
+            'name' => 'userWarehouses',
             'label' => __('user.crud.warehouse'),
             'type' => 'select2_multiple',
             'entity' => 'warehouses',
@@ -149,40 +152,26 @@ class UserCrudController extends CrudController
             'attribute' => 'WarehouseName',
             'pivot' => true,
             'wrapper' => [
-                'class' => 'form-group col-md-12 required',
+                'class' => 'form-group col-md-12',
             ],
         ]);
-        
-        /**
-         * Fields can be defined using the fluent syntax or array syntax:
-         * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number'])); 
-         */
+
+
     }
 
-    public function store(){
+    public function store(UserStoreRequest $request){
         try {
             DB::beginTransaction();
 
-            $request = $this->crud->getRequest();
             $userRoles = $request->input('userRoles', []);
-
-            $messages = [
-                'email.required' => 'El campo Correo electrónico es obligatorio.',
-                'email.unique' => 'El Correo electrónico del usuario ya existe en la base de datos.'
-            ];
-    
-            $this->validate($request, [
-                'email' => 'required|unique:users,email,'
-            ], $messages);
-    
 
             $user = User::create([
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
                 'mobile_phone_number' => $request->input('mobile_phone_number'),
                 'password' => bcrypt($request->input('password')),
-                'email_verified_at' => true
+                'email_verified_at' => true,
+                'sales_person_id' => $request->input('sales_person_id'),
             ]);
 
             foreach ($userRoles as $roleId) {
@@ -190,7 +179,7 @@ class UserCrudController extends CrudController
                 $user->userRoles()->attach($role, ['model_type' => 'App\Models\User']);
             }
 
-            $user->warehouses()->attach($request->input('userWarehouse', []));
+            $user->warehouses()->attach($request->input('userWarehouses', []));
 
             DB::commit();
             return redirect()->route('user.index')->with('success', 'El usuario se ha creado correctamente.');
@@ -203,28 +192,20 @@ class UserCrudController extends CrudController
         }
     }
 
-    public function update()
+    public function update(UserUpdateRequest $request)
     {
         try {
             DB::beginTransaction();
-            $request = $this->crud->getRequest();
+
             $id = $request->input('id', '');
             $user = User::findOrFail($id);
             $userRoles = $request->input('userRoles', []);
 
-            $messages = [
-                'email.required' => 'El campo Correo electrónico es obligatorio.',
-                'email.unique' => 'El Correo electrónico del usuario ya existe en la base de datos.'
-            ];
-    
-            $this->validate($request, [
-                'email' => 'required|unique:users,email,'. $id
-            ], $messages);
-
-
             $user->name = $request->input('name');
             $user->email = $request->input('email');
             $user->mobile_phone_number = $request->input('mobile_phone_number');
+            $user->sales_person_id = $request->input('sales_person_id');
+
             if ($request->input('password') !== null) {
                 $user->password = bcrypt($request->input('password'));
             }
@@ -238,7 +219,7 @@ class UserCrudController extends CrudController
                 $user->userRoles()->attach($role, ['model_type' => 'App\Models\User']);
             }
 
-            $user->warehouses()->sync($request->input('userWarehouse', []));
+            $user->warehouses()->sync($request->input('userWarehouses', []));
 
             DB::commit();
             return redirect()->route('user.index')->with('success', 'Los permisos se han actualizado correctamente.');
@@ -259,7 +240,8 @@ class UserCrudController extends CrudController
      */
     protected function setupUpdateOperation()
     {
-        CRUD::setValidation(UserRequest::class);
+        CRUD::setValidation(UserStoreRequest::class);
+        
         CRUD::addField([
             'name' => 'name',
             'label' => __('user.crud.name'),
@@ -298,25 +280,34 @@ class UserCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'userRoles',
-            'label' => 'roles',
+            'label' => __('user.crud.roles'),
             'type' => 'select2_multiple',
             'model' => 'App\Models\Role',
             'attribute' => 'name',
             'wrapper' => [
-                'class' => 'form-group col-md-12 required',
+                'class' => 'form-group col-md-12',
             ],
         ]);
 
         CRUD::addField([
-            'name' => 'userWarehouse',
+            'name' => 'sales_person_id', 
+            'type' => 'select2',
+            'entity' => 'salesPersons',
+            'model' => 'App\Models\SalesPerson',
+            'attribute' => 'formatEmployee',
+            'label' => __('user.crud.salesEmployeeCode'),
+        ]);
+
+        CRUD::addField([
+            'name' => 'userWarehouses',
             'label' => 'Bodegas',
             'type' => 'select2_multiple',
-            'entity' => 'warehouses', // Asegúrate de que coincide con el nombre correcto de tu entidad Warehouse
+            'entity' => 'warehouses',
             'model' => 'App\Models\Warehouse',
             'attribute' => 'WarehouseName',
-            'pivot' => true, // Indica que es un campo de relación muchos a muchos
+            'pivot' => true,
             'wrapper' => [
-                'class' => 'form-group col-md-12 required',
+                'class' => 'form-group col-md-12',
             ],
         ]);
     }

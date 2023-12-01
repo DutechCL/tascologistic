@@ -12,14 +12,9 @@ export const useProblems = defineStore('problems', {
     actions: {
         async getProblems (type) 
         {
-          const body = {
-            type: type
+          if(this.listProblems.length === 0){
+            this.listProblems = await postWithToken('api/v1/problems', {type: type})
           }
-            const response = await postWithToken('api/v1/problems', body)
-
-            this.listProblems = response
-
-            return response
         },
       }
 });

@@ -4,7 +4,7 @@
           {{props.title}}
         </h2>
         <div class="flex">
-          <FilterMultiSelect :typeOrders="props.type" :allOrders="props.orders" @filter="filter"/>
+          <FilterMultiSelect :typeOrders="props.type" :allOrders="props.orders" :filters="filters" @filter="filter"/>
         </div>
         <DataTable 
           class="mb-20" :value="orders" 
@@ -50,8 +50,14 @@
             
             <Column headerClass="!bg-primary-900"  field="note" header="" >
               <template #body="slotProps">
-                <Button v-if="slotProps.data.OrderStatusId != constants.ORDER_STATUS_REVIEWER" :label="'Piekear'" @click="action(slotProps.data, constants.RESPONSIBLE_PICKER)" class="p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900"/>
-                <Button v-if="slotProps.data.OrderStatusId == constants.ORDER_STATUS_REVIEWER" :label="'Revisar'" @click="action(slotProps.data, constants.RESPONSIBLE_REVIEWER)" class="p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900"/>
+                <Button 
+                  v-if="slotProps.data.process_id == constants.PROCESS_PICKER_ID" 
+                  :label="'Pickear'" @click="action(slotProps.data, constants.RESPONSIBLE_PICKER)" 
+                  class="p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900"/>
+                <Button 
+                  v-if="slotProps.data.process_id == constants.PROCESS_REVIEWER_ID" 
+                  :label="'Revisar'" @click="action(slotProps.data, constants.RESPONSIBLE_REVIEWER)" 
+                  class="p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900"/>
               </template>
             </Column>
         </DataTable>
@@ -60,22 +66,32 @@
 
 
 <script setup>
-import { ref, defineProps, watch, defineEmits, onBeforeMount } from 'vue'
+import { ref, defineProps, watch, defineEmits } from 'vue'
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
 import Tag from 'primevue/tag'
 import FilterMultiSelect from '../../../../components/filters/FilterMultiSelect.vue';
 import Button from 'primevue/button'
 import constants from '@/constants/constants';
+import { useOrdersPickerReview } from '../../../../stores/orders/ordersPickerReview';
+import { ToastMixin } from '../../../../Utils/ToastMixin';
 
+const { showToast } = ToastMixin.setup();
+const ordersStore = useOrdersPickerReview();
 const emit = defineEmits();
 const props = defineProps({
   title: String,
   type: String,
   orders: Array,
 })
-
 const orders = ref(props.orders);
+const filters = ref([
+  'DocNum', 
+  'Customer',
+  'DocTotal',
+  'DocTime',
+  'DocDate',
+])
 
 watch(
   () => props.orders,  
@@ -88,10 +104,33 @@ const filter = (data) => {
     orders.value = data.orders;
 }
 
-const action = (order, type) => {
-  let responsible = getResponsible(order, type) !== undefined 
-  emit('action', {order, type, 'responsible':  responsible})
+const action = (order, responsible) => {
+  ordersStore.showDetailOrder = true;
+  ordersStore.currentOrder = order;
+  ordersStore.currentOrder.responsible = responsible;
+  assingResponsible();
 }
+
+const assingResponsible = async () => {
+  
+  try {
+    let response = await ordersStore.assingResponsible()
+
+      showToast({
+        status: response.status,
+        message: response.message,
+      });
+  } catch (error) {
+      if (error.response) {
+        showToast({
+          status: error.response.data.status,
+          message: error.response.data.message,
+        });
+        ordersStore.showDetailOrder = false;
+      }
+  }
+} 
+
 
 const getResponsible = (order, type) =>{
    return order.Responsibles.find((responsible) => responsible.pivot.task == type)?.name

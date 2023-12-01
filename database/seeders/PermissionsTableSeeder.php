@@ -173,6 +173,83 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'url' => '/admin/warehouse',
             ),
+            14 => 
+            array (
+                'created_at' => NULL,
+                'description' => 'Leer',
+                'guard_name' => 'web',
+                'id' => 19,
+                'name' => 'Ajustes.read',
+                'slug' => 'Ajustes',
+                'updated_at' => '2023-11-10 18:07:53',
+                'url' => '/admin/setting/create',
+            ),
+            15 => 
+            array (
+                'created_at' => NULL,
+                'description' => 'ver estado de sincronizacion de ordenes',
+                'guard_name' => 'web',
+                'id' => 20,
+                'name' => 'Log Ordenes.read',
+                'slug' => 'Log Ordenes',
+                'updated_at' => NULL,
+                'url' => '/admin/log-order',
+            ),
+            16 => 
+            array (
+                'created_at' => NULL,
+                'description' => 'ver lista de productos y sincronizar con SAP',
+                'guard_name' => 'web',
+                'id' => 21,
+                'name' => 'Productos.read',
+                'slug' => 'Productos',
+                'updated_at' => '2023-11-14 15:24:34',
+                'url' => '/admin/product',
+            ),
+            17 => 
+            array (
+                'created_at' => NULL,
+                'description' => 'ver lista de vendedores  y sincronizar con SAP',
+                'guard_name' => 'web',
+                'id' => 22,
+                'name' => 'Vendedores.read',
+                'slug' => 'Vendedores',
+                'updated_at' => NULL,
+                'url' => '/admin/sales-person',
+            ),
+            18 => 
+            array (
+                'created_at' => NULL,
+                'description' => 'agregar nuevos métodos de envió',
+                'guard_name' => 'web',
+                'id' => 23,
+                'name' => 'metodos de envio.read',
+                'slug' => 'metodos de envio',
+                'updated_at' => NULL,
+                'url' => '/admin/method-shipping',
+            ),
+            19 => 
+            array (
+                'created_at' => NULL,
+                'description' => 'Ver lista de chat',
+                'guard_name' => 'web',
+                'id' => 26,
+                'name' => 'Chat.read',
+                'slug' => 'Chat',
+                'updated_at' => '2023-11-23 14:24:13',
+                'url' => '/app/chat/list-chats',
+            ),
+            20 => 
+            array (
+                'created_at' => NULL,
+                'description' => 'bandeja de mensajes',
+                'guard_name' => 'web',
+                'id' => 27,
+                'name' => 'Chat.show',
+                'slug' => 'Chat',
+                'updated_at' => '2023-11-23 14:24:23',
+                'url' => '/app/chat/show-chat',
+            ),
         ));
         
         

@@ -7,16 +7,19 @@
     "require": {
         "php": "^8.1",
         "backpack/crud": "^6.0",
+        "backpack/logmanager": "^5.0",
         "backpack/menucrud": "^4.0",
         "backpack/pagemanager": "^3.2",
         "backpack/pro": "^2.0",
         "backpack/theme-coreuiv2": "^1.1",
+        "beyondcode/laravel-websockets": "^1.14",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "maatwebsite/excel": "^3.1",
         "orangehill/iseed": "^3.0",
+        "pusher/pusher-php-server": "^7.2",
         "spatie/laravel-permission": "^5.11"
     },
     "require-dev": {

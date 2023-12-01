@@ -11,10 +11,10 @@
         </Column>
         <Column headerClass="!bg-primary-900"  field="DocDate" header="Fecha"></Column>
         <Column headerClass="!bg-primary-900"  field="DocTime" header="Hora"></Column>
-        <Column headerClass="!bg-primary-900"  field="customer.CardName" header="Cliente"></Column>
-        <Column headerClass="!bg-primary-900"  field="order_status" header="Estado" >
+        <Column headerClass="!bg-primary-900"  field="Customer.CardName" header="Cliente"></Column>
+        <Column headerClass="!bg-primary-900"  field="OrderStatusName" header="Estado" >
           <template #body="slotProps">
-           <Tag :icon="'pi pi-circle-fill'"  :value="slotProps.data.order_status.name" :style="{ backgroundColor: slotProps.data.order_status.color, color: getTextColor(slotProps.data.order_status.color) }" class="tag-font-status tag-radius"></Tag>
+           <Tag :icon="'pi pi-circle-fill'"  :value="slotProps.data.OrderStatusName" :style="{ backgroundColor: slotProps.data.OrderStatusColor, color: getTextColor(slotProps.data.OrderStatusColor) }" class="tag-font-status tag-radius"></Tag>
           </template>
         </Column> 
     </DataTable>
@@ -29,13 +29,12 @@ import Tag from 'primevue/tag';
 
 import { useOrders } from '../../../services/OrdersApiService.js';
 
-const ORDERS_STATUS_AQUI = 1;
-
 const ordersStore = useOrders();
 const orders = ref([]);
 
 const loadData = async () => {
-  orders.value = await ordersStore.getOrdersByMethodShipping([ORDERS_STATUS_AQUI]);
+  let responses = await ordersStore.getOrdersTracker('salesroom');
+  orders.value = responses.data
 };
 
 onMounted(() => {

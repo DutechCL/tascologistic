@@ -198,4 +198,9 @@ return [
 
     'same_site' => 'lax',
 
+    // 'js_config' => [
+    //     'csrf_token' => csrf_token(),
+    //     'sap_sync_route' => route('admin.sap.sync'),
+    // ],
+
 ];

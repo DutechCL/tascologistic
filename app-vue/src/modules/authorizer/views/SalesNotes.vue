@@ -1,14 +1,23 @@
 <template>
   <div class="px-3">
-    <TabView>
+    <TabView  v-model="selectedTab">
       <TabPanel header="Por gestionar">
         <div v-if="!isDataLoaded" class="text-center" style="color:#259bd7">
           <i class="pi pi-spin pi-spinner" style="font-size: 2rem;"></i>
         </div>
-        <ToManage v-if="isDataLoaded" :ListOrders="ordersToManager"/>
+        <ToManage 
+          v-if="isDataLoaded" 
+          :toManage="true" 
+          :orders="ordersToManager" 
+          @updateOrders="updateOrders"
+          />
       </TabPanel>
       <TabPanel header="Gestionadas">
-        <Managed v-if="isDataLoaded" :ListOrders="ordersManager" />
+        <ToManage 
+          v-if="isDataLoaded" 
+          :toManage="false" 
+          :orders="ordersManager" 
+          @updateOrders="updateOrders"/>
       </TabPanel>
     </TabView>
   </div>
@@ -16,38 +25,46 @@
 </template>
 
 <script setup>
-import { ref, onBeforeMount,watch } from 'vue';
+import { onBeforeMount, ref, watch } from 'vue';
 import TabView from 'primevue/tabview'
 import TabPanel from 'primevue/tabpanel'
 import ToManage from '../components/ToManage.vue'
-import Managed from '../components/Managed.vue';
-import { useOrders } from '../../../services/OrdersApiService.js';
 import ConfirmDialog from 'primevue/confirmdialog';
+import { useOrdersCda } from '../../../stores/orders/ordersCda';
+import { ToastMixin } from '../../../Utils/ToastMixin';
 
-const ordersStore = useOrders()
+const { showToast } = ToastMixin.setup();
+const ordersStore = useOrdersCda();
 const ordersToManager = ref([]);
 const ordersManager = ref([]);
 const isDataLoaded = ref(false); 
 
-const updateOrders = () => {
-    ordersToManager.value = ordersStore.orders
-      .filter((order) => order.is_managed == false || order.MethodShippingId === 1 && order.is_managed == false)
-      .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-    ordersManager.value = ordersStore.orders
-      .filter((order) => order.is_managed == true)
-      .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-    isDataLoaded.value = true;
-};
 
-onBeforeMount(async () => {
-    await ordersStore.getOrdersCda();
-    updateOrders();
+onBeforeMount(() => {
 
-    watch(ordersStore.orders, () => {
-        updateOrders();
-    });
+  ordersStore.getOrdersCdaToManager().then(() => { ordersToManager.value = ordersStore.listOrders; });
+  ordersStore.getOrdersCdaManage().then(() => { ordersManager.value = ordersStore.listOrdersManage; });
+  isDataLoaded.value = true;
 });
 
+const updateOrders = () => {
+  ordersStore.getOrdersCdaToManager().then(() => { ordersToManager.value = ordersStore.listOrders });
+  ordersStore.getOrdersCdaManage().then(() => { ordersManager.value = ordersStore.listOrdersManage });
+
+  showToast({
+    status: 'success',
+    title: 'Ordenes actualizadas',
+    message: 'Las ordenes se han actualizado correctamente',
+  })
+}
+
+watch(
+  () => [ordersStore.listOrders, ordersStore.listOrdersManage],
+  () => {
+    ordersToManager.value = ordersStore.listOrders;
+    ordersManager.value = ordersStore.listOrdersManage;
+  }
+)
 
 </script>
 

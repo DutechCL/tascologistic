@@ -6,18 +6,18 @@
                 Medios de pago
             </h1>
             <p class="mb-4 text-primary-900 font-inter font-medium text-md">
-                Factura N° 541651
+                Factura N° {{ ordersPayment.order.DocNum }}
             </p>
       </div>
       <div class="flex justify-between" style="width: 80%;">
-          <div class="mt-2 mb-1 ">
-              <p>Cliente: <span class="text-primary-900 font-semi-bold">Ricardo Chávez Pérez</span></p>
+          <div class="mt-2 mb-1 " style="max-width: 300px !important;">
+              <p>Cliente: <span class="text-primary-900 font-semi-bold">{{ ordersPayment.order.Customer.CardName }}</span></p>
           </div>
           <div class="mt-2 mb-1 ">
-            <p>Monto total: <span class="text-primary-900 font-semi-bold">$520.250</span></p>
+            <p>Monto total: <span class="text-primary-900 font-semi-bold">{{ ordersPayment.order.DocTotal }}</span></p>
         </div>
         <div class="mt-2 mb-1 ">
-            <p>Fecha: <span class="text-primary-900 font-semi-bold">19/04/2023</span></p>
+            <p>Fecha: <span class="text-primary-900 font-semi-bold">{{ ordersPayment.order.DocDate }}</span></p>
         </div>
       </div>
 
@@ -52,18 +52,20 @@
       </div>
       
       
-      <Button label="Cerrar"  @click="visible = false" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
+      <Button label="Cerrar"  @click="ordersPayment.showDialog = false" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
   </Dialog>
   </template>
   
   <script setup>
-  import { ref } from 'vue'
+  import { ref, watch } from 'vue'
   import Dialog from 'primevue/dialog'
   import Dropdown from 'primevue/dropdown'
   import Button from 'primevue/button'
   import RadioButton from 'primevue/radiobutton';
   import InputText from 'primevue/inputtext';
+  import { useOrdersPayment } from '../../../stores/orders/ordersPayments.js';
 
+  const ordersPayment = useOrdersPayment();
   const selectedMethod = ref();
   const selectedPaymentMethods = ref([]);
   const checkedMethod = ref('');
@@ -248,6 +250,14 @@
     methodChecked.value = methodsPayment.value.find(method => method.idMethod === selectId);
   }
 
+  watch(() => ordersPayment.order, (value) => {
+    if (value) {
+      selectedMethod.value = null;
+      selectedPaymentMethods.value = [];
+      checkedMethod.value = '';
+      methodChecked.value = '';
+    }
+  })
 
 
   </script>

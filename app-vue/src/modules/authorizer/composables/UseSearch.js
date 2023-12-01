@@ -4,17 +4,17 @@ import { ref, watch } from 'vue';
 export function UseSearch(ListordersManager) {
 
 const METHOD_SHIPPING_HERE = 1;
-const ordersHere = ref(ListordersManager.value.filter(order => order.MethodShippingId === METHOD_SHIPPING_HERE));
-const ordersPickupAndDelivery = ref(ListordersManager.value.filter(order => order.MethodShippingId !== METHOD_SHIPPING_HERE));
+const ordersHere = ref(ListordersManager.value.filter(order => order.method_shipping_id === METHOD_SHIPPING_HERE));
+const ordersPickupAndDelivery = ref(ListordersManager.value.filter(order => order.method_shipping_id !== METHOD_SHIPPING_HERE));
 const allOrdersPickupAndDelivery = ref(ordersPickupAndDelivery.value);
 const allOrdersHere = ref(ordersHere.value);
 
 watch(() => ListordersManager.value, (newListOrders) => {
   ordersHere.value = newListOrders
-    .filter(order => order.MethodShippingId === METHOD_SHIPPING_HERE)
+    .filter(order => order.method_shipping_id === METHOD_SHIPPING_HERE)
     .sort((a, b) => new Date(b.updateApp) - new Date(a.updateApp));
   ordersPickupAndDelivery.value = newListOrders
-    .filter(order => order.MethodShippingId !== METHOD_SHIPPING_HERE)
+    .filter(order => order.method_shipping_id !== METHOD_SHIPPING_HERE)
     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
   allOrdersPickupAndDelivery.value = ordersPickupAndDelivery.value;
   allOrdersHere.value = ordersHere.value;

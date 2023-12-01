@@ -6,10 +6,10 @@
           Ver Documentos
         </h1>
         <div class="flex align-center mb-2">
-          <p class="text-primary-900"><strong class="mr-3 font-semibold ">Nota de venta N°</strong>{{order.DocNum}}</p>
-          <Tag :icon="'pi pi-shopping-bag'" :value="order.MethodShippingName" class="ml-3 tag-radius tag-rounded-blue tag-font-method"></Tag>
+          <p class="text-primary-900"><strong class="mr-3 font-semibold ">Nota de venta N°</strong>{{ordersStore.order.DocNum}}</p>
+          <Tag :icon="'pi pi-shopping-bag'" :value="ordersStore.order.MethodShippingName" class="ml-3 tag-radius tag-rounded-blue tag-font-method"></Tag>
         </div>
-        <Tag :icon="'pi pi-user'" :value="order.Customer.CardName" class="tag-radius tag-rounded-blue tag-font-method "></Tag>
+        <Tag :icon="'pi pi-user'" :value="ordersStore.order.Customer.CardName" class="tag-radius tag-rounded-blue tag-font-method "></Tag>
         <div class="mt-5">
           <p>
             2 archivos adjuntos
@@ -21,52 +21,28 @@
                   <i class="pi pi-file-pdf m-2" style="color:  #F40F02;"></i>
                   <span class="font-normal text-sm">{{document.name}}</span>
                 </div>
-                <a class="mask-pdf" @click="openPdfInNewTab(document.url)" ></a>
+                <a class="mask-pdf" :href="document.url" :target="'_blank'" ></a>
             </div>
           </div>
         </div>
     </div>
-   
-   
     
-    <Button label="Cerrar"  @click="visibleDetails" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
+    <Button label="Cerrar"  @click="ordersStore.showDialog = false" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
 </Dialog>
 </template>
 
 <script setup>
-import { ref, onBeforeMount, defineProps, defineEmits, watch } from 'vue'
+import { ref} from 'vue'
 import Dialog from 'primevue/dialog'
 import Tag from 'primevue/tag'
 import Button from 'primevue/button'
+import { useOrdersCda } from '../../../stores/orders/ordersCda.js'
 
-const props = defineProps({
-  order: Object
-})
-
-const order = ref([]);
-
+const ordersStore = useOrdersCda();
 const documents = ref([
       { name: 'Documento 1', url: 'http://ocw.uv.es/ingenieria-y-arquitectura/programacionmultimedia/t2-1-css.pdf' },
       { name: 'Documento 2', url: 'http://ocw.uv.es/ingenieria-y-arquitectura/programacionmultimedia/t2-1-css.pdf' },
-      // Puedes agregar más documentos según sea necesario
 ]);
-const openPdfInNewTab = (pdfUrl) => {
-  window.open(pdfUrl, '_blank');
-};
-
-onBeforeMount(() => {
-  order.value = props.order;
-})
-
-watch(() => props.order, (value) => {
-  order.value = value;
-})
-
-const emit = defineEmits();
-
-const visibleDetails = () => {
-  emit('visible', { 'visibleReport': false});
-}
 </script>
 
 <style>

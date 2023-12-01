@@ -94,7 +94,6 @@ class OrderStatusCrudController extends CrudController
             'name' => 'color',
             'label' => __('order_status.crud.color'),
             'type' => 'color',
-            'value' => '',
         ]);
         /**
          * Fields can be defined using the fluent syntax:

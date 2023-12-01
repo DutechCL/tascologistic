@@ -25,7 +25,14 @@ class PermissionsRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'name' => 'required',
+            'actions' => ['required', 'array', function ($attribute, $value, $fail) {
+                    foreach ($value as $group) {
+                        if (!isset($group['action']) || empty($group['action'])) {
+                            $fail("El campo Acción es requerido para cada grupo.");
+                        }
+                    }
+            }],
         ];
     }
 
@@ -37,7 +44,8 @@ class PermissionsRequest extends FormRequest
     public function attributes()
     {
         return [
-            //
+            'name' => __('permission.crud.name'),
+            '*.action' => __('permission.crud.action'),
         ];
     }
 
@@ -49,7 +57,7 @@ class PermissionsRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'required' => 'El campo :attribute es requerido.',
         ];
     }
 }

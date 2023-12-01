@@ -5,6 +5,12 @@ import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
   base: '/app/',
+  server: {
+        proxy: {
+            // '/api': 'https://tasco.dutech.cl/', // Reemplaza con la URL de tu API Laravel
+            '/api': 'http://tasco.test/', // Reemplaza con la URL de tu API Laravel
+        },
+    },
   build: {
     outDir: '../public/app',
     assetsDir: '.', 

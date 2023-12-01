@@ -2,14 +2,17 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Chat\ChatController;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\UserController;
+use App\Http\Controllers\SAP\SapSyncController;
 use App\Http\Controllers\Api\V1\OrderController;
 use App\Http\Controllers\Api\V1\ProductController;
 use App\Http\Controllers\Api\V1\CustomerController;
 use App\Http\Controllers\Api\V1\ProblemsController;
 use App\Http\Controllers\Api\V1\OrderItemsController;
 use App\Http\Controllers\Api\V1\PermissionController;
+use App\Http\Controllers\Admin\MenuItemCrudController;
 use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
 
 
@@ -35,24 +38,60 @@ Route::prefix('v1')->group(
         Route::get('/get-token', [AuthController::class, 'getTokenFromWeb']);
         Route::post('/login', [AuthController::class, 'login']);
 
+        // URL'S GENERALES
         Route::middleware(['auth:sanctum'])->group(function () {
-            Route::apiResource('customers', CustomerController::class);
-            // Route::apiResource('orders', OrderController::class);
-            Route::apiResource('products', ProductController::class);
-            Route::apiResource('order-items', OrderItemsController::class);
-            Route::put('order/{id}/assign/responsible', [OrderController::class, 'assingResponsible']);
-            Route::get('orders/available/cda', [OrderController::class, 'getOrdersCda']);
-            Route::get('orders/available/picker-reviewer', [OrderController::class, 'getOrdersPickerAndReviewer']);
-            Route::get('orders/bill/pickup-here', [OrderController::class, 'getOrdersBillPickupAndHere']);
-            Route::get('orders/bill/delivery', [OrderController::class, 'getOrdersBilldelivery']);
-            Route::post('orders/by-method-shipping', [OrderController::class, 'getOrdersByMethodShipping']);
-            Route::post('orders/authorizer/action', [OrderController::class, 'processOrderAction']);
-            Route::post('orders/authorizer/observation', [OrderController::class, 'addObservation']);
-            Route::post('order/proccess', [OrderController::class, 'processOrderPickerAndReviewer']);
-            Route::post('orders/by-params', [OrderController::class, 'getOrdersByParams']);
+            Route::get('menu-items', [MenuItemCrudController::class, 'getMenuItems']);
             Route::post('problems', [ProblemsController::class, 'index']);
+            Route::post('sap/sync', [SapSyncController::class, 'sync'])->name('admin.sap.sync');
         });
-        //problems
+        
+        //URL'S ORDENES CDA
+        Route::middleware(['auth:sanctum'])->prefix('orders/cda')->group(function () {
+            Route::get('/', [OrderController::class, 'getOrdersCdaToManager']);
+            Route::get('/manage', [OrderController::class, 'getOrdersCdaManage']);
+            Route::post('process-order', [OrderController::class, 'processOrderCda']);
+            Route::post('observation', [OrderController::class, 'addObservation']);
+        });
+        
+        //URL'S ORDENES PICKER-REVIEWER
+        Route::middleware(['auth:sanctum'])->prefix('orders/picker-reviewer')->group(function () {
+            Route::get('{wareHouseCode}', [OrderController::class, 'getOrdersPickerAndReviewer']);
+            Route::post('process-order', [OrderController::class, 'processOrderPickerReviewer']);
+            Route::put('{id}/assign/responsible', [OrderController::class, 'assingResponsible']);
+        });
+        
+        //URL'S ORDENES BILLS
+        Route::middleware(['auth:sanctum'])->prefix('orders/bills')->group(function () {
+            Route::get('pickup-here', [OrderController::class, 'getOrdersBillPickupAndHere']);
+            Route::get('delivery', [OrderController::class, 'getOrdersBilldelivery']);
+            Route::get('generate/document/{document}/order/{id}', [OrderController::class, 'generateDocument']);
+        });
+
+        //URL'S ORDENES PAGO
+        Route::middleware(['auth:sanctum'])->prefix('orders/payment')->group(function () {
+            Route::get('/', [OrderController::class, 'getOrdersPayment']);
+        });
+
+        // ORDENES TRAKER
+        Route::middleware(['auth:sanctum'])->prefix('orders/tracker')->group(function () {
+            Route::get('/{type}', [OrderController::class, 'getOrdersTracker']);
+        });
+
+        //URL'S ORDENES
+        Route::middleware(['auth:sanctum'])->prefix('orders')->group(function () {
+            Route::post('/search', [OrderController::class, 'searchOrders']);
+        });
+
+        //URL'S CHAT 
+        Route::middleware(['auth:sanctum'])->prefix('chat')->group(function () {
+            Route::post('send-message', [ChatController::class, 'sendMessage']);
+            Route::get('get-message/{id}', [ChatController::class, 'getMessages']);
+            Route::get('get-user', [ChatController::class, 'getUser']);
+            Route::get('get-orders', [ChatController::class, 'getOrders']);
+            Route::get('get-resolve', [ChatController::class, 'getResolve']);
+            Route::get('show/{id}', [ChatController::class, 'showChat']);
+            Route::get('resolve/{id}', [ChatController::class, 'resolveOrder']);
+        });
     }
 );
 
@@ -60,4 +99,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('web')->get('/sanctum/csrf-cookie', CsrfCookieController::class . '@show');
+// Route::middleware('auth:sanctum')->get('/sanctum/csrf-cookie', CsrfCookieontroller::class . '@showe');

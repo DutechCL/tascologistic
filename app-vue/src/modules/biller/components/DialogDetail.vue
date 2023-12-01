@@ -32,28 +32,22 @@
             </template>
         </Column>
     </DataTable>
-    <Button label="Cerrar"  @click="visibleDetails" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
+    <Button label="Cerrar"  @click="orderStore.visibleDialog = false" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
 </Dialog>
 </template>
 
 <script setup>
-import { ref, defineProps, onBeforeMount, defineEmits} from 'vue'
+import { ref } from 'vue'
 import Dialog from 'primevue/dialog'
 import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
 import Tag from 'primevue/tag'
 import Button from 'primevue/button'
+import { useOrdersBills } from '../../../stores/orders/ordersBills.js';
 
-const order = ref([])
-const products = ref([])
-const props = defineProps({
-  orderDetails: Array
-})
-
-const emit = defineEmits();
-const visibleDetails = () => {
-  emit('visible', {'visibleDetails': false});
-}
+const orderStore = useOrdersBills()
+const order = ref(orderStore.order)
+const products = ref(orderStore.order?.OrderItems)
 
 const getLabel = (data) => {
     switch (data.pivot.task) {
@@ -67,11 +61,4 @@ const getLabel = (data) => {
             break;
     }
 }
-
-onBeforeMount(() => {
-  
-  order.value = props.orderDetails
-  products.value = props.orderDetails?.OrderItems
-
-})
 </script>

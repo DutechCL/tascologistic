@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Permission;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\PermissionsRequest;
+use App\Http\Requests\PermissionsUpdateRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
-use Illuminate\Support\Facades\DB;
 
 /**
  * Class PermissionsCrudController
@@ -38,12 +39,12 @@ class PermissionsCrudController extends CrudController
         CRUD::setEntityNameStrings(__('permission.permissions'), __('permission.permissions'));
     }
 
-    public function store(){
+    public function store(PermissionsRequest $request){
         try {
             DB::beginTransaction();
 
-            $actions = $this->crud->getRequest()->input('actions', []);
-            $name = $this->crud->getRequest()->input('name', '');
+            $actions = $request->actions;
+            $name = $request->name;
 
             if (!empty($actions)) {
                 $permissions = []; 
@@ -156,11 +157,10 @@ class PermissionsCrudController extends CrudController
         ]);
     }
 
-    public function update()
+    public function update(PermissionsUpdateRequest $request)
     {
         try {
             DB::beginTransaction();
-            $request = $this->crud->getRequest();
 
             $id = $request->input('id', '');
     
