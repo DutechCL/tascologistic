@@ -88,7 +88,7 @@ class CustomerService
         }
     }
 
-    private function syncSingleContactEmployee(CustomerContactEmployee $customer, array $contactEmployee)
+    private function syncSingleContactEmployee(Customer $customer, array $contactEmployee)
     {
 
         try {
