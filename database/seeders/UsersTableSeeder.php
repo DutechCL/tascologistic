@@ -22,6 +22,8 @@ class UsersTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
+                'hash' => md5(uniqid()),
+                'code' => 1,
                 'name' => 'Administrador del sistema',
                 'email' => 'super@dutech.cl',
                 'email_verified_at' => NULL,
@@ -39,6 +41,8 @@ class UsersTableSeeder extends Seeder
             1 => 
             array (
                 'id' => 3,
+                'hash' => md5(uniqid()),
+                'code' => 2,
                 'name' => 'Armando Torres',
                 'email' => 'cda@dutech.cl',
                 'email_verified_at' => NULL,
@@ -56,6 +60,8 @@ class UsersTableSeeder extends Seeder
             2 => 
             array (
                 'id' => 4,
+                'hash' => md5(uniqid()),
+                'code' => 3,
                 'name' => 'Miguel Cabrera',
                 'email' => 'picker@dutech.cl',
                 'email_verified_at' => NULL,
@@ -73,6 +79,8 @@ class UsersTableSeeder extends Seeder
             3 => 
             array (
                 'id' => 5,
+                'hash' => md5(uniqid()),
+                'code' => 4,
                 'name' => 'Juan toro',
                 'email' => 'revisor@dutech.cl',
                 'email_verified_at' => NULL,
@@ -90,6 +98,8 @@ class UsersTableSeeder extends Seeder
             4 => 
             array (
                 'id' => 6,
+                'hash' => md5(uniqid()),
+                'code' => 5,
                 'name' => 'Pedro Perez',
                 'email' => 'administracion@dutech.cl',
                 'email_verified_at' => NULL,
@@ -107,6 +117,8 @@ class UsersTableSeeder extends Seeder
             5 => 
             array (
                 'id' => 7,
+                'hash' => md5(uniqid()),
+                'code' => 6,
                 'name' => 'Javier Bobadilla',
                 'email' => 'javier@tascochile.cl',
                 'email_verified_at' => NULL,
@@ -124,6 +136,8 @@ class UsersTableSeeder extends Seeder
             6 => 
             array (
                 'id' => 8,
+                'hash' => md5(uniqid()),
+                'code' => 7,
                 'name' => 'Yocelin Salinas',
                 'email' => 'ysalinas@tascochile.cl',
                 'email_verified_at' => NULL,
@@ -141,6 +155,8 @@ class UsersTableSeeder extends Seeder
             7 => 
             array (
                 'id' => 9,
+                'hash' => md5(uniqid()),
+                'code' => 8,
                 'name' => 'Sofia Lagos',
                 'email' => 'pagos@tascochile.cl',
                 'email_verified_at' => NULL,
@@ -158,6 +174,8 @@ class UsersTableSeeder extends Seeder
             8 => 
             array (
                 'id' => 10,
+                'hash' => md5(uniqid()),
+                'code' => 9,
                 'name' => 'Alessandra Guercio',
                 'email' => 'cda@tascochile.cl',
                 'email_verified_at' => NULL,
@@ -175,6 +193,8 @@ class UsersTableSeeder extends Seeder
             9 => 
             array (
                 'id' => 11,
+                'hash' => md5(uniqid()),
+                'code' => 10,
                 'name' => 'Cristián Córdova',
                 'email' => 'bodegavictoria@tascochile.cl',
                 'email_verified_at' => NULL,
@@ -192,6 +212,8 @@ class UsersTableSeeder extends Seeder
             10 => 
             array (
                 'id' => 12,
+                'hash' => md5(uniqid()),
+                'code' => 11,
                 'name' => 'Picker 1 BVM',
                 'email' => 'inventarios@tascochile.cl',
                 'email_verified_at' => NULL,
@@ -209,6 +231,8 @@ class UsersTableSeeder extends Seeder
             11 => 
             array (
                 'id' => 13,
+                'hash' => md5(uniqid()),
+                'code' => 12,
                 'name' => 'Gonzalo Fuentes',
                 'email' => 'gonzalo@tascochile.cl',
                 'email_verified_at' => NULL,
@@ -226,6 +250,8 @@ class UsersTableSeeder extends Seeder
             12 => 
             array (
                 'id' => 14,
+                'hash' => md5(uniqid()),
+                'code' => 13,
                 'name' => 'Francisco Chacón',
                 'email' => 'bodegacentral@tascochile.cl',
                 'email_verified_at' => NULL,
@@ -243,6 +269,8 @@ class UsersTableSeeder extends Seeder
             13 => 
             array (
                 'id' => 15,
+                'hash' => md5(uniqid()),
+                'code' => 14,
                 'name' => 'Félix Bastías',
                 'email' => 'bse@tascochile.cl',
                 'email_verified_at' => NULL,
