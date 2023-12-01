@@ -64,6 +64,7 @@ class CustomerService
 
     private function syncSingleAddress(Customer $customer, array $address)
     {
+        if (count($address) == 0) return;
 
         try {
             $columnNames = Schema::getColumnListing('customer_addresses');
@@ -78,6 +79,8 @@ class CustomerService
 
     private function syncContactEmployees(Customer $customer, array $contactEmployees)
     {
+        if (count($contactEmployees) == 0) return;
+        
         try {
             foreach ($contactEmployees as $contactEmployee) {
                 $this->syncSingleContactEmployee($customer, $contactEmployee);
