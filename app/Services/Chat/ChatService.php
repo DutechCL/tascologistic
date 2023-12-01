@@ -36,8 +36,9 @@ class ChatService
 
         $usersChat = $this->assingChatUsers($chat, $order);
 
+        $currentUser = auth()->user();
         foreach ($usersChat as $user) {
-            event(new Notifications($user));
+            event(new Notifications($user, $chat, $currentUser));
         }
         
         $this->createMessage(

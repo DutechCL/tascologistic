@@ -15,10 +15,14 @@ class Notifications implements ShouldBroadcast
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public $user;
+    public $chat;
+    public $currentUser;
   
-    public function __construct($user)
+    public function __construct($user, $chat, $currentUser)
     {
         $this->user = $user;
+        $this->chat = $chat->load('order');
+        $this->currentUser = $currentUser;
     }
   
     public function broadcastOn(): Channel
