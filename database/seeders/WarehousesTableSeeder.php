@@ -22,8 +22,8 @@ class WarehousesTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
-                'created_at' => '2023-11-15 13:45:52',
-                'updated_at' => '2023-11-15 13:45:52',
+                'created_at' => '2023-11-16 17:23:00',
+                'updated_at' => '2023-11-16 17:23:00',
                 'WarehouseCode' => '01',
                 'WarehouseName' => 'Almacén general',
                 'Street' => NULL,
@@ -35,8 +35,8 @@ class WarehousesTableSeeder extends Seeder
             1 => 
             array (
                 'id' => 2,
-                'created_at' => '2023-11-15 13:45:52',
-                'updated_at' => '2023-11-15 13:45:52',
+                'created_at' => '2023-11-16 17:23:00',
+                'updated_at' => '2023-11-16 17:23:00',
                 'WarehouseCode' => 'BDEF',
                 'WarehouseName' => 'Productos con defecto',
                 'Street' => NULL,
@@ -48,8 +48,8 @@ class WarehousesTableSeeder extends Seeder
             2 => 
             array (
                 'id' => 3,
-                'created_at' => '2023-11-15 13:45:52',
-                'updated_at' => '2023-11-15 13:45:52',
+                'created_at' => '2023-11-16 17:23:00',
+                'updated_at' => '2023-11-16 17:23:00',
                 'WarehouseCode' => 'BJQ',
                 'WarehouseName' => 'Bodega Jorge Quintanilla',
                 'Street' => NULL,
@@ -61,8 +61,8 @@ class WarehousesTableSeeder extends Seeder
             3 => 
             array (
                 'id' => 4,
-                'created_at' => '2023-11-15 13:45:52',
-                'updated_at' => '2023-11-15 13:45:52',
+                'created_at' => '2023-11-16 17:23:00',
+                'updated_at' => '2023-11-16 17:23:00',
                 'WarehouseCode' => 'BSDV',
                 'WarehouseName' => 'Sala de Ventas Vicuña',
                 'Street' => NULL,
@@ -74,8 +74,8 @@ class WarehousesTableSeeder extends Seeder
             4 => 
             array (
                 'id' => 5,
-                'created_at' => '2023-11-15 13:45:52',
-                'updated_at' => '2023-11-15 13:45:52',
+                'created_at' => '2023-11-16 17:23:00',
+                'updated_at' => '2023-11-16 17:23:00',
                 'WarehouseCode' => 'BTRA',
                 'WarehouseName' => 'Bodega Transito',
                 'Street' => NULL,
@@ -87,8 +87,8 @@ class WarehousesTableSeeder extends Seeder
             5 => 
             array (
                 'id' => 6,
-                'created_at' => '2023-11-15 13:45:52',
-                'updated_at' => '2023-11-15 13:45:52',
+                'created_at' => '2023-11-16 17:23:00',
+                'updated_at' => '2023-11-16 17:23:00',
                 'WarehouseCode' => 'BVM',
                 'WarehouseName' => 'Bodega Vicuña Mackenna',
                 'Street' => 'Vicuña Mackena',
@@ -100,8 +100,8 @@ class WarehousesTableSeeder extends Seeder
             6 => 
             array (
                 'id' => 7,
-                'created_at' => '2023-11-15 13:45:52',
-                'updated_at' => '2023-11-15 13:45:52',
+                'created_at' => '2023-11-16 17:23:00',
+                'updated_at' => '2023-11-16 17:23:00',
                 'WarehouseCode' => 'BV37',
                 'WarehouseName' => 'Bodega Victoria',
                 'Street' => 'Victoria',
@@ -113,8 +113,8 @@ class WarehousesTableSeeder extends Seeder
             7 => 
             array (
                 'id' => 8,
-                'created_at' => '2023-11-15 13:45:52',
-                'updated_at' => '2023-11-15 13:45:52',
+                'created_at' => '2023-11-16 17:23:00',
+                'updated_at' => '2023-11-16 17:23:00',
                 'WarehouseCode' => 'BSE',
                 'WarehouseName' => 'Bodega Santa Elena',
                 'Street' => 'Santa Elena',
@@ -126,8 +126,8 @@ class WarehousesTableSeeder extends Seeder
             8 => 
             array (
                 'id' => 9,
-                'created_at' => '2023-11-15 13:45:52',
-                'updated_at' => '2023-11-15 13:45:52',
+                'created_at' => '2023-11-16 17:23:00',
+                'updated_at' => '2023-11-16 17:23:00',
                 'WarehouseCode' => 'BS/M',
                 'WarehouseName' => 'Traslado sin Movimiento',
                 'Street' => 'Vicuna Mackenna',
@@ -139,8 +139,8 @@ class WarehousesTableSeeder extends Seeder
             9 => 
             array (
                 'id' => 10,
-                'created_at' => '2023-11-15 13:45:52',
-                'updated_at' => '2023-11-15 13:45:52',
+                'created_at' => '2023-11-16 17:23:00',
+                'updated_at' => '2023-11-16 17:23:00',
                 'WarehouseCode' => 'BSDV37',
                 'WarehouseName' => 'Sala de Ventas Victoria',
                 'Street' => NULL,

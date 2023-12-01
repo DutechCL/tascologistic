@@ -15,6 +15,15 @@ return new class extends Migration
             $table->id();
             $table->string('CardCode')->unique();
             $table->string('CardName')->nullable();
+            $table->string('CardType')->nullable(); //new
+            $table->string('GroupCode')->nullable(); //new
+            $table->string('ContactPerson')->nullable(); //new
+            $table->string('CardForeignName')->nullable(); //new
+            $table->string('ShipToDefault')->nullable(); //new
+            $table->string('BilltoDefault')->nullable(); //new
+            $table->string('Currency')->nullable(); //new
+            $table->logText('BPAddresses')->nullable();//new
+            $table->logText('ContactEmployees')->nullable();//new
             $table->string('Address')->nullable();
             $table->string('FederalTaxID')->nullable();
             $table->string('EmailAddress')->nullable();
