@@ -35,8 +35,7 @@ class SAPService
      */
     private function getConfig($productionKey, $devKey)
     {
-        // $modeDev = (bool) Setting::get('_sap_dev_mode');
-        $modeDev = true;
+        $modeDev = (bool) Setting::get('_sap_dev_mode');
 
         return $modeDev ? config($devKey) : Setting::get($productionKey);
     }
