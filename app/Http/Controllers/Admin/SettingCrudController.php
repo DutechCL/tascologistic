@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Setting;
 use App\Http\Requests\SettingRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
@@ -13,7 +14,7 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
  */
 class SettingCrudController extends CrudController
 {
-    use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
+    //use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
@@ -28,25 +29,22 @@ class SettingCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Setting::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/setting');
-        CRUD::setEntityNameStrings('setting', 'settings');
+        CRUD::setEntityNameStrings(__("settings.settings"), __("settings.settings"));
     }
 
-    /**
-     * Define what happens when the List operation is loaded.
-     * 
-     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
-     * @return void
-     */
-    protected function setupListOperation()
+    public function store(SettingRequest $request)
     {
-        CRUD::setFromDb(); // set columns from db columns.
+         foreach ($request->all() as $key => $value) {
 
-        /**
-         * Columns can be defined using the fluent syntax:
-         * - CRUD::column('price')->type('number');
-         */
+            if($key == '_sap_password' && is_null($value)){
+                continue;
+            }
+
+            Setting::set($key, $value);
+         }
+         
+        return redirect()->back();
     }
-
     /**
      * Define what happens when the Create operation is loaded.
      * 
@@ -56,22 +54,22 @@ class SettingCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(SettingRequest::class);
-        CRUD::setFromDb(); // set fields from db columns.
-
+        // CRUD::setFromDb(); // set fields from db columns.
+        Setting::all()->each(function ($setting) {
+            if($setting->active){
+                CRUD::addField([
+                    'name' => $setting->key,
+                    'label' => $setting->label,
+                    'type' => $setting->type,
+                    'default' => $setting->value,
+                    'tab' => __("settings.tab.$setting->section"),
+                    'wrapper' => ['class' => $setting->class],
+                ]);
+            }
+        });
         /**
          * Fields can be defined using the fluent syntax:
          * - CRUD::field('price')->type('number');
          */
-    }
-
-    /**
-     * Define what happens when the Update operation is loaded.
-     * 
-     * @see https://backpackforlaravel.com/docs/crud-operation-update
-     * @return void
-     */
-    protected function setupUpdateOperation()
-    {
-        $this->setupCreateOperation();
     }
 }

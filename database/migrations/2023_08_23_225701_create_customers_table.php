@@ -14,9 +14,25 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('CardCode')->unique();
-            $table->string('CardName');
-            $table->string('Address');
-            $table->string('FederalTaxID');
+            $table->string('CardName')->nullable();
+            $table->string('CardType')->nullable(); //new
+            $table->string('GroupCode')->nullable(); //new
+            $table->string('ContactPerson')->nullable(); //new
+            $table->string('CardForeignName')->nullable(); //new
+            $table->string('ShipToDefault')->nullable(); //new
+            $table->string('BilltoDefault')->nullable(); //new
+            $table->string('Currency')->nullable(); //new
+            $table->logText('BPAddresses')->nullable();//new
+            $table->logText('ContactEmployees')->nullable();//new
+            $table->string('Address')->nullable();
+            $table->string('FederalTaxID')->nullable();
+            $table->string('EmailAddress')->nullable();
+            $table->float('CreditLimit', 12, 2)->nullable();
+            $table->float('MaxCommitment', 12, 2)->nullable();
+            $table->date('CreateDate')->nullable();
+            $table->time('CreateTime')->nullable();
+            $table->date('UpdateDate')->nullable();
+            $table->time('UpdateTime')->nullable();
             $table->timestamps();
         });
     }

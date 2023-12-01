@@ -26,15 +26,13 @@ class PermissionsRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'actions' => function ($attribute, $value, $fail) {
-                // Validar cada grupo
-                foreach ($value as $group) {
-                    if (!isset($group['action']) || empty($group['action'])) {
-                        $fail("El campo 'action' es requerido para cada grupo.");
+            'actions' => ['required', 'array', function ($attribute, $value, $fail) {
+                    foreach ($value as $group) {
+                        if (!isset($group['action']) || empty($group['action'])) {
+                            $fail("El campo Acción es requerido para cada grupo.");
+                        }
                     }
-                    // Puedes agregar más validaciones para otros campos si es necesario
-                }
-            },
+            }],
         ];
     }
 

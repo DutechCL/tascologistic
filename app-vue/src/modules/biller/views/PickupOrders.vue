@@ -4,7 +4,7 @@
         <h1 class="mb-4 text-primary-900 font-inter font-semibold text-2xl">
           Retira / Aquí  <a style="cursor: pointer;" @click="updateOrders"><i class="pi pi-refresh"></i></a> 
         </h1>
-        <Search :orders="orderStore.listOrders" @search="search"/>
+        <Search :type="constants.RESPONSIBLE_BILLER" :methodShipping="constants.METHOD_SHIPPING_HERE"  :orders="orderStore.listOrders" @search="search"/>
       </div>
 
       <DataTableOrders 

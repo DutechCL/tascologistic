@@ -30,9 +30,9 @@ class MethodShippingsTableSeeder extends Seeder
             1 => 
             array (
                 'created_at' => '2023-08-04 20:19:55',
-                'description' => 'Cliente retiro',
+                'description' => 'Cliente retira',
                 'id' => 2,
-                'name' => 'Cliente retiro',
+                'name' => 'Retira',
                 'updated_at' => '2023-08-04 20:19:55',
             ),
             2 => 
@@ -40,8 +40,16 @@ class MethodShippingsTableSeeder extends Seeder
                 'created_at' => '2023-08-04 20:19:55',
                 'description' => 'Cliente despacho',
                 'id' => 3,
-                'name' => 'Cliente despacho',
+                'name' => 'Despacho',
                 'updated_at' => '2023-08-04 20:19:55',
+            ),
+            3 => 
+            array (
+                'created_at' => '2023-11-15 18:57:38',
+                'description' => 'Cliente Retira Samex',
+                'id' => 4,
+                'name' => 'Retira Samex',
+                'updated_at' => '2023-11-15 18:57:38',
             ),
         ));
         

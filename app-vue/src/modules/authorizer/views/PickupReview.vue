@@ -10,7 +10,10 @@
             Pickeo / Revisión <a style="cursor: pointer;" @click="updateOrders"><i class="pi pi-refresh"></i></a> 
           </h1>
         </div>
-        <Search :orders="[...listOrdersHere, ...listOrdersPickupDelivery]" @search="search"/>
+        <Search 
+          :type="constants.RESPONSIBLE_PICKER_REVIEWER" 
+          :warehouses="props.wareHouseCode" 
+          :orders="[...listOrdersHere, ...listOrdersPickupDelivery]" @search="search"/>
       </div>
       <!-- Start table orders here -->
       <DataTableOrdersPickerReview 

@@ -78,14 +78,6 @@ class UserCrudController extends CrudController
             'entity' => 'warehouses',
             'attribute' => 'WarehouseName',
         ]);
-
-
-
-        /**
-         * Columns can be defined using the fluent syntax or array syntax:
-         * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']); 
-         */
     }
 
     /**
@@ -143,6 +135,15 @@ class UserCrudController extends CrudController
         ]);
 
         CRUD::addField([
+            'name' => 'sales_person_id', 
+            'type' => 'select2',
+            'entity' => 'salesPersons',
+            'model' => 'App\Models\SalesPerson',
+            'attribute' => 'formatEmployee',
+            'label' => __('user.crud.salesEmployeeCode'),
+        ]);
+
+        CRUD::addField([
             'name' => 'userWarehouses',
             'label' => __('user.crud.warehouse'),
             'type' => 'select2_multiple',
@@ -154,12 +155,8 @@ class UserCrudController extends CrudController
                 'class' => 'form-group col-md-12',
             ],
         ]);
-        
-        /**
-         * Fields can be defined using the fluent syntax or array syntax:
-         * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number'])); 
-         */
+
+
     }
 
     public function store(UserStoreRequest $request){
@@ -173,7 +170,8 @@ class UserCrudController extends CrudController
                 'email' => $request->input('email'),
                 'mobile_phone_number' => $request->input('mobile_phone_number'),
                 'password' => bcrypt($request->input('password')),
-                'email_verified_at' => true
+                'email_verified_at' => true,
+                'sales_person_id' => $request->input('sales_person_id'),
             ]);
 
             foreach ($userRoles as $roleId) {
@@ -206,6 +204,8 @@ class UserCrudController extends CrudController
             $user->name = $request->input('name');
             $user->email = $request->input('email');
             $user->mobile_phone_number = $request->input('mobile_phone_number');
+            $user->sales_person_id = $request->input('sales_person_id');
+
             if ($request->input('password') !== null) {
                 $user->password = bcrypt($request->input('password'));
             }
@@ -290,13 +290,22 @@ class UserCrudController extends CrudController
         ]);
 
         CRUD::addField([
+            'name' => 'sales_person_id', 
+            'type' => 'select2',
+            'entity' => 'salesPersons',
+            'model' => 'App\Models\SalesPerson',
+            'attribute' => 'formatEmployee',
+            'label' => __('user.crud.salesEmployeeCode'),
+        ]);
+
+        CRUD::addField([
             'name' => 'userWarehouses',
             'label' => 'Bodegas',
             'type' => 'select2_multiple',
-            'entity' => 'warehouses', // Asegúrate de que coincide con el nombre correcto de tu entidad Warehouse
+            'entity' => 'warehouses',
             'model' => 'App\Models\Warehouse',
             'attribute' => 'WarehouseName',
-            'pivot' => true, // Indica que es un campo de relación muchos a muchos
+            'pivot' => true,
             'wrapper' => [
                 'class' => 'form-group col-md-12',
             ],

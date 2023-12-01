@@ -11,6 +11,8 @@ class AuthController extends Controller
 {
     public function login(Request $request): JsonResponse
     {
+        // dd($request);
+        // Auth::loginUsingId(1);
         $credentials = [
             'email' => $request->email,
             'password' => $request->password,
@@ -28,6 +30,7 @@ class AuthController extends Controller
         return response()->json([
             'status' => true,
             'token' => $token->plainTextToken,
+            'csrfToken' => csrf_token(),
         ]);
     }
 
@@ -39,6 +42,7 @@ class AuthController extends Controller
     
             return response()->json([
                 'token' => $token->plainTextToken,
+                'csrf' => csrf_token(),
             ]);
         }
     

@@ -1,5 +1,4 @@
 <?php
-// app/Http/Resources/OrderResource.php
 namespace App\Http\Resources;
 
 use App\Models\Problem;
@@ -41,6 +40,11 @@ class OrderResource extends JsonResource
             'updated_at' => $this->updated_at,
             'observation' => $this->observation,
             'process_id' => $this->process_id,
+            'report_user_id' => $this->report_user_id,
+            'report_user_responsibles' => $this->report_user_responsible,
+            'report_user_name' => $this->report_user_name,
+            'has_problems' => $this->has_problems,
+            'is_resolved' => $this->is_resolved,
             'Problems' => $this->problems->map(function ($problem) {
                 return [
                     'id' => $problem->id,

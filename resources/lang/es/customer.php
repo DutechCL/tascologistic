@@ -9,5 +9,9 @@ return [
         'address'     => 'Dirección',
         'federal_tax' => 'Federal Tax ',
         'active'      => 'Activo',
+
+        'button' => [
+            'sync' => 'Sincronizar clientes con SAP',
+        ],
     ],
 ];

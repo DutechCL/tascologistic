@@ -25,7 +25,8 @@ class MenuItemRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'name' => 'required|max:255',
+            'url' => 'required',
         ];
     }
 
@@ -37,7 +38,8 @@ class MenuItemRequest extends FormRequest
     public function attributes()
     {
         return [
-            //
+            'name' => __('menu_items.crud.name'),
+            'url' => __('menu_items.crud.url'),
         ];
     }
 
@@ -49,7 +51,7 @@ class MenuItemRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'required' => 'El campo :attribute es requerido.',
         ];
     }
 }

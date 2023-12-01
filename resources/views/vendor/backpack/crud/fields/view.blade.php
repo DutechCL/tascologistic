@@ -31,7 +31,7 @@
 </div>
 
 <div class="col-md-4 mb-3">
-    <label for="url">Enlace</label>
+    <label for="url">Enlace <span style="color:red" >*</span></label>
     <input id="url" name="url" class="form-control" />
 </div>
 

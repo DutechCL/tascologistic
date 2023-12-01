@@ -11,9 +11,15 @@
 <script setup>
   import { ref,defineEmits, watch} from 'vue'
   import InputText from 'primevue/inputtext'
+  import { useOrders } from '../../services/OrdersApiService'
+
+  const ordersStore = useOrders();
 
   const props = defineProps({
     orders: Object,
+    type: String,
+    warehouses: String,
+    methodShipping: String
   })
   const orders = ref(props.orders);
   const allOrders = ref(props.orders);
@@ -32,8 +38,23 @@
   })
   
   const search = (value) => {
-    orders.value = filterOrdersByNumberAndName(allOrders.value, value)
-    emit('search', { 'orders': orders.value});
+    let result = filterOrdersByNumberAndName(allOrders.value, value)
+    if(result.length > 0) {
+      emit('search', { 'orders': result});
+    }else{
+
+      let body = {
+        type: props.type,
+        warehouses: props.warehouses,
+        methodShipping: props.methodShipping,
+        search: value
+      }
+      ordersStore.searchOrders(body).then((response) => {
+        emit('search', { 'orders': response.data});
+      })
+
+    }
+
   }
     
   function filterOrdersByNumberAndName(orders, data) {

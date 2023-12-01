@@ -2,44 +2,65 @@
 
 namespace App\Models;
 
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use App\Models\OrderItem;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Product extends Model
 {
+    use CrudTrait;
     use HasFactory;
-
-    protected $fillable = [
+    
+    const IDENTIFIER = 'ItemCode';
+    const FILLABLE = [
         'ItemCode',
-        'ItemDescription',
-        'Quantity',
-        'Price',
-        'PriceAfterVAT',
-        'Currency',
-        'WarehouseCode',
-        'Height1',
-        'Hight1Unit',
-        'Height2',
-        'Height2Unit',
-        'Lengh1',
-        'Lengh1Unit',
-        'Lengh2',
-        'Lengh2Unit',
-        'Weight1',
-        'Weight1Unit',
-        'Weight2',
-        'Weight2Unit',
-        'Factor1',
-        'Factor2',
-        'Factor3',
-        'Factor4',
-        'TaxCode',
-        'TaxType',
-    ]; // Campos permitidos para llenado masivo
+        'ItemName',
+        'ItemsGroupCode',
+        'QuantityOnStock',
+        'DefaultWarehouse',
+        'CreateDate',
+        'CreateTime',
+        'UpdateDate',
+        'UpdateTime',
+    ];
+
+    protected $fillable = self::FILLABLE;
 
     public function orderItems()
     {
         return $this->hasMany(OrderItem::class);
+    }
+
+    public static function getSyncInfo()
+    {
+        $product = self::latest('CreateDate')->first();
+
+        if ($product) {
+            $params = [
+                [
+                    'field'    => 'CreateDate',
+                    'operator' => 'ge', // greater than or equal
+                    'value'    => $product->CreateDate,
+                ],
+                [
+                    'field'    => 'CreateTime',
+                    'operator' => 'gt', // greater than
+                    'value'    => $product->CreateTime,
+                ]
+            ];
+        }
+
+        return [
+            'endpoint'   => 'products', // SAP endpoint confifgured in config/service.php
+            'model'      => self::class,
+            'fields'     => self::FILLABLE,
+            'identifier' => self::IDENTIFIER,
+            'method'     => 'updateOrCreate',
+            'filter'     => [
+                'operator' => 'and',
+                'params'   => $params ?? []
+            ],
+        ];
     }
 }

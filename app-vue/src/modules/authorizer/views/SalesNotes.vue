@@ -40,19 +40,16 @@ const ordersManager = ref([]);
 const isDataLoaded = ref(false); 
 
 
-onBeforeMount( async() => {
+onBeforeMount(() => {
 
-  await ordersStore.getOrdersCdaToManager();
-  await ordersStore.getOrdersCdaManage();
-
-  ordersToManager.value = ordersStore.listOrders;
-  ordersManager.value = ordersStore.listOrdersManage;
+  ordersStore.getOrdersCdaToManager().then(() => { ordersToManager.value = ordersStore.listOrders; });
+  ordersStore.getOrdersCdaManage().then(() => { ordersManager.value = ordersStore.listOrdersManage; });
   isDataLoaded.value = true;
 });
 
 const updateOrders = () => {
-  ordersStore.getOrdersCdaToManager();
-  ordersStore.getOrdersCdaManage();
+  ordersStore.getOrdersCdaToManager().then(() => { ordersToManager.value = ordersStore.listOrders });
+  ordersStore.getOrdersCdaManage().then(() => { ordersManager.value = ordersStore.listOrdersManage });
 
   showToast({
     status: 'success',

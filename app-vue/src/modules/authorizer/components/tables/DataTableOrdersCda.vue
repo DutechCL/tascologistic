@@ -8,13 +8,14 @@
   </div>
 
   <div class="flex">
-      <FilterMultiSelect :allOrders="props.orders" :typeOrders="props.type" :filters="filters" @filter="filter" />
+      <FilterMultiSelect :allOrders="props.orders" :typeOrders="props.type" :filters="filters" @filter="filter"  />
   </div>
       
   <DataTable 
     :value="orders" 
     :rowsPerPageOptions="[5, 10, 20, 50]" 
     :rows="5" 
+    @page="getData"
     paginator 
     dataKey="id" 
     filterDisplay="row" 
@@ -54,7 +55,7 @@
       </template>
     </Column>
   </DataTable>
-  
+  <!-- <Paginator :rows="5" :totalRecords="props.totalOrders" :rowsPerPageOptions="[5, 10, 20, 30]"></Paginator> -->
 </div>
 
 </template>
@@ -68,15 +69,17 @@ import Tag from 'primevue/tag'
 import constants from '@/constants/constants';
 import FilterMultiSelect from '../../../../components/filters/FilterMultiSelect.vue';
 import { useOrdersCda } from '../../../../stores/orders/ordersCda'
-
+// import Paginator from 'primevue/paginator';
 const props = defineProps(
     {
       title: String,
       type: String,
       orders: Array,
       toManage: Boolean,
+      totalOrders: Number
     }
 )
+
 const ordersStore = useOrdersCda();
 const emit = defineEmits();
 const orders = ref(props.orders);
@@ -89,7 +92,7 @@ const actionsLink = ref({
     ],
     'pickup-delivery': [
       {
-        label: 'Var documentos',
+        label: 'Ver documentos',
         value: 'detail'
       },
     ],
@@ -126,6 +129,12 @@ watch(
       orders.value = props.orders;
     }
 )
+
+const getData = (event) => {
+  console.log(event)
+  // ordersStore.ordersCdaManage.page = event.page + 1;
+  // ordersStore.getOrdersCdaManage();
+}
 
 const openDialog = (dialog, order) => {
 

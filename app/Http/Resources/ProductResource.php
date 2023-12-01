@@ -18,6 +18,8 @@ class ProductResource extends JsonResource
             'Price' => $this->Price,
             'Quantity' => $this->Quantity,
             'product_id' => $this->product_id,
+            'U_SBO_StockVentas' => $this->U_SBO_StockVentas,
+            'WarehouseCode' => $this->WarehouseCode,
             'Problems' => $this->problems->map(function ($problem) {
                 return [
                     'id' => $problem->id,

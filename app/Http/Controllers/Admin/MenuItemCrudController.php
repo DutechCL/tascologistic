@@ -123,10 +123,9 @@ class MenuItemCrudController extends CrudController
 
     }
 
-    public function store(){
+    public function store(MenuItemRequest $request){
         try {
             DB::beginTransaction();
-            $request = $this->crud->getRequest();
 
             $user = MenuItem::create([
                 'name' => $request->input('name'),
@@ -218,11 +217,10 @@ class MenuItemCrudController extends CrudController
 
     }
 
-    public function update($id)
+    public function update($id, MenuItemRequest $request)
     {
         try {
             DB::beginTransaction();
-            $request = $this->crud->getRequest();
     
             $menuItem = MenuItem::findOrFail($id);
     
