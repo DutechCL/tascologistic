@@ -64,7 +64,7 @@ class User extends Authenticatable
 
         static::creating(function ($model) {
             $model->hash = md5(uniqid());
-            // $model->code = User::query()->orderBy('id', 'desc')->first()?->code + 1;
+            $model->code = User::query()->orderBy('id', 'desc')->first()?->code + 1;
         });
     }
 
