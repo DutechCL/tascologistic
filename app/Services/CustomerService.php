@@ -64,7 +64,7 @@ class CustomerService
 
     private function syncSingleAddress(Customer $customer, array $address)
     {
-        if (count($address) == 0) return;
+        if (count($address) == 0) dd($address);
 
         try {
             $columnNames = Schema::getColumnListing('customer_addresses');
