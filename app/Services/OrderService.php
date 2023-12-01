@@ -30,12 +30,12 @@ class OrderService
 
     const SYNC_MASSIVE = 'Sincronizacion masiva';
 
-    protected $chatService;
+    // protected $chatService;
 
-    public function __construct(ChatService $chatService)
-    {
-        $this->chatService = $chatService;
-    }
+    // public function __construct(ChatService $chatService)
+    // {
+    //     $this->chatService = $chatService;
+    // }
 
     public function listOrdersCdaToManage(bool $execute = true)
     {
@@ -248,7 +248,7 @@ class OrderService
             $this->assingProbelmsOrderItems($order, $request);
         }
 
-        return $this->chatService->createChatForOrder($order);
+        return (new ChatService())->createChatForOrder($order);
     }
 
     public function assingResponsible(Request $request)
