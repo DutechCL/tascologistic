@@ -14,6 +14,7 @@ return [
         'active'    => 'Activo',
         'warehouse' => 'Bodega',
         'warehouses' => 'Bodegas',
+        'salesEmployeeCode' => 'Código del vendedor',
     ],
 
     'export' => [

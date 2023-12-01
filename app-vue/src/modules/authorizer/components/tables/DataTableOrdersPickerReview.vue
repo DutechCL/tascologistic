@@ -52,7 +52,7 @@
               <template #body="slotProps">
                 <Button 
                   v-if="slotProps.data.process_id == constants.PROCESS_PICKER_ID" 
-                  :label="'Piekear'" @click="action(slotProps.data, constants.RESPONSIBLE_PICKER)" 
+                  :label="'Pickear'" @click="action(slotProps.data, constants.RESPONSIBLE_PICKER)" 
                   class="p-button p-component p-button-outlined !py-1.5 !border-primary-900 !text-primary-900"/>
                 <Button 
                   v-if="slotProps.data.process_id == constants.PROCESS_REVIEWER_ID" 
@@ -105,7 +105,6 @@ const filter = (data) => {
 }
 
 const action = (order, responsible) => {
-  console.log(order)
   ordersStore.showDetailOrder = true;
   ordersStore.currentOrder = order;
   ordersStore.currentOrder.responsible = responsible;

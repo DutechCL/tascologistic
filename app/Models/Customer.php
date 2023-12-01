@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
-use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use App\Models\Order;
+use App\Services\CustomerService;
+use App\Models\CustomerContactEmployee;
 use Illuminate\Database\Eloquent\Model;
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Customer extends Model
@@ -25,6 +27,14 @@ class Customer extends Model
         'CreateTime',
         'UpdateDate',
         'UpdateTime',
+        'CardType',
+        'GroupCode',
+        'ContactPerson',
+        'CardForeignName',
+        'ShipToDefault',
+        'BilltoDefault',
+        'Currency',
+        'BPAddresses',
     ];
 
     protected $fillable = self::FILLABLE;
@@ -32,6 +42,16 @@ class Customer extends Model
     public function orders()
     {
         return $this->hasMany(Order::class);
+    }
+
+    public function addresses()
+    {
+        return $this->hasMany(CustomerAddress::class);
+    }
+
+    public function contactEmployees()
+    {
+        return $this->hasMany(CustomerContactEmployee::class);
     }
 
     public static function getSyncInfo()
@@ -58,11 +78,16 @@ class Customer extends Model
             'model'      => self::class,
             'fields'     => self::FILLABLE,
             'identifier' => self::IDENTIFIER,
-            'method'     => 'updateOrCreate',
+            'method'     => 'syncCustomer', //method static
             'filter'     => [
                 'operator' => 'and',
                 'params'   => $params ?? []
             ],
         ];
+    }
+
+    public static function syncCustomer(array $where, array $orderData)
+    {
+       return  (new CustomerService)->syncCustomerWithAddress($where, $orderData);
     }
 }

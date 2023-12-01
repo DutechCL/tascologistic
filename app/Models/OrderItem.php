@@ -14,6 +14,8 @@ class OrderItem extends Model
     protected $table = 'order_items';
 
     protected $fillable = [
+        'id',
+        'order_id',
         'ItemCode', 
         'WarehouseCode',
         'ItemDescription',
@@ -32,6 +34,7 @@ class OrderItem extends Model
         'LineTotal',
         'TaxPercentagePerRow',
         'TaxTotal',
+        'U_SBO_StockVentas',
         'product_id',
     ];
 

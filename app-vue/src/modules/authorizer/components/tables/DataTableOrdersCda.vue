@@ -92,7 +92,7 @@ const actionsLink = ref({
     ],
     'pickup-delivery': [
       {
-        label: 'Var documentos',
+        label: 'Ver documentos',
         value: 'detail'
       },
     ],

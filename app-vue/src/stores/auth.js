@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import axios from 'axios';
+import { getWithToken } from "../services/ApiService";
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({ 
@@ -12,7 +13,7 @@ export const useAuthStore = defineStore('auth', {
   },
   actions: {
     async getToken() {
-      await axios.get('/sanctum/csrf-cookie');
+      return await getWithToken('sanctum/csrf-cookie');
     },
     async login(email, password) {
       const data = await axios.post('/api/v1/login', {

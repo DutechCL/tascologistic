@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Chat\ChatController;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\UserController;
 use App\Http\Controllers\SAP\SapSyncController;
@@ -41,7 +42,6 @@ Route::prefix('v1')->group(
         Route::middleware(['auth:sanctum'])->group(function () {
             Route::get('menu-items', [MenuItemCrudController::class, 'getMenuItems']);
             Route::post('problems', [ProblemsController::class, 'index']);
-            
             Route::post('sap/sync', [SapSyncController::class, 'sync'])->name('admin.sap.sync');
         });
         
@@ -81,6 +81,17 @@ Route::prefix('v1')->group(
         Route::middleware(['auth:sanctum'])->prefix('orders')->group(function () {
             Route::post('/search', [OrderController::class, 'searchOrders']);
         });
+
+        //URL'S CHAT 
+        Route::middleware(['auth:sanctum'])->prefix('chat')->group(function () {
+            Route::post('send-message', [ChatController::class, 'sendMessage']);
+            Route::get('get-message/{id}', [ChatController::class, 'getMessages']);
+            Route::get('get-user', [ChatController::class, 'getUser']);
+            Route::get('get-orders', [ChatController::class, 'getOrders']);
+            Route::get('get-resolve', [ChatController::class, 'getResolve']);
+            Route::get('show/{id}', [ChatController::class, 'showChat']);
+            Route::get('resolve/{id}', [ChatController::class, 'resolveOrder']);
+        });
     }
 );
 
@@ -88,4 +99,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('web')->get('/sanctum/csrf-cookie', CsrfCookieController::class . '@show');
+// Route::middleware('auth:sanctum')->get('/sanctum/csrf-cookie', CsrfCookieontroller::class . '@showe');

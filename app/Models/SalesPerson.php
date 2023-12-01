@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Backpack\CRUD\app\Models\Traits\CrudTrait;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
+use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class SalesPerson extends Model
 {
@@ -57,4 +58,12 @@ class SalesPerson extends Model
             ],
         ];
     }
+
+    protected function formatEmployee(): Attribute
+    {
+        return Attribute::make(
+            get: fn($value, $attributes) => 'COD: ' . $attributes['SalesEmployeeCode']. ' - ' . $attributes['SalesEmployeeName'],
+        );
+    }
+
 }

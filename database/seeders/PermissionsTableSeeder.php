@@ -228,6 +228,28 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'url' => '/admin/method-shipping',
             ),
+            19 => 
+            array (
+                'created_at' => NULL,
+                'description' => 'Ver lista de chat',
+                'guard_name' => 'web',
+                'id' => 26,
+                'name' => 'Chat.read',
+                'slug' => 'Chat',
+                'updated_at' => '2023-11-23 14:24:13',
+                'url' => '/app/chat/list-chats',
+            ),
+            20 => 
+            array (
+                'created_at' => NULL,
+                'description' => 'bandeja de mensajes',
+                'guard_name' => 'web',
+                'id' => 27,
+                'name' => 'Chat.show',
+                'slug' => 'Chat',
+                'updated_at' => '2023-11-23 14:24:23',
+                'url' => '/app/chat/show-chat',
+            ),
         ));
         
         
