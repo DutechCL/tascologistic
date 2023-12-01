@@ -22,7 +22,7 @@ class OrderItem extends Model
         'Price',
         'Quantity', 
         'VatGroup',
-        'TaxLiable',
+        'TaxCode',
         'PickStatus',
         'DeferredTax',
         'EqualizationTaxPercent',
