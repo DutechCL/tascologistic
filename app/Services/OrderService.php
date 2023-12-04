@@ -27,6 +27,7 @@ class OrderService
     const ACTION_APPROVE = 'approve';
     const ACTION_REJECT  = 'reject';
     const ACTION_INFO    = 'info';
+    
     const SYNC_MASSIVE = 'Sincronizacion masiva';
 
     public function listOrdersCdaToManage(bool $execute = true)
