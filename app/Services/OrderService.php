@@ -30,13 +30,6 @@ class OrderService
 
     const SYNC_MASSIVE = 'Sincronizacion masiva';
 
-    // protected $chatService;
-
-    // public function __construct(ChatService $chatService)
-    // {
-    //     $this->chatService = $chatService;
-    // }
-
     public function listOrdersCdaToManage(bool $execute = true)
     {
         $query = Order::query();
