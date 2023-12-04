@@ -11,19 +11,15 @@ use App\Models\SalesPerson;
 use App\Models\Chat\Message;
 use App\Events\Notifications;
 use App\Services\SAP\SyncService;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Resources\OrderResource;
+use App\Mail\Order\OrderProblemAlert;
+use App\Notifications\Order\OrderProblemNotification;
 
 
 
 class ChatService
 {
-    protected $sap;
-    
-    public function __construct( SyncService $sap )
-    {
-        $this->sap = $sap;
-    }
-
     public function createChatForOrder($order)
     {
         $chat = new Chat();
@@ -166,8 +162,9 @@ class ChatService
     {
         $salesPerson = SalesPerson::where('SalesEmployeeCode', $order->SalesPersonCode)->first();
         $user = User::where('sales_person_id', $salesPerson->id)->first();
-        
+
         if($user){
+            $user->notify(new OrderProblemNotification($chat));
             $chat->users()->attach($user->id);
         }
         
@@ -226,13 +223,15 @@ class ChatService
             ]
         ];
 
-        $config = $this->sap->buildConfig('orders', $params);
+        $sap = new SyncService;
+
+        $config = $sap->buildConfig('orders', $params);
+        $this->sap->sync($config);
         
         $order->has_problems = false;
         $order->is_resolved = true;
         $order->save();
 
-        // $response = $this->sap->sync($config);
 
         return $order;
     }
