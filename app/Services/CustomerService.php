@@ -32,7 +32,7 @@ class CustomerService
         unset($data['BPAddresses']);
         unset($data['ContactEmployees']);
 
-        DB::beginTransaction();
+        // DB::beginTransaction();
 
         try {
             $customer = Customer::updateOrCreate($where, $data);
@@ -40,11 +40,11 @@ class CustomerService
             $this->syncAddress($customer, $addresses);
             $this->syncContactEmployees($customer, $contactEmployees);
 
-            DB::commit();
+            // DB::commit();
 
             return $customer;
         } catch (\Exception $e) {
-            DB::rollBack();
+            // DB::rollBack();
             \Log::error($e->getMessage());
             return null;
         }
@@ -64,6 +64,7 @@ class CustomerService
 
     private function syncSingleAddress(Customer $customer, array $address)
     {
+        if (count($address) == 0) dd($address);
 
         try {
             $columnNames = Schema::getColumnListing('customer_addresses');
@@ -78,6 +79,8 @@ class CustomerService
 
     private function syncContactEmployees(Customer $customer, array $contactEmployees)
     {
+        if (count($contactEmployees) == 0) return;
+
         try {
             foreach ($contactEmployees as $contactEmployee) {
                 $this->syncSingleContactEmployee($customer, $contactEmployee);
@@ -88,7 +91,7 @@ class CustomerService
         }
     }
 
-    private function syncSingleContactEmployee(CustomerContactEmployee $customer, array $contactEmployee)
+    private function syncSingleContactEmployee(Customer $customer, array $contactEmployee)
     {
 
         try {

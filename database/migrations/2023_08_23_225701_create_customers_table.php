@@ -22,8 +22,8 @@ return new class extends Migration
             $table->string('ShipToDefault')->nullable(); //new
             $table->string('BilltoDefault')->nullable(); //new
             $table->string('Currency')->nullable(); //new
-            $table->logText('BPAddresses')->nullable();//new
-            $table->logText('ContactEmployees')->nullable();//new
+            $table->longText('BPAddresses')->nullable();//new
+            $table->longText('ContactEmployees')->nullable();//new
             $table->string('Address')->nullable();
             $table->string('FederalTaxID')->nullable();
             $table->string('EmailAddress')->nullable();
