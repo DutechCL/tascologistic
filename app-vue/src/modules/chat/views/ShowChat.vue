@@ -77,7 +77,7 @@ const sendMessage = async () => {
         sending.value = true;
         sendButtonDisabled.value = true;
 
-        await chat.sendMessage({ message: message.value, chat_id: chat.current.id });
+        await chat.sendMessage({ _token: chat.csrf, message: message.value, chat_id: chat.current.id });
 
         message.value = '';
       } catch (error) {
