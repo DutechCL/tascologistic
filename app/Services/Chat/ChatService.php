@@ -50,7 +50,7 @@ class ChatService
 
     public function sendMessage($request)
     {
-        dd($request->all(), $request->headers->all());
+        // dd($request->all(), $request->headers->all());
         $message = $request->input('message');
         $chatId = $request->input('chat_id');
 
@@ -63,9 +63,9 @@ class ChatService
 
     public function createMessage($chatId, $message)
     {
-        // $user = auth()->user();
+        $user = auth()->user();
 
-        $user = User::find(1);
+        // $user = User::find(1);
 
         $objMessage = Message::create([
             'chat_id' => $chatId,

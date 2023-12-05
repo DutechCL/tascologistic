@@ -83,9 +83,8 @@ Route::prefix('v1')->group(
         });
 
         //URL'S CHAT 
-        Route::post('chat/send-message', [ChatController::class, 'sendMessage']);
-        
         Route::middleware(['auth:sanctum'])->prefix('chat')->group(function () {
+            Route::post('send-message', [ChatController::class, 'sendMessage']);
             Route::get('get-message/{id}', [ChatController::class, 'getMessages']);
             Route::get('get-user', [ChatController::class, 'getUser']);
             Route::get('get-orders', [ChatController::class, 'getOrders']);
