@@ -12,7 +12,7 @@ export const useChatApi = defineStore('chat', {
     },
     actions: {
         async sendMessage(body) {
-            return await postWithToken(`api/v1/chat/send-message/`, body);
+            return await postWithToken(`api/v1/chat/send-message`, body);
         },
 
         async getMessages(id) {
