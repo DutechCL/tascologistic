@@ -7,7 +7,8 @@ const config = {
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
-    'Authorization': `Bearer ${Cookies.get('token')}`,
+    // 'Authorization': `Bearer ${Cookies.get('token')}`,
+    'Authorization': `Bearer ${localStorage.getItem('token')}`,
   }
 };
 const api = axios.create(config);

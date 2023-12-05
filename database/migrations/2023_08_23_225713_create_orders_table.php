@@ -21,6 +21,13 @@ return new class extends Migration
             $table->time('DocTime');
             $table->string('DocType')->nullable();
             $table->string('DocTotal');
+
+            $table->string('TaxDate')->nullable(); //new
+            $table->string('DocCurrency')->nullable(); //new
+            $table->string('DocRate')->nullable(); //new
+            $table->string('FederalTaxID')->nullable();  //new
+            $table->string('DiscountPercent')->nullable();  //new
+
             $table->string('ShipToCode')->nullable(); //tipo de documento
             $table->string('Indicator')->nullable(); // id tipo de documento
             $table->string('CardCode');

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('County')->nullable();
             $table->string('Country')->nullable();
             $table->string('State')->nullable();
-            $table->string('FederalTaxID');
+            $table->string('FederalTaxID')->nullable();
             $table->string('TaxCode')->nullable();
             $table->string('BuildingFloorRoom')->nullable();
             $table->string('AddressType')->nullable();

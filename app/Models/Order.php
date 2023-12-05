@@ -41,7 +41,12 @@ class Order extends Model
         'DocumentLines',
         'Confirmed',
         'ShipToCode',
-        'Indicator'
+        'Indicator',
+        'TaxDate',
+        'DocCurrency',
+        'DocRate',
+        'FederalTaxID',
+        'DiscountPercent',
     ];
     const FILLABLE_INTERNAL = [
         'process_id',

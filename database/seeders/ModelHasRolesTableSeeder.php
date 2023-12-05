@@ -21,39 +21,111 @@ class ModelHasRolesTableSeeder extends Seeder
         \DB::table('model_has_roles')->insert(array (
             0 => 
             array (
-                'model_id' => 1,
-                'model_type' => 'App\\Models\\User',
                 'role_id' => 1,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 1,
             ),
             1 => 
             array (
-                'model_id' => 3,
-                'model_type' => 'App\\Models\\User',
                 'role_id' => 2,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 3,
             ),
             2 => 
             array (
-                'model_id' => 4,
-                'model_type' => 'App\\Models\\User',
                 'role_id' => 3,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 4,
             ),
             3 => 
             array (
-                'model_id' => 5,
-                'model_type' => 'App\\Models\\User',
                 'role_id' => 3,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 5,
             ),
             4 => 
             array (
-                'model_id' => 6,
-                'model_type' => 'App\\Models\\User',
                 'role_id' => 4,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 6,
             ),
             5 => 
             array (
-                'model_id' => 7,
-                'model_type' => 'App\\Models\\User',
                 'role_id' => 2,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 7,
+            ),
+            6 => 
+            array (
+                'role_id' => 2,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 8,
+            ),
+            7 => 
+            array (
+                'role_id' => 4,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 9,
+            ),
+            8 => 
+            array (
+                'role_id' => 2,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 10,
+            ),
+            9 => 
+            array (
+                'role_id' => 3,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 11,
+            ),
+            10 => 
+            array (
+                'role_id' => 3,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 12,
+            ),
+            11 => 
+            array (
+                'role_id' => 1,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 13,
+            ),
+            12 => 
+            array (
+                'role_id' => 3,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 14,
+            ),
+            13 => 
+            array (
+                'role_id' => 4,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 15,
+            ),
+            14 => 
+            array (
+                'role_id' => 5,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 16,
+            ),
+            15 => 
+            array (
+                'role_id' => 5,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 17,
+            ),
+            16 => 
+            array (
+                'role_id' => 5,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 18,
+            ),
+            17 => 
+            array (
+                'role_id' => 5,
+                'model_type' => 'App\\Models\\User',
+                'model_id' => 19,
             ),
         ));
         

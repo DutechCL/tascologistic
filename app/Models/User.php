@@ -33,7 +33,8 @@ class User extends Authenticatable
         'defaults'  ,
         'branch'  ,
         'department',
-        'SalesEmployeeCode'
+        'SalesEmployeeCode',
+        'sales_person_id',
     ];
 
     protected $appends = ['role_slug', 'role_name'];
@@ -64,7 +65,7 @@ class User extends Authenticatable
 
         static::creating(function ($model) {
             $model->hash = md5(uniqid());
-            // $model->code = User::query()->orderBy('id', 'desc')->first()?->code + 1;
+            $model->code = User::query()->orderBy('id', 'desc')->first()?->code + 1;
         });
     }
 

@@ -35,6 +35,7 @@ class Customer extends Model
         'BilltoDefault',
         'Currency',
         'BPAddresses',
+        'ContactEmployees'
     ];
 
     protected $fillable = self::FILLABLE;
