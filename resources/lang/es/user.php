@@ -15,6 +15,7 @@ return [
         'warehouse' => 'Bodega',
         'warehouses' => 'Bodegas',
         'salesEmployeeCode' => 'Código del vendedor',
+        'sales_person' => 'Vendedor',
     ],
 
     'export' => [

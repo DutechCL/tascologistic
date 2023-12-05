@@ -33,7 +33,8 @@ class User extends Authenticatable
         'defaults'  ,
         'branch'  ,
         'department',
-        'SalesEmployeeCode'
+        'SalesEmployeeCode',
+        'sales_person_id',
     ];
 
     protected $appends = ['role_slug', 'role_name'];

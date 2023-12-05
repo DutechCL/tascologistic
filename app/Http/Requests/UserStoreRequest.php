@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UserStoreRequest extends FormRequest
@@ -29,8 +30,18 @@ class UserStoreRequest extends FormRequest
             'name'                => 'required',
             'mobile_phone_number' => 'nullable',
             'password'            => 'required',
-            'userRoles' => 'required|array',
+            'userRoles'           => 'required|array',
             'userWarehouses' => 'nullable|array',
+            'sales_person_id'     => [
+                'nullable',
+                'exists:sales_persons,id',
+                Rule::requiredIf(function () {
+                    // Verificar si '5' está presente en 'userRoles' y 'sales_person_id' es nulo
+                    $userRoles = $this->input('userRoles');
+            
+                    return is_array($userRoles) && in_array(5, $userRoles) && is_null($this->input('sales_person_id'));
+                }),
+            ]
         ];
     }
 
@@ -48,6 +59,7 @@ class UserStoreRequest extends FormRequest
             'userRoles'           => __('user.crud.roles'),
             'userWarehouses'      => __('user.crud.warehouse'),
             'mobile_phone_number' => __('user.crud.phone'),
+            'sales_person_id'     => __('user.crud.sales_person'),
         ];
     }
 

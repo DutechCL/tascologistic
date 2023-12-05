@@ -140,7 +140,7 @@ class UserCrudController extends CrudController
             'entity' => 'salesPersons',
             'model' => 'App\Models\SalesPerson',
             'attribute' => 'formatEmployee',
-            'label' => __('user.crud.salesEmployeeCode'),
+            'label' => __('user.crud.sales_person'),
         ]);
 
         CRUD::addField([
@@ -155,7 +155,11 @@ class UserCrudController extends CrudController
                 'class' => 'form-group col-md-12',
             ],
         ]);
-
+        
+        CRUD::addField([
+            'name' => 'js', 
+            'type' => 'users.add_js_user',
+        ]);
 
     }
 
@@ -165,6 +169,7 @@ class UserCrudController extends CrudController
 
             $userRoles = $request->input('userRoles', []);
 
+            // dd($request->input('sales_person_id'));
             $user = User::create([
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
@@ -295,7 +300,7 @@ class UserCrudController extends CrudController
             'entity' => 'salesPersons',
             'model' => 'App\Models\SalesPerson',
             'attribute' => 'formatEmployee',
-            'label' => __('user.crud.salesEmployeeCode'),
+            'label' => __('user.crud.sales_person'),
         ]);
 
         CRUD::addField([
@@ -309,6 +314,11 @@ class UserCrudController extends CrudController
             'wrapper' => [
                 'class' => 'form-group col-md-12',
             ],
+        ]);
+
+        CRUD::addField([
+            'name' => 'js', 
+            'type' => 'users.add_js_user',
         ]);
     }
 
