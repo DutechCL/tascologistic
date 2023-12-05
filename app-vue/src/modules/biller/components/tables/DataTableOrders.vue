@@ -42,13 +42,12 @@
           </Column>
           <Column headerClass="!bg-primary-900"  field="client" header="Emitir">
               <template #body="slotProps">
-                  <Button 
-                    v-for="action in props.actions" 
-                    :label="action.label" 
-                    :disabled="!action.active" 
-                    @click="actionMethod(action.method, slotProps.data, action.document)" 
+                  <Button
+                    :label="slotProps.data.U_SBO_FormaPago" 
+                    @click="actionMethod('generateDocument', slotProps.data, slotProps.data.U_SBO_FormaPago)" 
                     class="!py-1.5 !border-primary-900 !text-primary-900 mr-3"  
                     severity="primary" 
+                    style="width: 100px;"
                     outlined></Button>
               </template>
         </Column>

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -34,13 +35,24 @@ class Setting extends Model
     */
     public static function get($key)
     {
-        return self::where('key', $key)->first()->value ?? null;
+        $value = Setting::where('key', $key)->first()->value;
+
+        if (strpos($key, 'password') !== false) {
+            $value = Crypt::decrypt($value);
+        }
+
+        return $value ?? null;
     }
     
     public static function set($key, $value)
     {
+        if (strpos($key, 'password') !== false) {
+            $value = Crypt::encrypt($value);
+        }
+
         return self::where('key', $key)->update(['value' => $value]);
     }
+
 
     /*
     |--------------------------------------------------------------------------

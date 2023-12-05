@@ -25,6 +25,7 @@ class OrderResource extends JsonResource
             'DocTotal' => '$' . number_format($this->DocTotal, 0, '.', ','),
             'Customer' => $this->customer,
             'U_SBO_FormaEntrega' => $this->U_SBO_FormaEntrega,
+            'U_SBO_FormaPago' => $this->U_SBO_FormaPago,
             'method_shipping_id' => $this->method_shipping_id,
             'MethodShippingName' => ucfirst(str_replace('Cliente ', '', optional($this->methodShipping)->name)),
             'OrderStatusName' => optional($this->orderStatus)->name,

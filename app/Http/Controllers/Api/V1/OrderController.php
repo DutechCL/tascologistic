@@ -166,10 +166,10 @@ class OrderController extends Controller
         }
     }
 
-    public function generateDocument($document, $orderId)
+    public function generateDocument(Request $request)
     {
         try {
-            $result = $this->orderService->generateDocument($document, $orderId);
+            $result = $this->orderService->generateDocument($request);
 
             return $this->success(
                 $result->order,
