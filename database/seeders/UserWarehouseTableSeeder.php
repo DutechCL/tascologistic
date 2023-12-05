@@ -235,6 +235,78 @@ class UserWarehouseTableSeeder extends Seeder
                 'created_at' => '2023-11-24 13:16:37',
                 'updated_at' => '2023-11-24 13:16:37',
             ),
+            27 => 
+            array (
+                'id' => 28,
+                'user_id' => 3,
+                'warehouse_id' => 6,
+                'created_at' => '2023-12-05 15:35:57',
+                'updated_at' => '2023-12-05 15:35:57',
+            ),
+            28 => 
+            array (
+                'id' => 29,
+                'user_id' => 3,
+                'warehouse_id' => 7,
+                'created_at' => '2023-12-05 15:35:57',
+                'updated_at' => '2023-12-05 15:35:57',
+            ),
+            29 => 
+            array (
+                'id' => 30,
+                'user_id' => 3,
+                'warehouse_id' => 8,
+                'created_at' => '2023-12-05 15:35:57',
+                'updated_at' => '2023-12-05 15:35:57',
+            ),
+            30 => 
+            array (
+                'id' => 31,
+                'user_id' => 4,
+                'warehouse_id' => 6,
+                'created_at' => '2023-12-05 15:36:10',
+                'updated_at' => '2023-12-05 15:36:10',
+            ),
+            31 => 
+            array (
+                'id' => 32,
+                'user_id' => 4,
+                'warehouse_id' => 7,
+                'created_at' => '2023-12-05 15:36:10',
+                'updated_at' => '2023-12-05 15:36:10',
+            ),
+            32 => 
+            array (
+                'id' => 33,
+                'user_id' => 4,
+                'warehouse_id' => 8,
+                'created_at' => '2023-12-05 15:36:10',
+                'updated_at' => '2023-12-05 15:36:10',
+            ),
+            33 => 
+            array (
+                'id' => 34,
+                'user_id' => 5,
+                'warehouse_id' => 6,
+                'created_at' => '2023-12-05 15:36:30',
+                'updated_at' => '2023-12-05 15:36:30',
+            ),
+            34 => 
+            array (
+                'id' => 35,
+                'user_id' => 5,
+                'warehouse_id' => 7,
+                'created_at' => '2023-12-05 15:36:30',
+                'updated_at' => '2023-12-05 15:36:30',
+            ),
+            35 => 
+            array (
+                'id' => 36,
+                'user_id' => 5,
+                'warehouse_id' => 8,
+                'created_at' => '2023-12-05 15:36:30',
+                'updated_at' => '2023-12-05 15:36:30',
+            ),
         ));
         
         

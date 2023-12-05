@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
-                'hash' => md5(uniqid()),
+                'hash' => '6d4d63dfb23efeae5d0245d750a39766',
                 'code' => 1,
                 'name' => 'Administrador del sistema',
                 'email' => 'super@dutech.cl',
@@ -37,11 +37,12 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
             1 => 
             array (
                 'id' => 3,
-                'hash' => md5(uniqid()),
+                'hash' => 'b9122f34544744fd3d2c84284e8c83f9',
                 'code' => 2,
                 'name' => 'Armando Torres',
                 'email' => 'cda@dutech.cl',
@@ -56,11 +57,12 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
             2 => 
             array (
                 'id' => 4,
-                'hash' => md5(uniqid()),
+                'hash' => '7e64d0de5d0681f4327ee48f104f725f',
                 'code' => 3,
                 'name' => 'Miguel Cabrera',
                 'email' => 'picker@dutech.cl',
@@ -75,11 +77,12 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
             3 => 
             array (
                 'id' => 5,
-                'hash' => md5(uniqid()),
+                'hash' => '4226b51ad645788acf5cc54427dbc7c8',
                 'code' => 4,
                 'name' => 'Juan toro',
                 'email' => 'revisor@dutech.cl',
@@ -94,11 +97,12 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
             4 => 
             array (
                 'id' => 6,
-                'hash' => md5(uniqid()),
+                'hash' => 'ee570938f30b796ceca8a5e90e05895a',
                 'code' => 5,
                 'name' => 'Pedro Perez',
                 'email' => 'administracion@dutech.cl',
@@ -113,11 +117,12 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
             5 => 
             array (
                 'id' => 7,
-                'hash' => md5(uniqid()),
+                'hash' => '050cd70238d5b3c77b6dfe4f4fd30232',
                 'code' => 6,
                 'name' => 'Javier Bobadilla',
                 'email' => 'javier@tascochile.cl',
@@ -132,11 +137,12 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
             6 => 
             array (
                 'id' => 8,
-                'hash' => md5(uniqid()),
+                'hash' => 'dcc0e2b29ffc15b84ac08e47b883e47d',
                 'code' => 7,
                 'name' => 'Yocelin Salinas',
                 'email' => 'ysalinas@tascochile.cl',
@@ -151,11 +157,12 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
             7 => 
             array (
                 'id' => 9,
-                'hash' => md5(uniqid()),
+                'hash' => '4aea332e85d693d6f9400c44a312a700',
                 'code' => 8,
                 'name' => 'Sofia Lagos',
                 'email' => 'pagos@tascochile.cl',
@@ -170,11 +177,12 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
             8 => 
             array (
                 'id' => 10,
-                'hash' => md5(uniqid()),
+                'hash' => '1d89c02818c756d286853f895a4f8559',
                 'code' => 9,
                 'name' => 'Alessandra Guercio',
                 'email' => 'cda@tascochile.cl',
@@ -189,11 +197,12 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
             9 => 
             array (
                 'id' => 11,
-                'hash' => md5(uniqid()),
+                'hash' => '11450b830c27b7ec8acc43037dbd583c',
                 'code' => 10,
                 'name' => 'Cristián Córdova',
                 'email' => 'bodegavictoria@tascochile.cl',
@@ -208,11 +217,12 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
             10 => 
             array (
                 'id' => 12,
-                'hash' => md5(uniqid()),
+                'hash' => '7c856d77e165b80c24d143d9986069ef',
                 'code' => 11,
                 'name' => 'Picker 1 BVM',
                 'email' => 'inventarios@tascochile.cl',
@@ -227,11 +237,12 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
             11 => 
             array (
                 'id' => 13,
-                'hash' => md5(uniqid()),
+                'hash' => '3fe28d185b90c7f1ce1a7ffcce429002',
                 'code' => 12,
                 'name' => 'Gonzalo Fuentes',
                 'email' => 'gonzalo@tascochile.cl',
@@ -246,11 +257,12 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
             12 => 
             array (
                 'id' => 14,
-                'hash' => md5(uniqid()),
+                'hash' => 'c7ddba82537ca5668460e85ef7d0518e',
                 'code' => 13,
                 'name' => 'Francisco Chacón',
                 'email' => 'bodegacentral@tascochile.cl',
@@ -265,11 +277,12 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
             13 => 
             array (
                 'id' => 15,
-                'hash' => md5(uniqid()),
+                'hash' => 'c2bb39a1248512a3c19d5b532134e85f',
                 'code' => 14,
                 'name' => 'Félix Bastías',
                 'email' => 'bse@tascochile.cl',
@@ -284,6 +297,7 @@ class UsersTableSeeder extends Seeder
                 'defaults' => NULL,
                 'branch' => NULL,
                 'department' => NULL,
+                'sales_person_id' => NULL,
             ),
         ));
         
