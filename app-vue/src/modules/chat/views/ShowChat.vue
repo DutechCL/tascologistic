@@ -6,7 +6,7 @@
             </router-link>
         </div>
         <div>
-         <DataTableDetailOrder v-if="chat?.loadingOrder" :order="chat.order"/>
+         <DataTableDetailOrder v-if="chat?.loadingOrder" :order="order"/>
         </div>
     </div>
     <div class="content-chat" ref="messageList">
@@ -20,7 +20,7 @@
                         borderBottomLeftRadius: selfUser(message.user.id) ? '33px' : '0', 
                         borderBottomRightRadius: selfUser(message.user.id) ? '0' : '33px', 
                     }">
-                        <p v-html="message.message"></p>
+                        <p class="font-13" v-html="message.message"></p>
                     </div>
                     <p class="text-time">{{ formatTime(message.created_at) }}</p>
                 </div>
@@ -45,7 +45,7 @@
 </template>
 
 <script setup>
-import { onBeforeMount, ref, watch, onMounted, nextTick } from 'vue';
+import { onBeforeMount, ref, watch, onMounted, nextTick, onBeforeUnmount } from 'vue';
 import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
 import { useChat } from "../../../stores/chat/chat";
@@ -60,6 +60,7 @@ const loadingOrder = ref(false);
 const sending = ref(false);
 const sendButtonDisabled = ref(false);
 const messageList = ref(null);
+const order = ref({});
 const props = defineProps({
     id: Number,
 });
@@ -108,26 +109,43 @@ const sendMessage = async () => {
     };
 
     onBeforeMount(async () => {
-        try {
-            await chat.showChat(props.id);
-            scrollToBottom();
+    try {
+        await chat.showChat(props.id).then((data) => {
+            order.value = chat.order;
+        });
+        scrollToBottom();
 
-            loadingOrder.value = true;
+        loadingOrder.value = true;
 
-            setTimeout(() => {
-                const channel = chat.pusher().subscribe(`private-chat.${chat.current.id}`);
+        // Verificar si ya estamos suscritos al canal
+        if (!chat.isSubscribed) {
+            const channel = chat.pusher().subscribe(`private-chat.${chat.current.id}`);
 
-                channel.bind('message.sent', (data) => {
-                    chat.addMessage(data.message);
-                    scrollToBottom();
-                });
-            }, 1000);
-            
-            
-        } catch (error) {
-            console.error('Error al obtener los mensajes:', error);
+            channel.bind('message.sent', (data) => {
+                console.log(data)
+                chat.addMessage(data.message);
+                scrollToBottom();
+            });
+
+            // Marcar como suscrito para evitar futuras suscripciones
+            chat.isSubscribed = true;
         }
-    });
+        
+    } catch (error) {
+        console.error('Error al obtener los mensajes:', error);
+    }
+});
+
+onBeforeUnmount(() => {
+    // Limpiar las suscripciones cuando el componente se desmonta
+    if (chat.isSubscribed) {
+        const channel = chat.pusher().channels[`private-chat.${chat.current.id}`];
+        if (channel) {
+            channel.unbind();  // Desvincula todos los eventos del canal
+            channel.unsubscribe();  // Desuscribe el canal
+        }
+    }
+});
 
 </script>
 
@@ -183,12 +201,12 @@ header{
 .content-chat {
     margin: auto;
     overflow-y: scroll;
-    height: 475px;
-    margin-top: 180px;
+    height: 400px;
+    margin-top: 110px;
     padding: 0 40px;
 }
 .receiving-bubbles{
-    padding: 15px;
+    padding: 7px;
     padding-left: 30px;
     width: 600px;
     border-radius: 33px;
@@ -211,6 +229,7 @@ header{
     bottom: 0;
     width: 100%;
     padding: 30px 50px;
+    padding-bottom: 15px !important;
 }
 
 .input-container{
@@ -252,5 +271,9 @@ header{
 
 .font-icon{
     font-size: 20px;
+}
+
+.font-13{
+    font-size: 13px !important;
 }
 </style>

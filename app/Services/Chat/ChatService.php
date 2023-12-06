@@ -54,6 +54,10 @@ class ChatService
         $message = $request->input('message');
         $chatId = $request->input('chat_id');
 
+        $chat = Chat::find($chatId);
+        $chat->updated_at = Carbon::now();
+        $chat->save();
+
         $message = $this->createMessage($chatId, $message);
 
         event(new MessageSent($message));
@@ -64,8 +68,6 @@ class ChatService
     public function createMessage($chatId, $message)
     {
         $user = auth()->user();
-
-        // $user = User::find(1);
 
         $objMessage = Message::create([
             'chat_id' => $chatId,
@@ -94,6 +96,8 @@ class ChatService
             $query->withOrderDetails();
 
         }]);
+
+        $query->orderBy('updated_at', 'DESC');
     
         if ($execute) {
             

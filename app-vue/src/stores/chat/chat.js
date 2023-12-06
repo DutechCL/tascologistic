@@ -3,10 +3,7 @@ import { useChatApi } from '../../services/ChatApiService.js';
 import { useNotificationStore } from '../../services/NotificationService.js';
 // import Echo from 'laravel-echo';
 import Pusher from 'pusher-js'; // Importa la biblioteca Pusher
-import Cookies from 'js-cookie';
 
-
-const notificationStore = useNotificationStore();
 const chatService = useChatApi();
 
 export const useChat = defineStore('useChat', {
@@ -18,6 +15,7 @@ export const useChat = defineStore('useChat', {
     currentUser: {},      
     currentOrder: {}, 
     loadingOrder: false,  
+    isSubscribed: false,
     csrf: '',
   }),
   getters: {
