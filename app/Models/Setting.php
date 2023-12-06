@@ -37,18 +37,18 @@ class Setting extends Model
     {
         $value = Setting::where('key', $key)->first()->value;
 
-        // if (strpos($key, 'password') !== false) {
-        //     $value = Crypt::decrypt($value);
-        // }
+        if (strpos($key, 'password') !== false) {
+            $value = Crypt::decrypt($value);
+        }
 
         return $value ?? null;
     }
     
     public static function set($key, $value)
     {
-        // if (strpos($key, 'password') !== false) {
-        //     $value = Crypt::encrypt($value);
-        // }
+        if (strpos($key, 'password') !== false) {
+            $value = Crypt::encrypt($value);
+        }
 
         return self::where('key', $key)->update(['value' => $value]);
     }
