@@ -10,7 +10,7 @@
       filterDisplay="row" 
       paginatorTemplate="RowsPerPageDropdown FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
       currentPageReportTemplate="{first} a {last} de {totalRecords}">
-      <Column headerClass="!bg-primary-900" field="DocNum" header="">
+      <Column headerClass="!bg-primary-900" field="DocNum" header="" style="width: 50px !important; min-width: 50px !important; max-width: 50px !important;">
         <template #body="slotProps">
           <div v-if="slotProps.data.chat.status === 'open'" class="chat-active" >
 
@@ -23,31 +23,31 @@
         </router-link>
         </template>
       </Column>
-      <Column headerClass="!bg-primary-900" sortable  field="DocNum" header="Nota de venta">
+      <Column headerClass="!bg-primary-900" sortable class="font-14"  field="DocNum" header="Nota de venta">
         <template #body="slotProps">
           N° {{ slotProps.data.order.DocNum  }}
         </template>
       </Column>
-      <Column headerClass="!bg-primary-900" sortable  field="order.Customer.CardName" header="Cliente" style="max-width: 300px;"></Column>
-      <Column headerClass="!bg-primary-900" sortable  field="order.Customer.CardCode" header="Rut" style="max-width: 300px;"></Column>
-      <Column headerClass="!bg-primary-900" sortable  field="order.MethodShippingName" header="Método entrega">
+      <Column headerClass="!bg-primary-900" sortable class="font-14" field="order.Customer.CardName" header="Cliente" style="max-width: 300px;"></Column>
+      <Column headerClass="!bg-primary-900" sortable class="font-14" field="order.Customer.CardCode" header="Rut" style="max-width: 300px;"></Column>
+      <Column headerClass="!bg-primary-900" sortable class="font-14" field="order.MethodShippingName" header="Método entrega">
         <template #body="slotProps">
           <Tag Tag :icon="getIcon(slotProps.data.order.method_shipping_id)"  :value="slotProps.data.order.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
         </template>
       </Column>
-      <Column headerClass="!bg-primary-900" sortable  field="order.MethodShippingName" header="Desde" >
+      <Column headerClass="!bg-primary-900" sortable class="font-14"  field="order.MethodShippingName" header="Desde" >
           <template #body="slotProps">
             <Tag :value="slotProps.data.order.report_user_responsibles === 'cda' ? 'CDA' : 'Bodega'" class="p-tag-1 tag-font-method tag-radius"></Tag>
           </template>
       </Column>
-      <Column headerClass="!bg-primary-900" sortable  field="order.SalesEmployeeName" header="Vendedor"></Column>
-      <Column headerClass="!bg-primary-900" sortable field="order.report_user_name" header="Informador"></Column>
+      <Column headerClass="!bg-primary-900" sortable class="font-14" field="order.SalesEmployeeName" header="Vendedor"></Column>
+      <Column headerClass="!bg-primary-900" sortable class="font-14" field="order.report_user_name" header="Informador"></Column>
 
-      <Column headerClass="!bg-primary-900"  field="note" header="" >
+      <Column headerClass="!bg-primary-900" class="font-14"  field="note" header="" >
         <template #body="slotProps">
             <div class="flex gap-2">
-                <router-link v-if="slotProps.data.chat.status === 'open'" :to="{name: 'show-chat', params: { id: slotProps.data.chat.id }}" class="!border-primary-900 !text-primary-900 btn-custom-table" >Revisar</router-link>
-               <Button v-if="slotProps.data.chat.status === 'open'" @click="resolveOrder(slotProps.data.chat.id)" class="!text-primary-900 btn-custom-table" label="Resuelto"></Button>
+              <router-link v-if="slotProps.data.chat.status === 'open'" :to="{name: 'show-chat', params: { id: slotProps.data.chat.id }}" style="      padding-top: 12px;" class="!border-primary-900 !text-primary-900 btn-custom-table" >Revisar</router-link>
+              <Button v-if="slotProps.data.chat.status === 'open'" @click="resolveOrder(slotProps.data.chat.id)" class="!text-primary-900 btn-custom-table" label="Resuelto"></Button>
             </div>
         </template>
       </Column>
@@ -139,10 +139,11 @@
       border-radius: 6px;
       background: #fff;
       height: 50px !important;
-      width: 115px;
+      width: 90px !important;
+      min-width: 85px !important;
       margin: auto;
       text-align: center;
-      padding-top: 12px;
+      padding: 0;
     }
 
     .btn-custom-table:hover{
@@ -155,5 +156,9 @@
       width: 15px;
       height: 15px;
       border-radius: 50%;
+    }
+
+    .font-14{
+      font-size: 14px !important;
     }
 </style>
