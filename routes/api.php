@@ -64,7 +64,7 @@ Route::prefix('v1')->group(
         Route::middleware(['auth:sanctum'])->prefix('orders/bills')->group(function () {
             Route::get('pickup-here', [OrderController::class, 'getOrdersBillPickupAndHere']);
             Route::get('delivery', [OrderController::class, 'getOrdersBilldelivery']);
-            Route::get('generate/document/{document}/order/{id}', [OrderController::class, 'generateDocument']);
+            Route::post('generate/document/', [OrderController::class, 'generateDocument']);
         });
 
         //URL'S ORDENES PAGO

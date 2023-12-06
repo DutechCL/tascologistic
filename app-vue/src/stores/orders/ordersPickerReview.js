@@ -6,6 +6,7 @@ function classifyByMethodShipping(orders, method_shipping_id) {
 
 import { defineStore } from 'pinia';
 import { useOrders } from '../../services/OrdersApiService.js';
+import constants from '@/constants/constants';
 
 const METHOD_SHIPPING_HERE = 1;
 const METHOD_SHIPPING_PICKUP = 2;
@@ -63,14 +64,16 @@ export const useOrdersPickerReview = defineStore('ordersPickerReview', {
         ];
     },
     updateListOrders(order){
-        const orderIndex = this.listOrders.findIndex(item => item.id === order.id);
 
-        if (orderIndex !== -1) {
-            // La orden ya está en la lista, actualiza el elemento existente
-            this.listOrders = this.listOrders.map(item => (item.id === order.id ? order : item));
-        } else {
-            // La orden no está en la lista, agrégala al principio
-            this.listOrders = [order, ...this.listOrders];
+        if([constants.ORDER_STATUS_REVIEWED, constants.ORDER_STATUS_REJECTED].includes(order.order_status_id)){
+            this.listOrders = this.listOrders.filter(o => o.id !== order.id);
+        }else{
+            this.listOrders = this.listOrders.map(o => {
+                if(o.id === order.id){
+                    return order;
+                }
+                return o;
+            });
         }
         this.classifyOrders(this.listOrders);
     },

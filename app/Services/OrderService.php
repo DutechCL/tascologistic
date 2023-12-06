@@ -307,9 +307,11 @@ class OrderService
         }
     }
 
-    public function generateDocument($document, $orderId)
+    public function generateDocument(Request $request)
     {
-        $order = Order::getOrder($orderId);
+        
+        // dd($request->order['id']);
+        $order = Order::getOrder($request->order['id']);
         $order->order_status_id = OrderStatus::STATUS_BILLED;
         $order->save();
 

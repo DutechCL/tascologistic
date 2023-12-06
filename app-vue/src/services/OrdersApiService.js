@@ -60,7 +60,7 @@ export const useOrders = defineStore('orders', {
         },
 
         async generateDocument(body){
-            return await getWithToken(`api/v1/orders/bills/generate/document/${body.document}/order/${body.order.id}`);
+            return await postWithToken(`api/v1/orders/bills/generate/document`, body);
         },
 
         async getOrdersTracker(type) {

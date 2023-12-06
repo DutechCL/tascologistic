@@ -6,6 +6,7 @@ return [
 
     'tab' => [
         'general' => 'General',
-        'integrations_sap' => 'Integraciones SAP',
+        'integrations_sap' => 'Integracion SAP',
+        'integrations_biller' => 'Integracion Facturador',
     ]
 ];
