@@ -16,7 +16,7 @@
       </div>
     </div>
     <div>
-      <Button label="Reportar"  :disabled="disableButton" @click="visibleReport" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
+      <Button label="Reportar"  :disabled="ordersStore.buttomReport" @click="visibleReport" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
     </div>
 </Dialog>
 </template>
@@ -46,7 +46,6 @@ const selectedProduct = ref([]);
 const showEditor = ref(false);
 const otherProblem = ref(null);
 const product = ref(null);
-const disableButton = ref(true)
 const hasTextInOtherProblem = ref(false);
 const isSendProblems = ref(false);
 const isProblem = ref(false);
@@ -60,7 +59,7 @@ onBeforeMount( async() => {
 })
 
 const handleClose = () => {
-    disableButton.value = true;
+    ordersStore.buttomReport = true;
     hasTextInOtherProblem.value = false;
     selectedProduct.value = [];
     otherProblem.value = '';
@@ -77,7 +76,7 @@ watch(
 })
 
 const visibleReport = () => {
-  disableButton.value = true;
+  ordersStore.buttomReport = true;
   if (props.typeProblems == constants.RESPONSIBLE_CDA) {
     ordersStore.currentOrder.action = 'reject';
     ordersStore.currentOrder.orderId = props.order.id;
@@ -103,7 +102,7 @@ watch(() => props.problemsProduct, (newProblemsProduct) => {
 
 watch(selectedProduct, (newSelection) => {
   showEditor.value = newSelection.some((product) => product.title === 'Otro');
-  disableButton.value = newSelection.length === 0 || (showEditor.value && !hasTextInOtherProblem.value);
+  ordersStore.buttomReport = newSelection.length === 0 || (showEditor.value && !hasTextInOtherProblem.value);
   
   if (props.typeProblems === constants.RESPONSIBLE_PICKER_REVIEWER) {
     product.value = props.product;
@@ -116,9 +115,9 @@ watch(selectedProduct, (newSelection) => {
 watch(otherProblem, () => {
   if (showEditor.value) {
     hasTextInOtherProblem.value = !!sanitizeHTML(otherProblem.value).trim();
-    disableButton.value = !hasTextInOtherProblem.value;
+    ordersStore.buttomReport = !hasTextInOtherProblem.value;
   } else {
-    disableButton.value = false;
+    ordersStore.buttomReport = false;
   }
 });
 
