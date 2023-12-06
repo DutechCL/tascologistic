@@ -123,6 +123,7 @@ const classificateOrders = (orders) => {
 }
 
 const processOrder = async () => {
+  ordersStore.buttomReport = true;
   const result = await showConfirm();
   if (result) {
     try {
@@ -138,6 +139,7 @@ const processOrder = async () => {
         ordersStore.getOrdersCdaManage();
       }
     } catch (error) {
+      ordersStore.buttomReport = false;
       if (error.response) {
         showToast({
           status: error.response.data.status,
