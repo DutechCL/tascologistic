@@ -20,6 +20,7 @@ use App\Models\OrderItemProblem;
 use App\Services\Chat\ChatService;
 use Illuminate\Support\Facades\DB;
 use App\Http\Resources\OrderResource;
+use App\Services\Biller\BillerService;
 use Illuminate\Support\Facades\Schema;
 
 class OrderService
@@ -309,16 +310,27 @@ class OrderService
 
     public function generateDocument(Request $request)
     {
+        $billerService = new BillerService();
         
         // dd($request->order['id']);
         $order = Order::getOrder($request->order['id']);
-        $order->order_status_id = OrderStatus::STATUS_BILLED;
-        $order->save();
+        $data = $billerService->buildData($order);
+        $response = $billerService->generateDocument($data);
 
-        return (object) [
-            'message' => 'Orden actualizada correctamente',
-            'order' => new OrderResource($order),
-        ];
+        if($response['Creado'] ?? false === true) {
+            $order->update(['order_status_id' => OrderStatus::STATUS_BILLED]);
+
+            return (object) [
+                'message' => 'Orden actualizada correctamente',
+                'order' => new OrderResource($order),
+            ];
+        }else{
+            return (object) [
+                'message' => 'Error al generar documento',
+                'order' =>[],
+            ];
+        }
+
     }
 
     public function addObservation(Request $request)

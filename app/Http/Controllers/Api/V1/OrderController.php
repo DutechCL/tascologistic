@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\OrderStatus;
 use App\Models\OrderProblem;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Models\MethodShipping;
 use App\Services\OrderService;
 use App\Models\OrderItemProblem;
@@ -169,17 +170,24 @@ class OrderController extends Controller
     public function generateDocument(Request $request)
     {
         try {
-            $result = $this->orderService->generateDocument($request);
-
-            return $this->success(
-                $result->order,
-                $result->message
-            );
-
+            $result =  $this->orderService->generateDocument($request);
+            if ($result->order) {
+                return $this->success(
+                    new OrderResource($result->order),
+                    $result->message
+                );
+            } else {
+                return $this->error(
+                    $result->message,
+                    $result->statusCode ?? Response::HTTP_BAD_REQUEST
+                );
+            }
+    
         } catch (\Exception $exception) {
             return $this->buildResponseErrorFromException($exception);
         }
     }
+    
 
     public function assingResponsible(Request $request)
     {

@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\DB;
 use App\Events\OrderClassifiedProcess;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Order extends Model
@@ -66,6 +67,10 @@ class Order extends Model
     protected $fillable = [
         ...self::FILLABLE_API,
         ...self::FILLABLE_INTERNAL,
+    ];
+
+    protected $appends = [
+        'type_document',
     ];
 
     protected static function boot()
@@ -117,6 +122,26 @@ class Order extends Model
         return $this->hasMany(Chat::class);
     }
 
+
+    protected function Indicator(): Attribute
+    {
+        return Attribute::make(
+            get: function ($value, $attributes) {
+
+                $formaPago = $attributes['U_SBO_FormaPago'] ?? null;
+    
+                switch ($formaPago) {
+                    case 'Factura':
+                        return "33";
+                    case 'Boleta':
+                        return "39";
+                    default:
+                        return "52";
+                }
+            }
+        );
+    }
+
     public static function getSyncInfo(array $params = [], string $operator = 'and')
     {
         $order = self::latest('DocNum')->first();
@@ -158,10 +183,13 @@ class Order extends Model
     public function scopeWithOrderDetails($query)
     {
         return $query->with([
-            'customer', 
             'orderStatus', 
             'methodShipping', 
             'responsibles',
+            'customer' => function ($query) {
+                $query->select('customers.*')
+                    ->with(['addresses', 'contactEmployees']);
+            }, 
             'orderItems' => function ($query) {
                 $query->with(['problems' => function ($query) {
                         $query->select(['order_item_problems.*', 'problems.title as problem_name'])
@@ -215,4 +243,7 @@ class Order extends Model
     
         return (object) ['status' => 'success', 'message' => 'Tarea asignada a '. $tasks[$task]. ' exitosamente.'];
     }
+
+
+
 }
