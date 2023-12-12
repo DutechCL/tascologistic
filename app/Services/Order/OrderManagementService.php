@@ -103,6 +103,11 @@ class OrderManagementService
         $response = $billerService->generateDocument($data);
 
         if ($response['Creado'] ?? false) {
+
+            $order->update([
+                'order_status_id' => OrderStatus::STATUS_BILLED,
+            ]);
+            
             return (object) [
                 'message' => 'Documento generado correctamente',
                 'order' => new OrderResource($order),

@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('CardType')->nullable(); //new
             $table->string('GroupCode')->nullable(); //new
             $table->string('ContactPerson')->nullable(); //new
+            $table->decimal('CreditLimit', 15, 2)->default(0);
+            $table->decimal('CurrentAccountBalance', 15, 2)->default(0);
             $table->string('CardForeignName')->nullable(); //new
             $table->string('ShipToDefault')->nullable(); //new
             $table->string('BilltoDefault')->nullable(); //new

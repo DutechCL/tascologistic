@@ -29,6 +29,8 @@ class Customer extends Model
         'UpdateTime',
         'CardType',
         'GroupCode',
+        'CreditLimit',
+        'CurrentAccountBalance',
         'ContactPerson',
         'CardForeignName',
         'ShipToDefault',
