@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('GroupCode')->nullable(); //new
             $table->string('ContactPerson')->nullable(); //new
             $table->decimal('CreditLimit', 15, 2)->default(0);
+            $table->decimal('MaxCommitment', 12, 2)->default(0);
             $table->decimal('CurrentAccountBalance', 15, 2)->default(0);
             $table->string('CardForeignName')->nullable(); //new
             $table->string('ShipToDefault')->nullable(); //new
@@ -28,9 +29,7 @@ return new class extends Migration
             $table->longText('ContactEmployees')->nullable();//new
             $table->string('Address')->nullable();
             $table->string('FederalTaxID')->nullable();
-            $table->string('EmailAddress')->nullable();
-            $table->float('CreditLimit', 12, 2)->nullable();
-            $table->float('MaxCommitment', 12, 2)->nullable();
+            $table->string('EmailAddress')->nullable();            
             $table->date('CreateDate')->nullable();
             $table->time('CreateTime')->nullable();
             $table->date('UpdateDate')->nullable();
