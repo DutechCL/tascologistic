@@ -60,7 +60,7 @@ export const useOrders = defineStore('orders', {
         },
 
         async assignResponsible(data) {
-            return await putWithToken(`api/v1/orders/${data.id}/assign/responsible`, data);
+            return await putWithToken(`api/v1/orders/assign/responsible`, data);
         },
 
 

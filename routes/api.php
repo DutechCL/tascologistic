@@ -79,7 +79,7 @@ Route::prefix('v1')->group(
         //URL'S ORDENES
         Route::middleware(['auth:sanctum'])->prefix('orders')->group(function () {
             Route::post('search', [OrderController::class, 'searchOrders']);
-            Route::put('{id}/assign/responsible', [OrderController::class, 'assignResponsible']);
+            Route::put('assign/responsible', [OrderController::class, 'assignResponsible']);
         });
 
         //URL'S CHAT 
