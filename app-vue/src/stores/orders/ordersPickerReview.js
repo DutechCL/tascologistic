@@ -40,12 +40,12 @@ export const useOrdersPickerReview = defineStore('ordersPickerReview', {
         this.classifyOrders(response.data);
         this.isDataLoaded = true;
     },
-    async assingResponsible() {
+    async assignResponsible() {
         let data = {
             orderId: this.currentOrder.id,
             responsible: this.currentOrder.responsible
         }
-        const response = await orderService.assingResponsible(data);
+        const response = await orderService.assignResponsible(data);
         this.updateListOrders(response.data);
         return response;
     },

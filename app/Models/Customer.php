@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Models\Order;
-use App\Services\CustomerService;
+use App\Services\Customer\CustomerService;
 use App\Models\CustomerContactEmployee;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;

@@ -57,14 +57,13 @@ Route::prefix('v1')->group(
         Route::middleware(['auth:sanctum'])->prefix('orders/picker-reviewer')->group(function () {
             Route::get('{wareHouseCode}', [OrderController::class, 'getOrdersPickerAndReviewer']);
             Route::post('process-order', [OrderController::class, 'processOrderPickerReviewer']);
-            Route::put('{id}/assign/responsible', [OrderController::class, 'assingResponsible']);
         });
         
         //URL'S ORDENES BILLS
         Route::middleware(['auth:sanctum'])->prefix('orders/bills')->group(function () {
             Route::get('pickup-here', [OrderController::class, 'getOrdersBillPickupAndHere']);
             Route::get('delivery', [OrderController::class, 'getOrdersBilldelivery']);
-            Route::post('generate/document/', [OrderController::class, 'generateDocument']);
+            Route::post('process-order', [OrderController::class, 'processOrderBiller']);
         });
 
         //URL'S ORDENES PAGO
@@ -80,6 +79,7 @@ Route::prefix('v1')->group(
         //URL'S ORDENES
         Route::middleware(['auth:sanctum'])->prefix('orders')->group(function () {
             Route::post('search', [OrderController::class, 'searchOrders']);
+            Route::put('{id}/assign/responsible', [OrderController::class, 'assignResponsible']);
         });
 
         //URL'S CHAT 
@@ -87,10 +87,10 @@ Route::prefix('v1')->group(
             Route::post('send-message', [ChatController::class, 'sendMessage']);
             Route::get('get-message/{id}', [ChatController::class, 'getMessages']);
             Route::get('get-user', [ChatController::class, 'getUser']);
-            Route::get('get-orders', [ChatController::class, 'getOrders']);
+            Route::get('get-orders', [ChatController::class, 'getChats']);
             Route::get('get-resolve', [ChatController::class, 'getResolve']);
             Route::get('show/{id}', [ChatController::class, 'showChat']);
-            Route::get('resolve/{id}', [ChatController::class, 'resolveOrder']);
+            Route::get('resolve/{id}', [ChatController::class, 'resolveChatAndOrder']);
         });
     }
 );

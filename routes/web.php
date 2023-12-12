@@ -29,10 +29,12 @@ Route::middleware(['auth:sanctum'])->group(function () {
     })->where('any', '.*');
 });
 
-Route::get('/bodega', function () {
-    $allowedWarehouses = auth()->user()->allowedWarehouses();
-    dd(Order::byWarehouse($allowedWarehouses)->get());
-    return Order::byWarehouse()->get();
+Route::get('/test', function () {
+
+    return 2 +1;
+    // $allowedWarehouses = auth()->user()->allowedWarehouses();
+    // dd(Order::byWarehouse($allowedWarehouses)->get());
+    // return Order::byWarehouse()->get();
 });
 
 Route::middleware(['auth:sanctum'])->group(function () {

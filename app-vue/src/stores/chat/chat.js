@@ -43,8 +43,8 @@ export const useChat = defineStore('useChat', {
       return response.data;
     },
 
-    async getOrders() {
-      let response = await chatService.getOrders();
+    async getChats() {
+      let response = await chatService.getChats();
       this.currentOrder = response.data;
       return response.data;
     },
@@ -64,8 +64,8 @@ export const useChat = defineStore('useChat', {
       return response.data;
     },
 
-    async resolveOrder(id) {
-      let response = await chatService.resolveOrder(id);
+    async resolveChatAndOrder(id) {
+      let response = await chatService.resolveChatAndOrder(id);
       return response;
     },
 

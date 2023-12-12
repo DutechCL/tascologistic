@@ -11,8 +11,6 @@ class AuthController extends Controller
 {
     public function login(Request $request): JsonResponse
     {
-        // dd($request);
-        // Auth::loginUsingId(1);
         $credentials = [
             'email' => $request->email,
             'password' => $request->password,

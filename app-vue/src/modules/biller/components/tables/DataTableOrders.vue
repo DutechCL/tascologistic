@@ -44,7 +44,7 @@
               <template #body="slotProps">
                   <Button
                     :label="slotProps.data.U_SBO_FormaPago" 
-                    @click="actionMethod('generateDocument', slotProps.data, slotProps.data.U_SBO_FormaPago)" 
+                    @click="actionMethod('processOrderBiller', slotProps.data, slotProps.data.U_SBO_FormaPago)" 
                     class="!py-1.5 !border-primary-900 !text-primary-900 mr-3"  
                     severity="primary" 
                     style="width: 100px;"
@@ -94,7 +94,7 @@
   }
 
   const actionMethod = (method, order, document = null,) => {
-    emit('action', {'method': method, 'document': document, order});
+    emit('action', {'method': method, 'document': document, 'responsible': 'biller', order});
   }
 
   const filter = (data) => {

@@ -12,11 +12,9 @@ use Illuminate\Support\Facades\Auth;
 
 class SapSyncController extends Controller
 {
-    protected $sap;
-    public function __construct( SyncService $sap )
-    {
-        $this->sap = $sap;
-    }
+    public function __construct( 
+        protected SyncService $sap 
+    ){}
 
     /**
      * Sync SAP data
@@ -46,19 +44,16 @@ class SapSyncController extends Controller
             
             $response = $this->sap->sync($config);
 
-            return response()->json([
-                'status' => 'success', 
-                'message' => "$response registros sincronizados"
-            ], JsonResponse::HTTP_OK);
+            return $this->success(
+                [],
+                "$response registros sincronizados"
+            );
 
         } catch (\Exception $e) {
 
-            \Log::error($e->getMessage());
+            Log::error($e->getMessage());
 
-            return response()->json([
-                'status' => 'error', 
-                'message' => 'error'
-            ], JsonResponse::HTTP_BAD_REQUEST);
+            return $this->buildResponseErrorFromException($e);
         }
     }
 

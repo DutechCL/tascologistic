@@ -17,6 +17,7 @@ class OrderObserver
                 $order->process_id = Process::PROCESS_ID_PICKER;
                 break;
             case MethodShipping::METHOD_SHIPPING_PICKUP:
+            case MethodShipping::METHOD_SHIPPING_PICKUP_SAMEX:
             case MethodShipping::METHOD_SHIPPING_DELIVERY:
                 $order->order_status_id = OrderStatus::STATUS_ON_HOLD;
                 $order->process_id = Process::PROCESS_ID_CDA;
