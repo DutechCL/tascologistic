@@ -10,7 +10,7 @@ use App\Models\OrderProblem;
 use App\Models\MethodShipping;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
-use App\Services\Orders\OrderSynchronizationService;
+use App\Services\Order\OrderSynchronizationService;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Order extends Model
