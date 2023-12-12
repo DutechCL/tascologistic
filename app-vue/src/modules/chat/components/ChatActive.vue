@@ -43,7 +43,7 @@ const dataChat = ref([]);
 const isDataLoaded = ref(true);
 
 onBeforeMount(async () => {
-  await chat.getOrders().then((data) => {
+  await chat.getChats().then((data) => {
     dataChat.value = data;
     isDataLoaded.value = false;
   });

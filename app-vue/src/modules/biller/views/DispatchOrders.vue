@@ -47,20 +47,6 @@
   const orderStore = useOrdersBills()
   const visible = ref(false);
   const orders = ref([]);
-  const actions = ref([
-      {
-        active: true,
-        method: 'generateDocument',
-        document: constants.DOCUMENT_TYPE_GUIDE,
-        label: 'Guía',
-      },
-      {
-        active: false,
-        method: 'generateDocument',
-        document: constants.DOCUMENT_TYPE_INVOICE,
-        label: 'Factura / Boleta',
-      }
-  ])
 
   const search = (data) => {
     orders.value = data.orders;
@@ -72,8 +58,8 @@
       case 'showDetailOrder':
         orderStore.showDetailOrder(data.order);
         break;
-      case 'generateDocument':
-        generateDocument(data);
+      case 'processOrderBiller':
+        processOrderBiller(data);
         break;
     }
   }
@@ -97,21 +83,36 @@
       }
   }
 
-  const generateDocument = async (value) => {
+  const processOrderBiller = async (value) => {
+  try {
     let result = await showConfirm();
-    if(result){
-      let response = await orderStore.generateDocument(value);
+
+    if (result) {
+      let response = await orderStore.processOrderBiller(value);
+
+      if (response.status === 'success') {
+        showToast({
+          status: 'success',
+          message: response.message,
+        });
+      } 
+    } else {
       showToast({
-        status: response.status,
-        message: response.message,
+        status: 'info',
+        message: 'Proceso cancelado',
       });
-    }else{
-      showToast({
-      status: 'info',
-      message: 'Proceso cancelado',
-    });
     }
-  };
+  } catch (error) {
+
+    console.log(error)
+    // Manejar errores generales, por ejemplo, problemas de conexión
+    showToast({
+      status: 'error',
+      message: error.response.data.message,
+    });
+  }
+};
+
 
   const visibleDetailsMethod = (value) => {
     visible.value = value.visibleDetails;

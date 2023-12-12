@@ -2,24 +2,15 @@
 
 namespace App\Models;
 
-use App\Models\Product;
 use App\Models\Customer;
-use App\Models\LogOrder;
+use App\Models\Chat\Chat;
 use App\Models\OrderItem;
 use App\Models\OrderStatus;
-use App\Models\SalesPerson;
 use App\Models\OrderProblem;
 use App\Models\MethodShipping;
-use App\Services\OrderService;
-use App\Models\RoleAssignments;
-use App\Models\OrderItemProblem;
-use App\Services\ProcessService;
-use App\Events\OrderStatusUpdated;
-use Illuminate\Support\Facades\DB;
-use App\Events\OrderClassifiedProcess;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use App\Services\Orders\OrderSynchronizationService;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Order extends Model
@@ -70,7 +61,7 @@ class Order extends Model
     ];
 
     protected $appends = [
-        'type_document',
+        'indicator',
     ];
 
     protected static function boot()
@@ -177,7 +168,7 @@ class Order extends Model
 
     public static function syncOrder(array $where, array $orderData)
     {
-       return  (new OrderService)->syncOrderWithItems($where, $orderData);
+       return  (new OrderSynchronizationService)->syncOrderWithItems($where, $orderData);
     }
     
     public function scopeWithOrderDetails($query)
@@ -220,9 +211,12 @@ class Order extends Model
     public function assignResponsible($task)
     {
         $tasks = [
-            'cda' => 'CDA',
-            'picker' => 'PICKEO',
+            'cda'      => 'CDA',
+            'picker'   => 'PICKEO',
             'reviewer' => 'REVISIÓN',
+            'biller'   => 'FACTURADOR',
+            'payment'  => 'PAGOS',
+            'dispatch' => 'DESPACHO',
         ];
     
         $user = auth()->user() ?? User::find(1);
@@ -243,7 +237,4 @@ class Order extends Model
     
         return (object) ['status' => 'success', 'message' => 'Tarea asignada a '. $tasks[$task]. ' exitosamente.'];
     }
-
-
-
 }

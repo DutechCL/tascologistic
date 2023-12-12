@@ -9,7 +9,7 @@
       <Column headerClass="!bg-primary-900 table-head" class="table-body font-11"  field="Customer.CardCode" header="Rut" style="max-width: 300px;"></Column>
       <Column headerClass="!bg-primary-900 table-head" class="table-body font-11"  field="MethodShippingName" header="Desde" >
           <template #body="slotProps">
-            <Tag :value="slotProps.data.report_user_responsibles === 'cda' ? 'CDA' : 'Bodega'" class="p-tag-1 tag-font-method font-11 tag-radius"></Tag>
+            <Tag :value="slotProps.data.report_problem_location" class="p-tag-1 tag-font-method font-11 tag-radius"></Tag>
           </template>
       </Column>
       <Column headerClass="!bg-primary-900 table-head" class="table-body font-11"  field="SalesEmployeeName" header="Vendedor"></Column>

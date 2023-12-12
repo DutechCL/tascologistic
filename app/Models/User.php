@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Chat\Chat;
 use App\Models\SalesPerson;
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Chat\Message;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;

@@ -47,6 +47,10 @@ export const useOrders = defineStore('orders', {
             return await postWithToken('api/v1/orders/picker-reviewer/process-order', body);
         },
 
+        async processOrderBiller(body){
+            return await postWithToken(`api/v1/orders/bills/process-order`, body);
+        },
+
         async getOrdersPickerAndReviewer(wareHouseCode) {
             return await getWithToken(`api/v1/orders/picker-reviewer/${wareHouseCode}`);
         },
@@ -55,13 +59,10 @@ export const useOrders = defineStore('orders', {
 
         },
 
-        async assingResponsible(data) {
-            return await putWithToken(`api/v1/orders/picker-reviewer/${data.id}/assign/responsible`, data);
+        async assignResponsible(data) {
+            return await putWithToken(`api/v1/orders/${data.id}/assign/responsible`, data);
         },
 
-        async generateDocument(body){
-            return await postWithToken(`api/v1/orders/bills/generate/document`, body);
-        },
 
         async getOrdersTracker(type) {
             return await getWithToken(`api/v1/orders/tracker/${type}`);

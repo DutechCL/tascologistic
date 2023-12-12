@@ -108,13 +108,13 @@ const action = (order, responsible) => {
   ordersStore.showDetailOrder = true;
   ordersStore.currentOrder = order;
   ordersStore.currentOrder.responsible = responsible;
-  assingResponsible();
+  assignResponsible();
 }
 
-const assingResponsible = async () => {
+const assignResponsible = async () => {
   
   try {
-    let response = await ordersStore.assingResponsible()
+    let response = await ordersStore.assignResponsible()
 
       showToast({
         status: response.status,

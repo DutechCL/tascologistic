@@ -3,20 +3,20 @@
 namespace App\Services\Biller;
 
 use App\Models\Setting;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
 
 class BillerService
 {
-    private $apiDomain;
     private $apiUrl;
     private $companyId;
     private $username;
     private $password;
 
     /**
-     * SAPService constructor.
+     * Constructor del servicio de facturación.
+     * Inicializa las configuraciones necesarias para la conexión con el servicio.
      */
     public function __construct()
     {
@@ -27,9 +27,11 @@ class BillerService
     }
     
     /**
-     * @param string $productionKey
-     * @param string $devKey
-     * @return array|mixed
+     * Obtiene una configuración específica del servicio de facturación.
+     *
+     * @param string $productionKey Llave para la configuración en producción.
+     * @param string $devKey Llave para la configuración en modo de desarrollo.
+     * @return mixed Valor de la configuración obtenida.
      */
     private function getConfig($productionKey, $devKey)
     {
@@ -38,22 +40,34 @@ class BillerService
     }
 
     /**
-     * @return array|mixed
+     * Genera un documento de facturación a través del servicio externo.
+     *
+     * @param array $data Datos para generar el documento.
+     * @return array|mixed Respuesta del servicio de facturación o error.
      */
     public function generateDocument($data)
     {
         try {
             $response = Http::timeout(60)->post($this->apiUrl, $data);
 
+            if($response['Creado'] ?? false === true) 
+            {
+                $response['LocalLinkPDF'] = $this->downloadPDFFromURL($response['LinkPDF']);
+            }
+
             return $response;
         } catch (\Exception $e) {
-
-            Log::error("Error en la operación de login: {$e->getMessage()}");
-
+            Log::error("Error en la generación del documento: {$e->getMessage()}");
             return ['error' => $e->getMessage()];
         }
     }
 
+    /**
+     * Construye los datos necesarios para generar un documento de facturación.
+     *
+     * @param Order $order Orden para la cual se generará el documento.
+     * @return array Datos construidos para la factura.
+     */
     public function buildData($order)
     {
         $data['User'] = [
@@ -123,4 +137,33 @@ class BillerService
 
         return $data;
     }
+
+    /**
+     * Descarga un PDF desde una URL y lo guarda en el sistema de archivos local.
+     *
+     * @param string $url URL del PDF a descargar.
+     * @return string|null URL local del PDF descargado o null si falla.
+     */
+    public function downloadPDFFromURL($url)
+    {
+        $pathInfo = pathinfo($url);
+        $fileName = $pathInfo['basename'];
+
+        $pdfContent = file_get_contents($url);
+
+        if ($pdfContent !== false) {
+
+            $storagePath = storage_path('app/pdf/biller/');
+
+            file_put_contents($storagePath . $fileName, $pdfContent);
+
+            $dbFilePath = 'pdf/biller/' . $fileName;
+
+            return url(Storage::url($dbFilePath));
+        } else {
+            return null;
+        }
+    }
+
+
 }

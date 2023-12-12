@@ -37,7 +37,7 @@
       </Column>
       <Column headerClass="!bg-primary-900" sortable class="font-14"  field="order.MethodShippingName" header="Desde" >
           <template #body="slotProps">
-            <Tag :value="slotProps.data.order.report_user_responsibles === 'cda' ? 'CDA' : 'Bodega'" class="p-tag-1 tag-font-method tag-radius"></Tag>
+            <Tag :value="slotProps.data.order.report_problem_location" class="p-tag-1 tag-font-method tag-radius"></Tag>
           </template>
       </Column>
       <Column headerClass="!bg-primary-900" sortable class="font-14" field="order.SalesEmployeeName" header="Vendedor"></Column>
@@ -47,7 +47,7 @@
         <template #body="slotProps">
             <div class="flex gap-2">
               <router-link v-if="slotProps.data.chat.status === 'open'" :to="{name: 'show-chat', params: { id: slotProps.data.chat.id }}" style="      padding-top: 12px;" class="!border-primary-900 !text-primary-900 btn-custom-table" >Revisar</router-link>
-              <Button v-if="slotProps.data.chat.status === 'open'" @click="resolveOrder(slotProps.data.chat.id)" class="!text-primary-900 btn-custom-table" label="Resuelto"></Button>
+              <Button v-if="slotProps.data.chat.status === 'open'" @click="resolveChatAndOrder(slotProps.data.chat.id)" class="!text-primary-900 btn-custom-table" label="Resuelto"></Button>
             </div>
         </template>
       </Column>
@@ -96,12 +96,12 @@
       }
     }
 
-    const resolveOrder = async (id) => {
+    const resolveChatAndOrder = async (id) => {
       const result = await showConfirm();
 
         if (result) {
           try{
-            let response = await chat.resolveOrder(id);
+            let response = await chat.resolveChatAndOrder(id);
             if (response.status === 'success') {
                 showToast({
                   status: response.status,

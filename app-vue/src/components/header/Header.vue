@@ -22,7 +22,7 @@
                 <span class="font-bold text-900" style="color: #313131">{{dataNotifications.currentUser.name}}</span>
             </div>
             <div class="font-medium text-lg my-3 text-900" style="color: #000;">Incidencia en nota de venta <strong>No: {{dataNotifications.chat.order.DocNum}}</strong> </div>
-            <div class="font-medium text-lg my-3 text-900" style="color: #000;">Desde <strong>{{ getLocation(dataNotifications) }}</strong> </div>
+            <div class="font-medium text-lg my-3 text-900" style="color: #000;">Desde <strong>{{ dataNotifications.chat.order.report_problem_location }}</strong> </div>
 
             <router-link :to="{name: 'show-chat', params: {id: dataNotifications.chat.id}}"> Ver </router-link>
                 <!-- <p class="mb-2 text-primary-900 font-inter font-semibold text-xl"> <i class="pi pi-arrow-left font-icon"></i> </p> -->
@@ -81,15 +81,6 @@ const itemsStore = useMenuItems();
 
 const visible = ref(false);
 const items = ref([]);
-
-const getLocation = (data) => {
-  let location = {
-    'picker': 'Bodega',
-    'reviewer': 'Bodega',
-    'cda': 'CDA'
-  }
-  return location[data.chat.order.report_user_responsible];
-}
 
 onBeforeMount( async () => {
   try {

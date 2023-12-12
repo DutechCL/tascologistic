@@ -24,8 +24,8 @@ export const useOrdersBills = defineStore('ordersBills', {
       this.listOrders = response.data;
     },
 
-    async generateDocument(body){
-      let response = await orderService.generateDocument(body);
+    async processOrderBiller(body){
+      let response = await orderService.processOrderBiller(body);
 
       if(response.data.order_status_id === constants.ORDER_STATUS_BILLED){
         this.listOrders = this.listOrders.filter(o => o.id !== response.data.id);
