@@ -20,5 +20,13 @@ export const useOrdersPayment = defineStore('ordersPayment', {
       let response = await orderService.getOrdersPayment();
       this.ordersPaymentsPending = response.data;
     },
+
+    async assignResponsible(orderId) {
+      const body = {
+        orderId: orderId,
+        responsible: 'payment'
+      }
+      return await orderService.assignResponsible(body);
+    }
   }
 })
