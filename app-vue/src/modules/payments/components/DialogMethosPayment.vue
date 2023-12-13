@@ -52,7 +52,7 @@
       </div>
       
       
-      <Button label="Cerrar"  @click="ordersPayment.showDialog = false" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
+      <Button label="Pagar"  @click="ordersPayment.showDialog = false" class="!py-2 !border-none !px-10 !bg-primary-900 float-right mt-5"/>
   </Dialog>
   </template>
   
