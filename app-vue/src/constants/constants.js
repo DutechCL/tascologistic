@@ -15,6 +15,7 @@ export const RESPONSIBLE_PICKER   = 'picker';
 export const RESPONSIBLE_REVIEWER = 'reviewer';
 export const RESPONSIBLE_PICKER_REVIEWER = 'picker-reviewer';
 export const RESPONSIBLE_BILLER = 'bills';
+export const RESPONSIBLE_PAYMENT = 'payment';
 
 /* Order status */
 export const ORDER_STATUS_ON_HOLD         = 1;
@@ -67,7 +68,8 @@ const constants = {
     DOCUMENT_TYPE_GUIDE,
     DOCUMENT_TYPE_INVOICE,
     PROCESS_PICKER_ID,
-    PROCESS_REVIEWER_ID
+    PROCESS_REVIEWER_ID,
+    RESPONSIBLE_PAYMENT
 };
 
 export default constants;

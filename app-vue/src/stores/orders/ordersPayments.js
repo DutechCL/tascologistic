@@ -7,11 +7,11 @@ export const useOrdersPayment = defineStore('ordersPayment', {
   state: () => ({ 
       ordersPaymentsPending: [],
       order: [],
-      showDialog: false,        
+      showDialog: false,
+      customers: [],        
   }),
   getters: {
     getOrdersPaymentsPending(state){
-      console.log(state.ordersPaymentsPending)
       return state.ordersPaymentsPending
     },
   },
@@ -19,6 +19,19 @@ export const useOrdersPayment = defineStore('ordersPayment', {
     async getOrdersPayment() {
       let response = await orderService.getOrdersPayment();
       this.ordersPaymentsPending = response.data;
+      return this.ordersPaymentsPending;
+    },
+
+    async getCustomers(body) {
+      let response = await orderService.getCustomers(body);
+      this.customers = response.data.data;
+      return this.customers;
+    },
+
+    async searchCustomers(body) {
+      let response = await orderService.searchCustomers(body);
+      this.customers = response.data;
+      return this.customers;
     },
 
     async assignResponsible(orderId) {

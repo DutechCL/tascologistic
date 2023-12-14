@@ -10,6 +10,7 @@ use App\Http\Controllers\Api\V1\OrderController;
 use App\Http\Controllers\Api\V1\ProductController;
 use App\Http\Controllers\Api\V1\CustomerController;
 use App\Http\Controllers\Api\V1\ProblemsController;
+use App\Http\Controllers\Api\V1\CustomersController;
 use App\Http\Controllers\Api\V1\OrderItemsController;
 use App\Http\Controllers\Api\V1\PermissionController;
 use App\Http\Controllers\Admin\MenuItemCrudController;
@@ -43,6 +44,12 @@ Route::prefix('v1')->group(
             Route::get('menu-items', [MenuItemCrudController::class, 'getMenuItems']);
             Route::post('problems', [ProblemsController::class, 'index']);
             Route::post('sap/sync', [SapSyncController::class, 'sync'])->name('admin.sap.sync');
+        });
+
+        //URL'S CUSTOMERS
+        Route::middleware(['auth:sanctum'])->prefix('customers')->group(function () {
+            Route::get('/', [CustomersController::class, 'getCustomers']);
+            Route::post('search', [CustomersController::class, 'searchCustomers']);
         });
         
         //URL'S ORDENES CDA

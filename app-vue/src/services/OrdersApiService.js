@@ -71,5 +71,13 @@ export const useOrders = defineStore('orders', {
         async searchOrders(body) {
             return await postWithToken(`api/v1/orders/search/`, body);
         },
+
+        async getCustomers(body) {
+            return await getWithToken(`api/v1/customers/`);
+        },
+
+        async searchCustomers(body) {
+            return await postWithToken(`api/v1/customers/search/`, body);
+        }
     }
 });
