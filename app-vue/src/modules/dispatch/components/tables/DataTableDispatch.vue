@@ -35,7 +35,11 @@
         <Tag Tag :icon="'pi pi-truck'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
       </template>
     </Column>
-    <Column headerClass="!bg-primary-900" sortable field="warehouse" header="Bodega"></Column>
+    <Column headerClass="!bg-primary-900" sortable field="warehouse" header="Bodega">
+      <template #body="slotProps">
+        <Tag Tag :icon="'pi pi-building'"  :value="slotProps.data.warehouse" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
+      </template>
+    </Column>
     <Column headerClass="!bg-primary-900"  field="note" header="Documentos">
       <template #body="slotProps">
         <Button :icon="'pi pi-eye'"  @click="openDialog(action.value ,slotProps.data)" class="!font-normal !text-primary-900
