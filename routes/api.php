@@ -73,6 +73,11 @@ Route::prefix('v1')->group(
             Route::post('process-order', [OrderController::class, 'processOrderBiller']);
         });
 
+        //URL'S ORDENES DISPATCHER
+        Route::middleware(['auth:sanctum'])->prefix('orders/dispatch')->group(function () {
+            Route::get('/', [OrderController::class, 'getOrdersDispatch']);
+        });
+
         //URL'S ORDENES PAGO
         Route::middleware(['auth:sanctum'])->prefix('orders/payment')->group(function () {
             Route::get('/', [OrderController::class, 'getOrdersPayment']);

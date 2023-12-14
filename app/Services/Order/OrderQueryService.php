@@ -117,6 +117,22 @@ class OrderQueryService
     }
 
     /**
+     * Lista las órdenes asociadas al proceso de despacho, filtradas por el tipo de envío y status.
+     *
+     * @param bool $execute Indica si se ejecuta la consulta o solo se prepara.
+     * @return mixed Lista paginada de órdenes o el objeto de consulta.
+     */
+    public function listOrdersDispatch(bool $execute = true)
+    {
+        $query = Order::withOrderDetails()
+                    ->where('process_id', Process::PROCESS_ID_CDA)
+                    ->where('method_shipping_id', MethodShipping::METHOD_SHIPPING_DELIVERY)
+                    ->orderByDesc('DocDate');
+
+        return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
+    }
+
+    /**
      * Lista las órdenes asociadas al proceso de pago.
      *
      * @param bool $execute Indica si se ejecuta la consulta o solo se prepara.

@@ -1,0 +1,91 @@
+<template>
+  <div class="px-8">
+    <div v-if="!ordersStore.isDataLoaded" class="text-center" style="color:#259bd7">
+      <i class="pi pi-spin pi-spinner" style="font-size: 2rem;"></i>
+    </div>
+  <DataTableDispatch :title="'Despacho'" :orders="orders" />
+
+  <DetailOrder />
+  </div>
+  <Toast />
+</template>
+
+<script setup>
+import { ref, onBeforeMount, toRefs, watch, defineProps } from 'vue'
+import Search from '../../../components/search/Search.vue';
+import constants from '@/constants/constants';
+import DataTableDispatch from '../components/tables/DataTableDispatch.vue';
+import DetailOrder from '../components/DetailOrder.vue';
+import { useOrdersDispatch } from "../../../stores/orders/ordersDispatch";
+
+// import { ToastMixin } from '../../../Utils/ToastMixin';
+
+const ordersStore = useOrdersDispatch();
+const orders = ref([]);
+onBeforeMount( async() => {
+  orders.value = await ordersStore.getOrdersDispatch();
+})
+
+</script>
+
+<style>
+.p-multiselect-label.p-placeholder, .p-multiselect-trigger{
+  color: #259bd7 !important;
+}
+.p-calendar .p-inputtext{
+  border: none !important;
+  padding: 6px;
+  color: #fff;
+  font-weight: 600;
+  background: transparent;
+}
+
+.p-confirm-dialog .p-dialog-content {
+  padding: 45px !important;
+}
+
+.p-multiselect-label.p-placeholder, .p-multiselect-trigger{
+  color: #259bd7 !important;
+}
+.p-button.p-component.p-confirm-dialog-accept{
+  background: #259bd7!important;
+}
+.p-multiselect.p-multiselect-chip .p-multiselect-token {
+  background: #259bd7!important;
+  font-weight: 600;
+  color: #ffffff !important;
+}
+.p-dialog.p-component.p-ripple-disabled.p-confirm-dialog{
+  padding: 15px !important;
+  background: #ffffff !important;
+}
+
+.close-filter-date{
+  padding: 0px;
+  cursor: pointer;
+  background: #259bd7;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 25px;
+  text-align: center;
+  position: absolute;
+  border: 1px solid;
+  right: 6px;
+  top: 6px;
+  height: 25px;
+}
+.active-filter-date{
+  background: #259bd7;
+  border-radius: 27px;
+  height: 40px;
+}
+.active-filter-date i{
+  font-size: 12px;
+}
+
+.text-not-info{
+  font-size: 20px;
+  color: #898989;
+}
+</style>

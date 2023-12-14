@@ -19,7 +19,6 @@ import TabPanel from 'primevue/tabpanel'
 import ChatActive from '../components/ChatActive.vue'
 import ChatHistory from '../components/ChatHistory.vue'
 import ConfirmDialog from 'primevue/confirmdialog';
-import { useOrdersCda } from '../../../stores/orders/ordersCda';
 import { ToastMixin } from '../../../Utils/ToastMixin';
 
 const { showToast } = ToastMixin.setup();

@@ -52,6 +52,8 @@ class OrderResource extends JsonResource
             'report_user_name' => $this->report_user_name,
             'has_problems' => $this->has_problems,
             'is_resolved' => $this->is_resolved,
+            'Indicator' => $this->indicator,
+            'warehouse' => $this->warehouse,
             'Problems' => $this->problems->map(function ($problem) {
                 return [
                     'id' => $problem->id,
