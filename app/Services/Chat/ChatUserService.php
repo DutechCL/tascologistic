@@ -57,7 +57,7 @@ class ChatUserService
             
             $chats = $query->where('status', Chat::STATUS_OPEN) ->limit(20)->get();
 
-            $chats = $chats->data->map(function ($chat) {
+            $chats = $chats->map(function ($chat) {
                 return [
                     'chat' => $chat,   // Puedes ajustar esto según tu necesidad
                     'order' => new OrderResource($chat->order),
