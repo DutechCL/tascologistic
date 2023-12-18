@@ -50,7 +50,9 @@ class BillerService
         try {
 
             // dd(json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-            $response = Http::timeout(60)->post($this->apiUrl, $data);
+            $response = Http::withoutVerifying()->timeout(60)->post($this->apiUrl, $data);
+
+            $response = $response->json();
 
             if($response['Creado'] ?? false === true) 
             {

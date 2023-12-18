@@ -87,7 +87,7 @@ class OrderManagementService
         ];
     }
 
-    /**
+   /**
      * Procesa una orden para la generación de documentos de facturación, utilizando el servicio de facturación.
      *
      * @param Request $request Datos de la solicitud incluyendo la información de la orden.
@@ -95,29 +95,63 @@ class OrderManagementService
      */
     public function processOrderBiller(Request $request)
     {
+        $order = $this->getOrderAndAssignResponsible($request);
+        $response = $this->generateBillerDocument($order);
+        $message  = '';
+        
+        if ($this->isDocumentCreatedSuccessfully($response)) {
+            $this->createBillForOrder($order, $response);
+            $this->updateOrderStatusToBilled($order);
+            $message = 'Documento generada correctamente';
+        } else {
+            $message = $response['Error'];
+            $this->rejectOrder($request);
+        }
+        return (object) [
+            'message' => $message,
+            'order' => new OrderResource($order),
+        ];
+    }
+
+    protected function getOrderAndAssignResponsible(Request $request)
+    {
         $order = Order::getOrder($request->order['id']);
         $order->assignResponsible($request->responsible);
-        
+        return $order;
+    }
+
+    protected function generateBillerDocument($order)
+    {
         $billerService = new BillerService();
         $data = $billerService->buildData($order);
-        $response = $billerService->generateDocument($data);
+        return $billerService->generateDocument($data);
+    }
 
-        if ($response['Creado'] ?? false) {
+    protected function isDocumentCreatedSuccessfully($response)
+    {
+        return $response['Creado'] ?? false;
+    }
 
-            $order->update([
-                'order_status_id' => OrderStatus::STATUS_BILLED,
-            ]);
-            
-            return (object) [
-                'message' => 'Documento generado correctamente',
-                'order' => new OrderResource($order),
-            ];
-        } else {
-            return (object) [
-                'message' => 'Error al generar el documento',
-                'order' => null,
-            ];
-        }
+    protected function createBillForOrder($order, $response)
+    {
+        $order->bill->create([
+            'user_id' => auth()->user()->id,
+            'Creado' => $response['Creado'],
+            'Facturado' => $response['Facturado'],
+            'Error' => $response['Error'],
+            'Folio' => $response['Folio'],
+            'FebosID' => $response['FebosID'],
+            'DocEntry' => $response['DocEntry'],
+            'IndicadorFinanciero' => $response['IndicadorFinanciero'],
+            'LinkPDF' => $response['LocalLinkPDF'],
+        ]);
+    }
+
+    protected function updateOrderStatusToBilled($order)
+    {
+        $order->update([
+            'order_status_id' => OrderStatus::STATUS_BILLED,
+        ]);
     }
 
     /**
@@ -127,10 +161,11 @@ class OrderManagementService
      * @param int|null $orderId ID opcional de la orden a rechazar, si no se pasa en la solicitud.
      * @return Chat Retorna un chat asociado a la orden si es necesario.
      */
-    public function rejectOrder(Request $request, $orderId = null)
+    public function rejectOrder(Request $request)
     {
         $user = auth()->user();
-        $order = $orderId ? Order::getOrder($orderId) : Order::getOrder($request->orderId);
+        $orderId = $request->orderId ?? $request->order['id'];
+        $order = Order::getOrder($orderId);
 
         $order->order_status_id = OrderStatus::STATUS_REJECTED;
         $order->report_user_id = $user->id;
