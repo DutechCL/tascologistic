@@ -23,6 +23,91 @@
   </script>
   
 
+<<<<<<< HEAD
+=======
+  const orderStore = useOrdersBills()
+  const orders = ref([]);
+
+  const updateOrders = async () => {
+    await orderStore.getOrdersBillPickupAndHere();
+    showToast({
+      status: 'success',
+      message: 'Ordenes actualizadas',
+      time: 3000
+    });
+  }
+
+  watch(() => orderStore.listOrders, (value) => {
+    orders.value = orderStore.listOrders;
+  });
+
+  const search = (data) => {
+    orders.value = data.orders;
+  }
+
+  const actionMethod = (data) => {
+    switch (data.method) {
+      case 'showDetailOrder':
+        orderStore.showDetailOrder(data.order);
+        break;
+      case 'processOrderBiller':
+        processOrderBiller(data);
+        break;
+    }
+  }
+
+  const processOrderBiller = async (value) => {
+  try {
+    let result = await showConfirm();
+
+    if (result) {
+      let response = await orderStore.processOrderBiller(value);
+
+      if (response.status === 'success') {
+        orders.value.filter(o => o.id !== response.data.id);
+        showToast({
+          status: 'success',
+          message: response.message,
+        });
+      } 
+    } else {
+      showToast({
+        status: 'info',
+        message: 'Proceso cancelado',
+      });
+    }
+  } catch (error) {
+
+    if(error.response.status == 401){
+      orders.value.filter(o => o.id !== error.response.data.data.id);
+    }
+    // Manejar errores generales, por ejemplo, problemas de conexión
+    showToast({
+      status: 'error',
+      message: error.response.data.message,
+    });
+  }
+};
+
+
+  const visibleDetailsMethod = (value) => {
+    orderStore.visibleDialog = value.visibleDetails;
+  };
+
+  onBeforeMount( async() => {
+    await orderStore.getOrdersBillPickupAndHere();
+    orders.value = orderStore.listOrders;
+  })
+
+  const goBack = () => {
+    if (orders.value.length === 0) {
+        window.location.href = '/admin/dashboard/'
+      }
+  }
+
+</script>
+  
+>>>>>>> 41f29b9 (Fix bug in DispatchOrders.vue and update)
 <style>
   .p-tag-1{
     @apply bg-primary-100
