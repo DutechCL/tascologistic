@@ -60,6 +60,8 @@ class BillerService
             }else{
                 $error = $this->parseJsonToObject($response['Error']);
                 $response['Error'] = json_encode($error);
+
+                dd($error);
             }
 
             return $response;
