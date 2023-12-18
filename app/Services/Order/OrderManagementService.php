@@ -101,11 +101,11 @@ class OrderManagementService
         if ($this->isDocumentCreatedSuccessfully($response)) {
             $this->createBillForOrder($order, $response);
             $this->updateOrderStatusToBilled($order);
-            $message = 'Documento generada correctamente';
             $status   = 'success';
+            $message = 'Documento generada correctamente';
         } else {
-            $message = $response['Error'];
             $status   = 'error';
+            $message = 'Error al generar el documento';
             $this->rejectOrder($request);
         }
         return (object) [
