@@ -183,7 +183,6 @@ class MessageService
         }
 
         $message = "<strong>La orden {$order->DocNum} tiene problemas en facturación:</strong><br>";
-        $message .= "Reportado por: {$order->report_user_name}<br>";
         $message .= "Problema: {$textRerror}<br>";
 
         if($product){
