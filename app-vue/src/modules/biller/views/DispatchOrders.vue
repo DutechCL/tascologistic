@@ -104,7 +104,8 @@
       });
     }
   } catch (error) {
-    if(error.response.data.application_code == 401){
+    if(error.response.status == 401){
+      console.log(orders.value , error.response.data.data);
       orders.value.filter(o => o.id !== error.response.data.data.id);
     }
 
