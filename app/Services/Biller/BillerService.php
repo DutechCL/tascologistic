@@ -59,6 +59,9 @@ class BillerService
                 $response['LocalLinkPDF'] = $this->downloadPDFFromURL($response['LinkPDF']);
             }else{
                 $error = $this->parseJsonToObject($response['Error']);
+
+                $test = $this->extractLinePosition($error);
+                dd($test);
                 $response['Error'] = json_encode($error);
 
                 dd($error);
@@ -198,5 +201,18 @@ class BillerService
     
         return $decodedJson;
     }
+
+    function extractLinePosition($jsonString) {
+        // Primero, buscar la cadena específica
+        if (strpos($jsonString, '[DocumentLines.ItemCode]') !== false) {
+            // Extraer el número después de '[line: '
+            if (preg_match('/\[line: (\d+)\]/', $jsonString, $matches)) {
+                // Devolver el número de línea
+                return intval($matches[1]);
+            }
+        }
+        return null; // Devolver null si no se encuentra
+    }
+    
 
 }
