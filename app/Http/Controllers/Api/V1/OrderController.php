@@ -168,7 +168,7 @@ class OrderController extends Controller
                 return $this->error(
                     $result->message,
                     401,
-                    Response::HTTP_BAD_REQUEST,
+                    401,
                     $result->order,
                 );
             }
