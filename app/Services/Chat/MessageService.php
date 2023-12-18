@@ -169,9 +169,18 @@ class MessageService
 
     protected function buildBillerMessage($order)
     {
+        $textRerror = null;
+        if($order->bill->Error){
+            $json = json_decode($order->bill->Error);
+
+            $textRerror = explode('JSON', $json->httpException->message)[0];
+
+        }
+
         $message = "<strong>La orden {$order->DocNum} tiene problemas en facturación:</strong><br>";
         $message .= "Reportado por: {$order->report_user_name}<br>";
-        $message .= "Problema: {$order->bill->Error}<br>";
+        $message .= "Problema: {$textRerror}<br>";
+
         return $message;
     }
 

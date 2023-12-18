@@ -98,16 +98,18 @@ class OrderManagementService
         $order = $this->getOrderAndAssignResponsible($request);
         $response = $this->generateBillerDocument($order);
         $message  = '';
-
         if ($this->isDocumentCreatedSuccessfully($response)) {
             $this->createBillForOrder($order, $response);
             $this->updateOrderStatusToBilled($order);
             $message = 'Documento generada correctamente';
+            $status   = 'success';
         } else {
             $message = $response['Error'];
+            $status   = 'error';
             $this->rejectOrder($request);
         }
         return (object) [
+            'status' => $status,
             'message' => $message,
             'order' => new OrderResource($order),
         ];
@@ -134,6 +136,8 @@ class OrderManagementService
 
     protected function createBillForOrder($order, $response)
     {
+        $docEntry = $response['DocEntry'] != '' ? intval($response['DocEntry']) : null;
+
         return $order->bill()->create([
             'user_id' => auth()->user()->id,
             'Creado' => $response['Creado'],
@@ -141,7 +145,7 @@ class OrderManagementService
             'Error' => $response['Error'],
             'Folio' => $response['Folio'],
             'FebosID' => $response['FebosID'],
-            'DocEntry' => intval($response['DocEntry']),
+            'DocEntry' => $docEntry,
             'IndicadorFinanciero' => $response['IndicadorFinanciero'],
             'LinkPDF' => $response['LocalLinkPDF'] ?? $response['LinkPDF'],
         ]);

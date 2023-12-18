@@ -159,7 +159,7 @@ class OrderController extends Controller
         try {
             $result =  $this->orderManagementService->processOrderBiller($request);
             
-            if ($result->order) {
+            if ($result->status == 'success') {
                 return $this->success(
                     new OrderResource($result->order),
                     $result->message
