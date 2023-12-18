@@ -97,9 +97,9 @@ class OrderManagementService
     {
         $order = $this->getOrderAndAssignResponsible($request);
         $response = $this->generateBillerDocument($order);
-        $message  = '';
+        $this->createBillForOrder($order, $response);
+
         if ($this->isDocumentCreatedSuccessfully($response)) {
-            $this->createBillForOrder($order, $response);
             $this->updateOrderStatusToBilled($order);
             $status   = 'success';
             $message = 'Documento generada correctamente';
