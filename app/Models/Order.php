@@ -64,6 +64,12 @@ class Order extends Model
         'indicator',
     ];
 
+    protected $casts = [
+        'DocRate'         => 'integer',
+        'SalesPersonCode' => 'integer',
+        'DiscountPercent' => 'integer',
+    ];
+
     protected static function boot()
     {
         parent::boot();
