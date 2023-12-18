@@ -146,7 +146,6 @@ class MessageService
                 return $this->buildPickerAndReviewMessage($order);
         }
     }
-    
 
     protected function buildPickerAndReviewMessage($order)
     {
@@ -170,28 +169,42 @@ class MessageService
 
     protected function buildBillerMessage($order)
     {
-        $textRerror = null;
-        $product = null;
-        if($order->bill->Error){
-            $json = json_decode($order->bill->Error);
-            $textRerror =  $json->httpException->message;
-            if($order->bill->Error->httpException->errorItem){
-                $itemCode  = $order->bill->Error->httpException->errorItem['ItemCode'];
-
-                $product = Product::where('ItemCode', $itemCode)->first();
-            }
-        }
-
         $message = "<strong>La orden {$order->DocNum} tiene problemas en facturación:</strong><br>";
-        $message .= "Problema: {$textRerror}<br>";
-
-        if($product){
-            $message .= "Producto con probelmas:";
-            $message .= "Item: {$product->ItemName} SKU: {$product->ItemCode}<br>";
+        $message .= $this->getBillingErrorMessage($order);
+    
+        if ($product = $this->getProblematicProduct($order)) {
+            $message .= "Producto con problemas: <br>Item: {$product->ItemName} <br> SKU: {$product->ItemCode}<br>";
         }
-
+    
         return $message;
     }
+    
+    protected function getBillingErrorMessage($order)
+    {
+        if (!$order->bill->Error) {
+            return 'Problema: <br> Información no disponible<br><br>';
+        }
+    
+        $httpException = json_decode($order->bill->Error)->httpException;
+        return "Problema: <br> {$httpException->message}<br><br>";
+    }
+    
+    protected function getProblematicProduct($order)
+    {
+        if (!$order->bill->Error) {
+            return null;
+        }
+    
+        $httpException = json_decode($order->bill->Error)->httpException;
+    
+        if (isset($httpException->errorItem)) {
+            return Product::where('ItemCode', $httpException->errorItem->ItemCode)->first();
+        }
+    
+        return null;
+    }
+    
+
 
     protected function getProblemsMessages($problems)
     {
