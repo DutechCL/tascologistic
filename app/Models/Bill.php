@@ -21,4 +21,9 @@ class Bill extends Model
         'IndicadorFinanciero',
         'LinkPDF',
     ];
+
+    public function order()
+    {
+        return $this->belongsTo(Order::class, 'order_id');
+    }
 }

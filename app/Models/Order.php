@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Bill;
 use App\Models\Customer;
 use App\Models\Chat\Chat;
 use App\Models\OrderItem;
@@ -82,6 +83,11 @@ class Order extends Model
         static::updating(function ($order) {
             $order->attributes['Confirmed'] = strtolower($order->attributes['Confirmed']) === 'tyes' ? 1 : 0;
         });
+    }
+
+    public function bill()
+    {
+        return $this->hasOne(Bill::class, 'order_id');
     }
 
     public function customer()

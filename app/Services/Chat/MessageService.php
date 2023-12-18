@@ -134,30 +134,57 @@ class MessageService
     public function buildMessage($order)
     {
         $order->refresh();
+    
+        switch ($order->report_user_responsible) {
+            case 'biller':
+                return $this->buildBillerMessage($order);
+            case 'cda':
+                return $this->buildCdaMessage($order);
+            case 'picker':
+            case 'reviewer':
+                return $this->buildPickerAndReviewMessage($order);
+        }
+    }
+    
+
+    protected function buildPickerAndReviewMessage($order)
+    {
         $message = '';
         foreach ($order->orderItems as $orderItem) {
             if ($orderItem->problems->count() > 0) {
-                $message .= "<strong> El producto: {$orderItem->product->ItemName}  SKU: {$orderItem->product->ItemCode} </strong>  <br>";
-                foreach ($orderItem->problems as $problem) {
-                    $message .= "Problema: {$problem->problem->title} <br>";
-                    if ($problem->other) {
-                        $message .= "Otro: {$problem->other} <br>";
-                    }
-                }
+                $message .= "<strong>El producto: {$orderItem->product->ItemName} SKU: {$orderItem->product->ItemCode}</strong><br>";
+                $message .= $this->getProblemsMessages($orderItem->problems);
                 $message .= "<br>";
             }
         }
-
-        if ($order->problems->count() > 0) {
-            $message = "<strong> La orden {$order->DocNum} tiene problemas generales: </strong> <br>";
-            foreach ($order->problems as $problem) {
-                $message .= "Problema: {$problem->problem->title} <br>";
-                if ($problem->other) {
-                    $message .= "Otro: {$problem->other} <br>";
-                }
-            }
-        }
-
         return $message;
     }
+
+    protected function buildCdaMessage($order)
+    {
+        $message = "<strong>La orden {$order->DocNum} tiene problemas generales:</strong><br>";
+        $message .= $this->getProblemsMessages($order->problems);
+        return $message;
+    }
+
+    protected function buildBillerMessage($order)
+    {
+        $message = "<strong>La orden {$order->DocNum} tiene problemas en facturación:</strong><br>";
+        $message .= "Reportado por: {$order->report_user_name}<br>";
+        $message .= "Problema: {$order->bill->Error}<br>";
+        return $message;
+    }
+
+    protected function getProblemsMessages($problems)
+    {
+        $problemMessages = '';
+        foreach ($problems as $problem) {
+            $problemMessages .= "Problema: {$problem->problem->title}<br>";
+            if ($problem->other) {
+                $problemMessages .= "Otro: {$problem->other}<br>";
+            }
+        }
+        return $problemMessages;
+    }
+
 }
