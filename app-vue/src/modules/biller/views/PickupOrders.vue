@@ -83,6 +83,7 @@
       let response = await orderStore.processOrderBiller(value);
 
       if (response.status === 'success') {
+        orders.value.filter(o => o.id !== response.data.id);
         showToast({
           status: 'success',
           message: response.message,
@@ -96,7 +97,9 @@
     }
   } catch (error) {
 
-    console.log(error)
+    if(error.response.status == 401){
+      orders.value.filter(o => o.id !== error.response.data.data.id);
+    }
     // Manejar errores generales, por ejemplo, problemas de conexión
     showToast({
       status: 'error',
