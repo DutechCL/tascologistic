@@ -55,9 +55,9 @@ class ChatUserService
     
         if ($execute) {
             
-            $chats = $query->where('status', Chat::STATUS_OPEN)->get();
+            $chats = $query->where('status', Chat::STATUS_OPEN)->paginate(20);
 
-            $chats = $chats->map(function ($chat) {
+            $chats = $chats->data->map(function ($chat) {
                 return [
                     'chat' => $chat,   // Puedes ajustar esto según tu necesidad
                     'order' => new OrderResource($chat->order),
