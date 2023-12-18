@@ -192,10 +192,12 @@ class BillerService
         $jsonClean = substr($json, $jsonStartPosition);
         
         $decodedJson = json_decode($jsonClean);
-
+        $decodedJson->httpException->message = explode('JSON', $decodedJson->httpException->message)[0];
+        
         if($this->extractLinePosition($jsonClean)){
             $Item = $data['Order']['DocumentLines'][$this->extractLinePosition($jsonClean)];
             $decodedJson->httpException->errorItem = $Item;
+            
         }
     
         if (json_last_error() !== JSON_ERROR_NONE) {
