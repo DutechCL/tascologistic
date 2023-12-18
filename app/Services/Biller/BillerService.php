@@ -62,7 +62,7 @@ class BillerService
 
                 $response['Error'] = json_encode($error);
 
-                dd($error);
+                // dd($error);
             }
 
             return $response;
@@ -193,11 +193,10 @@ class BillerService
         
         $decodedJson = json_decode($jsonClean);
         $decodedJson->httpException->message = explode('JSON', $decodedJson->httpException->message)[0];
-        
+
         if($this->extractLinePosition($jsonClean)){
             $Item = $data['Order']['DocumentLines'][$this->extractLinePosition($jsonClean)];
             $decodedJson->httpException->errorItem = $Item;
-            
         }
     
         if (json_last_error() !== JSON_ERROR_NONE) {
@@ -218,5 +217,4 @@ class BillerService
         }
         return null; 
     }
-    
 }

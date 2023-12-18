@@ -3,6 +3,7 @@
 namespace App\Services\Chat;
 
 use Carbon\Carbon;
+use App\Models\Product;
 use App\Models\Chat\Chat;
 use App\Events\MessageSent;
 use App\Models\Chat\Message;
@@ -170,16 +171,25 @@ class MessageService
     protected function buildBillerMessage($order)
     {
         $textRerror = null;
+        $product = null;
         if($order->bill->Error){
             $json = json_decode($order->bill->Error);
+            $textRerror =  $json->httpException->message;
+            if($order->bill->Error->httpException->errorItem){
+                $itemCode  = $order->bill->Error->httpException->errorItem['ItemCode'];
 
-            $textRerror = explode('JSON', $json->httpException->message)[0];
-
+                $product = Product::where('ItemCode', $itemCode)->first();
+            }
         }
 
         $message = "<strong>La orden {$order->DocNum} tiene problemas en facturación:</strong><br>";
         $message .= "Reportado por: {$order->report_user_name}<br>";
         $message .= "Problema: {$textRerror}<br>";
+
+        if($product){
+            $message .= "Producto con probelmas:";
+            $message .= "Item: {$product->ItemName} SKU: {$product->ItemCode}<br>";
+        }
 
         return $message;
     }
