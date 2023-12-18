@@ -148,13 +148,15 @@ class OrderController extends Controller
             
             if ($result->status == 'success') {
                 return $this->success(
-                    new OrderResource($result->order),
+                    $result->order,
                     $result->message
                 );
             } else {
                 return $this->error(
                     $result->message,
-                    $result->statusCode ?? Response::HTTP_BAD_REQUEST
+                    $result->statusCode ?? Response::HTTP_BAD_REQUEST,
+                    Response::HTTP_BAD_REQUEST,
+                    $result->order,
                 );
             }
     

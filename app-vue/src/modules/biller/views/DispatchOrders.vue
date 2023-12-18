@@ -53,7 +53,7 @@
   }
 
   const actionMethod = (data) => {
-    console.log(data);
+
     switch (data.method) {
       case 'showDetailOrder':
         orderStore.showDetailOrder(data.order);
@@ -91,6 +91,7 @@
       let response = await orderStore.processOrderBiller(value);
 
       if (response.status === 'success') {
+        orders.value.filter(o => o.id !== response.data.id);
         showToast({
           status: 'success',
           message: response.message,
@@ -103,13 +104,15 @@
       });
     }
   } catch (error) {
+    if(error.response.data.application_code == 401){
+      orders.value.filter(o => o.id !== error.response.data.data.id);
+    }
 
-    console.log(error)
-    // Manejar errores generales, por ejemplo, problemas de conexión
     showToast({
       status: 'error',
       message: error.response.data.message,
     });
+
   }
 };
 
