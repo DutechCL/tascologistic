@@ -60,7 +60,7 @@ class BillerService
             }else{
                 $error = $this->parseJsonToObject($response['Error']);
 
-                $test = $this->extractLinePosition($error);
+                $test = $this->extractLinePosition(json_encode($error));
                 dd($test);
                 $response['Error'] = json_encode($error);
 
