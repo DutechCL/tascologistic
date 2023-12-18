@@ -154,7 +154,7 @@ class OrderController extends Controller
             } else {
                 return $this->error(
                     $result->message,
-                    $result->statusCode ?? Response::HTTP_BAD_REQUEST,
+                    401,
                     Response::HTTP_BAD_REQUEST,
                     $result->order,
                 );
