@@ -42,6 +42,10 @@ class Customer extends Model
 
     protected $fillable = self::FILLABLE;
 
+    protected $cats = [
+        'GroupCode' => 'integer',
+    ];
+
     public function orders()
     {
         return $this->hasMany(Order::class);

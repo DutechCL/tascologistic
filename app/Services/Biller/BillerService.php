@@ -48,15 +48,21 @@ class BillerService
     public function generateDocument($data)
     {
         try {
+
+            // dd(json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
             $response = Http::timeout(60)->post($this->apiUrl, $data);
 
             if($response['Creado'] ?? false === true) 
             {
                 $response['LocalLinkPDF'] = $this->downloadPDFFromURL($response['LinkPDF']);
+            }else{
+                $error = $this->parseJsonToObject($response['Error']);
+                $response['Error'] = $error;
             }
 
             return $response;
         } catch (\Exception $e) {
+            dd($e->getMessage(), $e->getTraceAsString(), $e->getFile(), $e->getLine());
             Log::error("Error en la generación del documento: {$e->getMessage()}");
             return ['error' => $e->getMessage()];
         }
@@ -71,17 +77,23 @@ class BillerService
     public function buildData($order)
     {
         $data['User'] = [
-            'Prod' => $this->companyId,
-            'Password' => $this->username,
-            'UserName' => $this->password,
+            'Prod'     => $this->companyId,
+            'Password' => $this->password,
+            'UserName' => $this->username,
         ];
 
         $customer = $order->customer;
+        $cardCode = $customer->CardCode;
+
+        if (strpos($cardCode, '-') !== false) {
+            $cardCode = explode('-', $cardCode)[0];
+        }
+        
         $data['SN'] = [
-            'CardCode'        => $customer->CardCode,
+            'CardCode'        => $cardCode,
             'CardName'        => $customer->CardName,
             'CardType'        => $customer->CardType,
-            'GroupCode'       => $customer->GroupCode,
+            'GroupCode'       => intval($customer->GroupCode),
             'ContactPerson'   => $customer->ContactPerson,
             'FederalTaxID'    => $customer->FederalTaxID,
             'EmailAddress'    => $customer->EmailAddress,
@@ -124,6 +136,7 @@ class BillerService
         ]);
 
         $data['Order'] = $orderData;
+        $data['Order']['CardCode'] = $cardCode;
 
         // DocumentLines
         $data['Order']['DocumentLines'] = $order->orderItems->map(function ($item) {
@@ -165,5 +178,16 @@ class BillerService
         }
     }
 
+    private function  parseJsonToObject($json) : object
+    {
+
+        $extract = explode(':', $json, 2);
+
+        $json = $extract[1];
+
+        $jsonClean = stripslashes($json);
+
+        return json_decode($jsonClean);
+    }
 
 }
