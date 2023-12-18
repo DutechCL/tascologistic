@@ -59,12 +59,11 @@ class BillerService
                 $response['LocalLinkPDF'] = $this->downloadPDFFromURL($response['LinkPDF']);
             }else{
                 $error = $this->parseJsonToObject($response['Error']);
-                $response['Error'] = $error;
+                $response['Error'] = json_encode($error);
             }
 
             return $response;
         } catch (\Exception $e) {
-            dd($e->getMessage(), $e->getTraceAsString(), $e->getFile(), $e->getLine());
             Log::error("Error en la generación del documento: {$e->getMessage()}");
             return ['error' => $e->getMessage()];
         }
@@ -180,16 +179,22 @@ class BillerService
         }
     }
 
-    private function  parseJsonToObject($json) : object
+    private function parseJsonToObject($json): ?object
     {
-
-        $extract = explode(':', $json, 2);
-
-        $json = $extract[1];
-
-        $jsonClean = stripslashes($json);
-
-        return json_decode($jsonClean);
+        $jsonStartPosition = strpos($json, '{"httpException":');
+        if ($jsonStartPosition === false) {
+            return null;
+        }
+    
+        $jsonClean = substr($json, $jsonStartPosition);
+        
+        $decodedJson = json_decode($jsonClean);
+    
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            return null;
+        }
+    
+        return $decodedJson;
     }
 
 }
