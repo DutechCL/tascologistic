@@ -154,7 +154,8 @@ class OrderManagementService
     protected function updateOrderStatusToBilled($order)
     {
         $order->update([
-            'order_status_id' => OrderStatus::STATUS_BILLED,
+            // 'order_status_id' => OrderStatus::STATUS_BILLED,
+            'order_status_id' => OrderStatus::STATUS_REVIEWED,
         ]);
     }
 

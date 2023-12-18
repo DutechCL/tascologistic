@@ -107,7 +107,7 @@ class ChatManagementService
             }
 
             $message = new MessageService();
-            dd($message->buildMessage($order));
+
             $result = $message->create($chat->id, $message->buildMessage($order));
 
             $order->has_problems = true;
