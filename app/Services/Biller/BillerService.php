@@ -205,17 +205,16 @@ class BillerService
         return $decodedJson;
     }
 
-    function extractLinePosition($jsonString) {
-        // Primero, buscar la cadena específica
+    private function extractLinePosition($jsonString) {
+
         if (strpos($jsonString, '[DocumentLines.ItemCode]') !== false) {
-            // Extraer el número después de '[line: '
+
             if (preg_match('/\[line: (\d+)\]/', $jsonString, $matches)) {
-                // Devolver el número de línea
-                return intval($matches[1]);
+
+                return intval($matches[1]) + 1;
             }
         }
-        return null; // Devolver null si no se encuentra
+        return null; 
     }
     
-
 }
