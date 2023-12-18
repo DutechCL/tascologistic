@@ -58,10 +58,8 @@ class BillerService
             {
                 $response['LocalLinkPDF'] = $this->downloadPDFFromURL($response['LinkPDF']);
             }else{
-                $error = $this->parseJsonToObject($response['Error']);
+                $error = $this->parseJsonToObject($response['Error'], $data);
 
-                $test = $this->extractLinePosition(json_encode($error));
-                dd($test);
                 $response['Error'] = json_encode($error);
 
                 dd($error);
@@ -184,7 +182,7 @@ class BillerService
         }
     }
 
-    private function parseJsonToObject($json): ?object
+    private function parseJsonToObject($json, $data): ?object
     {
         $jsonStartPosition = strpos($json, '{"httpException":');
         if ($jsonStartPosition === false) {
@@ -194,6 +192,11 @@ class BillerService
         $jsonClean = substr($json, $jsonStartPosition);
         
         $decodedJson = json_decode($jsonClean);
+
+        if($this->extractLinePosition($jsonClean)){
+            $Item = $data['Order']['DocumentLines'][$this->extractLinePosition($jsonClean)];
+            $decodedJson->httpException->errorItem = $Item;
+        }
     
         if (json_last_error() !== JSON_ERROR_NONE) {
             return null;
