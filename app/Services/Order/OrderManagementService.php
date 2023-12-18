@@ -138,7 +138,11 @@ class OrderManagementService
     {
         $docEntry = $response['DocEntry'] != '' ? intval($response['DocEntry']) : null;
 
-        return $order->bill()->create([
+        return $order->bill()->updateOrCreate(
+            [
+                'order_id' => $order->id
+            ],
+            [
             'user_id' => auth()->user()->id,
             'Creado' => $response['Creado'],
             'Facturado' => $response['Facturado'],
