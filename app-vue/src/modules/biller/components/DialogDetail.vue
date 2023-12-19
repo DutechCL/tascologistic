@@ -13,11 +13,17 @@
     <DataTable tableStyle="min-width: 50rem" filters="filters" :value="products">
         <Column headerClass="!bg-primary-900"  field="date" header="Cantidad">
             <template #body="slotProps">
-                <p>{{slotProps.data.Quantity}} Unidades</p>
+                <p>{{slotProps.data.Quantity}} {{ slotProps.data.Quantity > 1 ? 'Unidades' : 'Unidad' }}</p>
             </template>
         </Column>
         <Column headerClass="!bg-primary-900"  field="ItemCode" header="SKU"></Column>
         <Column headerClass="!bg-primary-900"  field="ItemDescription" header="Producto"></Column>
+        <Column headerClass="!bg-primary-900"  field="WarehouseCode" header="Bodega"></Column>
+        <Column headerClass="!bg-primary-900"  field="U_SBO_StockVentas" header="Stock Ventas">
+            <template #body="slotProps">
+              <p>{{slotProps.data.U_SBO_StockVentas}} {{ slotProps.data.U_SBO_StockVentas > 1 ? 'Unidades' : 'Unidad' }}</p>
+          </template>
+        </Column>
     </DataTable>
 
     <DataTable class="pt-5" tableStyle="min-width: 50rem" :value="[order]">

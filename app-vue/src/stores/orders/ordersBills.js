@@ -8,7 +8,8 @@ export const useOrdersBills = defineStore('ordersBills', {
   state: () => ({ 
       listOrders: [],
       order: [],
-      visibleDialog: false,        
+      visibleDialog: false,      
+      orderProcessingStatus: {},
   }),
   getters: {
     orders: (state) => state.listOrders,

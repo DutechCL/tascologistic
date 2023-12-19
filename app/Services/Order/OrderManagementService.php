@@ -136,6 +136,10 @@ class OrderManagementService
 
     protected function createBillForOrder($order, $response)
     {
+        // dd( $response );
+        if(empty($response) || !isset($response['Creado'])) {
+            return;
+        }
         $docEntry = $response['DocEntry'] != '' ? intval($response['DocEntry']) : null;
 
         return $order->bill()->updateOrCreate(
