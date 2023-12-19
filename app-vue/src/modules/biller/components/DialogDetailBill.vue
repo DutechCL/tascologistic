@@ -10,7 +10,7 @@
         <Column headerClass="!bg-primary-900"  field="DocEntry" header="DocEntry"></Column>
         <Column headerClass="!bg-primary-900"  field="FebosID" header="FebosID"></Column>
         <Column headerClass="!bg-primary-900"  field="Folio" header="Folio"></Column>
-        <Column headerClass="!bg-primary-900"  field="created_at" header="created_at"></Column>
+        <!-- <Column headerClass="!bg-primary-900"  field="created_at" header="created_at"></Column> -->
     </DataTable>
 
     <div class="mt-5">
