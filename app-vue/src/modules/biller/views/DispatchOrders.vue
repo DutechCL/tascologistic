@@ -69,18 +69,6 @@
       await updateOrders(constants.METHOD_SHIPPING_DELIVERY).then(() => {
         orders.value = orderStore.listOrders;
       });
-<<<<<<< HEAD
-=======
-    }
-  } catch (error) {
-    if(error.response.status == 401){
-      orders.value.filter(o => o.id !== error.response.data.data.id);
-    }
-
-    showToast({
-      status: 'error',
-      message: error.response.data.message,
->>>>>>> 41f29b9 (Fix bug in DispatchOrders.vue and update)
     });
 
   </script>

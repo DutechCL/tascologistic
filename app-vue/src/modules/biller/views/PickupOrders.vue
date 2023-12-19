@@ -20,11 +20,7 @@
     import TabPanel from 'primevue/tabpanel';
     import Manage from '../components/Manage.vue';
     import constants from '@/constants/constants';
-  </script>
-  
 
-<<<<<<< HEAD
-=======
   const orderStore = useOrdersBills()
   const orders = ref([]);
 
@@ -107,7 +103,6 @@
 
 </script>
   
->>>>>>> 41f29b9 (Fix bug in DispatchOrders.vue and update)
 <style>
   .p-tag-1{
     @apply bg-primary-100
