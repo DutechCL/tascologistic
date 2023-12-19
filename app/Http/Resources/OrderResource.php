@@ -54,6 +54,7 @@ class OrderResource extends JsonResource
             'is_resolved' => $this->is_resolved,
             'Indicator' => $this->indicator,
             'warehouse' => $this->warehouse,
+            'bill' => $this->bill,
             'Problems' => $this->problems->map(function ($problem) {
                 return [
                     'id' => $problem->id,
