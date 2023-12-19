@@ -52,10 +52,18 @@
                     outlined></Button>
                     <Tag  
                       v-else-if="orderStore.orderProcessingStatus[slotProps.data.id]?.inProcess" 
-                      :value="orderStore.orderProcessingStatus[slotProps.data.id]?.status" 
+                      
                       :severity="orderStore.orderProcessingStatus[slotProps.data.id]?.severity"
                       :icon="orderStore.orderProcessingStatus[slotProps.data.id]?.icon"
                       class="tag-font-method tag-radius">
+                        <span>{{orderStore.orderProcessingStatus[slotProps.data.id]?.status}}</span>
+                        <Button 
+                          v-if="orderStore.orderProcessingStatus[slotProps.data.id]?.severity === 'success'"
+                          @click="actionMethod('showDetailBill', orderStore.orderProcessingStatus[slotProps.data.id]?.order)"
+                          class="show-bill-details" 
+                          link>
+                          Ver
+                        </Button>
                     </Tag>
               </template>
         </Column>
@@ -130,5 +138,14 @@
     color: white !important;
     width: 12px;
     }
+
+  .show-bill-details {
+    width: 25px;
+    min-width: 50px;
+    height: 10px;
+    color: white !important;
+    text-decoration: underline;
+    padding-top: 15px;
+  }
 </style>
           

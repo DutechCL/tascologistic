@@ -19,6 +19,11 @@
       :orderDetails="orderStore.order"
       @visible="visibleDetailsMethod"
       />
+
+      <DialogDetailBill 
+      v-if="orderStore.visibleBill" 
+      v-model:visible="orderStore.visibleBill"
+    />
       <div v-if="orders.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
         <h1 class="align-center font-inter font-semibold mb-4 text-2xl text-center text-primary-900">
           No hay ordenes actualmente en este proceso
@@ -34,6 +39,7 @@
   import Button from 'primevue/button';
   import Search from '../../../components/search/Search.vue';
   import DialogDetail from '../components/DialogDetail.vue';
+  import DialogDetailBill from '../components/DialogDetailBill.vue';
   import DataTableOrders from '../components/tables/DataTableOrders.vue';
   import ConfirmDialog from 'primevue/confirmdialog';
   import constants from '@/constants/constants';
