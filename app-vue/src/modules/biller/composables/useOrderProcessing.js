@@ -20,6 +20,9 @@ export function useOrderProcessing() {
         case 'showDetailOrder':
             orderStore.showDetailOrder(data.order);
             break;
+        case 'showDetailBill':
+            orderStore.showDetailBiller(data.order);
+            break;
         case 'processOrderBiller':
             processOrderBiller(data);
             break;
@@ -57,6 +60,7 @@ export function useOrderProcessing() {
                     severity: 'info',
                     icon: 'pi pi-spin pi-spinner',
                 };
+
                 // console.log(value, orderStore.orderProcessingStatus);
                 // return;
                 let response = await orderStore.processOrderBiller(value);
@@ -67,6 +71,7 @@ export function useOrderProcessing() {
                         status: 'Documento Emitido',
                         severity: 'success',
                         icon: 'pi pi-check',
+                        order: response.data,
                     };
                     // orders.value.filter(o => o.id !== response.data.id);
                     showToast({

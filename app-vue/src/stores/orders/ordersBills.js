@@ -10,6 +10,8 @@ export const useOrdersBills = defineStore('ordersBills', {
       order: [],
       visibleDialog: false,      
       orderProcessingStatus: {},
+      bill: {},
+      visibleBill: false,
   }),
   getters: {
     orders: (state) => state.listOrders,
@@ -45,6 +47,26 @@ export const useOrdersBills = defineStore('ordersBills', {
     showDetailOrder(orders){
       this.order = orders;
       this.visibleDialog = true;
-    } 
+    },
+
+    showDetailBiller(orders){
+      // this.bill = {
+      //   Creado: 1,
+      //   DocEntry: 13633,
+      //   Error: "",
+      //   Facturado: 1,
+      //   FebosID: "7f386c5320eae240f92aabb2c5e3ca9df970",
+      //   Folio: "185",
+      //   IndicadorFinanciero: "33",
+      //   LinkPDF: "https://tasco.dutech.cl/storage/pdf/biller/E76520280-9_33_185.3.pdf",
+      //   created_at: "2023-12-19T16:39:06.000000Z",
+      //   id: 6,
+      //   order_id: 3264,
+      //   updated_at: "2023-12-19T16:39:06.000000Z",
+      //   user_id: 1,
+      // };
+      this.bill = orders;
+      this.visibleBill = true;
+    }
   }
 })
