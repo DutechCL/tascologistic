@@ -43,12 +43,20 @@
           <Column headerClass="!bg-primary-900"  field="client" header="Emitir">
               <template #body="slotProps">
                   <Button
+                    v-if="!orderStore.orderProcessingStatus[slotProps.data.id]?.inProcess"
                     :label="slotProps.data.U_SBO_FormaPago" 
                     @click="actionMethod('processOrderBiller', slotProps.data, slotProps.data.U_SBO_FormaPago)" 
                     class="!py-1.5 !border-primary-900 !text-primary-900 mr-3"  
                     severity="primary" 
                     style="width: 100px;"
                     outlined></Button>
+                    <Tag  
+                      v-else-if="orderStore.orderProcessingStatus[slotProps.data.id]?.inProcess" 
+                      :value="orderStore.orderProcessingStatus[slotProps.data.id]?.status" 
+                      :severity="orderStore.orderProcessingStatus[slotProps.data.id]?.severity"
+                      :icon="orderStore.orderProcessingStatus[slotProps.data.id]?.icon"
+                      class="tag-font-method tag-radius">
+                    </Tag>
               </template>
         </Column>
       </DataTable>
@@ -57,12 +65,13 @@
 </template>
 
 <script setup>
-  import { ref, watch, defineEmits} from 'vue';
+  import { ref, watch, defineEmits, warn} from 'vue';
   import DataTable from 'primevue/datatable';
   import Column from 'primevue/column';
   import Tag from 'primevue/tag';
   import Button from 'primevue/button';
   import FilterMultiSelect from '../../../../components/filters/FilterMultiSelect.vue';
+  import { useOrdersBills } from '../../../../stores/orders/ordersBills.js';
   import constants from '@/constants/constants';
 
   const props = defineProps({
@@ -70,6 +79,7 @@
     actions: Object,
     orders: Object,
   })
+  const orderStore = useOrdersBills();
   const emit = defineEmits();
   const orders = ref(props.orders);
   const allOrders = ref(props.orders);

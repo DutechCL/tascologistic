@@ -30,101 +30,29 @@
   </template>
   
   <script setup>
-  import { ref, onBeforeMount, watch } from 'vue'
-  import Button from 'primevue/button'
-  import Search from '../../../components/search/Search.vue'
+  import { onBeforeMount } from 'vue';
+  import Button from 'primevue/button';
+  import Search from '../../../components/search/Search.vue';
   import DialogDetail from '../components/DialogDetail.vue';
-  import ConfirmDialog from 'primevue/confirmdialog';
   import DataTableOrders from '../components/tables/DataTableOrders.vue';
-  import { useOrdersBills } from '../../../stores/orders/ordersBills.js';
-  import { ToastMixin } from '../../../Utils/ToastMixin';
-  import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
+  import ConfirmDialog from 'primevue/confirmdialog';
   import constants from '@/constants/constants';
+  import { useOrderProcessing } from '../composables/useOrderProcessing.js';
 
-  const { showToast } = ToastMixin.setup();
-  const { showConfirm } = ConfirmMixin.setup();
+  const { 
+      updateOrders, 
+      orders, 
+      search, 
+      actionMethod, 
+      visibleDetailsMethod, 
+      orderStore
+    } = useOrderProcessing();
 
-  const orderStore = useOrdersBills()
-  const visible = ref(false);
-  const orders = ref([]);
-
-  const search = (data) => {
-    orders.value = data.orders;
-  }
-
-  const actionMethod = (data) => {
-
-    switch (data.method) {
-      case 'showDetailOrder':
-        orderStore.showDetailOrder(data.order);
-        break;
-      case 'processOrderBiller':
-        processOrderBiller(data);
-        break;
-    }
-  }
-
-  const updateOrders = async () => {
-    await orderStore.getOrdersBillDelivery();
-    showToast({
-      status: 'success',
-      message: 'Ordenes actualizadas',
-      time: 3000
-    });
-  }
-
-  watch(() => orderStore.orders, (value) => {
-    orders.value = orderStore.orders;
-  });
-
- const goBack = () => {
-    if (orders.value.length === 0) {
-        window.location.href = '/admin/dashboard/'
-      }
-  }
-
-  const processOrderBiller = async (value) => {
-  try {
-    let result = await showConfirm();
-
-    if (result) {
-      let response = await orderStore.processOrderBiller(value);
-
-      if (response.status === 'success') {
-        orders.value.filter(o => o.id !== response.data.id);
-        showToast({
-          status: 'success',
-          message: response.message,
-        });
-      } 
-    } else {
-      showToast({
-        status: 'info',
-        message: 'Proceso cancelado',
+    onBeforeMount(async () => {
+      await updateOrders(constants.METHOD_SHIPPING_DELIVERY).then(() => {
+        orders.value = orderStore.listOrders;
       });
-    }
-  } catch (error) {
-    if(error.response.status == 401){
-      orders.value.filter(o => o.id !== error.response.data.data.id);
-    }
-
-    showToast({
-      status: 'error',
-      message: error.response.data.message,
     });
-
-  }
-};
-
-
-  const visibleDetailsMethod = (value) => {
-    visible.value = value.visibleDetails;
-  };
-
-  onBeforeMount( async() => {
-    await orderStore.getOrdersBillDelivery();
-    orders.value = orderStore.orders;
-  })
 
   </script>
   
