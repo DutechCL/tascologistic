@@ -49,7 +49,7 @@ export const useOrdersBills = defineStore('ordersBills', {
       this.visibleDialog = true;
     },
 
-    showDetailBiller(orders){
+    showDetailBiller(order){
       // this.bill = {
       //   Creado: 1,
       //   DocEntry: 13633,
@@ -65,7 +65,7 @@ export const useOrdersBills = defineStore('ordersBills', {
       //   updated_at: "2023-12-19T16:39:06.000000Z",
       //   user_id: 1,
       // };
-      this.bill = orders;
+      this.bill = order.bill;
       this.visibleBill = true;
     }
   }
