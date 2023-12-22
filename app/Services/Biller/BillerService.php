@@ -49,7 +49,6 @@ class BillerService
     {
         try {
 
-            // dd(json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
             $response = Http::withoutVerifying()->timeout(60)->post($this->apiUrl, $data);
 
             $response = $response->json();
@@ -62,7 +61,6 @@ class BillerService
 
                 $response['Error'] = json_encode($error);
 
-                // dd($error);
             }
 
             return $response;

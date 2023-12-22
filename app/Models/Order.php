@@ -54,6 +54,7 @@ class Order extends Model
         'report_user_responsible',
         'report_user_name',
         'is_resolved',
+        'is_managed_in_billing',
     ];
 
     protected $fillable = [

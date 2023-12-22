@@ -71,6 +71,8 @@ Route::prefix('v1')->group(
             Route::get('pickup-here', [OrderController::class, 'getOrdersBillPickupAndHere']);
             Route::get('delivery', [OrderController::class, 'getOrdersBilldelivery']);
             Route::post('process-order', [OrderController::class, 'processOrderBiller']);
+            Route::post('process-order/return', [OrderController::class, 'returnProcessOrderBiller']);
+            Route::get('manage/{methodShipping}', [OrderController::class, 'getOrdersBillManage']);
         });
 
         //URL'S ORDENES DISPATCHER

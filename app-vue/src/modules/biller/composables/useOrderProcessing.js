@@ -26,20 +26,22 @@ export function useOrderProcessing() {
         case 'processOrderBiller':
             processOrderBiller(data);
             break;
+        case 'returnProcessOrderBiller':
+            returnProcessOrderBiller(data);
         }
     }
 
     const updateOrders = async (type) => {
         if (type === 'delivery') {
             await orderStore.getOrdersBillDelivery();
-          } else  {
+        } else  {
             await orderStore.getOrdersBillPickupAndHere();
-          }
+        }
 
         showToast({
-        status: 'success',
-        message: 'Ordenes actualizadas',
-        time: 3000
+            status: 'success',
+            message: 'Ordenes actualizadas',
+            time: 3000
         });
     }
 
@@ -48,6 +50,34 @@ export function useOrderProcessing() {
             window.location.href = '/admin/dashboard/'
         }
     }
+
+    const returnProcessOrderBiller = async (value) => {
+        try {
+            let result = await showConfirm();
+
+            if (result) {
+                await orderStore.returnProcessOrderBiller(value).then((data) => {
+                    if (data.status === 'success') {
+                        orders.value = orders.value.filter(o => o.id != data.data.id);
+                        showToast({
+                            status: 'success',
+                            message: data.message,
+                        });
+                    } 
+                })
+            } else {
+                showToast({
+                    status: 'info',
+                    message: 'Proceso cancelado',
+                });
+            }
+        } catch (error) {
+            showToast({
+                status: 'error',
+                message: error.response.data.message,
+            });
+        }
+    };
 
     const processOrderBiller = async (value) => {
         try {
@@ -61,24 +91,24 @@ export function useOrderProcessing() {
                     icon: 'pi pi-spin pi-spinner',
                 };
 
-                // console.log(value, orderStore.orderProcessingStatus);
-                // return;
-                let response = await orderStore.processOrderBiller(value);
+                await orderStore.processOrderBiller(value).then((response) => {
 
-                if (response.status === 'success') {
-                    orderStore.orderProcessingStatus[value.order.id] = {
-                        inProcess: true,
-                        status: 'Documento Emitido',
-                        severity: 'success',
-                        icon: 'pi pi-check',
-                        order: response.data,
-                    };
-                    // orders.value.filter(o => o.id !== response.data.id);
-                    showToast({
-                        status: 'success',
-                        message: response.message,
-                    });
-                } 
+                    if (response.status === 'success') {
+                        orderStore.orderProcessingStatus[value.order.id] = {
+                            inProcess: true,
+                            status: 'Documento Emitido',
+                            severity: 'success',
+                            icon: 'pi pi-check',
+                            order: response.data,
+                        };
+                        // orders.value = orders.value.filter(o => o.id != data.data.id);
+                        showToast({
+                            status: 'success',
+                            message: response.message,
+                        });
+                    }
+
+                })
             } else {
                 showToast({
                     status: 'info',
@@ -91,6 +121,7 @@ export function useOrderProcessing() {
                 status: 'Error al emitir el documento',
                 severity: 'danger',
                 icon: 'pi pi-times',
+                order: error.response.data.data,
             };
             if(error.response.status == 401){
                 orders.value.filter(o => o.id !== error.response.data.data.id);

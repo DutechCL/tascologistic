@@ -35,6 +35,10 @@ export const useOrders = defineStore('orders', {
             return await getWithToken(`api/v1/orders/bills/delivery`);
         },
 
+        async getOrdersBillManage(methodShipping) {
+            return await getWithToken(`api/v1/orders/bills/manage/${methodShipping}`);
+        },
+
         async getOrdersPayment() {
             return await getWithToken(`api/v1/orders/payment`);
         },
@@ -53,6 +57,10 @@ export const useOrders = defineStore('orders', {
 
         async processOrderBiller(body){
             return await postWithToken(`api/v1/orders/bills/process-order`, body);
+        },
+
+        async returnProcessOrderBiller(body) {
+            return await postWithToken(`api/v1/orders/bills/process-order/return`, body);
         },
 
         async getOrdersPickerAndReviewer(wareHouseCode) {
