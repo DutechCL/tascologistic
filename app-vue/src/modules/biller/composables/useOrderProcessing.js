@@ -63,6 +63,7 @@ export function useOrderProcessing() {
                             status: 'success',
                             message: data.message,
                         });
+                        updateOrders();
                     } 
                 })
             } else {
@@ -101,7 +102,7 @@ export function useOrderProcessing() {
                             icon: 'pi pi-check',
                             order: response.data,
                         };
-                        // orders.value = orders.value.filter(o => o.id != data.data.id);
+
                         showToast({
                             status: 'success',
                             message: response.message,
