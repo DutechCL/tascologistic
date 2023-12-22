@@ -197,7 +197,7 @@ class OrderManagementService
         $order = Order::getOrder($orderId);
 
         $order->report_user_id = $user->id;
-        $order->report_user_responsible = $request->responsible;
+        $order->report_user_responsibles = $request->responsible;
         $order->report_user_name = $user->name;
         $order->save();
         $order->refresh();

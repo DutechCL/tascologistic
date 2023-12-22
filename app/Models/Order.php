@@ -73,6 +73,12 @@ class Order extends Model
         'DiscountPercent' => 'integer',
     ];
 
+    protected $casts = [
+        'DocRate'         => 'integer',
+        'SalesPersonCode' => 'integer',
+        'DiscountPercent' => 'integer',
+    ];
+
     protected static function boot()
     {
         parent::boot();
