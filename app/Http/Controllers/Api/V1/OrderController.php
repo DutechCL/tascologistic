@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\OrderResource;
 use App\Services\Order\OrderQueryService;
 use App\Services\Order\OrderManagementService;
+use Mockery\Generator\Method;
 
 class OrderController extends Controller
 {
@@ -74,6 +75,19 @@ class OrderController extends Controller
     {
         try {
             $orders = $this->orderQueryService->listOrdersBills(MethodShipping::METHOD_SHIPPING_DELIVERY);
+
+            return $this->success(
+                OrderResource::collection($orders)->resolve()
+            );
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function getOrdersBillManage($methodShipping)   
+    {
+        try {
+            $orders = $this->orderQueryService->listOrderBillManage($methodShipping);
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()
@@ -160,6 +174,21 @@ class OrderController extends Controller
                 );
             }
     
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function returnProcessOrderBiller(Request $request)
+    {
+        try {
+            $order =  $this->orderManagementService->returnProcessOrderBiller($request);
+            
+            return $this->success(
+                $order,
+                'La orden regreso al proceso de gestión'
+            );
+
         } catch (\Exception $exception) {
             return $this->buildResponseErrorFromException($exception);
         }

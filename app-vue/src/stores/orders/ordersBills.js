@@ -27,6 +27,11 @@ export const useOrdersBills = defineStore('ordersBills', {
       this.listOrders = response.data;
     },
 
+    async getOrdersBillManage(methodShipping){
+      let response = await orderService.getOrdersBillManage(methodShipping);
+      return response.data;
+    },
+
     async processOrderBiller(body){
       let response = await orderService.processOrderBiller(body);
 
@@ -44,27 +49,16 @@ export const useOrdersBills = defineStore('ordersBills', {
       return response;
     },
 
+    async returnProcessOrderBiller(body){
+      return await orderService.returnProcessOrderBiller(body);
+    },
+
     showDetailOrder(orders){
       this.order = orders;
       this.visibleDialog = true;
     },
 
     showDetailBiller(order){
-      // this.bill = {
-      //   Creado: 1,
-      //   DocEntry: 13633,
-      //   Error: "",
-      //   Facturado: 1,
-      //   FebosID: "7f386c5320eae240f92aabb2c5e3ca9df970",
-      //   Folio: "185",
-      //   IndicadorFinanciero: "33",
-      //   LinkPDF: "https://tasco.dutech.cl/storage/pdf/biller/E76520280-9_33_185.3.pdf",
-      //   created_at: "2023-12-19T16:39:06.000000Z",
-      //   id: 6,
-      //   order_id: 3264,
-      //   updated_at: "2023-12-19T16:39:06.000000Z",
-      //   user_id: 1,
-      // };
       this.bill = order.bill;
       this.visibleBill = true;
     }

@@ -96,6 +96,8 @@ class OrderManagementService
     public function processOrderBiller(Request $request)
     {
         $order = $this->getOrderAndAssignResponsible($request);
+        $order->update(['is_managed_in_billing' => true]);
+
         $response = $this->generateBillerDocument($order);
         $this->createBillForOrder($order, $response);
 
@@ -106,13 +108,31 @@ class OrderManagementService
         } else {
             $status   = 'error';
             $message = 'Error al generar el documento';
-            $this->rejectOrder($request);
+            if ($this->isSuccessfullyConnection($response)) {
+                $this->rejectOrder($request);
+            }else{
+                $this->getOrderAndAssignResponsible($request);
+                $order->update(['is_managed_in_billing' => false]);
+            }
         }
         return (object) [
             'status' => $status,
             'message' => $message,
             'order' => new OrderResource($order),
         ];
+    }
+
+    public function returnProcessOrderBiller($request)
+    {
+        $order = Order::getOrder($request->order['id']);
+        $order->update([
+            'is_managed_in_billing' => false,
+            'order_status_id' => OrderStatus::STATUS_REVIEWED,
+        ]);
+        $order->bill()->delete();
+        $order->refresh();
+
+        return new OrderResource($order);
     }
 
     protected function getOrderAndAssignResponsible(Request $request)
@@ -134,9 +154,13 @@ class OrderManagementService
         return $response['Creado'] ?? false;
     }
 
+    protected function isSuccessfullyConnection($response)
+    {
+        return array_key_exists('Creado', $response);
+    }
+
     protected function createBillForOrder($order, $response)
     {
-        // dd( $response );
         if(empty($response) || !isset($response['Creado'])) {
             return;
         }
@@ -166,6 +190,23 @@ class OrderManagementService
         ]);
     }
 
+    public function assingResponsibleReport($request)
+    {
+        $user = auth()->user();
+        $orderId = $request->orderId ?? $request->order['id'];
+        $order = Order::getOrder($orderId);
+
+        $order->update([
+            'report_user_id' => $user->id,
+            'report_user_responsible' => $request->responsible,
+            'report_user_name' => $user->name,
+        ]);
+
+        $order->refresh();
+
+        return $order;
+    }
+
     /**
      * Rechaza una orden, actualizando su estado y asignando problemas relacionados si los hay.
      *
@@ -175,16 +216,12 @@ class OrderManagementService
      */
     public function rejectOrder(Request $request)
     {
-        $user = auth()->user();
-        $orderId = $request->orderId ?? $request->order['id'];
-        $order = Order::getOrder($orderId);
 
-        $order->order_status_id = OrderStatus::STATUS_REJECTED;
-        $order->report_user_id = $user->id;
-        $order->report_user_responsible = $request->responsible;
-        $order->report_user_name = $user->name;
+        $order = $this->getOrderAndAssignResponsible($request);
 
-        $order->save();
+        $order->update([
+            'order_status_id' => OrderStatus::STATUS_REJECTED,
+        ]);
 
         switch ($request->responsible):
             case 'cda':

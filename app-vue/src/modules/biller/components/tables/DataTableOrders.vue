@@ -42,17 +42,25 @@
           </Column>
           <Column headerClass="!bg-primary-900"  field="client" header="Emitir">
               <template #body="slotProps">
+                <Button
+                  v-if="slotProps.data.is_managed_in_billing"
+                  :label="'Gestionar'" 
+                  @click="actionMethod('returnProcessOrderBiller', slotProps.data, slotProps.data.U_SBO_FormaPago)" 
+                  class="!py-1.5 !border-primary-900 !text-primary-900 mr-3"  
+                  severity="primary" 
+                  style="width: 100px;"
+                  outlined></Button>
                   <Button
-                    v-if="!orderStore.orderProcessingStatus[slotProps.data.id]?.inProcess"
+                    v-if="!orderStore.orderProcessingStatus[slotProps.data.id]?.inProcess && slotProps.data.is_managed_in_billing == false"
                     :label="slotProps.data.U_SBO_FormaPago" 
                     @click="actionMethod('processOrderBiller', slotProps.data, slotProps.data.U_SBO_FormaPago)" 
                     class="!py-1.5 !border-primary-900 !text-primary-900 mr-3"  
                     severity="primary" 
                     style="width: 100px;"
-                    outlined></Button>
-                    <Tag  
+                    outlined>
+                  </Button>
+                  <Tag  
                       v-else-if="orderStore.orderProcessingStatus[slotProps.data.id]?.inProcess" 
-                      
                       :severity="orderStore.orderProcessingStatus[slotProps.data.id]?.severity"
                       :icon="orderStore.orderProcessingStatus[slotProps.data.id]?.icon"
                       class="tag-font-method tag-radius">
@@ -64,7 +72,15 @@
                           link>
                           Ver
                         </Button>
-                    </Tag>
+                        <Button 
+                        v-if="orderStore.orderProcessingStatus[slotProps.data.id]?.order?.bill === null"
+                        @click="actionMethod('processOrderBiller', slotProps.data, slotProps.data.U_SBO_FormaPago)" 
+                        class="show-bill-details" 
+                        style="min-width: 105px !important;"
+                        link>
+                        Reintentar 
+                      </Button>
+                  </Tag>
               </template>
         </Column>
       </DataTable>

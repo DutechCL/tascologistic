@@ -116,6 +116,17 @@ class OrderQueryService
         return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
     }
 
+    public function listOrderBillManage($methodShipping, bool $execute = true)
+    {
+        $param = $methodShipping === 'here' ? 1 : 0;
+
+        $query = Order::withOrderDetails()
+                ->with('bill')
+                ->where('is_managed_in_billing', true);
+
+        return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
+    }
+
     /**
      * Lista las órdenes asociadas al proceso de pago.
      *
