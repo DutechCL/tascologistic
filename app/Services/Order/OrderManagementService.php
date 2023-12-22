@@ -196,12 +196,10 @@ class OrderManagementService
         $orderId = $request->orderId ?? $request->order['id'];
         $order = Order::getOrder($orderId);
 
-        $order->update([
-            'report_user_id' => $user->id,
-            'report_user_responsible' => $request->responsible,
-            'report_user_name' => $user->name,
-        ]);
-
+        $order->report_user_id = $user->id;
+        $order->report_user_responsible = $request->responsible;
+        $order->report_user_name = $user->name;
+        $order->save();
         $order->refresh();
 
         return $order;

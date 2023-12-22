@@ -139,8 +139,6 @@
     orders.value = value;
     allOrders.value = value;
   })
-
-
 </script>
   
 <style>
