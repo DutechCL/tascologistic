@@ -102,6 +102,7 @@ onMounted(() => {
 
 const showDialog = (order) => {
   assignResponsible(order);
+  ordersPayment.customer = null
   ordersPayment.order = order
   ordersPayment.showDialog = true;
 }

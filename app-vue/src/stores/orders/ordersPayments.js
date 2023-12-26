@@ -8,7 +8,8 @@ export const useOrdersPayment = defineStore('ordersPayment', {
       ordersPaymentsPending: [],
       order: [],
       showDialog: false,
-      customers: [],        
+      customers: [],   
+      customer: null,     
   }),
   getters: {
     getOrdersPaymentsPending(state){
