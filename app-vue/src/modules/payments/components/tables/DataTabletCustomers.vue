@@ -45,7 +45,6 @@ import Button from 'primevue/button'
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
 import Tag from 'primevue/tag'
-import InputNumber from 'primevue/inputnumber';
 import FilterMultiSelect from '../../../../components/filters/FilterMultiSelect.vue';
 import constants from '@/constants/constants';
 import { useOrdersPayment } from '../../../../stores/orders/ordersPayments'
@@ -68,9 +67,10 @@ onMounted(() => {
   customers.value = props.customers;
 });
 
-const showDialog = (order) => {
+const showDialog = (customer) => {
   // assignResponsible(order);
-  ordersPayment.order = order
+  ordersPayment.order = null
+  ordersPayment.customer = customer
   ordersPayment.showDialog = true;
 }
 
