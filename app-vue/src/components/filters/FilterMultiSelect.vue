@@ -91,7 +91,7 @@
             style="border: none; max-width: 300px;" 
             :key="DocTotal" />
       </div>
-        <div :class="[{ 'active-filter-date': selectedTime, }, 'date-time-wrapper']">
+        <div  v-if="props.filters.includes('TimeEmit')" :class="[{ 'active-filter-date': selectedTime, }, 'date-time-wrapper']">
             <button :class="[{'!text-white w-188 !pt-2': selectedTime }, 'text-primary-900 pt-3']" style="" @click="toggleDateTimeFields"> 
               <span>{{ timeLabel }}</span>
               <div v-if="selectedTime" class="align-center card flex justify-content-center mr-5">

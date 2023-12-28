@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\MethodShipping;
 use Illuminate\Database\Seeder;
 
 class MethodShippingsTableSeeder extends Seeder
@@ -14,8 +15,6 @@ class MethodShippingsTableSeeder extends Seeder
      */
     public function run()
     {
-        
-
         \DB::table('method_shippings')->delete();
         
         \DB::table('method_shippings')->insert(array (
@@ -23,7 +22,7 @@ class MethodShippingsTableSeeder extends Seeder
             array (
                 'created_at' => '2023-08-04 20:19:55',
                 'description' => 'Cliente aqui',
-                'id' => 1,
+                'id' => MethodShipping::METHOD_SHIPPING_HERE,
                 'name' => 'Cliente aqui',
                 'updated_at' => '2023-08-04 20:19:55',
             ),
@@ -31,7 +30,7 @@ class MethodShippingsTableSeeder extends Seeder
             array (
                 'created_at' => '2023-08-04 20:19:55',
                 'description' => 'Cliente retira',
-                'id' => 2,
+                'id' => MethodShipping::METHOD_SHIPPING_PICKUP,
                 'name' => 'Retira',
                 'updated_at' => '2023-08-04 20:19:55',
             ),
@@ -39,7 +38,7 @@ class MethodShippingsTableSeeder extends Seeder
             array (
                 'created_at' => '2023-08-04 20:19:55',
                 'description' => 'Cliente despacho',
-                'id' => 3,
+                'id' => MethodShipping::METHOD_SHIPPING_DELIVERY,
                 'name' => 'Despacho',
                 'updated_at' => '2023-08-04 20:19:55',
             ),
@@ -47,12 +46,10 @@ class MethodShippingsTableSeeder extends Seeder
             array (
                 'created_at' => '2023-11-15 18:57:38',
                 'description' => 'Cliente Retira Samex',
-                'id' => 4,
+                'id' => MethodShipping::METHOD_SHIPPING_PICKUP_SAMEX,
                 'name' => 'Retira Samex',
                 'updated_at' => '2023-11-15 18:57:38',
             ),
         ));
-        
-        
     }
 }

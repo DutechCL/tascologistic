@@ -4,7 +4,7 @@
         <h1 class="mb-4 text-primary-900 font-inter font-semibold text-2xl">
           Despacho
         </h1>
-        <Search :type="constants.RESPONSIBLE_DISPATCH"  :orders="allOrders" @search="search"/>
+        <Search :type="`${constants.RESPONSIBLE_DISPATCH}:false`"  :orders="allOrders" @search="search"/>
       </div>
       <div v-if="!ordersStore.isDataLoaded" class="text-center" style="color:#259bd7">
         <i class="pi pi-spin pi-spinner" style="font-size: 2rem;"></i>

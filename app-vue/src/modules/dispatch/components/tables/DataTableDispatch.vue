@@ -104,6 +104,7 @@ const filters = ref([
   // 'DocTime',
   'DocDate',
   'Warehouse',
+  'TimeEmit'
 ])
 
 watch(
