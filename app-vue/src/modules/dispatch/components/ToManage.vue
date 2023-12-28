@@ -10,7 +10,7 @@
           :disabled="ordersStore.listOrdersSelected.length === 0"
           @click="exportOrders"/>
         </h1>
-        <Search :type="constants.RESPONSIBLE_DISPATCH"  :orders="allOrders" @search="search"/>
+        <Search :type="`${constants.RESPONSIBLE_DISPATCH}:true`"  :orders="allOrders" @search="search"/>
       </div>
       <div v-if="!ordersStore.isDataLoaded" class="text-center" style="color:#259bd7">
         <i class="pi pi-spin pi-spinner" style="font-size: 2rem;"></i>

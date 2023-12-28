@@ -242,8 +242,10 @@ class OrderQueryService
                 return $this->listOrdersBills($request->methodShipping, false);
             case 'payment':
                 return $this->listOrdersPayment(false);
-            case 'dispatch':
+            case 'dispatch:true':
                 return $this->listOrdersDispatch(false);
+            case 'dispatch:false':
+                return $this->listOrdersDispatchManage(false);
             default:
                 throw new \InvalidArgumentException("Tipo de búsqueda no válido: $type");
         }

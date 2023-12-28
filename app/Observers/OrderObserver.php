@@ -11,18 +11,16 @@ class OrderObserver
 {
     public function created(Order $order)
     {
-        switch ($order->method_shipping_id):
-            case MethodShipping::METHOD_SHIPPING_HERE:
+        switch ($order->U_SBO_FormaEntrega):
+            case 'Cliente aqui':
                 $order->order_status_id = OrderStatus::STATUS_ON_PICKER;
                 $order->process_id = Process::PROCESS_ID_PICKER;
                 break;
-            case MethodShipping::METHOD_SHIPPING_PICKUP:
-            case MethodShipping::METHOD_SHIPPING_PICKUP_SAMEX:
-            case MethodShipping::METHOD_SHIPPING_DELIVERY:
+            default:
                 $order->order_status_id = OrderStatus::STATUS_ON_HOLD;
                 $order->process_id = Process::PROCESS_ID_CDA;
                 break;
-        endswitch;
+        endswitch;        
 
         $order->save();
         return $order;
