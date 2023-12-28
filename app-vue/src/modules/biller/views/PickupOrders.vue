@@ -1,59 +1,28 @@
 <template>
-    <div class="px-8">
-      <div class="flex justify-between">
-        <h1 class="mb-4 text-primary-900 font-inter font-semibold text-2xl">
-          Retira / Aquí  <a style="cursor: pointer;" @click="updateOrders"><i class="pi pi-refresh"></i></a> 
-        </h1>
-        <Search :type="constants.RESPONSIBLE_BILLER" :methodShipping="constants.METHOD_SHIPPING_HERE"  :orders="orderStore.listOrders" @search="search"/>
-      </div>
+  <div class="px-3">
+    <TabView  v-model="selectedTab">
+      <TabPanel header="Por gestionar">
+        <Manage :status="'pending'" :methodShipping="constants.METHOD_SHIPPING_HERE" />
+      </TabPanel>
+      <TabPanel header="Gestionadas">
+        <Manage :status="'done'" :methodShipping="constants.METHOD_SHIPPING_HERE" />
+      </TabPanel>
+    </TabView>
 
-      <DataTableOrders 
-        :orders="orders"
-        :actions="actions"
-        @action="actionMethod"
-        />
+  </div>
 
-      <DialogDetail 
-      v-if="orderStore.visibleDialog" 
-      v-model:visible="orderStore.visibleDialog" 
-      :orderDetails="orderStore.order"
-      @visible="visibleDetailsMethod"
-      />
-      <div v-if="orders.length === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <h1 class="align-center font-inter font-semibold mb-4 text-2xl text-center text-primary-900">
-          No hay ordenes actualmente en este proceso
-        </h1>
-        <Button label="Regresar"  severity="primary" outlined @click="goBack" class="ml-3 !py-1.5" ></Button>
-      </div>
-    </div>
     <ConfirmDialog></ConfirmDialog>
   </template>
   
   <script setup>
-  import { ref, onBeforeMount, watch} from 'vue';
-  import Button from 'primevue/button';
-  import Search from '../../../components/search/Search.vue';
-  import DialogDetail from '../components/DialogDetail.vue';
-  import DataTableOrders from '../components/tables/DataTableOrders.vue';
-  import ConfirmDialog from 'primevue/confirmdialog';
-  import { useOrdersBills } from '../../../stores/orders/ordersBills.js';
-  import { ToastMixin } from '../../../Utils/ToastMixin';
-  import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
-  import constants from '@/constants/constants';
-  
-  const { showToast } = ToastMixin.setup();
-  const { showConfirm } = ConfirmMixin.setup();
+    import ConfirmDialog from 'primevue/confirmdialog';
+    import TabView from 'primevue/tabview';
+    import TabPanel from 'primevue/tabpanel';
+    import Manage from '../components/Manage.vue';
+    import constants from '@/constants/constants';
 
   const orderStore = useOrdersBills()
   const orders = ref([]);
-  const actions = ref([
-      {
-        active: 'true',
-        method: 'generateDocument',
-        document: constants.DOCUMENT_TYPE_INVOICE,
-        label: 'Factura / Boleta',
-      }
-  ])
 
   const updateOrders = async () => {
     await orderStore.getOrdersBillPickupAndHere();
@@ -77,27 +46,45 @@
       case 'showDetailOrder':
         orderStore.showDetailOrder(data.order);
         break;
-      case 'generateDocument':
-        generateDocument(data);
+      case 'processOrderBiller':
+        processOrderBiller(data);
         break;
     }
   }
 
-  const generateDocument = async (value) => {
+  const processOrderBiller = async (value) => {
+  try {
     let result = await showConfirm();
-    if(result){
-      let response = await orderStore.generateDocument(value);
+
+    if (result) {
+      let response = await orderStore.processOrderBiller(value);
+
+      if (response.status === 'success') {
+        orders.value.filter(o => o.id !== response.data.id);
+        showToast({
+          status: 'success',
+          message: response.message,
+        });
+      } 
+    } else {
       showToast({
-        status: response.status,
-        message: response.message,
+        status: 'info',
+        message: 'Proceso cancelado',
       });
-    }else{
-      showToast({
-      status: 'info',
-      message: 'Proceso cancelado',
-    });
     }
-  };
+  } catch (error) {
+
+    if(error.response.status == 401){
+      orders.value.filter(o => o.id !== error.response.data.data.id);
+    }
+    // Manejar errores generales, por ejemplo, problemas de conexión
+    showToast({
+      status: 'error',
+      message: error.response.data.message,
+    });
+  }
+};
+
 
   const visibleDetailsMethod = (value) => {
     orderStore.visibleDialog = value.visibleDetails;
@@ -119,10 +106,43 @@
 <style>
   .p-tag-1{
     @apply bg-primary-100
+    
   }
   .p-tag-1 span{
     @apply text-primary-900
   }
 
+.p-tabview .p-tabview-nav{
+  @apply flex justify-center border-none mb-3;
+}
+.p-tabview .p-tabview-nav li.p-highlight{
+  @apply relative z-10 ;
+  margin-right: -20px !important;
+}
+.p-tabview .p-tabview-nav li.p-highlight:nth-child(2){
+  margin-left: -20px !important;
+}
+.p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+    box-shadow: none;
+}
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link{
+  @apply bg-primary-900 rounded-3xl border-2 border-primary-900;
+}
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link span{
+  @apply text-white;
+}
+.p-tabview .p-tabview-nav li .p-tabview-nav-link{
+  @apply !py-3 !px-10 border-primary-900 border-2 font-normal hover:border-primary-900;
+}
+.p-tabview .p-tabview-nav li .p-tabview-nav-link span{
+  @apply text-primary-900;
+}
+
+.p-tabview .p-tabview-nav li:nth-child(2) .p-tabview-nav-link{
+  @apply rounded-r-3xl border-l-0;
+}
+
+.p-tabview .p-tabview-nav li:nth-child(1) .p-tabview-nav-link{
+  @apply rounded-l-3xl  border-r-0 ;
+}
 </style>
-          

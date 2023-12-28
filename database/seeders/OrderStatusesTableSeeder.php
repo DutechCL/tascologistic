@@ -90,6 +90,15 @@ class OrderStatusesTableSeeder extends Seeder
                 'created_at' => '2023-08-29 19:31:20',
                 'updated_at' => '2023-09-27 16:58:14',
             ),
+            8 => 
+            array (
+                'id' => OrderStatus::STATUS_DISPATCH,
+                'name' => 'Despachada',
+                'description' => 'Cuando la orden es despachada correctamnet',
+                'color' => '#ff9494',
+                'created_at' => '2023-08-29 19:31:20',
+                'updated_at' => '2023-09-27 16:58:14',
+            ),
         ));
         
         

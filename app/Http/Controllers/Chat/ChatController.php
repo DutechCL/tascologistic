@@ -2,88 +2,125 @@
 
 namespace App\Http\Controllers\Chat;
 
-use App\Models\Order;
+
 use App\Models\Chat\Chat;
-use App\Events\MessageSent;
-use App\Models\Chat\Message;
 use Illuminate\Http\Request;
-use App\Services\OrderService;
 use App\Http\Exports\ChatExport;
-use App\Services\Chat\ChatService;
 use App\Http\Controllers\Controller;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Http\Resources\OrderResource;
+use App\Services\Chat\MessageService;
+use App\Services\Chat\ChatUserService;
+use App\Services\Chat\ChatManagementService;
 
 class ChatController extends Controller
 {
-    protected OrderService $orderService;
-    protected ChatService $chatService;
 
-    public function __construct(OrderService $orderService, ChatService $chatService)
-    {
-        $this->orderService = $orderService;
-        $this->chatService = $chatService;
-    }
+
+    public function __construct(
+        protected ChatManagementService $chatManagementService,
+        protected ChatUserService $chatUserService,
+        protected MessageService $messageService,
+    ){}
 
     public function sendMessage(Request $request)
     {
-        $objMessage = $this->chatService->sendMessage($request);
-
-        return $this->success($objMessage);
+        try {
+            $objMessage = $this->messageService->sendMessage($request);
+            return $this->success(
+                $objMessage
+            );
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
     }
 
     public function getMessages($chatId)
     {
-        $result = $this->chatService->listMessage($chatId);
+        try {
+            $result = $this->messageService->list($chatId);
+            return $this->success(
+                $result
+            );
 
-        return $this->success($result);
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
     }
 
     public function getUser()
     {
-        $user = auth()->user();
-
-        return $this->success([
-            'user' => $user,
-            'csrf' => csrf_token(),
-        ]);
+        try {
+            $user = auth()->user();
+            return $this->success([
+                'user' => $user,
+                'csrf' => csrf_token(),
+            ]);
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
     }
 
     public function showChat($id)
     {
-        $order = $this->chatService->showChat($id);
+        try {
+            $order = $this->chatManagementService->showChat($id);
+            return $this->success(
+                $order
+            );
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
 
-        return $this->success($order);
     }
 
-    public function getOrders()
+    public function getChats()
     {
-        $chat = $this->chatService->listChatsByUser();
+        try {
+            $chat = $this->chatUserService->listChatsByUser();
 
-        return $this->success($chat);
+            return $this->success(
+                $chat
+            );
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
     }
 
     public function getResolve()
     {
-        $chat = $this->chatService->listChatsHistory();
-
-        return $this->success($chat);
+        try {
+            $chat = $this->chatManagementService->listChatsHistory();
+            return $this->success(
+                $chat
+            );
+        }catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
     }
 
-    public function resolveOrder($id)
+    public function resolveChatAndOrder($id)
     {
-        $order = $this->chatService->resolveOrder($id);
-
-        return $this->success($order);
+        try {
+            $order = $this->chatManagementService->resolveChatAndOrder($id);
+            return $this->success(
+                $order
+            );
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
     }
 
     public function export($status)
     {
-        $name = $status == Chat::STATUS_OPEN ? 'Abiertos' : 'Cerrados';
+        try {
+            $name = $status == Chat::STATUS_OPEN ? 'Abiertos' : 'Cerrados';
 
-        $chats = $this->chatService->export($status);
-
-        return Excel::download(new ChatExport($chats, $status), "Chat {$name}.xlsx");
+            $chats = $this->chatManagementService->export($status);
+    
+            return Excel::download(new ChatExport($chats, $status), "Chat {$name}.xlsx");
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
     }
 
 }

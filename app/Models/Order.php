@@ -2,23 +2,16 @@
 
 namespace App\Models;
 
-use App\Models\Product;
+use App\Models\Bill;
 use App\Models\Customer;
-use App\Models\LogOrder;
+use App\Models\Chat\Chat;
 use App\Models\OrderItem;
 use App\Models\OrderStatus;
-use App\Models\SalesPerson;
 use App\Models\OrderProblem;
 use App\Models\MethodShipping;
-use App\Services\OrderService;
-use App\Models\RoleAssignments;
-use App\Models\OrderItemProblem;
-use App\Services\ProcessService;
-use App\Events\OrderStatusUpdated;
-use Illuminate\Support\Facades\DB;
-use App\Events\OrderClassifiedProcess;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Casts\Attribute;
+use App\Services\Order\OrderSynchronizationService;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Order extends Model
@@ -47,6 +40,7 @@ class Order extends Model
         'DocRate',
         'FederalTaxID',
         'DiscountPercent',
+        'Address2',
     ];
     const FILLABLE_INTERNAL = [
         'process_id',
@@ -61,11 +55,24 @@ class Order extends Model
         'report_user_responsible',
         'report_user_name',
         'is_resolved',
+        'is_managed_in_billing',
+        'is_dispatched',
     ];
 
     protected $fillable = [
         ...self::FILLABLE_API,
         ...self::FILLABLE_INTERNAL,
+    ];
+
+    protected $appends = [
+        'indicator',
+        'warehouse',
+    ];
+
+    protected $casts = [
+        'DocRate'         => 'integer',
+        'SalesPersonCode' => 'integer',
+        'DiscountPercent' => 'integer',
     ];
 
     protected static function boot()
@@ -80,6 +87,11 @@ class Order extends Model
         static::updating(function ($order) {
             $order->attributes['Confirmed'] = strtolower($order->attributes['Confirmed']) === 'tyes' ? 1 : 0;
         });
+    }
+
+    public function bill()
+    {
+        return $this->hasOne(Bill::class, 'order_id');
     }
 
     public function customer()
@@ -117,6 +129,42 @@ class Order extends Model
         return $this->hasMany(Chat::class);
     }
 
+
+    protected function Indicator(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+
+                $formaPago = $this->U_SBO_FormaPago ?? null;
+    
+                switch ($formaPago) {
+                    case 'Factura':
+                        return "33";
+                    case 'Boleta':
+                        return "39";
+                    default:
+                        return "52";
+                }
+            }
+        );
+    }
+
+    protected function Warehouse(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+
+                $orderItems = $this->orderItems;
+    
+                if ($orderItems->isEmpty()) {
+                    return null; 
+                }
+    
+                return $orderItems->first()->WarehouseCode;
+            }
+        );
+    }
+
     public static function getSyncInfo(array $params = [], string $operator = 'and')
     {
         $order = self::latest('DocNum')->first();
@@ -152,16 +200,19 @@ class Order extends Model
 
     public static function syncOrder(array $where, array $orderData)
     {
-       return  (new OrderService)->syncOrderWithItems($where, $orderData);
+       return  (new OrderSynchronizationService)->syncOrderWithItems($where, $orderData);
     }
     
     public function scopeWithOrderDetails($query)
     {
         return $query->with([
-            'customer', 
             'orderStatus', 
             'methodShipping', 
             'responsibles',
+            'customer' => function ($query) {
+                $query->select('customers.*')
+                    ->with(['addresses', 'contactEmployees']);
+            }, 
             'orderItems' => function ($query) {
                 $query->with(['problems' => function ($query) {
                         $query->select(['order_item_problems.*', 'problems.title as problem_name'])
@@ -192,9 +243,12 @@ class Order extends Model
     public function assignResponsible($task)
     {
         $tasks = [
-            'cda' => 'CDA',
-            'picker' => 'PICKEO',
+            'cda'      => 'CDA',
+            'picker'   => 'PICKEO',
             'reviewer' => 'REVISIÓN',
+            'biller'   => 'FACTURADOR',
+            'payment'  => 'PAGOS',
+            'dispatch' => 'DESPACHO',
         ];
     
         $user = auth()->user() ?? User::find(1);

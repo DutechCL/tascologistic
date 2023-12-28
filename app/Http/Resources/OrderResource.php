@@ -2,8 +2,6 @@
 namespace App\Http\Resources;
 
 use App\Models\Problem;
-use App\Http\Resources\OrderResource;
-use App\Collections\ProductsCollection;
 use App\Http\Resources\ProductResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -13,7 +11,14 @@ class OrderResource extends JsonResource
     {
         $orderItems = ProductResource::collection($this->orderItems)->resolve();
 
-        // Define la estructura de la respuesta para una sola orden
+        $location = [
+            'cda'      => 'CDA',
+            'picker'   => 'Bodega',
+            'reviewer' => 'Bodega',
+            'biller'   => 'Facturador',
+            'payment'  => 'Pagos',
+            'dispatch' => 'Despacho',
+        ];
         
         return [
             'id' => $this->id,
@@ -25,6 +30,7 @@ class OrderResource extends JsonResource
             'DocTotal' => '$' . number_format($this->DocTotal, 0, '.', ','),
             'Customer' => $this->customer,
             'U_SBO_FormaEntrega' => $this->U_SBO_FormaEntrega,
+            'U_SBO_FormaPago' => $this->U_SBO_FormaPago,
             'method_shipping_id' => $this->method_shipping_id,
             'MethodShippingName' => ucfirst(str_replace('Cliente ', '', optional($this->methodShipping)->name)),
             'OrderStatusName' => optional($this->orderStatus)->name,
@@ -42,9 +48,14 @@ class OrderResource extends JsonResource
             'process_id' => $this->process_id,
             'report_user_id' => $this->report_user_id,
             'report_user_responsibles' => $this->report_user_responsible,
+            'report_problem_location' => $this->report_user_responsible ? $location[$this->report_user_responsible] : null,
             'report_user_name' => $this->report_user_name,
             'has_problems' => $this->has_problems,
             'is_resolved' => $this->is_resolved,
+            'Indicator' => $this->indicator,
+            'warehouse' => $this->warehouse,
+            'bill' => $this->bill,
+            'is_managed_in_billing' => $this->is_managed_in_billing,
             'Problems' => $this->problems->map(function ($problem) {
                 return [
                     'id' => $problem->id,

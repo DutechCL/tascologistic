@@ -60,4 +60,14 @@ return [
         ]
     ],
 
+    'biller' => [
+        'url'      => env('BILLER_API_URL'),
+        'domain'   => env('BILLER_API_DOMAIN'),
+        'credentials' => [
+            'company_db' => env('BILLER_COMPANY_DB'),
+            'username'   => env('BILLER_USERNAME'),
+            'password'   => env('BILLER_PASSWORD'),
+        ],
+    ]
+
 ];

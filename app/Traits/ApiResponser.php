@@ -11,7 +11,6 @@ namespace App\Traits;
 |
 */
 
-use App\Exceptions\AsufinBaseException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
@@ -58,7 +57,7 @@ trait ApiResponser
         return response()->json([
             'status' => 'error',
             'message' => $exception->getMessage(),
-            'application_code' => $exception instanceof AsufinBaseException ? $exception->getApplicationCode() : 'unknown',
+            'application_code' =>  'unknown',
             'data' => config('app.env') == 'local' ? $this->buildResponseDataFromException($exception) : []
         ], Response::HTTP_BAD_REQUEST);
     }

@@ -59,6 +59,14 @@ class RolesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
+            5 => 
+            array (
+                'id' => 6,
+                'name' => 'Encargado de despacho',
+                'guard_name' => 'responsible-dispatch',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
         ));
         
         

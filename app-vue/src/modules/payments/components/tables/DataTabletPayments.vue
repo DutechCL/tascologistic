@@ -81,7 +81,11 @@ import InputNumber from 'primevue/inputnumber';
 import FilterMultiSelect from '../../../../components/filters/FilterMultiSelect.vue';
 import constants from '@/constants/constants';
 import { useOrdersPayment } from '../../../../stores/orders/ordersPayments'
+import { ToastMixin } from '../../../../Utils/ToastMixin';
+import { ConfirmMixin } from '../../../../Utils//ConfirmMixin';
 
+const { showToast } = ToastMixin.setup();
+const { showConfirm } = ConfirmMixin.setup();
 const ordersPayment = useOrdersPayment();
 
 const props = defineProps({
@@ -97,8 +101,25 @@ onMounted(() => {
 });
 
 const showDialog = (order) => {
+  assignResponsible(order);
+  ordersPayment.customer = null
   ordersPayment.order = order
   ordersPayment.showDialog = true;
+}
+
+const assignResponsible = async (order) => {
+  try {
+    const response = await ordersPayment.assignResponsible(order.id);
+    showToast({
+      status: response.status,
+      message: response.message,
+    });
+  } catch (error) {
+    showToast({
+      status: error.response.data.status,
+      message: error.response.data.message,
+    });
+  }
 }
 const filter = (data) => {
   orders.value = data.orders;

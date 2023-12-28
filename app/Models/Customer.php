@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Models\Order;
-use App\Services\CustomerService;
+use App\Services\Customer\CustomerService;
 use App\Models\CustomerContactEmployee;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
@@ -29,16 +29,23 @@ class Customer extends Model
         'UpdateTime',
         'CardType',
         'GroupCode',
+        'CreditLimit',
+        'CurrentAccountBalance',
         'ContactPerson',
         'CardForeignName',
         'ShipToDefault',
         'BilltoDefault',
         'Currency',
         'BPAddresses',
-        'ContactEmployees'
+        'ContactEmployees',
+        'Phone1'
     ];
 
     protected $fillable = self::FILLABLE;
+
+    protected $cats = [
+        'GroupCode' => 'integer',
+    ];
 
     public function orders()
     {

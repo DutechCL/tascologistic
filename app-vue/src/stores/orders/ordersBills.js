@@ -8,7 +8,10 @@ export const useOrdersBills = defineStore('ordersBills', {
   state: () => ({ 
       listOrders: [],
       order: [],
-      visibleDialog: false,        
+      visibleDialog: false,      
+      orderProcessingStatus: {},
+      bill: {},
+      visibleBill: false,
   }),
   getters: {
     orders: (state) => state.listOrders,
@@ -24,8 +27,13 @@ export const useOrdersBills = defineStore('ordersBills', {
       this.listOrders = response.data;
     },
 
-    async generateDocument(body){
-      let response = await orderService.generateDocument(body);
+    async getOrdersBillManage(methodShipping){
+      let response = await orderService.getOrdersBillManage(methodShipping);
+      return response.data;
+    },
+
+    async processOrderBiller(body){
+      let response = await orderService.processOrderBiller(body);
 
       if(response.data.order_status_id === constants.ORDER_STATUS_BILLED){
         this.listOrders = this.listOrders.filter(o => o.id !== response.data.id);
@@ -41,9 +49,18 @@ export const useOrdersBills = defineStore('ordersBills', {
       return response;
     },
 
+    async returnProcessOrderBiller(body){
+      return await orderService.returnProcessOrderBiller(body);
+    },
+
     showDetailOrder(orders){
       this.order = orders;
       this.visibleDialog = true;
-    } 
+    },
+
+    showDetailBiller(order){
+      this.bill = order.bill;
+      this.visibleBill = true;
+    }
   }
 })

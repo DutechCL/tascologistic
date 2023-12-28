@@ -10,6 +10,7 @@ use App\Http\Controllers\Api\V1\OrderController;
 use App\Http\Controllers\Api\V1\ProductController;
 use App\Http\Controllers\Api\V1\CustomerController;
 use App\Http\Controllers\Api\V1\ProblemsController;
+use App\Http\Controllers\Api\V1\CustomersController;
 use App\Http\Controllers\Api\V1\OrderItemsController;
 use App\Http\Controllers\Api\V1\PermissionController;
 use App\Http\Controllers\Admin\MenuItemCrudController;
@@ -44,6 +45,12 @@ Route::prefix('v1')->group(
             Route::post('problems', [ProblemsController::class, 'index']);
             Route::post('sap/sync', [SapSyncController::class, 'sync'])->name('admin.sap.sync');
         });
+
+        //URL'S CUSTOMERS
+        Route::middleware(['auth:sanctum'])->prefix('customers')->group(function () {
+            Route::get('/', [CustomersController::class, 'getCustomers']);
+            Route::post('search', [CustomersController::class, 'searchCustomers']);
+        });
         
         //URL'S ORDENES CDA
         Route::middleware(['auth:sanctum'])->prefix('orders/cda')->group(function () {
@@ -57,14 +64,23 @@ Route::prefix('v1')->group(
         Route::middleware(['auth:sanctum'])->prefix('orders/picker-reviewer')->group(function () {
             Route::get('{wareHouseCode}', [OrderController::class, 'getOrdersPickerAndReviewer']);
             Route::post('process-order', [OrderController::class, 'processOrderPickerReviewer']);
-            Route::put('{id}/assign/responsible', [OrderController::class, 'assingResponsible']);
         });
         
         //URL'S ORDENES BILLS
         Route::middleware(['auth:sanctum'])->prefix('orders/bills')->group(function () {
             Route::get('pickup-here', [OrderController::class, 'getOrdersBillPickupAndHere']);
             Route::get('delivery', [OrderController::class, 'getOrdersBilldelivery']);
-            Route::get('generate/document/{document}/order/{id}', [OrderController::class, 'generateDocument']);
+            Route::post('process-order', [OrderController::class, 'processOrderBiller']);
+            Route::post('process-order/return', [OrderController::class, 'returnProcessOrderBiller']);
+            Route::get('manage/{methodShipping}', [OrderController::class, 'getOrdersBillManage']);
+        });
+
+        //URL'S ORDENES DISPATCHER
+        Route::middleware(['auth:sanctum'])->prefix('orders/dispatch')->group(function () {
+            Route::get('/', [OrderController::class, 'getOrdersDispatch']);
+            Route::get('manage', [OrderController::class, 'getOrdersDispatchManage']);
+            Route::get('export', [OrderController::class, 'exportDispatch']);
+            Route::get('warehouses', [OrderController::class, 'getWarehouses']);
         });
 
         //URL'S ORDENES PAGO
@@ -80,6 +96,7 @@ Route::prefix('v1')->group(
         //URL'S ORDENES
         Route::middleware(['auth:sanctum'])->prefix('orders')->group(function () {
             Route::post('search', [OrderController::class, 'searchOrders']);
+            Route::put('assign/responsible', [OrderController::class, 'assignResponsible']);
         });
 
         //URL'S CHAT 
@@ -87,10 +104,10 @@ Route::prefix('v1')->group(
             Route::post('send-message', [ChatController::class, 'sendMessage']);
             Route::get('get-message/{id}', [ChatController::class, 'getMessages']);
             Route::get('get-user', [ChatController::class, 'getUser']);
-            Route::get('get-orders', [ChatController::class, 'getOrders']);
+            Route::get('get-orders', [ChatController::class, 'getChats']);
             Route::get('get-resolve', [ChatController::class, 'getResolve']);
             Route::get('show/{id}', [ChatController::class, 'showChat']);
-            Route::get('resolve/{id}', [ChatController::class, 'resolveOrder']);
+            Route::get('resolve/{id}', [ChatController::class, 'resolveChatAndOrder']);
         });
     }
 );

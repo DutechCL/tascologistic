@@ -35,8 +35,24 @@ export const useOrders = defineStore('orders', {
             return await getWithToken(`api/v1/orders/bills/delivery`);
         },
 
+        async getOrdersBillManage(methodShipping) {
+            return await getWithToken(`api/v1/orders/bills/manage/${methodShipping}`);
+        },
+
         async getOrdersPayment() {
             return await getWithToken(`api/v1/orders/payment`);
+        },
+
+        async getOrdersDispatch() {
+            return await getWithToken(`api/v1/orders/dispatch`);
+        },
+
+        async getOrdersDispatchManage() {
+            return await getWithToken(`api/v1/orders/dispatch/manage`);
+        },
+
+        async getWarehouses() {
+            return await getWithToken(`api/v1/orders/dispatch/warehouses`);
         },
 
         async processOrderCda(body) {
@@ -47,20 +63,23 @@ export const useOrders = defineStore('orders', {
             return await postWithToken('api/v1/orders/picker-reviewer/process-order', body);
         },
 
+        async processOrderBiller(body){
+            return await postWithToken(`api/v1/orders/bills/process-order`, body);
+        },
+
+        async returnProcessOrderBiller(body) {
+            return await postWithToken(`api/v1/orders/bills/process-order/return`, body);
+        },
+
         async getOrdersPickerAndReviewer(wareHouseCode) {
             return await getWithToken(`api/v1/orders/picker-reviewer/${wareHouseCode}`);
         },
         async addObservation(body) {
             return await postWithToken('api/v1/orders/authorizer/observation', body);
-
         },
 
-        async assingResponsible(data) {
-            return await putWithToken(`api/v1/orders/picker-reviewer/${data.id}/assign/responsible`, data);
-        },
-
-        async generateDocument(body){
-            return await getWithToken(`api/v1/orders/bills/generate/document/${body.document}/order/${body.order.id}`);
+        async assignResponsible(data) {
+            return await putWithToken(`api/v1/orders/assign/responsible`, data);
         },
 
         async getOrdersTracker(type) {
@@ -70,5 +89,17 @@ export const useOrders = defineStore('orders', {
         async searchOrders(body) {
             return await postWithToken(`api/v1/orders/search/`, body);
         },
+
+        async getCustomers(body) {
+            return await getWithToken(`api/v1/customers/`);
+        },
+
+        async searchCustomers(body) {
+            return await postWithToken(`api/v1/customers/search/`, body);
+        },
+
+        async exportOrdersDispatch(body) {
+            return await postWithToken(`api/v1/orders/dispatch/export`, body);
+        }
     }
 });

@@ -11,6 +11,7 @@ export const useOrdersCda = defineStore('ordersCda', {
       order: [],  
       showDialog: false,
       typeDialog: '',
+      buttomReport: true,
       currentOrder: {
         orderId: null,
         action: '',

@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 class ManagementController extends Controller
 {
-    //!Listo
     public function index()
     {
         $user = auth()->user();

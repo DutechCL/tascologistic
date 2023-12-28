@@ -36,7 +36,7 @@ class SettingCrudController extends CrudController
     {
          foreach ($request->all() as $key => $value) {
 
-            if($key == '_sap_password' && is_null($value)){
+            if (($key == '_sap_password' || $key == '_biller_password') && is_null($value)) {
                 continue;
             }
 
