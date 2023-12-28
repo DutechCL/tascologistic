@@ -42,6 +42,7 @@ Thumbs.db
 /public/build
 /public/app
 /public/hot
+/public/app
 /public/storage
 /storage/*.key
 /vendor

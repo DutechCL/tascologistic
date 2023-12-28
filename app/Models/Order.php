@@ -40,6 +40,7 @@ class Order extends Model
         'DocRate',
         'FederalTaxID',
         'DiscountPercent',
+        'Address2',
     ];
     const FILLABLE_INTERNAL = [
         'process_id',
@@ -55,6 +56,7 @@ class Order extends Model
         'report_user_name',
         'is_resolved',
         'is_managed_in_billing',
+        'is_dispatched',
     ];
 
     protected $fillable = [
@@ -64,6 +66,7 @@ class Order extends Model
 
     protected $appends = [
         'indicator',
+        'warehouse',
     ];
 
     protected $casts = [
@@ -130,9 +133,9 @@ class Order extends Model
     protected function Indicator(): Attribute
     {
         return Attribute::make(
-            get: function ($value, $attributes) {
+            get: function () {
 
-                $formaPago = $attributes['U_SBO_FormaPago'] ?? null;
+                $formaPago = $this->U_SBO_FormaPago ?? null;
     
                 switch ($formaPago) {
                     case 'Factura':
@@ -142,6 +145,22 @@ class Order extends Model
                     default:
                         return "52";
                 }
+            }
+        );
+    }
+
+    protected function Warehouse(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+
+                $orderItems = $this->orderItems;
+    
+                if ($orderItems->isEmpty()) {
+                    return null; 
+                }
+    
+                return $orderItems->first()->WarehouseCode;
             }
         );
     }

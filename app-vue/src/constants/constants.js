@@ -16,6 +16,7 @@ export const RESPONSIBLE_REVIEWER = 'reviewer';
 export const RESPONSIBLE_PICKER_REVIEWER = 'picker-reviewer';
 export const RESPONSIBLE_BILLER = 'bills';
 export const RESPONSIBLE_PAYMENT = 'payment';
+export const RESPONSIBLE_DISPATCH = 'dispatch';
 
 /* Order status */
 export const ORDER_STATUS_ON_HOLD         = 1;
@@ -54,6 +55,8 @@ const constants = {
     RESPONSIBLE_REVIEWER,
     RESPONSIBLE_PICKER_REVIEWER,
     RESPONSIBLE_BILLER,
+    RESPONSIBLE_PAYMENT,
+    RESPONSIBLE_DISPATCH,
     ORDER_STATUS_ON_HOLD,
     ORDER_STATUS_ON_PICKER,
     ORDER_STATUS_PICKED,
@@ -69,7 +72,6 @@ const constants = {
     DOCUMENT_TYPE_INVOICE,
     PROCESS_PICKER_ID,
     PROCESS_REVIEWER_ID,
-    RESPONSIBLE_PAYMENT
 };
 
 export default constants;

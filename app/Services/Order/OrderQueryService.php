@@ -4,6 +4,8 @@ namespace App\Services\Order;
 
 use App\Models\Order;
 use App\Models\Process;
+use App\Models\OrderItem;
+use App\Models\Warehouse;
 use App\Models\OrderStatus;
 use Illuminate\Http\Request;
 use App\Models\MethodShipping;
@@ -128,6 +130,34 @@ class OrderQueryService
     }
 
     /**
+     * Lista las órdenes asociadas al proceso de despacho, filtradas por el tipo de envío y status.
+     *
+     * @param bool $execute Indica si se ejecuta la consulta o solo se prepara.
+     * @return mixed Lista paginada de órdenes o el objeto de consulta.
+     */
+    public function listOrdersDispatch(bool $execute = true, bool $isDispatched = false)
+    {
+        $query = Order::withOrderDetails()
+                    ->where('process_id', Process::PROCESS_ID_CDA)
+                    ->where('method_shipping_id', MethodShipping::METHOD_SHIPPING_DELIVERY)
+                    ->where('is_dispatched', $isDispatched)
+                    ->orderByDesc('DocDate');
+
+        return $execute ? $query->paginate(self::PAGE_SIZE * 5) : $query;
+    }
+
+
+    public function listOrdersDispatchManage(bool $execute = true)
+    {
+        $executeQuery = false;
+        $isDispatched = true;
+
+        $query = $this->listOrdersDispatch($executeQuery, $isDispatched);
+
+        return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
+    }
+
+    /**
      * Lista las órdenes asociadas al proceso de pago.
      *
      * @param bool $execute Indica si se ejecuta la consulta o solo se prepara.
@@ -159,6 +189,13 @@ class OrderQueryService
                     ->where('method_shipping_id', $condition, MethodShipping::METHOD_SHIPPING_HERE);
 
         return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
+    }
+
+    public function listWarehouses()
+    {
+        return OrderItem::select('WarehouseCode')
+                ->groupBy('WarehouseCode')
+                ->get();
     }
 
     /**
@@ -205,6 +242,8 @@ class OrderQueryService
                 return $this->listOrdersBills($request->methodShipping, false);
             case 'payment':
                 return $this->listOrdersPayment(false);
+            case 'dispatch':
+                return $this->listOrdersDispatch(false);
             default:
                 throw new \InvalidArgumentException("Tipo de búsqueda no válido: $type");
         }

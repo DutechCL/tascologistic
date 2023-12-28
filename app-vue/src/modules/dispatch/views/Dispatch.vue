@@ -1,11 +1,11 @@
 <template>
   <div class="px-3">
     <TabView  v-model="selectedTab">
-      <TabPanel header="Incidencias en notas de venta">
-        <ChatActive @exportChat="exportChat"/>
+      <TabPanel header="Por gestionar">
+        <ToManage :orders="orderToManage" @exportOrders="exportOrders"/>
       </TabPanel>
-      <TabPanel header="Históricos" >
-        <ChatHistory @exportChat="exportChat"/>
+      <TabPanel header="Gestionadas" >
+        <Manage :orders="orderManage"/>
       </TabPanel>
     </TabView>
   </div>
@@ -16,19 +16,36 @@
 import { onBeforeMount, ref, watch } from 'vue';
 import TabView from 'primevue/tabview'
 import TabPanel from 'primevue/tabpanel'
-import ChatActive from '../components/ChatActive.vue'
-import ChatHistory from '../components/ChatHistory.vue'
 import ConfirmDialog from 'primevue/confirmdialog';
-import { ToastMixin } from '../../../Utils/ToastMixin';
+import ToManage from '../components/ToManage.vue'
+import Manage from '../components/Manage.vue'
+import { useOrdersDispatch } from "../../../stores/orders/ordersDispatch";
 
-const { showToast } = ToastMixin.setup();
+const orderToManage = ref([]);
+const orderManage = ref([]);
+const ordersStore = useOrdersDispatch();
 
-const exportChat = (data) => {
-    const link = document.createElement('a');
-    link.href = `/chat/export/${data.type}`;
-    document.body.appendChild(link);
-    link.click();
+const updateOrders = async () => {
+  await ordersStore.getOrdersDispatch().then(orders => {
+    orderToManage.value = orders;
+  });
+
+  await ordersStore.getOrdersDispatchManage().then(orders => {
+    orderManage.value = orders;
+  });
 }
+onBeforeMount( async() => {
+  updateOrders();
+})
+
+const exportOrders = (data) => {
+  const orderIds = data.orders.map(order => order.id);
+  const orderIdsString = orderIds.join(',');
+  const url = `/api/v1/orders/dispatch/export?ids=${orderIdsString}`;
+  window.open(url, '_blank');
+  updateOrders();
+
+};
 
 </script>
 

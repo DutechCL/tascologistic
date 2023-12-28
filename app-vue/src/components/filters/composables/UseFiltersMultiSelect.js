@@ -1,11 +1,14 @@
 
-import { ref, watch } from 'vue';
+import { ref, watch, onBeforeMount } from 'vue';
 import { isWithinInterval } from 'date-fns';
 import { ToastMixin } from '../../../Utils/ToastMixin';
+import { useOrdersDispatch } from "../../../stores/orders/ordersDispatch";
+import { arSA } from 'date-fns/locale';
 
 export function UseFiltersMultiSelect(ListordersManager) {
 
   const { showToast } = ToastMixin.setup();
+  const ordersStore = useOrdersDispatch();
 
   const dates = ref(null)
   const dateLabel = ref(true)
@@ -14,8 +17,64 @@ export function UseFiltersMultiSelect(ListordersManager) {
   const DocTime = ref([])
   const Customer = ref([])
   const DocTotal = ref([])
+  const Warehouse = ref([])
+  const Warehouses = ref([])
   const isFiltersEmpty = ref(true);
+  const timeLabel = ref('Hora de Emisión');
   const orders = ref(ListordersManager.value);
+
+
+  // Variables reactivas
+  const startDateTime = ref(null);
+  const endDateTime = ref(null);
+  const showDateTimeFields = ref(false);
+  const selectedTime = ref(false);
+
+  // Función para toggle de los campos
+  const toggleDateTimeFields = () => {
+      showDateTimeFields.value = !showDateTimeFields.value;
+  };
+
+  const applyFilter = () => {
+      if (startDateTime.value && endDateTime.value) {
+        let timeRange = [startDateTime.value, endDateTime.value];
+        let result = filterOrdersByTimeRange(timeRange, orders.value);
+
+        if(result.length > 0){
+          orders.value = result
+          const startTime = startDateTime.value.toLocaleTimeString('es-VE', { hour: '2-digit', minute: '2-digit', hour12: false });
+          const endTime = endDateTime.value.toLocaleTimeString('es-VE', { hour: '2-digit', minute: '2-digit', hour12: false });
+          timeLabel.value = `${startTime} - ${endTime}`;
+          selectedTime.value = true;
+        }else{
+          orders.value = orders.value
+          showToast({
+            status: 'info',
+            title: 'Sin resultados',
+            message: 'No hay resultados para el intervalo de tiempo seleccionado',
+            time: 6000,
+          });
+        }
+        toggleDateTimeFields();
+      } else {
+          timeLabel.value = 'Hora no definida';
+      }
+  };
+
+  const removeFilterTime = () => {
+      startDateTime.value = null;
+      endDateTime.value = null;
+      timeLabel.value = 'Hora de Emisión';
+      selectedTime.value = false;
+      toggleDateTimeFields();
+  }
+
+
+  onBeforeMount( async () => {
+    await ordersStore.getWarehouses().then((response) => {
+      Warehouses.value = response.data;
+    });
+  })
 
   watch([dates], (data) => {
     const isDatesValid = dates.value !== null && dates.value.every(date => date !== null);
@@ -24,6 +83,22 @@ export function UseFiltersMultiSelect(ListordersManager) {
       dateLabel.value = false;
     }
   });
+
+  watch( 
+    Warehouse, 
+    () => {
+      let warehouseCodes = Warehouse.value.map(warehouse => warehouse.WarehouseCode)
+
+      let result = ListordersManager.value.filter(order => {
+        return warehouseCodes.includes(order.warehouse)
+      })  
+
+      if(result.length > 0){
+        orders.value = result 
+      }else{
+        orders.value = ListordersManager.value
+      }
+  })
 
   function filterOrders(dates) {
     let result = filterOrdersByDateRange(dates, orders.value)
@@ -38,6 +113,18 @@ export function UseFiltersMultiSelect(ListordersManager) {
         time: 6000,
       });
     }
+  }
+  function getHourMinute(date) {
+      return date.getHours() * 100 + date.getMinutes();
+  }
+
+  function filterOrdersByTimeRange(timeRange, orders) {
+      const [startTime, endTime] = timeRange.map(time => getHourMinute(time));
+      
+      return orders.filter(order => {
+          const orderTime = getHourMinute(new Date(order.bill?.created_at));
+          return orderTime >= startTime && orderTime <= endTime;
+      });
   }
 
   function filterOrdersByDateRange(dates, orders) {
@@ -92,6 +179,11 @@ const filterData = (data) => {
 watchFilters([DocNum, Customer, DocTime, DocTotal, DocEntry]);
 
   return {
+    startDateTime,
+    endDateTime,
+    showDateTimeFields,
+    timeLabel,
+    selectedTime,
     dates,
     dateLabel,
     orders,
@@ -100,6 +192,11 @@ watchFilters([DocNum, Customer, DocTime, DocTotal, DocEntry]);
     DocTime,
     Customer,
     DocTotal,
+    Warehouse,
+    Warehouses,
     removeFilterDate,
+    toggleDateTimeFields,
+    applyFilter,
+    removeFilterTime,
   };
 }

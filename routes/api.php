@@ -75,6 +75,14 @@ Route::prefix('v1')->group(
             Route::get('manage/{methodShipping}', [OrderController::class, 'getOrdersBillManage']);
         });
 
+        //URL'S ORDENES DISPATCHER
+        Route::middleware(['auth:sanctum'])->prefix('orders/dispatch')->group(function () {
+            Route::get('/', [OrderController::class, 'getOrdersDispatch']);
+            Route::get('manage', [OrderController::class, 'getOrdersDispatchManage']);
+            Route::get('export', [OrderController::class, 'exportDispatch']);
+            Route::get('warehouses', [OrderController::class, 'getWarehouses']);
+        });
+
         //URL'S ORDENES PAGO
         Route::middleware(['auth:sanctum'])->prefix('orders/payment')->group(function () {
             Route::get('/', [OrderController::class, 'getOrdersPayment']);
