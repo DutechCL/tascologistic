@@ -47,6 +47,14 @@ export const useOrders = defineStore('orders', {
             return await getWithToken(`api/v1/orders/dispatch`);
         },
 
+        async getOrdersDispatchManage() {
+            return await getWithToken(`api/v1/orders/dispatch/manage`);
+        },
+
+        async getWarehouses() {
+            return await getWithToken(`api/v1/orders/dispatch/warehouses`);
+        },
+
         async processOrderCda(body) {
             return await postWithToken('api/v1/orders/cda/process-order', body);
         },
@@ -89,5 +97,9 @@ export const useOrders = defineStore('orders', {
         async searchCustomers(body) {
             return await postWithToken(`api/v1/customers/search/`, body);
         },
+
+        async exportOrdersDispatch(body) {
+            return await postWithToken(`api/v1/orders/dispatch/export`, body);
+        }
     }
 });

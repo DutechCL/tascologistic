@@ -40,6 +40,7 @@ class Order extends Model
         'DocRate',
         'FederalTaxID',
         'DiscountPercent',
+        'Address2',
     ];
     const FILLABLE_INTERNAL = [
         'process_id',
@@ -55,6 +56,7 @@ class Order extends Model
         'report_user_name',
         'is_resolved',
         'is_managed_in_billing',
+        'is_dispatched',
     ];
 
     protected $fillable = [

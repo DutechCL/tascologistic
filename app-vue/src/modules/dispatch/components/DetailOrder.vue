@@ -16,12 +16,6 @@
             </div>
       
             <div class="flex">
-              <!-- <div class="card flex justify-content-center ">
-                <MultiSelect v-model="selectedQuantity" :options="products" filter optionLabel="Quantity" placeholder="Cantidad" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocNum" />
-              </div>
-              <div class="card flex justify-content-center ">
-                <MultiSelect v-model="selectedItemCode" :options="products" filter optionLabel="ItemCode" placeholder="SKU" display="chip"  :maxSelectedLabels="3" class="w-full md:w-20rem" style="border: none; max-width: 300px;" :key="DocDate" />
-              </div> -->
             </div>
             <DataTable tableStyle="min-width: 50rem" filters="filters" :value="ordersStore.currentOrder.OrderItems">
               <Column headerClass="!bg-primary-900"  field="Quantity" header="Cantidad">
@@ -107,7 +101,7 @@ import { ref, watch } from 'vue'
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
 import Tag from 'primevue/tag'
-import { useOrdersPickerReview } from '../../../stores/orders/ordersPickerReview.js';
+import { useOrdersDispatch } from "../../../stores/orders/ordersDispatch";
 import Button from 'primevue/button'
 import ConfirmDialog from 'primevue/confirmdialog';
 import DialogReportProblemOrderItem from '../components/DialogReportProblemOrderItem.vue'
@@ -117,7 +111,7 @@ import constants from '@/constants/constants';
 
 const { showToast } = ToastMixin.setup();
 const { showConfirm } = ConfirmMixin.setup();
-const ordersStore = useOrdersPickerReview()
+const ordersStore = useOrdersDispatch()
 const disableButton = ref(true)
 const setProductsCheck = new Set();
 
@@ -129,9 +123,9 @@ const hiddenDetailOrder = () => {
 }
 
 const checkProduct = (rowData, action) => {
-  ordersStore.orderItem           = rowData
+  ordersStore.orderItem         = rowData
 
-  ordersStore.showDialogProblem   = (action !== 'complete') 
+  ordersStore.showDialogProblem = (action !== 'complete') 
   ordersStore.isCompleteMapped[rowData.id] = (action === 'complete');
   ordersStore.isProblemMapped[rowData.id] = (action !== 'complete');
 

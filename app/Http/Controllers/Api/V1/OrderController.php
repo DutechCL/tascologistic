@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Mockery\Generator\Method;
 use App\Models\MethodShipping;
 use App\Http\Controllers\Controller;
+use App\Http\Exports\DispatchExport;
+use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Resources\OrderResource;
 use App\Services\Order\OrderQueryService;
 use App\Services\Order\OrderManagementService;
-use Mockery\Generator\Method;
 
 class OrderController extends Controller
 {
@@ -123,6 +126,19 @@ class OrderController extends Controller
         }
     }
 
+    public function getOrdersDispatchManage()
+    {
+        try {
+            $orders = $this->orderQueryService->listOrdersDispatchManage();
+
+            return $this->success(
+                OrderResource::collection($orders)->resolve()
+            );
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
     public function getOrdersTracker($type)
     {
         try {
@@ -131,6 +147,20 @@ class OrderController extends Controller
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()
+            );
+
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function getWarehouses()
+    {
+        try {
+            $warehouses = $this->orderQueryService->listWarehouses();
+
+            return $this->success(
+                $warehouses
             );
 
         } catch (\Exception $exception) {
@@ -248,6 +278,25 @@ class OrderController extends Controller
                 OrderResource::collection($orders)->resolve()
             );
 
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function exportDispatch(Request $request)
+    {
+        try {
+            $orderIds = explode(',', $request->query('ids'));
+    
+            $orders = $this->orderQueryService
+                ->listOrdersDispatch(false)
+                ->whereIn('id', $orderIds)
+                ->get();
+
+            Order::whereIn('id', $orderIds)->update(['is_dispatched' => true]);
+
+            return Excel::download(new DispatchExport($orders), 'Ordenes despachadas '.date('Y-m-d H:i:s').'.xlsx');
+    
         } catch (\Exception $exception) {
             return $this->buildResponseErrorFromException($exception);
         }

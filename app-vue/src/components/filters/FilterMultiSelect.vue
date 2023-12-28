@@ -78,6 +78,43 @@
             style="border: none; max-width: 300px;" 
             :key="DocTotal" />
       </div>
+      <div v-if="props.filters.includes('Warehouse')" class="card flex justify-content-center">
+        <MultiSelect 
+            v-model="Warehouse" 
+            :options="Warehouses" 
+            filter 
+            optionLabel="WarehouseCode" 
+            placeholder="Bodega" 
+            display="chip"  
+            :maxSelectedLabels="3" 
+            class="w-full md:w-20rem" 
+            style="border: none; max-width: 300px;" 
+            :key="DocTotal" />
+      </div>
+        <div :class="[{ 'active-filter-date': selectedTime, }, 'date-time-wrapper']">
+            <button :class="[{'!text-white w-188 !pt-2': selectedTime }, 'text-primary-900 pt-3']" style="" @click="toggleDateTimeFields"> 
+              <span>{{ timeLabel }}</span>
+              <div v-if="selectedTime" class="align-center card flex justify-content-center mr-5">
+                <a class="close-filter-date" v-if="selectedTime" @click="removeFilterTime()"> <i class="pi pi-times"></i> </a>
+              </div>
+            </button>
+    
+            <div v-if="showDateTimeFields" class="calendar-container">
+                <Calendar v-model="startDateTime" showIcon iconDisplay="input" timeOnly>
+                    <template #inputicon="{ clickCallback }">
+                        <i class="pi pi-clock" @click="clickCallback" />
+                    </template>
+                </Calendar>
+    
+                <Calendar v-model="endDateTime" showIcon iconDisplay="input" timeOnly>
+                    <template #inputicon="{ clickCallback }">
+                        <i class="pi pi-clock" @click="clickCallback" />
+                    </template>
+                </Calendar>
+    
+                <button class="p-button p-component !p-button p-component !bg-primary-900 !py-1 !pl-1 !border-primary-900 !text-white btn-custom" @click="applyFilter" :disabled="!startDateTime || !endDateTime">Filtrar</button>
+            </div>
+        </div>
 </template>
 
 <script setup>
@@ -100,6 +137,11 @@ const generateUniqueId = () => {
 const { allOrders }  = toRefs(props);
 const { typeOrders } = toRefs(props);
 const {
+    startDateTime,
+    endDateTime,
+    showDateTimeFields,
+    timeLabel,
+    selectedTime,
     dates,
     dateLabel,
     orders,
@@ -108,7 +150,12 @@ const {
     DocTime,
     Customer,
     DocTotal,
+    Warehouse,
+    Warehouses,
     removeFilterDate,
+    toggleDateTimeFields,
+    applyFilter,
+    removeFilterTime,
 } = UseFiltersMultiSelect(allOrders);
 
 watch(
@@ -119,6 +166,42 @@ watch(
 </script>
 
 <style>
+.date-time-wrapper {
+  position: relative;
+}
+
+.date-time-wrapper input[type="text"] {
+  color: #259bd7 !important;
+  border: 1px solid #ccc !important;
+}
+.calendar-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px;
+  width: 400px;
+  color: #259bd7;
+}
+
+.calendar-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.calendar-container > * {
+  margin-bottom: 10px;
+}
+
 .p-calendar .p-inputtext{
   border: none !important;
   padding: 6px;

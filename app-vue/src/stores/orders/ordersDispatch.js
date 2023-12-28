@@ -10,6 +10,7 @@ export const useOrdersDispatch = defineStore('ordersDispatch', {
         isDataLoaded: false,
         showDetailOrder: false,
         showDialogProblem: false,
+        showDialog: false,
         orderItem: {},
         currentOrder: {},
         isProblemMapped: [],
@@ -18,6 +19,7 @@ export const useOrdersDispatch = defineStore('ordersDispatch', {
         orderItemsProblems: [],
         order: [],
         type: '',
+        listOrdersSelected: [],
   }),
   getters: {
         orders: (state) => state.listOrders,
@@ -28,5 +30,25 @@ export const useOrdersDispatch = defineStore('ordersDispatch', {
         this.isDataLoaded = true;
         return response.data;
     },
+
+    async getOrdersDispatchManage() {
+      let response = await orderService.getOrdersDispatchManage();
+      this.isDataLoaded = true;
+      return response.data;
+    },
+
+    async getWarehouses() {
+      return await orderService.getWarehouses();
+    },
+    async assignResponsible() {
+      const body = {
+        orderId: this.currentOrder.id,
+        responsible: this.currentOrder.responsible
+      }
+      return await orderService.assignResponsible(body);
+    },
+    async exportOrdersDispatch(body) {
+      return orderService.exportOrdersDispatch(body);
+    }
   }
 })
