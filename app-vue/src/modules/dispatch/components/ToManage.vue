@@ -36,7 +36,7 @@
       v-model:visible="ordersStore.showDialog"
       :order="ordersStore.currentOrder"
     />
-  
+    <ConfirmDialog></ConfirmDialog>
     <Toast />
   </template>
   
@@ -50,6 +50,13 @@
   import Search from '../../../components/search/Search.vue';
   import constants from '@/constants/constants';
   import { all } from 'axios';
+
+  import { ToastMixin } from '../../../Utils/ToastMixin';
+  import { ConfirmMixin } from '../../../Utils/ConfirmMixin';
+import { set } from 'date-fns';
+  
+  const { showToast } = ToastMixin.setup();
+  const { showConfirm } = ConfirmMixin.setup();
   
   const props = defineProps({
     orders: Array,
@@ -71,9 +78,68 @@
     orders.value = data.orders;
   }
   
-  const exportOrders = () => {
-    emit('exportOrders', { 'type': 'dispatch', 'orders': ordersStore.listOrdersSelected });
+  const exportOrders = async () => {
+    try {
+      let result = await showConfirm();
+
+      if (result) {
+        const orderIds = ordersStore.listOrdersSelected.map(order => order.id);
+        const orderIdsString = orderIds.join(',');
+        const url = `/api/v1/orders/dispatch/export?ids=${orderIdsString}`;
+        const downloadLink = document.createElement('a');
+
+        downloadLink.href = url;
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+
+        confirmDownloadDocuments(orderIds);
+
+      } else {
+          showToast({
+              status: 'info',
+              message: 'Proceso cancelado',
+          });
+      }
+    } catch (error) {
+      console.log(error)
+        showToast({
+            status: 'error',
+            message: 'No se pudo realizar la accion',
+        });
+    }
   }
+
+  const confirmDownloadDocuments = async (orderIds) => {
+    const orderIdsString = orderIds.join(',');
+    let result = await showConfirm({message: ' ¿ Ralizo la descarga del documento de Despacho ?'});
+
+    if (result) {
+      let response = await ordersStore.markAsExported(orderIdsString);
+
+      if (response.export) {
+        
+        showToast({
+            status: 'success',
+            message: 'Se exportaron las ordenes correctamente',
+        });
+        let o = orders.value.filter(o => !orderIds.includes(o.id));
+        orders.value = o;
+      }
+    }else{
+      showToast({
+          status: 'info',
+          message: 'Proceso cancelado',
+      });
+    }
+  }
+
+//   const exportOrders = (data) => {
+//   const orderIds = data.orders.map(order => order.id);
+//   const orderIdsString = orderIds.join(',');
+//   const url = `/api/v1/orders/dispatch/export?ids=${orderIdsString}`;
+//   window.open(url, '_blank');
+// };
 
   
   

@@ -67,6 +67,8 @@ class Order extends Model
     protected $appends = [
         'indicator',
         'warehouse',
+        'guide',
+        'document',
     ];
 
     protected $casts = [
@@ -89,9 +91,9 @@ class Order extends Model
         });
     }
 
-    public function bill()
+    public function bills()
     {
-        return $this->hasOne(Bill::class, 'order_id');
+        return $this->hasMany(Bill::class, 'order_id');
     }
 
     public function customer()
@@ -148,6 +150,40 @@ class Order extends Model
             }
         );
     }
+
+    protected function Guide(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+                if ($this->bills) {
+                    return null;
+                }
+                foreach ($this->bills as $bill) {
+                    if ($bill->esGuia()) {
+                        return $bill;
+                    }
+                }
+            return null;
+        });
+    }
+
+    protected function Document(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+                if ($this->bills) {
+                    return null;
+                }
+                foreach ($this->bills as $bill) {
+                    if (!$bill->esGuia()) {
+                        return $bill;
+                    }
+                }
+                return null;
+            }
+        );
+    }
+
 
     protected function Warehouse(): Attribute
     {

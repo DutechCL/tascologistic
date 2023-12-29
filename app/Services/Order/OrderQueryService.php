@@ -133,20 +133,35 @@ class OrderQueryService
      * Lista las órdenes asociadas al proceso de despacho, filtradas por el tipo de envío y status.
      *
      * @param bool $execute Indica si se ejecuta la consulta o solo se prepara.
+     * @param bool $isDispatched Indica si se filtra por el estado de despacho (true) o no (false). 
      * @return mixed Lista paginada de órdenes o el objeto de consulta.
      */
     public function listOrdersDispatch(bool $execute = true, bool $isDispatched = false)
     {
         $query = Order::withOrderDetails()
-                    ->where('process_id', Process::PROCESS_ID_CDA)
-                    ->where('method_shipping_id', MethodShipping::METHOD_SHIPPING_DELIVERY)
-                    ->where('is_dispatched', $isDispatched)
-                    ->orderByDesc('DocDate');
-
+            ->where('method_shipping_id', MethodShipping::METHOD_SHIPPING_DELIVERY)
+            ->where(function ($query) use ($isDispatched) {
+                $query->where(function ($subQuery) {
+                    $subQuery->where('process_id', Process::PROCESS_ID_PAYMENT)
+                        ->orWhereHas('bills', function ($billQuery) {
+                            $billQuery->where('IndicadorFinanciero', '52');
+                        });
+                });
+    
+                if ($isDispatched) {
+                    $query->where('is_dispatched', true);
+                } else {
+                    $query->where(function ($dispatchQuery) {
+                        $dispatchQuery->where('is_dispatched', false)
+                                      ->orWhereNull('is_dispatched');
+                    });
+                }
+            })
+            ->orderByDesc('DocDate');
+    
         return $execute ? $query->paginate(self::PAGE_SIZE * 5) : $query;
     }
-
-
+    
     public function listOrdersDispatchManage(bool $execute = true)
     {
         $executeQuery = false;

@@ -21,25 +21,32 @@
     <tbody>
         @foreach($orders as $order)
             @php
-            // dd($order);
-               $docEntry = $order->bill ? $order->bill->DocEntry : null;
+                $docEntry = null;
+
+                if ($order->guide) {
+                    $docEntry = $order->guide->DocEntry;
+                } elseif ($order->document) {
+                    $docEntry = $order->document->DocEntry;
+                }
                $itenCount = $order->orderItems ? $order->orderItems->count() : null;
                $itenCode = $order->orderItems ? $order->orderItems->first()->ItemCode : null;
                $cardCode = $order->CardCode ? str_replace('C', '', $order->CardCode) : null;
                $cardName = $order->customer ? $order->customer->CardName : null;
+               $phone = $order->customer ? $order->customer->Phone1 : null;
                $emailAddress = $order->customer ? $order->customer->EmailAddress : null;
+               $address = $order->customer ? $order->customer->Address2 : null;
             @endphp
         <tr>
             <td>{{ $docEntry }} </td>
             <td></td>
-            <td> </td>
+            <td></td>
             <td>{{ $itenCount }} </td>
             <td>{{ $itenCode }} </td>
             <td>{{ $cardCode }} </td>
             <td>{{ $cardName }} </td>
-            <td>Telefono </td>
+            <td>{{ $phone }}</td>
             <td>{{ $emailAddress }} </td>
-            <td>direccion </td>
+            <td>{{ $address }} </td>
             <td></td>
             <td></td>
             <td></td>

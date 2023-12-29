@@ -16,12 +16,12 @@ class OrderObserver
                 $order->order_status_id = OrderStatus::STATUS_ON_PICKER;
                 $order->process_id = Process::PROCESS_ID_PICKER;
                 break;
-            default:
+                default:
                 $order->order_status_id = OrderStatus::STATUS_ON_HOLD;
                 $order->process_id = Process::PROCESS_ID_CDA;
                 break;
-        endswitch;        
-
+            endswitch;        
+            
         $order->save();
         return $order;
     }

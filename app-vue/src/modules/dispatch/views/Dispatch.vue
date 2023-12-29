@@ -9,7 +9,6 @@
       </TabPanel>
     </TabView>
   </div>
-  <ConfirmDialog></ConfirmDialog>
 </template>
 
 <script setup>
@@ -37,15 +36,6 @@ const updateOrders = async () => {
 onBeforeMount( async() => {
   updateOrders();
 })
-
-const exportOrders = (data) => {
-  const orderIds = data.orders.map(order => order.id);
-  const orderIdsString = orderIds.join(',');
-  const url = `/api/v1/orders/dispatch/export?ids=${orderIdsString}`;
-  window.open(url, '_blank');
-  updateOrders();
-
-};
 
 </script>
 

@@ -102,7 +102,11 @@ class OrderManagementService
         $this->createBillForOrder($order, $response);
 
         if ($this->isDocumentCreatedSuccessfully($response)) {
-            $this->updateOrderStatusToBilled($order);
+            if($order->indicator !== '52') {
+                $this->updateOrderStatusToBilled($order);
+            }
+            // $this->updateOrderStatusToBilled($order);
+
             $status   = 'success';
             $message = 'Documento generada correctamente';
         } else {
@@ -168,7 +172,7 @@ class OrderManagementService
 
         return $order->bill()->updateOrCreate(
             [
-                'order_id' => $order->id
+                'DocEntry' => $docEntry,
             ],
             [
             'user_id' => auth()->user()->id,
