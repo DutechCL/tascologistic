@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\Customer;
 use App\Models\LogOrder;
 use App\Models\SalesPerson;
+use Illuminate\Support\Str;
 use App\Models\MethodShipping;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -29,7 +30,7 @@ class OrderSynchronizationService
         unset($orderData['DocumentLines']);
 
         $customer = Customer::where('CardCode', $orderData['CardCode'])->first();
-        $methodShipping = MethodShipping::where('name', $orderData['U_SBO_FormaEntrega'])->first();
+        $methodShipping = MethodShipping::where('slug', Str::slug($orderData['U_SBO_FormaEntrega'], '-'))->first();
         $salesPerson = SalesPerson::where('SalesEmployeeCode', $orderData['SalesPersonCode'])->first();
 
         $data = array_merge($orderData, [
