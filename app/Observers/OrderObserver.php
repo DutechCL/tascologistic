@@ -11,8 +11,8 @@ class OrderObserver
 {
     public function created(Order $order)
     {
-        switch ($order->U_SBO_FormaEntrega):
-            case 'Cliente aqui':
+        switch ($order->method_shipping_id):
+            case MethodShipping::METHOD_SHIPPING_HERE:
                 $order->order_status_id = OrderStatus::STATUS_ON_PICKER;
                 $order->process_id = Process::PROCESS_ID_PICKER;
                 break;
@@ -47,10 +47,5 @@ class OrderObserver
                 $order->process_id = Process::PROCESS_ID_PAYMENT;
                 break;
         endswitch;
-    }
-
-    public function deleted(Order $order)
-    {
-        // Lógica a ejecutar después de eliminar un modelo Order
     }
 }
