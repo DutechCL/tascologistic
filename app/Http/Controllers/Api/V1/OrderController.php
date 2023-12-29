@@ -293,10 +293,31 @@ class OrderController extends Controller
                 ->whereIn('id', $orderIds)
                 ->get();
 
-            Order::whereIn('id', $orderIds)->update(['is_dispatched' => true]);
+            
 
             return Excel::download(new DispatchExport($orders), 'Ordenes despachadas '.date('Y-m-d H:i:s').'.xlsx');
     
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
+    public function markAsExported(Request $request)
+    {
+        try {
+            $orderIds = explode(',', $request->ids);
+
+            Order::whereIn('id', $orderIds)->update(['is_dispatched' => true]);
+
+            $allDispatched = Order::whereIn('id', $orderIds)
+                                  ->where('is_dispatched', true)
+                                  ->count() === count($orderIds);
+    
+            if ($allDispatched) {
+                return response()->json(['export' => true, 'message' => 'Todas las órdenes están marcadas como despachadas']);
+            } else {
+                return response()->json(['export' => false, 'message' => 'Algunas órdenes no están marcadas como despachadas']);
+            }
         } catch (\Exception $exception) {
             return $this->buildResponseErrorFromException($exception);
         }

@@ -15,15 +15,14 @@ class OrderObserver
             case MethodShipping::METHOD_SHIPPING_HERE:
                 $order->order_status_id = OrderStatus::STATUS_ON_PICKER;
                 $order->process_id = Process::PROCESS_ID_PICKER;
-                $order->save();
                 break;
                 default:
                 $order->order_status_id = OrderStatus::STATUS_ON_HOLD;
                 $order->process_id = Process::PROCESS_ID_CDA;
-                $order->save();
                 break;
-        endswitch;        
-
+            endswitch;        
+            
+        $order->save();
         return $order;
     }
 

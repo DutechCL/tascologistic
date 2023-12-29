@@ -49,6 +49,13 @@ export const useOrdersDispatch = defineStore('ordersDispatch', {
     },
     async exportOrdersDispatch(body) {
       return orderService.exportOrdersDispatch(body);
+    },
+
+    async markAsExported(ids) {
+      let body = {
+        ids: ids,
+      }
+      return orderService.markAsExported(body);
     }
   }
 })

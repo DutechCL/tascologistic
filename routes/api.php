@@ -80,6 +80,7 @@ Route::prefix('v1')->group(
             Route::get('/', [OrderController::class, 'getOrdersDispatch']);
             Route::get('manage', [OrderController::class, 'getOrdersDispatchManage']);
             Route::get('export', [OrderController::class, 'exportDispatch']);
+            Route::post('mark-as-exported', [OrderController::class, 'markAsExported']);
             Route::get('warehouses', [OrderController::class, 'getWarehouses']);
         });
 

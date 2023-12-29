@@ -100,6 +100,10 @@ export const useOrders = defineStore('orders', {
 
         async exportOrdersDispatch(body) {
             return await postWithToken(`api/v1/orders/dispatch/export`, body);
+        },
+
+        async markAsExported(body) {
+            return await postWithToken(`api/v1/orders/dispatch/mark-as-exported`, body);
         }
     }
 });
