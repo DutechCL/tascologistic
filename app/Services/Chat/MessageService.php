@@ -3,6 +3,7 @@
 namespace App\Services\Chat;
 
 use Carbon\Carbon;
+use App\Models\Product;
 use App\Models\Chat\Chat;
 use App\Events\MessageSent;
 use App\Models\Chat\Message;
@@ -134,30 +135,87 @@ class MessageService
     public function buildMessage($order)
     {
         $order->refresh();
+    
+        switch ($order->report_user_responsible) {
+            case 'biller':
+                return $this->buildBillerMessage($order);
+            case 'cda':
+                return $this->buildCdaMessage($order);
+            case 'picker':
+            case 'reviewer':
+                return $this->buildPickerAndReviewMessage($order);
+        }
+    }
+
+    protected function buildPickerAndReviewMessage($order)
+    {
         $message = '';
         foreach ($order->orderItems as $orderItem) {
             if ($orderItem->problems->count() > 0) {
-                $message .= "<strong> El producto: {$orderItem->product->ItemName}  SKU: {$orderItem->product->ItemCode} </strong>  <br>";
-                foreach ($orderItem->problems as $problem) {
-                    $message .= "Problema: {$problem->problem->title} <br>";
-                    if ($problem->other) {
-                        $message .= "Otro: {$problem->other} <br>";
-                    }
-                }
+                $message .= "<strong>El producto: {$orderItem->product->ItemName} SKU: {$orderItem->product->ItemCode}</strong><br>";
+                $message .= $this->getProblemsMessages($orderItem->problems);
                 $message .= "<br>";
             }
         }
-
-        if ($order->problems->count() > 0) {
-            $message = "<strong> La orden {$order->DocNum} tiene problemas generales: </strong> <br>";
-            foreach ($order->problems as $problem) {
-                $message .= "Problema: {$problem->problem->title} <br>";
-                if ($problem->other) {
-                    $message .= "Otro: {$problem->other} <br>";
-                }
-            }
-        }
-
         return $message;
     }
+
+    protected function buildCdaMessage($order)
+    {
+        $message = "<strong>La orden {$order->DocNum} tiene problemas generales:</strong><br>";
+        $message .= $this->getProblemsMessages($order->problems);
+        return $message;
+    }
+
+    protected function buildBillerMessage($order)
+    {
+        $message = "<strong>La orden {$order->DocNum} tiene problemas en facturación:</strong><br>";
+        $message .= $this->getBillingErrorMessage($order);
+    
+        if ($product = $this->getProblematicProduct($order)) {
+            $message .= "Producto con problemas: <br>Item: {$product->ItemName} <br> SKU: {$product->ItemCode}<br>";
+        }
+    
+        return $message;
+    }
+    
+    protected function getBillingErrorMessage($order)
+    {
+        if (!$order->bill->Error) {
+            return 'Problema: <br> Información no disponible<br><br>';
+        }
+    
+        $httpException = json_decode($order->bill->Error)->httpException;
+        return "Problema: <br> {$httpException->message}<br><br>";
+    }
+    
+    protected function getProblematicProduct($order)
+    {
+        if (!$order->bill->Error) {
+            return null;
+        }
+    
+        $httpException = json_decode($order->bill->Error)->httpException;
+    
+        if (isset($httpException->errorItem)) {
+            return Product::where('ItemCode', $httpException->errorItem->ItemCode)->first();
+        }
+    
+        return null;
+    }
+    
+
+
+    protected function getProblemsMessages($problems)
+    {
+        $problemMessages = '';
+        foreach ($problems as $problem) {
+            $problemMessages .= "Problema: {$problem->problem->title}<br>";
+            if ($problem->other) {
+                $problemMessages .= "Otro: {$problem->other}<br>";
+            }
+        }
+        return $problemMessages;
+    }
+
 }

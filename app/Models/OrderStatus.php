@@ -20,6 +20,7 @@ class OrderStatus extends Model
     const STATUS_BILLED          = 6;
     const STATUS_PAYMENT         = 7;
     const STATUS_REJECTED        = 8;
+    const STATUS_DISPATCH        = 9;
 
     protected $fillable = [
         'name',

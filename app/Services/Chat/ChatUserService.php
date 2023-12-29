@@ -55,7 +55,7 @@ class ChatUserService
     
         if ($execute) {
             
-            $chats = $query->where('status', Chat::STATUS_OPEN)->get();
+            $chats = $query->where('status', Chat::STATUS_OPEN) ->limit(20)->get();
 
             $chats = $chats->map(function ($chat) {
                 return [

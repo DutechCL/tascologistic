@@ -122,7 +122,7 @@ class SettingsTableSeeder extends Seeder
                 'id' => 8,
                 'key' => '_sap_dev_mode',
                 'label' => 'Modo desarrollo SAP',
-                'value' => '0',
+                'value' => '1',
                 'type' => 'switch',
                 'class' => 'col-md-6 pt-4',
                 'active' => 1,

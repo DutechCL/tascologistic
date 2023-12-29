@@ -48,11 +48,19 @@ class BillerService
     public function generateDocument($data)
     {
         try {
-            $response = Http::timeout(60)->post($this->apiUrl, $data);
+
+            $response = Http::withoutVerifying()->timeout(60)->post($this->apiUrl, $data);
+
+            $response = $response->json();
 
             if($response['Creado'] ?? false === true) 
             {
                 $response['LocalLinkPDF'] = $this->downloadPDFFromURL($response['LinkPDF']);
+            }else{
+                $error = $this->parseJsonToObject($response['Error'], $data);
+
+                $response['Error'] = json_encode($error);
+
             }
 
             return $response;
@@ -71,17 +79,23 @@ class BillerService
     public function buildData($order)
     {
         $data['User'] = [
-            'Prod' => $this->companyId,
-            'Password' => $this->username,
-            'UserName' => $this->password,
+            'Prod'     => $this->companyId,
+            'Password' => $this->password,
+            'UserName' => $this->username,
         ];
 
         $customer = $order->customer;
+        $cardCode = $customer->CardCode;
+
+        if (strpos($cardCode, '-') !== false) {
+            $cardCode = explode('-', $cardCode)[0];
+        }
+        
         $data['SN'] = [
-            'CardCode'        => $customer->CardCode,
+            'CardCode'        => $cardCode,
             'CardName'        => $customer->CardName,
             'CardType'        => $customer->CardType,
-            'GroupCode'       => $customer->GroupCode,
+            'GroupCode'       => intval($customer->GroupCode),
             'ContactPerson'   => $customer->ContactPerson,
             'FederalTaxID'    => $customer->FederalTaxID,
             'EmailAddress'    => $customer->EmailAddress,
@@ -124,6 +138,7 @@ class BillerService
         ]);
 
         $data['Order'] = $orderData;
+        $data['Order']['CardCode'] = $cardCode;
 
         // DocumentLines
         $data['Order']['DocumentLines'] = $order->orderItems->map(function ($item) {
@@ -165,5 +180,39 @@ class BillerService
         }
     }
 
+    private function parseJsonToObject($json, $data): ?object
+    {
+        $jsonStartPosition = strpos($json, '{"httpException":');
+        if ($jsonStartPosition === false) {
+            return null;
+        }
+    
+        $jsonClean = substr($json, $jsonStartPosition);
+        
+        $decodedJson = json_decode($jsonClean);
+        $decodedJson->httpException->message = explode('JSON', $decodedJson->httpException->message)[0];
 
+        if($this->extractLinePosition($jsonClean) !== null) {
+            $Item = $data['Order']['DocumentLines'][$this->extractLinePosition($jsonClean)];
+            $decodedJson->httpException->errorItem = $Item;
+        }
+    
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            return null;
+        }
+    
+        return $decodedJson;
+    }
+
+    private function extractLinePosition($jsonString) {
+
+        if (strpos($jsonString, '[DocumentLines.ItemCode]') !== false) {
+
+            if (preg_match('/\[line: (\d+)\]/', $jsonString, $matches)) {
+
+                return intval($matches[1]) + 1;
+            }
+        }
+        return null; 
+    }
 }

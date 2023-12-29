@@ -49,9 +49,6 @@ onBeforeMount(async () => {
   });
 });
 
-const exportChat = (type) => {
-  ;
-}
 </script>
 
 <style>

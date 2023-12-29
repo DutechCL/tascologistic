@@ -37,10 +37,15 @@ class Customer extends Model
         'BilltoDefault',
         'Currency',
         'BPAddresses',
-        'ContactEmployees'
+        'ContactEmployees',
+        'Phone1'
     ];
 
     protected $fillable = self::FILLABLE;
+
+    protected $cats = [
+        'GroupCode' => 'integer',
+    ];
 
     public function orders()
     {

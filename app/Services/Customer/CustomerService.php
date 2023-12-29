@@ -3,11 +3,30 @@
 namespace App\Services\Customer;
 
 use App\Models\Customer;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Schema;
 
 class CustomerService
 {
+    const PAGE_SIZE = 20;
+
+    public function listCustomers( bool $execute = true )
+    {
+        $query = Customer::with(['addresses', 'contactEmployees'])->orderBy('CreateDate', 'DESC');
+        
+        return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
+    }
+
+    public function searchCustomers(Request $request)
+    {
+        $query = $this->listCustomers(false)
+            ->where('CardName', 'LIKE', "%{$request->search}%")
+            ->orWhere('CardCode', 'LIKE', "%{$request->search}%");
+        
+        return $query->paginate(self::PAGE_SIZE);
+    }
+
     /**
      * Sincroniza un cliente con su dirección y contactos.
      *

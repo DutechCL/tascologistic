@@ -64,6 +64,15 @@ class ProcessesTableSeeder extends Seeder
                 'slug' => Process::PROCESS_SLUG_PAYMENT,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
+            ),
+            5 =>
+            array (
+                'id' => Process::PROCESS_ID_DISPATCH,
+                'nombre' => 'Despacho',
+                'descripcion' => 'Gestionar despacho de ordenes',
+                'slug' => Process::PROCESS_SLUG_DISPATCH,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             )
         ));
     }

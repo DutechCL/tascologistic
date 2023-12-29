@@ -2,10 +2,10 @@
   <div class="px-3">
     <TabView>
       <TabPanel header="Facturas pendientes de pago">
-        <ToManage/>
+        <PaymentDocNum/>
       </TabPanel>
-      <TabPanel header="Pago a cuenta">
-        <Managed/>
+      <TabPanel header="Registrar pago a cuenta">
+        <PaymentAccount/>
       </TabPanel>
   </TabView>
   </div>
@@ -15,8 +15,8 @@
 import { ref, onBeforeMount, watch } from 'vue';
 import TabView from 'primevue/tabview'
 import TabPanel from 'primevue/tabpanel'
-import ToManage from '../components/ToManage.vue'
-import Managed from '../components/Managed.vue';
+import PaymentDocNum from '../components/PaymentDocNum.vue'
+import PaymentAccount from '../components/PaymentAccount.vue';
 import { useOrdersPayment } from '../../../stores/orders/ordersPayments.js';
 
 </script>

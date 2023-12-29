@@ -16,14 +16,12 @@ class OrderObserver
                 $order->order_status_id = OrderStatus::STATUS_ON_PICKER;
                 $order->process_id = Process::PROCESS_ID_PICKER;
                 break;
-            case MethodShipping::METHOD_SHIPPING_PICKUP:
-            case MethodShipping::METHOD_SHIPPING_PICKUP_SAMEX:
-            case MethodShipping::METHOD_SHIPPING_DELIVERY:
+                default:
                 $order->order_status_id = OrderStatus::STATUS_ON_HOLD;
                 $order->process_id = Process::PROCESS_ID_CDA;
                 break;
-        endswitch;
-
+            endswitch;        
+            
         $order->save();
         return $order;
     }
@@ -49,10 +47,5 @@ class OrderObserver
                 $order->process_id = Process::PROCESS_ID_PAYMENT;
                 break;
         endswitch;
-    }
-
-    public function deleted(Order $order)
-    {
-        // Lógica a ejecutar después de eliminar un modelo Order
     }
 }

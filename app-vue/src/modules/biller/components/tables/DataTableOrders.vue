@@ -42,13 +42,45 @@
           </Column>
           <Column headerClass="!bg-primary-900"  field="client" header="Emitir">
               <template #body="slotProps">
+                <Button
+                  v-if="slotProps.data.is_managed_in_billing"
+                  :label="'Gestionar'" 
+                  @click="actionMethod('returnProcessOrderBiller', slotProps.data, slotProps.data.U_SBO_FormaPago)" 
+                  class="!py-1.5 !border-primary-900 !text-primary-900 mr-3"  
+                  severity="primary" 
+                  style="width: 100px;"
+                  outlined></Button>
                   <Button
+                    v-if="!orderStore.orderProcessingStatus[slotProps.data.id]?.inProcess && slotProps.data.is_managed_in_billing == false"
                     :label="slotProps.data.U_SBO_FormaPago" 
                     @click="actionMethod('processOrderBiller', slotProps.data, slotProps.data.U_SBO_FormaPago)" 
                     class="!py-1.5 !border-primary-900 !text-primary-900 mr-3"  
                     severity="primary" 
                     style="width: 100px;"
-                    outlined></Button>
+                    outlined>
+                  </Button>
+                  <Tag  
+                      v-else-if="orderStore.orderProcessingStatus[slotProps.data.id]?.inProcess" 
+                      :severity="orderStore.orderProcessingStatus[slotProps.data.id]?.severity"
+                      :icon="orderStore.orderProcessingStatus[slotProps.data.id]?.icon"
+                      class="tag-font-method tag-radius">
+                        <span>{{orderStore.orderProcessingStatus[slotProps.data.id]?.status}}</span>
+                        <Button 
+                          v-if="orderStore.orderProcessingStatus[slotProps.data.id]?.severity === 'success'"
+                          @click="actionMethod('showDetailBill', orderStore.orderProcessingStatus[slotProps.data.id]?.order)"
+                          class="show-bill-details" 
+                          link>
+                          Ver
+                        </Button>
+                        <Button 
+                        v-if="orderStore.orderProcessingStatus[slotProps.data.id]?.order?.bill === null"
+                        @click="actionMethod('processOrderBiller', slotProps.data, slotProps.data.U_SBO_FormaPago)" 
+                        class="show-bill-details" 
+                        style="min-width: 105px !important;"
+                        link>
+                        Reintentar 
+                      </Button>
+                  </Tag>
               </template>
         </Column>
       </DataTable>
@@ -57,12 +89,13 @@
 </template>
 
 <script setup>
-  import { ref, watch, defineEmits} from 'vue';
+  import { ref, watch, defineEmits, warn} from 'vue';
   import DataTable from 'primevue/datatable';
   import Column from 'primevue/column';
   import Tag from 'primevue/tag';
   import Button from 'primevue/button';
   import FilterMultiSelect from '../../../../components/filters/FilterMultiSelect.vue';
+  import { useOrdersBills } from '../../../../stores/orders/ordersBills.js';
   import constants from '@/constants/constants';
 
   const props = defineProps({
@@ -70,6 +103,7 @@
     actions: Object,
     orders: Object,
   })
+  const orderStore = useOrdersBills();
   const emit = defineEmits();
   const orders = ref(props.orders);
   const allOrders = ref(props.orders);
@@ -105,8 +139,6 @@
     orders.value = value;
     allOrders.value = value;
   })
-
-
 </script>
   
 <style>
@@ -120,5 +152,14 @@
     color: white !important;
     width: 12px;
     }
+
+  .show-bill-details {
+    width: 25px;
+    min-width: 50px;
+    height: 10px;
+    color: white !important;
+    text-decoration: underline;
+    padding-top: 15px;
+  }
 </style>
           

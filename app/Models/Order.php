@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Bill;
 use App\Models\Customer;
 use App\Models\Chat\Chat;
 use App\Models\OrderItem;
@@ -17,7 +18,7 @@ class Order extends Model
 {
     use HasFactory;
 
-    const IDENTIFIER = 'CardCode';
+    const IDENTIFIER = 'DocNum';
     const FILLABLE_API = [
         'DocEntry',
         'DocNum',
@@ -39,6 +40,7 @@ class Order extends Model
         'DocRate',
         'FederalTaxID',
         'DiscountPercent',
+        'Address2',
     ];
     const FILLABLE_INTERNAL = [
         'process_id',
@@ -53,6 +55,8 @@ class Order extends Model
         'report_user_responsible',
         'report_user_name',
         'is_resolved',
+        'is_managed_in_billing',
+        'is_dispatched',
     ];
 
     protected $fillable = [
@@ -62,6 +66,15 @@ class Order extends Model
 
     protected $appends = [
         'indicator',
+        'warehouse',
+        'guide',
+        'document',
+    ];
+
+    protected $casts = [
+        'DocRate'         => 'integer',
+        'SalesPersonCode' => 'integer',
+        'DiscountPercent' => 'integer',
     ];
 
     protected static function boot()
@@ -76,6 +89,11 @@ class Order extends Model
         static::updating(function ($order) {
             $order->attributes['Confirmed'] = strtolower($order->attributes['Confirmed']) === 'tyes' ? 1 : 0;
         });
+    }
+
+    public function bills()
+    {
+        return $this->hasMany(Bill::class, 'order_id');
     }
 
     public function customer()
@@ -117,9 +135,9 @@ class Order extends Model
     protected function Indicator(): Attribute
     {
         return Attribute::make(
-            get: function ($value, $attributes) {
+            get: function () {
 
-                $formaPago = $attributes['U_SBO_FormaPago'] ?? null;
+                $formaPago = $this->U_SBO_FormaPago ?? null;
     
                 switch ($formaPago) {
                     case 'Factura':
@@ -129,6 +147,56 @@ class Order extends Model
                     default:
                         return "52";
                 }
+            }
+        );
+    }
+
+    protected function Guide(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+                if ($this->bills) {
+                    return null;
+                }
+                foreach ($this->bills as $bill) {
+                    if ($bill->esGuia()) {
+                        return $bill;
+                    }
+                }
+            return null;
+        });
+    }
+
+    protected function Document(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+                if ($this->bills) {
+                    return null;
+                }
+                foreach ($this->bills as $bill) {
+                    if (!$bill->esGuia()) {
+                        return $bill;
+                    }
+                }
+                return null;
+            }
+        );
+    }
+
+
+    protected function Warehouse(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+
+                $orderItems = $this->orderItems;
+    
+                if ($orderItems->isEmpty()) {
+                    return null; 
+                }
+    
+                return $orderItems->first()->WarehouseCode;
             }
         );
     }

@@ -87,7 +87,7 @@ class OrderManagementService
         ];
     }
 
-    /**
+   /**
      * Procesa una orden para la generación de documentos de facturación, utilizando el servicio de facturación.
      *
      * @param Request $request Datos de la solicitud incluyendo la información de la orden.
@@ -95,29 +95,118 @@ class OrderManagementService
      */
     public function processOrderBiller(Request $request)
     {
+        $order = $this->getOrderAndAssignResponsible($request);
+        $order->update(['is_managed_in_billing' => true]);
+
+        $response = $this->generateBillerDocument($order);
+        $this->createBillForOrder($order, $response);
+
+        if ($this->isDocumentCreatedSuccessfully($response)) {
+            if($order->indicator !== '52') {
+                $this->updateOrderStatusToBilled($order);
+            }
+            // $this->updateOrderStatusToBilled($order);
+
+            $status   = 'success';
+            $message = 'Documento generada correctamente';
+        } else {
+            $status   = 'error';
+            $message = 'Error al generar el documento';
+            if ($this->isSuccessfullyConnection($response)) {
+                $this->rejectOrder($request);
+            }else{
+                $this->getOrderAndAssignResponsible($request);
+                $order->update(['is_managed_in_billing' => false]);
+            }
+        }
+        return (object) [
+            'status' => $status,
+            'message' => $message,
+            'order' => new OrderResource($order),
+        ];
+    }
+
+    public function returnProcessOrderBiller($request)
+    {
+        $order = Order::getOrder($request->order['id']);
+        $order->update([
+            'is_managed_in_billing' => false,
+            'order_status_id' => OrderStatus::STATUS_REVIEWED,
+        ]);
+        $order->bill()->delete();
+        $order->refresh();
+
+        return new OrderResource($order);
+    }
+
+    protected function getOrderAndAssignResponsible(Request $request)
+    {
         $order = Order::getOrder($request->order['id']);
         $order->assignResponsible($request->responsible);
-        
+        return $order;
+    }
+
+    protected function generateBillerDocument($order)
+    {
         $billerService = new BillerService();
         $data = $billerService->buildData($order);
-        $response = $billerService->generateDocument($data);
+        return $billerService->generateDocument($data);
+    }
 
-        if ($response['Creado'] ?? false) {
+    protected function isDocumentCreatedSuccessfully($response)
+    {
+        return $response['Creado'] ?? false;
+    }
 
-            $order->update([
-                'order_status_id' => OrderStatus::STATUS_BILLED,
-            ]);
-            
-            return (object) [
-                'message' => 'Documento generado correctamente',
-                'order' => new OrderResource($order),
-            ];
-        } else {
-            return (object) [
-                'message' => 'Error al generar el documento',
-                'order' => null,
-            ];
+    protected function isSuccessfullyConnection($response)
+    {
+        return array_key_exists('Creado', $response);
+    }
+
+    protected function createBillForOrder($order, $response)
+    {
+        if(empty($response) || !isset($response['Creado'])) {
+            return;
         }
+        $docEntry = $response['DocEntry'] != '' ? intval($response['DocEntry']) : null;
+
+        return $order->bill()->updateOrCreate(
+            [
+                'DocEntry' => $docEntry,
+            ],
+            [
+            'user_id' => auth()->user()->id,
+            'Creado' => $response['Creado'],
+            'Facturado' => $response['Facturado'],
+            'Error' => $response['Error'],
+            'Folio' => $response['Folio'],
+            'FebosID' => $response['FebosID'],
+            'DocEntry' => $docEntry,
+            'IndicadorFinanciero' => $response['IndicadorFinanciero'],
+            'LinkPDF' => $response['LocalLinkPDF'] ?? $response['LinkPDF'],
+        ]);
+    }
+
+    protected function updateOrderStatusToBilled($order)
+    {
+        $order->update([
+            'order_status_id' => OrderStatus::STATUS_BILLED,
+        ]);
+    }
+
+    public function assingResponsibleReport($request)
+    {
+        $user = auth()->user();
+        $orderId = $request->orderId ?? $request->order['id'];
+        $order = Order::getOrder($orderId);
+
+        $order->report_user_id = $user->id;
+        $order->report_user_responsibles = $request->responsible;
+        $order->report_user_name = $user->name;
+        $order->save();
+        $order->refresh();
+
+        return $order;
     }
 
     /**
@@ -127,17 +216,14 @@ class OrderManagementService
      * @param int|null $orderId ID opcional de la orden a rechazar, si no se pasa en la solicitud.
      * @return Chat Retorna un chat asociado a la orden si es necesario.
      */
-    public function rejectOrder(Request $request, $orderId = null)
+    public function rejectOrder(Request $request)
     {
-        $user = auth()->user();
-        $order = $orderId ? Order::getOrder($orderId) : Order::getOrder($request->orderId);
 
-        $order->order_status_id = OrderStatus::STATUS_REJECTED;
-        $order->report_user_id = $user->id;
-        $order->report_user_responsible = $request->responsible;
-        $order->report_user_name = $user->name;
+        $order = $this->getOrderAndAssignResponsible($request);
 
-        $order->save();
+        $order->update([
+            'order_status_id' => OrderStatus::STATUS_REJECTED,
+        ]);
 
         switch ($request->responsible):
             case 'cda':

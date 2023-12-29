@@ -4,6 +4,8 @@ namespace App\Services\Order;
 
 use App\Models\Order;
 use App\Models\Process;
+use App\Models\OrderItem;
+use App\Models\Warehouse;
 use App\Models\OrderStatus;
 use Illuminate\Http\Request;
 use App\Models\MethodShipping;
@@ -116,6 +118,60 @@ class OrderQueryService
         return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
     }
 
+    public function listOrderBillManage($methodShipping, bool $execute = true)
+    {
+        $param = $methodShipping === 'here' ? 1 : 0;
+
+        $query = Order::withOrderDetails()
+                ->with('bill')
+                ->where('is_managed_in_billing', true);
+
+        return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
+    }
+
+    /**
+     * Lista las órdenes asociadas al proceso de despacho, filtradas por el tipo de envío y status.
+     *
+     * @param bool $execute Indica si se ejecuta la consulta o solo se prepara.
+     * @param bool $isDispatched Indica si se filtra por el estado de despacho (true) o no (false). 
+     * @return mixed Lista paginada de órdenes o el objeto de consulta.
+     */
+    public function listOrdersDispatch(bool $execute = true, bool $isDispatched = false)
+    {
+        $query = Order::withOrderDetails()
+            ->where('method_shipping_id', MethodShipping::METHOD_SHIPPING_DELIVERY)
+            ->where(function ($query) use ($isDispatched) {
+                $query->where(function ($subQuery) {
+                    $subQuery->where('process_id', Process::PROCESS_ID_PAYMENT)
+                        ->orWhereHas('bills', function ($billQuery) {
+                            $billQuery->where('IndicadorFinanciero', '52');
+                        });
+                });
+    
+                if ($isDispatched) {
+                    $query->where('is_dispatched', true);
+                } else {
+                    $query->where(function ($dispatchQuery) {
+                        $dispatchQuery->where('is_dispatched', false)
+                                      ->orWhereNull('is_dispatched');
+                    });
+                }
+            })
+            ->orderByDesc('DocDate');
+    
+        return $execute ? $query->paginate(self::PAGE_SIZE * 5) : $query;
+    }
+    
+    public function listOrdersDispatchManage(bool $execute = true)
+    {
+        $executeQuery = false;
+        $isDispatched = true;
+
+        $query = $this->listOrdersDispatch($executeQuery, $isDispatched);
+
+        return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
+    }
+
     /**
      * Lista las órdenes asociadas al proceso de pago.
      *
@@ -148,6 +204,13 @@ class OrderQueryService
                     ->where('method_shipping_id', $condition, MethodShipping::METHOD_SHIPPING_HERE);
 
         return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
+    }
+
+    public function listWarehouses()
+    {
+        return OrderItem::select('WarehouseCode')
+                ->groupBy('WarehouseCode')
+                ->get();
     }
 
     /**
@@ -194,6 +257,10 @@ class OrderQueryService
                 return $this->listOrdersBills($request->methodShipping, false);
             case 'payment':
                 return $this->listOrdersPayment(false);
+            case 'dispatch:true':
+                return $this->listOrdersDispatch(false);
+            case 'dispatch:false':
+                return $this->listOrdersDispatchManage(false);
             default:
                 throw new \InvalidArgumentException("Tipo de búsqueda no válido: $type");
         }
