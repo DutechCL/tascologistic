@@ -18,7 +18,7 @@ class Order extends Model
 {
     use HasFactory;
 
-    const IDENTIFIER = 'CardCode';
+    const IDENTIFIER = 'DocNum';
     const FILLABLE_API = [
         'DocEntry',
         'DocNum',
