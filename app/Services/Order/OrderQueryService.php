@@ -77,27 +77,37 @@ class OrderQueryService
 
     /**
      * Lista las órdenes asignadas a los procesos de selección o revisión en una bodega específica.
-     * Valida si el usuario tiene permisos para acceder a la bodega especificada.
+     * Filtra además por método de envío si se especifica.
      *
      * @param string $wareHouseCode Código de la bodega para filtrar las órdenes.
+     * @param string|null $methodShipping Método de envío para filtrar las órdenes.
      * @param bool $execute Indica si se ejecuta la consulta o solo se prepara.
      * @return mixed Lista paginada de órdenes o el objeto de consulta.
      * @throws \Exception Si el usuario no tiene permisos para la bodega.
      */
-    public function listOrdersPickerReviewer($wareHouseCode, bool $execute = true)
+    public function listOrdersPickerReviewer($wareHouseCode, $methodShipping = null, bool $execute = true)
     {
         if (!$this->orderValidationService->isValidWarehouseForUser($wareHouseCode)) {
             throw new \Exception('No tiene permisos para acceder a esta bodega');
         }
-
+    
         $query = Order::byWarehouse([$wareHouseCode])
-                    ->withOrderDetails()
-                    ->whereIn('process_id', [Process::PROCESS_ID_PICKER, Process::PROCESS_ID_REVIEWER])
-                    ->orderByDesc('updated_at')
-                    ->orderByDesc('DocDate');
-
+                      ->withOrderDetails()
+                      ->where(function($query) use ($methodShipping) {
+                          $query->whereIn('process_id', [Process::PROCESS_ID_PICKER, Process::PROCESS_ID_REVIEWER]);
+                          if ($methodShipping === 'here') {
+                              $query->where('method_shipping_id', MethodShipping::METHOD_SHIPPING_HERE);
+                          } elseif ($methodShipping === 'delivery') {
+                              $query->where('method_shipping_id', '!=', MethodShipping::METHOD_SHIPPING_HERE);
+                          }
+                      })
+                      ->orderByDesc('updated_at')
+                      ->orderByDesc('DocDate');
+    
         return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
     }
+    
+
 
     /**
      * Lista las órdenes asociadas al proceso de facturación, filtradas por el tipo de envío.
@@ -111,7 +121,7 @@ class OrderQueryService
         $condition = $type === MethodShipping::METHOD_SHIPPING_HERE ? '!=' : '=';
 
         $query = Order::withOrderDetails()
-                    ->where('process_id', Process::PROCESS_ID_BILLS)
+                    ->where('process_id', Process::PROCESS_ID_CDA)
                     ->where('method_shipping_id', $condition, MethodShipping::METHOD_SHIPPING_DELIVERY)
                     ->orderByDesc('DocDate');
 
@@ -252,7 +262,7 @@ class OrderQueryService
             case 'cda:false':
                 return $this->listOrdersCdaManage(false);
             case 'picker-reviewer':
-                return $this->listOrdersPickerReviewer($request->warehouses, false);
+                return $this->listOrdersPickerReviewer($request->warehouses, null, false);
             case 'bills':
                 return $this->listOrdersBills($request->methodShipping, false);
             case 'payment':

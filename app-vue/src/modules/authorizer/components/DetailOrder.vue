@@ -103,7 +103,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, defineEmits} from 'vue'
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
 import Tag from 'primevue/tag'
@@ -118,6 +118,7 @@ import constants from '@/constants/constants';
 const { showToast } = ToastMixin.setup();
 const { showConfirm } = ConfirmMixin.setup();
 const ordersStore = useOrdersPickerReview()
+const emit = defineEmits();
 const disableButton = ref(true)
 const setProductsCheck = new Set();
 
@@ -180,7 +181,9 @@ const actionOrder = async () => {
 
       let response = await ordersStore.processOrderAction(body);
 
+      
       if (response.status === 'success') {
+        emit('fetchOrders');
         ordersStore.showDetailOrder = false;
         ordersStore.setOrderItemsProblems.clear();
         ordersStore.isProblemMapped = []

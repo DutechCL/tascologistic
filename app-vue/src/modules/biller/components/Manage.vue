@@ -2,7 +2,7 @@
       <div class="px-8">
         <div class="flex justify-between">
           <h1 class="mb-4 text-primary-900 font-inter font-semibold text-2xl">
-            Retira / Aquí  <a style="cursor: pointer;" @click="updateOrders"><i class="pi pi-refresh"></i></a> 
+            {{ title }}  <a style="cursor: pointer;" @click="updateOrders(props.methodShipping)"><i class="pi pi-refresh"></i></a> 
           </h1>
           <Search :type="constants.RESPONSIBLE_BILLER" :methodShipping="constants.METHOD_SHIPPING_HERE"  :orders="orderStore.listOrders" @search="search"/>
         </div>
@@ -43,7 +43,6 @@
     import DialogDetail from './DialogDetail.vue';
     import DialogDetailBill from './DialogDetailBill.vue';
     import DataTableOrders from './tables/DataTableOrders.vue';
-    import ConfirmDialog from 'primevue/confirmdialog';
     import constants from '@/constants/constants';
     import { useOrderProcessing } from '../composables/useOrderProcessing.js';
   
@@ -58,17 +57,16 @@
         search, 
         actionMethod, 
         visibleDetailsMethod, 
-        orderStore
+        orderStore,
+        title,
       } = useOrderProcessing();
   
       onBeforeMount(async () => {
-          console.log(props.status, props.methodShipping)
           if(props.status === 'pending'){            
             await updateOrders(props.methodShipping).then(() => {
               orders.value = orderStore.listOrders;
             });
           }else{
-            console.log(props.methodShipping)
             await orderStore.getOrdersBillManage(props.methodShipping).then((data) => {
               orders.value = data;
             }); 

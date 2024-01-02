@@ -35,19 +35,18 @@ export const useOrdersPickerReview = defineStore('ordersPickerReview', {
         orders: (state) => state.listOrders,
   },
   actions: {
-    async getOrdersPickerAndReviewer() {
-        let response = await orderService.getOrdersPickerAndReviewer(this.wareHouseCode);
-        this.classifyOrders(response.data);
+    async getOrdersPickerAndReviewer(type) {
+        let response = await orderService.getOrdersPickerAndReviewer(this.wareHouseCode, type);
+        // this.classifyOrders(response.data);
         this.isDataLoaded = true;
+        return response.data;
     },
     async assignResponsible() {
         let data = {
             orderId: this.currentOrder.id,
             responsible: this.currentOrder.responsible
         }
-        const response = await orderService.assignResponsible(data);
-        this.updateListOrders(response.data);
-        return response;
+        return await orderService.assignResponsible(data);
     },
 
     async processOrderAction(body) {

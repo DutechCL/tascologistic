@@ -102,10 +102,9 @@ class OrderManagementService
         $this->createBillForOrder($order, $response);
 
         if ($this->isDocumentCreatedSuccessfully($response)) {
-            if($order->indicator !== '52') {
+            if($response['IndicadorFinanciero'] !== '52') {
                 $this->updateOrderStatusToBilled($order);
             }
-            // $this->updateOrderStatusToBilled($order);
 
             $status   = 'success';
             $message = 'Documento generada correctamente';
@@ -133,7 +132,13 @@ class OrderManagementService
             'is_managed_in_billing' => false,
             'order_status_id' => OrderStatus::STATUS_REVIEWED,
         ]);
-        $order->bill()->delete();
+
+        if (isset($request->order['indicador'])) {
+            $order->bills()
+                  ->where('IndicadorFinanciero', $request->order['indicador'])
+                  ->delete();
+        }
+
         $order->refresh();
 
         return new OrderResource($order);
@@ -141,7 +146,8 @@ class OrderManagementService
 
     protected function getOrderAndAssignResponsible(Request $request)
     {
-        $order = Order::getOrder($request->order['id']);
+        $orderId = $request->orderId ?? $request->order['id'];
+        $order = Order::getOrder($orderId);
         $order->assignResponsible($request->responsible);
         return $order;
     }

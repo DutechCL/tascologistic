@@ -62,7 +62,7 @@ Route::prefix('v1')->group(
         
         //URL'S ORDENES PICKER-REVIEWER
         Route::middleware(['auth:sanctum'])->prefix('orders/picker-reviewer')->group(function () {
-            Route::get('{wareHouseCode}', [OrderController::class, 'getOrdersPickerAndReviewer']);
+            Route::get('{wareHouseCode}/{methodShipping}', [OrderController::class, 'getOrdersPickerAndReviewer']);
             Route::post('process-order', [OrderController::class, 'processOrderPickerReviewer']);
         });
         

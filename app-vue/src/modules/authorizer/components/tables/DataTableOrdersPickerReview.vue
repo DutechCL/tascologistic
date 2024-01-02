@@ -100,6 +100,11 @@ watch(
   }
 );
 
+watch(
+  () => orders.value, 
+  (data) => {
+    orders.value = data;
+});
 const filter = (data) => {
     orders.value = data.orders;
 }
@@ -114,12 +119,23 @@ const action = (order, responsible) => {
 const assignResponsible = async () => {
   
   try {
-    let response = await ordersStore.assignResponsible()
+    await ordersStore.assignResponsible().then((res) => {
+
+    if (res.status === 'success') {
+
+      const index = orders.value.findIndex(order => order.id === res.data.id);
+
+      if (index !== -1) {
+        orders.value[index] = res.data;
+      }
 
       showToast({
-        status: response.status,
-        message: response.message,
+        status: res.status,
+        message: res.message,
       });
+    }
+  });
+
   } catch (error) {
       if (error.response) {
         showToast({

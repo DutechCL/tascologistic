@@ -22,4 +22,9 @@ class Process extends Model
     const PROCESS_SLUG_BILLS    = 'bills';
     const PROCESS_SLUG_PAYMENT  = 'payment';
     const PROCESS_SLUG_DISPATCH = 'dispatch';
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

@@ -71,8 +71,8 @@ export const useOrders = defineStore('orders', {
             return await postWithToken(`api/v1/orders/bills/process-order/return`, body);
         },
 
-        async getOrdersPickerAndReviewer(wareHouseCode) {
-            return await getWithToken(`api/v1/orders/picker-reviewer/${wareHouseCode}`);
+        async getOrdersPickerAndReviewer(wareHouseCode, type) {
+            return await getWithToken(`api/v1/orders/picker-reviewer/${wareHouseCode}/${type}`);
         },
         async addObservation(body) {
             return await postWithToken('api/v1/orders/authorizer/observation', body);

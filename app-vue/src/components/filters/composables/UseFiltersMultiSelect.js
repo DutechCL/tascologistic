@@ -5,7 +5,7 @@ import { ToastMixin } from '../../../Utils/ToastMixin';
 import { useOrdersDispatch } from "../../../stores/orders/ordersDispatch";
 import { arSA } from 'date-fns/locale';
 
-export function UseFiltersMultiSelect(ListordersManager) {
+export function UseFiltersMultiSelect(ListordersManager, filters) {
 
   const { showToast } = ToastMixin.setup();
   const ordersStore = useOrdersDispatch();
@@ -71,9 +71,11 @@ export function UseFiltersMultiSelect(ListordersManager) {
 
 
   onBeforeMount( async () => {
-    await ordersStore.getWarehouses().then((response) => {
-      Warehouses.value = response.data;
-    });
+    if(filters.includes('Warehouse')){
+      await ordersStore.getWarehouses().then((response) => {
+        Warehouse.value = response.data;
+      });
+    }
   })
 
   watch([dates], (data) => {
