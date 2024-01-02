@@ -112,7 +112,7 @@ class OrderManagementService
             $status   = 'error';
             $message = 'Error al generar el documento';
             $error = json_decode($response['Error']);
-            if (!$error->error->systemError) {
+            if (!$error->systemError) {
                 $this->rejectOrder($request);
             }else{
                 $this->getOrderAndAssignResponsible($request);
