@@ -51,8 +51,17 @@
                   style="width: 100px;"
                   outlined></Button>
                   <Button
+                    v-if="slotProps.data.Indicator === '52'"
+                    :label="'Guia'" 
+                    @click="actionMethod('returnProcessOrderBiller', slotProps.data, slotProps.data.U_SBO_FormaPago)" 
+                    class="!py-1.5 !border-primary-900 !text-primary-900 mr-3"  
+                    severity="primary" 
+                    style="width: 100px;"
+                    outlined></Button>
+                  <Button
                     v-if="!orderStore.orderProcessingStatus[slotProps.data.id]?.inProcess && slotProps.data.is_managed_in_billing == false"
                     :label="slotProps.data.U_SBO_FormaPago" 
+                    :disabled="slotProps.data.Indicator === '52'"
                     @click="actionMethod('processOrderBiller', slotProps.data, slotProps.data.U_SBO_FormaPago)" 
                     class="!py-1.5 !border-primary-900 !text-primary-900 mr-3"  
                     severity="primary" 

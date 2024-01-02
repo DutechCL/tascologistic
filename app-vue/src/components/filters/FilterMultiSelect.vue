@@ -156,7 +156,7 @@ const {
     toggleDateTimeFields,
     applyFilter,
     removeFilterTime,
-} = UseFiltersMultiSelect(allOrders);
+} = UseFiltersMultiSelect(allOrders, props.filters);
 
 watch(
     () => orders.value,  

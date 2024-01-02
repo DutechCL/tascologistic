@@ -48,10 +48,10 @@ class OrderController extends Controller
         }
     }
 
-    public function getOrdersPickerAndReviewer($wareHouseCode)
+    public function getOrdersPickerAndReviewer($wareHouseCode, $methodShipping)
     {
         try {
-            $orders = $this->orderQueryService->listOrdersPickerReviewer($wareHouseCode);
+            $orders = $this->orderQueryService->listOrdersPickerReviewer($wareHouseCode, $methodShipping);
 
             return $this->success(
                 OrderResource::collection($orders)->resolve()

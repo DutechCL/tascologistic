@@ -131,6 +131,11 @@ class Order extends Model
         return $this->hasMany(Chat::class);
     }
 
+    public function process()
+    {
+        return $this->belongsTo(Process::class, 'process_id');
+    }
+
 
     protected function Indicator(): Attribute
     {

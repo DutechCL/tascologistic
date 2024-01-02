@@ -10,6 +10,7 @@ export function useOrderProcessing() {
     const { showToast } = ToastMixin.setup();
     const { showConfirm } = ConfirmMixin.setup();
     const visible = ref(false);
+    const title = ref('');
     const search = (data) => {
         orders.value = data.orders;
     }
@@ -33,8 +34,10 @@ export function useOrderProcessing() {
 
     const updateOrders = async (type) => {
         if (type === 'delivery') {
+            title.value = 'Despacho';
             await orderStore.getOrdersBillDelivery();
         } else  {
+            title.value = 'Retira / Aquí';
             await orderStore.getOrdersBillPickupAndHere();
         }
 
@@ -149,5 +152,6 @@ export function useOrderProcessing() {
         goBack,
         search,
         orderStore,
+        title,
     };
 }

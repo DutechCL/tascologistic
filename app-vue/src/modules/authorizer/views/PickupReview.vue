@@ -30,7 +30,7 @@
       <!-- End table orders PickupAndDelivery -->
     </div>
     <!-- start detail order -->
-    <DetailOrder/>
+    <DetailOrder @fetchOrders="fetchOrders"/>
     <!-- end detail order -->
   </div>
   <div v-if="ordersHere.length === 0 && ordersPickupDelivery.length  === 0" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -60,8 +60,17 @@ const props = defineProps({
 
 const { listOrdersHere, listOrdersPickupDelivery } = toRefs(ordersStore.$state);
 
-const updateOrders = () => {
-  ordersStore.getOrdersPickerAndReviewer();
+const fetchOrders = async () => {
+    ordersStore.wareHouseCode = props.wareHouseCode;
+    await ordersStore.getOrdersPickerAndReviewer('here').then((res) => {
+      ordersHere.value = res;
+    });
+    await ordersStore.getOrdersPickerAndReviewer('delivery').then((res) => {
+      ordersPickupDelivery.value = res;
+    })
+}
+const updateOrders = async () => {
+  fetchOrders();
   showToast({
     status: 'success',
     title: 'Ordenes actualizadas',
@@ -69,16 +78,8 @@ const updateOrders = () => {
   })
 }
 
-watch(
-  () => ordersStore.orders, 
-  () => {
-    ordersHere.value = listOrdersHere.value;
-    ordersPickupDelivery.value = listOrdersPickupDelivery.value;
-});
-
-onBeforeMount(() => {
-    ordersStore.wareHouseCode = props.wareHouseCode;
-    ordersStore.getOrdersPickerAndReviewer();
+onBeforeMount( async () => {
+  fetchOrders();
 });
 
 const search = (value) => {
