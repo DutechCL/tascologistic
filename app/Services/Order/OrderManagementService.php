@@ -101,7 +101,7 @@ class OrderManagementService
         $response = $this->generateBillerDocument($order);
         $this->createBillForOrder($order, $response);
 
-        if ($this->isDocumentCreatedSuccessfully($response)) {
+        if ($this->isSuccessfullyConnection($response)) {
             if($response['IndicadorFinanciero'] !== '52') {
                 $this->updateOrderStatusToBilled($order);
             }
@@ -111,7 +111,8 @@ class OrderManagementService
         } else {
             $status   = 'error';
             $message = 'Error al generar el documento';
-            if ($this->isSuccessfullyConnection($response)) {
+            $error = json_decode($response['Error']);
+            if (!$error['error']['systemError']) {
                 $this->rejectOrder($request);
             }else{
                 $this->getOrderAndAssignResponsible($request);
@@ -157,11 +158,6 @@ class OrderManagementService
         $billerService = new BillerService();
         $data = $billerService->buildData($order);
         return $billerService->generateDocument($data);
-    }
-
-    protected function isDocumentCreatedSuccessfully($response)
-    {
-        return $response['Creado'] ?? false;
     }
 
     protected function isSuccessfullyConnection($response)

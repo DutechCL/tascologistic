@@ -182,27 +182,47 @@ class BillerService
 
     private function parseJsonToObject($json, $data): ?object
     {
+        // Primero, intenta encontrar y extraer el error "httpException"
         $jsonStartPosition = strpos($json, '{"httpException":');
-        if ($jsonStartPosition === false) {
-            return null;
+        if ($jsonStartPosition !== false) {
+            $jsonClean = substr($json, $jsonStartPosition);
+            $decodedJson = json_decode($jsonClean);
+    
+            if (json_last_error() === JSON_ERROR_NONE) {
+                $decodedJson->httpException->message = explode('JSON', $decodedJson->httpException->message)[0];
+                if ($this->extractLinePosition($jsonClean) !== null) {
+                    $Item = $data['Order']['DocumentLines'][$this->extractLinePosition($jsonClean)];
+                    $decodedJson->httpException->errorItem = $Item;
+                }
+                return (object) [
+                    'systemError' => false,
+                    'message' => $decodedJson
+                ];
+            }
         }
     
-        $jsonClean = substr($json, $jsonStartPosition);
-        
-        $decodedJson = json_decode($jsonClean);
-        $decodedJson->httpException->message = explode('JSON', $decodedJson->httpException->message)[0];
-
-        if($this->extractLinePosition($jsonClean) !== null) {
-            $Item = $data['Order']['DocumentLines'][$this->extractLinePosition($jsonClean)];
-            $decodedJson->httpException->errorItem = $Item;
+        // Luego, intenta encontrar y extraer el error en el formato "LlamarSL"
+        $llamarSLStartPosition = strpos($json, 'LlamarSL:');
+        if ($llamarSLStartPosition !== false) {
+            // Ajusta el JSON para obtener un objeto válido
+            $jsonClean = substr($json, $llamarSLStartPosition + 10); // +10 para saltar "LlamarSL:"
+            $jsonClean = trim($jsonClean); // Elimina espacios y caracteres de nueva línea
+    
+            $decodedJson = json_decode($jsonClean);
+    
+            if (json_last_error() === JSON_ERROR_NONE && isset($decodedJson->error->message->value)) {
+                // Crea un objeto de error personalizado con el mensaje
+                return (object)[
+                    'systemError' => true,
+                    'message' => $decodedJson->error->message->value
+                ];
+            }
         }
     
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            return null;
-        }
-    
-        return $decodedJson;
+        // Retorna null si no se encuentra un formato de error reconocido
+        return null;
     }
+    
 
     private function extractLinePosition($jsonString) {
 
