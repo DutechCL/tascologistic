@@ -101,7 +101,7 @@ class OrderManagementService
         $response = $this->generateBillerDocument($order);
         $this->createBillForOrder($order, $response);
 
-        if ($this->isSuccessfullyConnection($response)) {
+        if ($this->isSuccessfullyConnection($response) && $response['Creado'] === true) {
             if($response['IndicadorFinanciero'] !== '52') {
                 $this->updateOrderStatusToBilled($order);
             }
