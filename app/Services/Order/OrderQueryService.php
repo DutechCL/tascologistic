@@ -191,7 +191,7 @@ class OrderQueryService
     public function listOrdersPayment(bool $execute = true)
     {
         $query = Order::withOrderDetails()
-                    ->where('process_id', Process::PROCESS_ID_CDA)
+                    ->where('process_id', Process::PROCESS_ID_PAYMENT)
                     ->orderByDesc('DocDate');
 
         return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
