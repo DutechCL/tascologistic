@@ -133,7 +133,7 @@ class OrderQueryService
         $param = $methodShipping === 'here' ? 1 : 0;
 
         $query = Order::withOrderDetails()
-                ->with('bill')
+                ->with('bills')
                 ->where('is_managed_in_billing', true);
 
         return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
