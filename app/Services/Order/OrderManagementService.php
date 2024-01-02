@@ -172,7 +172,7 @@ class OrderManagementService
         }
         $docEntry = $response['DocEntry'] != '' ? intval($response['DocEntry']) : null;
 
-        return $order->bill()->updateOrCreate(
+        return $order->bills()->updateOrCreate(
             [
                 'DocEntry' => $docEntry,
             ],
