@@ -121,7 +121,7 @@ class OrderQueryService
         $condition = $type === MethodShipping::METHOD_SHIPPING_HERE ? '!=' : '=';
 
         $query = Order::withOrderDetails()
-                    ->where('process_id', Process::PROCESS_ID_CDA)
+                    ->where('process_id', Process::PROCESS_ID_BILLS)
                     ->where('method_shipping_id', $condition, MethodShipping::METHOD_SHIPPING_DELIVERY)
                     ->orderByDesc('DocDate');
 
@@ -191,7 +191,7 @@ class OrderQueryService
     public function listOrdersPayment(bool $execute = true)
     {
         $query = Order::withOrderDetails()
-                    ->where('process_id', Process::PROCESS_ID_PAYMENT)
+                    ->where('process_id', Process::PROCESS_ID_CDA)
                     ->orderByDesc('DocDate');
 
         return $execute ? $query->paginate(self::PAGE_SIZE) : $query;
