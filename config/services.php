@@ -56,7 +56,10 @@ return [
             ],
             'warehouses' => [
                 'get' => 'Warehouses'
-            ]
+            ],
+            'payments' => [
+                'post' => 'IncomingPayments'
+            ],
         ]
     ],
 

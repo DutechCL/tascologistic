@@ -30,10 +30,14 @@ return new class extends Migration
             $table->string('Address')->nullable();
             $table->string('FederalTaxID')->nullable();
             $table->string('EmailAddress')->nullable();            
+            $table->string('DeductionPercent')->nullable();
+            $table->string('ProjectCode')->nullable();
+            $table->string('WTCode')->nullable();
             $table->date('CreateDate')->nullable();
             $table->time('CreateTime')->nullable();
             $table->date('UpdateDate')->nullable();
             $table->time('UpdateTime')->nullable();
+
             $table->timestamps();
         });
     }

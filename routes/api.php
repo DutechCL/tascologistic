@@ -87,6 +87,7 @@ Route::prefix('v1')->group(
         //URL'S ORDENES PAGO
         Route::middleware(['auth:sanctum'])->prefix('orders/payment')->group(function () {
             Route::get('/', [OrderController::class, 'getOrdersPayment']);
+            Route::post('process-payment', [OrderController::class, 'processPayment']);
         });
 
         // ORDENES TRAKER

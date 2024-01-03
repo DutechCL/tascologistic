@@ -37,7 +37,9 @@
             <RadioButton v-model="checkedMethod" :inputId="method.idMethod" @change="methodCheckedInputs(method.idMethod)" name="method" :value="method.name" />
             <label :for="method.idMethod" class="ml-2">{{ method.name }}</label>
             <!-- Botón para eliminar -->
-            <button @click="removeMethod(method.idMethod)" class="delete-btn">X</button>
+            <button @click="removeMethod(method.idMethod)" class="delete-btn" 
+              style="border-radius: 50%; border: 1px solid; width: 25px; height: 25px;
+            ">X</button>
           </li>
         </ul>
       </div>
@@ -271,6 +273,18 @@ function updateInputValue(methodId, inputKey, value) {
     data.paymentData = paymentData;
 
     console.log(data);
+
+    await ordersPayment.processPayment(data).then(response => {
+      showToast({
+        status: response.status,
+        message: response.message,
+      });
+    }).catch(error => {
+      showToast({
+        status: error.response.data.status,
+        message: error.response.data.message,
+      });
+    });
 
   }
 

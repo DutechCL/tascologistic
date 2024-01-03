@@ -146,7 +146,7 @@ class SAPService
     public function post(string $key, $data = [])
     {
         try {
-            $endpoint = $this->endpoint($key);
+            $endpoint = $this->endpoint($key, 'post');
             return $this->makeRequest($endpoint, 'post', $data);
         } catch (\Exception $e) {
             Log::error("Error en la operación POST para $key: {$e->getMessage()}");
