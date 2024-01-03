@@ -104,6 +104,10 @@ export const useOrders = defineStore('orders', {
 
         async markAsExported(body) {
             return await postWithToken(`api/v1/orders/dispatch/mark-as-exported`, body);
+        },
+
+        async processPayment(body) {
+            return await postWithToken(`api/v1/orders/payment/process-payment`, body);
         }
     }
 });

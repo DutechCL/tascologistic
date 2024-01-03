@@ -228,7 +228,7 @@ class OrderController extends Controller
             $order =  $this->orderManagementService->returnProcessOrderBiller($request);
             
             return $this->success(
-                $order,
+                [$order],
                 'La orden regreso al proceso de gestión'
             );
 
@@ -236,6 +236,22 @@ class OrderController extends Controller
             return $this->buildResponseErrorFromException($exception);
         }
     }
+
+    public function processPayment(Request $request)
+    {
+        try {
+            $result = $this->orderManagementService->processPayment($request);
+
+            // return $this->success(
+            //     $result->order,
+            //     $result->message
+            // );
+
+        } catch (\Exception $exception) {
+            return $this->buildResponseErrorFromException($exception);
+        }
+    }
+
 
     public function addObservation(Request $request)
     {

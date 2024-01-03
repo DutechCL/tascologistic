@@ -46,14 +46,24 @@
                 <Tag v-if="slotProps.data.method_shipping_id === constants.METHOD_SHIPPING_DELIVERY_ID" Tag :icon="'pi pi-truck'"  :value="slotProps.data.MethodShippingName" rounded class="tag-radius tag-rounded-blue tag-font-method"></Tag>
               </template>
             </Column>
-            <Column v-if="props.column.includes('credit')" sortable headerClass="!bg-primary-900"  field="credit" header="Crédito">
+            <Column v-if="props.column.includes('credit')" sortable headerClass="!bg-primary-900"  field="Customer.CreditLimit" header="Crédito">
               <template #body="slotProps">
-                <InputNumber v-model="slotProps.data.credit" class="remove-format-input" inputId="currency-us" mode="currency" currency="USD" locale="en-US" readonly :minFractionDigits="0"  />
+                <InputNumber v-model="slotProps.data.Customer.CreditLimit" class="remove-format-input" inputId="currency-us" mode="currency" currency="USD" locale="en-US" readonly style="width: 150px;"  />
               </template>
             </Column>
-            <Column v-if="props.column.includes('positiveBalance')" sortable headerClass="!bg-primary-900"  field="positiveBalance" header="Saldo a favor">
+            <Column v-if="props.column.includes('positiveBalance')" sortable headerClass="!bg-primary-900"  field="Customer.CurrentAccountBalance" header="Saldo a favor">
               <template #body="slotProps">
-                <InputNumber v-model="slotProps.data.positiveBalance " class="remove-format-input" inputId="currency-us" mode="currency" currency="USD" locale="en-US" readonly :minFractionDigits="0"  />
+                <InputNumber 
+                v-model="slotProps.data.Customer.CurrentAccountBalance" 
+                :class="{'positive-balance': slotProps.data.Customer.CurrentAccountBalance > 0, 'negative-balance': slotProps.data.Customer.CurrentAccountBalance < 0}" 
+                class="remove-format-input" 
+                inputId="currency-us" 
+                mode="currency" 
+                currency="USD" 
+                locale="en-US" 
+                readonly 
+                style="width: 150px;" 
+            />
               </template>
             </Column>
             <Column v-if="props.column.includes('actions')" headerClass="!bg-primary-900"  field="actions" header="" >
@@ -137,5 +147,13 @@ watch(
 [data-pc-section="sort"] svg {
   color: white !important;
   width: 12px;
+}
+
+.positive-balance input {
+  color: red !important; /* Rojo para saldos positivos */
+}
+
+.negative-balance input{
+  color: green !important; /* Verde para saldos negativos */
 }
 </style>

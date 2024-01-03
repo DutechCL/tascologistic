@@ -29,6 +29,11 @@ export const useOrdersPayment = defineStore('ordersPayment', {
       return this.customers;
     },
 
+    async processPayment(body) {
+      return await orderService.processPayment(body);
+      
+    },
+
     async searchCustomers(body) {
       let response = await orderService.searchCustomers(body);
       this.customers = response.data;

@@ -8,9 +8,10 @@ use App\Models\OrderStatus;
 use App\Models\OrderProblem;
 use Illuminate\Http\Request;
 use App\Models\OrderItemProblem;
-use App\Services\Chat\ChatManagementService;
+use App\Services\Payment\PaymentService;
 use App\Http\Resources\OrderResource;
 use App\Services\Biller\BillerService;
+use App\Services\Chat\ChatManagementService;
 
 class OrderManagementService
 {
@@ -143,6 +144,13 @@ class OrderManagementService
         $order->refresh();
 
         return new OrderResource($order);
+    }
+
+    public function processPayment(Request $request)
+    {
+        $paymentService = new PaymentService();
+        $paymentService->createPayment($request);
+        return $request->all();
     }
 
     protected function getOrderAndAssignResponsible(Request $request)

@@ -38,7 +38,10 @@ class Customer extends Model
         'Currency',
         'BPAddresses',
         'ContactEmployees',
-        'Phone1'
+        'Phone1',
+        'DeductionPercent',
+        'ProjectCode',
+        'WTCode',
     ];
 
     protected $fillable = self::FILLABLE;

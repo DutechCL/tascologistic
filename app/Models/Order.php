@@ -41,6 +41,17 @@ class Order extends Model
         'FederalTaxID',
         'DiscountPercent',
         'Address2',
+        'HandWritten',
+        'Printed',
+        'CardName',
+        'Address',
+        'Reference1',
+        'Reference2',
+        'ContactPersonCode',
+        'Series',
+        'DocObjectCode',
+        'Cancelled',
+        'AttachmentEntry',
     ];
     const FILLABLE_INTERNAL = [
         'process_id',
