@@ -21,6 +21,9 @@ class Kernel extends ConsoleKernel
 
         // $schedule->command('sap:sync all')
         //          ->everyMinute($intervalInMinutes);
+
+        $schedule->command('backup:clean')->weekly()->saturdays()->at('04:00');
+        $schedule->command('backup:run')->weekly()->saturdays()->at('05:00');
     }
 
     /**
