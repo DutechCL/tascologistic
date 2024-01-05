@@ -23,7 +23,7 @@ class SettingsTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'key' => '_traker_update_interval',
-                'label' => 'Intervalo de actualización de traker',
+                'label' => 'Intervalo de actualización de traker (en segundos)',
                 'value' => '15',
                 'type' => 'text',
                 'class' => 'col-md-6 pt-4',
@@ -201,7 +201,22 @@ class SettingsTableSeeder extends Seeder
                 'created_at' => '2023-11-10 14:57:07',
                 'updated_at' => '2023-12-05 21:42:59',
             ),
+            13 => 
+            array (
+                'id' => 15,
+                'key' => '_interval_backup',
+                'label' => 'Intervalo de creación de backups (dias)',
+                'value' => '5',
+                'type' => 'number',
+                'class' => 'col-md-6 pt-4',
+                'active' => 1,
+                'section' => 'general',
+                'description' => NULL,
+                'created_at' => '2023-11-10 14:57:07',
+                'updated_at' => '2023-12-05 21:42:59',
+            ),
         ));
+        
         
         
     }

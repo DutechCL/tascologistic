@@ -17,13 +17,21 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        $intervalInMinutes = (int) Setting::get('_sap_interval_sync') ?? 5;
+        $intervalSyncSapInMinutes = (int) Setting::get('_sap_interval_sync') ?? 5;
+        $intervalBackupsInDays = (int) Setting::get('_interval_backup') ?? 5;
 
         // $schedule->command('sap:sync all')
-        //          ->everyMinute($intervalInMinutes);
+        //          ->everyMinute($intervalSyncSapInMinutes);
 
-        $schedule->command('backup:clean')->weekly()->saturdays()->at('04:00');
-        $schedule->command('backup:run')->weekly()->saturdays()->at('05:00');
+
+        // Ejecuta 'backup:clean' a las 4:00 AM cada 'intervalInDays' días
+        $schedule->command('backup:clean')
+            ->cron("0 4 */$intervalBackupsInDays * *");
+        
+        // Ejecuta 'backup:run' a las 5:00 AM cada 'intervalInDays' días
+        $schedule->command('backup:run')
+            ->cron("0 5 */$intervalBackupsInDays * *");
+        
     }
 
     /**
