@@ -33,7 +33,7 @@
       <div v-if="selectedPaymentMethods.length > 0">
         <p class="py-5">Aquí puedes navegar a través de los métodos de pagos</p>
         <ul class="grid grid-cols-5">
-          <li class="!bg-cyan-500 !mr-3 !p-3 flex justify-between shadow-lg" v-for="method in selectedPaymentMethods" :key="method.name">
+          <li class="!bg-cyan-500 !mr-3 !p-3 flex justify-between shadow-lg mt-3" v-for="method in selectedPaymentMethods" :key="method.name">
             <RadioButton v-model="checkedMethod" :inputId="method.idMethod" @change="methodCheckedInputs(method.idMethod)" name="method" :value="method.name" />
             <label :for="method.idMethod" class="ml-2">{{ method.name }}</label>
             <!-- Botón para eliminar -->
@@ -51,7 +51,16 @@
       <div class="grid grid-cols-2">
         <div v-for="({key, type, label}, index) in methodChecked.inputs" :key="index" class="flex flex-col p-2">
           <label :for="key">{{ label }}</label>
-          <InputText :type="type" :name="key" :id="key" :value="inputValues[methodChecked.idMethod][key]" @input="updateInputValue(methodChecked.idMethod, key, $event.target.value)" />
+          <InputText 
+            :type="type" 
+            :name="key" 
+            :id="key" 
+            :value="inputValues[methodChecked.idMethod][key]" 
+            :required="required" 
+            :pattern="pattern"
+            inputmode="numeric"
+            @input="updateInputValue(methodChecked.idMethod, key, $event.target.value)" 
+            @keydown="type === 'number' ? onlyNumbers($event) : null"/>
         </div>   
       </div>
     </div>
@@ -69,7 +78,11 @@
   import RadioButton from 'primevue/radiobutton';
   import InputText from 'primevue/inputtext';
   import { useOrdersPayment } from '../../../stores/orders/ordersPayments.js';
+  import { ToastMixin } from '../../../Utils/ToastMixin';
+  import { ConfirmMixin } from '../../../Utils//ConfirmMixin';
 
+  const { showToast } = ToastMixin.setup();
+  const { showConfirm } = ConfirmMixin.setup();
   const ordersPayment = useOrdersPayment();
   const selectedMethod = ref();
   const selectedPaymentMethods = ref([]);
@@ -82,22 +95,30 @@
         { 
           key: 'methodTranfer-accountMayor',
           type: 'number',
-          label: 'Cuenta de mayor'
+          label: 'Cuenta de mayor',
+          required: true,
+          pattern: /^\d+$/ 
         },
         { 
           key: 'methodTranfer-date',
           type: 'date',
-          label: 'Fecha de transferencia'
+          label: 'Fecha de transferencia',
+          required: true,
+          pattern: null 
         },
         {
           key: 'methodTranfer-number',
           type: 'number',
-          label: 'N° de transferencia'
+          label: 'N° de transferencia',
+          required: true,
+          pattern: null 
         },
         {
           key: 'methodTranfer-import',
           type: 'number',
-          label: 'Importe total'
+          label: 'Importe total',
+          required: true,
+          pattern: null 
         },
        
       ]},
@@ -105,74 +126,102 @@
         {
           key: 'webpay-nameCard',
           type: 'number',
-          label: 'Nombre de tajeta'
+          label: 'Nombre de tajeta',
+          required: true,
+          pattern: null 
         },
         {
           key: 'webpay-accountCardMayor',
           type: 'number',
-          label: 'Cuenta de mayor'
+          label: 'Cuenta de mayor',
+          required: true,
+          pattern: null 
         },
         {
           key: 'webpay-numberCard',
           type: 'number',
-          label: 'N° de la tarjeta'
+          label: 'N° de la tarjeta',
+          required: true,
+          pattern: null 
         },
         {
           key: 'webpay-validityFrom',
           type: 'date',
-          label: 'Válido hasta'
+          label: 'Válido hasta',
+          required: true,
+          pattern: null 
         },
         {
           key: 'webpay-day',
           type: 'text',
-          label: 'N° Dia (D, B, G, C)'
+          label: 'N° Dia (D, B, G, C)',
+          required: true,
+          pattern: null 
         },
         {
           key: 'webpay-quotas',
           type: 'number',
-          label: 'Cantidad de cuotas'
+          label: 'Cantidad de cuotas',
+          required: true,
+          pattern: null 
         },
         {
           key: 'webpay-quantityPayments',
           type: 'number',
-          label: 'Cantidad de pagos'
+          label: 'Cantidad de pagos',
+          required: true,
+          pattern: null 
         },
         {
           key: 'webpay-documentCard',
           type: 'text',
-          label: 'Partir documento de tarjeta'
+          label: 'Partir documento de tarjeta',
+          required: true,
+          pattern: null 
         },
         {
           key: 'webpay-firstPayment',
           type: 'text',
-          label: 'Primer pago parcial'
+          label: 'Primer pago parcial',
+          required: true,
+          pattern: null 
         },
         {
           key: 'webpay-aditionalPayment',
           type: 'number',
-          label: 'Cada pago adicional'
+          label: 'Cada pago adicional',
+          required: true,
+          pattern: null 
         }
       ]},
       { idMethod: 4, name: 'Cheque',inputs: [
         {
           key: 'cheque-import',
           type: 'number',
-          label: 'Importe'
+          label: 'Importe',
+          required: true,
+          pattern: null 
         },
         {
           key: 'cheque-date',
           type: 'date',
-          label: 'Fecha de vencimiento'
+          label: 'Fecha de vencimiento',
+          required: true,
+          pattern: null 
         },
         {
           key: 'cheque-bank',
           type: 'select',
-          label: 'Banco'
+          label: 'Banco',
+          required: true,
+          pattern: null 
         },
         {
           key: 'cheque-number',
           type: 'number',
-          label: 'N° de cheque'
+          label: 'N° de cheque',
+          required: true,
+          pattern: null 
         }
        
       ] },
@@ -180,24 +229,32 @@
         {
           key: 'efectivo-accountMayor',
           type: 'number',
-          label: 'Cuenta de mayor'
+          label: 'Cuenta de mayor',
+          required: true,
+          pattern: null 
         },
         {
           key: 'efectivo-importTotal',
           type: 'number',
-          label: 'Monto a pagar'
+          label: 'Monto a pagar',
+          required: true,
+          pattern: null 
         },
       ] },
       { idMethod: 6, name: 'Cuenta corriente',inputs: [
       {
           key: 'cuentacorriente-accountClient',
           type: 'number',
-          label: 'Código de cliente'
+          label: 'Código de cliente',
+          required: true,
+          pattern: null 
         },
         {
           key: 'cuentacorriente-importTotal',
           type: 'number',
-          label: 'Monto a pagar'
+          label: 'Monto a pagar',
+          required: true,
+          pattern: null 
         },
         
        
@@ -206,12 +263,16 @@
       {
           key: 'saldoafavor-date',
           type: 'date',
-          label: 'Fecha del pago'
+          label: 'Fecha del pago',
+          required: true,
+          pattern: null 
         },
         {
           key: 'saldoafavor-importTotal',
           type: 'number',
-          label: 'Monto a pagar'
+          label: 'Monto a pagar',
+          required: true,
+          pattern: null 
         },
         
         
@@ -230,13 +291,25 @@
     inputValues.value = newInputValues;
   }
 
-function updateInputValue(methodId, inputKey, value) {
-  inputValues.value[methodId][inputKey] = value;
-}
+  function updateInputValue(methodId, inputKey, value) {
+    inputValues.value[methodId][inputKey] = value;
+  }
+
+  const onlyNumbers = (event) => {
+    if (event.target.type !== 'number') {
+      return;
+    }
+
+    if (!["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab"].includes(event.key) || event.key === 'e') {
+      event.preventDefault();
+    }
+  };
+
 
   const removeMethod = (method) => {
     selectedPaymentMethods.value = selectedPaymentMethods.value.filter(methods => methods.idMethod !== method);
     methodChecked.value = '';
+    checkedMethod.value = null;
   }
   const addPaymentMethod = () => {
     if (selectedMethod.value && !selectedPaymentMethods.value.some(method => method.name === selectedMethod.value.name)) {
@@ -249,8 +322,41 @@ function updateInputValue(methodId, inputKey, value) {
     methodChecked.value = methodsPayment.value.find(method => method.idMethod === selectId);
   }
 
+    const isValidPaymentData = () => {
+    for (const method of selectedPaymentMethods.value) {
+      for (const input of method.inputs) {
+        const value = inputValues.value[method.idMethod][input.key];
+        if (input.required && (value === '' || value === null)) {
+          // Mostrar algún mensaje de error o marcar el campo como inválido
+          return false;
+        }
+        if (input.pattern && value && !new RegExp(input.pattern).test(value)) {
+          // Mostrar algún mensaje de error o marcar el campo como inválido
+          return false;
+        }
+      }
+    }
+    return true;
+  };
+
+
   const  processPayment = async () => {
-    // ordersPayment.showDialog = false
+    if (selectedPaymentMethods.value.length === 0) {
+      showToast({
+        status: 'error',
+        message: 'Debe seleccionar al menos un método de pago',
+      });
+      return;
+    }
+
+    if (!isValidPaymentData()) {
+      showToast({
+        status: 'error',
+        message: 'Complete todos los campos requeridos',
+      });
+      return;
+    }
+    
     let data = {};
     const paymentData = [];
 

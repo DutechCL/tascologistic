@@ -261,6 +261,17 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2023-12-14 13:57:03',
             ),
+            22 => 
+            array (
+                'id' => 29,
+                'name' => 'Backups.read',
+                'description' => 'Leer',
+                'url' => '/admin/backup',
+                'slug' => 'Backups',
+                'guard_name' => 'web',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
         ));
         
         

@@ -55,7 +55,7 @@ class PaymentService
      */
     public function buildPaymentArray(Order $order, Customer $customer): array
     {
-        dd($order, $customer);
+        // dd($order, $customer);
         return [
             "DocNum" => $order->DocNum,
             "HandWritten" => $order->HandWritten,
@@ -185,29 +185,9 @@ class PaymentService
         if (isset($input['PaymentInvoices']) && is_array($input['PaymentInvoices'])) {
             foreach ($input['PaymentInvoices'] as $invoiceInput) {
                 $paymentInvoices[] = [
-                    "LineNum" => $invoiceInput['LineNum'],
                     "DocEntry" => $invoiceInput['DocEntry'],
                     "SumApplied" => $invoiceInput['SumApplied'],
-                    "AppliedFC" => $invoiceInput['AppliedFC'],
-                    "AppliedSys" => $invoiceInput['AppliedSys'],
-                    "DocRate" => $invoiceInput['DocRate'],
-                    "DocLine" => $invoiceInput['DocLine'],
                     "InvoiceType" => $invoiceInput['InvoiceType'],
-                    "DiscountPercent" => $invoiceInput['DiscountPercent'],
-                    "PaidSum" => $invoiceInput['PaidSum'],
-                    "InstallmentId" => $invoiceInput['InstallmentId'],
-                    "WitholdingTaxApplied" => $invoiceInput['WitholdingTaxApplied'],
-                    "WitholdingTaxAppliedFC" => $invoiceInput['WitholdingTaxAppliedFC'],
-                    "WitholdingTaxAppliedSC" => $invoiceInput['WitholdingTaxAppliedSC'],
-                    "LinkDate" => $invoiceInput['LinkDate'],
-                    "DistributionRule" => $invoiceInput['DistributionRule'],
-                    "DistributionRule2" => $invoiceInput['DistributionRule2'],
-                    "DistributionRule3" => $invoiceInput['DistributionRule3'],
-                    "DistributionRule4" => $invoiceInput['DistributionRule4'],
-                    "DistributionRule5" => $invoiceInput['DistributionRule5'],
-                    "TotalDiscount" => $invoiceInput['TotalDiscount'],
-                    "TotalDiscountFC" => $invoiceInput['TotalDiscountFC'],
-                    "TotalDiscountSC" => $invoiceInput['TotalDiscountSC'],
                 ];
             }
         }
@@ -229,30 +209,17 @@ class PaymentService
         if (isset($input['PaymentCreditCards']) && is_array($input['PaymentCreditCards'])) {
             foreach ($input['PaymentCreditCards'] as $creditCardInput) {
                 $paymentCreditCards[] = [
-                    "LineNum" => $creditCardInput['LineNum'],
                     "CreditCard" => $creditCardInput['CreditCard'],
                     "CreditAcct" => $creditCardInput['CreditAcct'],
                     "CreditCardNumber" => $creditCardInput['CreditCardNumber'],
                     "CardValidUntil" => $creditCardInput['CardValidUntil'],
                     "VoucherNum" => $creditCardInput['VoucherNum'],
-                    "OwnerIdNum" => $creditCardInput['OwnerIdNum'],
-                    "OwnerPhone" => $creditCardInput['OwnerPhone'],
-                    "PaymentMethodCode" => $creditCardInput['PaymentMethodCode'],
-                    "NumOfPayments" => $creditCardInput['NumOfPayments'],
-                    "FirstPaymentDue" => $creditCardInput['FirstPaymentDue'],
-                    "FirstPaymentSum" => $creditCardInput['FirstPaymentSum'],
-                    "AdditionalPaymentSum" => $creditCardInput['AdditionalPaymentSum'],
                     "CreditSum" => $creditCardInput['CreditSum'],
-                    "CreditCur" => $creditCardInput['CreditCur'],
-                    "CreditRate" => $creditCardInput['CreditRate'],
-                    "ConfirmationNum" => $creditCardInput['ConfirmationNum'],
-                    "NumOfCreditPayments" => $creditCardInput['NumOfCreditPayments'],
-                    "CreditType" => $creditCardInput['CreditType'],
                 ];
             }
         }
 
-        return $paymentCreditCards; // Retorna un array de PaymentCreditCards o un array vacío si no hay datos
+        return $paymentCreditCards;
     }
 
 }

@@ -61,6 +61,10 @@ return [
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
+            'dump' => [
+                'dump_binary_path' => '/usr/bin/', // Asegúrate de que esta ruta sea correcta
+                // ... otras opciones de volcado ...
+            ],
         ],
 
         'pgsql' => [
